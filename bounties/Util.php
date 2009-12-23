@@ -2,8 +2,6 @@
 /**
  * The Util:: class provides generally useful methods of different kinds.
  *
- * $Horde: hordeweb/bounties/Util.php,v 1.9 2009/01/06 17:50:11 jan Exp $
- *
  * Copyright 1999-2009 The Horde Project (http://www.horde.org/)
  * Copyright 1999-2004 Jon Parise <jon@horde.org>
  *

@@ -1,5 +1,3 @@
-<!-- $Horde: hordeweb/papers/kongress2001-horde_tutorial/helpfile.xml,v 1.1 2001/12/05 16:47:40 chuck Exp $-->
-<?xml version='1.0'?>
 <help>
 
 <entry id="compose-buttons">
@@ -29,7 +27,7 @@ accessible by the pop-down box on the right side of the blue navigation bar at t
     <title>Message Composition: To</title>
     <heading>"To"</heading>
     <para>
-    Enter the correct email address(es) of those to receive your message. You must separate each address with a comma; other punctuation will result in an error. Your entry follows "To:" in outgoing mail.  
+    Enter the correct email address(es) of those to receive your message. You must separate each address with a comma; other punctuation will result in an error. Your entry follows "To:" in outgoing mail.
     </para>
 </entry>
 
@@ -94,7 +92,7 @@ Step 2.
     This section displays a list of files already attached to your message. To Delete an attached file:
     </para>
     <para>Step 1: Activate the check-button next to the attached filename you want to Delete.
-    </para> 
+    </para>
     <para>Step 2: Click "Delete Attachment(s)".
     </para>
 </entry>
@@ -205,7 +203,7 @@ Step 2.
     Click on the "Apply Filter" icon next to the INBOX name in the mailbox view to filter all undeleted messages according to the specified rules.  Or, alternatevly, click on "Apply All Rules" in the filter menu.  Note that filtering is not done automatically.
     </para>
 </entry>
- 
+
 <entry id="filters-list">
     <title>Filters: Manage</title>
     <heading>Manage Filter Rules</heading>
@@ -213,7 +211,7 @@ Step 2.
     Select the filter rule to manage by clicking on the radio button next to the rule description.  Click on one of the action buttons.  Note that filter rules are applied only once per message therefore rule order is significatnt.  Make sure you have the most important rules first.
     </para>
 </entry>
- 
+
 <entry id="filters-field">
     <title>Filter Creation: Field</title>
     <heading>Field</heading>
@@ -221,7 +219,7 @@ Step 2.
     Select the field you want to apply the rule to.  "To:" -- the recepients' addresses.  "Cc:" -- the carbon-copied recepients' adresses.  "From:" -- the sender's address.  "Subject:" -- the message subject.
     </para>
 </entry>
- 
+
 <entry id="filters-text">
     <title>Filter Creation: Text</title>
     <heading>Text</heading>
@@ -229,7 +227,7 @@ Step 2.
     Enter the text for which to scan when applying the rule.
     </para>
 </entry>
- 
+
 <entry id="filters-action">
     <title>Filter Creation: Action</title>
     <heading>Action</heading>

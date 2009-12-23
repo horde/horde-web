@@ -1,5 +1,3 @@
--- $Horde: hordeweb/nag/contrib/pgsql_nag_to10.sql,v 1.1 2002/06/11 16:32:09 bjn Exp $
-
 -- Written by Brent J. Nordquist <bjn@horde.org>, June 5, 2002.
 
 -- This script will convert an older (pre-1.0) Nag PostgreSQL table

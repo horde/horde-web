@@ -1,7 +1,5 @@
 #!/usr/bin/perl
 #
-#    $Horde: hordeweb/imp/contrib/imp2horde.pl-txt,v 1.1 2001/12/24 17:40:14 chuck Exp $
-#
 #    File:      imp2horde.pl
 #    Author:    Christophe Guilloux - rootix@bootix.net
 #    Version:   1.0
@@ -14,61 +12,61 @@
 #
 #    Usage:     Modify the variables at the beginning of the script
 #               so that your database user/password, location and imp
-#               database and horde database are correct. 
+#               database and horde database are correct.
 #
 
- 
+
  use DBI;
-  
+
   our $location       = 'localhost';
   our $port_num       = '3306';
   our $username       = '';
   our $password       = '';
-   
+
   our $IMP_DATABASE   = 'horde';
   our $IMP_TABLE      = 'imp_pref';
   our $HORDE_DATABASE = 'horde2';
   our $HORDE_TABLE    = 'horde_prefs';
   our $domain	      = 'exemple.com';
-    
+
   our $dbi_options = {RaiseError => 1, ChopBlanks => 1, AutoCommit => 1};
-     
+
   $db_imphandle = DBI->connect
                        ("DBI:mysql:$IMP_DATABASE:$location:port_num",
                          $username, $password, $dbi_options )
                          || die ("Connection error: $DBI::errstr");
-									     
+
   $db_horde = DBI->connect
                        ("DBI:mysql:$HORDE_DATABASE",
                          $username, $password, $dbi_options )
                          || die ("Connection error: $DBI::errstr");
-								       
+
   $imp_statement = $db_imphandle->prepare("SELECT * FROM $IMP_TABLE");
   $imp_statement->execute();
-   
+
    $horde_statement = "DELETE FROM $HORDE_TABLE";
     $horde_statement = $db_horde->prepare($horde_statement)
        || die "prepare: $$stmt: $DBI::errstr";
     $horde_statement->execute || die "execute: $$stmt: $DBI::errstr";
-													  
+
   while (my ($owner, $fullname, $replyto, $lang, $sig) =
          $imp_statement->fetchrow_array())
-											    
+
   {
-													      
+
     #@chars     = ( "A" .. "Z", "a" .. "z", 0 .. 9, qw(! @ $ % ^ & *) );
     #$unique_key = join("", @chars[ map { rand @chars } ( 1 .. 31 ) ]);
-														     
+
 # Remove the @domain.com part from the $owner, doesn't work in Turba
     $owner =~ s/\@.*$//;
     $owner .= "\@$domain";
-															 
+
 # Quote the strings appropriately for the database
     my $quoted_owner = $db_imphandle->quote($owner);
     my $quoted_fullname = $db_imphandle->quote($fullname);
     my $value = "a:1:{i:0;a:12:{s:2:\"id\";s:19:\"Identité par défaut\";s:8:\"fullname\";s:".length($fullname).":\"$fullname\";s:9:\"from_addr\";s:0:\"\";s:12:\"replyto_addr\";s:".length($replyto).":\"$replyto\";s:9:\"signature\";s:".length($sig).":\"$sig\";s:9:\"sig_first\";i:0;s:10:\"sig_dashes\";s:1:\"1\";s:14:\"save_sent-mail\";N;s:16:\"sent_mail_folder\";s:15:\"INBOX.sent-mail\";s:14:\"save_sent_mail\";s:1:\"1\";s:11:\"private_key\";N;s:16:\"private_key_type\";N;}}";
     my $quoted_value = $db_horde->quote($value);
-#print "$value\n"; 
+#print "$value\n";
 
     $horde_statement = "INSERT INTO $HORDE_TABLE VALUES
                         ($quoted_owner, 'horde', 'identities', $quoted_value)";
@@ -76,9 +74,9 @@
        || die "prepare: $$stmt: $DBI::errstr";
     $horde_statement->execute || die "execute: $$stmt: $DBI::errstr";
     $horde_statement->finish();
-															        
+
  }
-																										  
+
  $imp_statement->finish();
  $horde_statement->finish();
  $db_imphandle->disconnect;

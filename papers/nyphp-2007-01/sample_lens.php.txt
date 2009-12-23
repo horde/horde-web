@@ -1,7 +1,5 @@
 <?php
 /**
- * $Horde: hordeweb/papers/nyphp-2007-01/sample_lens.php.txt,v 1.1 2007/01/26 04:03:14 chuck Exp $
- *
  * This set of classes implements a Flyweight pattern
  * (http://en.wikipedia.org/wiki/Flyweight_pattern). Refactor/rename
  * some based on this fact?

@@ -2,8 +2,6 @@
  * Javascript code for finding all tables with classname "striped" and
  * dynamically striping their row colors.
  *
- * $Horde: hordeweb/js/src/stripe.js,v 1.2 2009/12/18 17:54:00 slusarz Exp $
- *
  * @author Chuck Hagenbuch <chuck@horde.org>
  * @author Matt Warden <mwarden@gmail.com>
  *

@@ -5,8 +5,6 @@
  * Note: This is a slightly modified, stripped down version of this class
  * specifically designed for hordeweb.
  *
- * $Horde: hordeweb/libs/Util.php,v 1.3 2009/01/06 17:50:12 jan Exp $
- *
  * Copyright 1999-2009 The Horde Project (http://www.horde.org/)
  * Copyright 1999-2004 Jon Parise <jon@horde.org>
  *

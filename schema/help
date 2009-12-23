@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $Horde: hordeweb/schema/help,v 1.2 2002/06/19 02:51:39 chuck Exp $ -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:element name="help">
     <xs:annotation>
