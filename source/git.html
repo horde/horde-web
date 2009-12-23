@@ -1,9 +1,9 @@
 <p>You can use the Horde Git repository as an anonymous user or as a
 developer.</p>
 
-<p><strong>More information about <em>installing</em> Horde from Git can be
+<p>More information about <em>installing</em> Horde from Git can be
 found on the <a href="http://wiki.horde.org/ReleaseManagement">Release
-Management Wiki Page</a>.</strong></p>
+Management Wiki Page</a>.</p>
 
 <p>You will need a Git client, if you don't already have one. Information on
 Git can be found at <a href="http://git-scm.com/">http://git-scm.com/</a>.</p>
@@ -49,6 +49,23 @@ anyway). If you do want the full repository, simply omit <tt>--depth
 command:</p>
 
 <code>git pull</code>
+
+<h4>Making Development Repos Web-Accessible</h4>
+
+<p>Make sure you have cloned both the <tt>horde</tt> and the
+<tt>horde-hatchery</tt> repos. Once initialized, creating a web-accessible
+development installation can be done simply by running the <tt>install_dev</tt>
+PHP script located at <tt>horde-git/framework/bin</tt>.  To properly run this
+script, copy <tt>horde-git/framework/bin/install_dev.conf.dist</tt> to
+<tt>horde-git/framework/bin/install_dev.conf</tt> and edit as necessary to
+match the setup of your server.  Running that script will symlink the entire
+horde package into the web-accessible directory you specify, symlink all other
+horde applications within that directory, and will properly set up the
+necessary include/horde path definitions. Note that all edits should take
+place within the repository, as the web-accessible directory will be deleted
+every time the <tt>install_dev</tt> script is run. Additionally, full
+directory paths will be needed in the
+<tt>horde-git/horde/config/registry.php</tt> file due to the symlinks.</p>
 
 <h4 id="patch">Creating Patches</h4>
 
