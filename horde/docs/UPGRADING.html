@@ -1,0 +1,201 @@
+<div class="document" id="upgrading-horde">
+<h1 class="title">Upgrading Horde</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2008-09-02</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.4.4.20</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<p>These are instructions to upgrade from earlier Horde versions. Please backup
+your existing data before running any of the steps described below. You can't
+use the updated data with your old Horde version anymore.</p>
+<p>After updating to a newer Horde version, or a newer version of <strong>any</strong> Horde
+application, you <strong>always</strong> need to update <strong>all</strong> configuration files.</p>
+<div class="section" id="upgrading-horde-from-3-2-x-to-3-3-x">
+<h1><a name="upgrading-horde-from-3-2-x-to-3-3-x">Upgrading Horde from 3.2.x to 3.3.x</a></h1>
+<p>The sequence name for the SQL share driver has been changed from 'sequence' to
+'id' You must execute the provided PHP script to update your database:</p>
+<pre class="literal-block">
+php scripts/upgrades/2008-08-29_fix_mdb2_sequences.php
+</pre>
+<p>Note that this upgrade will require you to have the PEAR MDB2_Schema package
+installed on your system:</p>
+<pre class="literal-block">
+pear install MDB2_Schema
+</pre>
+</div>
+<div class="section" id="upgrading-horde-from-3-1-x-to-3-2-x">
+<h1><a name="upgrading-horde-from-3-1-x-to-3-2-x">Upgrading Horde from 3.1.x to 3.2.x</a></h1>
+<div class="section" id="sql-backends">
+<h2><a name="sql-backends">SQL Backends</a></h2>
+<p>A few new tables have been added to Horde.</p>
+<p>Execute one of the provided SQL scripts to update your data to the new Horde
+version, e.g.:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; scripts/upgrades/3.1_to_3.2.mysql.sql
+</pre>
+</div>
+<div class="section" id="beta-sql-drivers">
+<h2><a name="beta-sql-drivers">Beta SQL Drivers</a></h2>
+<p>There are now beta-level SQL drivers for Groups, Shares, and
+Permissions. There is a script
+<tt class="docutils literal"><span class="pre">horde/scripts/upgrades/convert_datatree_perms_to_sql.php</span></tt> that will migrate
+all of your DataTree-based permissions to the SQL backend, and
+<tt class="docutils literal"><span class="pre">horde/scripts/upgrades/convert_datatree_groups_to_sql.php</span></tt> that will
+migrate groups. For shares, you will need to upgrade each application
+individually. Applications that use shares have entries in <tt class="docutils literal"><span class="pre">docs/UPGRADING</span></tt>
+and upgrade scripts <tt class="docutils literal"><span class="pre">scripts/upgrades/convert_datatree_shares_to_sql.php</span></tt>
+for creating the SQL share tables and migrating data.</p>
+<p>The SQL drivers should perform much better than the DataTree versions,
+but they have not received the same level of testing, thus the beta
+designation.</p>
+</div>
+<div class="section" id="memcache-configuration">
+<h2><a name="memcache-configuration">Memcache Configuration</a></h2>
+<p>All memcache configuration has been moved to the $conf['memcache'] parameter.</p>
+</div>
+<div class="section" id="application-hooks">
+<h2><a name="application-hooks">Application Hooks</a></h2>
+<p>All hooks that are specific to a single application have been moved to that
+application's <tt class="docutils literal"><span class="pre">config/hooks.php</span></tt> file. Split up your existing Hooks from
+<tt class="docutils literal"><span class="pre">horde/config/hooks.php</span></tt> and move them to the correct application.</p>
+</div>
+<div class="section" id="group-hooks">
+<h2><a name="group-hooks">Group Hooks</a></h2>
+<p>The format for group hook functions has changed from
+_group_hook_groupName($username) to _group_hook($groupName,
+$userName).  So you will need to modify any existing group hook
+functions in config/hooks.php for the new interface.</p>
+<p>Alternatively, an example _group_hook() function is provided in
+config/hooks.php that will call the old style hook functions for you.</p>
+</div>
+<div class="section" id="custom-themes">
+<h2><a name="custom-themes">Custom Themes</a></h2>
+<p>Themes no longer have <tt class="docutils literal"><span class="pre">info.php</span></tt> files. If you have any custom
+themes that provide their own images, you must add a
+<tt class="docutils literal"><span class="pre">themed_graphics</span></tt> file to the theme's directory (for all
+applications the theme provides images for) in order for Horde to know
+to use the custom images. The file can be empty or contain whatever
+you wish; it simply needs to exist.</p>
+</div>
+<div class="section" id="static-log-out-links">
+<h2><a name="static-log-out-links">Static Log out Links</a></h2>
+<p>If you have hardcoded a log out link in any custom templates or menu
+items, you must update it to use Horde::getServiceLink(). This is
+because logging out is now protected by a token to avoid CSRF
+exploits.</p>
+</div>
+</div>
+<div class="section" id="upgrading-horde-from-3-1-1-to-3-1-2">
+<h1><a name="upgrading-horde-from-3-1-1-to-3-1-2">Upgrading Horde from 3.1.1 to 3.1.2</a></h1>
+<div class="section" id="session-configuration">
+<h2><a name="session-configuration">Session Configuration</a></h2>
+<p>A new configuration setting has been added to disable GET-based
+sessions.  If this setting is enabled, session IDs will only be stored
+in session cookies, requiring the users to enable cookies in their
+browser and the cookie settings in Horde's configuration to be correct.</p>
+<p>Using session cookies is much safer since no session information can
+be stored in any web server or proxy log files, referrer headers,
+browser caches, or browser bookmarks.</p>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This setting in enabled by default.</p>
+</div>
+</div>
+<div class="section" id="additional-indexes-for-the-preference-table">
+<h2><a name="additional-indexes-for-the-preference-table">Additional Indexes for the Preference Table</a></h2>
+<p>Optionally execute the provided SQL script 2006-06-29_horde_prefs_indexes.sql
+to create two additional indexes in the preference table, e.g.:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; scripts/upgrades/2006-06-29_horde_prefs_indexes.sql
+</pre>
+<p>This increases database performance for some database systems, e.g. PostgreSQL
+if you have large preference tables.</p>
+</div>
+</div>
+<div class="section" id="upgrading-horde-from-3-1-to-3-1-1">
+<h1><a name="upgrading-horde-from-3-1-to-3-1-1">Upgrading Horde from 3.1 to 3.1.1</a></h1>
+<div class="section" id="mysql-session-handler">
+<h2><a name="mysql-session-handler">MySQL Session Handler</a></h2>
+<p>The mysql session handler has been improved to correctly lock concurrent
+accesses to the same session. You need to set in the Horde configuration if
+you want to use row-level locking and transactions or table-level
+locking. Row-level locking and transactions are only supported by some table
+engines like InnoDB, and is recommended for session tables. The default table
+type for MySQL is MyISAM though, that only supports table-level locking. If
+you used the SQL scripts from Horde 3.1 or earlier to create the session
+table, this is probably the current engine of you session table. If you want
+to change the table type to InnoDB, execute the following SQL statement:</p>
+<pre class="literal-block">
+ALTER TABLE horde_sessionhandler ENGINE = InnoDB
+</pre>
+</div>
+</div>
+<div class="section" id="upgrading-horde-from-3-0-x-to-3-1-x">
+<h1><a name="upgrading-horde-from-3-0-x-to-3-1-x">Upgrading Horde from 3.0.x to 3.1.x</a></h1>
+<div class="section" id="id1">
+<h2><a name="id1">SQL Backends</a></h2>
+<p>A few new tables have been added to Horde.</p>
+<p>Execute one of the provided SQL scripts to update your data to the new Horde
+version, e.g.:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; scripts/upgrades/3.0_to_3.1.mysql.sql
+</pre>
+</div>
+<div class="section" id="groups">
+<h2><a name="groups">Groups</a></h2>
+<p>The Horde_Group API uses group IDs instead of group names to avoid ambiguity.
+Be sure to update any custom code that uses Horde_Group.</p>
+</div>
+<div class="section" id="history">
+<h2><a name="history">History</a></h2>
+<p>The Horde_History storage has been moved out to a separate database table to
+drastically improve performance.</p>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Migration of the Horde_History data may take a very long time,
+possibly days, depending on the number of entries.  Be sure to
+execute this script from a location where it will not be timed
+out by firewall or terminal timeouts.</p>
+</div>
+<p>Execute the provided PHP script to migrate your histories to the new table:</p>
+<pre class="literal-block">
+php scripts/upgrades/move_history_out_of_datatree.php
+</pre>
+</div>
+</div>
+<div class="section" id="upgrading-horde-from-2-x-to-3-0-x">
+<h1><a name="upgrading-horde-from-2-x-to-3-0-x">Upgrading Horde from 2.x to 3.0.x</a></h1>
+<div class="section" id="configuration-files">
+<h2><a name="configuration-files">Configuration files</a></h2>
+<p>The configuration files have been changed to XML format.  To generate a valid
+configuration file from the XML file, follow the configuration instructions
+in the applications' <tt class="docutils literal"><span class="pre">docs/INSTALL</span></tt> file.</p>
+</div>
+<div class="section" id="preferences">
+<h2><a name="preferences">Preferences</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">last_login</span></tt> and <tt class="docutils literal"><span class="pre">date_format</span></tt> preferences have changed their format
+and/or scope.  Just remove all <tt class="docutils literal"><span class="pre">last_login</span></tt> and <tt class="docutils literal"><span class="pre">date_format</span></tt> preferences
+from the preferences backend.</p>
+</div>
+<div class="section" id="id2">
+<h2><a name="id2">SQL Backends</a></h2>
+<p>A few new tables have been added to Horde.</p>
+<p>Execute the provided SQL script to update your data to the new Horde version:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; scripts/upgrades/2.2_to_3.0.mysql.sql
+</pre>
+</div>
+</div>
+</div>
+<hr class="docutils footer" />
+<div class="footer">
+<a class="reference" href="http://cvs.horde.org/co.php/horde/docs/UPGRADING">View document source</a>.
+Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+</div>

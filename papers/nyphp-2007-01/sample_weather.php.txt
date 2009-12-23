@@ -1,0 +1,15 @@
+<?php
+@define('AUTH_HANDLER', true);
+$session_control = 'none';
+require_once '/var/www/horde/lib/base.php';
+require_once 'Horde/Block/Collection.php';
+$weather = Horde_Block_Collection::getBlock(
+    'horde',
+    'weatherdotcom',
+    array('location' => 'Boston, MA',
+          'days' => 3,
+          'units' => 'standard'));
+?>
+<div class="centered">
+ <?php echo $weather->getContent() ?>
+</div>

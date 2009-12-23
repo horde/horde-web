@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>Presentations :: Messages UI</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="29_status.xml.html" onmouseout="status='';" onmouseover="status='Go to Messages'; return true;"><img src="presentation_back.gif" border="0" alt="Back" title="Back" /></a></td><td style="cursor: hand;" onclick="location.href='29_status.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Messages</div></td></tr></table></td>
+<td width='50%' align='center' style='cursor: hand;' class='oratorHeaderBack' valign='center' nowrap='nowrap' onclick='location.href="/horde/orator/slide.php?Horde=89b51803872c27be93225868fd7053c3&amp;p=nysa-horde_talk&amp;s=30";'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Messages UI</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="31_conclusion.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Conclusion</div></td></tr></table></td><td width="1%" align="right"><a href="31_conclusion.xml.html" onmouseout="status='';" onmouseover="status='Go to Conclusion'; return true;"><img src="presentation_forward.gif" border="0" alt="Forward" title="Forward" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+<p>The Notification system takes care of displaying/handling
+messages that were pushed since the last time the message stack was
+checked. The PHP code to display any messages that are to be output to
+the screen looks like this:</p>
+
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br /><br />$notification</font><font color="#007700">-&gt;</font><font color="#0000BB">notify</font><font color="#007700">();<br /><br /></font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+
+<p>Nice and simple. The Notification system stores a stack of
+messages in the user's session, so if you push an error and then don't
+display it immediately, it will still be stored, and will be displayed
+the next time that the message stack is checked.</p>
+
+</td></tr></table></div>
+</body>
+</html>

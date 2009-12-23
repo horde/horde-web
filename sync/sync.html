@@ -1,0 +1,92 @@
+<div class="boxRight">
+ <p style="text-align:center">
+  <a style="display:block; text-decoration:none" href="http://www.synthesis.ch/" target="_blank">
+  <img border="0" src="../graphics/sponsors/synthesis.jpg" alt="Synthesis AG" /><br /><br />
+  SyncML clients<br />
+  have been sponsored<br />
+  by Synthesis AG</a>
+ </p>
+</div>
+
+<h3>Overview</h3>
+
+<p>There are multiple efforts underway to get Horde applications
+(mainly the calendar, contacts, todos, and notes) to sync with various
+other applications and PDA devices. The mailing list for this effort
+is <a
+href="http://lists.horde.org/mailman/listinfo/sync">sync@lists.horde.org</a>. This
+is a list of efforts, code, and related resources as we try to get
+this effort into high gear.</p>
+
+<h3>Horde Framework support</h3>
+
+<p>The Horde Framework now provides a Horde_History API, that allows
+easy tracking of the creation, modification, and deletion of objects
+outside of their storage backends (so that we have a record of an
+object's deletion after it no longer exists in the database, for
+instance). Kronolith, Mnemo, Turba, and Nag, the four Horde
+applications that map to the basic Palm Todos/Contacts/Calendar/Memos
+applications, now support this API and are thus able to provide the
+basic information necessary to support a synchronization process. We
+will be working in the future to lay the rest of the groundwork
+necessary, and to code the syncing logic itself.</p>
+
+<h3>SyncML</h3>
+
+<p class="note"><em>The current status of SyncML support in Horde is updated in our
+wiki: <a
+href="http://wiki.horde.org/SyncRoadMap">http://wiki.horde.org/SyncRoadMap</a>,
+and some documentation is there as well: <a
+href="http://wiki.horde.org/SyncHowTo">http://wiki.horde.org/SyncHowTo</a>. The
+wiki is a more up to date source of information than this page and
+will likely remain so as long as SyncML support is in the development
+stage.</em></p>
+
+<p>SyncML support is a work in progress. We have: an RPC stub to
+SyncML that's invoked through our generic rpc.php interface (<a
+href="http://cvs.horde.org/framework/RPC/RPC/syncml.php">syncml.php</a>);
+a native-PHP WBXML parser package that works nearly perfectly, and
+seems to work fine using wbxml2xml on the command line; and a SyncML
+package that handles parsing of SyncML markup and syncing logic. That
+package also has the interface to various Horde applications, through
+the Horde Registry.</p>
+
+<h3>Resources, Links, Downloads</h3>
+
+<p>SyncML Spec/Implementation:</p>
+<ul>
+<li><a href="http://www.openmobilealliance.org/syncml/">Syncml.org</a></li>
+<li><a href="http://www.openmobilealliance.org/syncml/downloads.html">Downloads</a></li>
+<li><a href="http://www.openmobilealliance.org/syncml/docs/syncml_sync_protocol_v11_20020215.pdf">SyncML Protocol</a></li>
+<li><a href="http://www.openmobilealliance.org/syncml/docs/syncml_represent_v11_20020215.pdf">SyncML Representation</a></li>
+<li><a href="http://www.openmobilealliance.org/syncml/docs/syncml_devinf_v11_20020215.pdf">DevInf</a></li>
+<li><a href="http://www.openmobilealliance.org/syncml/docs/syncml_metinf_v11_20020215.pdf">MetInf</a></li>
+<li><a href="http://www.hut.fi/u/asaarila/syncml/syncml_intro.html">Short Intro to SyncML</a></li>
+<li>Several IBM Devworks articles on SyncML: <a href="http://www-106.ibm.com/developerworks/wireless/library/wi-syncml/">Syncing data: An introduction to SyncML</a>, XML Watch articles <a href="http://www-106.ibm.com/developerworks/xml/library/x-synchml/">1</a>, <a href="http://www-106.ibm.com/developerworks/xml/library/x-syncml2.html">2</a>, and <a href="http://www-106.ibm.com/developerworks/xml/library/x-syncml3.html">3</a>, <a href="http://www-106.ibm.com/developerworks/xml/library/wi-syncml2/">SyncML intensive</a>, and finally, <a href="http://www-106.ibm.com/search/searchResults.jsp?searchType=1&searchSite=dW&query=syncml&searchScope=dW&Search.x=0&Search.y=0&Search=Search">search results</a> for syncml on developerworks.</li>
+<li><a href="http://www.xml.com/lpt/a/2000/12/27/syncml.html">XML.com article: Staying in Synch</a></li>
+<li><a href="http://xml.coverpages.org/syncML.html">SyncML overview and list of resources</a></li>
+</ul>
+
+<p>SyncML Applications:</p>
+<ul>
+<li><a href="http://nicolas.bougues.net/syncml/">Boheme</a> (a PHP SyncML server) (<a href="http://sourceforge.net/projects/boheme">SourceForge</a>)</li>
+<li>Apple's <a href="http://www.apple.com/isync/">iSync</a> supports a bunch of SyncML and other devices.</li>
+<li><a href="http://www.opengroupware.org/en/projects/syncml/">OpenGroupware.org</a>'s SyncML support</li>
+<li><a href="http://multisync.sourceforge.net/">MultiSync</a>, a Gnome SyncML client.</li>
+<li><a href="http://sync4j.funambol.com/main.jsp?main=theproject">Sync4j</a></li>
+<li><a href="http://www.synthesis.ch/">Synthesis</a>, a commercial SyncML client/server</li>
+<li><a href="http://www.informit.com/content/index.asp?product_id=%7B36114AC1-D29C-452B-B7AB-99FDA84A2D30%7D&121403">informIT article on SyncML applications</a></li>
+</ul>
+
+<p>WBXML:</p>
+<ul>
+<li><a href="http://www.openmobilealliance.org/tech/index.html">Open Mobile
+  Alliance Technical Section</a></li>
+<li><a href="http://www.w3.org/TR/wbxml/">The W3C version of the WBXML
+  spec</a>, somewhat less useful</li>
+<li><a href="http://wbxmllib.sourceforge.net/">WBXML library</a>, for
+  reading/writing wireless binary compressed XML used by SyncML mobile
+  devices.</li>
+<li><a href="http://www.devx.com/xml/article/16754">An article on
+  WBXML</a></li>
+</ul>

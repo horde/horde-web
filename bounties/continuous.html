@@ -1,0 +1,88 @@
+<p>Thank you for considering continuous sponsorship. Your contribution is very
+valuable to the entire Horde community. A recurring monthly contribution allows
+us to distribute the resources as priorities arise.</p>
+
+<p>In return you will get recognition on our bounties page with a logo and a
+link permanently featured for for the duration of your sponsorship.<br />
+The minimum monthly sponsorship amount is US$50.</p>
+
+<form action="continuous.php" method="post">
+<table cellpadding="0" cellspacing="1" style="width:500px">
+  <tr>
+    <td width="150" align="right">
+      <label for="sponsor_amount">Monthly amount:</label>
+    </td><td>
+      <input type="text" id="sponsor_amount" name="sponsor[amount]" value="<?php if (!isset($sponsor['amount'])): echo '50'; else: echo $sponsor['amount']; endif; ?>" size="10" />
+      <?php if (isset($error['amount'])): ?>
+      <br /><font color="#f00">Incorrect amount.</font>
+      <?php endif; ?>
+    </td>
+  </tr><tr>
+    <td width="150" align="right" valign="top">
+      Payment mode:
+    </td><td>
+      <label><input type="radio" name="sponsor[payment]" value="monthly"<?php if (!isset($sponsor['payment']) || $sponsor['payment'] == 'monthly') echo ' checked="checked"' ?> />Monthly</label><br />
+      <label><input type="radio" name="sponsor[payment]" value="lump"<?php if ($sponsor['payment'] == 'onetime') echo ' checked="checked"' ?> />Lump payment</label>
+    </td>
+  </tr><tr>
+    <td width="150" align="right">
+      <label for="sponsor_months">Number of months:</label>
+    </td><td>
+      <input type="text" id="sponsor_months" name="sponsor[months]" value="<?php echo $sponsor['months']?>" size="10" />
+      <?php if (isset($error['months'])): ?>
+      <br /><font color="#f00">Incorrect number of months.</font>
+      <?php endif; ?>
+    </td>
+  </tr><tr>
+    <td align="right" valign="top">
+      <label for="sponsor_name">Sponsor Name:</label>
+    </td><td>
+      <input type="text" id="sponsor_name" name="sponsor[name]" value="<?php echo $sponsor['name']?>" style="width:100%" />
+      <?php if (isset($error['name'])): ?>
+      <br /><font color="#f00">Missing name.</font>
+      <?php endif; ?>
+      <div class="note"><strong>Example: Foo Widgets LLC</strong><br /><br /><em>We understand that some people would like a text link instead of their company name. However, our bounty sponsorship program is for showing your support for Horde, and so we ask you to simply give us the name of your organization as you would like to be known.</em></div><br />
+    </td>
+  </tr>
+<!--<tr>
+    <td align="right">
+      <label for="sponsor_company">(optional) Company:</label>
+    </td><td>
+      <input type="text" id="sponsor_company" name="sponsor[company]" value="<?php echo $sponsor['company']?>" style="width:100%" />
+    </td>
+  </tr>-->
+<tr>
+    <td align="right" valign="top">
+      <label for="sponsor_link">Your web site:</label>
+    </td><td>
+      <input type="text" id="sponsor_link" name="sponsor[link]" value="<?php echo $sponsor['link']?>" style="width:100%" />
+      <?php if (isset($error['link'])): ?>
+      <br /><font color="#f00">Missing link.</font>
+      <?php endif; ?>
+      <div class="note"><strong>Example: www.example.com</strong></div><br />
+    </td>
+  </tr><tr>
+    <td align="right" valign="top">
+      <label for="sponsor_email">Contact Email:</label>
+    </td><td>
+      <input type="text" id="sponsor_email" name="sponsor[email]" value="<?php echo $sponsor['email']?>" style="width:100%" />
+      <?php if (isset($error['email'])): ?>
+      <br /><font color="#f00">Missing email.</font>
+      <?php endif; ?>
+      <div class="note"><em>If we need to contact you about your sponsorship, where should we write to? This email address will only be used for private correspondence.</em></div><br />
+    </td>
+  </tr><tr>
+    <td align="right" valign="top">
+      <label for="sponsor_notes">(optional) Notes:</label>
+    </td><td>
+      <textarea id="sponsor_notes" name="sponsor[notes]" rows="4" cols="40"><?php echo htmlspecialchars($sponsor['notes']) ?></textarea>
+      <div class="note"><em>If you would like an 88x33 image button as your sponsor logo, you may include a link to a downloadable image here.</em></div><br />
+    </td>
+  </tr><tr>
+    <td>&nbsp;
+    </td><td>
+      <input type="submit" name="sponsor[submit]" value="Continue to PayPal" />
+    </td>
+  </tr>
+</table>
+</form>

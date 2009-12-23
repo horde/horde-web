@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Refactoring</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="16_odesign.xml.html" onmouseout="status='';" onmouseover="status='Go to Over-Design'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='16_odesign.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Over-Design</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Refactoring</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="18_refactoring2.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Horde Preferences</div></td></tr></table></td><td width="1%" align="right"><a href="18_refactoring2.xml.html" onmouseout="status='';" onmouseover="status='Go to Horde Preferences'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+
+
+<p>Refactoring</p>
+  <ul>
+<li>Refactoring is an idea that has had several books written about it, but the gist is: when you visit a piece of code, instead of just making expedient changes, make the whole piece of code better.</li><li>As an example, I needed to add a feature to our browser-detection class. With the way the class was implemented, that required adding to the API of the class - which should mean a compatibility-breaking version number change.</li><li>So I rewrote it so that features could be added without changing the API. Now, we can update the browser class, and update code to use new features, without worrying about breaking compatibility.</li></ul><br />
+
+
+
+
+
+</td></tr></table></div>
+</body>
+</html>

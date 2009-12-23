@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Help System</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="20_browser.xml.html" onmouseout="status='';" onmouseover="status='Go to Browsers'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='20_browser.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Browsers</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Help System</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="22_lang.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Languages</div></td></tr></table></td><td width="1%" align="right"><a href="22_lang.xml.html" onmouseout="status='';" onmouseover="status='Go to Languages'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+  <p>Horde's Help system lets you easily include help links</p>
+
+  <code><font color="#000000">
+<br><font color="#0000BB">&lt;?php<br><br></font><font color="#007700">require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/Help.php'</font><font color="#007700">;<br><br></font><font color="#FF8000">// Generate a link to a specific topic<br></font><font color="#007700">echo&nbsp;</font><font color="#0000BB">Help</font><font color="#007700">::</font><font color="#0000BB">link</font><font color="#007700">(</font><font color="#DD0000">'application'</font><font color="#007700">,&nbsp;</font><font color="#DD0000">'topic'</font><font color="#007700">);<br><br></font><font color="#FF8000">// Generate a link to all topics for an application<br></font><font color="#007700">echo&nbsp;</font><font color="#0000BB">Help</font><font color="#007700">::</font><font color="#0000BB">listLink</font><font color="#007700">(</font><font color="#DD0000">'application'</font><font color="#007700">);<br><br></font><font color="#FF8000">// Include the javascript for the help window<br></font><font color="#0000BB">Help</font><font color="#007700">::</font><font color="#0000BB">javascript</font><font color="#007700">();<br><br></font><font color="#0000BB">?&gt;<br></font>&nbsp;&nbsp;</font>
+</code><br />
+
+
+  <ul>
+<li>Help files are XML-based (<a href="helpfile.xml" onmouseout="status='';" onmouseover="status='example'; return true;">example</a>)</li></ul><br />
+
+
+</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<?php
+if (!function_exists('_horde_hook_signup_getextra')) {
+    function _horde_hook_signup_getextra()
+    {
+        if (empty($_SESSION['signup']['captcha'])) {
+            $_SESSION['signup']['captcha'] = '';
+            for ($i = 0; $i < 5; $i++) {
+                $_SESSION['signup']['captcha'] .= chr(rand(65, 90));
+            }
+        }
+
+        return array(
+            'fullname' => array(
+                'label' => _("Your full name:"),
+                'type' => 'text',
+                'required' => false),
+            'timezone' => array(
+                'label' => _("Your current time zone:"),
+                'type' => 'enum',
+                'params' => array('values' => array_merge(array('' => _("Default")), $GLOBALS['tz'])),
+                'required' => false),
+            'tos' => array(
+                'label' => 'I agree to the Terms of Service and Privacy Policy',
+                'type' => 'boolean',
+                'desc' => '<a href="">Terms of Service</a><br /><a href="">Privacy Policy</a>',
+                'required' => true),
+            'captcha' => array(
+                'label' => _("Spam protection"),
+                'type' => 'figlet',
+                'params' => array('text' => $_SESSION['signup']['captcha'], 'font' => '/usr/share/figlet/big.flf'),
+                'required' => true),
+        );
+    }
+}
+
+if (!function_exists('_horde_hook_signup_addextra')) {
+    function _horde_hook_signup_addextra($userID, $extra)
+    {
+        $prefs = &Prefs::singleton($GLOBALS['conf']['prefs']['driver'],
+                                   'horde', $userID, '', null, false);
+        foreach ($extra as $key => $value) {
+            if (in_array($key, array('captcha', 'tos'))) {
+                continue;
+            }
+            $prefs->setValue($key, $value);
+        }
+        $prefs->store();
+
+        unset($_SESSION['signup']['captcha']);
+    }
+}
+
+if (!function_exists('_horde_hook_signup_preprocess')) {
+     function _horde_hook_signup_preprocess($info) {
+        if (!$info['extra']['tos']) {
+            return PEAR::raiseError('You have to agree to the Terms of Service and Privacy Policy');
+        }
+        $info['user_name'] = trim(String::lower($info['user_name']));
+        $testvalue = explode('@', $info['user_name']);
+        if (count($testvalue) != 2) {
+            $testvalue[1] = String::lower(preg_replace('/^.*(\.[^.]+\.[^.]+)$/', '$1', $_SERVER['SERVER_NAME']));
+	}
+	if (!preg_match('/^[-a-z0-9]+$/', $testvalue[0])) {
+            return PEAR::raiseError('Invalid characters in user name');
+	}
+        if (preg_match('/webmaster|admin|root/', $testvalue[0])) {
+            return PEAR::raiseError('Reserved user name');
+        }
+        $info['user_name'] = $testvalue[0] . '@' . $testvalue[1];
+        return $info;
+     }
+}

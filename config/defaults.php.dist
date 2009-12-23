@@ -1,0 +1,4 @@
+<?php
+$base_url = 'http://www.horde.org';
+$fs_base  = '/horde/web/www.horde.org';
+$ftp_base = 'ftp://ftp.horde.org/pub';

@@ -1,0 +1,4 @@
+To use:
+
+cp mysql.lib.php3 msql.lib.php3
+ex msql.lib.php3 < mysql2msql.ex

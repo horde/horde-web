@@ -1,0 +1,30 @@
+<?php
+
+function smtp_mail ($from_mail,$to_mail,$from_name,$to_name,$subject,$body) {
+   
+   $server = "horde.org";
+   $smtpsrvr = "localhost";
+   
+   $smtp = fsockopen($smtpsrvr, 25);
+   if ($smtp < 0) return -1;
+   
+   fputs($smtp,"helo $server\r\n");
+   $line = fgets($smtp, 1024);
+   fputs($smtp,"mail from: $from_mail\r\n");
+   $line = fgets($smtp, 1024);
+   fputs($smtp,"rcpt to: $to_mail\r\n");
+   $line = fgets($smtp, 1024);
+   fputs($smtp,"data\r\n");
+   $line = fgets($smtp, 1024);
+   fputs($smtp,"Subject: $subject\r\n");
+   fputs($smtp,"From: $from_name\r\n");
+   fputs($smtp,"To: $to_name\r\n");
+   fputs($smtp,"\r\n");
+   fputs($smtp,"$body \r\n");
+   fputs($smtp,".\r\n");
+   $line = fgets($smtp, 1024);
+   fputs($smtp, "QUIT\r\n");
+   fclose($smtp);
+}
+
+?>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Authentication</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="25_secret.xml.html" onmouseout="status='';" onmouseover="status='Go to Encryption'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='25_secret.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Encryption</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Authentication</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="27_scache.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Session Cache</div></td></tr></table></td><td width="1%" align="right"><a href="27_scache.xml.html" onmouseout="status='';" onmouseover="status='Go to Session Cache'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+  <p>Users can be based on whatever you want</p>
+  <code><font color="#000000">
+<br><font color="#0000BB">&lt;?php<br><br></font><font color="#007700">require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/Auth.php'</font><font color="#007700">;<br><br></font><font color="#FF8000">// To check if someone is logged in<br></font><font color="#0000BB">$user&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">Auth</font><font color="#007700">::</font><font color="#0000BB">getAuth</font><font color="#007700">();<br>if&nbsp;(!empty(</font><font color="#0000BB">$user</font><font color="#007700">))&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</font><font color="#0000BB">$user&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">' is logged in'</font><font color="#007700">;<br>}<br><br></font><font color="#0000BB">?&gt;<br></font>&nbsp;&nbsp;</font>
+</code><br />
+
+
+  <ul>
+<li>The Auth system is as lightweight as you want it to be.</li><li>Uses a session variable to store who is logged in and when they logged in.</li><li>Drivers are written for IMAP, FTP, LDAP, MCAL, and SQL.</li><li>Adding new drivers is a matter of implementing a simple API.</li></ul><br />
+
+</td></tr></table></div>
+</body>
+</html>

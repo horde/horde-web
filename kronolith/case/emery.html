@@ -1,0 +1,79 @@
+<h3>Kronolith Case Study from Rick Emery</h3>
+
+<p>I work for a law enforcement agency with an aviation unit (three
+helicopters).  The shifts are 12.25 hours long, from 5:45 until 6:00
+(5:45 am until 6:00 pm and 5:45 pm until 6:00 am). There are at least
+two aircrew on duty at a time, one pilot and one flight officer (the
+pilot flies while the flight officer does everything else; e.g. radio
+communication, camera/VCR, binoculars, FLIR, spotlight, etc). There
+are two full-time night-time flight officers and numerous volunteer
+day-time flight officers, many from different agencies (I work for the
+county sheriff's office, others work for city police departments
+within the county, and some work for the highway patrol).</p>
+
+<p>The guy coordinating the schedule requests a list of days that each
+volunteer flight officer can work, and builds a schedule from that
+list. Until I started working out there, he was doing the schedule
+using Microsoft Word calendar wizard. He would complete the schedule
+(there were always some vacant days), email it to each flight officer,
+print it, and post it on the wall at the hangar. Flight officers were
+encouraged to write their names in on vacant days that they could
+work. The problem is that an updated schedule was never sent out to
+the flight officers, so the updates could only be seen by driving out
+to the hangar to look at the schedule. Additionally, the schedule
+would sometimes need to be changed. The changes were sometimes handled
+by the scheduler from home. Let me explain this problem with an
+example.</p>
+
+<p>I was scheduled to work Oct 22. After the schedule was posted, the
+scheduler called me and asked me to work Oct 15 instead, and I
+agreed. When I showed up on the 15, I saw that the change was never
+made on the schedule and they had gotten someone else to cover it; our
+phone conversation had apparently been forgotten. This was just an
+inconvenience, but could have gone the other way where I wouldn't have
+shown up on a day they thought I was scheduled.</p>
+
+<p>I tried to come up with a solution that would make the schedule
+available online, so that I (and the rest of the volunteers) could
+periodically check it and verify the days we were expected to work. It
+would also provide a continually updated list of vacant days for which
+to sign up.</p>
+
+<p>At first, we tried putting the calendar (the Word files) on a
+network share.  This, however, prevented anyone from checking the
+schedule from home.</p>
+
+<p>Next, we created a calendar in the public folders section of our
+Exchange server (we use Outlook for the Web to access stuff from
+home). However, flight officers from other agencies couldn't access
+it.</p>
+
+<p>That's when it occured to me: With kronolith, I was using a
+calendar that was accessible from any internet-connected
+computer. With the permissions system that was in place, and the
+categories, it was perfect.</p>
+
+<p>So, I created an account on my server for the scheduler, used that
+account to create a "flight officer" calendar, and set up categories
+with different colors for each of the four shifts and "vacant". I set
+his options so that it used kronolith for the application to show on
+login, and changed his horde preference to hide the side menubar (I
+have limited storage space and didn't want him to start using my
+server as a public email system). I then made kronolith available to
+guests, and gave them read access to the flight officer calendar.</p>
+
+<p>It's worked out beautifully so far. He can make changes to the
+calendar from home or work. All of the flight officers can access the
+schedule from any intenet-connected computer through guest services,
+and can even print it. The scheduler is very pleased, and (with the
+color-coded categories) thinks it looks much better than anything he
+came up with using Word or Outlook. It's worked out better than I
+could have hoped. I'm even thinking about setting up another calendar
+just for him so that he can enter everybody's available days, then
+show it side-by-side with the schedule (if that's possible; I'm still
+looking into it).<p>
+
+<p>This extremely long missive is simply my way of saying a great big
+*THANKS* to everybody for all of the hard work. Horde (and its apps)
+is the best software product I've experienced; it's certainly the one
+I use most!</p>

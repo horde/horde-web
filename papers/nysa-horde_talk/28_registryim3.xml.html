@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>Presentations :: Registry API 3</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="27_registryim2.xml.html" onmouseout="status='';" onmouseover="status='Go to Registry API 2'; return true;"><img src="presentation_back.gif" border="0" alt="Back" title="Back" /></a></td><td style="cursor: hand;" onclick="location.href='27_registryim2.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Registry API 2</div></td></tr></table></td>
+<td width='50%' align='center' style='cursor: hand;' class='oratorHeaderBack' valign='center' nowrap='nowrap' onclick='location.href="/horde/orator/slide.php?Horde=89b51803872c27be93225868fd7053c3&amp;p=nysa-horde_talk&amp;s=28";'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Registry API 3</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="29_status.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Messages</div></td></tr></table></td><td width="1%" align="right"><a href="29_status.xml.html" onmouseout="status='';" onmouseover="status='Go to Messages'; return true;"><img src="presentation_forward.gif" border="0" alt="Forward" title="Forward" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+<p>To use a Registry function, we just need to get a reference to
+the $registry object and call it:</p>
+
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br /><br /></font><font color="#FF8000">// Load the registry class definition<br /></font><font color="#007700">require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/Registry.php'</font><font color="#007700">;<br /><br /></font><font color="#FF8000">// Get a reference to the registry object<br /></font><font color="#0000BB">$registry&nbsp;</font><font color="#007700">=&nbsp;&amp;</font><font color="#0000BB">Registry</font><font color="#007700">::</font><font color="#0000BB">singleton</font><font color="#007700">();<br /><br /></font><font color="#FF8000">// Test to see if the method exists:<br /></font><font color="#007700">if&nbsp;(</font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">hasMethod</font><font color="#007700">(</font><font color="#DD0000">'projects/add'</font><font color="#007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF8000">// Go ahead and add a project<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$projectID&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">call</font><font color="#007700">(</font><font color="#DD0000">'projects/add'</font><font color="#007700">,&nbsp;array(</font><font color="#DD0000">'name'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#DD0000">'A new project'</font><font color="#007700">));<br />}&nbsp;else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</font><font color="#DD0000">'projects/add is not defined'</font><font color="#007700">;<br />}<br /><br /></font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+
+<p>That's all. The Registry takes care of everything else, and you
+get back the ID of the newly created project.</p>
+
+</td></tr></table></div>
+</body>
+</html>

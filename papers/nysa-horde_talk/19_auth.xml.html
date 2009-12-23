@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>Presentations :: Authentication check</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="18_baselibs.xml.html" onmouseout="status='';" onmouseover="status='Go to Base Libraries'; return true;"><img src="presentation_back.gif" border="0" alt="Back" title="Back" /></a></td><td style="cursor: hand;" onclick="location.href='18_baselibs.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Base Libraries</div></td></tr></table></td>
+<td width='50%' align='center' style='cursor: hand;' class='oratorHeaderBack' valign='center' nowrap='nowrap' onclick='location.href="/horde/orator/slide.php?Horde=89b51803872c27be93225868fd7053c3&amp;p=nysa-horde_talk&amp;s=19";'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Authentication check</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="20_nagbase.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Nag Base Class</div></td></tr></table></td><td width="1%" align="right"><a href="20_nagbase.xml.html" onmouseout="status='';" onmouseover="status='Go to Nag Base Class'; return true;"><img src="presentation_forward.gif" border="0" alt="Forward" title="Forward" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+  <p>The last thing we do is check that either there is a valid
+  login or guest users are allowed to use this application. You may
+  not always want to allow guest users.</p>
+
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br /><br /></font><font color="#FF8000">// Redirect the user to the Horde login page if they haven't authenticated.<br /></font><font color="#007700">if&nbsp;(!</font><font color="#0000BB">Auth</font><font color="#007700">::</font><font color="#0000BB">getAuth</font><font color="#007700">()&nbsp;&amp;&amp;&nbsp;!</font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">allowGuests</font><font color="#007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">header</font><font color="#007700">(</font><font color="#DD0000">'Location: '&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#0000BB">Horde</font><font color="#007700">::</font><font color="#0000BB">url</font><font color="#007700">(</font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">getParam</font><font color="#007700">(</font><font color="#DD0000">'webroot'</font><font color="#007700">,&nbsp;</font><font color="#DD0000">'horde'</font><font color="#007700">)&nbsp;.&nbsp;</font><font color="#DD0000">'/login.php?url='&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#0000BB">urlencode</font><font color="#007700">(</font><font color="#0000BB">Horde</font><font color="#007700">::</font><font color="#0000BB">selfUrl</font><font color="#007700">()),&nbsp;</font><font color="#0000BB">true</font><font color="#007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</font><font color="#DD0000">"\n"</font><font color="#007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;exit;<br />}<br /><br /></font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+  <ul>
+<li>Auth::getAuth() returns the current user or false if no one is logged in.</li><li>$registry->allowGuests() checks if the current application has been configured to allow guest users.</li><li>If these checks are failed, redirect to the Horde login page and exit. If there is a custom login page, the Horde login page will take care of redirecting to/loading it.</li><li>Some WAP clients seem not to like redirects without an extra newline after them.</li></ul><br />
+
+</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<h3>Where can I get it?</h3>
+
+<h4>Current Stable Release</h4>
+<ul>
+<?php foreach ($stableapp as $val): ?>
+    <li><?php echo $val ?></li>
+<?php endforeach; ?>
+</ul>
+
+<h4>Current Development Release</h4>
+<ul>
+<?php foreach ($devapp as $val): ?>
+    <li><?php echo $val ?></li>
+<?php endforeach; ?>
+</ul>
+
+<?php if (!empty($deprapp)): ?>
+<h4>Deprecated Release</h4>
+
+<ul>
+<?php foreach ($deprapp as $val): ?>
+    <li><?php echo $val ?></li>
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>
+
+<h4>Obtaining Current Development Versions</h4>
+
+<p>The current development version of
+<?php echo htmlspecialchars($app_info['name']) ?> is available via our <a
+href="../../source/git.php">git repository</a>.</p>
+
+<p>The H3 development version of <?php echo htmlspecialchars($app_info['name']) ?> is available via <a
+href="../../source/snapshots.php">nightly snapshots</a> and <a
+href="../../source/cvs.php">CVS</a>.</p>
+
+<?php if (count($app_info) > 1): ?>
+<h4>Obtaining Old Versions</h4>
+
+<p>Old versions can be obtained from one of our <a href="../../mirrors/">FTP Mirrors</a>.</p>
+<?php endif; ?>

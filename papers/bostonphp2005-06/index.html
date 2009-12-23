@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Design Patterns</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="2005-06-05" />
+<meta name="author" content="Chuck Hagenbuch" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../s5/ui/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../s5/ui/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../s5/ui/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../s5/ui/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="../s5/ui/slides.js" type="text/javascript"></script>
+<!-- prototype + scriptaculous -->
+<script src="../s5/ui/prototype/prototype.js" type="text/javascript"></script>
+<script src="../s5/ui/scriptaculous/scriptaculous.js" type="text/javascript"></script>
+<!-- Presentaculous JS -->
+<script src="../s5/ui/presentacular.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Cambridge, Massachusetts &#8226; June 9th 2005</h1>
+<h2>Design Patterns</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Design Patterns</h1>
+</div>
+
+
+<div class="slide">
+<h1>Summary</h1>
+<ul>
+<li>What are design patterns?</li>
+<li>When do I use them?</li>
+<li>How do I write them in PHP?</li>
+</div>
+
+
+<div class="slide">
+<h1>What are design patterns?</h1>
+<blockquote>&quot;Each pattern describes a problem which occurs over and over
+again in our environment, and then describes the core of the solution
+to that problem, in such a way that you can use this solution a
+million times over, without ever doing it the same way
+twice.&quot;</blockquote>
+<p>&#8211; Christopher Alexander, talking about buildings and towns</p>
+</div>
+
+
+<div class="slide">
+<h1>What are design patterns?</h1>
+<ul>
+<li>Many common programming problems</li>
+<li>They've been solved over and over again</li>
+<li>Recognize which problems are common</li>
+<li>Name them to create a common vocabulary</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>What are design patterns?</h1>
+<ul>
+<li>Patterns are blueprints</li>
+<li>They are meant to be modified</li>
+<li>Not all suspension bridges are the same</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>What do patterns not do?</h1>
+<ul>
+<li>Patterns are not rules</li>
+<li>Patterns are not implementations!</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Elements of a pattern</h1>
+<ul>
+<li>Pattern name</li>
+<li>Problem</li>
+<li>Solution</li>
+<li>Consequences</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>When to use them</h1>
+<ul>
+<li>When the Problem they solve is a problem you have ...</li>
+<li>... and when the Consequences are acceptable</li>
+<li>Solve problems you have, not problems you think you might have</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Common Patterns</h1>
+<ul>
+<li>Abstract Factory</li>
+<li>Singleton</li>
+<li>Observer</li>
+<li>Model/View/Controller</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Abstract Factory</h1>
+<ul>
+<li>Provides an interface for creating one of a family of objects without specifying that object's concrete class name.</li>
+<li>Example: <code>DB::connect()</code></li>
+</ul>
+<pre>require_once 'DB.php';
+
+$type = 'mysql';
+$options = array(...);
+$dbh = &amp;DB::connect($type, $options);</pre>
+</div>
+
+
+<div class="slide">
+<h1>Implementing Abstract Factory</h1>
+<pre>    function &amp;factory($type)
+    {
+        @include_once("DB/${type}.php");
+
+        $classname = "DB_${type}";
+
+        if (!class_exists($classname)) {
+            return PEAR::raiseError(null, DB_ERROR_NOT_FOUND,
+                                    null, null, null, 'DB_Error', true);
+        }
+
+        return $obj =&amp; new $classname;
+    } </pre>
+</div>
+
+
+<div class="slide">
+<h1>Singleton</h1>
+<ul>
+<li>Ensures that there is only ever one instance of a class.</li>
+<li>Can only be implemented as a suggestion in PHP4</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Implementing Singleton</h1>
+<pre>    function &amp;singleton()
+    {
+        static $registry;
+
+        if (!isset($registry)) {
+            $registry = new Registry();
+        }
+
+        return $registry;
+    }</pre>
+</div>
+
+
+<div class="slide">
+<h1>Implementing Singleton in PHP5</h1>
+<p>PHP5's improved object model allows a better singleton implementation:</p>
+<pre>    /**
+     * The one instance.
+     */
+    static private $instance = false;
+
+    /**
+     * Make the constructor private.
+     */
+    private function __construct() {}
+
+    /**
+     * Use this static method to get at the one instance.
+     */
+    static public function singleton()
+    {
+        if (!self::$instance) {
+            self::$instance = new Singleton();
+        }
+        return self::$instance;
+    }</pre>
+</div>
+
+
+<div class="slide">
+<h1>Observer</h1>
+<ul>
+<li>Also called Subject-Observer, Listener, or Publish-Subscribe</li>
+<li>Let an arbitrary number of objects react to state changes</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Implementing Observer: Subject</h1>
+<pre>    function attach(&amp;$observer)
+    {
+        $this->_observers[$observer->getId()] =& $observer;
+    }
+
+    function detach(&amp;$observer)
+    {
+        unset($this->_observers[$observer->getId()]);
+    }
+
+    function notify()
+    {
+        foreach ($this->_observers as &amp;$observer) {
+            $observer->update($this);
+        }
+    }</pre>
+</div>
+
+
+<div class="slide">
+<h1>Implementing Observer: Observer</h1>
+<pre>    function update(&amp;$subject)
+    {
+        // Do what needs to be done.
+    }</pre>
+</div>
+
+
+<div class="slide">
+<h1>Model/View/Controller</h1>
+<ul>
+<li>MVC is a specialized Observer pattern, with Composite and Strategy completing the picture</li>
+<li>Observer describes how Views and Models interact</li>
+<li>Composite lets Views be made up of other Views</li>
+<li>Strategy lets Views use different Controllers</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>MVC: Model/View</h1>
+<ul>
+<li>Think of structured HTML as a Model, and CSS as a View</li>
+<li>Goal is to completely seperate data and logic from presentation</li>
+<li>Allows redesigns or new views (different stylesheet) without changing the Model</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>MVC: View Compositing</h1>
+<ul>
+<li>When Smalltalk-80 introduced MVC it had a CompositeView</li>
+<li>The Composite pattern solves the problem of wanting to treat groups of objects like individual objects</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>MVC: View/Controller</h1>
+<ul>
+<li>The Controller decides how a View handles user input</li>
+<li>Think of a command line interface, web interface, and web services as potential Controllers</li>
+<li>Controllers take user input and give them to both Views and Models as appropriate</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>PHP Implementations</h1>
+<ul>
+<li><a href="http://www.google.com/search?q=php+mvc">http://www.google.com/search?q=php+mvc</a> ... numerous</li>
+<li><a href="http://phrame.sourceforge.net/">Phrame</a></li>
+<li><a href="http://www.tonybibbs.com/index.php?topic=MVCnPHP">MVCnPHP</a></li>
+
+
+<div class="slide">
+<h1>Questions?</h1>
+</div>
+
+
+<div class="slide">
+<h1>Some Resources</h1>
+<ul>
+<li>The <a href="http://c2.com/ppr/">Portland Pattern Repository</a> (the original wiki)</li>
+<li><a href="http://www.phparchitect.com/">php|architect</a></li>
+<li><a href="http://www.phppatterns.com/">phpPatterns.com</a> (not updated recently)</li>
+</ul>
+</div>
+
+
+</div>
+
+</body>
+</html>

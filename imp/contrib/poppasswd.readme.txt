@@ -1,0 +1,19 @@
+I have successfully tested it on my test machine with RH4.2 and a poppassd
+that is talking to /bin/passwd. Any other tests apreciated.
+  
+/* poppassd config */
+$default->use_poppassd              = true;
+$default->poppassd_server           = 'localhost';
+$default->poppassd_port             = 106;
+  
+must be added to config/defaults.php3 for it to work. The password server
+must
+be explictly set here to disallow attacks using the IMP box, but should be
+trival to set it so that it uses the user's IMAP server.
+  
+Altough getpass() and getuser() are used for the acutal processing, the
+user
+must enter them again, to prevent the 'left-my-desk-to-go-to-WC'
+situation.
+  
+Help-messages and a small icon for it will follow.

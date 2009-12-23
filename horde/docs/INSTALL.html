@@ -1,0 +1,754 @@
+<div class="document" id="installing-the-horde-3-3-framework">
+<h1 class="title">Installing the Horde 3.3 Framework</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2008-04-10</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.90.6.21</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="auto-toc simple">
+<li><a class="reference" href="#obtaining-horde" id="id1" name="id1">1&nbsp;&nbsp;&nbsp;Obtaining Horde</a></li>
+<li><a class="reference" href="#quick-install" id="id2" name="id2">2&nbsp;&nbsp;&nbsp;Quick Install</a></li>
+<li><a class="reference" href="#prerequisites" id="id3" name="id3">3&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference" href="#installing-horde" id="id4" name="id4">4&nbsp;&nbsp;&nbsp;Installing Horde</a><ul class="auto-toc">
+<li><a class="reference" href="#installing-from-release-tarballs" id="id5" name="id5">4.1&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></li>
+<li><a class="reference" href="#installing-from-cvs-or-snaphots" id="id6" name="id6">4.2&nbsp;&nbsp;&nbsp;Installing from CVS or Snaphots</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#configuring-horde" id="id7" name="id7">5&nbsp;&nbsp;&nbsp;Configuring Horde</a></li>
+<li><a class="reference" href="#configuring-applications" id="id8" name="id8">6&nbsp;&nbsp;&nbsp;Configuring Applications</a></li>
+<li><a class="reference" href="#temporary-files" id="id9" name="id9">7&nbsp;&nbsp;&nbsp;Temporary Files</a></li>
+<li><a class="reference" href="#translations" id="id10" name="id10">8&nbsp;&nbsp;&nbsp;Translations</a></li>
+<li><a class="reference" href="#obtaining-support" id="id11" name="id11">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+</ul>
+</div>
+<p>This document contains instructions for installing the Horde Framework on your
+system.</p>
+<p>The Horde Framework, by itself, does not provide any significant end user
+functionality; it provides a base for other applications and tools for
+developers. When you have installed Horde as described below, you will
+probably want to install some of the available Horde applications, such as
+<a class="reference" href="http://www.horde.org/imp/">IMP</a> (a webmail client), or <a class="reference" href="http://www.horde.org/kronolith/">Kronolith</a> (a calendar). There is a list of Horde
+applications and projects at <a class="reference" href="http://www.horde.org/projects.php">http://www.horde.org/projects.php</a>.</p>
+<p>If you are interested in developing applications for Horde, there is developer
+documentation and references available at <a class="reference" href="http://dev.horde.org/">http://dev.horde.org/</a>, and some
+tutorials and papers on Horde available at <a class="reference" href="http://www.horde.org/papers/">http://www.horde.org/papers/</a>.</p>
+<p>For information on the capabilities and features of Horde, see the file
+<a class="reference" href="?f=README.html">README</a> in the top-level directory of the Horde distribution.</p>
+<div class="section" id="obtaining-horde">
+<h1><a class="toc-backref" href="#id1" name="obtaining-horde">1&nbsp;&nbsp;&nbsp;Obtaining Horde</a></h1>
+<p>The Horde Framework can be obtained from the Horde website and FTP server, at</p>
+<blockquote>
+<p><a class="reference" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
+<p><a class="reference" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
+</blockquote>
+<p>Or, better yet, use a mirror that is closer to you.  The mirror list can be
+found at:</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
+<p>The FTP directory contains the Horde PHP files which can be unpacked using
+<tt class="docutils literal"><span class="pre">tar</span></tt> and <tt class="docutils literal"><span class="pre">gunzip</span></tt> (see <a class="reference" href="#installing-horde">Installing Horde</a>, below).</p>
+<p>Bleeding-edge development versions of Horde and its applications are available
+via CVS; see the file <a class="reference" href="?f=HACKING.html">docs/HACKING</a>, or visit the website
+<a class="reference" href="http://www.horde.org/source/">http://www.horde.org/source/</a>, for information on accessing the Horde CVS
+repository.</p>
+<p>You will probably also want one or more Horde applications, since Horde
+doesn't do much by itself; a list of available applications, with links to
+descriptions and downloads, can be found at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/projects.php">http://www.horde.org/projects.php</a></blockquote>
+<p>While previous versions of Horde were numbered to correspond with a particular
+version of the IMP webmail application, that is no longer true as of Horde
+version 2.0. The current version of Horde will work with the current version
+of Horde applications. For more information about which versions are
+compatible see <a class="reference" href="http://www.horde.org/source/versions.php">http://www.horde.org/source/versions.php</a>.</p>
+</div>
+<div class="section" id="quick-install">
+<h1><a class="toc-backref" href="#id2" name="quick-install">2&nbsp;&nbsp;&nbsp;Quick Install</a></h1>
+<p>These are very terse instructions how to install Horde and its prerequisites
+on a LAMP sytem.  They are addressed to experienced administrators who know
+exactly what they are doing.  For more detailed instructions, start reading
+below at <a class="reference" href="#prerequisites">Prerequisites</a>.</p>
+<ol class="arabic">
+<li><p class="first">Compiling PHP for Apache:</p>
+<pre class="literal-block">
+cd php-x.x.x/
+./configure --with-apxs=/usr/sbin/apxs \
+            --with-gettext --with-dom --with-mcrypt \
+            --with-iconv --enable-mbstring=all --enable-mbregex \
+            --with-gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+            --with-mime-magic=/user/share/misc/magic.mime \
+            [--with-mysql|--with-pgsql|--with-oci8|--with-ldap]
+make
+make install
+</pre>
+</li>
+<li><p class="first">Restart Apache.</p>
+</li>
+<li><p class="first">Install PEAR packages:</p>
+<pre class="literal-block">
+pear install -o Log Mail Mail_Mime DB Date File
+pear -d preferred_state=beta install -a Services_Weather
+</pre>
+</li>
+<li><p class="first">Extract tarball:</p>
+<pre class="literal-block">
+cd /usr/local/apache/htdocs
+tar zxvf /path/to/horde-x.y.z.tar.gz
+mv horde-x.y.z horde
+</pre>
+</li>
+<li><p class="first">Configure Horde:</p>
+<pre class="literal-block">
+cd config/
+for f in *.dist; do cp $f `basename $f .dist`; done
+</pre>
+</li>
+<li><p class="first">Create database tables:</p>
+<pre class="literal-block">
+cd ../scripts/sql
+vi create.mysql.sql
+mysql -u root -p &lt; create.mysql.sql
+</pre>
+</li>
+<li><p class="first">Test Horde:</p>
+<pre class="literal-block">
+http://your-server/horde/test.php
+</pre>
+</li>
+<li><p class="first">Finish configuration:</p>
+<pre class="literal-block">
+http://your-server/horde/
+</pre>
+<p>Go to Adminstration =&gt; Setup =&gt; Horde</p>
+</li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h1><a class="toc-backref" href="#id3" name="prerequisites">3&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
+<p>The following prerequisites are <strong>REQUIRED</strong> for Horde to function properly.</p>
+<ol class="arabic">
+<li><p class="first">A webserver that supports PHP.</p>
+<p>Horde and its applications are developed under the Apache webserver, which
+we recommend. Apache is available from</p>
+<blockquote>
+<p><a class="reference" href="http://httpd.apache.org/">http://httpd.apache.org/</a></p>
+</blockquote>
+<p>Horde has also been reportedly used successfully under Microsoft IIS, among
+others.</p>
+</li>
+<li><p class="first">PHP 4.3.0 or above.</p>
+<p>PHP is the interpreted language in which Horde is written.
+You can obtain PHP at</p>
+<blockquote>
+<p><a class="reference" href="http://www.php.net/">http://www.php.net/</a></p>
+</blockquote>
+<p>Follow the instructions in the PHP package to build PHP for your system. If
+you use Apache, be sure to build PHP as a library with one of the following
+options:</p>
+<pre class="literal-block">
+--with-apache
+--with-apxs
+--with-apxs2
+</pre>
+<p>options to <tt class="docutils literal"><span class="pre">./configure</span></tt>, and not as a standalone executable.</p>
+<p>The following PHP options are <strong>REQUIRED</strong> by Horde (listed with their own
+prerequisites and configure options). In many cases, the required libraries
+and tools can be obtained as packages from your operating system vendor.</p>
+<ol class="loweralpha">
+<li><p class="first">Gettext support. <tt class="docutils literal"><span class="pre">--with-gettext</span></tt></p>
+<p>Gettext is the GNU Translation Project's localization library.
+Horde uses gettext to provide local translations of text displayed by
+applications. Information on obtaining the gettext package is available
+at</p>
+<blockquote>
+<p><a class="reference" href="http://www.gnu.org/software/gettext/gettext.html">http://www.gnu.org/software/gettext/gettext.html</a></p>
+</blockquote>
+<p>See also note below on configuring <a class="reference" href="#translations">Translations</a>.</p>
+</li>
+<li><p class="first">XML and DOMXML support. <tt class="docutils literal"><span class="pre">--with-dom</span></tt></p>
+<p>Horde's help engine and component setup require XML support. While some
+webservers (including recent Apache versions) have XML libraries
+built-in, others will require the expat XML parser libraries, available
+from</p>
+<blockquote>
+<p><a class="reference" href="http://expat.sourceforge.net/">http://expat.sourceforge.net/</a></p>
+</blockquote>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">You must have <strong>both</strong> XML libraries installed for Horde
+to work properly!</p>
+</div>
+<p>Older versions of PHP also require <tt class="docutils literal"><span class="pre">--with-xml</span></tt> to enable the
+SAX XML functions. With recent versions of PHP, this is enabled
+by default.</p>
+</li>
+</ol>
+<p>The following PHP options are <strong>RECOMMENDED</strong> to enable advanced features in
+Horde:</p>
+<ol class="loweralpha">
+<li><p class="first">A preferences container.</p>
+<p>Horde applications can store user preferences in an SQL database, an
+LDAP directory, an IMSP server, a Kolab server, or in PHP sessions.</p>
+<p>For SQL database preferences storage, Horde is thoroughly tested on
+MySQL (<tt class="docutils literal"><span class="pre">--with-mysql</span></tt>) and PostgreSQL (<tt class="docutils literal"><span class="pre">--with-pgsql</span></tt>) and has been
+reported to work with Oracle (<tt class="docutils literal"><span class="pre">--with-oci8</span></tt>) and SQL Server
+(<tt class="docutils literal"><span class="pre">--with-mssql</span></tt>).  It may also work with any other database supported
+by PEAR, but they are untested.</p>
+<p>Preferences can also be stored via LDAP (<tt class="docutils literal"><span class="pre">--with-ldap</span></tt>), Kolab
+(<tt class="docutils literal"><span class="pre">--with-ldap</span></tt>), and IMSP.</p>
+<p>Alternatively, preferences can be stored in PHP sessions, which
+requires no external programs or configure options, but which will not
+maintain preferences between sessions.</p>
+<p>While the LDAP, database, Kolab, or IMSP server need not be running on
+the machine onto which you are installing Horde, the appropriate
+client libraries to access the server must be available locally.</p>
+<p>If a preference container is not configured, no preference options
+will be configurable via Horde's web interface - the default values
+stored in each applications <tt class="docutils literal"><span class="pre">config/prefs.php</span></tt> file will be used.</p>
+</li>
+<li><p class="first">Mcrypt support <tt class="docutils literal"><span class="pre">--with-mcrypt</span></tt></p>
+<p>Mcrypt is a general-purpose cryptography library which is broader and
+significantly more efficient (FASTER!) than PHP's own cryptographic
+code. You can obtain mcrypt from</p>
+<blockquote>
+<p><a class="reference" href="http://mcrypt.sourceforge.net/">http://mcrypt.sourceforge.net/</a></p>
+</blockquote>
+<p>Building PHP without mcrypt support will not stop Horde from working,
+but will force it to use weaker (and much slower) encryption.</p>
+</li>
+<li><p class="first">UTF-8 support <tt class="docutils literal"><span class="pre">--with-iconv</span> <span class="pre">--enable-mbstring=all</span> <span class="pre">--enable-mbregex</span></tt></p>
+<p>If these extensions are enabled, Horde can support multibyte character
+sets like UTF-8 (meaning that content with any charset can be viewed
+with any translation).</p>
+<p>For iconv support you should use the GNU libiconv library, which is more
+stable and supports more charsets, compared to other iconv
+implementations, like Solaris', for example.</p>
+</li>
+<li><p class="first">GD support <tt class="docutils literal"><span class="pre">--with-gd</span></tt></p>
+<p>Horde will use the GD extension to perform manipulations on image data
+through the Horde_Image library.</p>
+<p>If you want GD to be able to work with PNG images, you should use the
+<tt class="docutils literal"><span class="pre">--with-png-dir</span></tt> option to make sure PHP can find the PNG libraries
+it needs to compile.</p>
+<p>If you want GD to be able to work with JPEG images, you should use the
+<tt class="docutils literal"><span class="pre">--with-jpeg-dir</span></tt> option to make sure PHP can find the JPEG libraries
+it needs to compile.</p>
+<p>You can also use the <a class="reference" href="http://www.imagemagick.org">ImageMagick</a> package to do these manipulations
+instead.  See the <tt class="docutils literal"><span class="pre">Image</span> <span class="pre">Manipulation</span></tt> tab of the Horde setup for more
+details.</p>
+</li>
+<li><p class="first">MIME Magic support <tt class="docutils literal"><span class="pre">--with-mime-magic</span></tt></p>
+<p>Horde will use the MIME Magic extension to guess the MIME type of files
+by analyzing their contents.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">This extension is reported to be <a class="reference" href="http://www.php.net/mime_magic">deprecated</a> in favor of the
+fileinfo PECL extension (see below).  However, some users have
+reported that the fileinfo extension will not build correctly
+on their system. If so, then the MIME Magic extension should
+be used instead. Pick one or the other - there is no need to
+compile both.</p>
+</div>
+<p>If using PHP 4.3.0 -&gt; 4.3.1, you should use <tt class="docutils literal"><span class="pre">--enable-mime-magic</span></tt>
+instead of <tt class="docutils literal"><span class="pre">--with-mime-magic</span></tt>.</p>
+</li>
+</ol>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Additionally, individual Horde applications may <strong>REQUIRE</strong>
+or <strong>RECOMMEND</strong> other options to be built into PHP
+also. Please check <tt class="docutils literal"><span class="pre">docs/INSTALL</span></tt> for all applications you
+wish to use to see if other PHP options are needed.</p>
+</div>
+</li>
+<li><p class="first">Additional PEAR Modules</p>
+<p>PEAR is short for &quot;PHP Extension and Application Repository&quot;.  The goal of
+PEAR is to provide a means of distributing reusable code.</p>
+<p>For more information, see <a class="reference" href="http://pear.php.net/">http://pear.php.net/</a></p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Make sure you are running a supported (i.e. new enough)
+version of PEAR: use the test script described below under
+&quot;<a class="reference" href="#configuring-horde">Configuring Horde</a>&quot;.  Do <strong>not</strong> use the PEAR version
+from ftp.horde.org.</p>
+</div>
+<p>Check that the path where the PEAR packages are installed are part of the
+<tt class="docutils literal"><span class="pre">include_path</span></tt> parameter that PHP uses to find PEAR packages.</p>
+<p>Run the command:</p>
+<pre class="literal-block">
+pear config-show
+</pre>
+<p>You will see something like:</p>
+<pre class="literal-block">
+PEAR directory                 php_dir         /usr/share/php
+</pre>
+<p>Now open the php.ini file of your system, for example <tt class="docutils literal"><span class="pre">/etc/php.ini</span></tt>,
+find the <tt class="docutils literal"><span class="pre">include_path</span></tt> and make sure that <tt class="docutils literal"><span class="pre">/usr/share/php</span></tt> is part of
+the list.  If you had to change that value, restart the web server after
+saving <tt class="docutils literal"><span class="pre">php.ini</span></tt>.</p>
+<p>These PEAR modules are <strong>REQUIRED</strong> to be installed for complete Horde
+functionality:</p>
+<ol class="loweralpha">
+<li><p class="first">Log</p>
+</li>
+<li><p class="first">Mail</p>
+</li>
+<li><p class="first">Mail_Mime</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear install Log Mail Mail_Mime
+</pre>
+</li>
+</ol>
+<p>These PEAR modules are <strong>RECOMMENDED</strong> to be installed:</p>
+<ol class="loweralpha">
+<li><p class="first">DB (&gt;= 1.7.8)</p>
+<p><strong>REQUIRED</strong> as soon as you want or need to store anything in a database.
+To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear install DB
+</pre>
+<p>To upgrade, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear upgrade DB
+</pre>
+</li>
+<li><p class="first">File</p>
+<p><strong>REQUIRED</strong> only if you wish to import CSV files.
+To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear install File
+</pre>
+</li>
+<li><p class="first">Date</p>
+<p><strong>REQUIRED</strong> only if you are dealing with calendar data.
+To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear install Date
+</pre>
+</li>
+<li><p class="first">Services_Weather (&gt;= 1.3.1)</p>
+<p><strong>REQUIRED</strong> only if you wish to use the weather.com block on the portal
+page.
+To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear install -a Services_Weather
+</pre>
+<p>Additional steps are required if you want use the METAR weather block on
+the portal page. See the file <tt class="docutils literal"><span class="pre">data/Services_Weather/buildMetarDB.php</span></tt>
+in your PEAR directory for details.</p>
+</li>
+<li><p class="first">HTTP_WebDAV_Server</p>
+<p><strong>REQUIRED</strong> only if you want to use Horde's WebDAV interface, for
+example to access calendars, tasklists or files with an external client.
+To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear install HTTP_WebDAV_Server-beta
+</pre>
+</li>
+</ol>
+<p>This method of installing PEAR modules requires that you have a PHP version
+that has been compiled as a static binary.  All versions of PHP 4.3.0+
+build both a SAPI module (Apache, CGI, etc.) and a command-line (CLI)
+binary at the same time.  Check if you have a php binary in
+<tt class="docutils literal"><span class="pre">/usr/local/bin</span></tt> (<tt class="docutils literal"><span class="pre">/usr/bin</span></tt> if if you installed from an operating
+system package) before recompiling.</p>
+<p>If you receive the error <tt class="docutils literal"><span class="pre">Could</span> <span class="pre">not</span> <span class="pre">read</span> <span class="pre">cmd</span> <span class="pre">args</span></tt> you should run the pear
+script this way:</p>
+<pre class="literal-block">
+php -d register_argc_argv=1 _PEAR_ install _MODULE_
+</pre>
+<p>_PEAR_ is the complete path of the pear script installed by PHP during
+installation (e.g. <tt class="docutils literal"><span class="pre">/usr/local/bin/pear</span></tt>).  Make sure the <tt class="docutils literal"><span class="pre">pear</span></tt> script
+appears in your path. The default installation path for pear is
+<tt class="docutils literal"><span class="pre">/usr/local/bin/pear</span></tt>.</p>
+<p>_MODULE_ is the PEAR module, listed above, which you wish to install.</p>
+<p>For more detailed directions on installing PEAR modules, see the PEAR
+documentation at <a class="reference" href="http://pear.php.net/manual/">http://pear.php.net/manual/</a></p>
+</li>
+<li><p class="first">Additional PECL Modules</p>
+<p>PECL is short for &quot;PHP Extension Community Library&quot;.  The goal of PECL is
+to provide a means of easily distributing PHP extensions.</p>
+<p>For more information, see <a class="reference" href="http://pecl.php.net/">http://pecl.php.net/</a></p>
+<p>PECL is the &quot;sister&quot; of PEAR and uses the same packaging and distribution
+system as PEAR, so the configuration/setup is essentially identical to the
+PEAR instructions above.</p>
+<p>When you install a PECL extension, you have to add it to your <tt class="docutils literal"><span class="pre">php.ini</span></tt>
+so it gets loaded.  Add the following line to your <tt class="docutils literal"><span class="pre">php.ini</span></tt> file to load
+the extension (the extension should be installed in the directory specified
+by the <tt class="docutils literal"><span class="pre">extension_dir</span></tt> option in <tt class="docutils literal"><span class="pre">php.ini</span></tt>):</p>
+<pre class="literal-block">
+extension=fileinfo.so
+</pre>
+<p>Or on Windows:</p>
+<pre class="literal-block">
+extension=fileinfo.dll
+</pre>
+<p>After that, restart your webserver.</p>
+<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed:</p>
+<ol class="loweralpha">
+<li><p class="first">fileinfo</p>
+<p>Allows Horde modules to guess the MIME type of files by analyzing
+their contents.</p>
+<p>If not enabled, Horde will use its own PHP code to perform MIME magic
+lookups.  However, this lookup is slower, less accurate, and detects
+fewer MIME types than the PECL extension will.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install fileinfo
+</pre>
+</li>
+<li><p class="first">json</p>
+<p>The json extension will be used for JSON serialization if available.
+json's author claims this module is 86 - 270 times faster than a pure
+PHP solution.</p>
+<p>THE JSON MODULE IS ONLY REQUIRED FOR VERSIONS OF PHP &lt; 5.2. JSON
+SUPPORT IS AUTOMATICALLY INCLUDED IN PHP 5.2+.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install json
+</pre>
+</li>
+</ol>
+<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed if you need
+advanced functionality:</p>
+<ol class="loweralpha">
+<li><p class="first">memcache</p>
+<p>If using the memcached SessionHandler, the memcache PECL extension must
+be installed.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install memcache
+</pre>
+</li>
+<li><p class="first">lzf</p>
+<p>If the lzf module is available, Horde can compress some cached data in
+the current session, thus reducing the size of the current session.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install lzf
+</pre>
+</li>
+</ol>
+<p>For additional help on using the pear command-line program to install PECL
+extensions, see the PEAR installation section above.</p>
+</li>
+</ol>
+<p>The following non-PHP prerequisites are <strong>RECOMMENDED</strong>, or are <strong>REQUIRED</strong>
+if you use a specific Horde application (as noted in [brackets]):</p>
+<ol class="arabic">
+<li><p class="first">Sendmail or equivalent.</p>
+<p>Horde uses sendmail, or a program that implements the <tt class="docutils literal"><span class="pre">sendmail(8)</span></tt> API
+(as included with postfix, qmail, and exim, among others). If your system
+does not already have a full mail transport with a sendmail interface, you
+can configure Horde to speak directly with a remote SMTP server, but this
+may incur a performance penalty.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="installing-horde">
+<h1><a class="toc-backref" href="#id4" name="installing-horde">4&nbsp;&nbsp;&nbsp;Installing Horde</a></h1>
+<p>Horde is written in PHP, and must be installed in a web-accessible directory.
+The precise location of this directory will differ from system to system. If
+you have no idea where you should be installing Horde, install it directly
+under the root of your webserver's document tree.</p>
+<div class="section" id="installing-from-release-tarballs">
+<h2><a class="toc-backref" href="#id5" name="installing-from-release-tarballs">4.1&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></h2>
+<p>Since Horde is written in PHP, there is no compilation necessary; simply
+expand the distribution where you want it to reside and rename the root
+directory of the distribution to whatever you wish to appear in the
+URL. Please note that the default configuration expects Horde to be installed
+in the directory <tt class="docutils literal"><span class="pre">/horde</span></tt> though. For example, with the Apache webserver's
+default document root of <tt class="docutils literal"><span class="pre">/usr/local/apache/htdocs</span></tt>, you would type:</p>
+<pre class="literal-block">
+cd /usr/local/apache/htdocs
+tar zxvf /path/to/horde-x.y.z.tar.gz
+mv horde-x.y.z horde
+</pre>
+<p>You would then find Horde at the URL:</p>
+<pre class="literal-block">
+http://your-server/horde/
+</pre>
+<p>Skip the next paragraph if you installed Horde from a release tarball.</p>
+</div>
+<div class="section" id="installing-from-cvs-or-snaphots">
+<h2><a class="toc-backref" href="#id6" name="installing-from-cvs-or-snaphots">4.2&nbsp;&nbsp;&nbsp;Installing from CVS or Snaphots</a></h2>
+<p>At this point, the Horde framework modules need to be checked out from CVS and
+installed. This must be done as root (or another user with sufficient
+administrator priviledges):</p>
+<pre class="literal-block">
+cd horde
+cvs co framework
+cd framework
+pear channel-discover pear.horde.org
+php -q install-packages.php
+</pre>
+<p>For Windows systems - use the <tt class="docutils literal"><span class="pre">install-packages.bat</span></tt> file instead.
+For Debian systems - the command-line PHP interpreter might be called <tt class="docutils literal"><span class="pre">php4</span></tt>
+instead of <tt class="docutils literal"><span class="pre">php</span></tt>.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need PEAR version 1.4.0 or higher to run the install scripts.</p>
+</div>
+</div>
+</div>
+<div class="section" id="configuring-horde">
+<h1><a class="toc-backref" href="#id7" name="configuring-horde">5&nbsp;&nbsp;&nbsp;Configuring Horde</a></h1>
+<ol class="arabic">
+<li><p class="first">Configuring the web server</p>
+<p>Horde requires the following webserver settings. Examples shown are for
+Apache; other webservers' configurations will differ.</p>
+<ol class="loweralpha">
+<li><p class="first">PHP interpretation for files matching <tt class="docutils literal"><span class="pre">*.php</span></tt>:</p>
+<pre class="literal-block">
+AddType application/x-httpd-php .php
+</pre>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">The above instructions may not work if you have specified PHP
+as an output filter with <tt class="docutils literal"><span class="pre">SetOutputFilter</span></tt> directive in
+Apache 2.x versions.  In particular, Red Hat 8.0 and above
+Apache 2.x RPMS have the output filter set, and <strong>MUST NOT</strong>
+have the above <tt class="docutils literal"><span class="pre">AddType</span></tt> directive added.</p>
+</div>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">index.php</span></tt> as an index file (brought up when a user requests a URL for
+a directory):</p>
+<pre class="literal-block">
+DirectoryIndex index.php
+</pre>
+</li>
+</ol>
+</li>
+<li><p class="first">Creating databases</p>
+<p>The specific steps to create a preferences storage container depend on
+which database you've chosen to use.</p>
+<p>First, look in <tt class="docutils literal"><span class="pre">scripts/sql/</span></tt> to see if a <tt class="docutils literal"><span class="pre">create.</span></tt> script already
+exists for your database.  If so, you should be able to simply execute that
+script as superuser in your database.  Consult the <tt class="docutils literal"><span class="pre">scripts/sql/README</span></tt>
+file for more information.</p>
+<p>Be sure to change the default password, <tt class="docutils literal"><span class="pre">horde</span></tt>, to something else before
+creating the tables! (Remember to use this password when you configure
+Horde in the next step.)</p>
+<p>If such a script does not exist, you'll need to build your own, using the
+files <tt class="docutils literal"><span class="pre">horde_users.sql</span></tt>, <tt class="docutils literal"><span class="pre">horde_prefs.sql</span></tt>, and <tt class="docutils literal"><span class="pre">horde_datatree.sql</span></tt>
+as a starting point.  If you need assistance in creating databases for a
+database for which no <tt class="docutils literal"><span class="pre">create.</span></tt> script exists, you may wish to let us
+know on the <a class="reference" href="mailto:horde&#64;lists.horde.org">Horde mailing list</a>.</p>
+<p>If you make any changes to the user that will access the database,
+you <strong>MUST</strong> ensure that that user can still create
+tables. Otherwise Horde will be unable to create sequence tables
+for tracking primary keys.</p>
+<p>If you are going to use database based sessions, create a table using the
+files <tt class="docutils literal"><span class="pre">scripts/sql/horde_sessionhandler*.sql</span></tt> as a starting point.</p>
+</li>
+<li><p class="first">Configuring Horde</p>
+<p>To configure Horde, change to the <tt class="docutils literal"><span class="pre">config/</span></tt> directory of the installed
+distribution, and make copies of all of the configuration <tt class="docutils literal"><span class="pre">.dist</span></tt> files
+without the <tt class="docutils literal"><span class="pre">.dist</span></tt> suffix:</p>
+<pre class="literal-block">
+cd config/
+for f in *.dist; do cp $f `basename $f .dist`; done
+</pre>
+<p>Or if you are installing Horde an a Windows system:</p>
+<pre class="literal-block">
+cd config
+copy *.dist *.
+</pre>
+<p>Documentation on the format of those files can be found in each file.</p>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p>All configuration files in Horde are PHP scripts that are
+executed by the web server. If you make an error in one of
+these files, Horde might stop working. Thus it is always a
+good idea to test the configuration files after you edited
+them. If you want to test mime_drivers.php for example run:</p>
+<pre class="last literal-block">
+php -l mime_drivers.php
+</pre>
+</div>
+</li>
+<li><p class="first">Setting up alarm emails</p>
+<p>If you want your users to be able to receive emails from the Horde_Alarm
+system, you must set up a cron entry for <tt class="docutils literal"><span class="pre">horde/scripts/alarms.php</span></tt>, you
+must have at least one administrator specified in the Horde configuration,
+and you must have the PHP CLI installed (a CGI binary is not supported -
+<tt class="docutils literal"><span class="pre">php</span> <span class="pre">-v</span></tt> will report what kind of PHP binary you have).</p>
+<p>Running the job every 5 minutes is recommended:</p>
+<pre class="literal-block">
+# Horde Alarms
+*/5 * * * * /usr/bin/php /var/www/horde/scripts/alarms.php
+</pre>
+<p>(replace <tt class="docutils literal"><span class="pre">/usr/bin/php</span></tt> with the path to your PHP CLI and
+<tt class="docutils literal"><span class="pre">/var/www/horde/</span></tt> with the path to your Horde installation)</p>
+</li>
+<li><p class="first">Testing Horde</p>
+<p>Once you have configured your webserver, PHP, and Horde, bring up the
+included test page in your Web browser to ensure that all necessary
+prerequisites have been met. If you installed Horde as described above, the
+URL to the test page would be:</p>
+<pre class="literal-block">
+http://your-server/horde/test.php
+</pre>
+<p>Check that your PHP and PEAR versions are acceptably recent, that all
+required module capabilities are present, and that <tt class="docutils literal"><span class="pre">magic_quotes_runtime</span></tt>
+is set to <tt class="docutils literal"><span class="pre">Off</span></tt>. Then note the <tt class="docutils literal"><span class="pre">Session</span> <span class="pre">counter:</span> <span class="pre">1</span></tt> line under <tt class="docutils literal"><span class="pre">PHP</span>
+<span class="pre">Sessions</span></tt>, and reload the page. The session counter should increment.</p>
+<p>If you get a warning like <tt class="docutils literal"><span class="pre">Failed</span> <span class="pre">opening</span> <span class="pre">'/path/to/test.php'</span> <span class="pre">for</span>
+<span class="pre">inclusion</span></tt>, make sure that the web server has the permission to read the
+<tt class="docutils literal"><span class="pre">test.php</span></tt> file.</p>
+</li>
+<li><p class="first">Completing Configuration</p>
+<p>You can now access Horde without a password, and you will be logged in as
+an administrator.</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">You should first configure a real authentication
+backend and designate which accounts in your real
+backend will be administrator accounts.  Horde does
+<strong>NOT</strong> have a default administrator account - all
+users, including administrators, must exist in the
+actual authentication backend.  Click on <tt class="docutils literal"><span class="pre">Setup</span></tt>
+in the <tt class="docutils literal"><span class="pre">Administration</span></tt> menu and configure Horde.
+Start in the <tt class="docutils literal"><span class="pre">Authentication</span></tt> tab.</p>
+</div>
+<p>Here is an example for configuring authentication against a remote IMAP
+server.  Similar steps apply for authenticating against a database, an LDAP
+server, etc.</p>
+<ol class="loweralpha simple">
+<li>In the <tt class="docutils literal"><span class="pre">Which</span> <span class="pre">users</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">treated</span> <span class="pre">as</span> <span class="pre">administrators</span></tt> field enter a
+comma separated list of user names of your choosing. This will control
+who is allowed to make configuration changes, see passwords, potentially
+add users, etc.</li>
+<li>In the <tt class="docutils literal"><span class="pre">What</span> <span class="pre">backend</span> <span class="pre">should</span> <span class="pre">we</span> <span class="pre">use</span> <span class="pre">for</span> <span class="pre">authenticating</span> <span class="pre">users</span> <span class="pre">to</span> <span class="pre">Horde</span></tt>
+pulldown menu select <tt class="docutils literal"><span class="pre">IMAP</span> <span class="pre">authentication</span></tt>. The page will reload and
+you will have specific options for IMAP authentication.</li>
+<li>In the <tt class="docutils literal"><span class="pre">Configuration</span> <span class="pre">type</span></tt> pulldown menu select <tt class="docutils literal"><span class="pre">Separate</span> <span class="pre">values</span></tt>.
+The page will reload with additional options. Fill in the remaining
+three fields appropriately:<ul>
+<li>IP name/number of the IMAP server</li>
+<li>For a secure connection, select port 993.</li>
+<li>Select the protocol; for a secure connection either <tt class="docutils literal"><span class="pre">imap/ssl</span></tt> or
+<tt class="docutils literal"><span class="pre">imap/ssl/novalidate-cert</span></tt> (for self-signed certificates).</li>
+</ul>
+</li>
+</ol>
+<p>Continue to configure Horde through all the tabs of the setup interface and
+click on <tt class="docutils literal"><span class="pre">Generate</span> <span class="pre">Horde</span> <span class="pre">Configuration</span></tt>. Important items that you
+probably want to configure are the <tt class="docutils literal"><span class="pre">Preference</span> <span class="pre">System</span></tt> that lets users
+save their personal options, and the <tt class="docutils literal"><span class="pre">DataTree</span> <span class="pre">System</span></tt> that is required
+for some applications to work at all.</p>
+<p>Configuration of applications in <tt class="docutils literal"><span class="pre">registry.php</span></tt> is documented in the
+<tt class="docutils literal"><span class="pre">INSTALL</span></tt> file of each application.  Most applications require you to
+configure them with a &quot;Horde administrator&quot; account.  A Horde administrator
+account is any normal Horde account that has been added to the
+administrator list in the <tt class="docutils literal"><span class="pre">Authentication</span></tt> tab of the Horde setup.</p>
+<p>The other files in that directory need only be modified if you wish to
+customize Horde's appearance or behaviour -- the defaults will work at most
+sites.</p>
+</li>
+<li><p class="first">Securing Horde</p>
+<ol class="loweralpha">
+<li><p class="first">Passwords</p>
+<p>Some of Horde's configuration files contain passwords which local users
+could use to access your database.  It is recommended to ensure that at
+least the Horde configuration files (in <tt class="docutils literal"><span class="pre">config/</span></tt>) are not readable to
+system users.  There are <tt class="docutils literal"><span class="pre">.htaccess</span></tt> files restricting access to
+directories that do not need to be accessed directly; before relying on
+those, ensure that your webserver supports <tt class="docutils literal"><span class="pre">.htaccess</span></tt> and is
+configured to use them, and that the files in those directories are in
+fact inaccessible via the browser.</p>
+<p>An additional approach is to make Horde's configuration files owned by
+the user <tt class="docutils literal"><span class="pre">root</span></tt> and by a group which only the webserver user belongs
+to, and then making them readable only to owner and group.  For example,
+if your webserver runs as <tt class="docutils literal"><span class="pre">www.www</span></tt>, do as follows:</p>
+<pre class="literal-block">
+chown root.www config/*
+chmod 0440 config/*
+</pre>
+</li>
+<li><p class="first">Sessions</p>
+<p>Session data -- including hashed versions of your users' passwords, in
+some applications -- may not be stored as securely as necessary.</p>
+<p>If you are using file-based PHP sessions (which are the default), be
+sure that session files are not being written into <tt class="docutils literal"><span class="pre">/tmp</span></tt> with
+permissions that allow other users to read them. Ideally, change the
+<tt class="docutils literal"><span class="pre">session.save_path</span></tt> setting in <tt class="docutils literal"><span class="pre">php.ini</span></tt> to a directory only
+readable and writeable by your webserver.</p>
+<p>Additionally, you can change the session handler of PHP to use any
+storage backend requested (e.g. SQL database) via the <tt class="docutils literal"><span class="pre">Custom</span> <span class="pre">Session</span>
+<span class="pre">Handler</span></tt> tab in the Horde setup.</p>
+</li>
+</ol>
+<p>For more information about securing your webserver, PHP and Horde, see the
+<a class="reference" href="?f=SECURITY.html">docs/SECURITY</a> file.</p>
+</li>
+<li><p class="first">Entering the survey</p>
+<p>If you like, go to <a class="reference" href="http://www.horde.org/survey/">http://www.horde.org/survey/</a> and enter the details of
+your system.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="configuring-applications">
+<h1><a class="toc-backref" href="#id8" name="configuring-applications">6&nbsp;&nbsp;&nbsp;Configuring Applications</a></h1>
+<p>A list of available Horde applications can be found at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/projects.php">http://www.horde.org/projects.php</a></blockquote>
+<p>Instructions on configuring Horde applications can be found in the <tt class="docutils literal"><span class="pre">INSTALL</span></tt>
+file in the application's <tt class="docutils literal"><span class="pre">docs/</span></tt> directory.</p>
+</div>
+<div class="section" id="temporary-files">
+<h1><a class="toc-backref" href="#id9" name="temporary-files">7&nbsp;&nbsp;&nbsp;Temporary Files</a></h1>
+<p>Various Horde applications will generate temporary files in PHP's temporary
+directory (see the <tt class="docutils literal"><span class="pre">General</span></tt> tab in the Horde setup).  For various reasons,
+some of these files may not be removed when the user's session ends. To
+reclaim this disk space, it may be necessary to periodically delete these old
+temporary files.</p>
+<p>An example cron-based solution can be found at <tt class="docutils literal"><span class="pre">scripts/temp-cleanup.cron</span></tt>.
+Another possible solution is to use Red Hat's <tt class="docutils literal"><span class="pre">tmpwatch</span></tt> utility or anything
+similar to remove old files (see <a class="reference" href="http://www.redhat.com/">http://www.redhat.com/</a>).</p>
+</div>
+<div class="section" id="translations">
+<h1><a class="toc-backref" href="#id10" name="translations">8&nbsp;&nbsp;&nbsp;Translations</a></h1>
+<p>Note for international users: Horde uses GNU gettext to provide local
+translations of text displayed by applications; the translations are found in
+the po/ directory.  If a translation is not yet available for your locale (and
+you wish to create one), see the <tt class="docutils literal"><span class="pre">horde/po/README</span></tt> file, or if you're having
+trouble using a provided translation, please see the
+<a class="reference" href="?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+</div>
+<div class="section" id="obtaining-support">
+<h1><a class="toc-backref" href="#id11" name="obtaining-support">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<p>If you encounter problems with Horde, help is available!</p>
+<p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<p>The Horde Project runs a number of mailing lists, for individual applications
+and for issues relating to the project as a whole. Information, archives, and
+subscription information can be found at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<p>Lastly, Horde developers, contributors and users may also be found on IRC,
+on the channel #horde on the Freenode Network (irc.freenode.net).</p>
+<p>Please keep in mind that Horde is free software written by volunteers.
+For information on reasonable support expectations, please read</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<p>Thanks for using Horde!</p>
+<p>The Horde Team</p>
+</div>
+</div>
+<hr class="docutils footer" />
+<div class="footer">
+<a class="reference" href="http://cvs.horde.org/co.php/horde/docs/INSTALL">View document source</a>.
+Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+</div>

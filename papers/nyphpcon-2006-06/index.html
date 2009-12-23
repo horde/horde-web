@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>One-day Application Building With The Horde Framework</title>
+</head>
+
+<body>
+
+<h1>One-day Application Building With The Horde Framework</h1>
+
+<p>This is the talk presented by Chuck Hagenbuch
+at <a href="http://www.nyphpcon.com/">NYPHPCon</a> 2006. It is a
+tutorial on how to build a real-estate tracking application using
+Horde (RDO, Horde_Form, and a few
+more), <a
+href="http://prototype.conio.net/">Prototype</a>, <a
+href="http://script.aculo.us/">Scriptaculous</a>, and several
+mapping/geocoding web services. Because of the code-heavy nature of
+the tutorial and the number of examples, the slides are available only
+as a tarball. This includes complete source code for 8 versions of the
+example application as it progresses from a simple auto-generated table
+to the final application.</p>
+
+<h2>Instructions</h2>
+
+<ol>
+
+ <li>Download and decompress (bz2) the slides: <a href="nyphpcon-2006-06_v20070201.tar.bz2">nyphpcon-2006-06_v20070201.tar.bz2</a> (292 KB)</li>
+
+ <li>Put the expanded nyphpcon-2006-06/ directory into a subdir (such
+ as horde/samples/nyphpcon) in your Horde HEAD installation (you can
+ also check Horde out of CVS and then check out the presentations/ CVS
+ module under your horde/ directory). <em>Your Horde version must be
+ after June 27th for the most recent version of the slides (and vice
+ versa), because of RDO being renamed to Horde_RDO.</em></li>
+
+ <li>If you do not follow this layout, you will need to change the
+ definition of the HORDE_BASE constants in the example code.</li>
+
+ <li>Create the database. There are example files for MySQL and PostgreSQL.</li>
+
+ <li>Set your database configuration, Yahoo! API key, and Google API key in conf.php (copied from conf.php.dist).</li>
+
+ <li>Load index.html in a browser and follow along!</li>
+
+</ol>
+
+<p>For help using Horde CVS, see <a href="http://horde.org/source/">http://horde.org/source/</a>.</p>
+
+<h3>Changelog</h3>
+
+<p>The code archive now has a date appended to it to indicate when it
+was last changed. The code is being kept up to date with Horde API
+changes for the time being, so the date indicates when it was last
+modified. Changes are listed below according to the version they were
+introduced in.</p>
+
+<h4>v20070201</h4>
+<ul>
+ <li>Updates to work with refactored RDO code in Horde HEAD.</li>
+</ul>
+
+<h4>v20070126</h4>
+<ul>
+ <li>Add a local copy of the Helpers to help with breakage. This also
+ means an incubator checkout is no longer required to run this
+ code.</li>
+ <li>Code has been updated to run cleanly with the latest Horde development version.</li>
+</ul>
+
+<h4>v20060918</h4>
+<ul>
+ <li>Update to match current RDO (renamed to Horde_RDO) and Horde code, including the new exception handler.</li>
+</ul>
+
+<h4>v20060630</h4>
+<ul>
+ <li>All .php files, not just the index.php files, include horde/lib/core.php for users who rely on core.php to set their include_path to include the Horde libraries.</li>
+</ul>
+
+</body>
+</html>

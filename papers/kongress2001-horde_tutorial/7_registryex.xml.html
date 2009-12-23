@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Registry Examples</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="6_registry.xml.html" onmouseout="status='';" onmouseover="status='Go to Horde Registry'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='6_registry.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Horde Registry</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Registry Examples</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="8_registryex2.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>More Registry Examples</div></td></tr></table></td><td width="1%" align="right"><a href="8_registryex2.xml.html" onmouseout="status='';" onmouseover="status='Go to More Registry Examples'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+<p>The Registry has a singleton method that should be used to ensure
+that there is only ever one instance of the Registry during a request.
+The '&' is important to make sure that the object isn't copied:</p>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php&nbsp;$registry&nbsp;</font><font color="#007700">=&nbsp;&amp;</font><font color="#0000BB">Registry</font><font color="#007700">::</font><font color="#0000BB">singleton</font><font color="#007700">();&nbsp;</font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+
+<p>All applications should put themselves onto the application stack
+when they start running. This also takes care of a number of things:
+if this is the first application, then the session is started and
+language selection is run. The application's configuration and
+locale files are loaded, and if a user is logged in, their
+preferences are loaded:</p>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php&nbsp;$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">pushApp</font><font color="#007700">(</font><font color="#DD0000">'curapp'</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+
+</td></tr></table></div>
+</body>
+</html>

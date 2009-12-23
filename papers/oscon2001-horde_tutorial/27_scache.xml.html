@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Session Cache</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="26_mime3.xml.html" onmouseout="status='';" onmouseover="status='Go to Other MIME'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='26_mime3.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Other MIME</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Session Cache</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="28_menu.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Menu</div></td></tr></table></td><td width="1%" align="right"><a href="28_menu.xml.html" onmouseout="status='';" onmouseover="status='Go to Menu'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+<p>Caching data in the session:</p>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br><br></font><font color="#007700">require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/SessionCache.php'</font><font color="#007700">;<br><br></font><font color="#FF8000">// Add an object to the cache<br></font><font color="#0000BB">$cacheID&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">SessionCache</font><font color="#007700">::</font><font color="#0000BB">putObject</font><font color="#007700">(</font><font color="#0000BB">$foo</font><font color="#007700">);<br><br></font><font color="#FF8000">// Retrieve an object from the cache<br></font><font color="#0000BB">$bar&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">SessionCache</font><font color="#007700">::</font><font color="#0000BB">getObject</font><font color="#007700">(</font><font color="#0000BB">$cacheID</font><font color="#007700">);<br><br></font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+  <ul>
+<li>The SessionCache class lets you cache a small number of variables (up to 20, by default) in a user's session.</li><li>Pass in PHP variables; SessionCache will take care of serialization, if necessary.</li><li>Older variables will be discarded if you go past the maximum cache size, so an alternative method of retrieving the data is also required.</li></ul><br />
+
+
+
+</td></tr></table></div>
+</body>
+</html>

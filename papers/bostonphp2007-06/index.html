@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Horde ORM: Rampage Data Objects</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="2007-06-07" />
+<meta name="author" content="Chuck Hagenbuch" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../s5/ui/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../s5/ui/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../s5/ui/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../s5/ui/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="../s5/ui/SyntaxHighlighter/SyntaxHighlighter.css" type="text/css" media="screen"></link>
+<!-- S5 JS -->
+<script src="../s5/ui/slides.js" type="text/javascript"></script>
+<!-- prototype + scriptaculous -->
+<script src="../s5/ui/prototype/prototype.js" type="text/javascript"></script>
+<script src="../s5/ui/scriptaculous/scriptaculous.js" type="text/javascript"></script>
+<!-- Presentaculous JS -->
+<script src="../s5/ui/presentacular.js" type="text/javascript"></script>
+<!-- Syntax highlighting JS -->
+<script src="../s5/ui/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script src="../s5/ui/SyntaxHighlighter/shBrushPhp.js" type="text/javascript"></script>
+<script type="text/javascript">
+Event.observe(window, 'load', function() {
+    dp.SyntaxHighlighter.HighlightAll('code');
+});
+</script>
+</head>
+<body>
+
+<div class="layout">
+ <div id="currentSlide"></div>
+ <div id="header"></div>
+ <div id="footer">
+  <h1>Cambridge, Massachusetts &#8226; June 6th 2007</h1>
+  <h2>Horde ORM: Rampage Data Objects</h2>
+  <div id="controls"></div>
+ </div>
+</div>
+
+<!-- Begin presentation -->
+<div class="presentation">
+
+<div class="slide">
+<h1>Horde ORM: Rampage Data Objects</h1>
+<h3>Chuck Hagenbuch</h3>
+<h4><a href="http://www.horde.org/">The Horde Project</a></h4>
+</div>
+
+<div class="slide">
+ <h1>Definitions: ORM</h1>
+ <p>ORM is <a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank">Object-relational mapping</a></p>
+ <p>This is a broad term for a number of techniques that usually boil down to treating a row in a database table as an object.</p>
+ <div class="handout">
+  <p>ActiveRecord, part of Ruby on Rails, is probably the best-known ORM in the scripting language world right now. Hibernate and Torque are well-known and popular in the Java world.</p>
+ </div>
+</div>
+
+<div class="slide">
+ <h1>Definitions: Data Mapper</h1>
+ <p><a href="http://www.martinfowler.com/eaaCatalog/dataMapper.html" target="_blank">Data Mapper</a> is one of the patterns for doing ORM, or ORM-like-things.</p>
+ <p>With Data Mapper, Mapper objects sit between the database layer and domain objects and do the translation while keeping them separated.</p>
+</div>
+
+<div class="slide">
+ <h1>Definitions: Horde</h1>
+ <p><a href="http://horde.org/" target="_blank">Horde</a> is one of the oldest open-source PHP projects, encompassing an application framework and over 50 applications.</p>
+</div>
+
+<div class="slide">
+ <h1>Definitions: Rampage</h1>
+ <p>Horde on the Rampage is a catchphrase for the rapid-application building focus of Horde 4.</p>
+ <div class="handout">
+  <p>This was initially called Catalyst when it started out in Chuck's head, but Catalyst (written in Perl) was released before anything got written down.</p>
+ </div>
+</div>
+
+<div class="slide">
+ <h1>Definitions: Rdo</h1>
+ <p>Rdo is Rampage Data Objects. It's not RDO.</p>
+</div>
+
+<div class="slide">
+ <h1>Why Rdo?</h1>
+ <p>Other PHP implementations require XML (Propel), overload objects for both the model and row instances (DB_DataObject), require defining the database schema with PHPDoc annotations (ezPDO), etc.</p>
+</div>
+
+<div class="slide">
+ <h1>Late Static Binding</h1>
+ <p>This is mixing objects with classes, and it's because PHP doesn't have late static binding:</p>
+ <pre>$b = new Book;
+$books = $b->find(...);</pre>
+ <p>Should be:</p>
+ <pre>$books = Book::find(...);</pre>
+</div>
+
+<div class="slide">
+ <h1>Rdo Goals</h1>
+ <p>Be as light as possible, but no lighter</p>
+</div>
+
+<div class="slide">
+ <h1>Rdo Goals</h1>
+ <p>Leave managing the database to the developer (DBA) or another tool (MDB2_Schema)</p>
+</div>
+
+<div class="slide">
+ <h1>Rdo Goals</h1>
+ <p>Smart usage of PHP 5 features and interfaces</p>
+</div>
+
+<div class="slide">
+ <h1>Rdo Goals</h1>
+ <p>Broad database support, with enough SQL abstraction for things that should be simple like LIMIT</p>
+</div>
+
+<div class="slide">
+ <h1>stdDisclaimer.h</h1>
+ <p>Rdo is still beta software (like GMail!). The API is getting quite stable, but it is not frozen yet.</p>
+</div>
+
+<div class="slide">
+ <h1>Installation</h1>
+ <pre>pear channel-discover pear.horde.org
+pear install horde/Rdo</pre>
+</div>
+
+<div class="slide">
+ <h1>Schema for initial examples</h1>
+ <pre>CREATE TABLE users (
+    id bigserial NOT NULL,
+    name varchar(255),
+    phone varchar(20),
+    created int,
+    updated int,
+
+    PRIMARY KEY (id)
+);</pre>
+</div>
+
+<div class="slide">
+ <h1>Getting Started</h1>
+ <p>Two core concepts: Mappers and entity objects.</p>
+</div>
+
+<div class="slide">
+ <h1>Mappers</h1>
+ <p>Mappers implement the DataMapper part of Rdo, and always extend <code>Horde_Rdo_Mapper</code>. They need to know how to connect to the database, and know about any relationships with other objects.</p>
+</div>
+
+<div class="slide">
+ <h1>Basic Mapper implementation</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+class UserMapper extends Horde_Rdo_Mapper {
+
+    public function getAdapter()
+    {
+        return Horde_Rdo_Adapter::factory('pdo',
+            array('phptype' =&gt; 'pgsql'));
+    }
+
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Entity objects</h1>
+ <p>Entity objects are the "O" in ORM. They always extend <code>Horde_Rdo_Base</code>, and the most they know about the database is how to find a Mapper object.</p>
+</div>
+
+<div class="slide">
+ <h1>Basic entity object implementation</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+class User extends Horde_Rdo_Base {
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Rdo Examples: Read</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+$um = new UserMapper;
+
+$userCount = count($um); // Count all users.
+
+$exists = $um-&gt;exists(1); // Check if id 1 exists.
+
+// Look for Alice
+$user = $um-&gt;find(Horde_Rdo::FIND_FIRST,
+                  array('name' =&gt; 'Alice'));
+if ($user) {
+    echo "Found Alice: id $user-&gt;id\n";
+} else {
+    // Create a new user.
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Rdo Examples: Edit</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+$user = $um-&gt;create(array(
+    'name' =&gt; 'Alice',
+    'phone' =&gt; '212-555-6565'));
+echo "Created new user with id: {$user-&gt;id}\n";
+
+// Change the name of the user and save.
+$user-&gt;name = 'Bob';
+$user-&gt;save();</textarea>
+</div>
+
+<div class="slide">
+ <h1>Rdo Examples: Find and Delete</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+// List all users.
+echo "Looking for all:\n";
+foreach ($um-&gt;find(Horde_Rdo::FIND_ALL) as $user) {
+    echo "  (" . $user-&gt;id
+        . ") " . $user-&gt;name . "\n";
+}
+
+// Fetch id 2 and delete.
+$user = $um-&gt;find(2);
+$user-&gt;delete();</textarea>
+</div>
+
+<div class="slide">
+ <h1>Query Objects</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+$q = new Horde_Rdo_Query($mapper);
+$q-&gt;addSort('description')
+  -&gt;limit(100)
+  -&gt;addTest('brand@name', '=', $brand)
+  -&gt;addTest('category_id', '=', $category_id)
+  -&gt;addTest('price@special', '=', $on_sale);
+$results = $mapper-&gt;find(Horde_Rdo::FIND_ALL, $q);
+</textarea>
+</div>
+
+<div class="slide">
+ <h1>Relationships</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+<?php
+class ProductMapper extends Horde_Rdo_Mapper {
+    protected $_relationships = array(
+        'brand' =&gt; array('type' =&gt; Horde_Rdo::MANY_TO_ONE,
+                         'foreignKey' =&gt; 'brand_id',
+                         'mapper' =&gt; 'BrandMapper'),
+        );
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Lazy Loading</h1>
+ <p>You don't always want to load everything from the database in one go - blobs, large text fields, complicated and rarely used relationships (second cousins twice removed - they just need to show up at weddings and funerals).</p>
+</div>
+
+<div class="slide">
+ <h1>Lazy Fields</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+<?php
+class FileMapper extends Horde_Rdo_Mapper {
+    protected $_lazyFields = array(
+        'large_blob_contents',
+    );
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Lazy Relationships</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+<?php
+class ProductMapper extends Horde_Rdo_Mapper {
+    protected $_lazyRelationships = array(
+        'category' =&gt; array(
+            'type' =&gt; Horde_Rdo::MANY_TO_ONE,
+            'foreignKey' =&gt; 'category_id',
+            'mapper' =&gt; 'CategoryMapper'),
+        );
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Really Complicated Relationships</h1>
+ <pre>    SELECT pr.description, pr.id, pr.product_id, pr.brand_id, p.special, p.case_price, p.piece_price,
+           SUM(o.units) AS units, SUM(o.extra) AS extra, pr.units_per_case, o.locked, pr.min_ord_qty,
+           (SUM(o.units) + SUM(o.extra)) AS units_wanted, pr.piece_size, o.catalog_id,
+           floor((SUM(o.units) + SUM(o.extra)) / pr.units_per_case) AS cases_ordered
+    FROM coop_orders o INNER JOIN coop_prices p ON o.product_id = p.product_id
+                       INNER JOIN coop_products pr ON o.product_id = pr.id
+    GROUP BY pr.id, o.locked
+    ORDER BY o.locked, pr.description;</pre>
+</div>
+
+<div class="slide">
+ <h1>Work with Views</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+class GroupOrderMapper extends Horde_Rdo_Mapper {
+    protected $_table = 'coop_group_order';
+
+    public function getAdapter()
+    {
+        return Coop::$db;
+    }
+
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>What's the primary key?</h1>
+ <p>Can't create a primary key on a view in MySQL; can't always have a primary key. Composite primary keys can help, but that doesn't help us with views.</p>
+</div>
+
+<div class="slide">
+ <h1>Cached Models</h1>
+ <p>Instead of inspecting the database for the Horde_Rdo_Model object:</p>
+ <pre># rdo-model.php coop_group_order
+&lt;?php
+class Coop_group_order_Model extends Horde_Rdo_Model {
+...</pre>
+</div>
+
+<div class="slide">
+ <h1>Custom Models</h1>
+ <p>Compare the output to the output for the users table. Only thing missing is 'key':</p>
+ <textarea name="code" class="php" rows="10" cols="100">
+class GroupOrderModel extends Horde_Rdo_Model {
+   var $_fields =
+...
+   var $table = 'coop_group_order';
+   var $key = 'id';
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Using Custom Models</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+class GroupOrderMapper extends Horde_Rdo_Mapper {
+    protected $_table = 'coop_group_order';
+
+    public function __get($key)
+    {
+        if ($key == 'model') {
+            $this->model = new GroupOrderModel;
+            return $this->model;
+        }
+        return parent::__get($key);
+    }
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Getting the Database Connection</h1>
+ <p>If you need it, it's there:</p>
+ <textarea name="code" class="php" rows="10" cols="100">
+$db = $mapper->adapter;
+$resultSet = $db->query('SELECT ...');
+</textarea>
+</div>
+
+<div class="slide">
+ <h1>Future Plans</h1>
+ <ul class="incremental">
+  <li>Named Queries</li>
+  <li>Reasonable direct SQL</li>
+  <li>Global Adapter and Inflector objects</li>
+  <li>...</li>
+  <li>Your ideas?</li>
+ </ul>
+</div>
+
+<!-- Fin -->
+<div class="slide">
+ <h1>Questions?</h1>
+</div>
+
+<div class="slide">
+ <h1>Resources</h1>
+ <ul>
+  <li>The Horde website: <a href="http://www.horde.org/" target="_blank">http://www.horde.org/</a></li>
+  <li>Developer Documentation: <a href="http://dev.horde.org/" target="_blank">http://dev.horde.org/</a></li>
+  <li>Wiki Developer Documentation: <a href="http://wiki.horde.org/Doc/Dev" target="_blank">http://wiki.horde.org/Doc/Dev</a></li>
+  <li>Mailing lists: <a href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></li>
+ </ul>
+</div>
+
+<!-- End Slides -->
+</div>
+</body>
+</html>

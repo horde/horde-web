@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>Presentations</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" /></head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="11_singleton_impl.xml.html" onmouseout="window.status='';" onmouseover="window.status='Go to: Implementing Singleton'; return true;" accesskey="P"><img src="presentation_back.gif" border="0" alt="Back" title="Back" /></a></td><td style="cursor: hand;" onclick="location.href='11_singleton_impl.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Implementing Singleton</div></td></tr></table></td>
+<td width='50%' align='center' style='cursor: hand;' class='oratorHeaderBack' valign='center' nowrap='nowrap' onclick='location.href="/horde/orator/slide.php?p=kongress2002-design_patterns&amp;s=12&amp;Sax=4a99a93860805f0c7ae2863ae66b17ca";'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Observer</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="13_observer_impl.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Implementing Observer</div></td></tr></table></td><td width="1%" align="right"><a href="13_observer_impl.xml.html" onmouseout="window.status='';" onmouseover="window.status='Go to: Implementing Observer'; return true;" accesskey="N"><img src="presentation_forward.gif" border="0" alt="Forward" title="Forward" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+  <div align="center" class="osHeading">The Observer Pattern</div>
+
+  <p>
+    The observer pattern, also known as subject-observer and listener,
+    is a more complicated but very prevalent and useful
+    pattern. Anyone who has done event handling in Java knows this
+    pattern, every kind of event listener is an observer to one
+    subject or another - the keyboard, a window, a mouse, etc.
+  </p>
+
+  <p>
+    The pattern describes how to attach any number of observers to a
+    subject, which can then act on events that occur involving the
+    subject. For example, this pattern is available in the PEAR Log::
+    package, allowing you to monitor log data with an observer object
+    and take action - such as sending an email page on any critical
+    errors - on certain kinds of log messages.
+  </p>
+
+  <p>
+    Here's a simple usage of this implementation of the observer
+    pattern:
+  </p>
+
+  <code><font color="#000000">
+<font color="#0000CC">&lt;?php<br /><br /></font><font color="#006600">require_once&nbsp;</font><font color="#CC0000">'Log.php'</font><font color="#006600">;<br /><br /></font><font color="#0000CC">$logger&nbsp;</font><font color="#006600">=&nbsp;</font><font color="#0000CC">Log</font><font color="#006600">::</font><font color="#0000CC">singleton</font><font color="#006600">(</font><font color="#CC0000">'file'</font><font color="#006600">,&nbsp;</font><font color="#CC0000">'/tmp/example.log'</font><font color="#006600">,&nbsp;</font><font color="#CC0000">'php'</font><font color="#006600">,&nbsp;array());<br /></font><font color="#0000CC">$observer&nbsp;</font><font color="#006600">=&nbsp;new&nbsp;</font><font color="#0000CC">Log_observer_pageme</font><font color="#006600">(</font><font color="#0000CC">LOG_EMERG</font><font color="#006600">);<br /></font><font color="#0000CC">$logger</font><font color="#006600">-&gt;</font><font color="#0000CC">attach</font><font color="#006600">(</font><font color="#0000CC">$observer</font><font color="#006600">);<br /><br /></font><font color="#FF9900">// Program logic happens here<br /></font><font color="#0000CC">$logger</font><font color="#006600">-&gt;</font><font color="#0000CC">log</font><font color="#006600">(</font><font color="#0000CC">$error</font><font color="#006600">,&nbsp;</font><font color="#0000CC">$error_priority</font><font color="#006600">);<br /><br /></font>
+</font>
+</code><br />
+
+
+  <p>
+    That's it. Assuming that we've written the Log_observer_pageme
+    class correctly, any critical errors will be emailed to our system
+    administrator's pager; everything else will be logged as normal.
+  </p>
+
+</td></tr></table></div>
+</body>
+</html>

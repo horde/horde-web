@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Tokens</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="23_text.xml.html" onmouseout="status='';" onmouseover="status='Go to Text'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='23_text.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Text</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Tokens</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="25_secret.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Encryption</div></td></tr></table></td><td width="1%" align="right"><a href="25_secret.xml.html" onmouseout="status='';" onmouseover="status='Go to Encryption'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+  <p>Tokens let you make sure forms are not reloaded</p>
+
+  <code><font color="#000000">
+<br><font color="#0000BB">&lt;?php<br><br></font><font color="#007700">require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/Token.php'</font><font color="#007700">;<br><br></font><font color="#FF8000">// To generate a connection ID:<br></font><font color="#007700">echo&nbsp;</font><font color="#0000BB">Token</font><font color="#007700">::</font><font color="#0000BB">generateID</font><font color="#007700">()<br><br></font><font color="#FF8000">// To verify a connection ID<br></font><font color="#0000BB">$tokenSource&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">Token</font><font color="#007700">::</font><font color="#0000BB">factory</font><font color="#007700">(</font><font color="#0000BB">$driver</font><font color="#007700">,&nbsp;</font><font color="#0000BB">$params</font><font color="#007700">);<br></font><font color="#0000BB">$token&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">Horde</font><font color="#007700">::</font><font color="#0000BB">getFormData</font><font color="#007700">(</font><font color="#DD0000">'token'</font><font color="#007700">);<br>if&nbsp;(!</font><font color="#0000BB">$tokenSource</font><font color="#007700">-&gt;</font><font color="#0000BB">verify</font><font color="#007700">(</font><font color="#0000BB">$token</font><font color="#007700">))&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</font><font color="#DD0000">'Form was reloaded'</font><font color="#007700">;<br>}<br><br></font><font color="#0000BB">?&gt;<br></font>&nbsp;&nbsp;</font>
+</code><br />
+
+
+  <ul>
+<li>The Token system can be used any time you need to generate a unique ID and make sure it is only used once.</li><li>There are SQL (PEAR DB) and text-file drivers.</li></ul><br />
+
+
+</td></tr></table></div>
+</body>
+</html>
