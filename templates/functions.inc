@@ -328,7 +328,7 @@ function print_toolbar()
     if (substr($toolbar_mode, 0, 6) == 'source') {
         toolbar_item($base_url . '/source/', 'Source Code', true, true);
         toolbar_item('http://cvs.horde.org/', 'Web Interface', false);
-        toolbar_item($base_url . '/source/using.php', 'Using CVS (H3)', $toolbar_mode == 'source_cvs');
+        toolbar_item($base_url . '/source/cvs.php', 'Using CVS (H3)', $toolbar_mode == 'source_cvs');
         toolbar_item($base_url . '/source/git.php', 'Using Git (H4)', $toolbar_mode == 'source_git');
         toolbar_item($base_url . '/source/modules.php', 'Modules', $toolbar_mode == 'source_modules');
         toolbar_item($base_url . '/source/versions.php', 'Versions', $toolbar_mode == 'source_versions');
