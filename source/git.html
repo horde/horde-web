@@ -1,10 +1,6 @@
 <p>You can use the Horde Git repository as an anonymous user or as a
 developer.</p>
 
-<p>More information about <em>installing</em> Horde from Git can be
-found on the <a href="http://wiki.horde.org/ReleaseManagement">Release
-Management Wiki Page</a>.</p>
-
 <p>You will need a Git client, if you don't already have one. Information on
 Git can be found at <a href="http://git-scm.com/">http://git-scm.com/</a>.</p>
 
@@ -52,20 +48,16 @@ command:</p>
 
 <h4>Making Development Repos Web-Accessible</h4>
 
-<p>Make sure you have cloned both the <tt>horde</tt> and the
-<tt>horde-hatchery</tt> repos. Once initialized, creating a web-accessible
-development installation can be done simply by running the <tt>install_dev</tt>
-PHP script located at <tt>horde-git/framework/bin</tt>.  To properly run this
-script, copy <tt>horde-git/framework/bin/install_dev.conf.dist</tt> to
-<tt>horde-git/framework/bin/install_dev.conf</tt> and edit as necessary to
-match the setup of your server.  Running that script will symlink the entire
-horde package into the web-accessible directory you specify, symlink all other
-horde applications within that directory, and will properly set up the
-necessary include/horde path definitions. Note that all edits should take
-place within the repository, as the web-accessible directory will be deleted
-every time the <tt>install_dev</tt> script is run. Additionally, full
-directory paths will be needed in the
-<tt>horde-git/horde/config/registry.php</tt> file due to the symlinks.</p>
+<p>Make sure you have cloned both the <tt>horde</tt> and the <tt>horde-hatchery</tt> repos. Once initialized, creating a web-accessible development installation can be done simply by running the <tt>install_dev</tt> PHP script located at <tt>horde-git/framework/bin</tt>. To properly run this script, a local copy of install_dev.conf must be created on your system, with the variables inside that dfile edited as necessary to apply to your system.</p>
+
+<p>For example:</p>
+
+<pre><code>cd /path/to/horde-git/framework/bin
+cp install_dev.conf.dist install_dev.conf
+vi install_dev.conf (replace vi with your favorite editing tool)
+php ./install_dev</code></pre>
+
+<p>Running that script will symlink the entire horde package into the web-accessible directory you specified in <tt>install_dev.conf</tt>, symlink all other Horde applications within that directory, and will properly set up the necessary include/horde path definitions. Note that all edits should take place within the repository, as the web-accessible directory will be deleted every time the <tt>install_dev</tt> script is run. Additionally, full directory paths will be needed in the <tt>horde-git/horde/config/registry.php</tt> file due to the symlinks.</p>
 
 <h4 id="patch">Creating Patches</h4>
 
@@ -125,15 +117,17 @@ following command:</p>
 not indicate which files are updated. To see a list of files that are updated,
 you should run these two commands instead:</p>
 
-<p><code>git fetch</code></p>
-<p><code>git rebase -v origin</code></p>
+<pre><code>git fetch
+git rebase -v origin</code></pre>
 
 <p>A helpful alias for <code>.gitconfig</code> to update your local repository
 while seeing changed files and avoiding conflicts is:</p>
-<code>
-[alias]<br />
-&nbsp;&nbsp;&nbsp;&nbsp;get = !git fetch &amp;&amp; ( git rebase -v origin || ( git stash &amp;&amp; ( git rebase -v origin || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp; git stash pop ) )
-</code>
+
+<pre><code>[alias]
+    get = !git fetch &amp;&amp;
+        ( git rebase -v origin || ( git stash &amp;&amp;
+            ( git rebase -v origin || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp;
+        git stash pop ) )</code></pre>
 
 <p>For more information on rebasing, and the commands needed if conflicts are
 detected during the rebase/merge, see:
@@ -146,15 +140,15 @@ and <a href="http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your
 <p>First, you should make sure your contact information is correct. The
 easiest way to do so is to issue the following commands:</p>
 
-<p><code>git config user.name "FirstName LastName"</code></p>
-<p><code>git config user.email "user@example.com"</code></p>
+<pre><code>git config user.name "FirstName LastName"
+git config user.email "user@example.com"</code></pre>
 
 <p>Go ahead and hack away. When finished, commit the files to your local
 repo. There are several ways to do this. To add specific files to a commit,
 use the following commands:</p>
 
-<p><code>git add filename [filename2] [filename3...]</code></p>
-<p><code>git commit</code></p>
+<pre><code>git add filename [filename2] [filename3...]
+git commit</code></pre>
 
 <p><tt><a
 href="http://www.kernel.org/pub/software/scm/git/docs/git-add.html">git
