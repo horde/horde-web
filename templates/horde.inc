@@ -67,11 +67,14 @@ under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative
 Commons - Attribution / Share Alike</a> license.</div>
 
 <script type="text/javascript">
-var elts = [ 'side', 'header', 'footer' ].concat([ '.box', '.note', '.hint', '.alert', '.warning', '.boxRight', '.important' ].collect(function(e) {
-    return $('mainarea').select(e);
-}).flatten());
-elts.each(function(e) {
-    Rico.Corner.round(e, { color: 'fromElement', bgColor: 'fromParent' });
+Rico.loadModule('Corner');
+Rico.onLoad(function() {
+    var elts = [ 'side', 'header', 'footer' ].concat([ '.box', '.note', '.hint', '.alert', '.warning', '.boxRight', '.important' ].collect(function(e) {
+        return $('mainarea').select(e);
+    }).flatten());
+    elts.each(function(e) {
+        Rico.Corner.round(e, { color: 'fromElement', bgColor: 'fromParent' });
+    });
 });
 </script>
 

@@ -2,10 +2,10 @@
  <div id="accordionContainer"><div id="accordionInnerContainer">
   <div id="accordion">
    <div id="openRequests">
-    <div id="openRequestsTitle">
+    <div id="openRequestsTitle" class="accordionTitle">
      <h2>Open Enhancement Requests</h2>
     </div>
-    <div id="openRequestsContent">
+    <div id="openRequestsContent" class="accordionContents">
       <ul>
        <?php foreach ($tickets as $story):?>
         <li><a href="<?php echo htmlspecialchars($story['url']) ?>"><?php echo htmlspecialchars($story['title']) ?></a></li>
@@ -196,14 +196,23 @@ claiming the bounty. Prizes will be paid
 using <a href="https://www.paypal.com/">PayPal</a>.</p>
 </div>
 <script type="text/javascript">
-Rico.Corner.round('accordionContainer', { color: 'fromElement', bgColor: 'fromParent' });
-$('accordionContainer').select('.round').each(function (e) { Rico.Corner.round(e, { color: 'fromElement', bgColor: 'fromParent', border: '#ccc' }); });
-showTab = function(tab) {
-    $(tab.titleBar).addClassName('tabShown');
-}
-hideTab = function(tab) {
-    $(tab.titleBar).removeClassName('tabShown');
-}
-new Rico.Accordion($('accordion'), { panelHeight: 300, borderColor: '#9c9', onHideTab: hideTab, onShowTab: showTab });
+Rico.loadModule('Corner', 'Accordion');
+Rico.onLoad(function() {
+    Rico.Corner.round('accordionContainer', { color: 'fromElement', bgColor: 'fromParent' });
+    $('accordionContainer').select('.round').each(function (e) {
+        Rico.Corner.round(e, { color: 'fromElement', bgColor: 'fromParent', border: '#ccc' });
+    });
+    new Rico.Accordion($('accordion').select('.accordionTitle'), $('accordion').select('.accordionContents'), {
+        panelHeight: 300,
+        borderColor: '#9c9',
+        onHideTab: function(tab) {
+            $(tab.titleBar).removeClassName('tabShown');
+        },
+        onShowTab: function(tab) {
+            $(tab.titleBar).addClassName('tabShown');
+        }
+    });
+});
+
 </script>
 

@@ -16,17 +16,17 @@
 <div id="accordionContainer"><div id="accordionInnerContainer">
  <div id="accordion">
   <div id="newsPanel">
-    <div id="newsTitle" class="tabShown">
+    <div id="newsTitle" class="tabShown accordionTitle">
      <h2>Latest News <a href="<?php echo $base_url ?>/atom.php"><img src="graphics/feed.png" border="0" style="vertical-align: middle" /></a></h2>
     </div>
 
-    <div id="newsContent">
+    <div id="newsContent" class="accordionContents">
      <ul>
 
       <li><img src="graphics/logos/horde3-mini.png" class="horde3" alt="Horde
       3" /> December 15: The latest versions of the Horde Application
       Framework, <a class="side" href="horde/">Horde 3.3.6</a>,
-      <a class="side" href="groupware">Horde Groupware 1.2.5</a>, 
+      <a class="side" href="groupware">Horde Groupware 1.2.5</a>,
       <a class="side" href="webmail/">Horde Groupware Webmail Edition
       1.2.5</a>, the Horde Internet Messaging Program, <a class="side"
       href="imp/">IMP H3 (4.3.6)</a>, the Dynamic Internet Messaging
@@ -172,10 +172,10 @@
   </div>
 
   <div id="stablePanel">
-    <div id="stableTitle">
+    <div id="stableTitle" class="accordionTitle">
      <h2>Stable Releases</h2>
     </div>
-    <div id="stableContent">
+    <div id="stableContent" class="accordionContents">
      <ul>
 <?php foreach ($horde_apps_stable as $key => $val): ?>
       <li><?php echo app_download_link($key, $val, true) ?> <?php echo app_link($key, $val['name'] . ' ' . $val['ver']) ?></li>
@@ -195,10 +195,10 @@
 ?>
 <?php if (!empty($dev_list)): ?>
   <div id="devPanel">
-    <div id="devTitle">
+    <div id="devTitle" class="accordionTitle">
      <h2>Development Releases</h2>
     </div>
-    <div id="devContent">
+    <div id="devContent" class="accordionContents">
      <ul>
 <?php foreach ($dev_list as $key => $val): ?>
       <li><?php echo app_download_link($key, $val, true) ?> <?php echo app_link($key, $val['name'] . ' ' . $val['ver']) ?></li>
@@ -212,10 +212,10 @@
 <?php include './blogs.php'; ?>
 <?php if ($blog_stories): ?>
   <div id="blogsPanel">
-    <div id="blogsTitle">
+    <div id="blogsTitle" class="accordionTitle">
      <h2>Planet Horde</h2>
     </div>
-    <div id="blogsContent">
+    <div id="blogsContent" class="accordionContents">
      <ul>
 <?php foreach ($blog_stories as $story): ?>
       <li>
@@ -306,17 +306,23 @@
 </div>
 
 <script type="text/javascript">
-var opts = { color: 'fromElement', bgColor: 'fromParent' };
-Rico.Corner.round('accordionContainer', opts);
-Rico.Corner.round('sidebarSearch', opts);
-Rico.Corner.round('quotes', opts);
-showTab = function(tab) {
-    $(tab.titleBar).addClassName('tabShown');
-    $(tab.content).setStyle({ border: '1px solid #9c9', borderTopWidth: 0 });
-}
-hideTab = function(tab) {
-    $(tab.titleBar).removeClassName('tabShown');
-}
-new Rico.Accordion($('accordion'), { panelHeight: 300, borderColor: '#cfc', onHideTab: hideTab, onShowTab: showTab });
-$('newsContent').setStyle({ border: '1px solid #9c9', borderTopWidth: 0 });
+Rico.loadModule('Corner', 'Accordion');
+Rico.onLoad(function() {
+    var opts = { color: 'fromElement', bgColor: 'fromParent' };
+    Rico.Corner.round('accordionContainer', opts);
+    Rico.Corner.round('sidebarSearch', opts);
+    Rico.Corner.round('quotes', opts);
+    new Rico.Accordion($('accordion').select('.accordionTitle'), $('accordion').select('.accordionContents'), {
+        borderColor: '#cfc',
+        panelHeight: 300,
+        onHideTab: function(tab) {
+            $(tab.titleBar).removeClassName('tabShown');
+        },
+        onShowTab: function(tab) {
+            $(tab.titleBar).addClassName('tabShown');
+            $(tab.content).setStyle({ border: '1px solid #9c9', borderTopWidth: 0 });
+        }
+    });
+    $('newsContent').setStyle({ border: '1px solid #9c9', borderTopWidth: 0 });
+});
 </script>

@@ -35,10 +35,10 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
  <div id="accordion">
   <?php if (!empty($horde_news[$app]['news'])): $news = &$horde_news[$app]['news']; ?>
   <div id="newsPanel">
-    <div id="newsTitle" class="tabShown">
+    <div id="newsTitle" class="tabShown accordionTitle">
      <h2>Latest News</h2>
     </div>
-    <div id="newsContent">
+    <div id="newsContent" class="accordionContents">
      <ul>
      <?php $i = 0; foreach ($news as $date => $text): if (++$i > 5) { break; } ?>
       <li class="round"><?php echo (($date != '**NODATE**') ? $date . ': ' : '') . $text ?></li>
@@ -51,10 +51,10 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
   <?php if (!empty($horde_news[$app]['releases'])): $releases = &$horde_news[$app]['releases']; ?>
    <?php foreach (array('stable' => 'Stable', 'dev' => 'Development') as $key => $name): if (isset($releases[$key])): ?>
    <div id="<?php echo $key ?>Panel">
-    <div id="<?php echo $key ?>Title" class="tabShown">
+    <div id="<?php echo $key ?>Title" class="tabShown accordionTitle">
      <h2><?php echo $name ?> Releases</h2>
     </div>
-    <div id="<?php echo $key ?>Content">
+    <div id="<?php echo $key ?>Content" class="accordionContents">
      <ul>
      <?php for ($i = 0, $c = count($releases[$key]); $i < 3 && $i < $c; ++$i): ?>
       <li class="round"><?php echo $releases[$key][$i][0] . ': ' . (isset($releases[$key][$i][2]) ? '<a href="http://lists.horde.org/archives/announce/' . $releases[$key][$i][2] . '.html">' : '') . $releases[$key][$i][1] . (isset($releases[$key][$i][2]) ? '</a>' : '') ?></li>
@@ -67,10 +67,10 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
 
   <?php if (file_exists("../$app/more.php")): include "../$app/more.php"; foreach ($more as $title => $items): ?>
   <div id="<?php echo urlencode($title) ?>Panel">
-    <div id="<?php echo urlencode($title) ?>Title" class="tabShown">
+    <div id="<?php echo urlencode($title) ?>Title" class="tabShown accordionTitle">
      <h2><?php echo $title ?></h2>
     </div>
-    <div id="<?php echo urlencode($title) ?>Content">
+    <div id="<?php echo urlencode($title) ?>Content" class="accordionContents>
      <ul>
      <?php for ($i = 0, $c = count($items); $i < 3 && $i < $c; ++$i): ?>
       <li class="round"><?php echo $items[$i] ?></li>
@@ -81,10 +81,10 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
   <?php endforeach; endif; ?>
 
    <div id="ticketsPanel">
-    <div id="ticketsTitle">
+    <div id="ticketsTitle" class="accordionTitle">
      <h2>Open Bugs</h2>
     </div>
-    <div id="ticketsContent">
+    <div id="ticketsContent" class="accordionContents">
      <ul>
       <?php if (count($open_bugs)): ?>
       <?php foreach ($open_bugs as $story): ?>
@@ -99,10 +99,10 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
 
   <?php if (count($resolved_bugs)): ?>
    <div id="closedTicketsPanel">
-    <div id="closedTicketsTitle">
+    <div id="closedTicketsTitle" class="accordionTitle">
      <h2>Resolved Bugs</h2>
     </div>
-    <div id="closedTicketsContent">
+    <div id="closedTicketsContent" class="accordionContents">
      <ul>
       <?php foreach ($resolved_bugs as $story): ?>
       <li><a href="<?php echo htmlspecialchars($story['url']) ?>"><?php echo htmlspecialchars($story['title']) ?></a></li>
@@ -113,10 +113,10 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
   <?php endif; ?>
 
    <div id="ticketsPanel">
-    <div id="ticketsTitle">
+    <div id="ticketsTitle" class="accordionTitle">
      <h2>Open Requests</h2>
     </div>
-    <div id="ticketsContent">
+    <div id="ticketsContent" class="accordionContents">
      <ul>
       <?php if (count($open_enhancements)): ?>
       <?php foreach ($open_enhancements as $story): ?>
@@ -131,10 +131,10 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
 
   <?php if (count($resolved_enhancements)): ?>
    <div id="ticketsPanel">
-    <div id="ticketsTitle">
+    <div id="ticketsTitle" class="accordionTitle">
      <h2>Resolved Requests</h2>
     </div>
-    <div id="ticketsContent">
+    <div id="ticketsContent" class="accordionContents">
      <ul>
       <?php foreach ($resolved_enhancements as $story): ?>
        <li><a href="<?php echo htmlspecialchars($story['url']) ?>"><?php echo htmlspecialchars($story['title']) ?></a></li>
@@ -148,14 +148,20 @@ $resolved_enhancements = getFeeds($resolved_feeds_enhancement);
 </div></div></div>
 
 <script type="text/javascript">
-Rico.Corner.round('accordionContainer', { color: 'fromElement', bgColor: 'fromParent' });
-showTab = function(tab) {
-    $(tab.titleBar).addClassName('tabShown');
-}
-hideTab = function(tab) {
-    $(tab.titleBar).removeClassName('tabShown');
-}
-new Rico.Accordion($('accordion'), { panelHeight: 300, borderColor: '#9c9', onHideTab: hideTab, onShowTab: showTab });
+Rico.loadModule('Corner', 'Accordion');
+Rico.onLoad(function() {
+    Rico.Corner.round('accordionContainer', { color: 'fromElement', bgColor: 'fromParent' });
+    new Rico.Accordion($('accordion').select('.accordionTitle'), $('accordion').select('.accordionContents'), {
+        borderColor: '#9c9',
+        panelHeight: 300,
+        onHideTab: function(tab) {
+            $(tab.titleBar).removeClassName('tabShown');
+        },
+        onShowTab: function(tab) {
+            $(tab.titleBar).addClassName('tabShown');
+        }
+    });
+});
 </script>
 
 <?php endif; ?>
