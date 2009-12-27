@@ -85,6 +85,8 @@ function print_toolbar()
         toolbar_item($base_url . '/ansel/', 'Ansel', true, true);
         toolbar_item($base_url . '/ansel/authors/', 'Authors');
         toolbar_item($base_url . '/ansel/docs/', 'Documentation');
+        toolbar_item($base_url . '/download/app/?app=ansel', 'Download');
+        toolbar_item($base_url . '/ansel/roadmap/', 'Roadmap');
         toolbar_item($base_url . '/ansel/screenshots/', 'Screenshots');
         toolbar_item('http://git.horde.org/ansel/?rt=horde-hatchery', 'Source Code');
 
