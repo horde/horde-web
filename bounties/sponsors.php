@@ -58,7 +58,7 @@ $sponsors = array(
         'months'  => 6,
     ),
     array(
-        'sponsor' => 'Erb Hotel MÃ¼nchen',
+        'sponsor' => 'Erb Hotel München',
         'link'    => 'www.messehotel-erb-muenchen.de',
         'contact' => 'cerb@hotel-erb.de',
         'start'   => '2009-12-13',
