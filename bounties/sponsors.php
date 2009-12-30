@@ -1,5 +1,6 @@
 <?php
 $sponsors = array(
+/*
     array(
         'sponsor' => 'Swishmail.com',
         'logo'    => 'swishmail.gif',
@@ -9,6 +10,7 @@ $sponsors = array(
         'end'     => '2009-10-16',
         'months'  => 36,
     ),
+*/
     array(
         'sponsor' => 'TYPO3 Agentur',
         'link'    => 'www.aoemedia.de/typo3-agentur.html',
@@ -64,6 +66,14 @@ $sponsors = array(
         'start'   => '2009-12-13',
         'end'     => '2010-12-14',
         'months'  => 12,
+    ),
+    array(
+        'sponsor' => 'Lapworld',
+        'link'    => 'www.lapworld.de',
+        'contact' => 'info@lapworld.de',
+        'start'   => '2009-12-30',
+        'end'     => '2010-07-01',
+        'months'  => 6,
     ),
 );
 
