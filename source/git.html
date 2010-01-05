@@ -236,6 +236,12 @@ the following command:</p>
 
 <code>git push origin [localbranch]</code>
 
+<p>After you push your new topic branch, you can do the following to have your 
+existing topic branch track the remote branch you just created (this is not
+done automatically):</p>
+
+<code>git branch -f [local branch name] origin/[remote branch name]</code>
+
 <p>Now all users can grab a copy of the branch by issuing this command:</p>
 
 <code>git fetch origin [branchname]</code>
