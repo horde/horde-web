@@ -242,9 +242,9 @@ done automatically):</p>
 
 <code>git branch -f [local branch name] origin/[remote branch name]</code>
 
-<p>Now all users can grab a copy of the branch by issuing this command:</p>
+<p>Now all users can track this branch by issuing this command:</p>
 
-<code>git fetch origin [branchname]</code>
+<code>git checkout --track -b [desired local branch name] origin/[remote branch name]</code>
 
 <p>To keep the topic branch up to date with the main branch during development:</p>
 
