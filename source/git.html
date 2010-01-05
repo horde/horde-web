@@ -125,8 +125,8 @@ while seeing changed files and avoiding conflicts is:</p>
 
 <pre><code>[alias]
     get = !git fetch &amp;&amp;
-        ( git rebase -v origin || ( git stash &amp;&amp;
-            ( git rebase -v origin || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp;
+        ( git rebase -v origin/master || ( git stash &amp;&amp;
+            ( git rebase -v origin/master || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp;
         git stash pop ) )</code></pre>
 
 <p>For more information on rebasing, and the commands needed if conflicts are
