@@ -3,6 +3,8 @@
 .#*
 *.orig
 *.rej
-
+*.buildpath
+*.project
+*.settings
 # Ignore local config files
 config/defaults.php
