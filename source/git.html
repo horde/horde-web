@@ -225,7 +225,7 @@ manipulate your local commits:</p>
 <p>Use the 'squash' option to combine multiple commits. Instructions on the
 edit screen explain the various other features.</p>
 
-<h4>Creating remote branches</h4>
+<h4>Creating/Managing remote branches</h4>
 
 <p>It may be useful to share work on a local branch with other developers.
 For example, a large change that might not yet be ready for primetime, but
@@ -245,9 +245,27 @@ done automatically):</p>
 
 <code>git checkout -t origin/[remote branch name]</code>
 
-<p>To keep the topic branch up to date with the main branch during development:</p>
+<p>You should keep the topic branch up to date with the main branch during 
+development so that your topic branch only contains the changes related to the
+work being done in the branch:</p>
 
-<code>git rebase origin/master</code>
+<code>
+git rebase origin/master <br />
+git pull --rebase <br />
+git push
+</code>
+
+<p>Note that if you look at the history in a tool such as gitk or gitx, you will
+see duplicate commits from master. This is normal and is the desired behaviour.
+When it is time to merge the branch into master, the following steps will merge
+the branches, and cause git to ignore the duplicates:</p>
+
+<code>
+git checkout master <br />
+git merge [topic] <br />
+git pull --rebase <br />
+git push
+</code>
 
 <p>To delete the remote branch, issue this command:</p>
 
