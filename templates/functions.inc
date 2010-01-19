@@ -86,8 +86,8 @@ function print_toolbar()
         toolbar_item($base_url . '/ansel/authors/', 'Authors');
         toolbar_item($base_url . '/ansel/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=ansel', 'Download');
-        toolbar_item($base_url . '/ansel/roadmap/', 'Roadmap');
         toolbar_item($base_url . '/ansel/screenshots/', 'Screenshots');
+        toolbar_item($base_url . '/ansel/roadmap/', 'Roadmap');
         toolbar_item('http://git.horde.org/ansel/?rt=horde-git', 'Source Code');
 
         echo "</ul></li>\n";
@@ -153,8 +153,8 @@ function print_toolbar()
 
     case 'horde':
         toolbar_item($base_url . '/horde/', 'Horde', true, true);
-        toolbar_item($base_url . '/download/app/?app=horde', 'Download');
         toolbar_item($base_url . '/horde/docs/', 'Documentation');
+        toolbar_item($base_url . '/download/app/?app=horde', 'Download');
         //toolbar_item($base_url . '/horde/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/horde/roadmap/', 'Roadmap');
         toolbar_item('http://cvs.horde.org/horde', 'Source Code');
@@ -178,9 +178,9 @@ function print_toolbar()
     case 'ingo':
         toolbar_item($base_url . '/ingo/', 'Ingo', true, true);
         toolbar_item($base_url . '/ingo/docs/', 'Documentation');
-        toolbar_item($base_url . '/ingo/roadmap/', 'Roadmap');
         toolbar_item($base_url . '/download/app/?app=ingo', 'Download');
         toolbar_item($base_url . '/ingo/screenshots/', 'Screenshots');
+        toolbar_item($base_url . '/ingo/roadmap/', 'Roadmap');
         toolbar_item('http://cvs.horde.org/ingo', 'Source Code');
         toolbar_item($base_url . '/ingo/vote/', 'Vote');
         echo "</ul></li>\n";
@@ -192,6 +192,14 @@ function print_toolbar()
         toolbar_item($base_url . '/jeta/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=jeta', 'Download');
         toolbar_item('http://cvs.horde.org/jeta', 'Source Code');
+        echo "</ul></li>\n";
+        break;
+
+    case 'klutz':
+        toolbar_item($base_url . '/klutz/', 'Klutz', true, true);
+        toolbar_item($base_url . '/klutz/docs/', 'Documentation');
+        toolbar_item($base_url . '/download/app/?app=klutz', 'Download');
+        toolbar_item('http://cvs.horde.org/klutz', 'Source Code');
         echo "</ul></li>\n";
         break;
 
@@ -231,8 +239,8 @@ function print_toolbar()
         toolbar_item($base_url . '/nag/about/', 'About');
         toolbar_item($base_url . '/nag/authors/', 'Authors');
         toolbar_item($base_url . '/nag/contrib/', 'Contributions');
-        toolbar_item($base_url . '/download/app/?app=nag', 'Download');
         toolbar_item($base_url . '/nag/docs/', 'Documentation');
+        toolbar_item($base_url . '/download/app/?app=nag', 'Download');
         toolbar_item($base_url . '/nag/roadmap/', 'Roadmap');
         toolbar_item('http://cvs.horde.org/nag', 'Source Code');
         toolbar_item($base_url . '/nag/vote/', 'Vote');
@@ -254,8 +262,8 @@ function print_toolbar()
         toolbar_item($base_url . '/turba/about/', 'About');
         toolbar_item($base_url . '/turba/authors/', 'Authors');
         //toolbar_item($base_url . '/turba/contrib/', 'Contributions');
-        toolbar_item($base_url . '/download/app/?app=turba', 'Download');
         toolbar_item($base_url . '/turba/docs/', 'Documentation');
+        toolbar_item($base_url . '/download/app/?app=turba', 'Download');
         //toolbar_item($base_url . '/turba/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/turba/roadmap/', 'Roadmap');
         toolbar_item('http://cvs.horde.org/turba', 'Source Code');
@@ -265,6 +273,7 @@ function print_toolbar()
 
     case 'trean':
         toolbar_item($base_url . '/trean/', 'Trean', true, true);
+        toolbar_item($base_url . '/trean/', 'Documentation');
         toolbar_item($base_url . '/trean/screenshots/', 'Screenshots');
         toolbar_item('http://cvs.horde.org/trean', 'Source Code');
         echo "</ul></li>\n";
@@ -291,8 +300,8 @@ function print_toolbar()
     case 'whups':
         toolbar_item($base_url . '/whups/', 'Whups', true, true);
         //toolbar_item('http://bugs.horde.org/', 'Demo');
-        toolbar_item($base_url . '/download/app/?app=whups', 'Download');
         toolbar_item($base_url . '/whups/docs/', 'Documentation');
+        toolbar_item($base_url . '/download/app/?app=whups', 'Download');
         toolbar_item('http://cvs.horde.org/whups', 'Source Code');
         toolbar_item($base_url . '/whups/vote/', 'Vote');
         echo "</ul></li>\n";
