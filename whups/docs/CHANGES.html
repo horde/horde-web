@@ -1,13 +1,31 @@
 <h1>Changes by Release</h1><pre>
 ----------
-v1.0.1-cvs
+v1.0.2-cvs
 ----------
 
+
+
+
+------
+v1.0.1
+------
+
+[jan] Fix Oracle SQL scripts.
+[jan] Render private comments for everyone, but hide the comment text.
+[jan] Add flag to disable old versions.
+[jan] Apply simple markup highlighting on comments.
+[jan] Save queue email addresses when editing queues (horde@hatzidakis.org,
+      Bug #7905).
+[jan] Fix charset conversion of comments added with mail-filter.php
+      (thomas@gelf.net, <a href="http://bugs.horde.org/ticket/7730">Bug #7730</a>).
+[cjh] Show version changes in the ticket history.
+[jan] Use all credentials and mailer settings when sending mails.
+[cjh] Allow changing the queue version from the Update screen.
 [cjh] Add more date formats to the report_time_format preference
-      (b5b5b5b5@centrum.sk, Request #7793).
+      (b5b5b5b5@centrum.sk, <a href="http://bugs.horde.org/ticket/7793">Request #7793</a>).
 [jan] Escape SQL wildcards in string queries.
-[cjh] Enforce queue permissions in ticket-listing blocks (Bug #7614).
-[cjh] Ensure the DB library is explicitly loaded (Bug #7647).
+[cjh] Enforce queue permissions in ticket-listing blocks (<a href="http://bugs.horde.org/ticket/7614">Bug #7614</a>).
+[cjh] Ensure the DB library is explicitly loaded (<a href="http://bugs.horde.org/ticket/7647">Bug #7647</a>).
 [jan] Add Turkish translation (Akif Dinc &lt;akif@dinc.org>).
 [jan] Fix linking to queries if URL rewriting is turned off.
 
@@ -16,7 +34,7 @@ v1.0.1-cvs
 v1.0
 ----
 
-[jan] Change group field in shares table to work with LDAP groups (Bug #6883).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
 [jan] Fix rendering attribute criteria in the query tree.
 [jan] Generate a valid Message-ID.
 [mjr] Fix an issue with searching on installations with a single queue that
@@ -28,14 +46,14 @@ v1.0
 v1.0-RC2
 --------
 
-[jan] Add date search criteria (Duck &lt;duck@obala.net>, Request #7274).
-[cjh] Add an RSS feed of search results (Duck &lt;duck@obala.net>, Request #7259).
+[jan] Add date search criteria (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7274">Request #7274</a>).
+[cjh] Add an RSS feed of search results (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7259">Request #7259</a>).
 [jan] Group statistics by ticket type.
 [jan] Add Precedence and Auto-Submitted headers to notification messages
-      (Request #7082).
-[jan] Add In-Reply-To header to notification messages (Request #7103).
-[jan] Add button to save searches as queries (Request #5921).
-[jan] Add query slugs and RSS feeds (Request #5924).
+      (<a href="http://bugs.horde.org/ticket/7082">Request #7082</a>).
+[jan] Add In-Reply-To header to notification messages (<a href="http://bugs.horde.org/ticket/7103">Request #7103</a>).
+[jan] Add button to save searches as queries (<a href="http://bugs.horde.org/ticket/5921">Request #5921</a>).
+[jan] Add query slugs and RSS feeds (<a href="http://bugs.horde.org/ticket/5924">Request #5924</a>).
 [jan] Implement editing of query elements.
 [mjr] Fix saving of queries.
 
@@ -58,14 +76,14 @@ v1.0-RC1
 [jan] Deal with queue vs. admin permissions more consistently.
 [jan] Add configuration option whether to include email headers in comments.
 [cjh] Improve resource usage in datatree_to_sql share migration script
-      (Bug #6740).
-[cjh] Add an upgrade script for the new SQL share driver (Request #6109).
+      (<a href="http://bugs.horde.org/ticket/6740">Bug #6740</a>).
+[cjh] Add an upgrade script for the new SQL share driver (<a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
 [jan] Add preference to only receive notifications if a comment has been added.
 [jan] Send personalized ticket notification messages.
 [jan] Add addAttachment API method.
 [jan] Add message templates for email notifications.
-[jan] Sequentially number comments (Request #4895).
-[jan] Unset resolved date when un-resolving tickets (Bug #6310).
+[jan] Sequentially number comments (<a href="http://bugs.horde.org/ticket/4895">Request #4895</a>).
+[jan] Unset resolved date when un-resolving tickets (<a href="http://bugs.horde.org/ticket/6310">Bug #6310</a>).
 [jan] Add mail sender as requester when using the --default-auth argument with
       scripts/mail-filter.php.
 [jan] Notify watchers that have just been added by email.
@@ -73,7 +91,7 @@ v1.0-RC1
 [jan] Rename API methods get_assigned_ticket_ids, get_requested_ticket_ids,
       get_schema, add_tickets, and set_ticket_attributes.
 [jan] Add --guess-queue argument to mail-filter.php.
-[cjh] Use pretty URLs if Horde is configured for them (Request #5922).
+[cjh] Use pretty URLs if Horde is configured for them (<a href="http://bugs.horde.org/ticket/5922">Request #5922</a>).
 [jan] Add configuration for default types, states, and priorities.
 [mjr] Attribute values now show correctly in initial ticket notifications.
 [jan] Add a hook to customize field grouping in the ticket views.
@@ -83,16 +101,16 @@ v1.0-RC1
 [jan] Allow scripts/mail-filter.php to process attachments.
 [jan] Add ability to read messages from a mailbox to scripts/mail-filter.php.
 [cjh] Don't re-use old attachment names even if the attachment has since been
-      deleted (Bug #4472).
+      deleted (<a href="http://bugs.horde.org/ticket/4472">Bug #4472</a>).
 [cjh] Store the guest user associated with transactions that only add an
-      attachment, with no comment text (Bug #2890).
+      attachment, with no comment text (<a href="http://bugs.horde.org/ticket/2890">Bug #2890</a>).
 [cjh] Include attribute values in ticket emails, including "diffs" for changes
-      (Bug #1083).
+      (<a href="http://bugs.horde.org/ticket/1083">Bug #1083</a>).
 [cjh] When creating a ticket, preserve attachments uploaded in step 3 when
-      step 4 is used to assign the ticket (Bug #2514).
+      step 4 is used to assign the ticket (<a href="http://bugs.horde.org/ticket/2514">Bug #2514</a>).
 [cjh] When replying to a restricted comment, default to the same restriction
-      (Request #4902).
-[cjh] Support split read and write databases (&lt;duck@obala.net>, Request #5926).
+      (<a href="http://bugs.horde.org/ticket/4902">Request #4902</a>).
+[cjh] Support split read and write databases (&lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/5926">Request #5926</a>).
 [jan] Add Lithuanian translation (Vilius Sumskas &lt;vilius@lnk.lt>).
 [cjh] Add an addComment API method.
 [jan] Add OpenSearch interface for direct ticket access through browser bars.
@@ -100,26 +118,26 @@ v1.0-RC1
 [cjh] Rename whups_tickets_listeners to whups_ticket_listeners for consistency.
 [cjh] Add a tree menu block (Jakob Schroeter &lt;js@camaya.net>).
 [cjh] On the search screen, only show types that are associated with queues
-      that are available/active (tinu@humbapa.ch, Request #4107).
+      that are available/active (tinu@humbapa.ch, <a href="http://bugs.horde.org/ticket/4107">Request #4107</a>).
 [jan] Add Polish translation (Tadeusz Lesiecki &lt;lesiecki@tmtsystem.pl>, Piotr
       Tarnowski &lt;drfugazi@drfugazi.eu.org>).
 [jan] Add Ukrainian translation (Andriy Kopystyansky &lt;anri@polynet.lviv.ua>).
 [cjh] Ensure that a due date in a prior year doesn't make the EditTicketForm
-      invalid (Bug #4763).
-[cjh] Remove saved searches (Request #4897).
+      invalid (<a href="http://bugs.horde.org/ticket/4763">Bug #4763</a>).
+[cjh] Remove saved searches (<a href="http://bugs.horde.org/ticket/4897">Request #4897</a>).
 [cjh] Calculate ticket date attributes when they change instead of on every
-      access (php@ideacode.com, Request #4893).
+      access (php@ideacode.com, <a href="http://bugs.horde.org/ticket/4893">Request #4893</a>).
 [cjh] Queries are now managed as shares, but the serialized bits are stored
       and managed by Whups in their own dedicated table.
 [jan] Allow guest access to query page.
 [cjh] Smarter word wrapping in string representations of tickets
-      (Request #4510).
+      (<a href="http://bugs.horde.org/ticket/4510">Request #4510</a>).
 [cjh] Add a Queue Summary block showing queues with the number of open
-      tickets in each (Request #4628).
+      tickets in each (<a href="http://bugs.horde.org/ticket/4628">Request #4628</a>).
 [cjh] Combine the People tab with the Update tab.
 [cjh] Allow changing ticket queues as long as the user has DELETE permissions
       on the current queue and EDIT permissions on the new queue
-      (tmerritt@email.arizona.edu, Request #4268).
+      (tmerritt@email.arizona.edu, <a href="http://bugs.horde.org/ticket/4268">Request #4268</a>).
 [cjh] Add hours and minutes to due dates.
 [cjh] Always use Summary for the ticket summary field label.
 [jan] Add Slovenian translation (Duck &lt;duck@obala.net>).
@@ -127,29 +145,29 @@ v1.0-RC1
       Bug #2820).
 [cjh] Show either the Comment or Update tabs depending on permissions,
       but not both.
-[cjh] Report the last-updated date for tickets (Bug #2396).
+[cjh] Report the last-updated date for tickets (<a href="http://bugs.horde.org/ticket/2396">Bug #2396</a>).
 [cjh] Tickets now have an optional due date field.
-[cjh] New updateTicket API call (Ben Klang &lt;ben@alkaloid.net>, Bug #4101).
+[cjh] New updateTicket API call (Ben Klang &lt;ben@alkaloid.net>, <a href="http://bugs.horde.org/ticket/4101">Bug #4101</a>).
 [cjh] Check permissions when setting ticket attributes through an API call
-      (Ben Klang &lt;ben@alkaloid.net>, Bug #4098).
+      (Ben Klang &lt;ben@alkaloid.net>, <a href="http://bugs.horde.org/ticket/4098">Bug #4098</a>).
 [cjh] If guests can add tickets but not view them, don't tell them adding
-      failed (Bug #3630).
-[cjh] Add Unassigned Tickets Horde_Block (Request #766).
-[mas] Fix sorting in summary page to better handle dates. (Bug #2930)
+      failed (<a href="http://bugs.horde.org/ticket/3630">Bug #3630</a>).
+[cjh] Add Unassigned Tickets Horde_Block (<a href="http://bugs.horde.org/ticket/766">Request #766</a>).
+[mas] Fix sorting in summary page to better handle dates. (<a href="http://bugs.horde.org/ticket/2930">Bug #2930</a>)
 [cjh] Add CAPTCHA support to the Add Comment and Create Ticket forms.
 [cjh] Deliver RSS feeds in a way that supports USM
-      (http://www.kbcafe.com/rss/usm.html, Request #2593).
+      (http://www.kbcafe.com/rss/usm.html, <a href="http://bugs.horde.org/ticket/2593">Request #2593</a>).
 [cjh] processMail() now ignores emails that were generated by Whups
-      (Bug #3398).
+      (<a href="http://bugs.horde.org/ticket/3398">Bug #3398</a>).
 [ben] Better support for MS-SQL.
 [jan] Add Norwegian (Bokmal) translation (Torbjorn Grindhaug
       &lt;grindhaug@gmail.com>).
-[cjh] "My Bugs" page is now a Horde_Block layout (Request #3202).
+[cjh] "My Bugs" page is now a Horde_Block layout (<a href="http://bugs.horde.org/ticket/3202">Request #3202</a>).
 [cjh] Fix permissions checking for ticket comments when an admin user is the
-      one making the comment (Bug #2673).
-[cjh] Delete searches by getvars string, not by name (Bug #3197).
+      one making the comment (<a href="http://bugs.horde.org/ticket/2673">Bug #2673</a>).
+[cjh] Delete searches by getvars string, not by name (<a href="http://bugs.horde.org/ticket/3197">Bug #3197</a>).
 [jan] Allow to assign tickets to foreign groups
-      (ronny.adsetts@amazinginternet.com, Request #2477).
+      (ronny.adsetts@amazinginternet.com, <a href="http://bugs.horde.org/ticket/2477">Request #2477</a>).
 [cjh] Add support for dynamic re-sorting of search results, including saving
       the sort preferences on any changes.
 [mas] Protect against HTML tags in the search results summary.
@@ -159,51 +177,51 @@ v1.0-RC1
       Boerger &lt;helly@php.net>).
 [jan] Allow other applications to provide queues.
 [cjh] Add *-id arguments for type, priority, state, and queue to
-      mail-filter.php (Bug #2347).
+      mail-filter.php (<a href="http://bugs.horde.org/ticket/2347">Bug #2347</a>).
 [cjh] Add a link to return to the list of search results, along with the
-      previous/next links (Bug #1751).
+      previous/next links (<a href="http://bugs.horde.org/ticket/1751">Bug #1751</a>).
 [cjh] Fix the Quicksearch links.
-[cjh] mail-filter.php now handles replies as well (Bug #280).
+[cjh] mail-filter.php now handles replies as well (<a href="http://bugs.horde.org/ticket/280">Bug #280</a>).
 [cjh] Use the date_format preference for displaying TicketDetailsForm
-      as well (Bug #2151).
+      as well (<a href="http://bugs.horde.org/ticket/2151">Bug #2151</a>).
 [jan] Add Russian translation (Illya Belov &lt;belov@iop.irkps.ru>).
 [mas] Add ability to search by ticket requester.
 [mas] Change any output of &lt;b> and &lt;i> tags to &lt;strong> and &lt;em> for better
       accessibility support.
 [cjh] Add links to Update/Comment from individual transactions, which quote
-      that transaction's comment text (Bug #823).
+      that transaction's comment text (<a href="http://bugs.horde.org/ticket/823">Bug #823</a>).
 [cjh] Add explicit permissions for assigning and updating tickets
-      (tmerritt@email.arizona.edu, Bug #1955).
+      (tmerritt@email.arizona.edu, <a href="http://bugs.horde.org/ticket/1955">Bug #1955</a>).
 [jan] Strike-through links to resolved tickets.
-[jan] Make server name and port in mail-filter.php configurable (Bug #2004).
+[jan] Make server name and port in mail-filter.php configurable (<a href="http://bugs.horde.org/ticket/2004">Bug #2004</a>).
 [cjh] Honor creator permissions on tickets (tmerritt@email.arizona.edu,
       Bug #1945).
-[cjh] Implement ticket watchers (tmerritt@email.arizona.edu, Bug #867).
+[cjh] Implement ticket watchers (tmerritt@email.arizona.edu, <a href="http://bugs.horde.org/ticket/867">Bug #867</a>).
 [cjh] Enforce permissions on queues in reports, let guests see reports
-      if they have permissions (Bug #1812).
+      if they have permissions (<a href="http://bugs.horde.org/ticket/1812">Bug #1812</a>).
 [cjh] Allow export templates to define a callback function for filtering
-      data. Includes an example for properly quoting CSV data (Bug #1774).
-[jan] Use bind variables in the SQL driver (Bug #1701).
+      data. Includes an example for properly quoting CSV data (<a href="http://bugs.horde.org/ticket/1774">Bug #1774</a>).
+[jan] Use bind variables in the SQL driver (<a href="http://bugs.horde.org/ticket/1701">Bug #1701</a>).
 [cjh] Queries are stored as Horde_Share objects with full permissions.
-      (Bug #1481).
-[cjh] Delete queue permissions when deleting a queue (Bug #1462).
+      (<a href="http://bugs.horde.org/ticket/1481">Bug #1481</a>).
+[cjh] Delete queue permissions when deleting a queue (<a href="http://bugs.horde.org/ticket/1462">Bug #1462</a>).
 [jan] Add MIME viewer for ZIP files.
-[cjh] Queries can now be deleted (Bug #1193).
-[cjh] Preserve the current search criteria when re-sorting results (Bug #1024).
+[cjh] Queries can now be deleted (<a href="http://bugs.horde.org/ticket/1193">Bug #1193</a>).
+[cjh] Preserve the current search criteria when re-sorting results (<a href="http://bugs.horde.org/ticket/1024">Bug #1024</a>).
 [cjh] Link to ticket RSS feeds on all ticket display pages.
-[cjh] Allow administrators to delete attachments (Bug #1252).
+[cjh] Allow administrators to delete attachments (<a href="http://bugs.horde.org/ticket/1252">Bug #1252</a>).
 [cjh] Allow uploading an attachment when initially creating a ticket.
-[cjh] Fix group-restricted comments (Bug #1225).
+[cjh] Fix group-restricted comments (<a href="http://bugs.horde.org/ticket/1225">Bug #1225</a>).
 [jan] Add Brazilian Portuguese translation (Daniel V. Hoisel
       &lt;daniel@maxlinux.com.br>).
 [cjh] Whups_Mail::processMail needs to use Whups_Ticket for ticket creation
-      to trigger email notifications, etc (Bug #1134).
+      to trigger email notifications, etc (<a href="http://bugs.horde.org/ticket/1134">Bug #1134</a>).
 [cjh] Allow inserting explicit Type filters into Query Builder queries
-      (Bug #434).
+      (<a href="http://bugs.horde.org/ticket/434">Bug #434</a>).
 [cjh] Force users to choose a queue when creating tickets with the goal
-      of cutting down on misfiled tickets (Bug #588).
+      of cutting down on misfiled tickets (<a href="http://bugs.horde.org/ticket/588">Bug #588</a>).
 [cjh] Remove the Attachment tab, as it currently serves no purpose beyond
-      the Comment tab (Bug #868).
+      the Comment tab (<a href="http://bugs.horde.org/ticket/868">Bug #868</a>).
 [cjh] Add a numeric log_value_num field for faster logs table comparisons
       and for compatibility with databases that can't cast strings into
       integer comparisons (Oracle, etc) (rvs (at) angara (dot) ru).
@@ -211,7 +229,7 @@ v1.0-RC1
 [jan] Add Spanish translation (Manuel Perez Ayala &lt;mperaya@alcazaba.unex.es>).
 [cjh] The way ticket histories are stored and retrieved has been completely
       revamped to be quicker, more robust, and more complete.
-[cjh] Add a 'summary' search option in the basic search form (Bug #269).
+[cjh] Add a 'summary' search option in the basic search form (<a href="http://bugs.horde.org/ticket/269">Bug #269</a>).
 [cjh] Queue is now a valid query builder criterion.
 [cjh] Add previous/next navigation when there's a current list of search
       results to navigate through.

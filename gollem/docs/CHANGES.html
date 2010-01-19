@@ -1,41 +1,78 @@
 <h1>Changes by Release</h1><pre>
+----------
+v1.1.2-cvs
+----------
+
+
+
+
+------
+v1.1.1
+------
+
+[jan] Add Croatian translation (Valentin Vidic &lt;valentin.vidic@carnet.hr>).
+[mms] Upgrade prototype.js to v1.6.1.
+[mms] Fix create folder dialog in IE (<a href="http://bugs.horde.org/ticket/8216">Bug #8216</a>).
+[jan] Don't redirect to browse view if viewing a file fails.
+
+
+----
+v1.1
+----
+
+[jan] Fix attachment dialog with only a single autologin backend (<a href="http://bugs.horde.org/ticket/7096">Bug #7096</a>).
+[jan] Start with first page again when filter string is changed (<a href="http://bugs.horde.org/ticket/7935">Bug #7935</a>).
+[mms] Navigation link now uses description from backends.php (<a href="http://bugs.horde.org/ticket/8037">Request #8037</a>,
+      Thomas Reifferscheid &lt;thomas@reifferscheid.org>).
+[mjr] Fix issue that was causing the wrong backend to be selected when being
+      redirected to login.php.
+[mms] Fix autologin when switching backends on login page (<a href="http://bugs.horde.org/ticket/7892">Bug #7892</a>,
+      horde@smartsector.hu).
+
+
 --------
-v1.1-cvs
+v1.1-RC1
 --------
 
 [mms] Add folder caching.
-[mms] Add pager navigation and filtering (Request #7160, joel@scopserv.com).
+[mms] Add pager navigation and filtering (<a href="http://bugs.horde.org/ticket/7160">Request #7160</a>, joel@scopserv.com).
 [jan] Add Estonian translation (Alar Sing &lt;alar.sing@err.ee>).
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
-[cjh] Use the Horde date_format preference (Bug #6683).
+[cjh] Use the Horde date_format preference (<a href="http://bugs.horde.org/ticket/6683">Bug #6683</a>).
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
-      (Request #6590).
+      (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 [cjh] If the VFS backend supports streams, use them to avoid reading entire
-      files into memory when downloading (Request #5913).
+      files into memory when downloading (<a href="http://bugs.horde.org/ticket/5913">Request #5913</a>).
 [mms] Compress download data.
 [jan] Add Ukrainian translation (Andriy Kopystyansky &lt;anri@polynet.lviv.ua>).
-[bak] Add browse API to allow browsing backends through WebDAV (Request #5337).
+[bak] Add browse API to allow browsing backends through WebDAV (<a href="http://bugs.horde.org/ticket/5337">Request #5337</a>).
 [cjh] Inline PHP-generated javascript to avoid cross-domain leaking
-      (Bug #5307).
+      (<a href="http://bugs.horde.org/ticket/5307">Bug #5307</a>).
 [mms] Preserve URL anchor information when performing login.
 [mms] All javascript now contained in static, cacheable files.
 [cjh] Add javascript sortable tables to Gollem.
 [cjh] Use optimized Horde_Template code as Gollem_Template.
-[cjh] Fix javascript errors when filenames contain quotes (Bug #3824),
+[cjh] Fix javascript errors when filenames contain quotes (<a href="http://bugs.horde.org/ticket/3824">Bug #3824</a>),
       and make several links work without JavaScript.
 [jan] Add editing of text files.
 [mms] Add examples/checks for SSH2 VFS driver.
-
-
-----------
-v1.0.4-cvs
-----------
-
 [jan] Add Slovak translation (Martin Matuška &lt;martin@matuska.org>).
 [cjh] Fix uploading files to non-empty directories when deletion is disabled
-      (Bug #5349).
+      (<a href="http://bugs.horde.org/ticket/5349">Bug #5349</a>).
+
+
+------
+v1.0.4
+------
+
+[jan] Add Estonian translation (Alar Sing &lt;alar.sing@err.ee>).
+[jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
+      &lt;xabier.arrieta@ehu.es>).
+[jan] Add Slovak translation (Martin Matuška &lt;martin@matuska.org>).
+[cjh] Fix uploading files to non-empty directories when deletion is disabled
+      (<a href="http://bugs.horde.org/ticket/5349">Bug #5349</a>).
 
 
 ------
@@ -56,9 +93,9 @@ v1.0.2
 [jan] Add Danish translation (Brian Truelsen &lt;horde+i18n@briantruelsen.dk>).
 [mms] Allow admin to disable clipboard support in backends.php.
 [mms] Allow direct autologin from login page if there are no additional login
-      parameters available (Bug #3299, jpolansky@lsit.ucsb.edu).
+      parameters available (<a href="http://bugs.horde.org/ticket/3299">Bug #3299</a>, jpolansky@lsit.ucsb.edu).
 [mms] Fix displaying/loading wrong backend when changing backends via the
-      dropdown on login page (Bug #3298, jpolansky@lsit.ucsb.edu).
+      dropdown on login page (<a href="http://bugs.horde.org/ticket/3298">Bug #3298</a>, jpolansky@lsit.ucsb.edu).
 
 
 ----------
@@ -66,8 +103,8 @@ v1.0.2-RC1
 ----------
 
 [mms] Convert all page templates to Horde_Template.
-[mms] Add row highlighting to manager page (Bug #2977).
-[mms] Fix configtabs in configuration file (Bug #3119).
+[mms] Add row highlighting to manager page (<a href="http://bugs.horde.org/ticket/2977">Bug #2977</a>).
+[mms] Fix configtabs in configuration file (<a href="http://bugs.horde.org/ticket/3119">Bug #3119</a>).
 
 
 ------
@@ -75,7 +112,7 @@ v1.0.1
 ------
 
 [mms] Don't try to login using Horde auth credentials if hordeauth is off
-      (Bug #3078).
+      (<a href="http://bugs.horde.org/ticket/3078">Bug #3078</a>).
 [mms] Can select default permissions for newly created files and directories
       per backend.
 
@@ -85,12 +122,12 @@ v1.0.1-RC1
 ----------
 
 [mms] Indicate if no backends are available to a user.
-[mms] Add quota status page (Bug #2685).
+[mms] Add quota status page (<a href="http://bugs.horde.org/ticket/2685">Bug #2685</a>).
 [mms] Add interface to facilitate admins in editing permissions on a
-      per-backend basis (Bug #2255, vijay.mahrra@es.easynet.net).
-[mms] Add support for VFS quota checking (Bug #162).
+      per-backend basis (<a href="http://bugs.horde.org/ticket/2255">Bug #2255</a>, vijay.mahrra@es.easynet.net).
+[mms] Add support for VFS quota checking (<a href="http://bugs.horde.org/ticket/162">Bug #162</a>).
 [mms] Fix autocreation of home directories when home is also the root
-      directory (Bug #2603).
+      directory (<a href="http://bugs.horde.org/ticket/2603">Bug #2603</a>).
 [mms] Add language selection to login screen if using gollem as the
       authentication driver.
 [mms] Add 'redirect_on_logout' and 'alternate_login' config parameters.
@@ -152,8 +189,8 @@ v1.0-ALPHA
 [mms] Honor the Horde-wide 'redirect_on_logout' and 'alternate_login'
       configuration parameters.
 [jan] Add Latvian translation (Janis Eisaks &lt;jancs@dv.lv>).
-[mms] Tweaks to make sure 'root' isn't a required parameter (Bug #1663).
-[mms] Allow changing folders using relative paths (Bug #1585).
+[mms] Tweaks to make sure 'root' isn't a required parameter (<a href="http://bugs.horde.org/ticket/1663">Bug #1663</a>).
+[mms] Allow changing folders using relative paths (<a href="http://bugs.horde.org/ticket/1585">Bug #1585</a>).
 [mms] Automatically generate new upload fields on demand.
 [mms] Allow user to switch between multiple backends during a single session.
 [mms] Add backend selection to the left tree sidebar.

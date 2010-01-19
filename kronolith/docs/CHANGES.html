@@ -1,15 +1,78 @@
 <h1>Changes by Release</h1><pre>
 ----------
-v2.3.1-cvs
+v2.3.4-cvs
 ----------
 
+
+
+
+------
+v2.3.3
+------
+
+[jan] Fix editing URLs of remote calendars.
+[gwr] Fix recurring weekly events with fixed number of occurences but multiple
+      incidences per week (kolab/issue3846).
+[gwr] Fix recurring weekly events with intervals > 1 (<a href="http://bugs.horde.org/ticket/8546">Bug #8546</a>).
+[jan] Optimize event link generation (patrick.abiven@apitech.fr).
+[jan] Fix Oracle SQL scripts.
+[jan] Fix charset of ajax responses.
+[jan] Add Croatian translation (Matej Vela &lt;matej.vela@carnet.hr>).
+[jan] Speed up listing alarms (patrick.abiven@apitech.fr, <a href="http://bugs.horde.org/ticket/8638">Request #8638</a>).
+[jan] Simplify and improve portability of listing events without date limits
+      in the SQL driver (<a href="http://bugs.horde.org/ticket/8590">Bug #8590</a>).
+[mjr] Fix issue that caused the default alarm time to be applied to 
+      listTimeObjects events (<a href="http://bugs.horde.org/ticket/8588">Bug #8588</a>).
+
+
+------
+v2.3.2
+------
+
+[mms] Upgrade prototype.js to v1.6.1.
+[jan] Allow to add address lists as attendees through the address book popup
+      (<a href="http://bugs.horde.org/ticket/7834">Bug #7834</a>).
+[jan] Fix exporting certain weekday recurrence rules to iCalendar
+      (lst_hoe02@kwsoft.de, <a href="http://bugs.horde.org/ticket/8501">Bug #8501</a>).
+[jan] Export recurrence end dates as date-time values in iCalendar data to
+      improve compatibility with external clients (<a href="http://bugs.horde.org/ticket/7846">Bug #7846</a>).
+[jan] Fix synchronization with output compression enabled (<a href="http://bugs.horde.org/ticket/7769">Bug #7769</a>).
+[jan] Add configuration whether to show user drop down list or text field in
+      permissions dialog (requires Horde 3.3.5).
+[jan] Propagate the 'modified' API method (<a href="http://bugs.horde.org/ticket/8274">Request #8274</a>).
+[cjh] Fix the signature of the kronolith/import API method
+      (rpolli@babel.it, <a href="http://bugs.horde.org/ticket/8309">Bug #8309</a>).
+[jan] Correctly create all-day events if using the all-day link in the day
+      view (stpierre@nebrwesleyan.edu, <a href="http://bugs.horde.org/ticket/8220">Bug #8220</a>).
+[jan] Fix rendering of all-day events (<a href="http://bugs.horde.org/ticket/8176">Bug #8176</a>).
+
+
+------
+v2.3.1
+------
+
+[jan] Render contact autocompletion list on top of free/busy blocks (<a href="http://bugs.horde.org/ticket/7273">Bug #7273</a>).
+[jan] Save recurrence exceptions when copying events (<a href="http://bugs.horde.org/ticket/7689">Bug #7689</a>).
+[jan] Prevent warnings if trying to add address lists as attendees (<a href="http://bugs.horde.org/ticket/7834">Bug #7834</a>).
+[jan] Fix start and end time calculation of multi-day events (<a href="http://bugs.horde.org/ticket/7788">Bug #7788</a>).
+[jan] Wrap URL in calendar information in IE7 (almarin@um.es, <a href="http://bugs.horde.org/ticket/8043">Bug #8043</a>).
+[jan] Fix "Date-string has wrong format" error with holidays (<a href="http://bugs.horde.org/ticket/7961">Bug #7961</a>).
+[jan] Use improved translation support in Date_Holidays (requires 0.21.0 now,
+      Bug #7272).
+[jan] Empty view cache when changing calendar selection
+      (stpierre@nebrwesleyan.edu, <a href="http://bugs.horde.org/ticket/7879">Bug #7879</a>).
+[mjr] Fix category CSS being included on embedded widgets.
+[cjh] Work around BC break with Horde versions before 3.2 (<a href="http://bugs.horde.org/ticket/7820">Bug #7820</a>).
+[jan] Allow to manually change attendee responses (paul@carnie.com.au,
+      Request #7443).
+[jan] Fix linking to last week across certain year boundaries (<a href="http://bugs.horde.org/ticket/7827">Bug #7827</a>).
 [jan] Add script to import events from SquirrelMail database.
-[cjh] Add private-***.png graphics to Tango and Silver themes (Bug #7531).
+[cjh] Add private-***.png graphics to Tango and Silver themes (<a href="http://bugs.horde.org/ticket/7531">Bug #7531</a>).
 [cjh] Fix listing of users in the calendar/browse API call.
 [jan] Set timezone per user preference and fix recurring events when sending
-      reminders through Kronolith (develop@kristov.de, Bug #7038).
+      reminders through Kronolith (develop@kristov.de, <a href="http://bugs.horde.org/ticket/7038">Bug #7038</a>).
 [cjh] Add a PostgreSQL-specific upgrade script for 2.2 to 2.3
-      (michael.menge@zdv.uni-tuebingen.de, Bug #7454).
+      (michael.menge@zdv.uni-tuebingen.de, <a href="http://bugs.horde.org/ticket/7454">Bug #7454</a>).
 [mms] Upgrade prototype.js to v1.6.0.3.
 
 
@@ -17,11 +80,11 @@ v2.3.1-cvs
 v2.3
 ----
 
-[jan] Change group field in shares table to work with LDAP groups (Bug #6883).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
 [jan] Fix user name conversion with user hooks in the calendar panel
-      (Bug #7366).
+      (<a href="http://bugs.horde.org/ticket/7366">Bug #7366</a>).
 [gwr] Fixed handling of free events in the Kolab driver
-      (noethen@uni-paderborn.de, Bug #7192).
+      (noethen@uni-paderborn.de, <a href="http://bugs.horde.org/ticket/7192">Bug #7192</a>).
 [jan] Differentiate between days with events and days with busy events in the
       year view.
 
@@ -31,33 +94,33 @@ v2.3-RC1
 --------
 
 [jan] Send correct iTip notifications when deleting recurring event instances
-      (Bug #6636).
+      (<a href="http://bugs.horde.org/ticket/6636">Bug #6636</a>).
 [mjr] Add support for embedding calendar widgets on external websites.
-[jan] Log moving of events in the history backend (Bug #3207).
+[jan] Log moving of events in the history backend (<a href="http://bugs.horde.org/ticket/3207">Bug #3207</a>).
 [jan] Fix listing alarms of recurring events crossing day boundaries
-      (Bug #7035).
-[jan] Fix deleting all events over WebDAV (Bug #7005).
+      (<a href="http://bugs.horde.org/ticket/7035">Bug #7035</a>).
+[jan] Fix deleting all events over WebDAV (<a href="http://bugs.horde.org/ticket/7005">Bug #7005</a>).
 [jan] Add Atom feeds.
 [jan] Fix encoding of holiday names.
 [jan] Add Estonian translation (Alar Sing &lt;alar.sing@err.ee>).
 [jan] Consider RECURRENCE-ID attributes in iCalendar data.
 [cjh] Fix a problem with the put() API call and events that already exist
-      (almarin@um.es, Bug #7088).
+      (almarin@um.es, <a href="http://bugs.horde.org/ticket/7088">Bug #7088</a>).
 [jan] Fix importing iCalendar events with only a single recurrence exception
-      (guyzdm@gmail.com, Bug #7068).
+      (guyzdm@gmail.com, <a href="http://bugs.horde.org/ticket/7068">Bug #7068</a>).
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [mjr] Add support for maintenance tasks and add a task for purging old events.
 [jan] Fix future events not being received under certain circumstances
       (Bugs #6946, #6966).
-[jan] Correctly sort recurring events (develop@kristov.de, Bug #7037).
+[jan] Correctly sort recurring events (develop@kristov.de, <a href="http://bugs.horde.org/ticket/7037">Bug #7037</a>).
 [jan] Fix display of recurring events crossing midnight in the portal block
-      (develop@kristov.de, Bug #7036).
+      (develop@kristov.de, <a href="http://bugs.horde.org/ticket/7036">Bug #7036</a>).
 [jan] Fix agenda emails containing wrong events.
 [mjr] Remove user permissions on all shares when deleting a user.
-[jan] Fix warning when importing events through the API (Bug #6865).
+[jan] Fix warning when importing events through the API (<a href="http://bugs.horde.org/ticket/6865">Bug #6865</a>).
 [cjh] Be case insensitive when comparing attendees
-      (aloyse.gilbert@gmail.com, Bug #6833).
+      (aloyse.gilbert@gmail.com, <a href="http://bugs.horde.org/ticket/6833">Bug #6833</a>).
 [jan] Use smaller icons for private events.
 
 
@@ -66,11 +129,11 @@ v2.2
 ----
 
 [jan] Identify the correct event when using attend.php to update invitations
-      (Bug #6606).
+      (<a href="http://bugs.horde.org/ticket/6606">Bug #6606</a>).
 [cjh] Improve resource usage in datatree_to_sql share migration script
-      (Bug #6740).
+      (<a href="http://bugs.horde.org/ticket/6740">Bug #6740</a>).
 [jan] Decode user names and passwords when editing remote calendars.
-[cjh] Ensure that event_category is always a string (Bug #6696).
+[cjh] Ensure that event_category is always a string (<a href="http://bugs.horde.org/ticket/6696">Bug #6696</a>).
 
 
 --------
@@ -78,29 +141,29 @@ v2.2-RC3
 --------
 
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
-      (Request #6590).
+      (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
 [cjh] In WebDAV PUT operations, only look for existing events on the calendar
-      being uploaded (Bug #6617).
-[cjh] Add an upgrade script for the new SQL share driver (Request #6109).
-[cjh] Use json_encode and json_decode if they are available (Bug #6457).
+      being uploaded (<a href="http://bugs.horde.org/ticket/6617">Bug #6617</a>).
+[cjh] Add an upgrade script for the new SQL share driver (<a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
+[cjh] Use json_encode and json_decode if they are available (<a href="http://bugs.horde.org/ticket/6457">Bug #6457</a>).
 [cjh] Use the first matching free/busy URL if more than one is found
-      (almarin@um.es, Request #6638).
+      (almarin@um.es, <a href="http://bugs.horde.org/ticket/6638">Request #6638</a>).
 [cjh] Allow subscribing/unsubscribing from external calendars through the API
-      (duck@obala.net, Request #6626).
+      (duck@obala.net, <a href="http://bugs.horde.org/ticket/6626">Request #6626</a>).
 [jan] Add another directory level for calendar owners to the WebDAV interface.
-[jan] Cut off categories at 80 characters to save them correctly (Bug #5211).
+[jan] Cut off categories at 80 characters to save them correctly (<a href="http://bugs.horde.org/ticket/5211">Bug #5211</a>).
 [gwr] Fixed removal of recurrence in the Kolab driver.
-[jan] Show full title in email alarms (Bug #6510).
+[jan] Show full title in email alarms (<a href="http://bugs.horde.org/ticket/6510">Bug #6510</a>).
 [jan] Add export of single events.
 [gwr] Fixed History support in the Kolab driver.
 [cjh] Don't report cancelled events as busy (m.gabriel@das-netzwerkteam.de,
       Bug #6376).
 [cjh] Show who created or made the last change to an event along with the date
-      (Request #6305).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
 [cjh] Make sure event time and location are shown in the day and week views
-      (Bug #6158).
+      (<a href="http://bugs.horde.org/ticket/6158">Bug #6158</a>).
 [cjh] Include Location and Attendee information in the plain-text portion
-      of iTip messages (almarin@um.es, Request #6271).
+      of iTip messages (almarin@um.es, <a href="http://bugs.horde.org/ticket/6271">Request #6271</a>).
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
 
@@ -111,17 +174,17 @@ v2.2-RC2
 [jan] SECURITY: Fix privilege escalation in Horde API.
 [cjh] SECURITY: Fix missing ownership validation on share changes.
 [cjh] Fix month links in the year view when the first day of the month is on
-      the first day of the week (hofsteda@gmail.com, Bug #6172).
-[cjh] Make sure calendar info boxes show the full remote URL (Bug #6134).
-[jan] Fix importing of events with an existing UID (Bug #6122).
+      the first day of the week (hofsteda@gmail.com, <a href="http://bugs.horde.org/ticket/6172">Bug #6172</a>).
+[cjh] Make sure calendar info boxes show the full remote URL (<a href="http://bugs.horde.org/ticket/6134">Bug #6134</a>).
+[jan] Fix importing of events with an existing UID (<a href="http://bugs.horde.org/ticket/6122">Bug #6122</a>).
 [cjh] Fix timestamps in portal block event links.
 [mjr] Fix issue that caused recurring events on 2/29 to appear on 3/1 when
       recurrence type is HORDE_DATE_RECUR_YEARLY_DATE.
 [cjh] If JavaScript is available, open the Attendees window set to the current
-      event's date (Request #5813).
-[cjh] Fix display of events that end at 00:00 at a non-zero second (Bug #6047).
+      event's date (<a href="http://bugs.horde.org/ticket/5813">Request #5813</a>).
+[cjh] Fix display of events that end at 00:00 at a non-zero second (<a href="http://bugs.horde.org/ticket/6047">Bug #6047</a>).
 [cjh] Fix handling of local names in attendees.php
-      (m.gabriel@das-netzwerkteam.de, Bug #6041).
+      (m.gabriel@das-netzwerkteam.de, <a href="http://bugs.horde.org/ticket/6041">Bug #6041</a>).
 [cjh] Fix inline calendar search in the calendar panel.
 [cjh] New share management UI that doesn't require JavaScript.
 
@@ -130,16 +193,16 @@ v2.2-RC2
 v2.2-RC1
 --------
 
-[jan] Don't allow to modify private events throught the API (Bug #5736).
-[jan] Don't overwrite event owner when changing events over WebDAV (Bug #5736).
+[jan] Don't allow to modify private events throught the API (<a href="http://bugs.horde.org/ticket/5736">Bug #5736</a>).
+[jan] Don't overwrite event owner when changing events over WebDAV (<a href="http://bugs.horde.org/ticket/5736">Bug #5736</a>).
 [jan] Implement WebDAV DELETE.
 [cjh] Event exceptions are now correctly reflected when subscribing to
       Kronolith calendars from Apple iCal.
 [cjh] When adding attendees, parse email groups and add each member
-      individually (Bug #5812).
+      individually (<a href="http://bugs.horde.org/ticket/5812">Bug #5812</a>).
 [cjh] External events are now enabled/disabled by individual category, such
       as showing a particular tasklist on your calendar, but not all tasks
-      (Request #4581).
+      (<a href="http://bugs.horde.org/ticket/4581">Request #4581</a>).
 [jan] Add SQL upgrade script.
 [cjh] Let the "show" URL of a calendar always show that calendar, instead of
       toggling whether or not it is displayed.
@@ -147,19 +210,19 @@ v2.2-RC1
       that do not have guest permissions.
 [cjh] Fix generation of UIDs with PHP 5.2+.
 [cjh] Add preferences for showing event times and locations in screen
-      views, print views, both, or neither (Request #1982).
+      views, print views, both, or neither (<a href="http://bugs.horde.org/ticket/1982">Request #1982</a>).
 [cjh] Run attendee email address through MIME::encodeAddress() before
-      validating them (Bug #5670).
+      validating them (<a href="http://bugs.horde.org/ticket/5670">Bug #5670</a>).
 
 
 ----------
 v2.2-ALPHA
 ----------
 
-[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, Bug #4851).
+[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, <a href="http://bugs.horde.org/ticket/4851">Bug #4851</a>).
 [jan] Add Ukrainian translation (Andriy Kopystyansky &lt;anri@polynet.lviv.ua>).
 [cjh] Inline PHP-generated javascript to avoid cross-domain leaking
-      (Bug #5307).
+      (<a href="http://bugs.horde.org/ticket/5307">Bug #5307</a>).
 [cjh] Add a preference to not send notifications to the person who is
       adding/updating/deleting the event (steven.deboeck@excentis.com,
       Request #4770).
@@ -168,8 +231,8 @@ v2.2-ALPHA
       (duck@obala.net).
 [cjh] Remove unneeded Kronolith_Driver::close method.
 [cjh] Fix error handling when moving events
-      (thomas.jarosch@intra2net.com, Bug #5401).
-[jan] Show icon for private events (Request #5190).
+      (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/5401">Bug #5401</a>).
+[jan] Show icon for private events (<a href="http://bugs.horde.org/ticket/5190">Request #5190</a>).
 [jan] Allow to edit existing event attendees.
 [jan] Add links to delete exceptions from recurring events.
 [jan] Add recurrence types by day of year and weekday of year.
@@ -181,43 +244,43 @@ v2.2-ALPHA
 [jan] Hide less important event settings in the edit form by default.
 [jan] Add support for the Horde_Alarm framework (requires Horde 3.2).
 [cjh] Add ContactAutoCompleter javascript to the attendees screen
-      (Request #1635).
+      (<a href="http://bugs.horde.org/ticket/1635">Request #1635</a>).
 [jan] Add month tab to free/busy view (Gunnar Wrobel &lt;wrobel@pardus.de>,
       Request #4896).
 [cjh] Use extended Free/Busy information from Kolab (wrobel@pardus.de,
       Request #4869).
-[ben] Add daily agenda reminder (Request #4655).
+[ben] Add daily agenda reminder (<a href="http://bugs.horde.org/ticket/4655">Request #4655</a>).
 [cjh] Include event location in reminders (webmgr@muskingum.edu,
       Request #4771).
-[cjh] Use global proxy configuration for HTTP requests (Request #1039).
+[cjh] Use global proxy configuration for HTTP requests (<a href="http://bugs.horde.org/ticket/1039">Request #1039</a>).
 [jan] Display holidays generated with the Date_Holiday package (Stephan
-      Hohmann &lt;webmaster@dasourcerer.net>, Request #3862).
+      Hohmann &lt;webmaster@dasourcerer.net>, <a href="http://bugs.horde.org/ticket/3862">Request #3862</a>).
 [cjh] Consider failing to find any attendees to update an error
-      (Bug #4588).
+      (<a href="http://bugs.horde.org/ticket/4588">Bug #4588</a>).
 [cjh] Include a summary of which calendars were printed in print views
-      (Request #3263).
+      (<a href="http://bugs.horde.org/ticket/3263">Request #3263</a>).
 [jan] Add support for reading and saving events through external clients
-      (requires Horde 3.2, d.bussink@student.utwente.nl, Request #3032).
+      (requires Horde 3.2, d.bussink@student.utwente.nl, <a href="http://bugs.horde.org/ticket/3032">Request #3032</a>).
 [jan] Limit number of events in portal summary block (Duck &lt;duck@obala.net>).
-[cjh] Add a live search to the calendar panel (Request #4607).
+[cjh] Add a live search to the calendar panel (<a href="http://bugs.horde.org/ticket/4607">Request #4607</a>).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [cjh] Fix Day and Week display of events that overlap with an event that
-      doesn't start all the way to the left (Bug #2967).
+      doesn't start all the way to the left (<a href="http://bugs.horde.org/ticket/2967">Bug #2967</a>).
 [cjh] Move calendar selection/deselection to a collapsible panel.
 [jan] Allow to set user name and password for remote calendars
-      (tevans@tachometry.com, Request #3696).
-[jan] Allow to edit remote calendars (tevans@tachometry.com, Request #3696).
+      (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/3696">Request #3696</a>).
+[jan] Allow to edit remote calendars (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/3696">Request #3696</a>).
 [cjh] Move almost all hiding of elements during printing to CSS classes.
 [cjh] Allow the listEvents api call to list events from multiple calendars,
       and filter by whether or not events have an alarm
-      (Ben Klang &lt;ben@alkaloid.net>, Bug #4104).
+      (Ben Klang &lt;ben@alkaloid.net>, <a href="http://bugs.horde.org/ticket/4104">Bug #4104</a>).
 [mjr] Support for removing user data from backend when user is removed from
       Horde.
 [jan] Add private flag.
 [cjh] Add a default alarm preference.
-[cjh] Always include X-WR-CALNAME in iCalendar exports (Request #3618).
-[jan] Add multidomain support for Kolab servers (tokoe@kde.org, Request #3579).
+[cjh] Always include X-WR-CALNAME in iCalendar exports (<a href="http://bugs.horde.org/ticket/3618">Request #3618</a>).
+[jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [jan] Allow delegation of events.
 [cjh] Dynamic switching between Display, Edit, and Delete screens.
 [jan] Add preference to force day and week views to selected hours.
@@ -235,7 +298,7 @@ v2.1.7
 [jan] SECURITY: Fix privilege escalation in Horde API.
 [cjh] SECURITY: Fix missing ownership validation on share changes.
 [jan] Set the user's timezone in the free/busy information.
-[jan] Fix redirection after editing an event from the sidebar menu (Bug #5769).
+[jan] Fix redirection after editing an event from the sidebar menu (<a href="http://bugs.horde.org/ticket/5769">Bug #5769</a>).
 
 
 ------
@@ -244,11 +307,11 @@ v2.1.6
 
 [cjh] Display attendees list correctly without a mail/compose method (Bug
       #5127).
-[cjh] Send iCalendar data as UTF-8 (Bug #5427).
+[cjh] Send iCalendar data as UTF-8 (<a href="http://bugs.horde.org/ticket/5427">Bug #5427</a>).
 [jan] Fix duration of remote and imported full-day events (Bugs #4617, #4794).
-[jan] Fix recurring multiday events crossing a month border (Bug #5205).
+[jan] Fix recurring multiday events crossing a month border (<a href="http://bugs.horde.org/ticket/5205">Bug #5205</a>).
 [jan] Fix duration calculation in edit form for events covering more than a
-      month (Bug #5120).
+      month (<a href="http://bugs.horde.org/ticket/5120">Bug #5120</a>).
 
 
 ------
@@ -256,12 +319,12 @@ v2.1.5
 ------
 
 [jan] Fix character set encoding of exported vCalendar/iCalendar data.
-[jan] Fixed MS-SQL driver (Bug #5088).
+[jan] Fixed MS-SQL driver (<a href="http://bugs.horde.org/ticket/5088">Bug #5088</a>).
 [jan] Add Catalan translation (Jordi Giralt &lt;projecte.k2@upcnet.es>).
-[jan] Fix searching for non-ascii strings (Bug #4773).
+[jan] Fix searching for non-ascii strings (<a href="http://bugs.horde.org/ticket/4773">Bug #4773</a>).
 [cjh] Display partial hours in free/busy view (cbs@cts.ucla.edu,
       Request #4755).
-[cjh] Honor date_format preference in reminders and notifications (Bug #4726).
+[cjh] Honor date_format preference in reminders and notifications (<a href="http://bugs.horde.org/ticket/4726">Bug #4726</a>).
 
 
 ------
@@ -276,16 +339,16 @@ v2.1.3
 ------
 
 [cjh] Set vEvent ORGANIZER to the event creator, not the calendar owner
-      (kajtzu@basen.net, Bug #4527).
-[jan] Fix importing of events without end date and duration (Bug #4519).
-[jan] Correctly display recurring events spanning multiple days (Bug #4438).
-[jan] Fix recurrence end dates with SQLite backends (Bug #4219).
+      (kajtzu@basen.net, <a href="http://bugs.horde.org/ticket/4527">Bug #4527</a>).
+[jan] Fix importing of events without end date and duration (<a href="http://bugs.horde.org/ticket/4519">Bug #4519</a>).
+[jan] Correctly display recurring events spanning multiple days (<a href="http://bugs.horde.org/ticket/4438">Bug #4438</a>).
+[jan] Fix recurrence end dates with SQLite backends (<a href="http://bugs.horde.org/ticket/4219">Bug #4219</a>).
 [jan] Fix calculation of recurrence ends with imported and remote events
-      (Bug #2813).
+      (<a href="http://bugs.horde.org/ticket/2813">Bug #2813</a>).
 [cjh] Consolidate the check for whether or not users can add events in
-      the day and month views (Bug #4373).
+      the day and month views (<a href="http://bugs.horde.org/ticket/4373">Bug #4373</a>).
 [jan] Fix alarms for recurring events in Kolab driver
-      (michael.sheldon@credativ.de, Bug #4326).
+      (michael.sheldon@credativ.de, <a href="http://bugs.horde.org/ticket/4326">Bug #4326</a>).
 [jan] Show error message if imported file didn't contain events.
 [cjh] Fix the SQL types of several recurrence fields.
 [jan] Add categories from imported events to the user's categories.
@@ -293,8 +356,8 @@ v2.1.3
 [jan] Deal with attendee email addresses case insensitively.
 [jan] Don't consider events from remote calendars as busy time.
 [jan] Always try to return the correct event instance if requesting an event
-      by its UID (Thorsten Schaub, Bug #1994).
-[cjh] Fix permissions for the calendar list in advanced search (Bug #4093).
+      by its UID (Thorsten Schaub, <a href="http://bugs.horde.org/ticket/1994">Bug #1994</a>).
+[cjh] Fix permissions for the calendar list in advanced search (<a href="http://bugs.horde.org/ticket/4093">Bug #4093</a>).
 
 
 ------
@@ -302,12 +365,12 @@ v2.1.2
 ------
 
 [jan] Don't show calendar creation form if multiple calendars are not allowed
-      (Bug #3988).
-[jan] Add "Save and Finish" button to attendees popup (Request #1158).
+      (<a href="http://bugs.horde.org/ticket/3988">Bug #3988</a>).
+[jan] Add "Save and Finish" button to attendees popup (<a href="http://bugs.horde.org/ticket/1158">Request #1158</a>).
 [jan] Add parameter to Upcoming Events portal block to limit number of
-      displayed events (dorm@dorm.org, Request #3905).
+      displayed events (dorm@dorm.org, <a href="http://bugs.horde.org/ticket/3905">Request #3905</a>).
 [jan] Allow adding of events if not using a permanent DataTree backend.
-[jan] Fix fatal error for new users on some sytems (Bug #3711).
+[jan] Fix fatal error for new users on some sytems (<a href="http://bugs.horde.org/ticket/3711">Bug #3711</a>).
 
 
 ------
@@ -320,12 +383,12 @@ v2.1.1
       planner.
 [jan] Add 1.1 to 2.x upgrade script for Oracle.
 [cjh] Prevent listAlarms() from causing a fatal error if no calendar is
-      open (Bug #3717).
+      open (<a href="http://bugs.horde.org/ticket/3717">Bug #3717</a>).
 [jan] Update free/busy information on Kolab server after editing events
-      (requires Horde 3.1.1) (tokoe@kde.org, Request #3654).
+      (requires Horde 3.1.1) (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3654">Request #3654</a>).
 [cjh] Honor time format and language preferences in email notifications
-      (Bug #2064).
-[cjh] Add missing display_contact preference (Bug #3575).
+      (<a href="http://bugs.horde.org/ticket/2064">Bug #2064</a>).
+[cjh] Add missing display_contact preference (<a href="http://bugs.horde.org/ticket/3575">Bug #3575</a>).
 [cjh] Fix fatal error during first login of new users.
 
 
@@ -334,7 +397,7 @@ v2.1
 ----
 
 [cjh] There are now several guards against users being stuck with no selected
-      calendars and no way to select one (Bug #3538).
+      calendars and no way to select one (<a href="http://bugs.horde.org/ticket/3538">Bug #3538</a>).
 
 
 --------
@@ -344,9 +407,9 @@ v2.1-RC3
 [jan] Fix retrieving of free/busy URLs from Kolab servers (tokoe@kde.org,
       Bug #3450).
 [jan] Fix recurring events without end dates using the Kolab driver
-      (tokoe@kde.org, Bug #2734).
+      (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/2734">Bug #2734</a>).
 [jan] Allow to specify port and protocol of Kolab server for free/busy request
-      (aseigo@kde.org, tokoe@kde.org, Request #2178).
+      (aseigo@kde.org, tokoe@kde.org, <a href="http://bugs.horde.org/ticket/2178">Request #2178</a>).
 [jan] Improve attendees and contacts forms.
 
 
@@ -355,7 +418,7 @@ v2.1-RC2
 --------
 
 [jan] Show subscription URL for calendars in "My Calendars" overview
-      (kevin_myer@iu13.org, Request #3256).
+      (kevin_myer@iu13.org, <a href="http://bugs.horde.org/ticket/3256">Request #3256</a>).
 [jan] Fix browser redirection after saving events.
 
 
@@ -363,44 +426,44 @@ v2.1-RC2
 v2.1-RC1
 --------
 
-[cjh] The calendar(s) to export data from are now configurable (Request #2330).
+[cjh] The calendar(s) to export data from are now configurable (<a href="http://bugs.horde.org/ticket/2330">Request #2330</a>).
 [jan] Add Portuguese translation (Manuel Menezes de Sequeira
       &lt;Manuel.Sequeira>).
 [cjh] Use HTTP_Request to retrieve Free/Busy information so we don't
       rely on allow_url_fopen.
 [cjh] Remove disabled PDB import code.
-[cjh] Fix display when only remote calendars are active (Bug #2777).
+[cjh] Fix display when only remote calendars are active (<a href="http://bugs.horde.org/ticket/2777">Bug #2777</a>).
 [cjh] Fix alarms for recurring events.
 [ben] Add RSVP to iTip so Outlook will send a reply message when the
       invitation is accepted/declined/etc.
 [jan] Allow automatic sharing of new calendars with users' groups
-      (gauret@free.fr, Request #1366).
+      (gauret@free.fr, <a href="http://bugs.horde.org/ticket/1366">Request #1366</a>).
 [jan] Add preference to only retrieve event reminders for certain calendars
-      (kevin_myer@iu13.org, Request #649).
+      (kevin_myer@iu13.org, <a href="http://bugs.horde.org/ticket/649">Request #649</a>).
 [jan] Always return to last screen after editing or deleting events.
 [jan] Allow to freely set event years.
 [jan] Add event status of "Free".
 [jan] Add CLI script to import iCalendar/vCalendar data.
 [cjh] Deprecate the MCAL driver.
-[mas] Allow replacing a calendar with an imported one. (Bug #1364)
+[mas] Allow replacing a calendar with an imported one. (<a href="http://bugs.horde.org/ticket/1364">Bug #1364</a>)
 [mas] Change any output of &lt;b> and &lt;i> tags to &lt;strong> and &lt;em> for better
       accessibility support.
 [cjh] Use CSS for all category colors instead of generating them inline.
 [cjh] Use Horde_Template for day and week view rows.
 [cjh] The length of time slots in the day and week views is now configurable
-      (Bug #1952).
+      (<a href="http://bugs.horde.org/ticket/1952">Bug #1952</a>).
 [cjh] Add a tree block for showing current alarms.
 [jan] Add permissions to restrict number of events.
 [cjh] Show event owners in tooltips.
 [cjh] Fix assumptions about users being logged in when fetching free/busy
-      information (tasin (at) fhm (dot) edu, Bug #1850).
+      information (tasin (at) fhm (dot) edu, <a href="http://bugs.horde.org/ticket/1850">Bug #1850</a>).
 [jan] Add calendar popup window to side-by-side view to search for calendars
       and toggle their visibility.
 [jan] Add icon to calendar names to remove calendars from side-by-side view.
 [cjh] fb.php now accepts ?u= arguments as well as ?c=, for displaying a user's
       chosen free/busy calendars, allowing users control of which calendars
       block out free/busy time without changing the free/busy URL
-      (kevin_myer@iu13.org, Bug #1683).
+      (kevin_myer@iu13.org, <a href="http://bugs.horde.org/ticket/1683">Bug #1683</a>).
 [cjh] Add exists() method to calendar drivers for checking if events exist by
       UID (Roel Gloudemans &lt;roel@gloudemans.info>).
 [jan] Send links in iTip requests to let users quickly reply to an invitation.
@@ -409,7 +472,7 @@ v2.1-RC1
       Bug #917).
 [jan] Add preference to send email notifications to users when events have
       been added, edited, or deleted in their calendars.
-[cjh] Add a Year view (mbydalek@mobilemini.com) (Bug #1238).
+[cjh] Add a Year view (mbydalek@mobilemini.com) (<a href="http://bugs.horde.org/ticket/1238">Bug #1238</a>).
 [jan] Use OPTGROUPs in calendar drop down list.
 
 
@@ -441,20 +504,20 @@ v2.0.4
 
 [jan] Allow to import more than one event from iCalendar data at once.
 [cjh] Avoid loops and other errors by immediately failing nextRecurrence()
-      checking for any event with a recurInterval of 0 (Bug #2709).
+      checking for any event with a recurInterval of 0 (<a href="http://bugs.horde.org/ticket/2709">Bug #2709</a>).
 
 
 ----------
 v2.0.4-RC1
 ----------
 
-[jan] Fix navigation popup with Safari browsers (t.zell@gmx.de, Bug #2447).
-[cjh] Fix infinite loop with some recurring events (Bug #2346).
-[cjh] Fix All Past and All Future searches (Bug #2257).
+[jan] Fix navigation popup with Safari browsers (t.zell@gmx.de, <a href="http://bugs.horde.org/ticket/2447">Bug #2447</a>).
+[cjh] Fix infinite loop with some recurring events (<a href="http://bugs.horde.org/ticket/2346">Bug #2346</a>).
+[cjh] Fix All Past and All Future searches (<a href="http://bugs.horde.org/ticket/2257">Bug #2257</a>).
 [cjh] Be smarter about enforcing "end before beginning" check for
-      am/pm users when creating an event than spans noon (Bug #1731).
+      am/pm users when creating an event than spans noon (<a href="http://bugs.horde.org/ticket/1731">Bug #1731</a>).
 [jan] Sort search results by start date and show category colors.
-[cjh] Respect twenty_four preference in reminders script (Bug #1896).
+[cjh] Respect twenty_four preference in reminders script (<a href="http://bugs.horde.org/ticket/1896">Bug #1896</a>).
 
 
 ------
@@ -463,7 +526,7 @@ v2.0.3
 
 [jan] Respect SMTP authentication settings when sending reminders and
       notifications (requires Horde 3.0.4).
-[jan] Include date in reminder message (Bug #1855).
+[jan] Include date in reminder message (<a href="http://bugs.horde.org/ticket/1855">Bug #1855</a>).
 [jan] Fix time grids in free/busy view (Bugs #1557, #1868, tasin@fhm.edu).
 
 
@@ -471,62 +534,62 @@ v2.0.3
 v2.0.3-RC1
 ----------
 
-[jan] Fix browsing through work weeks in attendees view (Bug #1852,
+[jan] Fix browsing through work weeks in attendees view (<a href="http://bugs.horde.org/ticket/1852">Bug #1852</a>,
       tasin@fhm.edu).
-[jan] Fix updating of attendee status in attendees view (Bug #1188).
-[jan] Don't show tasks without due dates in all timezones (Bug #514).
-[jan] Include attendees in iTip event invitations (Bug #1676).
+[jan] Fix updating of attendee status in attendees view (<a href="http://bugs.horde.org/ticket/1188">Bug #1188</a>).
+[jan] Don't show tasks without due dates in all timezones (<a href="http://bugs.horde.org/ticket/514">Bug #514</a>).
+[jan] Include attendees in iTip event invitations (<a href="http://bugs.horde.org/ticket/1676">Bug #1676</a>).
 [jan] Fix generated HTML if no calendar has been selected.
-[cjh] Add a PostgreSQL upgrade script (Bug #1778).
+[cjh] Add a PostgreSQL upgrade script (<a href="http://bugs.horde.org/ticket/1778">Bug #1778</a>).
 [cjh] Show the calendar selection dropdown if there are remote calendars
-      regardless of number of shares (Bug #1640).
-[cjh] Separate buttons on attendees screen (kevin_myer@iu13.org, Bug #1635).
+      regardless of number of shares (<a href="http://bugs.horde.org/ticket/1640">Bug #1640</a>).
+[cjh] Separate buttons on attendees screen (kevin_myer@iu13.org, <a href="http://bugs.horde.org/ticket/1635">Bug #1635</a>).
 [cjh] Use bind variables in the SQL drivers (selsky@columbia.edu, Bugs #1669,
       #1670).
-[jan] Send reminders in users' languages (Bug #1654).
-[cjh] Don't leave events in the database with no recurrences left (Bug #1503).
+[jan] Send reminders in users' languages (<a href="http://bugs.horde.org/ticket/1654">Bug #1654</a>).
+[cjh] Don't leave events in the database with no recurrences left (<a href="http://bugs.horde.org/ticket/1503">Bug #1503</a>).
 [cjh] Make sure that remote events can be edited for saving as new, and never
-      show a delete button for them (Bug #1639).
+      show a delete button for them (<a href="http://bugs.horde.org/ticket/1639">Bug #1639</a>).
 [cjh] Always use eventID, not eventIndex. Fixes problems with only one remote
-      event showing up per day (Bug #1630).
-[jan] Fix free/busy generation on broken PHP CGI SAPIs (Bug #1599).
-[cjh] Set recurrence end date if present in iCal data (Bug #1365, #1582).
+      event showing up per day (<a href="http://bugs.horde.org/ticket/1630">Bug #1630</a>).
+[jan] Fix free/busy generation on broken PHP CGI SAPIs (<a href="http://bugs.horde.org/ticket/1599">Bug #1599</a>).
+[cjh] Set recurrence end date if present in iCal data (<a href="http://bugs.horde.org/ticket/1365">Bug #1365</a>, #1582).
 [cjh] Alarms that are a calendar day or more in the future are now sent on
-      time (Bug #1356)
-[jan] Catch errors if importing incomplete events (Bug #1429).
+      time (<a href="http://bugs.horde.org/ticket/1356">Bug #1356</a>)
+[jan] Catch errors if importing incomplete events (<a href="http://bugs.horde.org/ticket/1429">Bug #1429</a>).
 [cjh] Fix display errors with overlapping repeating events and PHP4
-      (Bug #1200).
+      (<a href="http://bugs.horde.org/ticket/1200">Bug #1200</a>).
 [ben] Allow setting the default domain on attendee email addresses when
       checking for freebusy urls.
-[cjh] Treat webcal:// URLs as http:// for remote calendars (Bug #1480).
-[cjh] Fix problems with PostgreSQL and non-ISO date formats (Bug #1482).
-[jan] Workaround IE warning when entering Kronolith over HTTPS (Bug #910).
+[cjh] Treat webcal:// URLs as http:// for remote calendars (<a href="http://bugs.horde.org/ticket/1480">Bug #1480</a>).
+[cjh] Fix problems with PostgreSQL and non-ISO date formats (<a href="http://bugs.horde.org/ticket/1482">Bug #1482</a>).
+[jan] Workaround IE warning when entering Kronolith over HTTPS (<a href="http://bugs.horde.org/ticket/910">Bug #910</a>).
 [jan] Add shortcut icon (favicon.ico).
-[jan] Sort whole day events alphabetically (Bug #222).
+[jan] Sort whole day events alphabetically (<a href="http://bugs.horde.org/ticket/222">Bug #222</a>).
 
 
 ------
 v2.0.2
 ------
 
-[jan] Fix portal block for missing events at the turn of the year (Bug #1337).
+[jan] Fix portal block for missing events at the turn of the year (<a href="http://bugs.horde.org/ticket/1337">Bug #1337</a>).
 
 
 ----------
 v2.0.2-RC1
 ----------
 
-[jan] Fix free/busy views with some languages (Bug #1036).
+[jan] Fix free/busy views with some languages (<a href="http://bugs.horde.org/ticket/1036">Bug #1036</a>).
 [cjh] Prevent infinite loops if events are set to recur weekly on no
-      weekdays (Bug #1074).
+      weekdays (<a href="http://bugs.horde.org/ticket/1074">Bug #1074</a>).
 [cjh] Set iCalendar events with weekly recurrence to recur on the day
       of the week of the first recurrence if no BYDAY data is present
-      (Bug #1074).
+      (<a href="http://bugs.horde.org/ticket/1074">Bug #1074</a>).
 [cjh] Make sure that event UIDs are properly set in iTip notifications
-      (Bug #1153).
+      (<a href="http://bugs.horde.org/ticket/1153">Bug #1153</a>).
 [jan] Add Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
 [cjh] Check the completion status of tasks, not just their due date,
-      before showing them on the calendar (Bug #947).
+      before showing them on the calendar (<a href="http://bugs.horde.org/ticket/947">Bug #947</a>).
 
 
 ------
@@ -534,10 +597,10 @@ v2.0.1
 ------
 
 [cjh] Fix one page load delay in showing new/removing deleted shares
-      on the My Calendars screen (Bug #1048).
+      on the My Calendars screen (<a href="http://bugs.horde.org/ticket/1048">Bug #1048</a>).
 [cjh] Fix labeling of weekday columns in the Month view when the
       week starts on Monday and show_shared_side_by_side preference
-      is on (Bug #1049).
+      is on (<a href="http://bugs.horde.org/ticket/1049">Bug #1049</a>).
 [cjh] Fix fatal error when in calendar/import API call
       (Sebastián Calero &lt;scalero@datadec.es>).
 [cjh] Fix a week boundary problem that took you to the previous
@@ -545,9 +608,9 @@ v2.0.1
 [cjh] Fix several errors in calculating the week number at the
       rollover between years.
 [cjh] Fix an off-by-one error in the work week view when the user
-      views weeks starts on Sunday (Bug #1046).
-[cjh] Add PostgreSQL version of 2004-12-21_add_event_uid (Bug #1028).
-[cjh] Fix typo that prevented attendees from being saved (Bug #1019).
+      views weeks starts on Sunday (<a href="http://bugs.horde.org/ticket/1046">Bug #1046</a>).
+[cjh] Add PostgreSQL version of 2004-12-21_add_event_uid (<a href="http://bugs.horde.org/ticket/1028">Bug #1028</a>).
+[cjh] Fix typo that prevented attendees from being saved (<a href="http://bugs.horde.org/ticket/1019">Bug #1019</a>).
 
 
 ----
@@ -560,9 +623,9 @@ v2.0
       their seperate calendars, they should have unique histories for
       that event).
 [cjh] The My Calendars page now has a tool for generating Free/Busy URLs
-      (Bug #571).
+      (<a href="http://bugs.horde.org/ticket/571">Bug #571</a>).
 [cjh] Pass Horde_Date objects instead of timestamps when exporting to
-      iCalendar (Bug #950).
+      iCalendar (<a href="http://bugs.horde.org/ticket/950">Bug #950</a>).
 [cjh] Clone events before changing their start dates to the current day
       in the day view so that the week view isn't wrong.
 [cjh] Fix an off-by-one error in the week view when the user views weeks
@@ -584,20 +647,20 @@ v2.0-RC3
 [cjh] Add My Calendars menu entry.
 [cjh] Event exceptions are now correctly exported in iCalendar files.
 [cjh] Fix recurring events that recur on the same day of the month every n
-      months where n > 1 (Bug #907).
+      months where n > 1 (<a href="http://bugs.horde.org/ticket/907">Bug #907</a>).
 [cjh] Fix month view for months starting on Sunday with the first displayed
-      day set to Monday (Bug #907).
+      day set to Monday (<a href="http://bugs.horde.org/ticket/907">Bug #907</a>).
 [cjh] Show event state by CSS styling (Derek P. Moore &lt;derekm@hackunix.org>).
-[jan] Correctly highlight the current view's tab (Bug #896).
+[jan] Correctly highlight the current view's tab (<a href="http://bugs.horde.org/ticket/896">Bug #896</a>).
 
 
 --------
 v2.0-RC2
 --------
 
-[jan] Fix recurring events from remote calendars (Bug #559).
+[jan] Fix recurring events from remote calendars (<a href="http://bugs.horde.org/ticket/559">Bug #559</a>).
 [cjh] The menubar Goto popup is now always on top of &lt;select> boxes,
-      even in Internet Explorer (Bug #822).
+      even in Internet Explorer (<a href="http://bugs.horde.org/ticket/822">Bug #822</a>).
 [cjh] Menubar Goto link works on the Options screen again.
 
 

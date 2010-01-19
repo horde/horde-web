@@ -1,20 +1,41 @@
 <h1>Changes by Release</h1><pre>
+----------
+v3.2.1-cvs
+----------
+
+[jan] Fix driver capability check if users are allowed to change From: headers
+      (<a href="http://bugs.horde.org/ticket/8808">Bug #8808</a>).
+
+
+----
+v3.2
+----
+
+[jan] Enable output compression.
+[jan] Add placeholder for bare user name to customsql driver (<a href="http://bugs.horde.org/ticket/7916">Request #7916</a>).
+[jan] Allow drivers to report capabilities, e.g. whether setting From: headers
+      is supported (Michael Brennen &lt;michael@fishnet.us>).
+[jan] Add Postfix Admin driver (Michael Brennen &lt;michael@fishnet.us>).
+[jan] Add TLS support to LDAP driver (<a href="http://bugs.horde.org/ticket/7958">Request #7958</a>).
+
+
+----
+v3.1
+----
+
+[jan] Fix retrieving 'hordeauth' setting when using realms (<a href="http://bugs.horde.org/ticket/7881">Bug #7881</a>).
+
+
 --------
-v3.1-cvs
+v3.1-RC1
 --------
 
 [jan] Add custom SQL driver.
-[cjh] Use the current password as the salt in the SQL driver (Bug #6496).
+[cjh] Use the current password as the salt in the SQL driver (<a href="http://bugs.horde.org/ticket/6496">Bug #6496</a>).
 [jan] Add Plesk driver.
 [jan] Add GDBM database template for big endian systems.
-[jan] Add SSL option to ftp and qmail drivers (Request #5511).
-[jan] Add full character set support (Request #5028).
-
-
-----------
-v3.0.2-cvs
-----------
-
+[jan] Add SSL option to ftp and qmail drivers (<a href="http://bugs.horde.org/ticket/5511">Request #5511</a>).
+[jan] Add full character set support (<a href="http://bugs.horde.org/ticket/5028">Request #5028</a>).
 [jan] Fix retrieving vacation status from LDAP with mixed-case attribute names.
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
@@ -28,7 +49,7 @@ v3.0.1
 [jan] Add configuration option for search bind DNs and passwords.
 [jan] Add configuration option for search timeouts.
 [jan] Optionally allow users to set their From: address (Christian Hernmarck
-      &lt;christian@hernmarck.ch>, Request #1833).
+      &lt;christian@hernmarck.ch>, <a href="http://bugs.horde.org/ticket/1833">Request #1833</a>).
 [jan] Improve accessibility.
 [jan] Add support for Berkeley DB 4 vacation databases (Gregory Colpart
       &lt;reg@evolix.fr>).
@@ -40,8 +61,8 @@ v3.0
 
 [jan] Fix support for realm based configuration.
 [jan] Add Greek translation (Konstantinos C. Milosis &lt;kmilosis@yahoo.com>).
-[jan] Add encryption type configuration to SQL driver (Request #2377).
-[mas] Fix compatibility with PHP 5.1.2. (tinu@humbapa.ch, Bug #3516)
+[jan] Add encryption type configuration to SQL driver (<a href="http://bugs.horde.org/ticket/2377">Request #2377</a>).
+[mas] Fix compatibility with PHP 5.1.2. (tinu@humbapa.ch, <a href="http://bugs.horde.org/ticket/3516">Bug #3516</a>)
 
 
 --------
@@ -50,15 +71,15 @@ v3.0-RC1
 
 [ben] Better support for MS-SQL.
 [jan] Add configuration option to disable subject headers
-      (c.affolter@stepping-stone.ch, Request #2643).
+      (c.affolter@stepping-stone.ch, <a href="http://bugs.horde.org/ticket/2643">Request #2643</a>).
 [jan] Allow to set protocol version in qmail LDAP driver
-      (m.zdila@episoftware.com, Request #2834).
+      (m.zdila@episoftware.com, <a href="http://bugs.horde.org/ticket/2834">Request #2834</a>).
 [jan] Prevent deletion of existing vacation notices in qmail driver
-      (tevans@tachometry.com, Request #2572).
+      (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/2572">Request #2572</a>).
 [jan] Select the enable/disable button depending on the current state
-      (tevans@tachometry.com, Request #2572).
-[cjh] Make the LDAP driver more configurable (Request #1648).
-[cjh] Add passive mode to FTP driver configuration options (Request #1782).
+      (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/2572">Request #2572</a>).
+[cjh] Make the LDAP driver more configurable (<a href="http://bugs.horde.org/ticket/1648">Request #1648</a>).
+[cjh] Add passive mode to FTP driver configuration options (<a href="http://bugs.horde.org/ticket/1782">Request #1782</a>).
 [cjh] Use bind variables in the SQL driver (selsky@columbia.edu,
       Request #1680).
 [jmf] Work with newer Mail packages by turning off validation.

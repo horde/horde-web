@@ -1,29 +1,47 @@
 <h1>Changes by Release</h1><pre>
 ----------
-v2.2.2-cvs
+v2.2.4-cvs
 ----------
 
+
+
+
+------
+v2.2.3
+------
+
+[jan] Add and fix Oracle SQL scripts.
+[jan] Add Croatian translation (Matej Vela &lt;matej.vela@carnet.hr>).
+
+
+------
+v2.2.2
+------
+
+[mms] Upgrade prototype.js to v1.6.1.
+[jan] Fix synchronization with output compression enabled (<a href="http://bugs.horde.org/ticket/7769">Bug #7769</a>).
+[jan] Add passphrase confirmation field (<a href="http://bugs.horde.org/ticket/7379">Bug #7379</a>).
+[cjh] Work around BC break with Horde versions before 3.2 (<a href="http://bugs.horde.org/ticket/7820">Bug #7820</a>).
 [cjh] Add URL access to notes by "starts-with" search on the note title.
 [cjh] Add hooks for altering the displayed note body and showing help text next
       to the note entry field.
-[cjh] Explicitly load DB library (Bug #7648).
-[jan] Fix "replace" API method (Alfonso Marín Marín &lt;almarin@um.es>, Bug #7436).
+[cjh] Explicitly load DB library (<a href="http://bugs.horde.org/ticket/7648">Bug #7648</a>).
+[jan] Fix "replace" API method (Alfonso Marín Marín &lt;almarin@um.es>, <a href="http://bugs.horde.org/ticket/7436">Bug #7436</a>).
 [cjh] Add a PostgreSQL-specific upgrade script.
-[mms] Upgrade prototype.js to v1.6.0.3.
-[jan] Change group field in shares table to work with LDAP groups (Bug #6883).
-[jan] Fix user name conversion with user hooks in the notepad panel (Bug #7366).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
+[jan] Fix user name conversion with user hooks in the notepad panel (<a href="http://bugs.horde.org/ticket/7366">Bug #7366</a>).
 
 
 ------
 v2.2.1
 ------
 
-[jan] Log moving of memos in the history backend (Bug #3207).
+[jan] Log moving of memos in the history backend (<a href="http://bugs.horde.org/ticket/3207">Bug #3207</a>).
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [mjr] Remove user permissions on all shares when deleting a user.
 [mjr] Fix issue with removeUserData api that caused the deleted user's task list
-      to not be deleted (Bug #6969).
+      to not be deleted (<a href="http://bugs.horde.org/ticket/6969">Bug #6969</a>).
 
 
 ----
@@ -31,9 +49,9 @@ v2.2
 ----
 
 [mjr] Fix issue with removeUserData api that caused the deleted user's task list
-      to not be deleted (Bug #6969).
+      to not be deleted (<a href="http://bugs.horde.org/ticket/6969">Bug #6969</a>).
 [cjh] Improve resource usage in datatree_to_sql share migration script
-      (Bug #6740).
+      (<a href="http://bugs.horde.org/ticket/6740">Bug #6740</a>).
 [jan] Fix exporting and synchronization of encrypted notes.
 
 
@@ -42,12 +60,12 @@ v2.2-RC3
 --------
 
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
-      (Request #6590).
-[cjh] Add an upgrade script for the new SQL share driver (Request #6109).
+      (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
+[cjh] Add an upgrade script for the new SQL share driver (<a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
 [gwr] Added History support in the Kolab driver.
-[cjh] Avoid errors when trying to export an empty notepad (Bug #6409).
+[cjh] Avoid errors when trying to export an empty notepad (<a href="http://bugs.horde.org/ticket/6409">Bug #6409</a>).
 [cjh] Show who created or made the last change to a note along with the date
-      (Request #6305).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
 
@@ -76,7 +94,7 @@ v2.2-RC1
 
 [jan] Implement WebDAV DELETE.
 [cjh] Add quick links to the sidebar block for adding notes to a specific
-      notepad (Gunnar Wrobel &lt;p@rdus.de>, Request #5716).
+      notepad (Gunnar Wrobel &lt;p@rdus.de>, <a href="http://bugs.horde.org/ticket/5716">Request #5716</a>).
 [cjh] Fix generation of UIDs with PHP 5.2+.
 
 
@@ -85,15 +103,15 @@ v2.2-ALPHA
 ----------
 
 [cjh] Show tooltips in the summary block, and restrict tooltips to 20 lines
-      (Request #3443).
-[cjh] Optionally show a note's notepad in the list view (Request #2317).
+      (<a href="http://bugs.horde.org/ticket/3443">Request #3443</a>).
+[cjh] Optionally show a note's notepad in the list view (<a href="http://bugs.horde.org/ticket/2317">Request #2317</a>).
 [cjh] Add quick (inline) note searching.
 [cjh] Add the ability to save a note as a PDF.
 [jan] Add support for encrypted notes.
 [cjh] Move notepad selection/deselection to a collapsible panel.
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
-[cjh] Notes search should be either title or full text (Request #4277).
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
+[cjh] Notes search should be either title or full text (<a href="http://bugs.horde.org/ticket/4277">Request #4277</a>).
 [cjh] Make the note edit view the full page width.
 
 
@@ -112,14 +130,14 @@ v2.1.1
 [jan] Show error message if imported file didn't contain notes.
 [jan] Add Slovenian translation (Duck &lt;duck@obala.net>).
 [jan] Add categories from imported contacts to the user's categories.
-[jan] Show personal notepad by default with disabled preferences (Bug #4078).
+[jan] Show personal notepad by default with disabled preferences (<a href="http://bugs.horde.org/ticket/4078">Bug #4078</a>).
 
 
 ----
 v2.1
 ----
 
-[jan] Fix portal block if used with Kolab driver (tokoe@kde.org, Bug #2735).
+[jan] Fix portal block if used with Kolab driver (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/2735">Bug #2735</a>).
 [jan] Add Russian translation (Alexey Zakharov &lt;baber@mosga.net>).
 [ben] Better support for MS-SQL.
 
@@ -128,7 +146,7 @@ v2.1
 v2.1-RC1
 --------
 
-[jan] Confirm note deletions (Request #1156).
+[jan] Confirm note deletions (<a href="http://bugs.horde.org/ticket/1156">Request #1156</a>).
 [jan] Add CLI script to import vNote data.
 [cjh] Add support for dynamic re-sorting of the note list, including saving
       the sort preferences on any changes.
@@ -156,11 +174,11 @@ v2.0.2
 v2.0.2-RC1
 ----------
 
-[cjh] Fix resetting categories to Unfiled (Bug #2018).
+[cjh] Fix resetting categories to Unfiled (<a href="http://bugs.horde.org/ticket/2018">Bug #2018</a>).
 [cjh] Use bind variables in SQL driver, clean up required parameters
-      (selsky@columbia.edu, Bug #1791).
-[cjh] Add a PostgreSQL upgrade script (Bug #1779).
-[cjh] Better error handling when deleting shares that don't exist (Bug #1754).
+      (selsky@columbia.edu, <a href="http://bugs.horde.org/ticket/1791">Bug #1791</a>).
+[cjh] Add a PostgreSQL upgrade script (<a href="http://bugs.horde.org/ticket/1779">Bug #1779</a>).
+[cjh] Better error handling when deleting shares that don't exist (<a href="http://bugs.horde.org/ticket/1754">Bug #1754</a>).
 [jan] Add Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
 [jan] Add shortcut icon (favicon.ico).
 
@@ -182,7 +200,7 @@ v2.0
       same note (if two users both have a note on their seperate notepads,
       they should have unique histories for that note).
 [cjh] Don't throw a fatal error if an empty share name is submitted
-      (Bug #1000).
+      (<a href="http://bugs.horde.org/ticket/1000">Bug #1000</a>).
 
 
 --------

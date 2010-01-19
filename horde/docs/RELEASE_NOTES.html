@@ -1,11 +1,25 @@
 <h1>Release notes for the latest release</h1><pre>
 The Horde Team is pleased to announce the final release of the Horde
-Application Framework version 3.3.2.
+Application Framework version 3.3.6.
+
+This is a bugfix release that also fixes an XSS vulnerability in the
+administration interface and improves the XSS filter to work around an XSS
+vulnerability in Firefox browsers.
+
+Thanks to Juan Galiana Lara and Daniel Fernández Bleda from Internet Security
+Auditors for finding the XSS vulnerability in the administration interface.
 
 The Horde Application Framework is a modular, general-purpose web application
 framework written in PHP.  It provides an extensive array of classes that are
 targeted at the common problems and tasks involved in developing modern web
 applications.
 
-The major changes compared to Horde version 3.3.1 are:
-    * Fix prototypejs regression on IE.</pre>
+The major changes compared to Horde version 3.3.5 are:
+    * Fixed XSS vulnerability in administrator scripts.
+    * Improved XSS filter for HTML messages.
+    * Several synchronization improvements.
+    * Improved Oracle and MSSQL compatibility.
+    * Fixed access keys on Mac browsers.
+    * Fixed "white screen" issue with Internet Explorer.
+    * Added Croatian translation.
+    * Multiple other small bug fixes and improvements.</pre>

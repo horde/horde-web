@@ -1,8 +1,46 @@
 <h1>Changes by Release</h1><pre>
 ----------
-v2.3.2-cvs
+v2.3.4-cvs
 ----------
 
+[jan] Only export non-empty fields if exporting manually.
+[jan] Add export to vCard 3.0.
+[jan] Only synchronize those fields that are supported by the client
+      (<a href="http://bugs.horde.org/ticket/6658">Request #6658</a>, requires Horde 3.3.7).
+
+
+------
+v2.3.3
+------
+
+[jan] Fix syntax of MSSQL scripts (<a href="http://bugs.horde.org/ticket/8664">Bug #8664</a>).
+[jan] Add preference for the name format to use for sorting (<a href="http://bugs.horde.org/ticket/6721">Request #6721</a>).
+[jan] Condense whitespace in composite fields (<a href="http://bugs.horde.org/ticket/8654">Request #8654</a>).
+[jan] Add and fix Oracle-specific SQL scripts.
+[jan] Add Croatian translation (Matej Vela &lt;matej.vela@carnet.hr>,
+      Iva Rumora &lt;iva.rumora@zg.t-com.hr>).
+[mjr] Fix permission checking for virtual address books. 
+[jan] Update deleted attributes during synchronization (lst_hoe02@kwsoft.de,
+      Request #6658).
+[jan] Support X-ANNIVERSARY, X-CHILDREN, and X-SPOUSE vCard fields
+      (<a href="http://bugs.horde.org/ticket/8074">Request #8074</a>).
+[jan] Fix copying and moving of image fields (Ryu &lt;ryu@ryux.org>, <a href="http://bugs.horde.org/ticket/8523">Bug #8523</a>).
+[jan] Don't return an error on empty LDAP search results (<a href="http://bugs.horde.org/ticket/8595">Bug #8595</a>).
+[jan] Replace PHP5-only code from the LDIF exporter (<a href="http://bugs.horde.org/ticket/8586">Bug #8586</a>).
+
+
+------
+v2.3.2
+------
+
+[mms] Upgrade prototype.js to v1.6.1.
+[jan] Fix synchronization with output compression enabled (<a href="http://bugs.horde.org/ticket/7769">Bug #7769</a>).
+[mjr] Fix contacts being deleted during synchronization when moved from one
+      address book to another (ryu@ryux.org, <a href="http://bugs.horde.org/ticket/8487">Bug #8487</a>).
+[mjr] Add new API method for retrieving the default share for a source.
+[jan] Don't overwrite the compositing fields, when importing composite fields.
+[cjh] Fix searches for multiple strict fields and at least one non-strict field
+      (tinu@humbapa.ch, <a href="http://bugs.horde.org/ticket/7876">Bug #7876</a>).
 [mjr] Specific timeobject categories are now only advertised when they are
       present in a configured source.
 
@@ -15,12 +53,12 @@ v2.3.1
 [jan] Add script to import contacts from SquirrelMail database.
 [gwr] Correct support for the freebusy URL in Kolab.
 [gwr] Add photo support for the Kolab driver.
-[jan] Import broken vCards from Synthesis clients (Bug #7407).
-[cjh] Add two retries to find a contact after adding it (Bug #7478).
+[jan] Import broken vCards from Synthesis clients (<a href="http://bugs.horde.org/ticket/7407">Bug #7407</a>).
+[cjh] Add two retries to find a contact after adding it (<a href="http://bugs.horde.org/ticket/7478">Bug #7478</a>).
 [cjh] Add a PostgreSQL-specific upgrade script for 2.2.1 to 2.3
-      (michael.menge@zdv.uni-tuebingen.de, Bug #7462).
+      (michael.menge@zdv.uni-tuebingen.de, <a href="http://bugs.horde.org/ticket/7462">Bug #7462</a>).
 [jan] Don't overwrite empty address books preference when creating new shares
-      (Bug #7399).
+      (<a href="http://bugs.horde.org/ticket/7399">Bug #7399</a>).
 [mms] Upgrade prototype.js to v1.6.0.3.
 
 
@@ -28,48 +66,48 @@ v2.3.1
 v2.3
 ----
 
-[jan] Change group field in shares table to work with LDAP groups (Bug #6883).
-[jan] Fix exporting address books with country fields as vCards (Bug #7372).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
+[jan] Fix exporting address books with country fields as vCards (<a href="http://bugs.horde.org/ticket/7372">Bug #7372</a>).
 [mjr] Make sure we use all address books when searching via the api and the
-      user's addressbooks pref is empty (Bug #7357).
-[mjr] Correctly calculate the age of time objects (Bug #7330).
+      user's addressbooks pref is empty (<a href="http://bugs.horde.org/ticket/7357">Bug #7357</a>).
+[mjr] Correctly calculate the age of time objects (<a href="http://bugs.horde.org/ticket/7330">Bug #7330</a>).
 
 
 --------
 v2.3-RC1
 --------
 
-[jan] Improve vCard EMAIL field parsing (Bug #7281).
-[jan] Correctly import and export address extensions (Bug #7279).
+[jan] Improve vCard EMAIL field parsing (<a href="http://bugs.horde.org/ticket/7281">Bug #7281</a>).
+[jan] Correctly import and export address extensions (<a href="http://bugs.horde.org/ticket/7279">Bug #7279</a>).
 [jan] Export full country names to vCard addresses.
-[jan] Respect precedence of multiple vCard properties (Request #7122).
-[jan] Remove deleted address books from address book preference (Request #6938).
+[jan] Respect precedence of multiple vCard properties (<a href="http://bugs.horde.org/ticket/7122">Request #7122</a>).
+[jan] Remove deleted address books from address book preference (<a href="http://bugs.horde.org/ticket/6938">Request #6938</a>).
 [jan] Export LABEL properties to vCard if address fields are available.
 [gwr] Add support for storing public PGP keys when using Kolab.
 [gwr] Add support for adding addresses from IMP when using Kolab.
 [jan] Add configuration option for an alternative name field.
 [jan] Add support for image fields to SQL driver (requires Horde 3.3).
-[jan] Add more default field mappings for CSV import (Request #6901).
-[jan] Update field names for Outlook 2003 export (Request #6901).
+[jan] Add more default field mappings for CSV import (<a href="http://bugs.horde.org/ticket/6901">Request #6901</a>).
+[jan] Update field names for Outlook 2003 export (<a href="http://bugs.horde.org/ticket/6901">Request #6901</a>).
 [jan] Improve logic which entries to show in the sidebar menu.
-[jan] Add support for the category form field (Request #6884).
+[jan] Add support for the category form field (<a href="http://bugs.horde.org/ticket/6884">Request #6884</a>).
 [jan] Fix sorting so that sort order is always reflected correctly,
       independent of name format.
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [jan] Add ability to mark a contact as your own and API method to export it.
-[jan] Fix importing phone numbers from Synthesis clients (Bug #7011).
+[jan] Fix importing phone numbers from Synthesis clients (<a href="http://bugs.horde.org/ticket/7011">Bug #7011</a>).
 [mjr] Fix issue with searching composite fields when the number of search terms
-      is less than the number of composed fields (Bug #6796)
+      is less than the number of composed fields (<a href="http://bugs.horde.org/ticket/6796">Bug #6796</a>)
 [cjh] Allow importing multiple address into an email field if allow_multi
-      is set to true on the field in attributes.php (Bug #6897).
+      is set to true on the field in attributes.php (<a href="http://bugs.horde.org/ticket/6897">Bug #6897</a>).
 [mjr] Remove user permissions on all shares when deleting a user.
 [jan] Fix searching of client address books that have been disabled in the
-      preferences (Bug #6961).
+      preferences (<a href="http://bugs.horde.org/ticket/6961">Bug #6961</a>).
 [mjr] Fix issue with removeUserData api that caused the deleted user's
       address books to not be deleted as well as remove an erroneous error
-      notification (Bug #6969).
-[cjh] Fix the column selector/sorter in IE (Bug #6912).
+      notification (<a href="http://bugs.horde.org/ticket/6969">Bug #6969</a>).
+[cjh] Fix the column selector/sorter in IE (<a href="http://bugs.horde.org/ticket/6912">Bug #6912</a>).
 
 
 ------
@@ -84,7 +122,7 @@ v2.2.1
 ------
 
 [cjh] SECURITY: Escape contact names in the contact display view.
-[jan] Fix importing of certain phone numbers from vCard (Bug #6744).
+[jan] Fix importing of certain phone numbers from vCard (<a href="http://bugs.horde.org/ticket/6744">Bug #6744</a>).
 [mjr] Correct a function declaration in the 2.1_to_2.2_sql_schema.php upgrade
       script that was causing fatal errors.
 
@@ -94,49 +132,49 @@ v2.2
 ----
 
 [mjr] Fix importing email addresses from CSV files to be consistent with what
-      we allow to be entered via the UI. (Bug #6725)
+      we allow to be entered via the UI. (<a href="http://bugs.horde.org/ticket/6725">Bug #6725</a>)
 [cjh] Improve resource usage in datatree_to_sql share migration script
-      (Bug #6740).
+      (<a href="http://bugs.horde.org/ticket/6740">Bug #6740</a>).
 
 
 --------
 v2.2-RC4
 --------
 
-[cjh] Fix editing contacts that were accessed by UID (Bug #6672).
+[cjh] Fix editing contacts that were accessed by UID (<a href="http://bugs.horde.org/ticket/6672">Bug #6672</a>).
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
-      (Request #6590).
-[cjh] Add an upgrade script for the new SQL share driver (Request #6109).
-[cjh] Include composite fields in data exports (Bug #6517).
+      (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
+[cjh] Add an upgrade script for the new SQL share driver (<a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
+[cjh] Include composite fields in data exports (<a href="http://bugs.horde.org/ticket/6517">Bug #6517</a>).
 [gwr] Add distribution list support to the Kolab driver.
 [cjh] Add vCard/syncing support for a large number of additional attributes
-      (horde@ssn.at, Request #6573).
-[cjh] Update composite fields in LDAP DNs (horde@ssn.at, Bug #6575).
+      (horde@ssn.at, <a href="http://bugs.horde.org/ticket/6573">Request #6573</a>).
+[cjh] Update composite fields in LDAP DNs (horde@ssn.at, <a href="http://bugs.horde.org/ticket/6575">Bug #6575</a>).
 [mjr] Fix paging in search results.
 [cjh] Allow setting default values for attributes.
 [cjh] Show a browse link in the address book list for each address book
-      (thomas.jarosch@intra2net.com, Request #6613).
+      (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/6613">Request #6613</a>).
 [mjr] Fixed a bug that caused field values to get mismatched with the column
       names when a single DB field is mapped to multiple Turba fields.
 [mjr] Fix changing sort order on the search view.
 [jan] Add preference to choose address books for synchronization.
-[jan] Improved importing of names from vCards (Bug #6568).
+[jan] Improved importing of names from vCards (<a href="http://bugs.horde.org/ticket/6568">Bug #6568</a>).
 [jan] Fix incomplete copying and moving of attributes to composite fields
-      (Bug #6565).
+      (<a href="http://bugs.horde.org/ticket/6565">Bug #6565</a>).
 [gwr] Fix the relation of key/uid within the Kolab driver.
-[gwr] Export/import of the emails attribute (Bug #6504).
-[mas] Encode DN correctly when exporting to LDIF. (Bug #6518).
+[gwr] Export/import of the emails attribute (<a href="http://bugs.horde.org/ticket/6504">Bug #6504</a>).
+[mas] Encode DN correctly when exporting to LDIF. (<a href="http://bugs.horde.org/ticket/6518">Bug #6518</a>).
 [gwr] Fix virtual address books when using shares.
 [gwr] Fix searching for the Kolab driver.
 [cjh] Replace the address book column sorter with a Scriptaculous-based one;
-      fixes re-ordering columns in some cases (Bug #6444).
+      fixes re-ordering columns in some cases (<a href="http://bugs.horde.org/ticket/6444">Bug #6444</a>).
 [jan] Always return to the last view after saving a contact.
 [jan] Correctly determine default address books in the API (SyncML, WebDAV).
 [jan] Add categories imported through the API (SyncML, WebDAV).
 [jan] Store categories as strings.
 [cjh] Show who created or made the last change to a contact along with the date
-      (Request #6305).
-[mjr] Prevent overwriting contact entries with the upgrade script (Bug #6308).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
+[mjr] Prevent overwriting contact entries with the upgrade script (<a href="http://bugs.horde.org/ticket/6308">Bug #6308</a>).
 
 
 --------
@@ -144,7 +182,7 @@ v2.2-RC3
 --------
 
 [cjh] SECURITY: Fix unchecked access to contacts in the same SQL table
-      (Bug #6208) (CVE-2008-0807).
+      (<a href="http://bugs.horde.org/ticket/6208">Bug #6208</a>) (CVE-2008-0807).
 [jan] Add configuration to more flexibly parse full names into the name parts.
 
 
@@ -156,17 +194,17 @@ v2.2-RC2
 [mjr] Degrade gracefully when no VFS is configured.
 [cjh] Fixed the share flattening upgrade script.
 [mjr] Fixed issue that caused mangling of composite fields when moving or
-      copying contacts from one address book to another (Bug #6058).
+      copying contacts from one address book to another (<a href="http://bugs.horde.org/ticket/6058">Bug #6058</a>).
 [mjr] Fixed issue that caused listTimeObjects to only return objects from a
       single address book when using a shared SQL source.
 [cjh] Update address book management UI to match other groupware apps.
-[jan] Trim composite field values before saving to the backend (Bug #5979).
+[jan] Trim composite field values before saving to the backend (<a href="http://bugs.horde.org/ticket/5979">Bug #5979</a>).
 [mjr] Fixed issue where composite fields with 'attribute' value set were not
-      getting set in the backend when being imported via the API. (Bug #5978)
+      getting set in the backend when being imported via the API. (<a href="http://bugs.horde.org/ticket/5978">Bug #5978</a>)
 [mjr] Time object categories are now automatically detected.
 [mjr] Fix issue that caused listTimeObjects API to miss returning objects when
       the date range crosses over into the next year.
-[jan] Improved portability of the upgrade script (Bug #5949).
+[jan] Improved portability of the upgrade script (<a href="http://bugs.horde.org/ticket/5949">Bug #5949</a>).
 [mjr] Added anniversary support to the listTimeObjects API.
 
 
@@ -174,21 +212,21 @@ v2.2-RC2
 v2.2-RC1
 --------
 
-[jan] Fix birthday calculation on years before 1970 with DST (Bug #5791).
+[jan] Fix birthday calculation on years before 1970 with DST (<a href="http://bugs.horde.org/ticket/5791">Bug #5791</a>).
 [jan] Implement WebDAV DELETE.
 [jan] Change default SQL scheme to match with RFC 2426 (vCard 3.0) as closely
       as possible.
 [cjh] Add $matchBegin to the clientSearch API method (duck@obala.net,
       Request #5860).
 [cjh] Avoid variable names that might interfere with function variables in
-      sources.php.dist examples (Bug #5840).
+      sources.php.dist examples (<a href="http://bugs.horde.org/ticket/5840">Bug #5840</a>).
 [jan] Add clientFields() API method.
 [mjr] More efficient fetching of entries when using the listTimeObjects API.
 [jan] Move all Turba-specific hook examples from Horde's config/ directory.
 [cjh] Fix generation of UIDs with PHP 5.2+.
 [cjh] Handle categories when converting to and from vCards
-      (rsalmon@mbpgroup.com, Bug #5648).
-[cjh] Catch searches that seem non-empty but really aren't (Bug #5612).
+      (rsalmon@mbpgroup.com, <a href="http://bugs.horde.org/ticket/5648">Bug #5648</a>).
+[cjh] Catch searches that seem non-empty but really aren't (<a href="http://bugs.horde.org/ticket/5612">Bug #5612</a>).
 [mjr] Fix fatal errors when no share enabled sources are present.
 [mjr] Fix issue with naming new contact lists that was causing database errors,
       missing part of the contact list name, and other oddities.
@@ -199,18 +237,18 @@ v2.2-ALPHA
 ----------
 
 [cjh] Add support for approximate searches, if the underlying backend and Horde
-      code support them (Request #2901).
-[cjh] Add a print link for contacts (Request #2800).
+      code support them (<a href="http://bugs.horde.org/ticket/2901">Request #2901</a>).
+[cjh] Add a print link for contacts (<a href="http://bugs.horde.org/ticket/2800">Request #2800</a>).
 [cjh] Shared Address Books are now stored in a flat namespace so that they
       do not rely on the hierarchical (i.e. DataTree) properties of the
-      Horde_Share API (Bug #4960).
+      Horde_Share API (<a href="http://bugs.horde.org/ticket/4960">Bug #4960</a>).
 [cjh] If names are displayed "Lastname, Firstname", sort composite name
-      fields by lastname (Request #3909).
-[cjh] Show an overlay while running a search (Request #3154).
+      fields by lastname (<a href="http://bugs.horde.org/ticket/3909">Request #3909</a>).
+[cjh] Show an overlay while running a search (<a href="http://bugs.horde.org/ticket/3154">Request #3154</a>).
 [cjh] Add Anniversary, Spouse, and Children fields and support them in
-      vCard import/export (ntai@smartfruit.com, Request #5059).
-[cjh] Add LDIF import/export support (ritaselsky@gmail.com, Request #2506).
-[jan] Provide birthdays as events to external calendars (Request #723).
+      vCard import/export (ntai@smartfruit.com, <a href="http://bugs.horde.org/ticket/5059">Request #5059</a>).
+[cjh] Add LDIF import/export support (ritaselsky@gmail.com, <a href="http://bugs.horde.org/ticket/2506">Request #2506</a>).
+[jan] Provide birthdays as events to external calendars (<a href="http://bugs.horde.org/ticket/723">Request #723</a>).
 [mjr] Add driver to create address books from current user's Horde_Group
       memberships.
 [jan] Allow to search through API for matches at word boundaries only
@@ -220,20 +258,20 @@ v2.2-ALPHA
 [cjh] Support for dereferencing LDAP aliases (aubert@femto-st.fr,
       Request #4532).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [cjh] Support vCard initials and salutation fields if present in the Turba
-      backend (s.heuer@hicom.de, Request #4248).
-[cjh] Don't show empty tabs if a contact does not have a full name (Bug #4243).
+      backend (s.heuer@hicom.de, <a href="http://bugs.horde.org/ticket/4248">Request #4248</a>).
+[cjh] Don't show empty tabs if a contact does not have a full name (<a href="http://bugs.horde.org/ticket/4243">Bug #4243</a>).
 [mjr] Add support for removing user data from backend storage when user is
       removed from Horde.
 [jmf] Sort listings on multiple columns.
 [cjh] Show numeric and alpha pagers at the top of listings, not the bottom
-      (Bug #1312).
-[jan] Add multidomain support for Kolab servers (tokoe@kde.org, Request #3579).
+      (<a href="http://bugs.horde.org/ticket/1312">Bug #1312</a>).
+[jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [jan] Use the same rendering code for contact details in the list views like
       in the contact views.
 [jan] Allow editing of composite fields (horde@olen.net,
-      rkean@keanconsulting.com, Request #2529).
+      rkean@keanconsulting.com, <a href="http://bugs.horde.org/ticket/2529">Request #2529</a>).
 [mjr] IMSP driver now has Horde_Share support.
 [cjh] Add dynamic filtering of lists of contacts.
 [mdj] Add support for split read/write database.
@@ -247,7 +285,7 @@ v2.1.7
 ------
 
 [cjh] SECURITY: Fix unchecked access to contacts in the same SQL table
-      (Bug #6208) (CVE-2008-0807).
+      (<a href="http://bugs.horde.org/ticket/6208">Bug #6208</a>) (CVE-2008-0807).
 
 
 ------
@@ -266,8 +304,8 @@ v2.1.5
 [mjr] Fix adding contacts to a new contact list in a source other than the
       source the contacts being added are from.
 [jan] Fix paging through search results from another than the default address
-      book (Bug #5137).
-[cjh] Fix copy/moving contacts to a new contact list (Bug #5144).
+      book (<a href="http://bugs.horde.org/ticket/5137">Bug #5137</a>).
+[cjh] Fix copy/moving contacts to a new contact list (<a href="http://bugs.horde.org/ticket/5144">Bug #5144</a>).
 
 
 ------
@@ -276,7 +314,7 @@ v2.1.4
 
 [jan] Fix character set encoding of exported vCards.
 [mjr] Fix fatal error when exporting to vCard.
-[cjh] Organize basic search form from left to right (Request #4914).
+[cjh] Organize basic search form from left to right (<a href="http://bugs.horde.org/ticket/4914">Request #4914</a>).
 [jan] Fix links to only show contacts or lists, or both.
 [mjr] Don't remember the lastly selected address book in the session, if it
       was not browseable.
@@ -292,9 +330,9 @@ v2.1.3
 
 [jan] Support departments in vCard's ORG properties (martin@matuska.org,
       Request #4285).
-[cjh] Fix LDAP driver check for whether objects need to be renamed (Bug #4468).
-[jan] Fix generation of mailto: links if IMP is not installed (Bug #4334).
-[jan] Show error message if imported file didn't contain contacts (Bug #4260).
+[cjh] Fix LDAP driver check for whether objects need to be renamed (<a href="http://bugs.horde.org/ticket/4468">Bug #4468</a>).
+[jan] Fix generation of mailto: links if IMP is not installed (<a href="http://bugs.horde.org/ticket/4334">Bug #4334</a>).
+[jan] Show error message if imported file didn't contain contacts (<a href="http://bugs.horde.org/ticket/4260">Bug #4260</a>).
 [jan] Remember the lastly selected address book during the session.
 [jan] Add categories from imported contacts to the user's categories.
 
@@ -308,10 +346,10 @@ v2.1.2
 [cjh] Add documentation for the filter parameter in sources.php.dist and an
       example for retrieving data from two different tables (Manilal K M
       &lt;manilal.krishnapillai@ejyothi.com>).
-[cjh] Centralize code for building RDNs (Request #3966).
+[cjh] Centralize code for building RDNs (<a href="http://bugs.horde.org/ticket/3966">Request #3966</a>).
 [cjh] Pass objects by reference to hooks so modifications can stick (Bug
       #3957).
-[jan] Fix compose links in portal if using compose popups in IMP (Bug #3923).
+[jan] Fix compose links in portal if using compose popups in IMP (<a href="http://bugs.horde.org/ticket/3923">Bug #3923</a>).
 
 
 ------
@@ -319,7 +357,7 @@ v2.1.1
 ------
 
 [cjh] Be consistent in working with lowercase attribute names for the
-      LDAP driver (Bug #2440).
+      LDAP driver (<a href="http://bugs.horde.org/ticket/2440">Bug #2440</a>).
 [mjr] Fix create_default_histories.php and public_to_horde_share.php scripts
       to prevent creation of bogus shares.
 [mjr] Fix create_default_histories.php script to work with shared sources.
@@ -328,9 +366,9 @@ v2.1.1
 [jan] Fix loading of CLI library in the public_to_horde_share.php script.
 [mjr] Fix losing session when editing address books with disabled cookies.
 [cjh] Show the copy/move dropdown any time there is an editable address book
-      that's not the current one (Bug #3588).
+      that's not the current one (<a href="http://bugs.horde.org/ticket/3588">Bug #3588</a>).
 [jan] Don't show warning after dealing with contacts from a non-browseable
-      address book (Bug #3587).
+      address book (<a href="http://bugs.horde.org/ticket/3587">Bug #3587</a>).
 [jan] Fix configuration example for birthday fields.
 
 
@@ -357,14 +395,14 @@ v2.1-RC1
 [jan] Add option to keep name field unformatted (m.zdila@episoftware.com,
       Request #2441).
 [mas] Use summary notifications for contact changes instead of one notice for
-      each change. (Bug #2764)
+      each change. (<a href="http://bugs.horde.org/ticket/2764">Bug #2764</a>)
 [jan] Add CLI script to import vCard data.
 [cjh] Split checking of LDAP field syntax and checking of required fields
-      (tevans@tachometry.com, Bug #2626).
+      (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/2626">Bug #2626</a>).
 [mjr] Horde_Share support added. SQL Driver only for now.
 [cjh] Update objectclasses when saving LDAP entries created by other clients
-      (m.zdila@episoftware.com, Bug #2405).
-[cjh] Charset-aware handling of LDAP DNs (Bug #2395).
+      (m.zdila@episoftware.com, <a href="http://bugs.horde.org/ticket/2405">Bug #2405</a>).
+[cjh] Charset-aware handling of LDAP DNs (<a href="http://bugs.horde.org/ticket/2395">Bug #2395</a>).
 [cjh] Get rid of cached search results entirely, and move more display
       code into Turba_ListView, simplifying a number of different
       codepaths and avoiding servercide when using Advanced Search.
@@ -375,15 +413,15 @@ v2.1-RC1
 [cjh] "readonly" and "admin" source hash entries are deprecated. Permissons
       are set through the Horde Perms UI now.
 [cjh] Avoid adding exact duplicates during import
-      (kevin_myer@iu13.org, Bug #1892).
+      (kevin_myer@iu13.org, <a href="http://bugs.horde.org/ticket/1892">Bug #1892</a>).
 [cjh] Honor the delete confirmation preference when displaying a
-      contact (Bug #1315).
+      contact (<a href="http://bugs.horde.org/ticket/1315">Bug #1315</a>).
 [cjh] If the comments API is available, comments can be attached to
-      contacts (Request #1492).
+      contacts (<a href="http://bugs.horde.org/ticket/1492">Request #1492</a>).
 [cjh] Users can select which address books they wish to use, and in
-      which order they will be displayed (Request #1650).
+      which order they will be displayed (<a href="http://bugs.horde.org/ticket/1650">Request #1650</a>).
 [cjh] Contacts can now be added to lists stored in any address book
-      (Request #1561).
+      (<a href="http://bugs.horde.org/ticket/1561">Request #1561</a>).
 [cjh] Introduce a "browse" setting on sources, seperate from the "export"
       setting, to allow differentiation of browseable and exportable
       sources.
@@ -391,11 +429,11 @@ v2.1-RC1
 [cjh] Add exporting of multiple vCards in one file through the export
       interface (Frank Rosquin &lt;frank.rosquin@gmail.com>).
 [mjr] Added support for adding and deleting IMSP addressbooks via the options
-      interface (Request #1578)
+      interface (<a href="http://bugs.horde.org/ticket/1578">Request #1578</a>)
 [mjr] Show previous search results whenever returning to the search page.
 [cjh] Handle encoding of postalAddress fields to use $ for newlines, going
       either by attributes.php or by the LDAP schema itself (Edward Rudd
-      &lt;eddie@omegaware.com>, Request #2).
+      &lt;eddie@omegaware.com>, <a href="http://bugs.horde.org/ticket/2">Request #2</a>).
 [mjr] Search terms on composite fields are now taken as a space delimited
       list of strings that are each OR'd against each field making up the
       composite field  and then cumulatively AND'd together.
@@ -429,7 +467,7 @@ v2.0.4
       Bug #2623).
 [jan] Fix warnings in columns preference screen.
 [mjr] Check for global IMSP configuration and use if present.
-[mas] Restore BC in searching using SQL driver. (Bug #2419)
+[mas] Restore BC in searching using SQL driver. (<a href="http://bugs.horde.org/ticket/2419">Bug #2419</a>)
 
 
 ------
@@ -448,35 +486,35 @@ v2.0.3-RC1
 [jan] Don't show "Browse" icon and list if no browseable address books exist.
 [jan] Add example how to use a field for Horde's category system.
 [cjh] Allow uid to be used in key generation (especially useful for LDAP
-      backends that want to use uid in the DN) (Bug #2027).
+      backends that want to use uid in the DN) (<a href="http://bugs.horde.org/ticket/2027">Bug #2027</a>).
 [mjr] Fix bug where search results are not displayed when no browseable
       addressbooks exist and bug where the browse attribute is ignored for
       addressbooks that are set as default, allowing a non-browseable
-      addressbook to be browsed (Bug #1959).
-[jan] Import and export of birthdays with vCards (thomas@gelf.net, Bug #1269).
-[jan] Fix mini search portal block with non-ascii search strings (Bug #1605).
+      addressbook to be browsed (<a href="http://bugs.horde.org/ticket/1959">Bug #1959</a>).
+[jan] Import and export of birthdays with vCards (thomas@gelf.net, <a href="http://bugs.horde.org/ticket/1269">Bug #1269</a>).
+[jan] Fix mini search portal block with non-ascii search strings (<a href="http://bugs.horde.org/ticket/1605">Bug #1605</a>).
 [cjh] Add a generic SQL upgrade script, replacing the MySQL-specific
-      version (Bug #1781).
+      version (<a href="http://bugs.horde.org/ticket/1781">Bug #1781</a>).
 [mjr] Use addressbook name as part of cache key to prevent breaking similar
       searches on different IMSP addressbooks.
-[cjh] Use bind variables in the SQL driver (selsky@columbia.edu, Bug #1651).
+[cjh] Use bind variables in the SQL driver (selsky@columbia.edu, <a href="http://bugs.horde.org/ticket/1651">Bug #1651</a>).
 [mjr] Fix API search() method to correctly deal with contacts containing
-      multiple email-type fields (Bug #1284).
-[cjh] Fix _read() for multiple objects in the LDAP driver (Bug #1520).
+      multiple email-type fields (<a href="http://bugs.horde.org/ticket/1284">Bug #1284</a>).
+[cjh] Fix _read() for multiple objects in the LDAP driver (<a href="http://bugs.horde.org/ticket/1520">Bug #1520</a>).
 [mjr] Cache IMSP search results when sending multiple IMSP searchaddress
       commands for the same search.
-[cjh] Show actions at the top and bottom of contact listings (Bug #1458).
+[cjh] Show actions at the top and bottom of contact listings (<a href="http://bugs.horde.org/ticket/1458">Bug #1458</a>).
 [jan] Add shortcut icon (favicon.ico).
 [mjr] Show Contacts and Show Groups links now work correctly with IMSP driver.
 [jan] Don't include names in email fields of distribution lists retrieved
-      through the "search" API method (Bug #1384).
+      through the "search" API method (<a href="http://bugs.horde.org/ticket/1384">Bug #1384</a>).
 
 
 ------
 v2.0.2
 ------
 
-[jan] Fixed warning in browse view (Bug #1363).
+[jan] Fixed warning in browse view (<a href="http://bugs.horde.org/ticket/1363">Bug #1363</a>).
 
 
 ------
@@ -484,13 +522,13 @@ v2.0.1
 ------
 
 [jan] Fixed some javascript errors when clicking on the column headers to
-      resort contact listings (Bug #1313).
-[cjh] Quote LDAP DN entries according to RFC 1485 (Bug #1146).
+      resort contact listings (<a href="http://bugs.horde.org/ticket/1313">Bug #1313</a>).
+[cjh] Quote LDAP DN entries according to RFC 1485 (<a href="http://bugs.horde.org/ticket/1146">Bug #1146</a>).
 [cjh] When importing vCard 3.0 ADR fields, try to build a composite entry for
       workAddress or homeAddress, and keep the street address in workStreet or
-      homeStreet (Bug #1109).
+      homeStreet (<a href="http://bugs.horde.org/ticket/1109">Bug #1109</a>).
 [jan] Implement OR searches in IMSP driver (Michael Rubinsky
-      &lt;mike@theupstairsroom.com>, Bug #1256).
+      &lt;mike@theupstairsroom.com>, <a href="http://bugs.horde.org/ticket/1256">Bug #1256</a>).
 
 
 ----------
@@ -500,10 +538,10 @@ v2.0.1-RC1
 [jan] Create compose links for all email addresses at once in contact listings
       (requires IMP 4.0.2).
 [jan] Open compose windows from the portal's minisearch block in the correct
-      frame (Bug #1293).
+      frame (<a href="http://bugs.horde.org/ticket/1293">Bug #1293</a>).
 [jan] Several performance optimizations.
-[jan] Don't return empty result sets in search API (Bug #1210).
-[cjh] Support TLS connections to LDAP servers (Bug #1149).
+[jan] Don't return empty result sets in search API (<a href="http://bugs.horde.org/ticket/1210">Bug #1210</a>).
+[cjh] Support TLS connections to LDAP servers (<a href="http://bugs.horde.org/ticket/1149">Bug #1149</a>).
 
 
 ----
@@ -522,9 +560,9 @@ v2.0
 v2.0-RC3
 --------
 
-[cjh] Prevent copying/moving of groups (Bug #935).
+[cjh] Prevent copying/moving of groups (<a href="http://bugs.horde.org/ticket/935">Bug #935</a>).
 [cjh] Fix IMSP groups (Michael Rubinsky &lt;mike@theupstairsroom.com>)
-[jan] Fix propagating of monthdayyear fields (Bug #920).
+[jan] Fix propagating of monthdayyear fields (<a href="http://bugs.horde.org/ticket/920">Bug #920</a>).
 [jan] Fix SOAP namespace for API method signatures.
 [cjh] Change to Turba::getMenu(), fixes the menu on the Options screen (Bug
       #898).
@@ -536,10 +574,10 @@ v2.0-RC2
 --------
 
 [cjh] Don't overwrite form data with object defaults when editing if
-      validation fails (Bug #883).
+      validation fails (<a href="http://bugs.horde.org/ticket/883">Bug #883</a>).
 [cjh] Use source permissions if they are present, and if not, fall back to the
-      old source admin array (Bug #853).
-[cjh] Ignore any __-prefixed attribute in building search criteria (Bug #877).
+      old source admin array (<a href="http://bugs.horde.org/ticket/853">Bug #853</a>).
+[cjh] Ignore any __-prefixed attribute in building search criteria (<a href="http://bugs.horde.org/ticket/877">Bug #877</a>).
 
 
 --------
@@ -640,12 +678,12 @@ v1.2.4
 v1.2.3
 ------
 
-[cjh] Check permission when adding and deleting objects (Bug #671).
-[jan] Fix bug in LDAP driver with dn values not being UTF8 encoded (Bug #378).
+[cjh] Check permission when adding and deleting objects (<a href="http://bugs.horde.org/ticket/671">Bug #671</a>).
+[jan] Fix bug in LDAP driver with dn values not being UTF8 encoded (<a href="http://bugs.horde.org/ticket/378">Bug #378</a>).
 [jan] Fix sorting by columns in browse view.
 [cjh] Use prepare/execute in the SQL driver to support large fields on Oracle
       and other databases (Matt Selsky &lt;selsky@columbia.edu>).
-[jan] Don't create distribution list if process gets cancelled (Bug #377).
+[jan] Don't create distribution list if process gets cancelled (<a href="http://bugs.horde.org/ticket/377">Bug #377</a>).
 
 
 ------

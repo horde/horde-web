@@ -1,14 +1,43 @@
 <h1>Changes by Release</h1><pre>
 ----------
-v2.3.2-cvs
+v2.3.5-cvs
 ----------
 
+
+
+
+------
+v2.3.4
+------
+
+[jan] Add and fix Oracle-specific SQL scripts.
+[jan] Fix importing due date attribute from iCalendar (<a href="http://bugs.horde.org/ticket/8644">Bug #8644</a>).
+[jan] Fix charset when exporting tasks to iCalendar 2.0 (<a href="http://bugs.horde.org/ticket/8637">Bug #8637</a>).
+[jan] Add Croatian translation (Matej Vela &lt;matej.vela@carnet.hr>).
+
+
+------
+v2.3.3
+------
+
+[mms] Upgrade prototype.js to v1.6.1.
+[jan] Fix synchronization with output compression enabled (<a href="http://bugs.horde.org/ticket/7769">Bug #7769</a>).
+[jan] Display application name as task list name when listing external tasks.
+[jan] Fix importing vTodo data including more iCalendar components.
+
+
+------
+v2.3.2
+------
+
+[jan] Don't allow to set alarms if no due date has been set.
+[cjh] Work around BC break with Horde versions before 3.2 (<a href="http://bugs.horde.org/ticket/7820">Bug #7820</a>).
 [cjh] Add URL access to tasks by "starts-with" search on the task name.
 [cjh] Add hooks for altering the displayed task description and showing help
       text next to the task description entry field.
 [cjh] Add estimated time to the fields available in the task list.
 [jan] Fix link escaping in notification messages (Alfonso Marín Marín
-      &lt;almarin@um.es>, Bug #7509).
+      &lt;almarin@um.es>, <a href="http://bugs.horde.org/ticket/7509">Bug #7509</a>).
 
 
 ------
@@ -16,7 +45,7 @@ v2.3.1
 ------
 
 [cjh] Add a PostgreSQL-specific upgrade script for 2.2 to 2.3.
-[cjh] Fix fatal error when completing tasks (Bug #7400).
+[cjh] Fix fatal error when completing tasks (<a href="http://bugs.horde.org/ticket/7400">Bug #7400</a>).
 [mms] Upgrade prototype.js to v1.6.0.3.
 
 
@@ -24,31 +53,32 @@ v2.3.1
 v2.3
 ----
 
-[jan] Change group field in shares table to work with LDAP groups (Bug #6883).
-[jan] Log completion date if adding a completed task (Bug #7275).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
+[jan] Log completion date if adding a completed task (<a href="http://bugs.horde.org/ticket/7275">Bug #7275</a>).
 [jan] Fix user name conversion with user hooks in the task list panel
-      (Bug #7366).
+      (<a href="http://bugs.horde.org/ticket/7366">Bug #7366</a>).
 [jan] Fix displayed WebDAV subscription URLs in the task list manager.
+
 
 --------
 v2.3-RC1
 --------
 
-[jan] Log moving of tasks in the history backend (Bug #3207).
-[jan] Fix deleting all tasks over WebDAV (Bug #7004).
+[jan] Log moving of tasks in the history backend (<a href="http://bugs.horde.org/ticket/3207">Bug #3207</a>).
+[jan] Fix deleting all tasks over WebDAV (<a href="http://bugs.horde.org/ticket/7004">Bug #7004</a>).
 [jan] Add Estonian translation (Alar Sing &lt;alar.sing@err.ee>).
 [jan] Send a more detailed notification message and use the recipient's
       preferred language and date/time format after a task has changed.
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [jan] Fix task relationship getting lost when importing tasks
-      (tkrah@fachschaft.imn.htwk-leipzig.de, bb.apc.ag, Bug #6770).
+      (tkrah@fachschaft.imn.htwk-leipzig.de, bb.apc.ag, <a href="http://bugs.horde.org/ticket/6770">Bug #6770</a>).
 [jan] Add preference to set columns for the list view.
 [jan] Allow to set task assignee.
 [jan] Add options to export screen for choosing task lists and task states.
 [mjr] Remove user permissions on all shares when deleting a user.
 [mjr] Fix issue with removeUserData api that caused the deleted user's task list
-      to not be deleted.
+      to not be deleted (<a href="http://bugs.horde.org/ticket/6969">Bug #6969</a>).
 
 
 ----
@@ -56,9 +86,9 @@ v2.2
 ----
 
 [cjh] Improve resource usage in datatree_to_sql share migration script
-      (Bug #6740).
+      (<a href="http://bugs.horde.org/ticket/6740">Bug #6740</a>).
 [jan] Allow to import all fields that can be exported.
-[cjh] Fix displayed WebDAV subscription URLs in the panel (Bug #6709).
+[cjh] Fix displayed WebDAV subscription URLs in the panel (<a href="http://bugs.horde.org/ticket/6709">Bug #6709</a>).
 
 
 --------
@@ -66,13 +96,13 @@ v2.2-RC3
 --------
 
 [bak] Move tasklists into per-owner subdirectories when viewed through WebDAV.
-      (Request #6595)
+      (<a href="http://bugs.horde.org/ticket/6595">Request #6595</a>)
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
-      (Request #6590).
-[cjh] Add an upgrade script for the new SQL share driver (Request #6109).
+      (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
+[cjh] Add an upgrade script for the new SQL share driver (<a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
 [jan] Correctly determine default task list in the API (SyncML, WebDAV).
 [cjh] Show who created or made the last change to a task along with the date
-      (Request #6305).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
 
@@ -83,7 +113,7 @@ v2.2-RC2
 [jan] SECURITY: Fix privilege escalation in Horde API.
 [cjh] SECURITY: Fix missing ownership validation on share changes.
 [cjh] Fix sorting tasks by Task list.
-[jan] Fix tasks losing their parent task when being completed (Bug #6035).
+[jan] Fix tasks losing their parent task when being completed (<a href="http://bugs.horde.org/ticket/6035">Bug #6035</a>).
 [cjh] Add the ability to filter the list of task lists in the panel.
 [cjh] New share management UI that doesn't require JavaScript.
 [jan] Fix 2006-04-18_add_creator_and_assignee_fields.php upgrade script.
@@ -107,7 +137,7 @@ v2.2-ALPHA
 [cjh] Add preferences for turning due dates on by default, setting the
       default due date's number of days in the future, and setting the
       default due date's time.
-[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, Bug #4851).
+[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, <a href="http://bugs.horde.org/ticket/4851">Bug #4851</a>).
 [jan] Add sub-tasks.
 [jan] Add start dates for tasks.
 [jan] Add support for the Horde_Alarm framework (requires Horde 3.2).
@@ -115,17 +145,17 @@ v2.2-ALPHA
       for the full search and a direct link to full search if javascript
       is unavailable.
 [cjh] Allow explicitly searching All, Incomplete, or Completed tasks
-      (Request #4222).
+      (<a href="http://bugs.horde.org/ticket/4222">Request #4222</a>).
 [cjh] Allow configuring the tasklists that the task summary block shows,
       and let the user set a title for the block to differentiate multiple
-      instances (Request #2388).
-[cjh] Show task description tooltips in the task summary block (Request #3444).
+      instances (<a href="http://bugs.horde.org/ticket/2388">Request #2388</a>).
+[cjh] Show task description tooltips in the task summary block (<a href="http://bugs.horde.org/ticket/3444">Request #3444</a>).
 [cjh] Store completion date and add history entries for task completion.
 [cjh] Move tasklist selection/deselection to a collapsible panel.
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [cjh] Allow using the checkboxes to mark tasks as incomplete as well
-      as complete (michael.sheldon@credativ.de, Request #4250).
+      as complete (michael.sheldon@credativ.de, <a href="http://bugs.horde.org/ticket/4250">Request #4250</a>).
 [cjh] Sort date fields correctly with JS table sorting.
 [jan] Add private flag.
 [jan] Add a field for estimated time being spent on a task.
@@ -159,7 +189,7 @@ v2.1.2
 [jan] Add categories from imported contacts to the user's categories.
 [jan] Fix import of CSV data.
 [jan] Add Slovenian translation (Duck &lt;duck@obala.net>).
-[jan] Show personal tasklist by default with disabled preferences (Bug #4078).
+[jan] Show personal tasklist by default with disabled preferences (<a href="http://bugs.horde.org/ticket/4078">Bug #4078</a>).
 
 
 ------
@@ -167,10 +197,10 @@ v2.1.1
 ------
 
 [jan] Only load completed/incomplete tasks from backend where sufficient
-      (Request #2387).
-[jan] Don't show tooltips for tasks without read permissions (Bug #3836).
+      (<a href="http://bugs.horde.org/ticket/2387">Request #2387</a>).
+[jan] Don't show tooltips for tasks without read permissions (<a href="http://bugs.horde.org/ticket/3836">Bug #3836</a>).
 [jan] Fix fatal error when dealing with very old tasks that don't have a UID
-      yet (Bug #3818).
+      yet (<a href="http://bugs.horde.org/ticket/3818">Bug #3818</a>).
 [jan] Add 1.1 to 2.x upgrade script for Oracle.
 
 
@@ -190,21 +220,21 @@ v2.1-RC1
 [jan] Add preference to send email notifications to users when tasks have
       been added, edited, or deleted in their calendars (kevin_myer@iu13.org,
       Request #2332).
-[jan] Confirm task deletions (Request #1155).
+[jan] Confirm task deletions (<a href="http://bugs.horde.org/ticket/1155">Request #1155</a>).
 [jan] Add CLI script to import vTodo data.
 [cjh] Add support for dynamic re-sorting of the task list, including saving
       the sort preferences on any changes.
 [cjh] Deprecate the DataTree tasks driver.
 [cjh] Make the completed checkbox in task view functional
-      (martin@mein-horde.de, Bug #2157).
+      (martin@mein-horde.de, <a href="http://bugs.horde.org/ticket/2157">Bug #2157</a>).
 [mas] Change any output of &lt;b> and &lt;i> tags to &lt;strong> and &lt;em> for better
       accessibility support.
 [jan] Add permissions to restrict number of tasks.
-[jan] Add print view to task list (kevin_myer@iu13.org, Bug #1875).
+[jan] Add print view to task list (kevin_myer@iu13.org, <a href="http://bugs.horde.org/ticket/1875">Bug #1875</a>).
 [cjh] Add ics.php, which can be used for integration with Sunbird,
       iCal, et. al.
 [jan] Show category colors in portal block (Brandon Knitter
-      &lt;knitterb@blandsite.org>, Bug #1126).
+      &lt;knitterb@blandsite.org>, <a href="http://bugs.horde.org/ticket/1126">Bug #1126</a>).
 
 
 ------
@@ -225,13 +255,13 @@ v2.0.3
 v2.0.2
 ------
 
-[cjh] Add a PostgreSQL upgrade script (Bug #1780).
-[cjh] Use bind variables in the SQL driver (selsky@columbia.edu, Bug #1681).
+[cjh] Add a PostgreSQL upgrade script (<a href="http://bugs.horde.org/ticket/1780">Bug #1780</a>).
+[cjh] Use bind variables in the SQL driver (selsky@columbia.edu, <a href="http://bugs.horde.org/ticket/1681">Bug #1681</a>).
 [cjh] Fix problem where you couldn't select any tasklists once you'd
       deselected all of them.
 [jan] Add shortcut icon (favicon.ico).
 [jan] Fix warnings if no tasks to export exist.
-[jan] Fix CSV imports (Bug #1387).
+[jan] Fix CSV imports (<a href="http://bugs.horde.org/ticket/1387">Bug #1387</a>).
 [cjh] Allow hiding the Task List column in the List view.
 
 
@@ -240,10 +270,10 @@ v2.0.1
 ------
 
 [jan] Allow to select the "Unfiled" category in the portal block (Mathieu
-      Clabaut &lt;mathieu.clabaut@free.fr>, Bug #1237).
+      Clabaut &lt;mathieu.clabaut@free.fr>, <a href="http://bugs.horde.org/ticket/1237">Bug #1237</a>).
 [cjh] Don't highlight the New Task menu item when editing tasks.
 [cjh] Use a checkbox for editing completed/incomplete in the task
-      edit view, to match the list view (Bug #1212).
+      edit view, to match the list view (<a href="http://bugs.horde.org/ticket/1212">Bug #1212</a>).
 [jan] Fix print button.
 [jan] Add Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
 
@@ -341,7 +371,7 @@ v1.1.2
 
 [jan] Add Polish translation (Piotr Kuczynski &lt;pkuczynski@hypode.pl>).
 [cjh] Fix changing of task attributes that have not been set previously
-      (rvs@angara.ru, Bug #569).
+      (rvs@angara.ru, <a href="http://bugs.horde.org/ticket/569">Bug #569</a>).
 
 
 ------

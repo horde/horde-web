@@ -1,28 +1,40 @@
 <h1>Changes by Release</h1><pre>
---------
-v1.1-cvs
---------
+----------
+v1.1.1-cvs
+----------
 
-[mjr] Fix issue with uploading images to galleries in `Browse by Date` mode
-      causing the mode to be reset to `Normal`.
+[mjr] Properly url encode and escape html when processing tags.
+[mjr] Protect against divide-by-zero errors (<a href="http://bugs.horde.org/ticket/8761">Bug #8761</a>).
+[jan] Fix invalid class name in block for recently geotagged images.
+
+
+----
+v1.1
+----
+
+[mjr] Fix a bug that caused a SQL error on some RDBMS (<a href="http://bugs.horde.org/ticket/8610">Bug #8610</a>).
+[mjr] Add autocompletion for tags.
+[mjr] Fix issue with uploading images to galleries in "Browse by Date" mode
+      causing the mode to be reset to "Normal".
 [mjr] Return to the previously viewed page number when manually selecting
-      face ranges (Bug: 8402).
+      face ranges (<a href="http://bugs.horde.org/ticket/8402">Bug #8402</a>).
 [mjr] Significantly reduce the number of javascript errors due to IE issues.
 [mjr] Allow the addition of geolocation data on images that do not contain any
       and allow the relocating of images that do have the data.
-[mjr] Fix display of EXIF date values (Bug: 8352).
+[mjr] Fix display of EXIF date values (<a href="http://bugs.horde.org/ticket/8352">Bug #8352</a>).
 [mjr] Display a Google Map with thumbnail markers for image location(s) if
       location data is available.
 [mjr] Add configuration switch to disallow querying the preference backend for
-      other user's identities and preferences (Bug: 8269).
+      other user's identities and preferences (<a href="http://bugs.horde.org/ticket/8269">Bug #8269</a>).
 [mjr] Remove broken implementation of the 'numlimit' configuration option
-      (See Bug: 8139).
+      (<a href="http://bugs.horde.org/ticket/8139">Bug #8139</a>).
 [jan] Fix icon URLs if cookies are turned off.
 [jan] Fix ansel_shares table definition for PostgreSQL.
 [mjr] Fix issue that caused screen image creation to fail when using gd
       Horde_Image driver.
 [mjr] Fix issue with screen images being generated as PNGs if not using VFS
       Direct serving.
+
 
 ----
 v1.0
@@ -35,17 +47,18 @@ v1.0
 [mjr] Allow embedding screen size images in external sites as well.
 [mjr] Add configuration parameter to require a minimum number of
       images to be present in a gallery before it's displayed in a
-      gallery list. (Duck &lt;duck@obala.net>, Request # 7949)
+      gallery list. (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/">Request#</a> 7949)
 [mjr] Add a Link widget to the Image View.
 [mjr] Correct some undefined variable warnings. (Duck &lt;duck@obala.net>)
 [mjr] Fix default parameters for the ansel tag cloud.
+
 
 --------
 v1.0-RC1
 --------
 
 [jan] Add Turkish translation (Akif Dinc &lt;akif@dinc.org>).
-[jan] Change group field in shares table to work with LDAP groups (Bug #6883).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
 [jan] Add WebDAV interface.
 [jan] Add Japanese translation (Takeshi Taguchi &lt;taguchi@tcltk.jp>).
 [mjr] The xppublish feature now uses the correct (not temporary) filenames.
@@ -68,11 +81,11 @@ v1.0-RC1
 [cjh] Move images from the DataTree to their own SQL table.
 [jan] Add Slovenian translation (Duck &lt;duck@obala.net>).
 [mjr] Add an addGallery() method to the external api.
-[cjh] Integrate slideshow and image views (Bug #3785).
+[cjh] Integrate slideshow and image views (<a href="http://bugs.horde.org/ticket/3785">Bug #3785</a>).
 [cjh] Add creation of subgalleries, setting gallery owners, and setting image
-      captions to the ansel.php CLI (dorm@dorm.org, Request #3986).
+      captions to the ansel.php CLI (dorm@dorm.org, <a href="http://bugs.horde.org/ticket/3986">Request #3986</a>).
 [cjh] Implement drag-and-drop sorting of images.
-[mas] Fix undefined index warning if no galleries are defined (Bug #2172).
+[mas] Fix undefined index warning if no galleries are defined (<a href="http://bugs.horde.org/ticket/2172">Bug #2172</a>).
 [jan] Add Swedish translation (Andreas Dahlén &lt;andreas@dahlen.ws>).
 [jan] Add Finnish translation (Leena Heino &lt;liinu@uta.fi>).
 [jan] Add Lithuanian translation (Vilius Sumskas &lt;vilius@lnk.lt>).

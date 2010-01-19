@@ -1,31 +1,72 @@
 <h1>Changes by Release</h1><pre>
 ----------
-v3.1-cvs
+v3.1.3-cvs
 ----------
 
+[jan] Fix PHP error when changing passwords with LDAP driver (<a href="http://bugs.horde.org/ticket/8686">Bug #8686</a>).
+
+
+------
+v3.1.2
+------
+
+[jan] Enable output compression (horde@albasoft.com, <a href="http://bugs.horde.org/ticket/8649">Bug #8649</a>).
+[jan] Add Croatian translation (Valentin Vidic &lt;valentin.vidic@carnet.hr>).
+[jan] Add option to configure referrals for LDAP driver (manilal@ejyothi.com,
+      Request #8582).
+[jan] Simplify and fix smbldap driver (<a href="http://bugs.horde.org/ticket/8192">Bug #8192</a>).
+
+
+------
+v3.1.1
+------
+
+[cjh] SECURITY: Fix XSS when specifying an invalid backend key
+      (security@davidwharton.us, #8398).
+[jan] Add hook that's called after successfully changing the password.
+[jan] Add SOAP driver.
+[jan] Add example configuration for Postfix Admin (Michael Brennen
+      &lt;michael@fishnet.us>).
+[jan] Fix binding to LDAP server if using the userdn hook.
+
+
+----
+v3.1
+----
+
+[cjh] Fix bad mode for STDERR in the procopen driver
+      (info@opensolutions.net, <a href="http://bugs.horde.org/ticket/8022">Bug #8022</a>).
+
+
+--------
+v3.1-RC2
+--------
+
+[cjh] Don't include the old password in LDAP driver error messages
+      (Joffrey van Wageningen &lt;joffrey-horde@coolhaven.info>).
+
+
+--------
+v3.1-RC1
+--------
+
 [cjh] Add missing enforcement of minSymbol password policy
-      (yann@pleiades.fr.eu.org, Bug #7260).
+      (yann@pleiades.fr.eu.org, <a href="http://bugs.horde.org/ticket/7260">Bug #7260</a>).
 [cjh] Only update smbldap attributes for Samba users, and update all attributes
-      at once instead of one at a time (marco@csita.unige.it, Request #5977).
+      at once instead of one at a time (marco@csita.unige.it, <a href="http://bugs.horde.org/ticket/5977">Request #5977</a>).
 [cjh] Don't set smbldap attributes that are commented out in the config
-      (fabio.pedretti@ing.unibs.it, Request #5937).
+      (fabio.pedretti@ing.unibs.it, <a href="http://bugs.horde.org/ticket/5937">Request #5937</a>).
 [jan] Move all Passwd-specific hook examples from Horde's config/ directory.
 [cjh] Add support for switching between encryption schemes
-      (ulrich-horde@topfen.net, Request #2865).
+      (ulrich-horde@topfen.net, <a href="http://bugs.horde.org/ticket/2865">Request #2865</a>).
 [jan] Add support for sudo to the example expect script (Dennis Voetelink
-      &lt;voetelink@ecn.nl>, Request #5300).
+      &lt;voetelink@ecn.nl>, <a href="http://bugs.horde.org/ticket/5300">Request #5300</a>).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [jan] Add new expect driver that uses the expect PECL PHP extension (Duck
       &lt;duck@obala.net>).
 [mjr] Add new http driver for changing passwords via an existing web form.
 [mjr] Pass reference to driver to the _passwd_hook_username call. 
-
-
-----------
-v3.0.2-cvs
-----------
-
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
 
@@ -34,19 +75,19 @@ v3.0.1
 ------
 
 [jan] Add placeholders for domain and username parts to SQL driver queries
-      (Vilius Sumskas &lt;vilius@lnk.lt>, Request #4985).
-[jan] Improve error checking in poppassd driver (Bug #4505,
+      (Vilius Sumskas &lt;vilius@lnk.lt>, <a href="http://bugs.horde.org/ticket/4985">Request #4985</a>).
+[jan] Improve error checking in poppassd driver (<a href="http://bugs.horde.org/ticket/4505">Bug #4505</a>,
       horde@koornneef.net).
 [jan] Add Slovenian translation (Duck &lt;duck@obala.net>).
 [jan] Compare hashing algorithms in passwords case insensitively
-      (andreas@altroot.de, Bug #2708).
+      (andreas@altroot.de, <a href="http://bugs.horde.org/ticket/2708">Bug #2708</a>).
 [jan] Allow password changing for special Kolab users (mzizka@hotmail.com,
       Request #4128).
 [jan] Add Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
 [ben] Better support for MS-SQL
 [cjh] Add support in the expect driver for rssh, scponly, and other programs
       that can execute certain commands over ssh without providing a prompt
-      (Request #2887).
+      (<a href="http://bugs.horde.org/ticket/2887">Request #2887</a>).
 
 
 ----
@@ -63,23 +104,23 @@ v3.0-RC1
 --------
 
 [jan] Extend the expect script to allow setups with passwd as the login shell
-      (Request #2550, Lionel Elie Mamane &lt;lmamane@debian.org>).
-[jan] Don't bind to LDAP anonymously if binding with userdn fails (Bug #2502).
+      (<a href="http://bugs.horde.org/ticket/2550">Request #2550</a>, Lionel Elie Mamane &lt;lmamane@debian.org>).
+[jan] Don't bind to LDAP anonymously if binding with userdn fails (<a href="http://bugs.horde.org/ticket/2502">Bug #2502</a>).
 [cjh] Fix updating shadowlastchange attribute in ldap driver (Roel Gloudemans
       &lt;roel@gloudemans.info>).
 [jan] Extend the smbldap driver from the ldap driver to support all parameters
-      of the ldap driver (Request #2499).
+      of the ldap driver (<a href="http://bugs.horde.org/ticket/2499">Request #2499</a>).
 
 
 ---------
 v3.0-BETA
 ---------
 
-[cjh] Use Crypt_CHAP to generate smbldap passwords (Bug #1223).
+[cjh] Use Crypt_CHAP to generate smbldap passwords (<a href="http://bugs.horde.org/ticket/1223">Bug #1223</a>).
 [stb] Add Kolab driver.
-[cjh] Allow using admin credentials in the LDAP driver (Bug #1409).
-[cjh] Use bind variables in SQL drivers (selsky@columbia.edu, Bug #1718).
-[cjh] Allow the list of refused usernames to be empty (Bug #1544).
+[cjh] Allow using admin credentials in the LDAP driver (<a href="http://bugs.horde.org/ticket/1409">Bug #1409</a>).
+[cjh] Use bind variables in SQL drivers (selsky@columbia.edu, <a href="http://bugs.horde.org/ticket/1718">Bug #1718</a>).
+[cjh] Allow the list of refused usernames to be empty (<a href="http://bugs.horde.org/ticket/1544">Bug #1544</a>).
 [cjh] If $conf['user']['change'] is false, don't trust form input for
       the userid.
 [jan] Add Catalan translation (Joan Jorba Calsina &lt;joan.jorba@rusc.net>).
