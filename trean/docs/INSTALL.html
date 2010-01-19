@@ -1,0 +1,136 @@
+<div class="document" id="installing-trean-0-1">
+<h1 class="title">Installing Trean 0.1</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2007-06-19</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.11</td></tr>
+</tbody>
+</table>
+<p>This document contains instructions for installing the Trean web-based
+bookmarks application on your system.</p>
+<p>For information on the capabilities and features of Trean, see the
+file <a class="reference" href="?f=README.html">README</a> in the top-level directory of the Trean distribution.</p>
+<div class="section">
+<h1><a id="obtaining-trean" name="obtaining-trean">Obtaining Trean</a></h1>
+<p>Trean can be obtained from the Horde website and FTP server, at</p>
+<blockquote>
+<p><a class="reference" href="http://www.horde.org/trean/">http://www.horde.org/trean/</a></p>
+<p><a class="reference" href="ftp://ftp.horde.org/pub/trean/">ftp://ftp.horde.org/pub/trean/</a></p>
+</blockquote>
+<p>Or use the mirror closest to you:</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
+<p>Bleeding-edge development versions of Trean are available via CVS; see the
+file <a class="reference" href="../../horde/docs/?f=HACKING.html">horde/docs/HACKING</a>, or the website <a class="reference" href="http://www.horde.org/source/">http://www.horde.org/source/</a>, for
+information on accessing the Horde CVS repository.</p>
+</div>
+<div class="section">
+<h1><a id="prerequisites" name="prerequisites">Prerequisites</a></h1>
+<p>To function properly, Trean <strong>requires</strong> the following:</p>
+<ol class="arabic">
+<li><p class="first">A working Horde installation.</p>
+<p>Trean runs within the <a class="reference" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+for web applications written in PHP.  You must install Horde before
+installing Trean.</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Trean requires version 3.2+ of the Horde Framework -
+earlier versions of Horde will <strong>not</strong> work.</p>
+</div>
+<p>The Horde Framework can be obtained from the Horde website and FTP server,
+at</p>
+<blockquote>
+<p><a class="reference" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
+<p><a class="reference" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
+</blockquote>
+<p>Many of Trean's prerequisites are also Horde prerequisites.</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Be sure to have completed all of the steps in the
+<a class="reference" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
+installing Trean.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="section">
+<h1><a id="configuring-trean" name="configuring-trean">Configuring Trean</a></h1>
+<ol class="arabic">
+<li><p class="first">Configuring Horde for Trean</p>
+<ol class="loweralpha">
+<li><p class="first">Register the application</p>
+<p>In <tt class="docutils literal"><span class="pre">horde/config/registry.php</span></tt>, find the applications['trean'] stanza.
+The 'status' parameter must be marked '=&gt; active'.  If you have changed
+the location of Trean relative to Horde, either in the URL, in the
+filesystem or both, you must update the <tt class="docutils literal"><span class="pre">fileroot</span></tt> and <tt class="docutils literal"><span class="pre">webroot</span></tt>
+settings to their correct values.</p>
+</li>
+<li><p class="first">Configuring a DataTree backend</p>
+<p>Trean requires a permanent <tt class="docutils literal"><span class="pre">DataTree</span></tt> backend in Horde to manage
+bookmarks.  If you didn't setup a DataTree backend yet, go to the
+configuration interface, select Horde from the list of applications and
+select a driver different than <tt class="docutils literal"><span class="pre">None</span></tt> on the <tt class="docutils literal"><span class="pre">DataTree</span> <span class="pre">System</span></tt> tab.
+Make sure that you ran the necessary scripts to create a storage backend
+for the DataTree system, e.g. one of the <tt class="docutils literal"><span class="pre">create.*.sql</span></tt> or
+<tt class="docutils literal"><span class="pre">horde_datatree.*.sql</span></tt> SQL scripts in <tt class="docutils literal"><span class="pre">horde/scripts/sql/</span></tt>.  You
+should have done this already during the installation of Horde.</p>
+</li>
+</ol>
+</li>
+<li><p class="first">Configuring Trean</p>
+<p>To configure Trean, you must login to Horde as a Horde Administrator.  Use
+the Horde <tt class="docutils literal"><span class="pre">Administration</span></tt> menu item to get to the administration page,
+and then click on the <tt class="docutils literal"><span class="pre">Configuration</span></tt> icon to get the configuration page.
+Select <tt class="docutils literal"><span class="pre">Bookmarks</span></tt> from the selection list of applications, and click on
+the <tt class="docutils literal"><span class="pre">Configure</span></tt> button.  Fill in or change any configuration values as
+needed.  When done click on <tt class="docutils literal"><span class="pre">Generate</span> <span class="pre">Bookmarks</span> <span class="pre">Configuration</span></tt> to
+generate the <tt class="docutils literal"><span class="pre">conf.php</span></tt> file.  If your web server doesn't have write
+permissions to the Trean configuration directory or file, it will not be
+able to write the file.  In this case, go back to <tt class="docutils literal"><span class="pre">Configuration</span></tt> and
+choose one of the other methods to create the configuration file
+<tt class="docutils literal"><span class="pre">trean/config/conf.php</span></tt>.</p>
+<p>Note for international users: Trean uses GNU gettext to provide local
+translations of text displayed by applications; the translations are found
+in the <tt class="docutils literal"><span class="pre">po/</span></tt> directory.  If a translation is not yet available for your
+locale (and you wish to create one), or if you're having trouble using a
+provided translation, please see the <a class="reference" href="../../horde/docs/?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for
+instructions.</p>
+</li>
+<li><p class="first">Testing</p>
+<blockquote>
+<p>It needs lots so just start playing.</p>
+</blockquote>
+</li>
+</ol>
+</div>
+<div class="section">
+<h1><a id="obtaining-support" name="obtaining-support">Obtaining Support</a></h1>
+<p>If you encounter problems with Trean, help is available!</p>
+<p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<p>The Horde Project runs a number of mailing lists, for individual applications
+and for issues relating to the project as a whole.  Information, archives, and
+subscription information can be found at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<p>Lastly, Horde developers, contributors and users may also be found on IRC,
+on the channel #horde on the Freenode Network (irc.freenode.net).</p>
+<p>Please keep in mind that Trean is free software written by volunteers.  For
+information on reasonable support expectations, please read</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<p>Thanks for using Trean!</p>
+<p>The Trean team</p>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference" href="http://cvs.horde.org/co.php/trean/docs/INSTALL?onb=FRAMEWORK_3">View document source</a>.
+Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+
+</div>
