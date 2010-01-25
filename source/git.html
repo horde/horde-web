@@ -256,7 +256,7 @@ git push
 </code>
 
 <p>Note that if you look at the history in a tool such as gitk or gitx, you will
-see duplicate commits from master. This is normal and is the desired behaviour.
+see the same commits from master. This is normal and is the desired behaviour.
 When it is time to merge the branch into master, the following steps will merge
 the branches, and cause git to ignore the duplicates:</p>
 
@@ -265,6 +265,17 @@ git checkout master <br />
 git merge [topic] <br />
 git pull --rebase <br />
 git push
+</code>
+
+<p>During a long-lived branch, you will find yourself having to resolve the same
+conflicts over and over again. The git tool <em>git-rerere</em> is designed to
+help alleviate this issue. Once it is enabled, it will
+<strong>automatically</strong> take note of each conflict, and it's eventual
+resolution. Next time git comes across the exact same conflict, it will
+know on it's own how to resolve it. To use this feature you must explicitly
+enable it:</p>
+<code>
+    git config --global rerere.enabled 1
 </code>
 
 <p>To delete the remote branch, issue this command:</p>
