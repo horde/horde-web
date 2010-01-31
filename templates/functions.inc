@@ -382,6 +382,7 @@ function print_toolbar()
 </form>
 <p><a href="http://www.easydns.com/?V=55611cf92a7e0842"><img src="<?php echo $base_url ?>/graphics/logos/easyDNS.gif" alt="easyDNS" width="88" height="31" /></a></p>
 <p><a href="http://www.hub.org/?a_aid=horde&amp;a_bid=11110002"><img src="<?php echo $base_url ?>/graphics/logos/hub.org.gif" alt="hub.org" /></a></p>
+<p><a href="http://www.verendus.com"><img src="<?php echo $base_url ?>/graphics/logos/verendus.jpg" alt="Verendus" /></a></p>
 
 <div style="margin: 8px; font-family:arial; font-size:10px"><a href="http://www.hostdepartment.com/" target="_blank">Project supported by Host Department Web Hosting</a></div>
 </div>
