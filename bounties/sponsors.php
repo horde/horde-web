@@ -71,8 +71,8 @@ $sponsors = array(
         'sponsor' => 'Lapworld',
         'link'    => 'www.lapworld.de',
         'contact' => 'info@lapworld.de',
-        'start'   => '2009-12-30',
-        'end'     => '2010-07-01',
+        'start'   => '2010-02-03',
+        'end'     => '2010-08-04',
         'months'  => 6,
     ),
 );
