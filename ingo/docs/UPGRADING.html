@@ -1,1 +1,88 @@
+<div class="document" id="upgrading-ingo">
+<h1 class="title">Upgrading Ingo</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2008-12-20</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.1.2.12</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference" href="mailto:ingo&#64;lists.horde.org">ingo&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<p>These are instructions to upgrade from earlier Ingo versions. Please
+backup your existing data before running any of the steps described below.</p>
+<div class="section">
+<h1><a id="upgrading-ingo-from-1-2-1-to-1-2-2" name="upgrading-ingo-from-1-2-1-to-1-2-2">Upgrading Ingo From 1.2.1 To 1.2.2</a></h1>
+<p>The group_uid field in the SQL share driver groups table has been changed from
+an INT to a VARCHAR(255). Execute the provided SQL script to update your
+database if you are using the native SQL share driver.</p>
+<blockquote>
+mysql --user=root --password=&lt;MySQL-root-password&gt;  &lt;db name&gt; &lt; 1.2.1_to_1.2.2.sql</blockquote>
+</div>
+<div class="section">
+<h1><a id="upgrading-ingo-from-1-2-to-1-2-1" name="upgrading-ingo-from-1-2-to-1-2-1">Upgrading Ingo From 1.2 To 1.2.1</a></h1>
+<p>The share_owner field in the SQL share driver table has been changed from a
+VARCHAR(32) to a VARCHAR(255). Execute the provided SQL script to update your
+database if you are using the native SQL share driver.</p>
+<blockquote>
+mysql --user=root --password=&lt;MySQL-root-password&gt;  &lt;db name&gt; &lt; 1.2_to_1.2.1.sql</blockquote>
+</div>
+<div class="section">
+<h1><a id="upgrading-ingo-from-1-1-x-to-1-2" name="upgrading-ingo-from-1-1-x-to-1-2">Upgrading Ingo From 1.1.x To 1.2</a></h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between Ingo
+version 1.1.x and 1.2.x.</p>
+<div class="section">
+<h2><a id="sql-backend" name="sql-backend">SQL Backend</a></h2>
+<p>An SQL table has been added than can optionally be used as a storage backend
+for the filter rules. Using this backend no longer limits the number and size
+of rules.</p>
+<p>Execute the provided SQL script to add the table to your database, e.g.:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; scripts/sql/ingo.sql
+</pre>
+<p>You also have to execute the provided PHP script to migrate the existing rules
+from the preferences backend to the new database table:</p>
+<pre class="literal-block">
+php scripts/upgrades/convert_prefs_to_sql.php &lt; filename
+</pre>
+<p><tt class="docutils literal"><span class="pre">filename</span></tt> is a file that contains a list of users, one username per line.
+The username should be the same as how the preferences are stored in the
+preferences backend (e.g. usernames may have to be in the form
+<a class="reference" href="mailto:user&#64;example.com">user&#64;example.com</a>). You can create such a list with the following MySQL
+command:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; --skip-column-names --batch --execute='SELECT DISTINCT pref_uid FROM horde_prefs' &lt;db name&gt;
+</pre>
+</div>
+<div class="section">
+<h2><a id="new-beta-sql-share-driver-support" name="new-beta-sql-share-driver-support">New Beta SQL Share Driver Support</a></h2>
+<p>A new beta-level SQL Horde_Share driver has been added in Horde 3.2. This driver
+offers significant performance improvements over the existing Datatree driver,
+but it has not received the same level of testing, thus the beta designation.
+In order to make use of this driver, you must be using Horde 3.2-RC3 or
+later. To migrate your existing share data, run
+<tt class="docutils literal"><span class="pre">convert_datatree_shares_to_sql.php</span></tt>.  Be sure to read the entry above and create
+the new SQL tables before running the migration script.</p>
+</div>
+</div>
+<div class="section">
+<h1><a id="upgrading-ingo-from-1-0-x-to-1-1-x" name="upgrading-ingo-from-1-0-x-to-1-1-x">Upgrading Ingo From 1.0.x To 1.1.x</a></h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between Ingo
+version 1.0.x and 1.1.x.</p>
+<div class="section">
+<h2><a id="backends-parameter-changes-procmail-driver" name="backends-parameter-changes-procmail-driver">Backends parameter changes - procmail driver</a></h2>
+<p>In <tt class="docutils literal"><span class="pre">config/backends.php</span></tt>, the <tt class="docutils literal"><span class="pre">procmailrc</span></tt> parameter in the procmail
+entry has been deprecated.  It has been replaced by the <tt class="docutils literal"><span class="pre">filename</span></tt>
+parameter.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference" href="http://cvs.horde.org/co.php/ingo/docs/UPGRADING?onb=FRAMEWORK_3">View document source</a>.
+Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
 
+</div>
