@@ -44,14 +44,6 @@ $sponsors = array(
         'months'  => 12,
     ),
     array(
-        'sponsor' => 'PortableComponentsForAll',
-        'link'    => 'www.portablecomponentsforall.com',
-        'contact' => 'info@iqsoftware.biz',
-        'start'   => '2009-12-10',
-        'end'     => '2010-02-11',
-        'months'  => 2,
-    ),
-    array(
         'sponsor' => 'Tom\'s Gutscheine',
         'link'    => 'www.tomsgutscheine.de',
         'contact' => 'info@invendio.de',
@@ -74,6 +66,14 @@ $sponsors = array(
         'start'   => '2010-02-03',
         'end'     => '2010-08-04',
         'months'  => 6,
+    ),
+    array(
+        'sponsor' => 'Ask For Insurance',
+        'link'    => 'www.askforinsurance.com',
+        'contact' => 'webalex@abv.bg',
+        'start'   => '2010-02-23',
+        'end'     => '2011-02-24',
+        'months'  => 12,
     ),
 );
 
