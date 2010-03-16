@@ -59,6 +59,7 @@ $sponsors = array(
         'end'     => '2010-12-14',
         'months'  => 12,
     ),
+/*
     array(
         'sponsor' => 'Lapworld',
         'link'    => 'www.lapworld.de',
@@ -67,6 +68,7 @@ $sponsors = array(
         'end'     => '2010-08-04',
         'months'  => 6,
     ),
+*/
     array(
         'sponsor' => 'Ask For Insurance',
         'link'    => 'www.askforinsurance.com',
