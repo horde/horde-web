@@ -4,10 +4,10 @@
 <col class="docinfo-name" />
 <col class="docinfo-content" />
 <tbody valign="top">
-<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2009-09-17</td>
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2010-03-25</td>
 </tr>
 <tr><th class="docinfo-name">Revision:</th>
-<td>1.1.2.4</td></tr>
+<td>1.1.2.5</td></tr>
 <tr><th class="docinfo-name">Contact:</th>
 <td><a class="first last reference" href="mailto:ansel&#64;lists.horde.org">ansel&#64;lists.horde.org</a></td></tr>
 </tbody>
@@ -15,7 +15,14 @@
 <p>These are instructions to upgrade from earlier Ansel versions. Please
 backup your existing data before running any of the steps described below.</p>
 <div class="section">
-<h1><a id="upgrading-ansel-from-1-0-to-1-1-x" name="upgrading-ansel-from-1-0-to-1-1-x">Upgrading Ansel from 1.0 to 1.1.x</a></h1>
+<h1><a id="upgrading-ansel-from-1-1-to-1-1-x" name="upgrading-ansel-from-1-1-to-1-1-x">Upgrading Ansel from 1.1 to 1.1.x</a></h1>
+<p>A fix was made to the schema to correct an issue some RDBMS were having with
+the image_faces field being NOT NULL. You should run the
+<tt class="docutils literal"><span class="pre">scripts/upgrades/2010-03-24_fix_default_faces_value.sql</span></tt> script to fix this
+issue.</p>
+</div>
+<div class="section">
+<h1><a id="upgrading-ansel-from-1-0-to-1-1" name="upgrading-ansel-from-1-0-to-1-1">Upgrading Ansel from 1.0 to 1.1</a></h1>
 <p>Some fixes to the share tables have been made for users of PostgreSQL. In
 addition to the instructions below, you also need to run the
 <tt class="docutils literal"><span class="pre">scripts/upgrades/1.0_to_1.1.pgsql.sql</span></tt> script.</p>
