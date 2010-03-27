@@ -35,6 +35,7 @@ $sponsors = array(
         'end'     => '2010-10-22',
         'months'  => 12,
     ),
+/*
     array(
         'sponsor' => 'Online Kredit Index',
         'link'    => 'www.online-kredit-index.de',
@@ -43,6 +44,7 @@ $sponsors = array(
         'end'     => '2010-11-12',
         'months'  => 12,
     ),
+*/
     array(
         'sponsor' => 'Tom\'s Gutscheine',
         'link'    => 'www.tomsgutscheine.de',
