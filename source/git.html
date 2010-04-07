@@ -235,17 +235,17 @@ the following command:</p>
 
 <code>git push origin [localbranch]</code>
 
-<p>After you push your new topic branch, you can do the following to have your 
+<p>After you push your new topic branch, you can do the following to have your
 existing topic branch track the remote branch you just created (this is not
-done automatically):</p>
+done automatically) [this requires Git 1.7.0+]:</p>
 
-<code>git branch -f [local branch name] origin/[remote branch name]</code>
+<code>git branch --set-upstream [local branch name] origin/[remote branch name]</code>
 
 <p>Now all users can track this branch by issuing this command:</p>
 
 <code>git checkout -t origin/[remote branch name]</code>
 
-<p>You should keep the topic branch up to date with the main branch during 
+<p>You should keep the topic branch up to date with the main branch during
 development so that your topic branch only contains the changes related to the
 work being done in the branch:</p>
 
