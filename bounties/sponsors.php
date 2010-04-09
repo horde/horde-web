@@ -1,16 +1,14 @@
 <?php
 $sponsors = array(
-/*
     array(
         'sponsor' => 'Swishmail.com',
         'logo'    => 'swishmail.gif',
         'link'    => 'www.swishmail.com',
         'contact' => 'mach@swishmail.com',
-        'start'   => '2006-10-16',
-        'end'     => '2009-10-16',
-        'months'  => 36,
+        'start'   => '2010-04-08',
+        'end'     => '2012-04-07',
+        'months'  => 24,
     ),
-*/
     array(
         'sponsor' => 'TYPO3 Agentur',
         'link'    => 'www.aoemedia.de/typo3-agentur.html',
