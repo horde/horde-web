@@ -9,16 +9,14 @@ $sponsors = array(
         'end'     => '2012-04-07',
         'months'  => 24,
     ),
-/*
     array(
         'sponsor' => 'TYPO3 Agentur',
         'link'    => 'www.aoemedia.de/typo3-agentur.html',
         'contact' => 'gould@aoemedia.de',
-        'start'   => '2009-08-25',
-        'end'     => '2010-08-24',
+        'start'   => '2010-04-17',
+        'end'     => '2011-04-16',
         'months'  => 12,
     ),
-*/
     array(
         'sponsor' => 'Treefrog SEO',
         'link'    => 'www.treefrogseo.com',
