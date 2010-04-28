@@ -18,6 +18,7 @@ $horde_news = array(
          ),
          'releases' => array(
             'stable' => array(
+                array('2010-04-28', 'Ansel H3 (1.1.1)', '2010/000547'),
                 array('2009-11-06', 'Ansel H3 (1.1)', '2009/000528'),
                 array('2009-03-25', 'Ansel H3 (1.0)', '2009/000496')),
             'dev' => array(
@@ -32,6 +33,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-28', 'Chora H3 (2.1.1)', '2010/000548'),
                 array('2009-03-19', 'Chora H3 (2.1)', '2009/000490'),
                 array('2007-03-19', 'Chora H3 (2.0.2)', '2007/000326'),
                 array('2005-10-13', 'Chora H3 (2.0.1)', '2005/000220'),
@@ -79,6 +81,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-28', 'Forwards H3 (3.2.1)', '2010/000549'),
                 array('2009-11-06', 'Forwards H3 (3.2)', '2009/000527'),
                 array('2009-03-19', 'Forwards H3 (3.1)', '2009/000491'),
                 array('2007-03-15', 'Forwards H3 (3.0.1)', '2007/000319'),
@@ -165,6 +168,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-28', 'Horde 3.3.8', '2010/000553'),
                 array('2010-04-27', 'Horde 3.3.7', '2010/000541'),
                 array('2009-12-15', 'Horde 3.3.6', '2009/000529'),
                 array('2009-09-14', 'Horde 3.3.5', '2009/000512'),
@@ -203,6 +207,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-28', 'Hermes H3 (1.0.1)', '2010/000550'),
                 array('2008-09-26', 'Hermes H3 (1.0)', '2008/000454'),
             ),
             'dev' => array(
@@ -319,7 +324,7 @@ $horde_news = array(
             '2006-03-20' => 'A private flag has been added to Kronolith in CVS. This allows to hide details on events even if they have been added to a shared calendar. This flag is also sychronized with other calendar systems. It has been sponsored by the German <a href="http://www.debeka.de">Debeka Group</a> and will be part of Kronolith 2.2.',
             '2006-03-06' => 'The Kronolith Calendar Application H3 (2.1) has been released with many new features and improvements, e.g. a year view, email notifications abut changed events, iCal/Sunbird support, improved accessibility and Kolab support, and many more. Read the <a href="http://lists.horde.org/archives/announce/2006/000266.html">release announcement</a> for details.',
             '2006-02-15' => 'Delegation support has been added in CVS. Users can now delegate events to other users if they got appropriate permissions from them before. The events will also be moved to the other user\'s calendar and the organizer of meeting requests will be updated too. This feature is sponsored by the German <a href="http://www.debeka.de">Debeka Group</a> and will be part of Kronolith 2.2.',
-            '2006-02-13' => 'Tobias König from the <a href="http://www.kde.org">KDE</a> team is currently working on fixing all <a href="http://www.kolab.org">Kolab</a> related bugs in Horde and already smashed a few in Kronolith. The fixes will be released with Kronolith 2.1-RC3.'
+            '2006-02-13' => 'Tobias Kï¿½nig from the <a href="http://www.kde.org">KDE</a> team is currently working on fixing all <a href="http://www.kolab.org">Kolab</a> related bugs in Horde and already smashed a few in Kronolith. The fixes will be released with Kronolith 2.1-RC3.'
         ),
         'releases' => array(
             'stable' => array(
@@ -421,6 +426,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-28', 'Passwd H3 (3.1.3)', '2010/000551'),
                 array('2009-11-06', 'Passwd H3 (3.1.2)', '2009/000523'),
                 array('2009-07-05', 'Passwd H3 (3.1.1)', '2009/000508'),
                 array('2009-03-19', 'Passwd H3 (3.1)', '2009/000492'),
@@ -473,6 +479,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-28', 'Vacation H3 (3.2.1)', '2010/00552'),
                 array('2009-11-06', 'Vacation H3 (3.2)', '2009/00026'),
                 array('2009-03-19', 'Vacation H3 (3.1)', '2009/000493'),
                 array('2007-03-15', 'Vacation H3 (3.0.1)', '2007/000320'),

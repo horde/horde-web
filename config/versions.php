@@ -3,8 +3,8 @@
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '3.3.7',
-        'date' => 'April 27 2010'
+        'ver' => '3.3.8',
+        'date' => 'April 28 2010'
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
@@ -66,8 +66,8 @@ $horde_apps_stable = array(
     ),
     'chora' => array(
         'name' => 'Chora',
-        'ver' => 'H3 (2.1)',
-        'date' => 'March 19 2009'
+        'ver' => 'H3 (2.1.1)',
+        'date' => 'April 28 2010'
     ),
     'gollem' => array(
         'name' => 'Gollem',
@@ -76,18 +76,18 @@ $horde_apps_stable = array(
     ),
     'passwd' => array(
         'name' => 'Passwd',
-        'ver' => 'H3 (3.1.2)',
-        'date' => 'November 6 2009'
+        'ver' => 'H3 (3.1.3)',
+        'date' => 'April 28 2010'
     ),
     'forwards' => array(
         'name' => 'Forwards',
-        'ver' => 'H3 (3.2)',
-        'date' => 'November 6 2009'
+        'ver' => 'H3 (3.2.1)',
+        'date' => 'April 28 2010'
     ),
     'vacation' => array(
         'name' => 'Vacation',
-        'ver' => 'H3 (3.2)',
-        'date' => 'November 6 2009'
+        'ver' => 'H3 (3.2.1)',
+        'date' => 'April 28 2010'
     ),
     'jeta' => array(
         'name' => 'Jeta',
@@ -101,13 +101,13 @@ $horde_apps_stable = array(
     ),
     'hermes' => array(
         'name' => 'Hermes',
-        'ver' => 'H3 (1.0)',
-        'date' => 'September 26 2008'
+        'ver' => 'H3 (1.0.1)',
+        'date' => 'April 28 2010'
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H3 (1.1)',
-        'date' => 'November 6 2009'
+        'ver' => 'H3 (1.1.1)',
+        'date' => 'April 28 2010'
     )
 );
 
