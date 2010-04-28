@@ -328,7 +328,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
-                array('2010-04-27', 'Kronolith H3 (2.3.3)', '2010/000546'),
+                array('2010-04-27', 'Kronolith H3 (2.3.4)', '2010/000546'),
                 array('2009-12-15', 'Kronolith H3 (2.3.3)', '2009/000536'),
                 array('2009-09-14', 'Kronolith H3 (2.3.2)', '2009/000513'),
                 array('2009-03-30', 'Kronolith H3 (2.3.1)', '2009/000497'),
@@ -402,7 +402,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
-                array('2010-04-27', 'Nag H3 (2.3.4)', '2010/000545'),
+                array('2010-04-27', 'Nag H3 (2.3.5)', '2010/000545'),
                 array('2009-12-15', 'Nag H3 (2.3.4)', '2009/000535'),
                 array('2009-09-14', 'Nag H3 (2.3.3)', '2009/000514'),
                 array('2009-04-16', 'Nag H3 (2.3.2)', '2009/000501'),
@@ -479,7 +479,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
-                array('2010-04-28', 'Vacation H3 (3.2.1)', '2010/00552'),
+                array('2010-04-28', 'Vacation H3 (3.2.1)', '2010/000552'),
                 array('2009-11-06', 'Vacation H3 (3.2)', '2009/00026'),
                 array('2009-03-19', 'Vacation H3 (3.1)', '2009/000493'),
                 array('2007-03-15', 'Vacation H3 (3.0.1)', '2007/000320'),
