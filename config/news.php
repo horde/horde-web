@@ -123,6 +123,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-29', 'Horde Groupware 1.2.6', '2010/000554'),
                 array('2009-12-15', 'Horde Groupware 1.2.5', '2009/000538'),
                 array('2009-09-14', 'Horde Groupware 1.2.4', '2009/000520'),
                 array('2009-09-14', 'Horde Groupware 1.1.6', '2009/000510'),
@@ -507,6 +508,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-29', 'Horde Groupware Webmail Edition 1.2.6', '2010/000555'),
                 array('2009-12-15', 'Horde Groupware Webmail Edition 1.2.5', '2009/000539'),
                 array('2009-09-14', 'Horde Groupware Webmail Edition 1.2.4', '2009/000522'),
                 array('2009-09-14', 'Horde Groupware Webmail Edition 1.1.6', '2009/000511'),

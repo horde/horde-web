@@ -8,15 +8,15 @@ $horde_apps_stable = array(
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '1.2.5',
-        'date' => 'December 15 2009',
+        'ver' => '1.2.6',
+        'date' => 'April 29 2010',
         // Define 'dir' if it is not the same as the array key
         'dir' => 'horde-groupware'
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '1.2.5',
-        'date' => 'December 15 2009',
+        'ver' => '1.2.6',
+        'date' => 'April 29 2010',
         'dir' => 'horde-webmail'
     ),
     'imp' => array(
