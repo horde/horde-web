@@ -47,7 +47,12 @@ command:</p>
 
 <h4>Making Development Repos Web-Accessible</h4>
 
-<p>Make sure you have cloned the <tt>horde</tt> repo. Once initialized, creating a web-accessible development installation can be done simply by running the <tt>install_dev</tt> PHP script located at <tt>horde-git/framework/bin</tt>. To properly run this script, a local copy of install_dev.conf must be created on your system, with the variables inside that dfile edited as necessary to apply to your system.</p>
+<p>Make sure you have cloned the <tt>horde</tt> repo. Once initialized, creating
+a web-accessible development installation can be done simply by running the
+<tt>install_dev</tt> PHP script located at <tt>horde-git/framework/bin</tt>.
+To properly run this script, a local copy of install_dev.conf must be created on
+your system, with the variables inside that dfile edited as necessary to apply
+to your system.</p>
 
 <p>For example:</p>
 
@@ -56,7 +61,25 @@ cp install_dev.conf.dist install_dev.conf
 vi install_dev.conf (replace vi with your favorite editing tool)
 php ./install_dev</code></pre>
 
-<p>Running that script will symlink the entire horde package into the web-accessible directory you specified in <tt>install_dev.conf</tt>, symlink all other Horde applications within that directory, and will properly set up the necessary include/horde path definitions. Note that all edits should take place within the repository, as the web-accessible directory will be deleted every time the <tt>install_dev</tt> script is run. Additionally, full directory paths will be needed in the <tt>horde-git/horde/config/registry.php</tt> file due to the symlinks.</p>
+<p>Running that script will symlink the entire horde package into the
+web-accessible directory you specified in <tt>install_dev.conf</tt>, symlink all
+other Horde applications within that directory, and will properly set up the
+necessary include/horde path definitions. Note that all edits should take place
+within the repository, as the web-accessible directory will be deleted every
+time the <tt>install_dev</tt> script is run. Additionally, full directory paths
+will be needed in the <tt>horde-git/horde/config/registry.php</tt> file due to
+the symlinks.</p>
+
+<p>Also, in addition to the normal INSTALL procedures and database creation
+scripts that need to be run for each application, you will need to create tables
+for the Horde Content system. This system is currently only used in Kronolith
+for storing event and calendar tags. The creation of these tables will
+eventually be part of the normal install procedure, but until it then, you
+will need to manually run:</p>
+<pre><code>
+horde/bin/db_migrate content
+</code>
+</pre>
 
 <h4 id="patch">Creating Patches</h4>
 
