@@ -25,7 +25,7 @@ class Util {
      *
      * @return string  $var, minus any magic quotes.
      */
-    function dispelMagicQuotes(&$var)
+    public static function dispelMagicQuotes(&$var)
     {
         static $magic_quotes;
 
@@ -56,7 +56,7 @@ class Util {
      *
      * @return string  The cleaned form variable, or $default.
      */
-    function getFormData($var, $default = null)
+    public static function getFormData($var, $default = null)
     {
         return (($val = Util::getPost($var)) !== null)
             ? $val : Util::getGet($var, $default);
@@ -74,7 +74,7 @@ class Util {
      *
      * @since Horde 2.2
      */
-    function getGet($var, $default = null)
+    public static function getGet($var, $default = null)
     {
         return (isset($_GET[$var]))
             ? Util::dispelMagicQuotes($_GET[$var])
@@ -93,7 +93,7 @@ class Util {
      *
      * @since Horde 2.2
      */
-    function getPost($var, $default = null)
+    public static function getPost($var, $default = null)
     {
         return (isset($_POST[$var]))
             ? Util::dispelMagicQuotes($_POST[$var])
@@ -114,7 +114,7 @@ class Util {
      *
      * @since Horde 2.1
      */
-    function addParameter($url, $parameter, $value = null)
+    public static function addParameter($url, $parameter, $value = null)
     {
         if (empty($parameter)) {
             return $url;
@@ -152,7 +152,7 @@ class Util {
      * @return string  A directory name which can be used for temp files.
      *                 Returns false if one could not be found.
      */
-    function getTempDir()
+    public static function getTempDir()
     {
         /* First, try PHP's upload_tmp_dir directive. */
         $tmp = ini_get('upload_tmp_dir');
@@ -193,7 +193,7 @@ class Util {
      * @return string   Returns the full path-name to the temporary file.
      *                  Returns false if a temp file could not be created.
      */
-    function getTempFile($prefix = '', $delete = true, $dir = '', $secure = false)
+    public static function getTempFile($prefix = '', $delete = true, $dir = '', $secure = false)
     {
         if (empty($dir) || !is_dir($dir)) {
             $tmp_dir = Util::getTempDir();
@@ -242,7 +242,7 @@ class Util {
      * @param boolean $secure    If deleting file, should we securely delete
      *                           the file?
      */
-    function deleteAtShutdown($filename = false, $register = true,
+    public static function deleteAtShutdown($filename = false, $register = true,
                               $secure = false)
     {
         static $dirs, $files, $securedel;
@@ -289,7 +289,7 @@ class Util {
      *
      * @access private
      */
-    function _deleteAtShutdown()
+    private static function _deleteAtShutdown()
     {
         $registered = Util::deleteAtShutdown();
         $dirs = $registered[0];
