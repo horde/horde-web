@@ -289,7 +289,7 @@ class Util {
      *
      * @access private
      */
-    private static function _deleteAtShutdown()
+    public static function _deleteAtShutdown()
     {
         $registered = Util::deleteAtShutdown();
         $dirs = $registered[0];
