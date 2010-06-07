@@ -77,14 +77,16 @@ $sponsors = array(
         'end'     => '2011-02-24',
         'months'  => 12,
     ),
+/*
     array(
         'sponsor' => 'Handylist Preisvergleich',
         'link'    => 'handylist.de',
         'contact' => 'nico.puhlmann@gmx.de',
         'start'   => '2010-03-12',
         'end'     => '2010-09-13',
-        'months'  => 12,
+        'months'  => 6,
     ),
+*/
 );
 
 shuffle($sponsors);
