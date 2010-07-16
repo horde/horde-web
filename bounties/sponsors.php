@@ -87,6 +87,14 @@ $sponsors = array(
         'months'  => 6,
     ),
 */
+    array(
+        'sponsor' => 'LaptopPartsShop.com',
+        'link'    => 'www.laptoppartsshop.com',
+        'contact' => 'pilots@rambler.ru',
+        'start'   => '2010-07-16',
+        'end'     => '2010-09-23',
+        'months'  => 2,
+    ),
 );
 
 shuffle($sponsors);
