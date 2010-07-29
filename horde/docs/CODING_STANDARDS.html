@@ -4,10 +4,10 @@
 <col class="docinfo-name" />
 <col class="docinfo-content" />
 <tbody valign="top">
-<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2009-10-26</td>
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2010-07-28</td>
 </tr>
 <tr><th class="docinfo-name">Revision:</th>
-<td>1.84.10.24</td></tr>
+<td>1.84.10.25</td></tr>
 <tr><th class="docinfo-name">Authors:</th>
 <td>Jon Parise
 <br />Chuck Hagenbuch</td></tr>
@@ -431,6 +431,9 @@ NUMERIC(p,s), VARCHAR(n), CHAR(n), FLOAT, and REAL. See
 <a class="reference" href="http://home.fnal.gov/~dbox/SQL_API_Portability.html">http://home.fnal.gov/~dbox/SQL_API_Portability.html</a> and
 <a class="reference" href="http://articles.techrepublic.com.com/5100-10878_11-1045051.html">http://articles.techrepublic.com.com/5100-10878_11-1045051.html</a> for more
 information.</p>
+<p>Other portability guidlines: Always use the database abstraction layer's
+capabilities for result set pagination ('LIMIT' is not portable). Also, do not
+use the 'AS' keyword for table aliases.</p>
 <p>In SQL queries, keywords should be capitalized.</p>
 <p>In table creation statements, SQL keywords and datatypes should be
 capitalized. Also, 'DEFAULT' constraints should be listed before 'NOT NULL'
@@ -619,7 +622,7 @@ automatically cast to strings withouth problems:</p>
 // additional check with isset() if necessary.
 </pre>
 <div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/fw3/horde/docs/CODING_STANDARDS</tt>, line 675)</p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/fw3/horde/docs/CODING_STANDARDS</tt>, line 679)</p>
 <p>Inconsistent literal block quoting.</p>
 </div>
 <dl class="docutils">
@@ -631,7 +634,7 @@ automatically cast to strings withouth problems:</p>
 </dd>
 </dl>
 <div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/horde/checkout/fw3/horde/docs/CODING_STANDARDS</tt>, line 679)</p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/horde/checkout/fw3/horde/docs/CODING_STANDARDS</tt>, line 683)</p>
 <p>Definition list ends without a blank line; unexpected unindent.</p>
 </div>
 <p>}</p>
