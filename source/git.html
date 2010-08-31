@@ -51,7 +51,7 @@ command:</p>
 a web-accessible development installation can be done simply by running the
 <tt>install_dev</tt> PHP script located at <tt>horde-git/framework/bin</tt>.
 To properly run this script, a local copy of install_dev.conf must be created on
-your system, with the variables inside that dfile edited as necessary to apply
+your system, with the variables inside that file edited as necessary to apply
 to your system.</p>
 
 <p>For example:</p>
@@ -76,10 +76,18 @@ for the Horde Content system. This system is currently only used in Kronolith
 for storing event and calendar tags. The creation of these tables will
 eventually be part of the normal install procedure, but until it then, you
 will need to manually run:</p>
-<pre><code>
-horde/bin/db_migrate content
-</code>
-</pre>
+
+<pre><code>horde/bin/db_migrate content</code></pre>
+
+<p>If installing the framework libraries directly via PEAR, you will need to
+define your horde application directory (i.e. the filesystem directory where
+the Horde application is installed and accessible to a browser) in your PEAR
+config.  This can only be done if the horde/Role package has previously been
+installed on your system.  This can done via:</p>
+
+<pre><code>cd /path/to/framework
+pear install Role/package.xml
+pear run-scripts horde/Role</pre></code>
 
 <h4 id="patch">Creating Patches</h4>
 
