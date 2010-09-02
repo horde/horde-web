@@ -51,6 +51,7 @@ $sponsors = array(
         'end'     => '2010-06-12',
         'months'  => 6,
     ),
+/*
     array(
         'sponsor' => 'Erb Hotel München',
         'link'    => 'www.messehotel-erb-muenchen.de',
@@ -59,6 +60,7 @@ $sponsors = array(
         'end'     => '2010-12-14',
         'months'  => 12,
     ),
+*/
 /*
     array(
         'sponsor' => 'Lapworld',
