@@ -20,7 +20,7 @@ if (isset($app)) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=<?php echo isset($page_charset) ? $page_charset : 'iso-8859-1' ?>" />
   <title><?php echo $page_title ?></title>
   <link rel="stylesheet" type="text/css" href="<?php echo $base_url ?>/horde.css" />
   <link rel="SHORTCUT ICON" type="image/x-icon" href="<?php echo $base_url ?>/graphics/logos/favicon.ico" />
@@ -77,8 +77,6 @@ Rico.onLoad(function() {
     });
 });
 </script>
-
-<script type="text/javascript" src="<?php echo $base_url ?>/js/informer.js"></script>
 
 </body>
 </html>
