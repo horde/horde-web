@@ -1,5 +1,8 @@
 <?php
 
+/* Used for feeds and informer widget. */
+include_once $fs_base . '/libs/Horde/Cache.php';
+
 function mailto($user, $text)
 {
     global $base_url;
@@ -366,6 +369,15 @@ function print_toolbar()
     toolbar_item('http://www.cafepress.com/hordeproject', '<img src="' . $base_url . '/graphics/shop.gif" border="0" />');
 
     echo '</ul>';
+
+    /* Informer widget. */
+    $cache = new Horde_Cache_File();
+    if (!($widget = $cache->get('informer', 600))) {
+        $widget = @file_get_contents('http://web.informer.com/w/hordewidget.php');
+        $cache->set('informer', $widget);
+    }
+    echo $widget;
+
 ?>
 
 <div style="text-align:center">
@@ -392,7 +404,6 @@ function getFeeds($feeds)
 {
     global $fs_base;
 
-    include_once $fs_base . '/libs/Horde/Cache.php';
     include_once $fs_base . '/libs/Jonah/FeedParser.php';
     include_once $fs_base . '/libs/Util.php';
     $cache = new Horde_Cache_File();
