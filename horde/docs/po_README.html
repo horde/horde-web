@@ -11,46 +11,46 @@
 <tr><th class="docinfo-name">Authors:</th>
 <td>Jan Schneider</td></tr>
 <tr><th class="docinfo-name">Contact:</th>
-<td><a class="first last reference" href="mailto:i18n&#64;lists.horde.org">i18n&#64;lists.horde.org</a></td></tr>
+<td><a class="first last reference external" href="mailto:i18n&#64;lists.horde.org">i18n&#64;lists.horde.org</a></td></tr>
 </tbody>
 </table>
-<div class="contents topic">
-<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference" href="#translation-tool" id="id3" name="id3">1&nbsp;&nbsp;&nbsp;Translation Tool</a><ul class="auto-toc">
-<li><a class="reference" href="#prerequisites" id="id4" name="id4">1.1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
-<li><a class="reference" href="#creating-a-new-translation" id="id5" name="id5">1.2&nbsp;&nbsp;&nbsp;Creating a new translation</a></li>
-<li><a class="reference" href="#compendiums" id="id6" name="id6">1.3&nbsp;&nbsp;&nbsp;Compendiums</a></li>
-<li><a class="reference" href="#updating-translations" id="id7" name="id7">1.4&nbsp;&nbsp;&nbsp;Updating translations</a></li>
-<li><a class="reference" href="#extending-existent-translations" id="id8" name="id8">1.5&nbsp;&nbsp;&nbsp;Extending existent translations</a></li>
+<li><a class="reference internal" href="#translation-tool" id="id3">1&nbsp;&nbsp;&nbsp;Translation Tool</a><ul class="auto-toc">
+<li><a class="reference internal" href="#prerequisites" id="id4">1.1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference internal" href="#creating-a-new-translation" id="id5">1.2&nbsp;&nbsp;&nbsp;Creating a new translation</a></li>
+<li><a class="reference internal" href="#compendiums" id="id6">1.3&nbsp;&nbsp;&nbsp;Compendiums</a></li>
+<li><a class="reference internal" href="#updating-translations" id="id7">1.4&nbsp;&nbsp;&nbsp;Updating translations</a></li>
+<li><a class="reference internal" href="#extending-existent-translations" id="id8">1.5&nbsp;&nbsp;&nbsp;Extending existent translations</a></li>
 </ul>
 </li>
-<li><a class="reference" href="#access-keys" id="id9" name="id9">2&nbsp;&nbsp;&nbsp;Access Keys</a></li>
-<li><a class="reference" href="#right-to-left-languages" id="id10" name="id10">3&nbsp;&nbsp;&nbsp;Right-to-Left Languages</a></li>
-<li><a class="reference" href="#help-texts" id="id11" name="id11">4&nbsp;&nbsp;&nbsp;Help Texts</a><ul class="auto-toc">
-<li><a class="reference" href="#organization-of-the-help-files" id="id12" name="id12">4.1&nbsp;&nbsp;&nbsp;Organization of the help files</a></li>
-<li><a class="reference" href="#syntax-of-the-help-files" id="id13" name="id13">4.2&nbsp;&nbsp;&nbsp;Syntax of the help files</a></li>
-<li><a class="reference" href="#reference-from-the-horde-applications" id="id14" name="id14">4.3&nbsp;&nbsp;&nbsp;Reference from the Horde applications</a></li>
-<li><a class="reference" href="#id1" id="id15" name="id15">4.4&nbsp;&nbsp;&nbsp;Creating a new translation</a></li>
-<li><a class="reference" href="#finishing-a-translation" id="id16" name="id16">4.5&nbsp;&nbsp;&nbsp;Finishing a translation</a></li>
-<li><a class="reference" href="#updating-an-existing-translation" id="id17" name="id17">4.6&nbsp;&nbsp;&nbsp;Updating an existing translation</a></li>
-<li><a class="reference" href="#id2" id="id18" name="id18">4.7&nbsp;&nbsp;&nbsp;Extending existent translations</a></li>
+<li><a class="reference internal" href="#access-keys" id="id9">2&nbsp;&nbsp;&nbsp;Access Keys</a></li>
+<li><a class="reference internal" href="#right-to-left-languages" id="id10">3&nbsp;&nbsp;&nbsp;Right-to-Left Languages</a></li>
+<li><a class="reference internal" href="#help-texts" id="id11">4&nbsp;&nbsp;&nbsp;Help Texts</a><ul class="auto-toc">
+<li><a class="reference internal" href="#organization-of-the-help-files" id="id12">4.1&nbsp;&nbsp;&nbsp;Organization of the help files</a></li>
+<li><a class="reference internal" href="#syntax-of-the-help-files" id="id13">4.2&nbsp;&nbsp;&nbsp;Syntax of the help files</a></li>
+<li><a class="reference internal" href="#reference-from-the-horde-applications" id="id14">4.3&nbsp;&nbsp;&nbsp;Reference from the Horde applications</a></li>
+<li><a class="reference internal" href="#id1" id="id15">4.4&nbsp;&nbsp;&nbsp;Creating a new translation</a></li>
+<li><a class="reference internal" href="#finishing-a-translation" id="id16">4.5&nbsp;&nbsp;&nbsp;Finishing a translation</a></li>
+<li><a class="reference internal" href="#updating-an-existing-translation" id="id17">4.6&nbsp;&nbsp;&nbsp;Updating an existing translation</a></li>
+<li><a class="reference internal" href="#id2" id="id18">4.7&nbsp;&nbsp;&nbsp;Extending existent translations</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id3" id="translation-tool" name="translation-tool">1&nbsp;&nbsp;&nbsp;Translation Tool</a></h1>
-<p><tt class="docutils literal"><span class="pre">translation.php</span></tt> is a small PHP script that should help translators doing
+<div class="section" id="translation-tool">
+<h1><a class="toc-backref" href="#id3">1&nbsp;&nbsp;&nbsp;Translation Tool</a></h1>
+<p><tt class="docutils literal">translation.php</tt> is a small PHP script that should help translators doing
 their work.</p>
-<p>Any feedback, bug reports and feature requests should be send to the <a class="reference" href="http://www.horde.org/mail/">i18n
+<p>Any feedback, bug reports and feature requests should be send to the <a class="reference external" href="http://www.horde.org/mail/">i18n
 mailing list</a>. This is also the right place for new translations and general
 discussions of i18n and l10n questions and problems.</p>
-<p><tt class="docutils literal"><span class="pre">translation.php</span></tt> is located in <tt class="docutils literal"><span class="pre">horde/po</span></tt>, so you will have to make
-<tt class="docutils literal"><span class="pre">horde/po</span></tt> your working directory in order to run the commands quoted
+<p><tt class="docutils literal">translation.php</tt> is located in <tt class="docutils literal">horde/po</tt>, so you will have to make
+<tt class="docutils literal">horde/po</tt> your working directory in order to run the commands quoted
 below. But you can run the script from any directory, just adapt the directory
 to the script. See _Prerequisites if your PHP binary is not located in
-<tt class="docutils literal"><span class="pre">/usr/bin/php</span></tt>.</p>
+<tt class="docutils literal">/usr/bin/php</tt>.</p>
 <p>For a list of available commands run:</p>
 <pre class="literal-block">
 ./translation.php help
@@ -60,51 +60,51 @@ to the script. See _Prerequisites if your PHP binary is not located in
 ./translation.php help command
 </pre>
 <p>Additional information about creating translations and fixing problems can be
-found in the file <tt class="docutils literal"><span class="pre">horde/docs/TRANSLATION</span></tt>.</p>
-<div class="section">
-<h2><a class="toc-backref" href="#id4" id="prerequisites" name="prerequisites">1.1&nbsp;&nbsp;&nbsp;Prerequisites</a></h2>
-<p>To run this script you'll need a PHP command line executable with <a class="reference" href="http://www.php.net/gettext/">gettext
-support</a> compiled in, and the basic <a class="reference" href="http://pear.php.net/">PEAR</a> libraries. The script expects your
-PHP executable to be at <tt class="docutils literal"><span class="pre">/usr/bin/php</span></tt>. If your executable is at another
-place, either edit the first line of <tt class="docutils literal"><span class="pre">translation.php</span></tt> to reflect your
+found in the file <tt class="docutils literal">horde/docs/TRANSLATION</tt>.</p>
+<div class="section" id="prerequisites">
+<h2><a class="toc-backref" href="#id4">1.1&nbsp;&nbsp;&nbsp;Prerequisites</a></h2>
+<p>To run this script you'll need a PHP command line executable with <a class="reference external" href="http://www.php.net/gettext/">gettext
+support</a> compiled in, and the basic <a class="reference external" href="http://pear.php.net/">PEAR</a> libraries. The script expects your
+PHP executable to be at <tt class="docutils literal">/usr/bin/php</tt>. If your executable is at another
+place, either edit the first line of <tt class="docutils literal">translation.php</tt> to reflect your
 location or call the script like:</p>
 <pre class="literal-block">
 /usr/local/bin/php translation.php.
 </pre>
-<p>You'll need the <a class="reference" href="http://www.gnu.org/software/gettext/">gettext</a> package version 0.12 or greater.</p>
-<p>You'll need the PEAR packages <a class="reference" href="http://pear.php.net/package/Console_Getopt/">Console_Getopt</a> 0.11 or greater,
-<a class="reference" href="http://pear.php.net/package/Console_Table/">Console_Table</a> and <a class="reference" href="http://pear.php.net/package/File_Find/">File_Find</a>. To install all needed packages, run:</p>
+<p>You'll need the <a class="reference external" href="http://www.gnu.org/software/gettext/">gettext</a> package version 0.12 or greater.</p>
+<p>You'll need the PEAR packages <a class="reference external" href="http://pear.php.net/package/Console_Getopt/">Console_Getopt</a> 0.11 or greater,
+<a class="reference external" href="http://pear.php.net/package/Console_Table/">Console_Table</a> and <a class="reference external" href="http://pear.php.net/package/File_Find/">File_Find</a>. To install all needed packages, run:</p>
 <pre class="literal-block">
 pear upgrade PEAR Console_Getopt
 pear install Console_Table File_Find
 </pre>
-<p>or download the newest package from the <a class="reference" href="http://pear.php.net/">PEAR</a> server and install them
+<p>or download the newest package from the <a class="reference external" href="http://pear.php.net/">PEAR</a> server and install them
 manually in your PEAR directory.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id5" id="creating-a-new-translation" name="creating-a-new-translation">1.2&nbsp;&nbsp;&nbsp;Creating a new translation</a></h2>
+<div class="section" id="creating-a-new-translation">
+<h2><a class="toc-backref" href="#id5">1.2&nbsp;&nbsp;&nbsp;Creating a new translation</a></h2>
 <p>To create a new translation you first have to extract all gettext messages
-from the PHP sources. There are already template files with the <tt class="docutils literal"><span class="pre">.pot</span></tt>
-suffix in the <tt class="docutils literal"><span class="pre">po</span></tt> directories that you can use if you have troubles
+from the PHP sources. There are already template files with the <tt class="docutils literal">.pot</tt>
+suffix in the <tt class="docutils literal">po</tt> directories that you can use if you have troubles
 extracting the messages, though these templates might be slightly
 outdated. Run:</p>
 <pre class="literal-block">
 ./translation.php extract
 </pre>
 <p>You now have to create a new PO file for your locale. A locale has the form
-<tt class="docutils literal"><span class="pre">ll_CC</span></tt> where <tt class="docutils literal"><span class="pre">ll</span></tt> is the two letter <a class="reference" href="http://www.loc.gov/standards/iso639-2/">ISO 639</a> code of the language and
-<tt class="docutils literal"><span class="pre">CC</span></tt> the two letter <a class="reference" href="http://www.iso.ch/iso/en/prods-services/iso3166ma/index.html">ISO 3166</a> code of the country, e.g. <tt class="docutils literal"><span class="pre">de_DE</span></tt>,
-<tt class="docutils literal"><span class="pre">en_US</span></tt> or <tt class="docutils literal"><span class="pre">pt_BR</span></tt>.
-<tt class="docutils literal"><span class="pre">translation.php</span></tt> is able to guess the locale from the <tt class="docutils literal"><span class="pre">LANG</span></tt> environment
+<tt class="docutils literal">ll_CC</tt> where <tt class="docutils literal">ll</tt> is the two letter <a class="reference external" href="http://www.loc.gov/standards/iso639-2/">ISO 639</a> code of the language and
+<tt class="docutils literal">CC</tt> the two letter <a class="reference external" href="http://www.iso.ch/iso/en/prods-services/iso3166ma/index.html">ISO 3166</a> code of the country, e.g. <tt class="docutils literal">de_DE</tt>,
+<tt class="docutils literal">en_US</tt> or <tt class="docutils literal">pt_BR</tt>.
+<tt class="docutils literal">translation.php</tt> is able to guess the locale from the <tt class="docutils literal">LANG</tt> environment
 variable but it is safer to specify the locale with the <tt class="docutils literal"><span class="pre">-l</span></tt> parameter.
 To create the PO file run:</p>
 <pre class="literal-block">
 ./translation.php init -l ll_CC
 </pre>
-<p>Now you can start the translation by editing the created <tt class="docutils literal"><span class="pre">ll_CC.po</span></tt>
+<p>Now you can start the translation by editing the created <tt class="docutils literal">ll_CC.po</tt>
 files. It is important to set the correct charset for the locale in the
 <tt class="docutils literal"><span class="pre">Content-Type:</span></tt> header.
-You should fill out the the complete header of the created <tt class="docutils literal"><span class="pre">ll_CC.po</span></tt> file,
+You should fill out the the complete header of the created <tt class="docutils literal">ll_CC.po</tt> file,
 e.g.:</p>
 <pre class="literal-block">
 # Dutch translation for Horde.
@@ -135,8 +135,8 @@ translations for the same language for other modules, then you should use a
 compendium. This will save you a lot of time and it will make translations
 much more consistent.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id6" id="compendiums" name="compendiums">1.3&nbsp;&nbsp;&nbsp;Compendiums</a></h2>
+<div class="section" id="compendiums">
+<h2><a class="toc-backref" href="#id6">1.3&nbsp;&nbsp;&nbsp;Compendiums</a></h2>
 <p>This tool utilizes a nice feature of gettext: compendium files. A compendium
 is a special PO file containing a set of translations recurring in many
 different packages. These compendiums will be used in the background without
@@ -146,27 +146,27 @@ before you can use it.</p>
 <pre class="literal-block">
 ./translation.php compendium -l ll_CC
 </pre>
-<p>The <tt class="docutils literal"><span class="pre">compendium.po</span></tt> being created will contain all modules' translations of
+<p>The <tt class="docutils literal">compendium.po</tt> being created will contain all modules' translations of
 this locale merged into a single file. You should take a closer look at this
 file because you may find a lot of special marked lines where you translated
 certain strings differently in the various modules. It's a good idea to fix
 the modules' translations now so that all modules use the same translations for
 the same strings. You can always recreate your compendium with the above
 command.</p>
-<p>If you're maintaining translations for different <a class="reference" href="http://www.horde.org/source/">branches</a> and assumed that
-you have all modules of the <tt class="docutils literal"><span class="pre">HEAD</span></tt> branches in one directory and all of the
-<tt class="docutils literal"><span class="pre">FRAMEWORK_3</span></tt> branches in another, you probably want to share a compendium
+<p>If you're maintaining translations for different <a class="reference external" href="http://www.horde.org/source/">branches</a> and assumed that
+you have all modules of the <tt class="docutils literal">HEAD</tt> branches in one directory and all of the
+<tt class="docutils literal">FRAMEWORK_3</tt> branches in another, you probably want to share a compendium
 between these directories.</p>
-<p>To do this, you should first create a compendium in the <tt class="docutils literal"><span class="pre">FRAMEWORK_3</span></tt>
+<p>To do this, you should first create a compendium in the <tt class="docutils literal">FRAMEWORK_3</tt>
 branch, review it and fix all translations until you're happy with the
-results. Then create a second compendium in the <tt class="docutils literal"><span class="pre">HEAD</span></tt> branch and include
+results. Then create a second compendium in the <tt class="docutils literal">HEAD</tt> branch and include
 your first one with the --add option.  Now fix the translations in this
 branch. If you're ready you can remove the first compendium and for now on use
-the compendium in the <tt class="docutils literal"><span class="pre">HEAD</span></tt> branch for both branches. To do so, use the
+the compendium in the <tt class="docutils literal">HEAD</tt> branch for both branches. To do so, use the
 <tt class="docutils literal"><span class="pre">-c</span></tt> or <tt class="docutils literal"><span class="pre">--compendium</span></tt> option to specify a path to your compendium.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id7" id="updating-translations" name="updating-translations">1.4&nbsp;&nbsp;&nbsp;Updating translations</a></h2>
+<div class="section" id="updating-translations">
+<h2><a class="toc-backref" href="#id7">1.4&nbsp;&nbsp;&nbsp;Updating translations</a></h2>
 <p>The process of updating translations is a cycle where you extract new gettext
 strings from the sources, translate those new strings or update the already
 translated strings and compile them after.</p>
@@ -176,14 +176,14 @@ translated strings and compile them after.</p>
 </pre>
 <p>This extracts the new strings from the sources and tries to update them from
 already existing translations in the compendium. You just have to translate
-all untranslated strings in the <tt class="docutils literal"><span class="pre">ll_CC.po</span></tt> file in the <tt class="docutils literal"><span class="pre">po</span></tt> directory of
+all untranslated strings in the <tt class="docutils literal">ll_CC.po</tt> file in the <tt class="docutils literal">po</tt> directory of
 the module you updated.</p>
 <p>If extracting new strings fails for some reason, you can use the provided
-<tt class="docutils literal"><span class="pre">.pot</span></tt> file to update your translation:</p>
+<tt class="docutils literal">.pot</tt> file to update your translation:</p>
 <pre class="literal-block">
 ./translation.php merge -m modulename -l ll_CC
 </pre>
-<p>If your compendium is in a different directory than the <tt class="docutils literal"><span class="pre">translation.php</span></tt>
+<p>If your compendium is in a different directory than the <tt class="docutils literal">translation.php</tt>
 script, you can specify the path to the compendium:</p>
 <pre class="literal-block">
 ./translation.php update -m modulename -l ll_CC -c /path/to/compendium
@@ -193,8 +193,8 @@ script, you can specify the path to the compendium:</p>
 ./translation.php make -m modulename -l ll_CC
 </pre>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id8" id="extending-existent-translations" name="extending-existent-translations">1.5&nbsp;&nbsp;&nbsp;Extending existent translations</a></h2>
+<div class="section" id="extending-existent-translations">
+<h2><a class="toc-backref" href="#id8">1.5&nbsp;&nbsp;&nbsp;Extending existent translations</a></h2>
 <p>To have your own string (e.g. that you added to config files) displayed in
 several languages, you have to</p>
 <blockquote>
@@ -210,7 +210,7 @@ repeat steps 2 and 3 after the next update.</p>
 screen:</p>
 <blockquote>
 <ol class="arabic">
-<li><p class="first">In <tt class="docutils literal"><span class="pre">horde/imp/config/servers.php</span></tt>, you specify:</p>
+<li><p class="first">In <tt class="docutils literal">horde/imp/config/servers.php</tt>, you specify:</p>
 <pre class="literal-block">
 $servers['Central'] = array(
    'name' =&gt; _(&quot;Central Mail Service&quot;),
@@ -220,7 +220,7 @@ $servers['CompSci'] = array(
 ...
 </pre>
 </li>
-<li><p class="first">In <tt class="docutils literal"><span class="pre">horde/imp/po/de_DE.po</span></tt> you add two entries:</p>
+<li><p class="first">In <tt class="docutils literal">horde/imp/po/de_DE.po</tt> you add two entries:</p>
 <pre class="literal-block">
 msgid &quot;Central Mail Service&quot;
 msgstr &quot;Zentraler Mailserver&quot;
@@ -239,8 +239,8 @@ msgstr &quot;Mailserver Informatik&quot;
 </blockquote>
 </div>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id9" id="access-keys" name="access-keys">2&nbsp;&nbsp;&nbsp;Access Keys</a></h1>
+<div class="section" id="access-keys">
+<h1><a class="toc-backref" href="#id9">2&nbsp;&nbsp;&nbsp;Access Keys</a></h1>
 <p>Access keys, also known as shortcut keys, allow easy access to important
 functions, normally by hitting the Alt/Meta key in combination with another
 key. This key is marked in most user interfaces by being underlined.</p>
@@ -273,8 +273,8 @@ msgstr &quot;_H說明&quot;
 <p>This renders to &quot;說明(H)&quot; in the interface and you can
 access this link with &quot;H&quot; as the access key.</p>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id10" id="right-to-left-languages" name="right-to-left-languages">3&nbsp;&nbsp;&nbsp;Right-to-Left Languages</a></h1>
+<div class="section" id="right-to-left-languages">
+<h1><a class="toc-backref" href="#id10">3&nbsp;&nbsp;&nbsp;Right-to-Left Languages</a></h1>
 <p>Translations for languages that are written from right to left might cause
 unexpected behavior if parenthesis or similar characters appear inside a
 translated string. To fix this broken string rendering you have to insert
@@ -284,28 +284,28 @@ more right-to-left text to come after the closing parenthesis, add the U+202E
 codepoint after it. If using the PO mode of the Emacs editor you can add
 codepoints with the &quot;ucs-insert&quot; command.</p>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id11" id="help-texts" name="help-texts">4&nbsp;&nbsp;&nbsp;Help Texts</a></h1>
-<div class="section">
-<h2><a class="toc-backref" href="#id12" id="organization-of-the-help-files" name="organization-of-the-help-files">4.1&nbsp;&nbsp;&nbsp;Organization of the help files</a></h2>
-<p>The help texts are available in the <tt class="docutils literal"><span class="pre">horde/locale/</span></tt>, and
-<tt class="docutils literal"><span class="pre">horde/APP/locale/</span></tt>, directories, where APP is any Horde application. Every
-available translation is kept in a file called <tt class="docutils literal"><span class="pre">help.xml</span></tt>, in a subdirectory
-named according to <a class="reference" href="http://www.faqs.org/rfcs/rfc3066.html">RFC 3066</a>. Examples:</p>
+<div class="section" id="help-texts">
+<h1><a class="toc-backref" href="#id11">4&nbsp;&nbsp;&nbsp;Help Texts</a></h1>
+<div class="section" id="organization-of-the-help-files">
+<h2><a class="toc-backref" href="#id12">4.1&nbsp;&nbsp;&nbsp;Organization of the help files</a></h2>
+<p>The help texts are available in the <tt class="docutils literal">horde/locale/</tt>, and
+<tt class="docutils literal">horde/APP/locale/</tt>, directories, where APP is any Horde application. Every
+available translation is kept in a file called <tt class="docutils literal">help.xml</tt>, in a subdirectory
+named according to <a class="reference external" href="http://www.faqs.org/rfcs/rfc3066.html">RFC 3066</a>. Examples:</p>
 <ul class="simple">
-<li>Horde's original help texts are in the <tt class="docutils literal"><span class="pre">horde/locale/en_US/help.xml</span></tt> file.</li>
-<li>IMP's Brazilian help texts are in the <tt class="docutils literal"><span class="pre">horde/imp/locale/pt_BR/help.xml</span></tt>
+<li>Horde's original help texts are in the <tt class="docutils literal">horde/locale/en_US/help.xml</tt> file.</li>
+<li>IMP's Brazilian help texts are in the <tt class="docutils literal">horde/imp/locale/pt_BR/help.xml</tt>
 file.</li>
 </ul>
-<p>When, for any desired application and locale, there is no <tt class="docutils literal"><span class="pre">help.xml</span></tt> file
+<p>When, for any desired application and locale, there is no <tt class="docutils literal">help.xml</tt> file
 available, Horde's help system will use the application's
-<tt class="docutils literal"><span class="pre">locale/en_US/help.xml</span></tt> file, instead.</p>
+<tt class="docutils literal">locale/en_US/help.xml</tt> file, instead.</p>
 <p>The help files must be encoded in the language's preferred character set.</p>
 <p>There is no compilation step involved: Every modification to, or addition of,
-a <tt class="docutils literal"><span class="pre">help.xml</span></tt> file takes immediate effect.</p>
+a <tt class="docutils literal">help.xml</tt> file takes immediate effect.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id13" id="syntax-of-the-help-files" name="syntax-of-the-help-files">4.2&nbsp;&nbsp;&nbsp;Syntax of the help files</a></h2>
+<div class="section" id="syntax-of-the-help-files">
+<h2><a class="toc-backref" href="#id13">4.2&nbsp;&nbsp;&nbsp;Syntax of the help files</a></h2>
 <p>Each help file must consist of syntactically valid XML code.</p>
 <p>There are no predefined entities beyond the XML standard entities:</p>
 <ul class="simple">
@@ -317,14 +317,14 @@ a <tt class="docutils literal"><span class="pre">help.xml</span></tt> file takes
 </ul>
 <p>Any character available in the language's preferred character set can be
 entered as a numerical character reference (based on its Unicode scalar
-value), such as <tt class="docutils literal"><span class="pre">&amp;#160;</span></tt> for the No-Break Space character.</p>
+value), such as <tt class="docutils literal">&amp;#160;</tt> for the No-Break Space character.</p>
 <p>The general structure can be learned from the existing examples; of course,
 the XML tags must be syntactically valid, and properly nested.</p>
 <div class="note">
 <p class="first admonition-title">Note</p>
-<p class="last">A PHP error message like <tt class="docutils literal"><span class="pre">Undefined</span> <span class="pre">index:</span> <span class="pre">url</span> <span class="pre">in</span>
+<p class="last">A PHP error message like <tt class="docutils literal">Undefined index: url in
 <span class="pre">/opt/test-webmail/horde/lib/Horde/Help.php</span></tt> means that you have
-mis-spelled, or omitted, an attribute (<tt class="docutils literal"><span class="pre">url</span></tt>, in this example).</p>
+mis-spelled, or omitted, an attribute (<tt class="docutils literal">url</tt>, in this example).</p>
 </div>
 <p>The following tags are available:</p>
 <table border="1" class="docutils">
@@ -409,8 +409,8 @@ mis-spelled, or omitted, an attribute (<tt class="docutils literal"><span class=
 </tr>
 </tbody>
 </table>
-<p>The elements marked <tt class="docutils literal"><span class="pre">para</span></tt>, in the Parent column, may also be used within
-<tt class="docutils literal"><span class="pre">pre</span></tt>, <tt class="docutils literal"><span class="pre">tip</span></tt>, and <tt class="docutils literal"><span class="pre">warn</span></tt> elements.</p>
+<p>The elements marked <tt class="docutils literal">para</tt>, in the Parent column, may also be used within
+<tt class="docutils literal">pre</tt>, <tt class="docutils literal">tip</tt>, and <tt class="docutils literal">warn</tt> elements.</p>
 <p>The following attributes are available:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -432,7 +432,7 @@ mis-spelled, or omitted, an attribute (<tt class="docutils literal"><span class=
 <tr><td rowspan="2">ref</td>
 <td>module</td>
 <td>Index of Horde application, see
-<tt class="docutils literal"><span class="pre">horde/config/registry.php</span></tt></td>
+<tt class="docutils literal">horde/config/registry.php</tt></td>
 </tr>
 <tr><td>entry</td>
 <td>Id of help file entry, see above</td>
@@ -444,7 +444,7 @@ mis-spelled, or omitted, an attribute (<tt class="docutils literal"><span class=
 <tr><td rowspan="2">href</td>
 <td>app</td>
 <td>Index of Horde application, see
-<tt class="docutils literal"><span class="pre">horde/config/registry.php</span></tt></td>
+<tt class="docutils literal">horde/config/registry.php</tt></td>
 </tr>
 <tr><td>url</td>
 <td>URL within Horde application</td>
@@ -458,7 +458,7 @@ mis-spelled, or omitted, an attribute (<tt class="docutils literal"><span class=
       UW-IMAP quirk&lt;/eref&gt;
 &lt;href app=&quot;turba&quot; url=&quot;search.php&quot;&gt;Address search&lt;/href&gt;
 </pre>
-<p>The <a class="reference" href="#translation-tool">Translation Tool</a> will introduce additional attributes:</p>
+<p>The <a class="reference internal" href="#translation-tool">Translation Tool</a> will introduce additional attributes:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="17%" />
@@ -474,7 +474,7 @@ mis-spelled, or omitted, an attribute (<tt class="docutils literal"><span class=
 <tbody valign="top">
 <tr><td rowspan="2">entry</td>
 <td>state</td>
-<td>See <a class="reference" href="#finishing-a-translation">Finishing a translation</a></td>
+<td>See <a class="reference internal" href="#finishing-a-translation">Finishing a translation</a></td>
 </tr>
 <tr><td>md5</td>
 <td>Used internally</td>
@@ -482,40 +482,40 @@ mis-spelled, or omitted, an attribute (<tt class="docutils literal"><span class=
 </tbody>
 </table>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id14" id="reference-from-the-horde-applications" name="reference-from-the-horde-applications">4.3&nbsp;&nbsp;&nbsp;Reference from the Horde applications</a></h2>
+<div class="section" id="reference-from-the-horde-applications">
+<h2><a class="toc-backref" href="#id14">4.3&nbsp;&nbsp;&nbsp;Reference from the Horde applications</a></h2>
 <p>The typical incantation, e.g.:</p>
 <pre class="literal-block">
 &lt;?php echo Help::link('imp', 'compose-buttons') ?&gt;
 </pre>
-<p>will yield a link, adorned with the <tt class="docutils literal"><span class="pre">help.png</span></tt> icon, to the entry marked
+<p>will yield a link, adorned with the <tt class="docutils literal">help.png</tt> icon, to the entry marked
 <tt class="docutils literal"><span class="pre">id=&quot;compose-buttons&quot;</span></tt> in the IMP help file pertaining to the user's current
 locale. Usually, these links are placed in the template files, next to the
 item to be explained by the pertinent help entry.</p>
 <p>The Horde menu will usually contain a general help item, which is generated in
-<tt class="docutils literal"><span class="pre">lib/Horde/Menu.php</span></tt>.</p>
+<tt class="docutils literal">lib/Horde/Menu.php</tt>.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id15" id="id1" name="id1">4.4&nbsp;&nbsp;&nbsp;Creating a new translation</a></h2>
-<p>If necessary, define a suitable locale id <tt class="docutils literal"><span class="pre">ll_CC</span></tt>, complying with <a class="reference" href="http://www.faqs.org/rfcs/rfc3066.html">RFC
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id15">4.4&nbsp;&nbsp;&nbsp;Creating a new translation</a></h2>
+<p>If necessary, define a suitable locale id <tt class="docutils literal">ll_CC</tt>, complying with <a class="reference external" href="http://www.faqs.org/rfcs/rfc3066.html">RFC
 3066</a>. E.g., if you plan to add an Austrian translation, you would use
-<tt class="docutils literal"><span class="pre">de_AT</span></tt> as your locale id.</p>
-<p>For Horde, and for all relevant applications, copy the <tt class="docutils literal"><span class="pre">help.xml</span></tt> files from
-the <tt class="docutils literal"><span class="pre">locale/en_US/</span></tt> subdirectories to the <tt class="docutils literal"><span class="pre">locale/ll_CC/</span></tt> subdirectories,
+<tt class="docutils literal">de_AT</tt> as your locale id.</p>
+<p>For Horde, and for all relevant applications, copy the <tt class="docutils literal">help.xml</tt> files from
+the <tt class="docutils literal">locale/en_US/</tt> subdirectories to the <tt class="docutils literal">locale/ll_CC/</tt> subdirectories,
 creating them if necessary.</p>
-<p>Translate each new <tt class="docutils literal"><span class="pre">locale/ll_CC/help.xml</span></tt> file, leaving all tags and
+<p>Translate each new <tt class="docutils literal">locale/ll_CC/help.xml</tt> file, leaving all tags and
 attributes unchanged. Just translate the text between the tags.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">The <tt class="docutils literal"><span class="pre">id</span></tt> attributes must be kept unchanged, under any
+<p class="last">The <tt class="docutils literal">id</tt> attributes must be kept unchanged, under any
 circumstances.</p>
 </div>
 <p>If the application is already translated and only the help files are missing,
 then be sure to use the same terminology as the existing translation. In any
 case, try to use a lucid, coherent terminology.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id16" id="finishing-a-translation" name="finishing-a-translation">4.5&nbsp;&nbsp;&nbsp;Finishing a translation</a></h2>
+<div class="section" id="finishing-a-translation">
+<h2><a class="toc-backref" href="#id16">4.5&nbsp;&nbsp;&nbsp;Finishing a translation</a></h2>
 <p>If you want to submit a translation to be included in the Horde code base,
 make sure that you have completed all translations. Then run:</p>
 <pre class="literal-block">
@@ -524,8 +524,8 @@ make sure that you have completed all translations. Then run:</p>
 <p>This will mark all entries as being up-to-date so that you or other
 translators can later see which entries have been changed since then.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id17" id="updating-an-existing-translation" name="updating-an-existing-translation">4.6&nbsp;&nbsp;&nbsp;Updating an existing translation</a></h2>
+<div class="section" id="updating-an-existing-translation">
+<h2><a class="toc-backref" href="#id17">4.6&nbsp;&nbsp;&nbsp;Updating an existing translation</a></h2>
 <p>Run:</p>
 <pre class="literal-block">
 ./translation.php update-help
@@ -536,25 +536,25 @@ the attribute <tt class="docutils literal"><span class="pre">state=&quot;changed
 original entry from the English help file is added in a comment below a
 changed entry, so that you can easily compare them.</p>
 <p>Translate the remaining English phrases, like discussed above. When your
-finished, remove any English entries and follow the steps at <a class="reference" href="#finishing-a-translation">Finishing a
+finished, remove any English entries and follow the steps at <a class="reference internal" href="#finishing-a-translation">Finishing a
 translation</a>.</p>
 </div>
-<div class="section">
-<h2><a class="toc-backref" href="#id18" id="id2" name="id2">4.7&nbsp;&nbsp;&nbsp;Extending existent translations</a></h2>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id18">4.7&nbsp;&nbsp;&nbsp;Extending existent translations</a></h2>
 <p>If you feel that some feature should be better explained to the end user, then
 proceed as following:</p>
 <ol class="arabic simple">
 <li>Determine, whether you will have to extend an existing entry, or add a new
 one.</li>
-<li>In the latter case, choose a suitable <tt class="docutils literal"><span class="pre">id</span></tt> for your new help entry.</li>
+<li>In the latter case, choose a suitable <tt class="docutils literal">id</tt> for your new help entry.</li>
 <li>Edit the existing entry in, or add a new entry to, the application's
-<tt class="docutils literal"><span class="pre">en_US/help.xml</span></tt> file. Change all translations needed in your site in the
-same way. Be sure to use the same <tt class="docutils literal"><span class="pre">id</span></tt> everywhere.</li>
+<tt class="docutils literal">en_US/help.xml</tt> file. Change all translations needed in your site in the
+same way. Be sure to use the same <tt class="docutils literal">id</tt> everywhere.</li>
 <li>If you have added a new entry, you might want to add a link to it from a
-template, as explained above in <a class="reference" href="#reference-from-the-horde-applications">Reference from the Horde applications</a>.</li>
+template, as explained above in <a class="reference internal" href="#reference-from-the-horde-applications">Reference from the Horde applications</a>.</li>
 <li>If you feel that your enhancement may be useful to other users, file an
-enhancement request at <a class="reference" href="http://bugs.horde.org/">http://bugs.horde.org/</a> with a patch including your
-changes to the template and the <tt class="docutils literal"><span class="pre">help.xml</span></tt> files.</li>
+enhancement request at <a class="reference external" href="http://bugs.horde.org/">http://bugs.horde.org/</a> with a patch including your
+changes to the template and the <tt class="docutils literal">help.xml</tt> files.</li>
 <li>In any case, keep notes of your changes, so you can apply them to later
 versions if necessary.</li>
 </ol>
@@ -563,7 +563,7 @@ versions if necessary.</li>
 </div>
 <div class="footer">
 <hr class="footer" />
-<a class="reference" href="http://cvs.horde.org/co.php/horde/po/README?onb=FRAMEWORK_3">View document source</a>.
-Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+<a class="reference external" href="http://cvs.horde.org/co.php/horde/po/README?onb=FRAMEWORK_3">View document source</a>.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
 
 </div>

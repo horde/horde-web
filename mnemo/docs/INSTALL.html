@@ -1,46 +1,47 @@
 <div class="document" id="installing-mnemo-2-2">
 <h1 class="title">Installing Mnemo 2.2</h1>
+
 <p>This document contains instructions for installing the Mnemo web-based notes
 application on your system.</p>
 <p>For information on the capabilities and features of Mnemo, see the file
-<a class="reference" href="?f=README.html">README</a> in the top-level directory of the Mnemo distribution.</p>
-<div class="section">
-<h1><a id="obtaining-mnemo" name="obtaining-mnemo">Obtaining Mnemo</a></h1>
+<a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Mnemo distribution.</p>
+<div class="section" id="obtaining-mnemo">
+<h1>Obtaining Mnemo</h1>
 <p>Mnemo can be obtained from the Horde website and FTP server, at</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/mnemo/">http://www.horde.org/mnemo/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/mnemo/">ftp://ftp.horde.org/pub/mnemo/</a></p>
+<p><a class="reference external" href="http://www.horde.org/mnemo/">http://www.horde.org/mnemo/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/mnemo/">ftp://ftp.horde.org/pub/mnemo/</a></p>
 </blockquote>
 <p>Bleeding-edge development versions of Mnemo are available via CVS; see the
-file <a class="reference" href="../../horde/docs/?f=HACKING.html">docs/HACKING</a> in the Horde distribution for information on accessing
+file <a class="reference external" href="../../horde/docs/?f=HACKING.html">docs/HACKING</a> in the Horde distribution for information on accessing
 the Horde CVS repository.</p>
 </div>
-<div class="section">
-<h1><a id="prerequisites" name="prerequisites">Prerequisites</a></h1>
+<div class="section" id="prerequisites">
+<h1>Prerequisites</h1>
 <p>To function properly, Mnemo requires the following:</p>
 <ol class="arabic">
 <li><p class="first">A working Horde installation.</p>
-<p>Mnemo runs within the <a class="reference" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+<p>Mnemo runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
 for Web applications written in PHP.  You must install Horde before
 installing Mnemo.</p>
 <p>The Horde Framework can be obtained from the Horde website and FTP server,
 at</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
+<p><a class="reference external" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
 </blockquote>
 <p>Many of Mnemo's prerequisites are also Horde prerequisites.  Be sure to
-have completed all of the steps in the <a class="reference" href="../../horde/docs/?f=INSTALL.html">INSTALL</a> file for the Horde
+have completed all of the steps in the <a class="reference external" href="../../horde/docs/?f=INSTALL.html">INSTALL</a> file for the Horde
 Framework before installing Mnemo.</p>
 </li>
 <li><p class="first">SQL support in PHP.</p>
 <p>Mnemo stores its data in an SQL database.  Build PHP with whichever SQL
-driver you require; see the Horde <a class="reference" href="../../horde/docs/?f=INSTALL.html">INSTALL</a> file for details.</p>
+driver you require; see the Horde <a class="reference external" href="../../horde/docs/?f=INSTALL.html">INSTALL</a> file for details.</p>
 </li>
 </ol>
 </div>
-<div class="section">
-<h1><a id="installing-mnemo" name="installing-mnemo">Installing Mnemo</a></h1>
+<div class="section" id="installing-mnemo">
+<h1>Installing Mnemo</h1>
 <p>Mnemo is written in PHP, and must be installed in a web-accessible directory.
 The precise location of this directory will differ from system to system.
 Conventionally, Mnemo is installed directly underneath Horde in the
@@ -49,7 +50,7 @@ webserver's document tree.</p>
 expand the distribution where you want it to reside and rename the root
 directory of the distribution to whatever you wish to appear in the URL.  For
 example, with the Apache webserver's default document root of
-<tt class="docutils literal"><span class="pre">/usr/local/apache/htdocs</span></tt>, you would type:</p>
+<tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
 <pre class="literal-block">
 cd /usr/local/apache/htdocs/horde
 tar zxvf /path/to/mnemo-x.y.z.tar.gz
@@ -60,29 +61,29 @@ mv mnemo-x.y.z mnemo
 http://your-server/horde/mnemo/
 </pre>
 </div>
-<div class="section">
-<h1><a id="configuring-mnemo" name="configuring-mnemo">Configuring Mnemo</a></h1>
+<div class="section" id="configuring-mnemo">
+<h1>Configuring Mnemo</h1>
 <ol class="arabic">
 <li><p class="first">Configuring Horde for Mnemo</p>
 <ol class="loweralpha">
 <li><p class="first">Register the application</p>
-<p>In <tt class="docutils literal"><span class="pre">horde/config/registry.php</span></tt>, find the <tt class="docutils literal"><span class="pre">applications['mnemo']</span></tt>
+<p>In <tt class="docutils literal">horde/config/registry.php</tt>, find the <tt class="docutils literal"><span class="pre">applications['mnemo']</span></tt>
 stanza.  The default settings here should be okay for most
 installations, but you can change them if desired, or if you have a
 non-standard install.  If you have changed the location of Mnemo
 relative to Horde, either in the URL or in the filesystem or both, then
-you must update the <tt class="docutils literal"><span class="pre">fileroot</span></tt> and <tt class="docutils literal"><span class="pre">webroot</span></tt> settings to their
+you must update the <tt class="docutils literal">fileroot</tt> and <tt class="docutils literal">webroot</tt> settings to their
 correct values.</p>
 </li>
 <li><p class="first">Configuring a DataTree backend</p>
-<p>Mnemo requires a permanent <tt class="docutils literal"><span class="pre">DataTree</span></tt> backend in Horde to manage
+<p>Mnemo requires a permanent <tt class="docutils literal">DataTree</tt> backend in Horde to manage
 notepads and to add notes to notepads.  If you didn't setup a DataTree
 backend yet, go to the configuration interface, select Horde from the
-list of applications and select a driver different than <tt class="docutils literal"><span class="pre">None</span></tt> on the
-<tt class="docutils literal"><span class="pre">DataTree</span> <span class="pre">System</span></tt> tab.  Make sure that you ran the necessary scripts
+list of applications and select a driver different than <tt class="docutils literal">None</tt> on the
+<tt class="docutils literal">DataTree System</tt> tab.  Make sure that you ran the necessary scripts
 to create a storage backend for the DataTree system, e.g. one of the
 <tt class="docutils literal"><span class="pre">create.*.sql</span></tt> or <tt class="docutils literal"><span class="pre">horde_datatree.*.sql</span></tt> SQL scripts in
-<tt class="docutils literal"><span class="pre">horde/scripts/sql/</span></tt>.  You should have done this already during the
+<tt class="docutils literal">horde/scripts/sql/</tt>.  You should have done this already during the
 installation of Horde.</p>
 </li>
 </ol>
@@ -90,7 +91,7 @@ installation of Horde.</p>
 <li><p class="first">Creating the database table</p>
 <p>The specific steps to create the Mnemo database table depend on which
 database you've chosen to use.</p>
-<p>First, look in <tt class="docutils literal"><span class="pre">scripts/sql/</span></tt> to see if a script already exists for your
+<p>First, look in <tt class="docutils literal">scripts/sql/</tt> to see if a script already exists for your
 database type.  If so, you should be able to simply execute that script as
 superuser in your database.  (Note that executing the script as the &quot;horde&quot;
 user will probably fail when granting privileges.)</p>
@@ -99,33 +100,33 @@ file mnemo.sql as a starting point.  If you need assistance in creating
 databases, you may wish to let us know on the Mnemo mailing list.</p>
 </li>
 <li><p class="first">Configuring Mnemo</p>
-<p>To configure Mnemo, change to the <tt class="docutils literal"><span class="pre">config/</span></tt> directory of the installed
-distribution, and make copies of all of the configuration <tt class="docutils literal"><span class="pre">dist</span></tt> files
-without the <tt class="docutils literal"><span class="pre">dist</span></tt> suffix:</p>
+<p>To configure Mnemo, change to the <tt class="docutils literal">config/</tt> directory of the installed
+distribution, and make copies of all of the configuration <tt class="docutils literal">dist</tt> files
+without the <tt class="docutils literal">dist</tt> suffix:</p>
 <pre class="literal-block">
 cd config/
 for foo in *.dist; do cp $foo `basename $foo .dist`; done
 </pre>
 <p>Documentation on the format of those files can be found in each file.  With
-the exception of the <tt class="docutils literal"><span class="pre">conf.*</span></tt> files (see below), the other files in
-<tt class="docutils literal"><span class="pre">config/</span></tt> need only be modified if you wish to customize Mnemo's
+the exception of the <tt class="docutils literal">conf.*</tt> files (see below), the other files in
+<tt class="docutils literal">config/</tt> need only be modified if you wish to customize Mnemo's
 appearance or behavior, as the defaults will be correct for most sites.</p>
 <p>You must login to Horde as a Horde Administrator to finish the
-configuration of Mnemo.  Use the Horde <tt class="docutils literal"><span class="pre">Administration</span></tt> menu item to get
-to the administration page, and then click on the <tt class="docutils literal"><span class="pre">Configuration</span></tt> icon to
-get the configuration page.  Select <tt class="docutils literal"><span class="pre">Notes</span></tt> from the selection list of
+configuration of Mnemo.  Use the Horde <tt class="docutils literal">Administration</tt> menu item to get
+to the administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to
+get the configuration page.  Select <tt class="docutils literal">Notes</tt> from the selection list of
 applications.  Fill in or change any configuration values as needed.  When
-done click on <tt class="docutils literal"><span class="pre">Generate</span> <span class="pre">Notes</span> <span class="pre">Configuration</span></tt> to generate the <tt class="docutils literal"><span class="pre">conf.php</span></tt>
+done click on <tt class="docutils literal">Generate Notes Configuration</tt> to generate the <tt class="docutils literal">conf.php</tt>
 file.  If your web server doesn't have write permissions to the Mnemo
 configuration directory or file, it will not be able to write the file.  In
-this case, go back to <tt class="docutils literal"><span class="pre">Configuration</span></tt> and choose one of the other methods
-to create the configuration file <tt class="docutils literal"><span class="pre">mnemo/config/conf.php</span></tt>.</p>
+this case, go back to <tt class="docutils literal">Configuration</tt> and choose one of the other methods
+to create the configuration file <tt class="docutils literal">mnemo/config/conf.php</tt>.</p>
 <p>Note for international users: Nag uses GNU gettext to provide local
 translations of text displayed by applications; the translations are found
 in the po/ directory.  If a translation is not yet available for your
-locale (and you wish to create one), see the <tt class="docutils literal"><span class="pre">horde/po/README</span></tt> file, or
+locale (and you wish to create one), see the <tt class="docutils literal">horde/po/README</tt> file, or
 if you're having trouble using a provided translation, please see the
-<a class="reference" href="../../horde/docs/?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+<a class="reference external" href="../../horde/docs/?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
 </li>
 <li><p class="first">Testing Mnemo</p>
 <p>Use Mnemo to create, modify, and delete notes. Test at least the following:</p>
@@ -137,30 +138,30 @@ if you're having trouble using a provided translation, please see the
 </li>
 </ol>
 </div>
-<div class="section">
-<h1><a id="obtaining-support" name="obtaining-support">Obtaining Support</a></h1>
+<div class="section" id="obtaining-support">
+<h1>Obtaining Support</h1>
 <p>If you encounter problems with Mnemo, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
-<a class="reference" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<a class="reference external" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
 <p>The Horde Project runs a number of mailing lists, for individual applications
 and for issues relating to the project as a whole.  Information, archives, and
 subscription information can be found at</p>
 <blockquote>
-<a class="reference" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<a class="reference external" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
 <p>Lastly, Horde developers, contributors and users may also be found on IRC,
 on the channel #horde on the Freenode Network (irc.freenode.net).</p>
 <p>Please keep in mind that Mnemo is free software written by volunteers.  For
 information on reasonable support expectations, please read</p>
 <blockquote>
-<a class="reference" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<a class="reference external" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
 <p>Thanks for using Mnemo!</p>
 <p>The Horde team</p>
 </div>
 </div>
 <div class="footer">
 <hr class="footer" />
-<a class="reference" href="http://cvs.horde.org/co.php/mnemo/docs/INSTALL?onb=FRAMEWORK_3">View document source</a>.
-Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+<a class="reference external" href="http://cvs.horde.org/co.php/mnemo/docs/INSTALL?onb=FRAMEWORK_3">View document source</a>.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
 
 </div>

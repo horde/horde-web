@@ -9,44 +9,44 @@
 <tr><th class="docinfo-name">Revision:</th>
 <td>1.57.6.18</td></tr>
 <tr><th class="docinfo-name">Contact:</th>
-<td><a class="first last reference" href="mailto:imp&#64;lists.horde.org">imp&#64;lists.horde.org</a></td></tr>
+<td><a class="first last reference external" href="mailto:imp&#64;lists.horde.org">imp&#64;lists.horde.org</a></td></tr>
 </tbody>
 </table>
-<div class="contents topic">
-<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference" href="#obtaining-imp" id="id1" name="id1">1&nbsp;&nbsp;&nbsp;Obtaining IMP</a></li>
-<li><a class="reference" href="#prerequisites" id="id2" name="id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
-<li><a class="reference" href="#installing-imp" id="id3" name="id3">3&nbsp;&nbsp;&nbsp;Installing IMP</a></li>
-<li><a class="reference" href="#configuring-imp" id="id4" name="id4">4&nbsp;&nbsp;&nbsp;Configuring IMP</a></li>
-<li><a class="reference" href="#obtaining-support" id="id5" name="id5">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#obtaining-imp" id="id1">1&nbsp;&nbsp;&nbsp;Obtaining IMP</a></li>
+<li><a class="reference internal" href="#prerequisites" id="id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-imp" id="id3">3&nbsp;&nbsp;&nbsp;Installing IMP</a></li>
+<li><a class="reference internal" href="#configuring-imp" id="id4">4&nbsp;&nbsp;&nbsp;Configuring IMP</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id5">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the IMP web-based mail
 client on your system.</p>
-<p>For information on the capabilities and features of IMP, see the file <a class="reference" href="?f=README.html">README</a>
+<p>For information on the capabilities and features of IMP, see the file <a class="reference external" href="?f=README.html">README</a>
 in the top-level directory of the IMP distribution.</p>
-<div class="section">
-<h1><a class="toc-backref" href="#id1" id="obtaining-imp" name="obtaining-imp">1&nbsp;&nbsp;&nbsp;Obtaining IMP</a></h1>
+<div class="section" id="obtaining-imp">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Obtaining IMP</a></h1>
 <p>IMP can be obtained from the Horde website and FTP server, at</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/imp/">http://www.horde.org/imp/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/imp/">ftp://ftp.horde.org/pub/imp/</a></p>
+<p><a class="reference external" href="http://www.horde.org/imp/">http://www.horde.org/imp/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/imp/">ftp://ftp.horde.org/pub/imp/</a></p>
 </blockquote>
 <p>Or use the mirror closest to you:</p>
 <blockquote>
-<a class="reference" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
+<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
 <p>Bleeding-edge development versions of IMP are available via CVS; see the file
-<a class="reference" href="../../horde/docs/?f=HACKING.html">horde/docs/HACKING</a> in the Horde distribution, or the website
-<a class="reference" href="http://www.horde.org/source/">http://www.horde.org/source/</a>, for information on accessing the Horde CVS
+<a class="reference external" href="../../horde/docs/?f=HACKING.html">horde/docs/HACKING</a> in the Horde distribution, or the website
+<a class="reference external" href="http://www.horde.org/source/">http://www.horde.org/source/</a>, for information on accessing the Horde CVS
 repository.</p>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id2" id="prerequisites" name="prerequisites">2&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
+<div class="section" id="prerequisites">
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, IMP <strong>requires</strong> the following:</p>
 <ol class="arabic">
 <li><p class="first">A working Horde installation.</p>
-<p>IMP runs within the <a class="reference" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+<p>IMP runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
 for Web applications written in PHP.  You must install Horde before
 before installing IMP.</p>
 <div class="important">
@@ -57,13 +57,13 @@ earlier versions of Horde will <strong>not</strong> work.</p>
 <p>The Horde Framework can be obtained from the Horde website and FTP server,
 at</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
+<p><a class="reference external" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
 </blockquote>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">Be sure to have completed all of the steps in the
-<a class="reference" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
+<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
 installing IMP.</p>
 </div>
 <p>Many of IMP's prerequisites are also Horde prerequisites.</p>
@@ -76,13 +76,13 @@ support.  To compile the imap extension, the UW-IMAP c-client libray
 must be present on your system.  For help with compiling the imap
 extension ninto PHP, you can view the PHP imap manual entry:</p>
 <blockquote>
-<p><a class="reference" href="http://www.php.net/imap">http://www.php.net/imap</a></p>
+<p><a class="reference external" href="http://www.php.net/imap">http://www.php.net/imap</a></p>
 </blockquote>
 <p>Because installation of the imap extension can be a non-trivial matter,
 further configuration help/advice follows.</p>
 <p>The UW-IMAP c-client library is available from</p>
 <blockquote>
-<p><a class="reference" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a></p>
+<p><a class="reference external" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a></p>
 </blockquote>
 <p>The most recent code is normally located in a file named 'imap.tar.Z'.</p>
 <p>After building the c-client library (instructions are at the top of
@@ -98,7 +98,7 @@ needs to be renamed or linked to libc-client.a, e.g.:</p>
 built-in to both the c-client library and the PHP extension (see the
 <tt class="docutils literal"><span class="pre">--with-imap-ssl</span></tt> configure option to PHP).</p>
 <p>If using TLS or SSL to connect to the IMAP/POP3 server, OpenSSL support
-is <strong>required</strong> in PHP. See <a class="reference" href="#openssl-support">OpenSSL Support</a> below.</p>
+is <strong>required</strong> in PHP. See <a class="reference internal" href="#openssl-support">OpenSSL Support</a> below.</p>
 <div class="tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">If you notice strange behavior when running IMP (e.g. blank
@@ -114,7 +114,7 @@ will go away.</p>
 <p class="last">If running the webserver changerooted (i.e. the default setting
 on OpenBSD), you may need additional configuration on your
 system to ensure the c-client library works properly.
-See: <a class="reference" href="http://lists.horde.org/archives/imp/Week-of-Mon-20050321/041502.html">Configuring c-client for changerooted webservers</a></p>
+See: <a class="reference external" href="http://lists.horde.org/archives/imp/Week-of-Mon-20050321/041502.html">Configuring c-client for changerooted webservers</a></p>
 </div>
 </li>
 <li><p class="first">File Upload Support</p>
@@ -132,25 +132,25 @@ file_uploads = On
 </li>
 <li><p class="first">Your temporary upload directory <strong>must</strong> be writable to the user
 the web server is running as.  If you leave the configuration
-option <tt class="docutils literal"><span class="pre">upload_tmp_dir</span></tt> blank in <tt class="docutils literal"><span class="pre">php.ini</span></tt>, PHP will use the
-default directory compiled into it (normally <tt class="docutils literal"><span class="pre">/tmp</span></tt> on
+option <tt class="docutils literal">upload_tmp_dir</tt> blank in <tt class="docutils literal">php.ini</tt>, PHP will use the
+default directory compiled into it (normally <tt class="docutils literal">/tmp</tt> on
 Unix-like systems).</p>
 </li>
 <li><p class="first">Set the maximum size of the uploaded files via the
-<tt class="docutils literal"><span class="pre">upload_max_filesize</span></tt> configuration option in <tt class="docutils literal"><span class="pre">php.ini</span></tt>.  For
+<tt class="docutils literal">upload_max_filesize</tt> configuration option in <tt class="docutils literal">php.ini</tt>.  For
 example, to allow 5 MB attachments, place the following line in
-your <tt class="docutils literal"><span class="pre">php.ini</span></tt> file:</p>
+your <tt class="docutils literal">php.ini</tt> file:</p>
 <pre class="literal-block">
 upload_max_filesize = 5M
 </pre>
 </li>
 </ol>
 </blockquote>
-<p>If either <tt class="docutils literal"><span class="pre">file_uploads</span></tt> is turned off, or your temporary upload
+<p>If either <tt class="docutils literal">file_uploads</tt> is turned off, or your temporary upload
 directory is <em>not</em> writable by the server, all file upload
 functionality will be disabled by Horde/IMP and will not be available
 to the user.</p>
-<p>See the <a class="reference" href="http://wiki.horde.org/FAQ/Admin/FileUploads">File Uploads</a> FAQ entry for further information.</p>
+<p>See the <a class="reference external" href="http://wiki.horde.org/FAQ/Admin/FileUploads">File Uploads</a> FAQ entry for further information.</p>
 </blockquote>
 </li>
 </ol>
@@ -165,21 +165,21 @@ in IMP:</p>
 Without the extension, all S/MIME options will be disabled.</p>
 <p>Additionally, the OpenSSL PHP extension is REQUIRED if using TLS or SSL
 to connect to the IMAP/POP3 server.</p>
-<p>See <a class="reference" href="http://www.php.net/openssl">http://www.php.net/openssl</a> for information on compiling OpenSSL
+<p>See <a class="reference external" href="http://www.php.net/openssl">http://www.php.net/openssl</a> for information on compiling OpenSSL
 into PHP.</p>
 </li>
 <li><p class="first">tidy <tt class="docutils literal"><span class="pre">--with-tidy</span></tt> (PHP 5+ only)</p>
 <p>The tidy PHP extension is required if you want IMP to sanitize the
 output of HTML messages before displaying to the user and if you want
 to clean and repair outgoing HTML messages composed via the HTML
-composition mode.  See <tt class="docutils literal"><span class="pre">imp/config/mime_drivers.php.dist</span></tt> for
+composition mode.  See <tt class="docutils literal">imp/config/mime_drivers.php.dist</tt> for
 further instructions on how to enable this feature.</p>
 </li>
 </ol>
 </blockquote>
 <ol class="arabic" start="3">
 <li><p class="first">The following PEAR modules:
-(See <a class="reference" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PEAR modules)</p>
+(See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PEAR modules)</p>
 <ol class="loweralpha">
 <li><p class="first">Auth_SASL [OPTIONAL]</p>
 <p>Auth_SASL is required if your IMAP server uses CRAM-MD5 or DIGEST-MD5
@@ -196,11 +196,11 @@ message views that message.</p>
 </ol>
 </li>
 <li><p class="first">The following PECL modules:
-(See <a class="reference" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PECL modules)</p>
+(See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PECL modules)</p>
 <ol class="loweralpha">
 <li><p class="first">idn [OPTIONAL]</p>
 <p>idn is required in order to handle Internationalized Domain Names
-(see <a class="reference" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>).</p>
+(see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>).</p>
 </li>
 </ol>
 </li>
@@ -210,14 +210,14 @@ from a Web browser, it is only an IMAP and POP3 <em>client</em>, like Outlook,
 Apple Mail or Thunderbird. You must have access to an IMAP or POP3
 server(s) on which your users' mail is stored in order to use IMP.</p>
 <p>IMAP is <em>strongly</em> recommended over POP3.  See, e.g.,
-<a class="reference" href="http://www.imap.org/imap.vs.pop.brief.html">http://www.imap.org/imap.vs.pop.brief.html</a></p>
+<a class="reference external" href="http://www.imap.org/imap.vs.pop.brief.html">http://www.imap.org/imap.vs.pop.brief.html</a></p>
 <p>Freely available IMAP servers (for *nix systems) that have been verified
 to work with IMP include:</p>
 <ul class="simple">
-<li>Courier-IMAP (<a class="reference" href="http://www.inter7.com/courierimap.html">http://www.inter7.com/courierimap.html</a>)</li>
-<li>Cyrus (<a class="reference" href="http://asg.web.cmu.edu/cyrus/">http://asg.web.cmu.edu/cyrus/</a>)</li>
-<li>Dovecot (<a class="reference" href="http://www.dovecot.org/">http://www.dovecot.org/</a>)</li>
-<li>UW-IMAP (<a class="reference" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a>)</li>
+<li>Courier-IMAP (<a class="reference external" href="http://www.inter7.com/courierimap.html">http://www.inter7.com/courierimap.html</a>)</li>
+<li>Cyrus (<a class="reference external" href="http://asg.web.cmu.edu/cyrus/">http://asg.web.cmu.edu/cyrus/</a>)</li>
+<li>Dovecot (<a class="reference external" href="http://www.dovecot.org/">http://www.dovecot.org/</a>)</li>
+<li>UW-IMAP (<a class="reference external" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a>)</li>
 </ul>
 </li>
 </ol>
@@ -236,8 +236,8 @@ integrated with other Horde applications to provide a unified interface to
 contact management throughout the Horde suite.</p>
 <p>Turba is available from:</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/turba/">http://www.horde.org/turba/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/turba/">ftp://ftp.horde.org/pub/turba/</a></p>
+<p><a class="reference external" href="http://www.horde.org/turba/">http://www.horde.org/turba/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/turba/">ftp://ftp.horde.org/pub/turba/</a></p>
 </blockquote>
 <p>Turba provides a local address book and an LDAP directory search function
 to IMP.</p>
@@ -249,15 +249,15 @@ integrated with other Horde applications to provide a unified interface to
 filter management throughout the Horde suite.</p>
 <p>Ingo is available from:</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/ingo/">http://www.horde.org/ingo/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/ingo/">ftp://ftp.horde.org/pub/ingo/</a></p>
+<p><a class="reference external" href="http://www.horde.org/ingo/">http://www.horde.org/ingo/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/ingo/">ftp://ftp.horde.org/pub/ingo/</a></p>
 </blockquote>
 <p>Ingo provides the mail filtering interfaces to IMP - there is no built-in
 filtering in IMP.</p>
 <p>You must use the 1.x branch of Ingo with IMP 4.x.</p>
 <p>To use IMAP client-side filtering (i.e. the filtering provided by IMP 3.x),
-ingo should use the <tt class="docutils literal"><span class="pre">null</span></tt> driver and the <tt class="docutils literal"><span class="pre">imap</span></tt> script settings (set
-in <tt class="docutils literal"><span class="pre">ingo/config/backends.php</span></tt>).</p>
+ingo should use the <tt class="docutils literal">null</tt> driver and the <tt class="docutils literal">imap</tt> script settings (set
+in <tt class="docutils literal">ingo/config/backends.php</tt>).</p>
 </li>
 <li><p class="first">Nag, the Horde tasks manager.</p>
 <p>Nag is the Horde tasks management application, designed to be integrated
@@ -265,8 +265,8 @@ with other Horde applications to provide a unified interface to task
 management throughout the Horde suite.</p>
 <p>Nag is available from:</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/nag/">http://www.horde.org/nag/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/nag/">ftp://ftp.horde.org/pub/nag/</a></p>
+<p><a class="reference external" href="http://www.horde.org/nag/">http://www.horde.org/nag/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/nag/">ftp://ftp.horde.org/pub/nag/</a></p>
 </blockquote>
 <p>If nag is available on your system, users can easily create new tasks from
 individual email messages.</p>
@@ -278,8 +278,8 @@ integrated with other Horde applications to provide a unified interface to
 access VFS filesystems throughout the Horde suite.</p>
 <p>Gollem is available from:</p>
 <blockquote>
-<p><a class="reference" href="http://www.horde.org/gollem/">http://www.horde.org/gollem/</a></p>
-<p><a class="reference" href="ftp://ftp.horde.org/pub/gollem/">ftp://ftp.horde.org/pub/gollem/</a></p>
+<p><a class="reference external" href="http://www.horde.org/gollem/">http://www.horde.org/gollem/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/gollem/">ftp://ftp.horde.org/pub/gollem/</a></p>
 </blockquote>
 <p>Gollem allows a user to attach files from various VFS filesystems to
 outgoing messages in IMP.</p>
@@ -291,7 +291,7 @@ You must install and configure aspell to use IMP's spell-check feature.</p>
 <p>Version 0.60 or higher is REQUIRED.</p>
 <p>You can obtain aspell from:</p>
 <blockquote>
-<p><a class="reference" href="http://aspell.sourceforge.net/">http://aspell.sourceforge.net/</a></p>
+<p><a class="reference external" href="http://aspell.sourceforge.net/">http://aspell.sourceforge.net/</a></p>
 </blockquote>
 </li>
 <li><p class="first">A web server with PATH_INFO support.</p>
@@ -308,8 +308,8 @@ slower and less reliable.</p>
 </li>
 </ol>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id3" id="installing-imp" name="installing-imp">3&nbsp;&nbsp;&nbsp;Installing IMP</a></h1>
+<div class="section" id="installing-imp">
+<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Installing IMP</a></h1>
 <p>IMP is written in PHP, and must be installed in a web-accessible directory.
 The precise location of this directory will differ from system to system.
 Conventionally, IMP is installed directly underneath Horde in the web server's
@@ -317,7 +317,7 @@ document tree.</p>
 <p>Since IMP is written in PHP, there is no compilation necessary; simply expand
 the distribution where you want it to reside and rename the root directory of
 the distribution to whatever you wish to appear in the URL.  For example, with
-the Apache web server's default document root of <tt class="docutils literal"><span class="pre">/usr/local/apache/htdocs</span></tt>,
+the Apache web server's default document root of <tt class="docutils literal">/usr/local/apache/htdocs</tt>,
 you would type:</p>
 <pre class="literal-block">
 cd /usr/local/apache/htdocs/horde
@@ -329,26 +329,26 @@ mv imp-x.y.z imp
 http://your-server/horde/imp/
 </pre>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id4" id="configuring-imp" name="configuring-imp">4&nbsp;&nbsp;&nbsp;Configuring IMP</a></h1>
+<div class="section" id="configuring-imp">
+<h1><a class="toc-backref" href="#id4">4&nbsp;&nbsp;&nbsp;Configuring IMP</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring Horde for IMP</p>
 <ol class="loweralpha">
 <li><p class="first">Register the application</p>
-<p>In <tt class="docutils literal"><span class="pre">horde/config/registry.php</span></tt>, find the <tt class="docutils literal"><span class="pre">applications['imp']</span></tt>
+<p>In <tt class="docutils literal">horde/config/registry.php</tt>, find the <tt class="docutils literal"><span class="pre">applications['imp']</span></tt>
 stanza.  The default settings here should be okay, but you can change
 them if desired.  If you have changed the location of IMP relative to
 Horde, either in the URL, in the filesystem or both, you must update the
-<tt class="docutils literal"><span class="pre">fileroot</span></tt> and <tt class="docutils literal"><span class="pre">webroot</span></tt> settings to their correct values.</p>
+<tt class="docutils literal">fileroot</tt> and <tt class="docutils literal">webroot</tt> settings to their correct values.</p>
 </li>
 <li><p class="first">Enable IMP authentication [OPTIONAL]</p>
 <p>If you would prefer that your users authenticate directly with IMP,
 without having to authenticate through Horde first, load the
-<tt class="docutils literal"><span class="pre">Administration/Setup/Authentication</span></tt> page and from the <tt class="docutils literal"><span class="pre">What</span> <span class="pre">backend</span>
-<span class="pre">should</span> <span class="pre">we</span> <span class="pre">use</span> <span class="pre">for</span> <span class="pre">authenticating</span> <span class="pre">users</span> <span class="pre">to</span> <span class="pre">Horde</span></tt> pulldown menu select
-<tt class="docutils literal"><span class="pre">Let</span> <span class="pre">a</span> <span class="pre">Horde</span> <span class="pre">application</span> <span class="pre">handle</span> <span class="pre">authentication</span></tt>.  (Please see the
-second note below.) Select <tt class="docutils literal"><span class="pre">imp</span></tt> from the <tt class="docutils literal"><span class="pre">The</span> <span class="pre">application</span> <span class="pre">which</span> <span class="pre">is</span>
-<span class="pre">providing</span> <span class="pre">authentication</span></tt> pulldown menu.</p>
+<tt class="docutils literal">Administration/Setup/Authentication</tt> page and from the <tt class="docutils literal">What backend
+should we use for authenticating users to Horde</tt> pulldown menu select
+<tt class="docutils literal">Let a Horde application handle authentication</tt>.  (Please see the
+second note below.) Select <tt class="docutils literal">imp</tt> from the <tt class="docutils literal">The application which is
+providing authentication</tt> pulldown menu.</p>
 <div class="note">
 <p class="first admonition-title">Note</p>
 <p class="last"><strong>You will have to log in twice if you don't do this</strong> -- Once
@@ -360,11 +360,11 @@ to Horde and a second time to IMP.</p>
 IMP using the Horde Administration/Setup page if you first
 enabled IMP authentication for Horde.  You must set Horde to
 use another authentication method (refer to the
-<a class="reference" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file), configure IMP, then reset Horde
+<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file), configure IMP, then reset Horde
 to use IMP authentication.  One way to reset Horde in order to
 reach the Administration page is to replace the Horde
-configuration file <tt class="docutils literal"><span class="pre">conf.php</span></tt> with the original in
-<tt class="docutils literal"><span class="pre">horde/config/conf.php.dist</span></tt>.  You should of course back up
+configuration file <tt class="docutils literal">conf.php</tt> with the original in
+<tt class="docutils literal">horde/config/conf.php.dist</tt>.  You should of course back up
 your current settings since they will otherwise be permanently
 lost.</p>
 </div>
@@ -374,7 +374,7 @@ lost.</p>
 <li><p class="first">Creating the database table</p>
 <p>The specific steps to create the IMP database table depend on which
 database you've chosen to use.</p>
-<p>First, look in <tt class="docutils literal"><span class="pre">scripts/sql/</span></tt> to see if a script already exists
+<p>First, look in <tt class="docutils literal">scripts/sql/</tt> to see if a script already exists
 for your database type.  If so, you should be able to simply execute that
 script as superuser in your database.  (Note that executing the script as
 the &quot;horde&quot; user will probably fail when granting privileges.)</p>
@@ -383,9 +383,9 @@ file imp.sql as a starting point.  If you need assistance in creating
 databases, you may wish to let us know on the IMP mailing list.</p>
 </li>
 <li><p class="first">Configuring IMP</p>
-<p>To configure IMP, change to the <tt class="docutils literal"><span class="pre">imp/config/</span></tt> directory of the installed
-distribution, and make copies of all of the configuration <tt class="docutils literal"><span class="pre">dist</span></tt> files
-without the <tt class="docutils literal"><span class="pre">dist</span></tt> suffix:</p>
+<p>To configure IMP, change to the <tt class="docutils literal">imp/config/</tt> directory of the installed
+distribution, and make copies of all of the configuration <tt class="docutils literal">dist</tt> files
+without the <tt class="docutils literal">dist</tt> suffix:</p>
 <pre class="literal-block">
 cd config/
 for foo in *.dist; do cp $foo `basename $foo .dist`; done
@@ -401,7 +401,7 @@ for most sites.</p>
 <ol class="loweralpha">
 <li><p class="first">servers.php</p>
 <p>You must be sure to list your IMAP/POP3 server names and
-configuration information in <tt class="docutils literal"><span class="pre">servers.php</span></tt> (unless you allow
+configuration information in <tt class="docutils literal">servers.php</tt> (unless you allow
 users to choose any server).</p>
 </li>
 <li><p class="first">motd.php</p>
@@ -410,25 +410,25 @@ information, or remove motd.php.</p>
 </li>
 </ol>
 <p>You must login to Horde as a Horde Administrator to finish the
-configuration of IMP.  Use the Horde <tt class="docutils literal"><span class="pre">Administration</span></tt> menu item to get to
-the administration page, and then click on the <tt class="docutils literal"><span class="pre">Setup</span></tt> icon to get the
-configuration page.  Select <tt class="docutils literal"><span class="pre">Mail</span></tt> from the selection list of
+configuration of IMP.  Use the Horde <tt class="docutils literal">Administration</tt> menu item to get to
+the administration page, and then click on the <tt class="docutils literal">Setup</tt> icon to get the
+configuration page.  Select <tt class="docutils literal">Mail</tt> from the selection list of
 applications.  Fill in or change any configuration values as needed.  When
-done click on <tt class="docutils literal"><span class="pre">Generate</span> <span class="pre">Mail</span> <span class="pre">Configuration</span></tt> to generate the <tt class="docutils literal"><span class="pre">conf.php</span></tt>
+done click on <tt class="docutils literal">Generate Mail Configuration</tt> to generate the <tt class="docutils literal">conf.php</tt>
 file.  If your web server doesn't have write permissions to the IMP
 configuration directory or file, it will not be able to write the file.  In
-this case, go back to <tt class="docutils literal"><span class="pre">Setup</span></tt> and choose one of the other methods to
-create the configuration file <tt class="docutils literal"><span class="pre">imp/config/conf.php</span></tt>.</p>
+this case, go back to <tt class="docutils literal">Setup</tt> and choose one of the other methods to
+create the configuration file <tt class="docutils literal">imp/config/conf.php</tt>.</p>
 <p>Note for international users: IMP uses GNU gettext to provide local
 translations of text displayed by applications; the translations are found
-in the <tt class="docutils literal"><span class="pre">po/</span></tt> directory.  If a translation is not yet available for your
-locale (and you wish to create one), see the <tt class="docutils literal"><span class="pre">horde/po/README</span></tt> file, or
+in the <tt class="docutils literal">po/</tt> directory.  If a translation is not yet available for your
+locale (and you wish to create one), see the <tt class="docutils literal">horde/po/README</tt> file, or
 if you're having trouble using a provided translation, please see the
-<a class="reference" href="../../horde/docs/?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+<a class="reference external" href="../../horde/docs/?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
 <p>IMP Configuration Pointers</p>
 <ul>
 <li><p class="first">If you would like IMP to scan all text messages for UUencoded data, you
-must make this change in <tt class="docutils literal"><span class="pre">imp/config/mime_drivers.php</span></tt>:</p>
+must make this change in <tt class="docutils literal">imp/config/mime_drivers.php</tt>:</p>
 <pre class="literal-block">
 $mime_drivers['imp']['plain']['uuencode'] = true;
 </pre>
@@ -439,7 +439,7 @@ feature is disabled by default.</p>
 <li><p class="first">By default, IMP is configured to NOT display text/html message parts
 inline.  This is done for various security reasons.  If you would like
 to see text/html parts inline, you must make this change in
-<tt class="docutils literal"><span class="pre">imp/config/mime_drivers.php</span></tt>:</p>
+<tt class="docutils literal">imp/config/mime_drivers.php</tt>:</p>
 <pre class="literal-block">
 $mime_drivers['imp']['html']['inline'] = true;
 </pre>
@@ -448,7 +448,7 @@ $mime_drivers['imp']['html']['inline'] = true;
 </li>
 <li><p class="first">Securing IMP</p>
 <p>Before you can secure IMP, you need a secure Horde installation.  Please
-read the file in <a class="reference" href="../../horde/docs/?f=SECURITY.html">horde/docs/SECURITY</a> for Horde security information
+read the file in <a class="reference external" href="../../horde/docs/?f=SECURITY.html">horde/docs/SECURITY</a> for Horde security information
 before proceeding.</p>
 <p>There are two channels by which, unless steps are taken to avoid it, IMP
 encourages users to pass their IMAP and POP3 passwords around the Internet
@@ -460,20 +460,20 @@ IMP is running; some sites may wish to disable non-SSL access entirely.</p>
 <p>The second channel is between the Web server and their IMAP or POP3 server.
 The simplest way to avoid this is to have the mail server running on the
 same system as the Web server, and configuring IMP to connect to the IMAP
-or POP3 server on <tt class="docutils literal"><span class="pre">localhost</span></tt> instead of on the Internet hostname.  In
+or POP3 server on <tt class="docutils literal">localhost</tt> instead of on the Internet hostname.  In
 cases where that is not possible, we recommend using IMAP-SSL or POP3-SSL
 to ensure that users' passwords remain safe after they have entrusted them
 to IMP.</p>
 <p>Other security steps you can take to increase security include:</p>
 <ul class="simple">
 <li>Use session cookies instead or URL based sessions.</li>
-<li>Set your php <tt class="docutils literal"><span class="pre">session.entropy_length</span></tt> to a larger value (e.g. 16) and
-<tt class="docutils literal"><span class="pre">session.entropy_file</span></tt> to a random source (e.g. <tt class="docutils literal"><span class="pre">/dev/urandom</span></tt>)</li>
+<li>Set your php <tt class="docutils literal">session.entropy_length</tt> to a larger value (e.g. 16) and
+<tt class="docutils literal">session.entropy_file</tt> to a random source (e.g. <tt class="docutils literal">/dev/urandom</tt>)</li>
 <li>Enable and use the php mycrypt extension.</li>
 <li>If your database, mail server, and web server are on the same host
 machine, then:<ul>
 <li>use unix socket database access and disable tcp database access.</li>
-<li>use <tt class="docutils literal"><span class="pre">localhost</span></tt> for all TCP/IP connections to avoid the network.</li>
+<li>use <tt class="docutils literal">localhost</tt> for all TCP/IP connections to avoid the network.</li>
 <li>use the command-line sendmail for sending mail if possible.</li>
 </ul>
 </li>
@@ -482,7 +482,7 @@ machine, then:<ul>
 <li><p class="first">Testing IMP</p>
 <p>Once you have configured IMP, bring up the included test page in your Web
 browser to ensure that all necessary prerequisites have been met.  See the
-<a class="reference" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> document for further details on Horde test
+<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> document for further details on Horde test
 scripts. If you installed IMP as described above, the URL to the test page
 would be:</p>
 <pre class="literal-block">
@@ -491,11 +491,11 @@ http://your-server/horde/imp/test.php
 <p>The test script will also allow you to test your connection to the mail
 server and provide some auto-detected configuration parameters that can
 then be inserted into the server configuration located in
-<tt class="docutils literal"><span class="pre">imp/config/servers.php</span></tt>.</p>
+<tt class="docutils literal">imp/config/servers.php</tt>.</p>
 <p>Next, use IMP to login to a known working IMAP or POP3 server.  Test at
 least the following:</p>
 <ul class="simple">
-<li>Sending mail (via the <tt class="docutils literal"><span class="pre">Compose</span></tt> item in the menu bar).</li>
+<li>Sending mail (via the <tt class="docutils literal">Compose</tt> item in the menu bar).</li>
 <li>Setting preferences (check to see if they survive after logging out and
 back in, if you are using an SQL or LDAP preferences system).</li>
 <li>Reading mail.</li>
@@ -505,7 +505,7 @@ back in, if you are using an SQL or LDAP preferences system).</li>
 </ul>
 </li>
 <li><p class="first">Tuning IMP (Performance)</p>
-<p>See <a class="reference" href="../../horde/docs/?f=PERFORMANCE.html">horde/docs/PERFORMANCE</a>.</p>
+<p>See <a class="reference external" href="../../horde/docs/?f=PERFORMANCE.html">horde/docs/PERFORMANCE</a>.</p>
 <p>IMP Specific Performance Information</p>
 <p>As of IMP 4.2, IMP can now use persistent caching on the server side to
 store information about user's messages.  This results in much reduced
@@ -513,36 +513,36 @@ IMAP server traffic and requires the server to parse the structure of every
 message only once.  The tradeoff is your cache backend must be able to
 handle the potentially large amounts of cached data this option will
 produce.</p>
-<p>To use this caching, you must have a <tt class="docutils literal"><span class="pre">Cache</span> <span class="pre">System</span></tt> configured in Horde's
-<tt class="docutils literal"><span class="pre">Administration/Setup</span></tt> screen and have the relevant settings enabled in
-IMP's setup screen (<tt class="docutils literal"><span class="pre">Administration/Setup/Webmail/Mailbox</span> <span class="pre">and</span> <span class="pre">Fetchmail</span></tt>.</p>
+<p>To use this caching, you must have a <tt class="docutils literal">Cache System</tt> configured in Horde's
+<tt class="docutils literal">Administration/Setup</tt> screen and have the relevant settings enabled in
+IMP's setup screen (<tt class="docutils literal">Administration/Setup/Webmail/Mailbox and Fetchmail</tt>.</p>
 </li>
 </ol>
 </div>
-<div class="section">
-<h1><a class="toc-backref" href="#id5" id="obtaining-support" name="obtaining-support">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<div class="section" id="obtaining-support">
+<h1><a class="toc-backref" href="#id5">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with IMP, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
-<a class="reference" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<a class="reference external" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
 <p>The Horde Project runs a number of mailing lists, for individual applications
 and for issues relating to the project as a whole.  Information, archives, and
 subscription information can be found at</p>
 <blockquote>
-<a class="reference" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<a class="reference external" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
 <p>Lastly, Horde developers, contributors and users may also be found on IRC,
 on the channel #horde on the Freenode Network (irc.freenode.net).</p>
 <p>Please keep in mind that IMP is free software written by volunteers.  For
 information on reasonable support expectations, please read</p>
 <blockquote>
-<a class="reference" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<a class="reference external" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
 <p>Thanks for using IMP!</p>
 <p>The IMP team</p>
 </div>
 </div>
 <div class="footer">
 <hr class="footer" />
-<a class="reference" href="http://cvs.horde.org/co.php/imp/docs/INSTALL?onb=FRAMEWORK_3">View document source</a>.
-Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+<a class="reference external" href="http://cvs.horde.org/co.php/imp/docs/INSTALL?onb=FRAMEWORK_3">View document source</a>.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
 
 </div>
