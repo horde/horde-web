@@ -29,7 +29,7 @@ $quotes = array(
 -- Gregory Szorc, Case Western Reserve University',
 
     '"IMHO, DIMP is the Ferrari of the webmail software. You\'ll end up with a webmail with features that no other software has match for."
--- Mário Gamito, qmail rules',
+-- MÃ¡rio Gamito, qmail rules',
 
     '"Chora is by far the most interesting tool. I really like how the tool looks and works."
 -- Michael Flanakin',
