@@ -1,15 +1,19 @@
 <h1>Release notes for the latest release</h1><pre>
 The Horde Team is pleased to announce the final release of the Horde
-Application Framework version 3.3.8.
+Application Framework version 3.3.9.
 
 The Horde Application Framework is a modular, general-purpose web application
 framework written in PHP.  It provides an extensive array of classes that are
 targeted at the common problems and tasks involved in developing modern web
 applications.
 
-The major changes compared to Horde version 3.3.7 are:
-    * Fixed a regression with a wrong include path.
+Thanks to Naumann IT Security Consulting for reporting the XSS vulnerability.
 
-The major changes compared to Horde version 3.3.6 are:
-    * Synchronization improvements.
-    * Multiple other small bug fixes and improvements.</pre>
+Thanks to Secunia for releasing an advisory for the new CSRF protection in the
+preference interface http://secunia.com/advisories/39860.
+
+The major changes compared to Horde version 3.3.8 are:
+    * Fixed XSS vulnerability in util/icon_browser.php.
+    * Protected preference forms against CSRF attacks.
+    * Minor bug fixes and improvements.
+    * Updated Estonian translation.</pre>
