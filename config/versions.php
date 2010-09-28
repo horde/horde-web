@@ -3,31 +3,31 @@
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '3.3.8',
-        'date' => 'April 28 2010'
+        'ver' => '3.3.9',
+        'date' => 'September 28 2010'
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '1.2.6',
-        'date' => 'April 29 2010',
+        'ver' => '1.2.7',
+        'date' => 'September 28 2010',
         // Define 'dir' if it is not the same as the array key
         'dir' => 'horde-groupware'
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '1.2.6',
-        'date' => 'April 29 2010',
+        'ver' => '1.2.7',
+        'date' => 'September 28 2010',
         'dir' => 'horde-webmail'
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H3 (4.3.7)',
-        'date' => 'April 27 2010'
+        'ver' => 'H3 (4.3.8)',
+        'date' => 'September 28 2010'
     ),
     'dimp' => array(
         'name' => 'DIMP',
-        'ver' => 'H3 (1.1.4)',
-        'date' => 'December 15 2009'
+        'ver' => 'H3 (1.1.5)',
+        'date' => 'September 28 2010'
     ),
     'mimp' => array(
         'name' => 'MIMP',
@@ -36,13 +36,13 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H3 (2.3.4)',
-        'date' => 'April 27 2010'
+        'ver' => 'H3 (2.3.5)',
+        'date' => 'September 28 2010'
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H3 (1.2.4)',
-        'date' => 'April 27 2010'
+        'ver' => 'H3 (1.2.5)',
+        'date' => 'September 28 2010'
     ),
     'klutz' => array(
         'name' => 'Klutz',
@@ -51,18 +51,18 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H3 (2.3.4)',
-        'date' => 'April 27 2010'
+        'ver' => 'H3 (2.3.5)',
+        'date' => 'September 28 2010'
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H3 (2.3.5)',
-        'date' => 'April 27 2010'
+        'ver' => 'H3 (2.3.6)',
+        'date' => 'September 28 2010'
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H3 (2.2.3)',
-        'date' => 'December 15 2009'
+        'ver' => 'H3 (2.2.4)',
+        'date' => 'September 28 2010'
     ),
     'chora' => array(
         'name' => 'Chora',
@@ -71,8 +71,8 @@ $horde_apps_stable = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H3 (1.1.1)',
-        'date' => 'November 6 2009'
+        'ver' => 'H3 (1.1.2)',
+        'date' => 'September 28 2010'
     ),
     'passwd' => array(
         'name' => 'Passwd',
@@ -106,8 +106,8 @@ $horde_apps_stable = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H3 (1.1.1)',
-        'date' => 'April 28 2010'
+        'ver' => 'H3 (1.1.2)',
+        'date' => 'September 28 2010'
     )
 );
 

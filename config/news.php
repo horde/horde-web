@@ -18,6 +18,7 @@ $horde_news = array(
          ),
          'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Ansel H3 (1.1.2)', '2010/000566'),
                 array('2010-04-28', 'Ansel H3 (1.1.1)', '2010/000547'),
                 array('2009-11-06', 'Ansel H3 (1.1)', '2009/000528'),
                 array('2009-03-25', 'Ansel H3 (1.0)', '2009/000496')),
@@ -57,6 +58,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'DIMP H3 (1.1.5)', '2010/000561'),
                 array('2009-12-15', 'DIMP H3 (1.1.4)', '2009/000531'),
                 array('2009-09-14', 'DIMP H3 (1.1.3)', '2009/000518'),
                 array('2009-04-13', 'DIMP H3 (1.1.2)', '2009/000499'),
@@ -100,6 +102,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Gollem H3 (1.1.2)', '2010/000565'),
                 array('2009-11-06', 'Gollem H3 (1.1.1)', '2009/000524'),
                 array('2009-03-19', 'Gollem H3 (1.1)', '2009/000495'),
                 array('2008-10-09', 'Gollem H3 (1.0.4)', '2008/000458'),
@@ -123,6 +126,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Horde Groupware 1.2.7', '2010/000567'),
                 array('2010-04-29', 'Horde Groupware 1.2.6', '2010/000554'),
                 array('2009-12-15', 'Horde Groupware 1.2.5', '2009/000538'),
                 array('2009-09-14', 'Horde Groupware 1.2.4', '2009/000520'),
@@ -169,6 +173,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Horde 3.3.9', '2010/000557'),
                 array('2010-04-28', 'Horde 3.3.8', '2010/000553'),
                 array('2010-04-27', 'Horde 3.3.7', '2010/000541'),
                 array('2009-12-15', 'Horde 3.3.6', '2009/000529'),
@@ -230,6 +235,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'IMP H3 (4.3.8)', '2010/000558'),
                 array('2010-04-27', 'IMP H3 (4.3.7)', '2010/000542'),
                 array('2009-12-15', 'IMP H3 (4.3.6)', '2009/000530'),
                 array('2009-09-14', 'IMP H3 (4.3.5)', '2009/000517'),
@@ -264,6 +270,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Ingo H3 (1.2.5)', '2010/000560'),
                 array('2010-04-27', 'Ingo H3 (1.2.4)', '2010/000544'),
                 array('2009-12-15', 'Ingo H3 (1.2.3)', '2009/000534'),
                 array('2009-09-14', 'Ingo H3 (1.2.2)', '2009/000516'),
@@ -329,6 +336,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Kronolith H3 (2.3.5)', '2010/000562'),
                 array('2010-04-27', 'Kronolith H3 (2.3.4)', '2010/000546'),
                 array('2009-12-15', 'Kronolith H3 (2.3.3)', '2009/000536'),
                 array('2009-09-14', 'Kronolith H3 (2.3.2)', '2009/000513'),
@@ -380,6 +388,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Mnemo H3 (2.2.4)', '2010/000564'),
                 array('2009-12-15', 'Mnemo H3 (2.2.3)', '2009/000537'),
                 array('2009-09-14', 'Mnemo H3 (2.2.2)', '2009/000515'),
                 array('2008-09-11', 'Mnemo H3 (2.2.1)', '2008/000434'),
@@ -403,6 +412,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Nag H3 (2.3.6)', '2010/000563'),
                 array('2010-04-27', 'Nag H3 (2.3.5)', '2010/000545'),
                 array('2009-12-15', 'Nag H3 (2.3.4)', '2009/000535'),
                 array('2009-09-14', 'Nag H3 (2.3.3)', '2009/000514'),
@@ -452,6 +462,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Turba H3 (2.3.5)', '2010/000559'),
                 array('2010-04-27', 'Turba H3 (2.3.4)', '2010/000543'),
                 array('2009-12-15', 'Turba H3 (2.3.3)', '2009/000533'),
                 array('2009-09-14', 'Turba H3 (2.3.2)', '2009/000521'),
@@ -508,6 +519,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-09-28', 'Horde Groupware Webmail Edition 1.2.7', '2010/000568'),
                 array('2010-04-29', 'Horde Groupware Webmail Edition 1.2.6', '2010/000555'),
                 array('2009-12-15', 'Horde Groupware Webmail Edition 1.2.5', '2009/000539'),
                 array('2009-09-14', 'Horde Groupware Webmail Edition 1.2.4', '2009/000522'),
