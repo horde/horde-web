@@ -71,13 +71,16 @@ will be needed in the <tt>horde-git/horde/config/registry.php</tt> file due to
 the symlinks.</p>
 
 <p>Also, in addition to the normal INSTALL procedures and database creation
-scripts that need to be run for each application, you will need to create tables
-for the Horde Content system. This system is currently only used in Kronolith
-for storing event and calendar tags. The creation of these tables will
+scripts that need to be run for Horde, you will need to run the database
+migration scripts for most of the applications. The creation of these tables will
 eventually be part of the normal install procedure, but until it then, you
 will need to manually run:</p>
 
-<pre><code>horde/bin/db_migrate content</code></pre>
+<pre><code>horde/bin/db_migrate {application_name}</code></pre>
+
+<p>All installed applications that contain a migration/ directory will need this
+to be run. INCLUDING the <em>content</em> application, as this is the system
+that takes care of tag storage for the applications that use them.</p>
 
 <p>If installing the framework libraries directly via PEAR, you will need to
 define your horde application directory (i.e. the filesystem directory where
