@@ -58,6 +58,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-10-25', 'DIMP H3 (1.1.6)', '2010/000571'),
                 array('2010-09-28', 'DIMP H3 (1.1.5)', '2010/000561'),
                 array('2009-12-15', 'DIMP H3 (1.1.4)', '2009/000531'),
                 array('2009-09-14', 'DIMP H3 (1.1.3)', '2009/000518'),
@@ -126,6 +127,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-10-25', 'Horde Groupware 1.2.8', '2010/000572'),
                 array('2010-09-28', 'Horde Groupware 1.2.7', '2010/000567'),
                 array('2010-04-29', 'Horde Groupware 1.2.6', '2010/000554'),
                 array('2009-12-15', 'Horde Groupware 1.2.5', '2009/000538'),
@@ -173,6 +175,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-10-25', 'Horde 3.3.10', '2010/000569'),
                 array('2010-09-28', 'Horde 3.3.9', '2010/000557'),
                 array('2010-04-28', 'Horde 3.3.8', '2010/000553'),
                 array('2010-04-27', 'Horde 3.3.7', '2010/000541'),
@@ -235,6 +238,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-10-25', 'IMP H3 (4.3.9)', '2010/000570'),
                 array('2010-09-28', 'IMP H3 (4.3.8)', '2010/000558'),
                 array('2010-04-27', 'IMP H3 (4.3.7)', '2010/000542'),
                 array('2009-12-15', 'IMP H3 (4.3.6)', '2009/000530'),
@@ -519,6 +523,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-10-25', 'Horde Groupware Webmail Edition 1.2.8', '2010/000573'),
                 array('2010-09-28', 'Horde Groupware Webmail Edition 1.2.7', '2010/000568'),
                 array('2010-04-29', 'Horde Groupware Webmail Edition 1.2.6', '2010/000555'),
                 array('2009-12-15', 'Horde Groupware Webmail Edition 1.2.5', '2009/000539'),
