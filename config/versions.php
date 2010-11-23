@@ -3,20 +3,20 @@
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '3.3.10',
-        'date' => 'October 25 2010'
+        'ver' => '3.3.11',
+        'date' => 'November 22 2010'
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '1.2.8',
-        'date' => 'October 25 2010',
+        'ver' => '1.2.9',
+        'date' => 'November 22 2010',
         // Define 'dir' if it is not the same as the array key
         'dir' => 'horde-groupware'
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '1.2.8',
-        'date' => 'October 25 2010',
+        'ver' => '1.2.9',
+        'date' => 'November 22 2010',
         'dir' => 'horde-webmail'
     ),
     'imp' => array(
