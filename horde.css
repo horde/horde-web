@@ -316,13 +316,14 @@ table.roadmap .planned {
     background-color: #fa0;
 }
 table.roadmap .cancelled {
-    background-color: #d00;
+    background-color: #c5c5c5;
+    text-decoration: line-through;
 }
 
 .dimmed, .dimmed td {
     color: #aaa;
 }
-.dimmed table.roadmap th {
+.dimmed table.roadmap th, .dimmed table.roadmap .cancelled {
     background-color: #fff;
 }
 .dimmed table.roadmap th, .dimmed table.roadmap td {
