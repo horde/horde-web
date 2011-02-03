@@ -66,9 +66,12 @@ web-accessible directory you specified in <tt>install_dev.conf</tt>, symlink all
 other Horde applications within that directory, and will properly set up the
 necessary include/horde path definitions. Note that all edits should take place
 within the repository, as the web-accessible directory will be deleted every
-time the <tt>install_dev</tt> script is run. Additionally, full directory paths
-will be needed in the <tt>horde-git/horde/config/registry.php</tt> file due to
-the symlinks.</p>
+time the <tt>install_dev</tt> script is run.</p>
+
+<p>Full directory paths will be needed in
+<tt>horde-git/horde/config/registry.php</tt> due to the symlinks. The easiest
+way to setup full paths is to set the <tt>$app_fileroot</tt> parameter in
+this file.</p>
 
 <p>Also, in addition to the normal INSTALL procedures and database creation
 scripts that need to be run for Horde, you will need to run the database
