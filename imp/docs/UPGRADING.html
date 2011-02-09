@@ -1,1 +1,151 @@
+<div class="document" id="upgrading-imp">
+<h1 class="title">Upgrading IMP</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2008-09-11</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.7.8.15</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:imp&#64;lists.horde.org">imp&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<p>These are instructions to upgrade from earlier MIMP versions.</p>
+<div class="section" id="upgrading-imp-from-4-1-x-to-4-2-x">
+<h1>Upgrading IMP From 4.1.x To 4.2.x</h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between an IMP
+4.1.x installation to IMP 4.2.x.</p>
+<div class="section" id="sql-backend">
+<h2>SQL Backend</h2>
+<p>An SQL table has been added that can be used to track sent messages. This is
+necessary to provide users with the &quot;favourite recipients&quot; address book, and
+for message rate throttling.</p>
+<p>Execute the provided SQL script to add the table to your database, e.g.:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; scripts/sql/imp.sql
+</pre>
+</div>
+<div class="section" id="unified-imap-quota-driver">
+<h2>Unified IMAP Quota Driver</h2>
+<p>Separate quota drivers for Cyrus and Courier servers are no longer
+necessary. These drivers have been replaced by a generic IMAP driver that
+should also be suitable for other IMAP servers that support the QUOTA
+extension. Update <tt class="docutils literal">config/servers.php</tt> and change the 'quota' =&gt; 'driver'
+setting to 'imap'.</p>
+</div>
+<div class="section" id="application-hooks">
+<h2>Application Hooks</h2>
+<p>All hooks that are specific to IMP have been moved from the
+<tt class="docutils literal">horde/config/hooks.php</tt> file. Move your existing IMP Hooks from there to
+<tt class="docutils literal">imp/config/hooks.php</tt>.</p>
+</div>
+<div class="section" id="user-defined-mailbox-icons">
+<h2>User-Defined Mailbox Icons</h2>
+<p>The usage of the hook <tt class="docutils literal">_imp_hook_mbox_icons()</tt> has changed.  If you use this
+hook, make sure you change your implementation so it returns the correct
+value.</p>
+</div>
+<div class="section" id="changed-preferences">
+<h2>Changed Preferences</h2>
+<p>The default values for the folder preferences 'sent_mail_folder',
+'drafts_folder', and 'trash_folder' have been changed and localized. Use the
+old values to prohibit the creation of duplicate folders for users that
+didn't explicitly set the folders in their preferences.</p>
+<p>The following preferences are no longer used and may be safely removed from
+your <tt class="docutils literal">config/prefs.php</tt> file and your preferences backend:</p>
+<pre class="literal-block">
+'auto_expand'
+'num_words'
+</pre>
+<p>The 'mail_hdr' preferences has been moved from the identities to a regular
+preference. Existing user preferences are no longer used and have to be
+re-created by the users.</p>
+</div>
+<div class="section" id="new-message-list-format-hook">
+<h2>New Message List Format Hook</h2>
+<p>The new hook <tt class="docutils literal">_imp_hook_msglist_format()</tt> has been added which allows the
+formatting of a message entry in the mailbox message list to be altered
+at the time the list is created.  This hook has made the following
+configuration options obsolete:</p>
+<pre class="literal-block">
+$conf['mailbox']['show_attachments']
+$conf['mailbox']['show_xpriority']
+</pre>
+<p>If you wish to continue using the functionality previously provided by these
+options, you should activate the msglist_format hook in <tt class="docutils literal">config/conf.php</tt>.
+The sample hook contained in <tt class="docutils literal">config/hooks.php</tt> contains the code necessary
+to replicate the previous behavior.</p>
+</div>
+<div class="section" id="spell-checking">
+<h2>Spell Checking</h2>
+<p>The <tt class="docutils literal">pspell</tt> driver is no longer supported since it does not work with
+HTML messages.  If using pspell, you must upgrade to aspell version 0.60+.</p>
+</div>
+<div class="section" id="javascript-html-editor">
+<h2>Javascript HTML Editor</h2>
+<p>Support has been added for <a class="reference external" href="http://www.fckeditor.net/">FCKeditor</a> as an option for the javascript HTML
+editor available on the compose page.  You must have Horde 3.2 or later
+installed to use this editor.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-4-0-x-to-4-1-x">
+<h1>Upgrading IMP From 4.0.x To 4.1.x</h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between an IMP
+4.0.x installation to IMP 4.1.x.</p>
+<div class="section" id="automatic-namespace-detection">
+<h2>Automatic Namespace Detection</h2>
+<p>The <tt class="docutils literal">namespace</tt>, <tt class="docutils literal">hierarchies</tt>, <tt class="docutils literal">folders</tt>, <tt class="docutils literal">delimiter</tt>, and
+<tt class="docutils literal">dotfiles</tt> parameters were removed from <tt class="docutils literal">config/servers.php</tt>.  Namespaces
+are now automatically configured pursuant to <a class="reference external" href="http://www.faqs.org/rfcs/rfc2342.html">RFC 2342</a>.</p>
+<p>If using the UW IMAP daemon, you may notice a bunch of additional namespaces
+that were not displayed before as well as the ability of the user to
+view all files that live in their home directory via the folders screen.
+Information on how to correct your IMAP server configuration can be found at</p>
+<blockquote>
+<a class="reference external" href="http://wiki.horde.org/ImpUWIMAPNamespaces">http://wiki.horde.org/ImpUWIMAPNamespaces</a></blockquote>
+</div>
+<div class="section" id="user-defined-headers">
+<h2>User-Defined Headers</h2>
+<p>The <tt class="docutils literal">config/headers.txt</tt> file has been removed and replaced by
+<tt class="docutils literal">config/headers.php</tt>.  Any user-defined headers should be migrated to this
+file.  The new file has the advantage of allowing any valid PHP expression
+to be executed at run-time when generating the headers.  See the top of
+the <tt class="docutils literal">headers.php</tt> file for the new format required.</p>
+</div>
+<div class="section" id="removed-preferences">
+<h2>Removed Preferences</h2>
+<p>The following preferences are no longer used and may be safely removed from
+your <tt class="docutils literal">config/prefs.php</tt> file and your preferences backend:</p>
+<pre class="literal-block">
+'disposition_request_delivery'
+'disposition_send_mdn'
+'wrap_width'
+</pre>
+</div>
+<div class="section" id="virtual-folders">
+<h2>Virtual Folders</h2>
+<p>The format for saved Virtual Folders has changed.  To convert to the new
+format you must run the script located at
+<tt class="docutils literal">scripts/upgrades/convert_vfolders.php</tt>.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-3-x-to-4-0-x">
+<h1>Upgrading IMP From 3.x To 4.0.x</h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between an IMP
+3.x installation to IMP 4.0.x.</p>
+<div class="section" id="filters">
+<h2>Filters</h2>
+<p>Filtering code has been removed from IMP.  To have the same features as the
+old code, you should install the <a class="reference external" href="http://www.horde.org/ingo/">Ingo</a> module.  See the <a class="reference external" href="?f=INSTALL.html">INSTALL</a> file for more
+information.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference external" href="http://cvs.horde.org/co.php/imp/docs/UPGRADING?onb=FRAMEWORK_3">View document source</a>.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
 
+</div>
