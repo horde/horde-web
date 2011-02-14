@@ -19,8 +19,13 @@
 </head>
 <body>
 	<div class="area">
-        <?php echo $this->contentTag('div', $this->contentForLayout, array('class' => 'inside'));?>
+        <div class="inside">
+            <?php echo $this->renderPartial('banner'); ?>
+            <?php echo $this->contentForLayout ?>
+            <?php echo $this->renderPartial('footer');?>
+        </div>
     </div>
 </body>
-<script src="js/informer.js"></script>
+<!-- Don't include yet, it's based on prototypejs -->
+<!--<script src="js/informer.js"></script>-->
 </html>

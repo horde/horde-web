@@ -1,14 +1,3 @@
-			<div class="top">
-				<a href="/" title="Horde" class="logo"><img src="images/logo.png" alt="Horde"/></a>
-				<ul>
-                    <!-- @TODO: Links, once we actually have pages!! -->
-					<li><a href="" title="Home" class="home first">Home</a></li>
-					<li><a href="" title="Download" class="download">Download</a></li>
-					<li><a href="" title="Wiki" class="wiki">Wiki</a></li>
-					<li><a href="" title="Support" class="support">Support</a></li>
-					<li><a href="" title="Contact Us" class="contactus last">Contact Us</a></li>
-				</ul>
-			</div>
 			<div class="slider" id="slides">
 				<div class="slides_container">
 					<div class="slide1 sliderview">
@@ -137,7 +126,4 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-                <!-- Start Footer -->
-                <?php echo $this->renderPartial('footer');?>
-                <!-- End Footer -->
 			</div>
