@@ -333,7 +333,9 @@ div.planethorde ul li p.author {
 	font-size:10px;
 	color:#9f9f9f;
 }
-
+a {
+    text-decoration: none;
+}
 div.footer {
 	background:url(../images/bg-footer.jpg) repeat-x;
 	color:#9ea3b0;
