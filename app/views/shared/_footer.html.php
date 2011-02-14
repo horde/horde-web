@@ -20,7 +20,7 @@
 								</ul>
 							</div>
                             <?php echo $this->renderPartial('contact'); ?>
-                            <?php echo $this->renderPartial('quotes'); ?>
+                            <?php echo $this->renderPartial('quotes', array('locals' => array('quote' => $quote))); ?>
 						</div>				
 					</div>
 					<div class="clear"></div>
