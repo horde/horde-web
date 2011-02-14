@@ -95,7 +95,11 @@
                                 <?php if (empty($this->hordefeed)):?>
                                     <li>The Horde newsfeed is temporarily unavailable.</li>
                                 <?php endif; ?>
+                                <?php $i = 0; ?>
                                 <?php foreach ($this->hordefeed as $entry):
+                                       if ($i++ >= $this->maxHordeItems) {
+                                           break;
+                                       }
                                       echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
                                       endforeach; 
                                 ?>
@@ -107,7 +111,11 @@
                                 <?php if (empty($this->planet)):?>
                                     <li>The Planet Horde newsfeed is temporarily unavailable.</li>
                                 <?php endif; ?>
+                                <?php $i = 0; ?>
                                 <?php foreach ($this->planet as $entry):
+                                       if ($i++ >= $this->maxPlanetItems) {
+                                           break;
+                                       }
                                       echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
                                       endforeach; 
                                 ?>

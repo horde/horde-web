@@ -49,7 +49,8 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->page_title = 'The Horde Project';
-        
+        $view->maxHordeItems = 3;
+        $view->maxPlanetItems = 5;
         // Get the planet feed.
         $planet = '';
         try {
