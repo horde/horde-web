@@ -55,8 +55,18 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         try {
             $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
         } catch (Exception $e) {
-            $view->planet = 'The Planet Horde feed is temporarily unavailable';
+            $view->planet = null;
         }    
+        
+        // Get the Horde feed, for whatever that's currently worth. Just
+        // release announcements at the moment. Probably replace with a 
+        // local Jonah feed.
+        try {
+            $view->hordefeed = Horde_Feed::readUri('http://horde.org/atom.php');
+        } catch (Exception $e) {
+            $view->hordefeed = null;
+        }
+        
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('home');

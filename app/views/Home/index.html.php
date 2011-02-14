@@ -92,14 +92,21 @@
 						<h2><span></span>Latest News</h2>
 						<div class="planethorde">
 							<ul>
-								<li><p class="title">The Horde4 package mill for Debian</p><p class="author">Gunnar Wrobbel</p></li>
-								<li><p class="title">The Horde4 package mill for Debian</p><p class="author">Gunnar Wrobbel</p></li>
-								<li><p class="title">The Horde4 package mill for Debian</p><p class="author">Gunnar Wrobbel</p></li>
+                                <?php if (empty($this->hordefeed)):?>
+                                    <li>The Horde newsfeed is temporarily unavailable.</li>
+                                <?php endif; ?>
+                                <?php foreach ($this->hordefeed as $entry):
+                                      echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
+                                      endforeach; 
+                                ?>
 							</ul>
 						</div>
 						<h2><span></span>Planet Horde</h2>
 						<div class="planethorde">
 							<ul>
+                                <?php if (empty($this->planet)):?>
+                                    <li>The Planet Horde newsfeed is temporarily unavailable.</li>
+                                <?php endif; ?>
                                 <?php foreach ($this->planet as $entry):
                                       echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
                                       endforeach; 
