@@ -52,7 +52,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
 
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
-        $layout->setLayoutName('main');
+        $layout->setLayoutName('home');
         $response->setBody($layout->render('index'));
     }
 
