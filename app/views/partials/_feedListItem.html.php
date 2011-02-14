@@ -1,1 +1,1 @@
-<li><p class="title"><?php echo $entry->title() ?></p><p class="author"><?php echo $entry->author->name() ?></p></li>
+<li><p class="title"><a href="<?php echo $entry->link('self')?>"><?php echo $entry->title() ?></a></p><p class="author"><?php echo $entry->author->name() ?></p></li>
