@@ -9,3 +9,5 @@
 nbproject
 # Ignore local config files
 config/defaults.php
+config/conf.php
+config/lighttpd.conf
