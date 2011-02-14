@@ -1,1 +1,0 @@
-<?php header('Location: http://dev.horde.org/horde/ulaform/display.php?form_id=1');

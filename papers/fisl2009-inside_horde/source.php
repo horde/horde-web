@@ -1,1 +1,0 @@
-<?php highlight_file(dirname(__FILE__) . '/sample_' . basename($_REQUEST['file']) . '.php.txt');
