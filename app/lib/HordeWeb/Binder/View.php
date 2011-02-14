@@ -16,6 +16,7 @@ class HordeWeb_Binder_View implements Horde_Injector_Binder
         // the injector and injected into each class that needs them.
         $view = $injector->getInstance('Horde_View');
         $view->setTemplatePath($GLOBALS['fs_base'] . '/app/views/shared');
+        $view->setTemplatePath($GLOBALS['fs_base'] . '/app/views/partials');
         $view->addTemplatePath($GLOBALS['fs_base'] . '/app/views/layout');
 
         return $view;

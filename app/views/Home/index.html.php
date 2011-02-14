@@ -100,9 +100,10 @@
 						<h2><span></span>Planet Horde</h2>
 						<div class="planethorde">
 							<ul>
-								<li><p class="title">The Horde4 package mill for Debian</p><p class="author">Gunnar Wrobbel</p></li>
-								<li><p class="title">The Horde4 package mill for Debian</p><p class="author">Gunnar Wrobbel</p></li>
-								<li><p class="title">The Horde4 package mill for Debian</p><p class="author">Gunnar Wrobbel</p></li>
+                                <?php foreach ($this->planet as $entry):
+                                      echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
+                                      endforeach; 
+                                ?>
 							</ul>
 						</div>
 					</div>

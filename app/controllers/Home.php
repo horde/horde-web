@@ -49,7 +49,14 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->page_title = 'The Horde Project';
-
+        
+        // Get the planet feed.
+        $planet = '';
+        try {
+            $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
+        } catch (Exception $e) {
+            $view->planet = 'The Planet Horde feed is temporarily unavailable';
+        }    
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('home');
