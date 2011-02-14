@@ -1,0 +1,6 @@
+url.rewrite-once += (
+     "^/hordeweb/rss" => "/hordeweb/rss.php",
+     "^/hordeweb/(css|images|js)/.*$" => "$0",
+     "^/hordeweb/(.*)\?(.*)$" => "/hordeweb/index.php?$2",
+     "^/hordeweb/(.*)$" => "/hordeweb/index.php"
+)
