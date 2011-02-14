@@ -19,24 +19,8 @@
 									<!--<li><a target="_blank" href="http://www.facebook.com/pages/horde" class="facebook">Facebook</a></li>-->
 								</ul>
 							</div>
-							<div class="contact-info">
-								<h3>Quick Contact</h3>
-								<dl>
-									<dt>Email:</dt>
-									<dd><a href="mailto:info@horde.org">info@horde.org</a></dd>
-									<dt>Office:</dt>
-									<dd>lorem ipsum<br>lorem ipsum<br>lorem ipsum, 1234565<br>lorem ipsum</dd>
-									<dt>Phone:</dt>
-									<dd>+123 1231 123123</dd>
-									<dt>Fax:</dt>
-									<dd>+123 1231 123123</dd>
-								</dl>
-							</div>
-							<div class="testimonials">
-								<h3>Testimonials</h3>
-								<p class="what">"Let me introduce you to one of the best webmails, Horde webmail. Horde allows you to manage your emails easily with its rich features and stability. It rocks in its performance and features."</p>
-								<p class="who">Gabrielle Capstick, Host Department</p>
-							</div>
+                            <?php echo $this->renderPartial('contact'); ?>
+                            <?php echo $this->renderPartial('quotes'); ?>
 						</div>				
 					</div>
 					<div class="clear"></div>
