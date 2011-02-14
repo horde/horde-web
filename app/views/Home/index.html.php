@@ -40,7 +40,7 @@
 							</div>
 							<div class="text">
 								<h2>Community</h2>
-								<p>Lorem ipsum dolor sit amet, consetetur 
+								<p>Lorem ipsum dolor sit amet, consetetur
                                    sadipscing elitr, sed diam nonumy eirmo
                                    tempor invidunt ut labore et dolore magna
                                    aliquyam erat, sed diam voluptua.</p>
@@ -90,7 +90,7 @@
                                            break;
                                        }
                                       echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
-                                      endforeach; 
+                                      endforeach;
                                 ?>
 							</ul>
 						</div>
@@ -106,7 +106,7 @@
                                            break;
                                        }
                                       echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
-                                      endforeach; 
+                                      endforeach;
                                 ?>
 							</ul>
 						</div>

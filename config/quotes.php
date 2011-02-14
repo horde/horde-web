@@ -15,12 +15,12 @@ $quotes = array(
         'quote' => '"Of all the products, along with Microsoft Exchange, Horde has the greatest functionality."',
         'author' => 'Iain Roberts, Axiom Tech',
     ),
-    
+
     array(
         'quote' => '"Of the myriad web e-mail interfaces Horde is quite possibly the premier - it has an amazing breadth of features, is elegently customizable (which we will demonstrate in this series), is straight forward to configure, and has an appealing user interface."',
         'author' => 'Adam Williams, Whitemice Consulting',
     ),
-    
+
     array(
         'quote' => '"Overall I\'ve been finding this a fantastic package, the web client offers that vast majority of what you can get through something like Thunderbird, with the obvious advantage that you can read your mail from any computer."',
         'author' => 'Demian Turner, Seagull'

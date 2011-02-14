@@ -21,7 +21,7 @@
 							</div>
                             <?php echo $this->renderPartial('contact'); ?>
                             <?php echo $this->renderPartial('quotes', array('locals' => array('quote' => $quote))); ?>
-						</div>				
+						</div>
 					</div>
 					<div class="clear"></div>
 				</div>

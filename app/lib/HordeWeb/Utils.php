@@ -1,13 +1,13 @@
 <?php
 /**
  * Utility functions
- * 
+ *
  */
 class HordeWeb_Utils
 {
     /**
      * Get a random "we are awesome" quote.
-     * 
+     *
      */
     static public function getQuote()
     {

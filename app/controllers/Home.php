@@ -5,7 +5,7 @@
  * Handles requests to the main home page.
  *
  * Copyright 2011 Horde LLC (http://www.horde.org)
- * 
+ *
  * @license  http://opensource.org/licenses/bsd-license.php BSD
  * @author Michael J Rubinsky <mrubinsk@horde.org>
  */
@@ -15,7 +15,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
      *
      *
      * @param Horde_Controller_Request $request
-     * @param Horde_Controller_Response $response 
+     * @param Horde_Controller_Response $response
      */
     public function processRequest(Horde_Controller_Request $request, Horde_Controller_Response $response)
     {
@@ -43,7 +43,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
 
     /**
      *
-     * @param Horde_Controller_Response $response 
+     * @param Horde_Controller_Response $response
      */
     protected function _index(Horde_Controller_Response $response)
     {
@@ -58,17 +58,17 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
         } catch (Exception $e) {
             $view->planet = null;
-        }    
-        
+        }
+
         // Get the Horde feed, for whatever that's currently worth. Just
-        // release announcements at the moment. Probably replace with a 
+        // release announcements at the moment. Probably replace with a
         // local Jonah feed.
         try {
             $view->hordefeed = Horde_Feed::readUri('http://horde.org/atom.php');
         } catch (Exception $e) {
             $view->hordefeed = null;
         }
-        
+
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('home');
