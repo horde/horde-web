@@ -22,4 +22,5 @@
         <?php echo $this->contentTag('div', $this->contentForLayout, array('class' => 'inside'));?>
     </div>
 </body>
+<script src="js/informer.js"></script>
 </html>
