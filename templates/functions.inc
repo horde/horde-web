@@ -91,7 +91,7 @@ function print_toolbar()
         toolbar_item($base_url . '/download/app/?app=ansel', 'Download');
         toolbar_item($base_url . '/ansel/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/ansel/roadmap/', 'Roadmap');
-        toolbar_item('http://git.horde.org/ansel/?rt=horde-git', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/ansel/', 'Source Code');
 
         echo "</ul></li>\n";
         break;
@@ -104,7 +104,7 @@ function print_toolbar()
         toolbar_item($base_url . '/chora/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=chora', 'Download');
         toolbar_item($base_url . '/chora/roadmap/', 'Roadmap');
-        toolbar_item('http://cvs.horde.org/chora', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/chora/', 'Source Code');
         toolbar_item($base_url . '/chora/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -132,7 +132,7 @@ function print_toolbar()
         toolbar_item($base_url . '/gollem/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=gollem', 'Download');
         toolbar_item($base_url . '/gollem/screenshots/', 'Screenshots');
-        toolbar_item('http://cvs.horde.org/gollem', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/gollum/', 'Source Code');
         toolbar_item($base_url . '/gollem/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -150,7 +150,7 @@ function print_toolbar()
         toolbar_item($base_url . '/hermes/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=hermes', 'Download');
         toolbar_item($base_url . '/hermes/screenshots/', 'Screenshots');
-        toolbar_item('http://cvs.horde.org/hermes', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/hermes', 'Source Code');
         echo "</ul></li>\n";
         break;
 
@@ -160,7 +160,7 @@ function print_toolbar()
         toolbar_item($base_url . '/download/app/?app=horde', 'Download');
         //toolbar_item($base_url . '/horde/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/horde/roadmap/', 'Roadmap');
-        toolbar_item('http://cvs.horde.org/horde', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/horde', 'Source Code');
         toolbar_item($base_url . '/horde/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -172,7 +172,7 @@ function print_toolbar()
         toolbar_item($base_url . '/download/app/?app=imp', 'Download');
         toolbar_item($base_url . '/imp/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/imp/roadmap/', 'Roadmap');
-        toolbar_item('http://cvs.horde.org/imp', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/imp', 'Source Code');
         toolbar_item($base_url . '/imp/vote/', 'Vote');
         toolbar_item('http://wiki.horde.org/ImpModule', 'Wiki Page');
         echo "</ul></li>\n";
@@ -184,7 +184,7 @@ function print_toolbar()
         toolbar_item($base_url . '/download/app/?app=ingo', 'Download');
         toolbar_item($base_url . '/ingo/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/ingo/roadmap/', 'Roadmap');
-        toolbar_item('http://cvs.horde.org/ingo', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/ingo', 'Source Code');
         toolbar_item($base_url . '/ingo/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -213,7 +213,7 @@ function print_toolbar()
         toolbar_item($base_url . '/download/app/?app=kronolith', 'Download');
         toolbar_item($base_url . '/kronolith/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/kronolith/roadmap/', 'Roadmap');
-        toolbar_item('http://cvs.horde.org/kronolith', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/kronolith', 'Source Code');
         toolbar_item($base_url . '/kronolith/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -232,7 +232,7 @@ function print_toolbar()
         toolbar_item($base_url . '/mnemo/', 'Mnemo', true, true);
         toolbar_item($base_url . '/mnemo/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=mnemo', 'Download');
-        toolbar_item('http://cvs.horde.org/mnemo', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/mnemo', 'Source Code');
         toolbar_item($base_url . '/mnemo/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -245,7 +245,7 @@ function print_toolbar()
         toolbar_item($base_url . '/nag/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=nag', 'Download');
         toolbar_item($base_url . '/nag/roadmap/', 'Roadmap');
-        toolbar_item('http://cvs.horde.org/nag', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/nag', 'Source Code');
         toolbar_item($base_url . '/nag/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -255,7 +255,7 @@ function print_toolbar()
         toolbar_item($base_url . '/passwd/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=passwd', 'Download');
         toolbar_item($base_url . '/passwd/screenshots/', 'Screenshots');
-        toolbar_item('http://cvs.horde.org/passwd', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/passwd', 'Source Code');
         toolbar_item($base_url . '/passwd/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -269,7 +269,7 @@ function print_toolbar()
         toolbar_item($base_url . '/download/app/?app=turba', 'Download');
         //toolbar_item($base_url . '/turba/screenshots/', 'Screenshots');
         toolbar_item($base_url . '/turba/roadmap/', 'Roadmap');
-        toolbar_item('http://cvs.horde.org/turba', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/turba', 'Source Code');
         toolbar_item($base_url . '/turba/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
@@ -278,7 +278,7 @@ function print_toolbar()
         toolbar_item($base_url . '/trean/', 'Trean', true, true);
         toolbar_item($base_url . '/trean/', 'Documentation');
         toolbar_item($base_url . '/trean/screenshots/', 'Screenshots');
-        toolbar_item('http://cvs.horde.org/trean', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/trean', 'Source Code');
         echo "</ul></li>\n";
         break;
 
@@ -305,7 +305,7 @@ function print_toolbar()
         //toolbar_item('http://bugs.horde.org/', 'Demo');
         toolbar_item($base_url . '/whups/docs/', 'Documentation');
         toolbar_item($base_url . '/download/app/?app=whups', 'Download');
-        toolbar_item('http://cvs.horde.org/whups', 'Source Code');
+        toolbar_item('http://git.horde.org/h/chora/horde-git/-/browse/whups', 'Source Code');
         toolbar_item($base_url . '/whups/vote/', 'Vote');
         echo "</ul></li>\n";
         break;
