@@ -637,10 +637,10 @@ div.sliderview p {
 }
 
 ul.appnav {
+    float: left;
     width: 100%;
-    list-style:none;
-    float:right;
-    margin: 10px 0 20px 0;
+    list-style: none;
+    margin: 5px 0 25px 0;
 }
  ul.appnav li {
     margin-right: 15px;
@@ -660,11 +660,12 @@ ul.appnav li a:hover {
 div.hordeauthor h2 {
     background: none;
     color: #797979;
-    height: auto;
+    height: inherit;
+    line-height: inherit;
 	letter-spacing: -1px;
 	font-weight: bold;
 	border-bottom: 2px dotted #afafaf;
-	margin-bottom: 15px;
+    margin: 15px 0 7px 0;
 }
 div.hordeauthor ul {
     margin-left: 30px;
