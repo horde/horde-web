@@ -10,8 +10,8 @@ $runner = $injector->getInstance('Horde_Controller_Runner');
 $_root = ltrim(dirname($_SERVER['PHP_SELF']), '/');
 $mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
 $mapper->connect('home', $_root . '/', array('controller' => 'home'));
-
-
+$mapper->connect('apps', $_root . '/app/:app/:action', array('controller' => 'app',
+                                                             'action' => 'index'));
 
 $path = $request->getPath();
 if (($pos = strpos($path, '?')) !== false) {

@@ -1,5 +1,5 @@
 			<div class="top">
-				<a href="/" title="Horde" class="logo"><img src="images/logo.png" alt="Horde"/></a>
+				<a href="/" title="Horde" class="logo"><img src="http://<?php echo $GLOBALS['host_base']?>/images/logo.png" alt="Horde"/></a>
 				<ul>
 					<li><a href="" title="Home" class="home first">Home</a></li>
 					<li><a href="" title="Download" class="download">Download</a></li>

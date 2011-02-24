@@ -45,7 +45,7 @@
 					</li>
 				</ul>
 				<div class="main">
-					<div class="mainarea">
+					<div class="mainareasplit">
 						<h2><span></span>Latest News</h2>
 						<div class="planethorde">
 							<ul>

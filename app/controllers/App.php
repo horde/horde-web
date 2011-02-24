@@ -9,7 +9,7 @@
  * @license  http://opensource.org/licenses/bsd-license.php BSD
  * @author Michael J Rubinsky <mrubinsk@horde.org>
  */
-class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
+class HordeWeb_App_Controller extends HordeWeb_Controller_Base
 {
     /**
      *
@@ -32,7 +32,10 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     {
         parent::_setup();
         $view = $this->getView();
-        $view->addTemplatePath(array($GLOBALS['fs_base'] . '/app/views/Home', $GLOBALS['fs_base'] . '/app/views/shared'));
+        $view->addTemplatePath(
+            array($GLOBALS['fs_base'] . '/app/views/App', 
+                  $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app,
+                  $GLOBALS['fs_base'] . '/app/views/shared'));
     }
 
     /**
@@ -42,30 +45,12 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     protected function _index(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project';
-        $view->maxHordeItems = 3;
-        $view->maxPlanetItems = 5;
-        $view->quote = HordeWeb_Utils::getQuote();
-        // Get the planet feed.
-        $planet = '';
-        try {
-            $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
-        } catch (Exception $e) {
-            $view->planet = null;
-        }
-
-        // Get the Horde feed, for whatever that's currently worth. Just
-        // release announcements at the moment. Probably replace with a
-        // local Jonah feed.
-        try {
-            $view->hordefeed = Horde_Feed::readUri('http://horde.org/atom.php');
-        } catch (Exception $e) {
-            $view->hordefeed = null;
-        }
-
+        // @TODO: Look this up in some kind of config/lookup array.
+        $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->app);
+        $view->appname = $this->_matchDict->app; //ucfirst($this->_matchDict->app);
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
-        $layout->setLayoutName('home');
+        $layout->setLayoutName('main');
         $response->setBody($layout->render('index'));
     }
 

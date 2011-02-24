@@ -1,28 +1,28 @@
 /* CSS Mini Reset */
 html, body, div, form, fieldset, legend, label
-{ 
-	margin: 0; 
-	padding: 0; 
+{
+	margin: 0;
+	padding: 0;
 }
-table{ 
-	border-collapse: collapse; 
+table{
+	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 th, td
 {
-	text-align: left; 
+	text-align: left;
 	vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6, th, td, caption { 
-	font-weight:normal; 
+h1, h2, h3, h4, h5, h6, th, td, caption {
+	font-weight:normal;
 	margin:0;
 	padding:0;
 }
 
-img { 
-	border: 0; 
+img {
+	border: 0;
 }
 
 ul {
@@ -140,7 +140,10 @@ body div.slider {
 	background:url(../images/showroom.png) no-repeat left bottom;
 	position:relative;
 }
-
+body div.podest {
+	background:url(../images/showroom.png) no-repeat left bottom;
+	height:38px;
+}
 body div.content {
 	background:#fff;
 	clear:both;
@@ -200,7 +203,7 @@ div.teaser div.text h2 {
 	border-left:10px solid #556aa1;
 }
 
-div.mainarea h2 {
+div.mainareasplit h2, div.mainarea h2{
 	background:url(../images/ribbon_blue.jpg) no-repeat 0 0;
 	position:relative;
 	height:47px;
@@ -210,7 +213,7 @@ div.mainarea h2 {
 	line-height:38px;
 }
 
-div.mainarea h2 span {
+div.mainareasplit h2 span, div.mainarea h2 span {
 	background:url(../images/ribbon_left.png) no-repeat 0 0;
 	position:absolute;
 	width:24px;
@@ -219,7 +222,7 @@ div.mainarea h2 span {
 	top:-8px;
 }
 
-div.mainarea {
+div.mainareasplit {
 	float:left;
 	width:570px;
 }
@@ -631,4 +634,34 @@ div.sliderview p {
     background: none;
     text-decoration: underline;
     color: #303086;
+}
+
+ul.appnav {
+    width: 100%;
+	list-style:none;
+	float:right;
+	margin: 10px 0 20px 0;
+}
+ ul.appnav li {
+    margin-right: 15px;
+	float:left;
+}
+
+ul.appnav li a {
+	text-decoration:none;
+	display:block;
+	line-height:30px;
+	font-size:13px;
+	color:#bbb;
+	padding-left:30px;
+	font-weight:bold;
+	letter-spacing:-1px;
+	text-transform:lowercase;
+}
+
+ul.appnav li a.home {
+}
+
+ul.appnav li a:hover {
+	color:#556AA1;
 }
