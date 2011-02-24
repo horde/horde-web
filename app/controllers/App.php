@@ -22,6 +22,9 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         case 'index':
             $this->_index($response);
             break;
+        case 'authors':
+            $this->_authors($response);
+            break;
         }
     }
 
@@ -36,6 +39,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             array($GLOBALS['fs_base'] . '/app/views/App', 
                   $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app,
                   $GLOBALS['fs_base'] . '/app/views/shared'));
+        $view->appname = $this->_matchDict->app;
     }
 
     /**
@@ -47,11 +51,20 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         // @TODO: Look this up in some kind of config/lookup array.
         $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->app);
-        $view->appname = $this->_matchDict->app; //ucfirst($this->_matchDict->app);
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
         $response->setBody($layout->render('index'));
     }
 
+    protected function _authors(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $view->addTemplatePath(array($GLOBALS['fs_base'] . '/app/views/shared/authors'));
+        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Authors';
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render('authors'));
+    }
 }

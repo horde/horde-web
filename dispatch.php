@@ -18,7 +18,6 @@ if (($pos = strpos($path, '?')) !== false) {
     $path = substr($path, 0, $pos);
 }
 if (!$path) $path = '/';
-
 $match = $mapper->match($path);
 $config = new Horde_Core_Controller_RequestConfiguration();
 $config->setControllerName('HordeWeb_' . ucfirst($match['controller']) . '_Controller');
