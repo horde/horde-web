@@ -202,8 +202,7 @@ div.teaser div.text h2 {
 	padding-left:6px;
 	border-left:10px solid #556aa1;
 }
-
-div.mainareasplit h2, div.mainarea h2{
+div.mainareasplit h2, div.mainarea h2 {
 	background:url(../images/ribbon_blue.jpg) no-repeat 0 0;
 	position:relative;
 	height:47px;
@@ -287,6 +286,7 @@ div.rightcol {
 }
 
 div.rightcol h2 {
+    color: #797979;
 	letter-spacing:-1px;
 	font-weight:bold;
 	border-bottom:2px dotted #afafaf;
@@ -648,16 +648,24 @@ ul.appnav {
     float:left;
     font-weight: bold;
 }
-
 ul.appnav li a {
     text-decoration:none;
     color: #556aa1;
 }
-
-
 ul.appnav li a.home {
 }
-
 ul.appnav li a:hover {
     text-decoration: underline;
+}
+div.hordeauthor h2 {
+    background: none;
+    color: #797979;
+    height: auto;
+	letter-spacing: -1px;
+	font-weight: bold;
+	border-bottom: 2px dotted #afafaf;
+	margin-bottom: 15px;
+}
+div.hordeauthor ul {
+    margin-left: 30px;
 }
