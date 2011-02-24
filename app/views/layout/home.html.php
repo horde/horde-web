@@ -3,7 +3,7 @@
 <head>
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link type="text/css" rel="stylesheet" href="css/horde.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="http://<?php echo $GLOBALS['host_base']?>/css/horde.css" media="screen" />
 <script src="js/jquery-1.4.4.min.js"></script>
 <script src="js/slides.min.jquery.js"></script>
 <script>
