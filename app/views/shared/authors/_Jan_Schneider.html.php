@@ -11,6 +11,6 @@
     <li>Website: <a href="http://janschneider.de">http://janschneider.de</a></li>
     <li>Amazon wishlists: <a
     href="http://www.amazon.de/exec/obidos/registry/3DQXLRXA5BENK">amazon.de</a>
-    and <a href="http://amazon.com/gp/registry/65U5SVR8ZQ6A">amazon.com</a>.
+    and <a href="http://amazon.com/gp/registry/65U5SVR8ZQ6A">amazon.com</a>.</li>
  </ul>
 </div>
