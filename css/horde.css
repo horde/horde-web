@@ -638,30 +638,26 @@ div.sliderview p {
 
 ul.appnav {
     width: 100%;
-	list-style:none;
-	float:right;
-	margin: 10px 0 20px 0;
+    list-style:none;
+    float:right;
+    margin: 10px 0 20px 0;
 }
  ul.appnav li {
     margin-right: 15px;
-	float:left;
+    color: #556aa1;
+    float:left;
+    font-weight: bold;
 }
 
 ul.appnav li a {
-	text-decoration:none;
-	display:block;
-	line-height:30px;
-	font-size:13px;
-	color:#bbb;
-	padding-left:30px;
-	font-weight:bold;
-	letter-spacing:-1px;
-	text-transform:lowercase;
+    text-decoration:none;
+    color: #556aa1;
 }
+
 
 ul.appnav li a.home {
 }
 
 ul.appnav li a:hover {
-	color:#556AA1;
+    text-decoration: underline;
 }
