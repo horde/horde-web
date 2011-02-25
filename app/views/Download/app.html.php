@@ -47,12 +47,7 @@
         </div>
 	</div>
     <div class="rightcol" style="background: none;">
-         <h2>Stable Releases</h2>
-         <ul class="download-list">
-         <?php foreach ($this->stable as $key => $app):?>
-             <li><a href="<?php echo $this->urlWriter->urlFor(array('controller' => 'download', 'action' => 'app', 'app' => $key))?>"><?php echo $app['name']?></a></li>
-         <?php endforeach;?>
-         </ul>
+        <?php echo $this->renderPartial('releasedAppsList');?>
     </div>
     <div class="clear"></div>
   </div>
