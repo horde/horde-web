@@ -25,6 +25,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         case 'authors':
             $this->_authors($response);
             break;
+        case 'docs':
+            $this->_docs($response);
         }
     }
 
@@ -36,7 +38,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         parent::_setup();
         $view = $this->getView();
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/App', 
+            array($GLOBALS['fs_base'] . '/app/views/App',
                   $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app,
                   $GLOBALS['fs_base'] . '/app/views/shared'));
         $view->appname = $this->_matchDict->app;
@@ -66,5 +68,19 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $layout->setView($view);
         $layout->setLayoutName('main');
         $response->setBody($layout->render('authors'));
+    }
+
+    protected function _docs(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Docs';
+        Horde::startBuffer();
+        $file = Horde_Util::getFormData('f', 'docs.html');
+        include $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs/' . $file;
+        $view->content = Horde::endBuffer();
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render('docs'));
     }
 }

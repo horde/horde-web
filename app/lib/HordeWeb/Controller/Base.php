@@ -37,7 +37,12 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         // Need to rematch since we need a copy of the matchDict.
         // @TODO: This should be somehow injected into the class on instantiation
         $this->_mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
-        $this->_matchDict = new Horde_Support_Array($this->_mapper->match($request->getPath()));
+        $path = $request->getPath();
+        if (($pos = strpos($path, '?')) !== false) {
+            $path = substr($path, 0, $pos);
+        }
+        if (!$path) $path = '/';
+        $this->_matchDict = new Horde_Support_Array($this->_mapper->match($path));
         $this->_setup();
         $this->_processRequest($response);
     }

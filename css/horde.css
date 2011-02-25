@@ -667,6 +667,23 @@ div.hordeauthor h2 {
 	border-bottom: 2px dotted #afafaf;
     margin: 15px 0 7px 0;
 }
-div.hordeauthor ul {
+div.hordeauthor ul, div.hordedocs ul {
     margin-left: 30px;
+}
+div.hordedocs a {
+    color: #556aa1;
+}
+div.hordedocs h1 {
+    background: none;
+    color: #797979;
+    height: inherit;
+    line-height: inherit;
+	letter-spacing: -1px;
+	font-weight: bold;
+	border-bottom: 2px dotted #afafaf;
+    margin: 15px 0 7px 0;
+}
+div.hordedocs .footer {
+    background: none;
+    height: inherit;
 }

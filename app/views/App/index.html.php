@@ -3,7 +3,7 @@
     <div class="mainareasplit">
         <h2><span></span><?php echo ucfirst($this->appname)?></h2>
         <span class="appMenu"><?php echo $this->renderPartial('appnav') ?></span>
-      <?php echo $this->renderPartial($this->appname) ?>
+        <?php echo $this->renderPartial($this->appname) ?>
 	</div>
      <div class="rightcol" style="background: none;">
          <h2>Latest News</h2>
