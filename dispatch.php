@@ -9,9 +9,15 @@ $runner = $injector->getInstance('Horde_Controller_Runner');
 
 $_root = ltrim(dirname($_SERVER['PHP_SELF']), '/');
 $mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
+
+/* Routes */
 $mapper->connect('home', $_root . '/', array('controller' => 'home'));
-$mapper->connect('apps', $_root . '/app/:app/:action', array('controller' => 'app',
-                                                             'action' => 'index'));
+$mapper->connect(
+    'apps', $_root . '/app/:app/:action', array('controller' => 'app', 'action' => 'index'));
+$mapper->connect(
+    'download', $_root . '/download', array('controller' => 'download', 'action' => 'index'));
+$mapper->connect(
+    $_root . '/download/:app', array('controller' => 'download', 'action' => 'app'));
 
 $path = $request->getPath();
 if (($pos = strpos($path, '?')) !== false) {

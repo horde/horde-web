@@ -25,16 +25,14 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         }
     }
 
-    /**
-     *
-     */
     protected function _setup()
     {
         parent::_setup();
         $view = $this->getView();
-        $view->addTemplatePath(array($GLOBALS['fs_base'] . '/app/views/Home', $GLOBALS['fs_base'] . '/app/views/shared'));
+        $view->addTemplatePath(
+            array($GLOBALS['fs_base'] . '/app/views/Home'));    
     }
-
+    
     /**
      *
      * @param Horde_Controller_Response $response

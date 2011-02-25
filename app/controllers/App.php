@@ -1,8 +1,8 @@
 <?php
 /**
- * Main controller class
+ * App controller class
  *
- * Handles requests to the main home page.
+ * Handles requests to the application pages.
  *
  * Copyright 2011 Horde LLC (http://www.horde.org)
  *
@@ -39,8 +39,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $view->addTemplatePath(
             array($GLOBALS['fs_base'] . '/app/views/App',
-                  $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app,
-                  $GLOBALS['fs_base'] . '/app/views/shared'));
+                  $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app));
         $view->appname = $this->_matchDict->app;
     }
 
