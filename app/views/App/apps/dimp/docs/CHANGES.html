@@ -1,0 +1,246 @@
+<h1>Changes by Release</h1><pre>
+----------
+v1.1.7-cvs
+----------
+
+
+
+
+------
+v1.1.6
+------
+
+[jan] Fix redirecting to login screen if session times out (<a href="http://bugs.horde.org/ticket/9281">Bug #9281</a>).
+
+
+------
+v1.1.5
+------
+
+[mms] SECURITY: XSS - Make sure mailbox name displayed on mailbox page is
+      properly encoded (<a href="http://bugs.horde.org/ticket/9240">Bug #9240</a>).
+[jan] Fix notices with certain output buffer configurations
+      (Valentin.Vidic@CARNet.hr, <a href="http://bugs.horde.org/ticket/7851">Bug #7851</a>).
+[mms] Turn DNS prefetching off when displaying untrusted message content
+      (Ticket #8836).
+
+
+------
+v1.1.4
+------
+
+[jan] Add Basque translation (Euskal Herriko Unibertsitatea &lt;webmaster@ehu.es>).
+[jan] Add Croatian translation (Matej Vela &lt;matej.vela@carnet.hr>).
+[mms] Fix sizing fckeditor compose editor frame in IE (<a href="http://bugs.horde.org/ticket/8616">Bug #8616</a>).
+
+
+------
+v1.1.3
+------
+
+[mms] Fix deleting messages after undeleting (<a href="http://bugs.horde.org/ticket/8298">Bug #8298</a>).
+[mms] Fix renaming folders with non-7bit characters
+      (rainer.groesslinger@gmail.com, <a href="http://bugs.horde.org/ticket/8286">Bug #8286</a>).
+
+
+------
+v1.1.2
+------
+
+[mms] Make dimp work with IE 8 (uses IE 7 compatibility mode) (requires IMP
+      4.3.4+).
+[mms] Add confirmation box if attempting to send message without subject
+      (<a href="http://bugs.horde.org/ticket/8076">Request #8076</a>).
+[mms] Fix address autocomplete display on IE (<a href="http://bugs.horde.org/ticket/7982">Bug #7982</a>).
+
+
+------
+v1.1.1
+------
+
+[mms] Shift-Delete on multiple messages will move selection to next message
+      (<a href="http://bugs.horde.org/ticket/7533">Request #7533</a>).
+[mms] Fix occasional buggy behavior when drag/drop folders (<a href="http://bugs.horde.org/ticket/7414">Bug #7414</a>).
+[mms] The UP key will start at the bottom of the mailbox, if no current
+      message is selected (<a href="http://bugs.horde.org/ticket/7532">Request #7532</a>).
+[mms] Add 'undelete' to Other Actions menu (<a href="http://bugs.horde.org/ticket/7496">Bug #7496</a>).
+[mms] Display quota on startup (<a href="http://bugs.horde.org/ticket/7718">Bug #7718</a>).
+[jan] Fix portal link text in tab bar (<a href="http://bugs.horde.org/ticket/7719">Bug #7719</a>).
+[mms] Fix portal display in IE (<a href="http://bugs.horde.org/ticket/7398">Bug #7398</a>).
+[mms] Correctly show 'To' header when doing searches in sentmail and drafts
+      mailboxes (<a href="http://bugs.horde.org/ticket/7650">Bug #7650</a>).
+
+
+----
+v1.1
+----
+
+[jan] Show spam and ham buttons according to IMP's configuration.
+
+
+--------
+v1.1-RC2
+--------
+
+[mms] Allow DIMP to work without cookies.
+[mms] Update quota at same time folders are polled (<a href="http://bugs.horde.org/ticket/7254">Request #7254</a>).
+[mms] Fix logout link when session has timed out.
+[mms] Add caching of preview messages.
+[mms] Catch unwanted keypress submits in the compose screen (<a href="http://bugs.horde.org/ticket/7162">Bug #7162</a>).
+[mms] UI enhancement to indicate that RTE component is loading.
+[mms] Correctly close popup compose windows when opened from a page other than
+      the base DIMP page.
+[mms] Remove border from iframe on IE (<a href="http://bugs.horde.org/ticket/7136">Bug #7136</a>,
+      benjamin.kostner@tirol.gv.at).
+
+
+---------------------------------
+v1.1-RC1 (released as v1.0.1-RC1)
+---------------------------------
+
+[mms] Improved dynamic resizing of page elements on IE 6.
+[mms] Add arrow buttons to message list scrollbar.
+[jan] Add Brazilian Portuguese translation (Luis Felipe Marzagao
+      &lt;duli@fedoraproject.org>, Eduardo de Carli &lt;carliedu@ig.com.br>).
+[mms] Correctly apply filters to INBOX if 'filter_on_display' pref is true.
+[mms] Update drafts folder in mailbox list if saving draft.
+[mms] Fixes to allow Opera 9.5 to display correctly.
+[mms] Fix mousewheel on Safari.
+[mms] Use correctly formatted signature when replying from a popup message
+      window (<a href="http://bugs.horde.org/ticket/6932">Bug #6932</a>).
+[mms] Allow multiple compose/message popup windows to be open (<a href="http://bugs.horde.org/ticket/6915">Request #6915</a>).
+[mms] Double clicking splitbar returns preview window to default size.
+[mms] Highlight search matches if the search criteria is displayed in the
+      mailbox screen.
+[mms] Add ability to move folders to base level (<a href="http://bugs.horde.org/ticket/6881">Request #6881</a>).
+[mms] Add ability to move folders via drag/drop (<a href="http://bugs.horde.org/ticket/6347">Request #6347</a>).
+[mms] Use new drag/drop library to handle message and splitbar drags.
+[mms] Only capture bare PGUP/PGDOWN keypresses in mailbox view (<a href="http://bugs.horde.org/ticket/6854">Bug #6854</a>).
+[mms] Honor Horde's 'sidebar_width' preference (<a href="http://bugs.horde.org/ticket/6793">Request #6793</a>).
+[mms] Fix right-click behavior on Firefox/Mac (<a href="http://bugs.horde.org/ticket/6760">Bug #6760</a>).
+[mms] Add hover effect to checkboxes in mailbox listing.
+[jan] Improve design of message list scrollbar.
+[mms] Fix error when purging deleted messages.
+[mms] Fix issues with adding user-defined JS using the previewview hook
+      (Carlos Pires &lt;acmpires@co.sapo.pt>).
+[mms] Fix loading viewport slice in background when scrolling up.
+
+
+----
+v1.0
+----
+
+[mms] Add checkboxes to message list.
+[mms] Update poll count in destination folder when moving messages.
+[jan] Add Silver Surfer theme.
+[cjh] Update the dock badge with Inbox unread counts if using Fluid.
+[jan] Add Slovak translation (Martin Matuška &lt;martin@matuska.org>).
+
+
+--------
+v1.0-RC3
+--------
+
+[mms] Use IMP's configuration for javascript editors and CSS/JS caching.
+[mms] Make fckeditor add BR tag instead of P tag on enter keypress.
+[mms] Make xinha add BR tag instead of P tag on enter keypress (Mozilla only).
+[mms] Add Special Characters to compose screen, if configured.
+[jan] Allow users to set the HTML editor toolbar buttons in their preferences.
+[jan] Add Spanish translation (Manuel P. Ayala &lt;mayala@unex.es>).
+[mms] Add "Reply to List" option.
+[jan] Add Russian translation (Alexey Zakharov &lt;baber@mosga.net>).
+[jan] Add Hungarian translation (Laszlo L. Tornoci &lt;torlasz@xenia.sote.hu>).
+
+
+--------
+v1.0-RC2
+--------
+
+[mms] Add preference to identify screen to load on login (<a href="http://bugs.horde.org/ticket/6028">Request #6028</a>).
+[jan] Add Finnish translation (Leena Heino &lt;liinu@uta.fi>).
+[mms] Add configuration option to disallow searching all mailboxes.
+[mms] Auto-resize address inputs in compose screen.
+[mms] Add hook for adding formatting information to a message list row
+      (<a href="http://bugs.horde.org/ticket/5234">Request #5234</a>).
+
+
+--------
+v1.0-RC1
+--------
+
+[mms] Add arrival sort option.
+[jan] Add Lithuanian translation (Vilius Sumskas &lt;vilius@lnk.lt>).
+[jan] Add hook for e-mail address formatting.
+[jan] Add option to load custom CSS files.
+[jan] Load all applications' CSS files in the portal (<a href="http://bugs.horde.org/ticket/5831">Bug #5831</a>).
+[mms] Convert to a cross-browser compliant scrollbar in the message list.
+[jan] Move all DIMP-specific hook examples from Horde's config/ directory.
+[mms] Fix errors when assuming US-ASCII with broken messages.
+[jan] Add French translation (Thierry Thomas &lt;thierry@pompo.net>).
+[jan] Add Italian translation (Nethesis srl &lt;info@nethesis.it>).
+[jan] Add Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
+[mms] Add support for sending Message Disposition Notifications (RFC 2298).
+[mms] Add ability to poll folders from context menus.
+[mms] Add bcc addresses when tying to an identity.
+[mms] On initial login, allow INBOX to load in background.
+[mms] Honor IMP's 'compose_cursor' preference.
+[mms] Add purge deleted button (<a href="http://bugs.horde.org/ticket/5561">Request #5561</a>).
+[mms] Only scroll folder list when dragged messages are directly above or
+      below the list.
+[mms] Fix nested folder positioning problems in IE.
+[mms] Fix message list generation when using the Horde JSON encoder
+      (<a href="http://bugs.horde.org/ticket/5604">Bug #5604</a>, vokac@kmlinux.fjfi.cvut.cz).
+[cjh] Fix switching signatures when using HTML composition (<a href="http://bugs.horde.org/ticket/5594">Bug #5594</a>).
+
+
+----------
+v1.0-ALPHA
+----------
+
+[jan] Add preferences interface.
+[jan] Allow loading of any applications from the menu.
+[jan] Add Polish translation (Tadeusz Lesiecki &lt;lesiecki@tmtsystem.pl>, Piotr
+      Tarnowski &lt;drfugazi@drfugazi.eu.org>).
+[mms] Inline PHP-generated javascript to avoid cross-domain leaking
+      (<a href="http://bugs.horde.org/ticket/5307">Bug #5307</a>).
+[jan] Add quota bar.
+[jan] Allow to add custom menu items.
+[jan] Add blacklist, whitelist, and ham buttons.
+[mms] Add FCKeditor and TinyMCE as supported javascript HTML editors.
+[mms] Add configuration file for portal blocks.
+[mms] Implement full mailbox list caching on browser.
+[mms] Mailbox changes on IMAP actions are now handled in a single call to the
+      server.
+[mms] Use a unique IMAP cache identifier to check for new messages in mailbox.
+[mms] Add asynchronous upload of attachments.
+[mms] Clicking Get Mail now does a Fetch Mail check also.
+[mms] Added support for keyboard shortcuts (<a href="http://bugs.horde.org/ticket/5139">Request #5139</a>).
+[mms] No need for separate DraggableMail implementation - simply extend
+      scriptaculous' dragdrop.js as needed.
+[mms] No need for separate HTML load on IE for storing history (<a href="http://bugs.horde.org/ticket/4693">Request #4693</a>).
+[mms] Load folder list through an AJAX call.
+[mms] Cache mailbox listings.
+[jan] Add Traditional Chinese translation (David Chang &lt;david@tmv.gov.tw>).
+[mms] Add hook to allow manipulation of message text.
+[jan] Add Dutch translation (Jan Kuipers &lt;jrkuipers@lauwerscollege.nl>).
+[mms] All javascript now in static javascript files.
+[mms] All folder tree generation done in javascript.
+[mms] Use faster DOM ready technique for window.onload() (<a href="http://bugs.horde.org/ticket/4470">Request #4470</a>).
+[mms] Add undelete option to context menu (<a href="http://bugs.horde.org/ticket/3190">Request #3190</a>).
+[mms] DimpCore.js.php is now available to be cached on the browser side.
+[mms] Allow user defined headers to be displayed in message view.
+[mms] Allow shift-select through multiple views.
+[jan] Add links to address book popup to compose view.
+[mms] Removed tooltip previews.
+[mms] Fix updating unseen message status in folder list.
+[mms] Honor IMP's spam reporting configuration parameter (<a href="http://bugs.horde.org/ticket/3971">Bug #3971</a>).
+[cjh] Load IMP's preferences in the ContactAutoCompleter so all address
+      books are searched (<a href="http://bugs.horde.org/ticket/3810">Bug #3810</a>).
+[mms] Fix spellcheck UI when in HTML composition mode.
+[mms] DIMP now honors IMP's sortlimit configuration option and IMP's
+      configurable sorting by folder.
+[cjh] Implement persistent preference for the state of the
+      preview pane.
+[mms] Implement UI for resume from draft.
+[mms] Organize code/layout to Horde application specifications.
+</pre>

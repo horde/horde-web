@@ -34,6 +34,9 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         case 'screenshot':
             $this->_screenshot($response);
             break;
+        case 'roadmap':
+            $this->_roadmap($response);
+            break;
         default:
             $this->_notFound($response);
 
@@ -51,6 +54,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             array($GLOBALS['fs_base'] . '/app/views/App',
                   $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app));
         $view->appname = $this->_matchDict->app;
+        $view->hasAuthors = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/appauthors.html.php');
+        $view->hasScreenshots = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/appscreenshots.html.php');
     }
 
     protected function _index(Horde_Controller_Response $response)
@@ -95,6 +100,16 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $response->setBody($layout->render('authors'));
     }
 
+    protected function _roadmap(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Roadmap';
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render('roadmap'));
+    }
+
     protected function _docs(Horde_Controller_Response $response)
     {
         $view = $this->getView();
@@ -112,6 +127,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _screenshot(Horde_Controller_Response $response)
     {
         $view = $this->getView();
+        // See if we have all parts
+        // (only screenshots for now)
         $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Authors';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);

@@ -1,4 +1,5 @@
-<p><b>Anil Madhavapeddy</b></p>
+<div class="hordeauthor">
+    <h2>Anil Madhavapeddy</h2>
 
 <ul>
 <li>Graduated in 1999 from <a href="http://www.doc.ic.ac.uk/">Imperial College London</a>, which was fun!</li>
@@ -10,3 +11,4 @@ manner of funky big tin.</li>
     <a href="http://www.everything2.com/index.pl?node=judo">getting hurled across a room</a>, and 
     <a href="http://www.everything2.com/index.pl?node=ninjutsu">running away from people bigger than me</a>.</li>
 </ul>
+</div>

@@ -13,7 +13,7 @@
          Snapshots</strong></em></a> - tarballs of the bleeding-edge developer code, generated nightly for those without access to Git or CVS. We keep approximately 7 days worth of snapshots, organized by
          date.</p></li>
 
-        <li><p><a href="../source/"><em><strong>Source Code</strong></em></a> - the latest code, from either the bleeding edge developer ("HEAD") releases or a stable branch, is always available using Git or CVS.</p></li>
+        <li><p><a href="<?php echo $this->urlWriter->urlFor('development') ?>"><em><strong>Source Code</strong></em></a> - the latest code, from either the bleeding edge developer ("HEAD") releases or a stable branch, is always available using Git or CVS.</p></li>
        </ul>
 	</div>
      <div class="rightcol" style="background: none;">
