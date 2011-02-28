@@ -47,7 +47,6 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         $view->maxPlanetItems = 5;
         $view->quote = HordeWeb_Utils::getQuote();
         // Get the planet feed.
-        $planet = '';
         $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
         if (!$view->planet = $cache->get('planet', 600)) {
             try {
