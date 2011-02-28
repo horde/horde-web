@@ -18,7 +18,7 @@
 					<li class="middle">
 						<div class="teaser">
 							<div class="img">
-								<img src="images/teaser_development.jpg" alt="Community" />
+								<img src="images/teaser_development.jpg" alt="Development" />
 							</div>
 							<div class="text">
 								<h2>Development</h2>
@@ -32,7 +32,7 @@
 					<li>
 						<div class="teaser">
 							<div class="img">
-								<img src="images/teaser_services.jpg" alt="Community" />
+								<img src="images/teaser_services.jpg" alt="Services" />
 							</div>
 							<div class="text">
 								<h2>Services</h2>
