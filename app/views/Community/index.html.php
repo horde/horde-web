@@ -21,15 +21,18 @@
         framework and applications.</p>
 
 
-        <p>Currently Horde Project boasts <a href="http://www.horde.org/projects.php">many applications</a>, some already enterprise-ready and deployed in
+        <p>Currently Horde Project boasts
+        <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">
+        many applications</a>, some already enterprise-ready and deployed in
         demanding <a href="http://wiki.horde.org/display.php?page=Deployments">
         environments</a>, and some exciting new ones still in development.</p>
 
         <h3>The Code</h3>
 
-        <p>The <a href="http://www.horde.org/source/">development</a> of the
+        <p>The <a href="<?php echo $this->urlWriter->urlFor('development') ?>">development</a> of the
         framework and the applications is a community process, with contributions both
-        from individual developers and corporations. The <a href="team/">Core Team</a>
+        from individual developers and corporations. The
+        <a href="<?php echo $this->urlWriter->urlFor('team') ?>">Core Team</a>
 
         members are the people who are actively involved on the development in
         designing and coding the framework and applications.</p>

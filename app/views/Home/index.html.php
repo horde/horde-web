@@ -4,7 +4,7 @@
 					<li>
 						<div class="teaser">
 							<div class="img">
-								<img src="images/teaser_community.jpg" alt="Community" />
+								<a href="<?php echo $this->urlWriter->urlFor('community');?>"><img src="images/teaser_community.jpg" alt="Community" /></a>
 							</div>
 							<div class="text">
 								<h2><a href="<?php echo $this->urlWriter->urlFor('community');?>">Community</a></h2>
@@ -18,10 +18,10 @@
 					<li class="middle">
 						<div class="teaser">
 							<div class="img">
-								<img src="images/teaser_development.jpg" alt="Development" />
+								<a href="<?php echo $this->urlWriter->urlFor('development');?>"><img src="images/teaser_development.jpg" alt="Development" /></a>
 							</div>
 							<div class="text">
-								<h2>Development</h2>
+								<h2><a href="<?php echo $this->urlWriter->urlFor('development');?>">Development</a></h2>
 								<p>Lorem ipsum dolor sit amet, consetetur
                                    sadipscing elitr, sed diam nonumy eirmod
                                    tempor invidunt ut labore et dolore magna
@@ -32,10 +32,10 @@
 					<li>
 						<div class="teaser">
 							<div class="img">
-								<img src="images/teaser_services.jpg" alt="Services" />
+								<a href="<?php echo $this->urlWriter->urlFor('services');?>"><img src="images/teaser_services.jpg" alt="Services" /></a>
 							</div>
 							<div class="text">
-								<h2>Services</h2>
+								<h2><a href="<?php echo $this->urlWriter->urlFor('services');?>">Services</a></h2>
 								<p>Lorem ipsum dolor sit amet, consetetur
                                    sadipscing elitr, sed diam nonumy eirmod
                                    tempor invidunt ut labore et dolore magna

@@ -16,11 +16,19 @@ $mapper->connect('home', $_root . '/', array('controller' => 'home'));
 /* Community */
 $mapper->connect('community', $_root . '/community/:action', array('controller' => 'community', 'action' => 'index'));
 $mapper->connect('localization', $_root . '/community/localization', array('controller' => 'community', 'action' => 'localization'));
+$mapper->connect('team', $_root . '/community/team', array('controller' => 'community', 'action' => 'team'));
+$mapper->connect('support', $_root . '/community/support', array('controller' => 'community', 'action' => 'support'));
 
 /* Apps */
 $mapper->connect('apps', $_root . '/apps', array('controller' => 'app'));
 $mapper->connect('app', $_root . '/apps/:app/:action', array('controller' => 'app', 'action' => 'app'));
 $mapper->connect($_root . '/apps/:app/screenshot', array('controller' => 'app', 'action' => 'screenshot'));
+
+/* Development */
+$mapper->connect('development', $_root . '/development/:action', array('controller' => 'development', 'action' => 'index'));
+
+/* Services */
+$mapper->connect('services', $_root . '/services/:action', array('controller' => 'services', 'action' => 'index'));
 
 /* Downloads */
 $mapper->connect(

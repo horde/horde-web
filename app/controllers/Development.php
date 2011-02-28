@@ -9,7 +9,7 @@
  * @license  http://opensource.org/licenses/bsd-license.php BSD
  * @author Michael J Rubinsky <mrubinsk@horde.org>
  */
-class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
+class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
 {
     /**
      *
@@ -21,14 +21,14 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         switch ($this->_matchDict->action) {
         case 'index':
-            $view->page_title = 'The Horde Project::Community';
+            $view->page_title = 'The Horde Project::Development';
             $template = 'index';
             break;
         default:
             $this->_notFound($response);
             return;
         }
-
+        
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -40,7 +40,7 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
         parent::_setup();
         $view = $this->getView();
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/Community'));
+            array($GLOBALS['fs_base'] . '/app/views/Development'));    
     }
 
 }
