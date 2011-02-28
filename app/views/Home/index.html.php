@@ -1,4 +1,4 @@
-            <?php echo $this->renderPartial('slides') ?>
+            <?php echo $this->render('slides') ?>
 			<div class="content">
 				<ul class="teasers">
 					<li>
@@ -7,7 +7,7 @@
 								<img src="images/teaser_community.jpg" alt="Community" />
 							</div>
 							<div class="text">
-								<h2>Community</h2>
+								<h2><a href="<?php echo $this->urlWriter->urlFor('community');?>">Community</a></h2>
 								<p>Lorem ipsum dolor sit amet, consetetur
                                    sadipscing elitr, sed diam nonumy eirmo
                                    tempor invidunt ut labore et dolore magna
@@ -79,7 +79,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="rightcol"><?php echo $this->renderPartial('sponsors'); ?></div>
+					<div class="rightcol"><?php echo $this->render('sponsors'); ?></div>
 					<div class="clear"></div>
 				</div>
 			</div>

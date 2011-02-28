@@ -20,9 +20,9 @@
 <body>
 	<div class="area">
         <div class="inside">
-            <?php echo $this->renderPartial('banner'); ?>
+            <?php echo $this->render('banner'); ?>
             <?php echo $this->contentForLayout ?>
-            <?php echo $this->renderPartial('footer', array('locals' => array('quote' => $this->quote)));?>
+            <?php echo $this->render('footer', array('locals' => array('quote' => $this->quote)));?>
         </div>
     </div>
 </body>

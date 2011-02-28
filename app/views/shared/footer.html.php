@@ -19,8 +19,8 @@
 									<!--<li><a target="_blank" href="http://www.facebook.com/pages/horde" class="facebook">Facebook</a></li>-->
 								</ul>
 							</div>
-                            <?php echo $this->renderPartial('contact'); ?>
-                            <?php echo $this->renderPartial('quotes', array('locals' => array('quote' => $quote))); ?>
+                            <?php echo $this->render('contact'); ?>
+                            <?php echo $this->render('quotes', array('locals' => array('quote' => $quote))); ?>
 						</div>
 					</div>
 					<div class="clear"></div>

@@ -9,7 +9,7 @@
  * @license  http://opensource.org/licenses/bsd-license.php BSD
  * @author Michael J Rubinsky <mrubinsk@horde.org>
  */
-class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
+class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
 {
     /**
      *
@@ -24,6 +24,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             break;
         default:
             $this->_notFound($response);
+        
         }
     }
 
@@ -32,7 +33,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         parent::_setup();
         $view = $this->getView();
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/Home'));    
+            array($GLOBALS['fs_base'] . '/app/views/Community'));    
     }
     
     /**
@@ -43,29 +44,11 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->page_title = 'The Horde Project';
-        $view->maxHordeItems = 3;
-        $view->maxPlanetItems = 5;
-        $view->quote = HordeWeb_Utils::getQuote();
-        // Get the planet feed.
-        $planet = '';
-        try {
-            $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
-        } catch (Exception $e) {
-            $view->planet = null;
-        }
 
-        // Get the Horde feed, for whatever that's currently worth. Just
-        // release announcements at the moment. Probably replace with a
-        // local Jonah feed.
-        try {
-            $view->hordefeed = Horde_Feed::readUri('http://horde.org/atom.php');
-        } catch (Exception $e) {
-            $view->hordefeed = null;
-        }
 
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
-        $layout->setLayoutName('home');
+        $layout->setLayoutName('main');
         $response->setBody($layout->render('index'));
     }
 

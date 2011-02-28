@@ -17,7 +17,7 @@
        </ul>
 	</div>
      <div class="rightcol" style="background: none;">
-         <?php echo $this->renderPartial('releasedAppsList');?>
+         <?php echo $this->render('releasedAppsList');?>
     </div>
     <div class="clear"></div>
   </div>

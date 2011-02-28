@@ -8,10 +8,10 @@
 <body>
 	<div class="area">
         <div class="inside">
-            <?php echo $this->renderPartial('banner'); ?>
+            <?php echo $this->render('banner'); ?>
             <div class="podest" id="podest"></div>
             <?php echo $this->contentForLayout ?>
-            <?php echo $this->renderPartial('footer');?>
+            <?php echo $this->render('footer');?>
         </div>
     </div>
 </body>

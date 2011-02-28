@@ -67,5 +67,15 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $this->setView($view);
     }
 
+    protected function _notFound(Horde_Contoller_Response $response)
+    {
+        $view = $this->getView();
+        $view->page_title = 'The Horde Project';
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render('404'));
+    }
+
 }
 
