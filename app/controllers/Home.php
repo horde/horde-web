@@ -48,19 +48,27 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         $view->quote = HordeWeb_Utils::getQuote();
         // Get the planet feed.
         $planet = '';
-        try {
-            $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
-        } catch (Exception $e) {
-            $view->planet = null;
+        $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
+        if (!$view->planet = $cache->get('planet', 600)) {
+            try {
+                $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
+            } catch (Exception $e) {
+                $view->planet = null;
+            }
+            $cache->set('planet', $view->planet);
         }
 
         // Get the Horde feed, for whatever that's currently worth. Just
         // release announcements at the moment. Probably replace with a
         // local Jonah feed.
-        try {
-            $view->hordefeed = Horde_Feed::readUri('http://horde.org/atom.php');
-        } catch (Exception $e) {
-            $view->hordefeed = null;
+        $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
+        if (!$view->hordefeed = $cache->get('hordefeed', 600)) {
+            try {
+                $view->hordefeed = Horde_Feed::readUri('http://horde.org/atom.php');
+            } catch (Exception $e) {
+                $view->hordefeed = null;
+            }
+            $cache->set('hordefeed', $view->hordefeed);
         }
 
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
