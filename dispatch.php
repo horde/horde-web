@@ -14,10 +14,12 @@ $mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
 $mapper->connect('home', $_root . '/', array('controller' => 'home'));
 $mapper->connect(
     'apps', $_root . '/app/:app/:action', array('controller' => 'app', 'action' => 'index'));
+$mapper->connect($_root . '/app/:app/screenshot', array('controller' => 'app', 'action' => 'screenshot'));
 $mapper->connect(
     'download', $_root . '/download', array('controller' => 'download', 'action' => 'index'));
 $mapper->connect(
     $_root . '/download/:app', array('controller' => 'download', 'action' => 'app'));
+
 
 $path = $request->getPath();
 if (($pos = strpos($path, '?')) !== false) {

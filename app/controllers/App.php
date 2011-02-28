@@ -27,6 +27,9 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             break;
         case 'docs':
             $this->_docs($response);
+            break;
+        case 'screenshot':
+            $this->_screenshot($response);
         }
     }
 
@@ -82,4 +85,15 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $layout->setLayoutName('main');
         $response->setBody($layout->render('docs'));
     }
+
+    protected function _screenshot(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Authors';
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render('screenshots'));
+    }
+
 }

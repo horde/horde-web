@@ -57,4 +57,14 @@ class HordeWeb_Utils
             '/patches/';
     }
 
+
+    static public function ssLink($app, $imagename)
+    {
+        $fileroot = 'http://' . $GLOBALS['host_base'] . '/images/screenshots/' . $app . '/' . $imagename;
+        $s = "<a href=\"${fileroot}.jpg\"><img border=\"0\" ";
+        $s .= "src=\"${fileroot}-thumb.jpg\" alt=\"${fileroot}\" /></a>";
+
+        return $s;
+    }
+
 }

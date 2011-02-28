@@ -636,6 +636,7 @@ div.sliderview p {
     color: #303086;
 }
 
+/* Application pages */
 ul.appnav {
     float: left;
     width: 100%;
@@ -657,7 +658,7 @@ ul.appnav li a.home {
 ul.appnav li a:hover {
     text-decoration: underline;
 }
-div.hordeauthor h2, div.hordedocs h1, div.horderelease h3 {
+div.hordeauthor h2, div.hordedocs h1, div.horderelease h3, div.screenshots h3 {
     background: none;
     color: #797979;
     height: inherit;
@@ -679,4 +680,11 @@ div.hordedocs .footer {
 }
 div.horderelease p {
     margin-left: 20px;
+}
+
+div.screenshots h3 {
+    font-size: 21px;
+}
+div.screenshots table td {
+    padding: 10px;
 }
