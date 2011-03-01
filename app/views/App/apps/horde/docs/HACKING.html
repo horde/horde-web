@@ -1,0 +1,212 @@
+<div class="document" id="horde-development-resources">
+<h1 class="title">Horde Development Resources</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2007-12-20</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.7.10.2</td></tr>
+<tr><th class="docinfo-name">Author:</th>
+<td>Ivan E. Moore II &lt;<a class="reference external" href="mailto:rkrusty&#64;tdyc.com">rkrusty&#64;tdyc.com</a>&gt;, Mike Hardy
+&lt;<a class="reference external" href="mailto:mikeh&#64;spark.com">mikeh&#64;spark.com</a>&gt;</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#hacking-on-horde-from-cvs" id="id1">1&nbsp;&nbsp;&nbsp;Hacking on Horde from CVS</a><ul class="auto-toc">
+<li><a class="reference internal" href="#downloading-horde-modules-from-cvs" id="id2">1.1&nbsp;&nbsp;&nbsp;Downloading Horde modules from CVS</a></li>
+<li><a class="reference internal" href="#obtaining-a-cvs-account" id="id3">1.2&nbsp;&nbsp;&nbsp;Obtaining a CVS account</a></li>
+<li><a class="reference internal" href="#committing-changes-to-cvs" id="id4">1.3&nbsp;&nbsp;&nbsp;Committing changes to CVS</a></li>
+<li><a class="reference internal" href="#other-cvs-notes" id="id5">1.4&nbsp;&nbsp;&nbsp;Other CVS Notes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Online resources for developing with Horde (including Horde Framework API
+documentation) are available at:</p>
+<blockquote>
+<a class="reference external" href="http://dev.horde.org/">http://dev.horde.org/</a></blockquote>
+<div class="section" id="hacking-on-horde-from-cvs">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Hacking on Horde from CVS</a></h1>
+<p>Horde and its modules use CVS for source control.  CVS is well-documented, but
+the manual page assumes you already know how it works.  An excellent guide to
+getting started with CVS is &quot;Open Source Development with CVS&quot; by Karl Fogel.
+It's published by Coriolis, and the technical part of the book is available
+for free on the Web at</p>
+<blockquote>
+<a class="reference external" href="http://cvsbook.red-bean.com/">http://cvsbook.red-bean.com/</a></blockquote>
+<p>The paper version includes chapters on organizing and managing Open Source
+development.  You can obtain a CVS client for your operating system at
+CVSHOME, at</p>
+<blockquote>
+<a class="reference external" href="http://www.cvshome.org/downloads.html">http://www.cvshome.org/downloads.html</a></blockquote>
+<p>of them may be found at <a class="reference external" href="http://www.cyclic.com">http://www.cyclic.com</a> - they support CVS commercially,
+even though it is an open source program.</p>
+<p>You will need a CVS client to do any of the following (check out the Cyclic
+homepage if you don't have one).</p>
+<p>For those already familiar with CVS, the anonymous CVSROOT is:</p>
+<pre class="literal-block">
+:pserver:cvsread&#64;anoncvs.horde.org:/repository
+</pre>
+<div class="section" id="downloading-horde-modules-from-cvs">
+<h2><a class="toc-backref" href="#id2">1.1&nbsp;&nbsp;&nbsp;Downloading Horde modules from CVS</a></h2>
+<p>You will want to do this if you want bleeding edge code.</p>
+<ol class="arabic">
+<li><p class="first">Go to the directory you want to download the code to:</p>
+<pre class="literal-block">
+cd ~/work
+</pre>
+</li>
+<li><p class="first">Set <tt class="docutils literal">CVSROOT</tt> to the location of the CVS repository.  You could also pass
+cvs the name of the CVS root with the <tt class="docutils literal"><span class="pre">-d</span></tt> option.  Be sure to note the
+colon <tt class="docutils literal">:</tt> in front of <tt class="docutils literal">pserver</tt>.</p>
+<p>(in sh, ksh, bash, zsh):</p>
+<pre class="literal-block">
+CVSROOT=:pserver:cvsread&#64;anoncvs.horde.org:/repository
+export CVSROOT
+</pre>
+<p>(in csh, tcsh):</p>
+<pre class="literal-block">
+setenv CVSROOT :pserver:cvsread&#64;anoncvs.horde.org:/repository
+</pre>
+</li>
+<li><p class="first">Login to the anonymous CVS repository.  When prompted for a password, enter
+<tt class="docutils literal">horde</tt>:</p>
+<pre class="literal-block">
+cvs login
+</pre>
+</li>
+<li><p class="first">Check out the module you want to download from the repository.  Replace
+<tt class="docutils literal">MODULE</tt> with horde, imp, turba and so forth.  (The <tt class="docutils literal"><span class="pre">-z3</span></tt> tells
+cvs to compress the data it sends over the network, uncompressing it when
+you ????:</p>
+<pre class="literal-block">
+cvs -z3 co MODULE
+</pre>
+<p>If you want to check out a particular branch of a module (for example, the
+<tt class="docutils literal">RELENG_3</tt> branch of IMP), include the branch tag like so, replacing
+<tt class="docutils literal">TAG</tt> with the name of the branch:</p>
+<pre class="literal-block">
+cvs -z3 co -r TAG MODULE
+</pre>
+</li>
+<li><p class="first">As you work with the software, you can periodically update your tree to
+match the master tree at any time, from the top directory of the
+module.  Using <tt class="docutils literal">horde</tt> as an example module:</p>
+<pre class="literal-block">
+cd ~/work/horde
+cvs -z3 update
+</pre>
+</li>
+</ol>
+</div>
+<div class="section" id="obtaining-a-cvs-account">
+<h2><a class="toc-backref" href="#id3">1.2&nbsp;&nbsp;&nbsp;Obtaining a CVS account</a></h2>
+<p>If you're going to be a regular contributor to Horde, then you can request a
+CVS account in order to commit your changes to the repository yourself.  (If
+you're only going to be contributing once in a while, there truly is no need
+for you to have one, as posting your changes to the application's mailing list
+will suffice to get your changes reviewed and included.)</p>
+<p>If you do get commit access to the CVS tree, you will have the ability to mess
+some things up.  Not for good, mind you, as CVS allows updates to be backed
+off, but you still need to remember what you're doing and be careful what you
+commit and when you commit it.  Because of this, we prefer that you submit
+your work to the mailing list for a while so we can tell you know what you're
+doing.</p>
+<p>If you're not a committer, the best way to submit a patch is to send it either
+to the application's mailing list or to <a class="reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a>.  For more
+information on Horde mailing lists, see</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+</div>
+<div class="section" id="committing-changes-to-cvs">
+<h2><a class="toc-backref" href="#id4">1.3&nbsp;&nbsp;&nbsp;Committing changes to CVS</a></h2>
+<p>Once you have a CVS account, you will need to log into the CVS server so it
+knows who you are and can grant you the appropriate rights to work on the
+sources.</p>
+<p>The <tt class="docutils literal">CVSROOT</tt> is different for committers; instead of the repository listed
+above, set <tt class="docutils literal">CVSROOT</tt> to:</p>
+<pre class="literal-block">
+:ext:USERNAME&#64;cvs.horde.org:/repository
+</pre>
+<p>replacing <tt class="docutils literal">USERNAME</tt> with your cvs username.</p>
+<p>The committers' repository does not use pserver.  You will need to have ssh
+installed on your system, and have arranged with one of the core developers to
+put your SSH key on the system.  If you have not done this, talk to one of the
+core developers.</p>
+<p>To get cvs to use ssh, you will need to set the environment variable
+<tt class="docutils literal">CVS_RSH</tt> to <tt class="docutils literal">ssh</tt> in your shell.</p>
+<p>You do not need to do <tt class="docutils literal">cvs login</tt>; you will be prompted for the passphrase
+for your SSH key whenever you access the repository.</p>
+<p>You may also wish to set the environment variable <tt class="docutils literal">EDITOR</tt> to point to your
+favorite text editor. This way when you commit software changes and it asks
+you to enter a change description, you can do so in your favorite editor.</p>
+<p>Then, for work on developmental, bleeding-edge versions:</p>
+<ol class="arabic simple">
+<li>Check out the code by typing <tt class="docutils literal">cvs co MODULE</tt></li>
+<li>Work on the code &lt;hack, hack, hack&gt;</li>
+<li>Commit any changes with <tt class="docutils literal">cvs commit FILENAMES</tt> in the directory the files
+are in.</li>
+</ol>
+<p>Sometimes, others will make changes and you will need to update your tree so
+the changes show up in your local sources.  You do this with the <tt class="docutils literal">cvs
+update</tt> command in the horde directory.  Please be sure to update your tree
+regularly; merging changes is considerably more work than running <tt class="docutils literal">cvs
+update</tt>.</p>
+<p>To work with any tagged branch (to patch a stable release, for instance):</p>
+<ol class="arabic simple">
+<li>Check out the code with <tt class="docutils literal">cvs co <span class="pre">-r</span> TAG MODULE</tt></li>
+<li>Work on the code &lt;hack, hack, hack&gt;</li>
+<li>Commit any changes with <tt class="docutils literal">cvs commit FILENAMES</tt> in the directory the files
+are in.</li>
+</ol>
+<p>If somebody else also makes changes to the labeled version, you can get them
+in your local source tree with the <tt class="docutils literal">cvs update</tt> command issued in the module
+directory.</p>
+<p>If you are done working with the labeled source branch, and would like to move
+back into the bleeding-edge development source tree, you can issue the command
+<tt class="docutils literal">cvs update <span class="pre">-A</span></tt> to update everything to the current <tt class="docutils literal">HEAD</tt> version.</p>
+<p>(We used to document how to merge code from HEAD into a labeled branch here,
+but since it was heavily peppered with &quot;talk to core developers first&quot;, it's
+been elided to prevent errors of experimentation.  If you think you need to do
+that, you have to talk to core developers anyhow -- they'll explain how.)</p>
+</div>
+<div class="section" id="other-cvs-notes">
+<h2><a class="toc-backref" href="#id5">1.4&nbsp;&nbsp;&nbsp;Other CVS Notes</a></h2>
+<p>If you do end up getting a CVS account, here are some tips to help keep things
+going smoothly:</p>
+<ol class="arabic">
+<li><p class="first">Subscribe to the <a class="reference external" href="mailto:cvs&#64;lists.horde.org">cvs&#64;lists.horde.org</a> and <a class="reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a> mailing lists.</p>
+</li>
+<li><p class="first">Be sure to modify the file <tt class="docutils literal">docs/CHANGES</tt> to reflect the changes to the
+code you are committing.</p>
+</li>
+<li><p class="first">If you're planning on doing anything major, please let people know in
+advance on the dev&#64; or application mailing lists as appropriate.</p>
+<p>Developers need to communicate extensively in order to make sure everyone
+knows what's going on.  This is extremely important when you work on key
+components.</p>
+</li>
+<li><p class="first">Use the Bug Tracking System on <a class="reference external" href="http://bugs.horde.org">http://bugs.horde.org</a>.  All new submissions
+are being cc'd to the <a class="reference external" href="mailto:bugs&#64;lists.horde.org">bugs&#64;lists.horde.org</a> mailing list so that if we aren't
+paying attention, we'll at least get mail about it.  Using the Bugs
+database helps us keep track of issues we are having and where we stand
+with the product.</p>
+</li>
+<li><p class="first">Remember to advance the library version whenever anything major is changed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference external" href="http://cvs.horde.org/co.php/horde/docs/HACKING?onb=FRAMEWORK_3">View document source</a>.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+
+</div>

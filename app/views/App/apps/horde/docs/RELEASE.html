@@ -1,0 +1,129 @@
+<div class="document" id="horde-release-process-notes">
+<h1 class="title">Horde Release Process Notes</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2006-05-18</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.31</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#the-steps-to-use-when-cutting-a-new-release" id="id1" name="id1">The steps to use when cutting a new release</a></li>
+<li><a class="reference" href="#guidelines-for-release-candidates-rcs" id="id2" name="id2">Guidelines for release candidates (RCs)</a></li>
+<li><a class="reference" href="#example-format-for-announcement-messages" id="id3" name="id3">Example format for announcement messages</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="the-steps-to-use-when-cutting-a-new-release" name="the-steps-to-use-when-cutting-a-new-release">The steps to use when cutting a new release</a></h1>
+<ol class="arabic">
+<li><p class="first">Examine <tt class="docutils literal"><span class="pre">*/docs/CHANGES</span></tt> files:</p>
+<ul class="simple">
+<li>Add the word SECURITY in front of any security-related changes,
+and move them to the top, to draw attention to them.</li>
+<li>Cull out the most important ones, and prepare the text of an
+announcement.</li>
+<li>Write the release announcements into the <tt class="docutils literal"><span class="pre">docs/RELEASE_NOTES</span></tt> file and
+check if it parses with <tt class="docutils literal"><span class="pre">php</span> <span class="pre">-l</span> <span class="pre">docs/RELEASE_NOTES</span></tt>.</li>
+</ul>
+<p>As an extra effort to ensure completeness, you could also check the CVS
+changelogs for any changes that may not have been inserted in the
+<tt class="docutils literal"><span class="pre">*/docs/CHANGES</span></tt> file and integrate them into the above points.</p>
+</li>
+<li><p class="first">Examine <tt class="docutils literal"><span class="pre">*/README</span></tt> and <tt class="docutils literal"><span class="pre">docs/*</span></tt> files, and update the version if
+this is a major release. Minor releases should not change the versions in
+these files.</p>
+</li>
+<li><p class="first">Make sure your settings in <tt class="docutils literal"><span class="pre">horde/scripts/make-release-conf.php</span></tt> are
+correct.</p>
+</li>
+<li><p class="first">If you want to use another <tt class="docutils literal"><span class="pre">CVSROOT</span></tt> than the default one, set the
+<tt class="docutils literal"><span class="pre">CVSROOT</span></tt> environment variable to a user with commit privs
+(e.g. <tt class="docutils literal"><span class="pre">user&#64;cvs.horde.org:/repository</span></tt>) and change to an empty directory.</p>
+</li>
+<li><p class="first">Make a &quot;dry run&quot; of the <tt class="docutils literal"><span class="pre">make-release.php</span></tt> script by adding <tt class="docutils literal"><span class="pre">--dryrun</span></tt>
+to the command line parameters.</p>
+</li>
+<li><p class="first">Create the tarballs/patches using <tt class="docutils literal"><span class="pre">horde/scripts/make-release.php</span></tt>:</p>
+<ul>
+<li><p class="first">Must be run as root (to set file ownership).</p>
+</li>
+<li><p class="first">Example commands (omit <tt class="docutils literal"><span class="pre">--branch</span></tt> when building HEAD):</p>
+<pre class="literal-block">
+$ make-release.php --module=horde --version=2.&lt;n&gt; --branch=RELENG_2
+$ make-release.php --module=imp --version=3.&lt;n&gt; --branch=RELENG_3
+$ make-release.php --module=imp --version=H3-4.&lt;n&gt; --branch=FRAMEWORK_3
+$ make-release.php --module=turba --version=1.&lt;n&gt; --branch=RELENG_1
+</pre>
+</li>
+</ul>
+</li>
+<li><p class="first">If upgrading from a release candidate, remove the old tarball from the FTP
+server.</p>
+</li>
+<li><p class="first">Update the web site (<tt class="docutils literal"><span class="pre">hordeweb</span></tt> CVS directory):</p>
+<ul>
+<li><p class="first">Edit <tt class="docutils literal"><span class="pre">config/news.php</span></tt> to include the release announcement link.</p>
+</li>
+<li><p class="first">Edit <tt class="docutils literal"><span class="pre">config/versions.php</span></tt> to update the version information.</p>
+</li>
+<li><p class="first">Edit <tt class="docutils literal"><span class="pre">main.html</span></tt> to include a blurb on the release.</p>
+</li>
+<li><p class="first">If applicable (i.e. new branch, new major release), under
+<tt class="docutils literal"><span class="pre">hordeweb/source</span></tt> edit:</p>
+<pre class="literal-block">
+versions.html
+modules.html
+</pre>
+</li>
+</ul>
+</li>
+<li><p class="first">Add new version to bugs.horde.org.</p>
+</li>
+</ol>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="guidelines-for-release-candidates-rcs" name="guidelines-for-release-candidates-rcs">Guidelines for release candidates (RCs)</a></h1>
+<ul class="simple">
+<li>The last time we introduced a bug with code from a new minor release so we
+had to release another version right after. This might always happen if
+there is more than one change since the last release or if the changes were
+done recently.</li>
+<li>If we have a security leak that needs to be plugged immediately, it is the
+common way to release a new minor version that <em>only</em> contains the fix for
+that leak.</li>
+<li>RCs are necessary for every release (except 3) because many translators only
+update their translations when there is a new (minor) release cycle starting
+because they don't translate on CVS versions.</li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="example-format-for-announcement-messages" name="example-format-for-announcement-messages">Example format for announcement messages</a></h1>
+<p>The Horde Team is pleased to announce the (first release candidate|official
+release) of the [MODULE NAME] version [VERSION].</p>
+<p>[MODULE DESCRIPTION]</p>
+<p>[Barring any problems, this code will be released as [MODULE] [VERSION].
+Testing is requested and comments are encouraged.
+Updated translations would also be great.]</p>
+<p>Major new changes in this release:</p>
+<blockquote>
+<ul class="simple">
+<li>[CHANGE 1]</li>
+<li>[CHANGE 2]</li>
+<li>...</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference" href="http://cvs.horde.org/co.php/horde/docs/RELEASE">View document source</a>.
+Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+
+</div>
