@@ -67,4 +67,21 @@ class HordeWeb_Utils
         return $s;
     }
 
+    static public function breadcrumbs($controller, $params = array())
+    {
+        $view = $controller->getView();
+        switch (get_class($controller)) {
+        case 'HordeWeb_App_Controller':
+            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'))
+                . '::'
+                . $view->linkToUnlessCurrent('Applications', array('controller' => 'app'));
+
+                if (!empty($view->appname)) {
+                    $crumb .= '::';
+                }
+                $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), ucfirst($view->appname), array('controller' => 'app', 'action' => 'app'));
+        }
+
+        return $crumb;
+    }
 }

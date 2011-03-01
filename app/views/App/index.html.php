@@ -1,8 +1,8 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-        <h2><span></span>Community::Applications</h2>
-        <?php echo $this->render('communitynav');?>
+        <?php echo $this->renderPartial('appbreadcrumb') ?>
+        <?php echo $this->render('communitynav') ?>
         <div class="applications">
           <div class="sectionintro">
             <p>This is a list of the major applications developed by the horde

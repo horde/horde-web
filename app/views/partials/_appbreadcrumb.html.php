@@ -1,2 +1,1 @@
-<h2><span></span>
-<?php echo $this->tag('a', array('href' => $this->urlWriter->urlFor('community'))) ?>Community</a>::<?php echo $this->tag('a', array('href' => $this->urlWriter->urlFor('apps'))) ?>Applications::</a><?php echo ucfirst($this->appname)?></h2>
+<h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller)?></h2>

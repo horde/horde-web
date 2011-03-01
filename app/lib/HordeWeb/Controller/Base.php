@@ -62,6 +62,9 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $view->homeurl = $this->urlWriter->urlFor('home');
         $view->feedurl = '';
 
+        // This seems to be needed for some helpers to work correctly.
+        $view->controller = $this;
+
         // @TODO: Refactor away the globals
         $view->host_base = $GLOBALS['host_base'];
         $this->setView($view);
