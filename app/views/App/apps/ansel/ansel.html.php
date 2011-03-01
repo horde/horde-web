@@ -1,5 +1,5 @@
 <p><div style="float:left;margin:3px;"><a title="Image View" href="screenshots/index.php">
-<img alt="Image View" src="http://<?php echo $GLOBALS['host_base']?>/images/screenshots/ansel/imageview_thumb.jpg" /></a></div>
+<img alt="Image View" src="<?php echo $GLOBALS['host_base']?>/images/screenshots/ansel/imageview_thumb.jpg" /></a></div>
 
 <p>Ansel is a full featured photo management application. With it, you can create
 any number of galleries and subgalleries, share galleries among other Horde
@@ -14,7 +14,7 @@ associated with uploaded images and can even auto rotate your images to the
 proper position if the image contains the proper EXIF properties.</p>
 
 <div style="float:right;margin:3px;"><a href="screenshots/index.php" title="Polaroid Style Gallery View">
-<img alt="Polaroid Style Gallery View" src="http://<?php echo $GLOBALS['host_base']?>/images/screenshots/ansel/polaroidgallery_thumb.jpg" /></a></div>
+<img alt="Polaroid Style Gallery View" src="<?php echo $GLOBALS['host_base']?>/images/screenshots/ansel/polaroidgallery_thumb.jpg" /></a></div>
 
 <p>Ansel supports photo and gallery tagging - allowing you to browse your photos by
 tags just like you were browsing a directory. You can also choose to have

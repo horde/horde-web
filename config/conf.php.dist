@@ -9,7 +9,7 @@ define('HORDE_BASE', '/usr/local/horde/horde/horde');
 
 
 /* Server hostname/base url */
-$host_base = 'localhost/hordeweb';
+$host_base = 'http://localhost/hordeweb';
 
 /* Filesystem base */
 $fs_base = '/private/var/www/html/hordeweb';

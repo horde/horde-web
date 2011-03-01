@@ -58,11 +58,20 @@ class HordeWeb_Utils
     }
 
 
-    static public function ssLink($app, $imagename)
+    /**
+     * Generate a linked thumbnail for screenshots.
+     *
+     * @param string $app        The application the screenshot is for
+     * @param string $imagename  The image name
+     * @param boolean $png       Full size screenshot is in PNG format.
+     * @return type
+     */
+    static public function ssLink($app, $imagename, $png = false)
     {
-        $fileroot = 'http://' . $GLOBALS['host_base'] . '/images/screenshots/' . $app . '/' . $imagename;
-        $s = "<a href=\"${fileroot}.jpg\"><img border=\"0\" ";
-        $s .= "src=\"${fileroot}-thumb.jpg\" alt=\"${fileroot}\" /></a>";
+        $full = $GLOBALS['host_base'] . '/images/screenshots/' . $app . '/' . $imagename . ($png ? '.png' : '.jpg');
+        $thumb = $GLOBALS['host_base'] . '/images/screenshots/' . $app . '/' . $imagename . '-thumb.jpg';
+        $s = "<a href=\"$full\"><img border=\"0\" ";
+        $s .= "src=\"$thumb\" alt=\"$imagename\" /></a>";
 
         return $s;
     }
