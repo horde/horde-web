@@ -15,6 +15,8 @@ class HordeWeb_Binder_View implements Horde_Injector_Binder
         // @TODO: GLOBALS should be moved to a site_config object obtained via
         // the injector and injected into each class that needs them.
         $view = $injector->getInstance('Horde_View');
+        $view->addHelper('Tag');
+
         $view->addTemplatePath(
             array($GLOBALS['fs_base'] . '/app/views/shared',
                   $GLOBALS['fs_base'] . '/app/views/partials',
