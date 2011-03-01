@@ -1,0 +1,512 @@
+<div class="document" id="installing-horde-groupware-1-1">
+<h1 class="title">Installing Horde Groupware 1.1</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2008-05-25</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1.13</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first"><a name="contents">Contents</a></p>
+<ul class="auto-toc simple">
+<li><a class="reference" href="#obtaining-horde-groupware" id="id1" name="id1">1&nbsp;&nbsp;&nbsp;Obtaining Horde Groupware</a></li>
+<li><a class="reference" href="#quick-install" id="id2" name="id2">2&nbsp;&nbsp;&nbsp;Quick Install</a></li>
+<li><a class="reference" href="#prerequisites" id="id3" name="id3">3&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference" href="#installing-horde-groupware" id="id4" name="id4">4&nbsp;&nbsp;&nbsp;Installing Horde Groupware</a></li>
+<li><a class="reference" href="#configuring-horde-groupware" id="id5" name="id5">5&nbsp;&nbsp;&nbsp;Configuring Horde Groupware</a></li>
+<li><a class="reference" href="#temporary-files" id="id6" name="id6">6&nbsp;&nbsp;&nbsp;Temporary Files</a></li>
+<li><a class="reference" href="#translations" id="id7" name="id7">7&nbsp;&nbsp;&nbsp;Translations</a></li>
+<li><a class="reference" href="#obtaining-support" id="id8" name="id8">8&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+</ul>
+</div>
+<p>This document contains instructions for installing Horde Groupware on your
+system.</p>
+<p>For information on the capabilities and features of Horde Groupware, see the
+file <a class="reference" href="?f=README.html">README</a> in the top-level directory of the Horde Groupware distribution.</p>
+<div class="section" id="obtaining-horde-groupware">
+<h1><a class="toc-backref" href="#id1" name="obtaining-horde-groupware">1&nbsp;&nbsp;&nbsp;Obtaining Horde Groupware</a></h1>
+<p>Horde Groupware can be obtained from the Horde website and FTP server, at</p>
+<blockquote>
+<p><a class="reference" href="http://www.horde.org/groupware/">http://www.horde.org/groupware/</a></p>
+<p><a class="reference" href="ftp://ftp.horde.org/pub/horde-groupware/">ftp://ftp.horde.org/pub/horde-groupware/</a></p>
+</blockquote>
+<p>Or, better yet, use a mirror that is closer to you.  The mirror list can be
+found at:</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
+<p>The FTP directory contains the Horde Groupware PHP files which can be unpacked
+using <tt class="docutils literal"><span class="pre">tar</span></tt> and <tt class="docutils literal"><span class="pre">gunzip</span></tt> (see <a class="reference" href="#installing-horde-groupware">Installing Horde Groupware</a>, below).</p>
+</div>
+<div class="section" id="quick-install">
+<h1><a class="toc-backref" href="#id2" name="quick-install">2&nbsp;&nbsp;&nbsp;Quick Install</a></h1>
+<p>These are very terse instructions how to install Horde Groupware and its
+prerequisites on a LAMP sytem.  They are addressed to experienced
+administrators who know exactly what they are doing.  For more detailed
+instructions, start reading below at <a class="reference" href="#prerequisites">Prerequisites</a>.</p>
+<ol class="arabic">
+<li><p class="first">Compiling PHP for Apache:</p>
+<pre class="literal-block">
+cd php-x.x.x/
+./configure --with-apxs=/usr/sbin/apxs \
+            --with-gettext --with-dom --with-mcrypt \
+            --with-iconv --enable-mbstring=all --enable-mbregex \
+            --with-gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+            --with-mime-magic=/user/share/misc/magic.mime \
+            [--with-mysql|--with-pgsql|--with-oci8]
+make
+make install
+</pre>
+</li>
+<li><p class="first">Restart Apache.</p>
+</li>
+<li><p class="first">Extract tarball:</p>
+<pre class="literal-block">
+cd /usr/local/apache/htdocs
+tar zxvf /path/to/horde-groupware-x.y.z.tar.gz
+mv horde-groupware-x.y.z horde
+</pre>
+</li>
+<li><p class="first">Configure Horde Groupware:</p>
+<pre class="literal-block">
+./scripts/setup.php
+</pre>
+</li>
+<li><p class="first">Test Horde Groupware:</p>
+<pre class="literal-block">
+http://your-server/horde/test.php
+</pre>
+</li>
+<li><p class="first">Finish configuration:</p>
+<pre class="literal-block">
+http://your-server/horde/
+</pre>
+<p>Go to Adminstration =&gt; Setup =&gt; Horde</p>
+</li>
+</ol>
+</div>
+<div class="section" id="prerequisites">
+<h1><a class="toc-backref" href="#id3" name="prerequisites">3&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
+<p>The following prerequisites are <strong>REQUIRED</strong> for Horde Groupware to function
+properly.</p>
+<ol class="arabic">
+<li><p class="first">A webserver that supports PHP.</p>
+<p>Horde Groupware is developed under the Apache webserver, which we
+recommend. Apache is available from</p>
+<blockquote>
+<p><a class="reference" href="http://httpd.apache.org/">http://httpd.apache.org/</a></p>
+</blockquote>
+<p>Horde Groupware has also been reportedly used successfully under Microsoft
+IIS, among others.</p>
+</li>
+<li><p class="first">PHP 4.3.0 or above.</p>
+<p>PHP is the interpreted language in which Horde Groupware is written.
+You can obtain PHP at</p>
+<blockquote>
+<p><a class="reference" href="http://www.php.net/">http://www.php.net/</a></p>
+</blockquote>
+<p>Follow the instructions in the PHP package to build PHP for your system. If
+you use Apache, be sure to build PHP as a library with one of the following
+options:</p>
+<pre class="literal-block">
+--with-apache
+--with-apxs
+--with-apxs2
+</pre>
+<p>options to <tt class="docutils literal"><span class="pre">./configure</span></tt>, and not as a standalone executable.</p>
+<p>The following PHP options are <strong>REQUIRED</strong> by Horde Groupware (listed with
+their own prerequisites and configure options). In many cases, the required
+libraries and tools can be obtained as packages from your operating system
+vendor.</p>
+<ol class="loweralpha">
+<li><p class="first">Gettext support. <tt class="docutils literal"><span class="pre">--with-gettext</span></tt></p>
+<p>Gettext is the GNU Translation Project's localization library.  Horde
+Groupware uses gettext to provide local translations of text displayed
+by applications. Information on obtaining the gettext package is
+available at</p>
+<blockquote>
+<p><a class="reference" href="http://www.gnu.org/software/gettext/gettext.html">http://www.gnu.org/software/gettext/gettext.html</a></p>
+</blockquote>
+<p>See also note below on configuring <a class="reference" href="#translations">Translations</a>.</p>
+</li>
+<li><p class="first">XML and DOMXML support. <tt class="docutils literal"><span class="pre">--with-dom</span></tt></p>
+<p>Horde Groupware's help engine and component setup require XML
+support. While some webservers (including recent Apache versions) have
+XML libraries built-in, others will require the expat XML parser
+libraries, available from</p>
+<blockquote>
+<p><a class="reference" href="http://expat.sourceforge.net/">http://expat.sourceforge.net/</a></p>
+</blockquote>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">You must have <strong>both</strong> XML libraries installed for Horde
+Groupware to work properly!</p>
+</div>
+<p>Older versions of PHP also require <tt class="docutils literal"><span class="pre">--with-xml</span></tt> to enable the
+SAX XML functions. With recent versions of PHP, this is enabled
+by default.</p>
+</li>
+</ol>
+<p>The following PHP options are <strong>RECOMMENDED</strong> to enable advanced features in
+Horde Groupware:</p>
+<ol class="loweralpha">
+<li><p class="first">A preferences container.</p>
+<p>Horde Groupware can store user preferences in an SQL database, an LDAP
+directory, an IMSP server, a Kolab server, or in PHP sessions. An SQL
+database is used and configured by default.</p>
+<p>For SQL database preferences storage, Horde Groupware is thoroughly
+tested on MySQL (<tt class="docutils literal"><span class="pre">--with-mysql</span></tt>) and PostgreSQL (<tt class="docutils literal"><span class="pre">--with-pgsql</span></tt>) and
+has been reported to work with Oracle (<tt class="docutils literal"><span class="pre">--with-oci8</span></tt>) and SQL Server
+(<tt class="docutils literal"><span class="pre">--with-mssql</span></tt>).  It may also work with any other database supported
+by PEAR, but they are untested.</p>
+<p>Preferences can also be stored via LDAP (<tt class="docutils literal"><span class="pre">--with-ldap</span></tt>), Kolab
+(<tt class="docutils literal"><span class="pre">--with-ldap</span></tt>), and IMSP.</p>
+<p>Alternatively, preferences can be stored in PHP sessions, which
+requires no external programs or configure options, but which will not
+maintain preferences between sessions.</p>
+<p>While the LDAP, database, Kolab, or IMSP server need not be running on
+the machine onto which you are installing Horde Groupware, the
+appropriate client libraries to access the server must be available
+locally.</p>
+<p>If a preference container is not configured, no preference options will
+be configurable via Horde Groupware's web interface - the default values
+stored in each applications <tt class="docutils literal"><span class="pre">config/prefs.php</span></tt> file will be used.</p>
+</li>
+<li><p class="first">Mcrypt support <tt class="docutils literal"><span class="pre">--with-mcrypt</span></tt></p>
+<p>Mcrypt is a general-purpose cryptography library which is broader and
+significantly more efficient (FASTER!) than PHP's own cryptographic
+code. You can obtain mcrypt from</p>
+<blockquote>
+<p><a class="reference" href="http://mcrypt.sourceforge.net/">http://mcrypt.sourceforge.net/</a></p>
+</blockquote>
+<p>Building PHP without mcrypt support will not stop Horde Groupware from
+working, but will force it to use weaker (and much slower) encryption.</p>
+</li>
+<li><p class="first">UTF-8 support <tt class="docutils literal"><span class="pre">--with-iconv</span> <span class="pre">--enable-mbstring=all</span> <span class="pre">--enable-mbregex</span></tt></p>
+<p>If these extensions are enabled, Horde can support multibyte character
+sets like UTF-8 (meaning that content with any charset can be viewed
+with any translation).</p>
+<p>For iconv support you should use the GNU libiconv library, which is more
+stable and supports more charsets, compared to other iconv
+implementations, like Solaris', for example.</p>
+</li>
+<li><p class="first">GD support <tt class="docutils literal"><span class="pre">--with-gd</span></tt></p>
+<p>Horde Groupware will use the GD extension to perform manipulations on
+image data through the Horde_Image library.</p>
+<p>If you want GD to be able to work with PNG images, you should use the
+<tt class="docutils literal"><span class="pre">--with-png-dir</span></tt> option to make sure PHP can find the PNG libraries
+it needs to compile.</p>
+<p>If you want GD to be able to work with JPEG images, you should use the
+<tt class="docutils literal"><span class="pre">--with-jpeg-dir</span></tt> option to make sure PHP can find the JPEG libraries
+it needs to compile.</p>
+<p>You can also use the <a class="reference" href="http://www.imagemagick.org">ImageMagick</a> package to do these manipulations
+instead.  See the <tt class="docutils literal"><span class="pre">Image</span> <span class="pre">Manipulation</span></tt> tab of the Horde setup for more
+details.</p>
+</li>
+<li><p class="first">MIME Magic support <tt class="docutils literal"><span class="pre">--with-mime-magic</span></tt></p>
+<p>Horde Groupware will use the MIME Magic extension to guess the MIME type
+of files by analyzing their contents.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">This extension is reported to be <a class="reference" href="http://www.php.net/mime_magic">deprecated</a> in favor of the
+fileinfo PECL extension (see below).  However, some users have
+reported that the fileinfo extension will not build correctly
+on their system. If so, than the MIME Magic extension should
+be used instead. Pick one or the other - there is no need to
+compile both.</p>
+</div>
+<p>If using PHP 4.3.0 -&gt; 4.3.1, you should use <tt class="docutils literal"><span class="pre">--enable-mime-magic</span></tt>
+instead of <tt class="docutils literal"><span class="pre">--with-mime-magic</span></tt>.</p>
+</li>
+</ol>
+</li>
+<li><p class="first">Additional PECL Modules</p>
+<p>PECL is short for &quot;PHP Extension Community Library&quot;.  The goal of PECL is
+to provide a means of easily distributing PHP extensions.</p>
+<p>For more information, see <a class="reference" href="http://pecl.php.net/">http://pecl.php.net/</a></p>
+<p>When you install a PECL extension, you have to add it to your <tt class="docutils literal"><span class="pre">php.ini</span></tt>
+so it gets loaded.  Add the following line to your <tt class="docutils literal"><span class="pre">php.ini</span></tt> file to load
+the extension (the extension should be installed in the directory specified
+by the <tt class="docutils literal"><span class="pre">extension_dir</span></tt> option in <tt class="docutils literal"><span class="pre">php.ini</span></tt>):</p>
+<pre class="literal-block">
+extension=fileinfo.so
+</pre>
+<p>Or on Windows:</p>
+<pre class="literal-block">
+extension=fileinfo.dll
+</pre>
+<p>After that, restart your webserver.</p>
+<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed:</p>
+<ol class="loweralpha">
+<li><p class="first">fileinfo</p>
+<p>Allows Horde Groupware modules to guess the MIME type of files by
+analyzing their contents.</p>
+<p>If not enabled, Horde Groupware will use its own PHP code to perform
+MIME magic lookups.  However, this lookup is slower, less accurate, and
+detects fewer MIME types than the PECL extension will.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install fileinfo
+</pre>
+</li>
+<li><p class="first">json</p>
+<p>The json extension will be used for JSON serialization if available.
+json's author claims this module is 86 - 270 times faster than a pure
+PHP solution.</p>
+<p>THE JSON MODULE IS ONLY REQUIRED FOR VERSIONS OF PHP &lt; 5.2. JSON
+SUPPORT IS AUTOMATICALLY INCLUDED IN PHP 5.2+.</p>
+<p>To install, enter the following at the command prompt:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/horde/i18n/HEAD/groupware/docs/INSTALL</tt>, line 279)</p>
+<p>Literal block expected; none found.</p>
+</div>
+<p>THE JSON MODULE IS ONLY REQUIRED FOR VERSIONS OF PHP &lt; 5.2. JSON
+SUPPORT IS AUTOMATICALLY INCLUDED IN PHP 5.2+.</p>
+<blockquote>
+<p>pecl install json</p>
+</blockquote>
+</li>
+</ol>
+<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed if you need
+advanced functionality:</p>
+<ol class="loweralpha">
+<li><p class="first">memcache</p>
+<p>If using the memcached SessionHandler, the memcache PECL extension must
+be installed.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install memcache
+</pre>
+</li>
+<li><p class="first">lzf</p>
+<p>If the lzf module is available, Horde can compress some cached data in
+the current session, thus reducing the size of the current session.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install lzf
+</pre>
+</li>
+</ol>
+</li>
+</ol>
+<p>The following non-PHP prerequisites are <strong>RECOMMENDED</strong>, or are <strong>REQUIRED</strong>
+if you use a specific Horde Groupware application (as noted in [brackets]):</p>
+<ol class="arabic">
+<li><p class="first">Sendmail or equivalent.</p>
+<p>Horde Groupware uses sendmail, or a program that implements the
+<tt class="docutils literal"><span class="pre">sendmail(8)</span></tt> API (as included with postfix, qmail, and exim, among
+others). If your system does not already have a full mail transport with a
+sendmail interface, you can configure Horde Groupware to speak directly
+with a remote SMTP server, but this may incur a performance penalty.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="installing-horde-groupware">
+<h1><a class="toc-backref" href="#id4" name="installing-horde-groupware">4&nbsp;&nbsp;&nbsp;Installing Horde Groupware</a></h1>
+<p>Horde Groupware is written in PHP, and must be installed in a web-accessible
+directory.  The precise location of this directory will differ from system to
+system. If you have no idea where you should be installing Horde Groupware,
+install it directly under the root of your webserver's document tree.</p>
+<p>Since Horde Groupware is written in PHP, there is no compilation necessary;
+simply expand the distribution where you want it to reside and rename the root
+directory of the distribution to whatever you wish to appear in the
+URL. Please note that the default configuration expects Horde to be installed
+in the directory <tt class="docutils literal"><span class="pre">/horde</span></tt> though. For example, with the Apache webserver's
+default document root of <tt class="docutils literal"><span class="pre">/usr/local/apache/htdocs</span></tt>, you would type:</p>
+<pre class="literal-block">
+cd /usr/local/apache/htdocs
+tar zxvf /path/to/horde-groupware-x.y.z.tar.gz
+mv horde-groupware-x.y.z horde
+</pre>
+<p>You would then find Horde Groupware at the URL:</p>
+<pre class="literal-block">
+http://your-server/horde/
+</pre>
+</div>
+<div class="section" id="configuring-horde-groupware">
+<h1><a class="toc-backref" href="#id5" name="configuring-horde-groupware">5&nbsp;&nbsp;&nbsp;Configuring Horde Groupware</a></h1>
+<ol class="arabic">
+<li><p class="first">Configuring the web server</p>
+<p>Horde Groupware requires the following webserver settings. Examples shown
+are for Apache; other webservers' configurations will differ.</p>
+<ol class="loweralpha">
+<li><p class="first">PHP interpretation for files matching <tt class="docutils literal"><span class="pre">*.php</span></tt>:</p>
+<pre class="literal-block">
+AddType application/x-httpd-php .php
+</pre>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">The above instructions may not work if you have specified PHP
+as an output filter with <tt class="docutils literal"><span class="pre">SetOutputFilter</span></tt> directive in
+Apache 2.x versions.  In particular, Red Hat 8.0 and above
+Apache 2.x RPMS have the output filter set, and <strong>MUST NOT</strong>
+have the above <tt class="docutils literal"><span class="pre">AddType</span></tt> directive added.</p>
+</div>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">index.php</span></tt> as an index file (brought up when a user requests a URL for
+a directory):</p>
+<pre class="literal-block">
+DirectoryIndex index.php
+</pre>
+</li>
+</ol>
+</li>
+<li><p class="first">Creating databases and Configuring Horde Groupware</p>
+<p>To configure Horde Groupware and create the required databases run the
+setup script from the <tt class="docutils literal"><span class="pre">scripts/</span></tt> directory:</p>
+<pre class="literal-block">
+./scripts/setup.php
+</pre>
+<p>If you are installing Horde Groupware on a Windows system, or get an error
+message similar to <tt class="docutils literal"><span class="pre">./horde/scripts/setup.php:</span> <span class="pre">/usr/bin/php:</span> <span class="pre">bad</span>
+<span class="pre">interpreter:</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span> <span class="pre">not</span> <span class="pre">found</span></tt>, make sure that you have a
+command line version of PHP installed and use it to run the script:</p>
+<pre class="literal-block">
+/usr/local/bin/php ./scripts/setup.php
+</pre>
+<p>If for some reason, creating the databases with <tt class="docutils literal"><span class="pre">setup.php</span></tt> fails, you
+can create the Horde databases manually.</p>
+<p>First, look in <tt class="docutils literal"><span class="pre">scripts/sql/</span></tt> to see if a <tt class="docutils literal"><span class="pre">groupware.</span></tt> script already
+exists for your database. If so, you should be able to simply execute that
+script as superuser in your database. Consult the <tt class="docutils literal"><span class="pre">scripts/sql/README</span></tt>
+file for more information.</p>
+<p>Be sure to change the default database user name and password in this
+script to something else before creating the tables! Use the same password
+that you entered while running <tt class="docutils literal"><span class="pre">setup.php</span></tt>.</p>
+<p>If such a script does not exist, you'll need to build your own, using the
+file <tt class="docutils literal"><span class="pre">groupware.sql</span></tt> as a starting point. If you need assistance in
+creating databases for a database for which no <tt class="docutils literal"><span class="pre">groupware.</span></tt> script
+exists, you may wish to let us know on the <a class="reference" href="mailto:horde&#64;lists.horde.org">Horde mailing list</a>.</p>
+</li>
+<li><p class="first">Setting up alarm emails</p>
+<p>If you want your users to be able to receive emails from the Horde_Alarm
+system, you must set up a cron entry for <tt class="docutils literal"><span class="pre">horde/scripts/alarms.php</span></tt>, you
+must have at least one administrator specified in the Horde configuration,
+and you must have the PHP CLI installed (a CGI binary is not supported -
+<tt class="docutils literal"><span class="pre">php</span> <span class="pre">-v</span></tt> will report what kind of PHP binary you have).</p>
+<p>Running the job every 5 minutes is recommended:</p>
+<pre class="literal-block">
+# Horde Alarms
+*/5 * * * * /usr/bin/php /var/www/horde/scripts/alarms.php
+</pre>
+<p>(replace <tt class="docutils literal"><span class="pre">/usr/bin/php</span></tt> with the path to your PHP CLI and
+<tt class="docutils literal"><span class="pre">/var/www/horde/</span></tt> with the path to your Horde installation)</p>
+</li>
+<li><p class="first">Testing Horde Groupware</p>
+<p>Once you have configured your webserver, PHP, and Horde Groupware, bring up
+the included test page in your web browser to ensure that all necessary
+prerequisites have been met. If you installed Horde Groupware as described
+above, the URL to the test page would be:</p>
+<pre class="literal-block">
+http://your-server/horde/test.php
+</pre>
+<p>Check that your PHP version is acceptably recent, that all required module
+capabilities are present, and that <tt class="docutils literal"><span class="pre">magic_quotes_runtime</span></tt> is set to
+<tt class="docutils literal"><span class="pre">Off</span></tt>. Then note the <tt class="docutils literal"><span class="pre">Session</span> <span class="pre">counter:</span> <span class="pre">1</span></tt> line under <tt class="docutils literal"><span class="pre">PHP</span> <span class="pre">Sessions</span></tt>,
+and reload the page. The session counter should increment.</p>
+<p>If you get a warning like <tt class="docutils literal"><span class="pre">Failed</span> <span class="pre">opening</span> <span class="pre">'/path/to/test.php'</span> <span class="pre">for</span>
+<span class="pre">inclusion</span></tt>, make sure that the web server has the permission to read the
+<tt class="docutils literal"><span class="pre">test.php</span></tt> file.</p>
+</li>
+<li><p class="first">Completing Configuration</p>
+<p>You can now access Horde Groupware with the user and password that you
+entered during the setup, and you will be logged in as an administrator.
+You can click on <tt class="docutils literal"><span class="pre">Setup</span></tt> in the <tt class="docutils literal"><span class="pre">Administration</span></tt> menu and configure
+more details of Horde Groupware.</p>
+</li>
+<li><p class="first">Securing Horde</p>
+<ol class="loweralpha">
+<li><p class="first">Passwords</p>
+<p>Some of Horde Groupware's configuration files contain passwords which
+local users could use to access your database.  It is recommended to
+ensure that at least the Horde Groupware configuration files (in
+<tt class="docutils literal"><span class="pre">config/</span></tt>) are not readable to system users.  There are <tt class="docutils literal"><span class="pre">.htaccess</span></tt>
+files restricting access to directories that do not need to be accessed
+directly; before relying on those, ensure that your webserver supports
+<tt class="docutils literal"><span class="pre">.htaccess</span></tt> and is configured to use them, and that the files in those
+directories are in fact inaccessible via the browser.</p>
+<p>An additional approach is to make Horde Groupware's configuration files
+owned by the user <tt class="docutils literal"><span class="pre">root</span></tt> and by a group which only the webserver user
+belongs to, and then making them readable only to owner and group.  For
+example, if your webserver runs as <tt class="docutils literal"><span class="pre">www.www</span></tt>, do as follows:</p>
+<pre class="literal-block">
+chown root.www config/*
+chmod 0440 config/*
+</pre>
+</li>
+<li><p class="first">Sessions</p>
+<p>Session data -- including hashed versions of your users' passwords, in
+some applications -- may not be stored as securely as necessary.</p>
+<p>If you are using file-based PHP sessions (which are the default), be
+sure that session files are not being written into <tt class="docutils literal"><span class="pre">/tmp</span></tt> with
+permissions that allow other users to read them. Ideally, change the
+<tt class="docutils literal"><span class="pre">session.save_path</span></tt> setting in <tt class="docutils literal"><span class="pre">php.ini</span></tt> to a directory only
+readable and writeable by your webserver.</p>
+<p>Additionally, you can change the session handler of PHP to use any
+storage backend requested (e.g. SQL database) via the <tt class="docutils literal"><span class="pre">Custom</span> <span class="pre">Session</span>
+<span class="pre">Handler</span></tt> tab in the Horde setup.</p>
+</li>
+</ol>
+<p>For more information about securing your webserver, PHP and Horde, see the
+<a class="reference" href="?f=SECURITY.html">docs/SECURITY</a> file.</p>
+</li>
+<li><p class="first">Entering the survey</p>
+<p>If you like, go to <a class="reference" href="http://www.horde.org/survey/">http://www.horde.org/survey/</a> and enter the details of
+your system.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="temporary-files">
+<h1><a class="toc-backref" href="#id6" name="temporary-files">6&nbsp;&nbsp;&nbsp;Temporary Files</a></h1>
+<p>Various Horde Groupware applications will generate temporary files in PHP's
+temporary directory (see the <tt class="docutils literal"><span class="pre">General</span></tt> tab in the Horde setup).  For various
+reasons, some of these files may not be removed when the user's session
+ends. To reclaim this disk space, it may be necessary to periodically delete
+these old temporary files.</p>
+<p>An example cron-based solution can be found at <tt class="docutils literal"><span class="pre">scripts/temp-cleanup.cron</span></tt>.
+Another possible solution is to use Red Hat's <tt class="docutils literal"><span class="pre">tmpwatch</span></tt> utility or anything
+similar to remove old files (see <a class="reference" href="http://www.redhat.com/">http://www.redhat.com/</a>).</p>
+</div>
+<div class="section" id="translations">
+<h1><a class="toc-backref" href="#id7" name="translations">7&nbsp;&nbsp;&nbsp;Translations</a></h1>
+<p>Note for international users: Horde Groupware uses GNU gettext to provide
+local translations of text displayed by applications; the translations are
+found in the po/ directory.  If a translation is not yet available for your
+locale (and you wish to create one), see the <tt class="docutils literal"><span class="pre">horde/po/README</span></tt> file, or if
+you're having trouble using a provided translation, please see the
+<a class="reference" href="?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+</div>
+<div class="section" id="obtaining-support">
+<h1><a class="toc-backref" href="#id8" name="obtaining-support">8&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<p>If you encounter problems with Horde Groupware, help is available!</p>
+<p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<p>The Horde Project runs a number of mailing lists, for individual applications
+and for issues relating to the project as a whole. Information, archives, and
+subscription information can be found at</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<p>There is no separate mailing list for Horde Groupware, please contact the
+mailing list of the component you have problems with, or the Horde mailing
+list for general problems and questions.</p>
+<p>Lastly, Horde developers, contributors and users may also be found on IRC,
+on the channel #horde on the Freenode Network (irc.freenode.net).</p>
+<p>Please keep in mind that Horde Groupware is free software written by
+volunteers.  For information on reasonable support expectations, please read</p>
+<blockquote>
+<a class="reference" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<p>Thanks for using Horde Groupware!</p>
+<p>The Horde Team</p>
+</div>
+</div>
+<hr class="docutils footer" />
+<div class="footer">
+<a class="reference" href="http://cvs.horde.org/co.php/groupware/docs/INSTALL">View document source</a>.
+Generated by <a class="reference" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+</div>
