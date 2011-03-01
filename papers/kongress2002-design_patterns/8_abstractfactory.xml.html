@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>Presentations</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" /></head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="7_designpatterns.xml.html" onmouseout="window.status='';" onmouseover="window.status='Go to: Design Patterns'; return true;" accesskey="P"><img src="presentation_back.gif" border="0" alt="Back" title="Back" /></a></td><td style="cursor: hand;" onclick="location.href='7_designpatterns.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Design Patterns</div></td></tr></table></td>
+<td width='50%' align='center' style='cursor: hand;' class='oratorHeaderBack' valign='center' nowrap='nowrap' onclick='location.href="/horde/orator/slide.php?p=kongress2002-design_patterns&amp;s=8&amp;Sax=4a99a93860805f0c7ae2863ae66b17ca";'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>The Abstract Factory Pattern</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="9_af_impl.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Implementing Abstract Factory</div></td></tr></table></td><td width="1%" align="right"><a href="9_af_impl.xml.html" onmouseout="window.status='';" onmouseover="window.status='Go to: Implementing Abstract Factory'; return true;" accesskey="N"><img src="presentation_forward.gif" border="0" alt="Forward" title="Forward" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+  <div align="center" class="osHeading">The Abstract Factory Pattern</div>
+
+  <p>
+    If you have used the PEAR DB package, you've used this pattern;
+    there is an explicit DB::factory() method, as well as what you've
+    probably used: DB::connect(), which calls factory() and then
+    connects to the database as well.
+  </p>
+
+  <p>
+    The purpose of the abstract factory pattern is to provide an
+    interface for creating one of a family of objects without
+    specifying that object's concrete class name. This lets you add
+    new subclasses to a driver architecture and use them solely by
+    changing a configuration file, instead of having to dig out
+    hardcoded class names.
+  </p>
+
+  <p>
+    In the DB:: class, you call DB::connect() with the type of
+    database you want to connect to, and any options for that
+    database. The abstract factory method takes care of loading the
+    appropriate subclass, instantiates it, and then passes the
+    arguments along. Here's what it looks like:
+  </p>
+
+  <code><font color="#000000">
+<font color="#0000CC">&lt;?php<br /><br /></font><font color="#006600">require_once&nbsp;</font><font color="#CC0000">'DB.php'</font><font color="#006600">;<br /><br /></font><font color="#0000CC">$type&nbsp;</font><font color="#006600">=&nbsp;</font><font color="#CC0000">'mysql'</font><font color="#006600">;<br /></font><font color="#0000CC">$options&nbsp;</font><font color="#006600">=&nbsp;array(</font><font color="#CC0000">'username'&nbsp;</font><font color="#006600">=&gt;&nbsp;</font><font color="#CC0000">'foo'</font><font color="#006600">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#CC0000">'...'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#006600">=&gt;&nbsp;</font><font color="#CC0000">'...'</font><font color="#006600">);<br /><br /></font><font color="#0000CC">$dbh&nbsp;</font><font color="#006600">=&nbsp;&amp;</font><font color="#0000CC">DB</font><font color="#006600">::</font><font color="#0000CC">connect</font><font color="#006600">(</font><font color="#0000CC">$type</font><font color="#006600">,&nbsp;</font><font color="#0000CC">$options</font><font color="#006600">);</font>
+</font>
+</code><br />
+
+
+  <p>
+    ... and voila, the $dbh variable is a MySQL database driver. If
+    you wanted Oracle instead, just change $type - which might come
+    from a configuration file, a database field, anywhere - to 'oci8',
+    the name of the oracle driver. Without the abstract factory, this
+    is what you'd have to do:
+  </p>
+
+  <code><font color="#000000">
+<font color="#0000CC">&lt;?php<br /><br /></font><font color="#006600">require_once&nbsp;</font><font color="#CC0000">'DB.php'</font><font color="#006600">;<br />require_once&nbsp;</font><font color="#CC0000">'DB/mysql.php'</font><font color="#006600">;<br /><br /></font><font color="#0000CC">$options&nbsp;</font><font color="#006600">=&nbsp;array(</font><font color="#CC0000">'username'&nbsp;</font><font color="#006600">=&gt;&nbsp;</font><font color="#CC0000">'foo'</font><font color="#006600">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#CC0000">'...'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#006600">=&gt;&nbsp;</font><font color="#CC0000">'...'</font><font color="#006600">);<br /><br /></font><font color="#0000CC">$dbh&nbsp;</font><font color="#006600">=&nbsp;&amp;new&nbsp;</font><font color="#0000CC">DB_mysql</font><font color="#006600">(</font><font color="#0000CC">$options</font><font color="#006600">);<br /></font><font color="#0000CC">$dbh</font><font color="#006600">-&gt;</font><font color="#0000CC">connect</font><font color="#006600">();</font>
+</font>
+</code><br />
+
+
+  <p>
+    ... and if you wanted to change to Oracle, you'd have to change
+    all of those filename references (DB/mysql.php) and class
+    references (DB_mysql) to the Oracle versions.
+  </p>
+
+  <p>
+    If you're wondering why we're not mentioning the factory pattern,
+    I haven't seen it used very often in PHP. The factory pattern
+    differs from abstract factory in that you are deferring
+    instantiation to a subclass. An example would be if you had a
+    Logging package, and different Analyzer classes for each different
+    Logger subclass. Logger::getAnalyzer() would be a factory method
+    that returned the correct Analyzer object; the Logger subclass
+    would know which class to instantiate.
+  </p>
+
+</td></tr></table></div>
+</body>
+</html>

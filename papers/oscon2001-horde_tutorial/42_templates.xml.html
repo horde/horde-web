@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Templates</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="41_nagdriver.xml.html" onmouseout="status='';" onmouseover="status='Go to Nag SQL Storage'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='41_nagdriver.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Nag SQL Storage</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Templates</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="43_nagtemplate.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>A Nag Template</div></td></tr></table></td><td width="1%" align="right"><a href="43_nagtemplate.xml.html" onmouseout="status='';" onmouseover="status='Go to A Nag Template'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+<div align="center" class="osHeading">Applications split display out into templates, to seperate them from logic</div>
+  <ul>
+<li>The &#60;?= $var ?> construct can be used to echo out variables.</li><li>Strings should be wrapped in &#60;?= _("String") ?> so that they are passed through gettext.</li><li>Always include as much context as possible in strings, so that translations can account for different contexts and meanings.</li><li>You can combine sprintf() and gettext to put variables into strings:
+<code><font color="#000000">
+<font color="#0000BB">&lt;?=&nbsp;sprintf</font><font color="#007700">(</font><font color="#0000BB">_</font><font color="#007700">(</font><font color="#DD0000">"A gaggle of %s"</font><font color="#007700">),&nbsp;</font><font color="#0000BB">$foo</font><font color="#007700">)&nbsp;</font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+</li></ul><br />
+
+
+</td></tr></table></div>
+</body>
+</html>

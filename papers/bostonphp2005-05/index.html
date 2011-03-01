@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>The Horde Framework: What and Why</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="2005-05-05" />
+<meta name="author" content="Chuck Hagenbuch" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../s5/ui/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../s5/ui/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../s5/ui/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../s5/ui/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="../s5/ui/slides.js" type="text/javascript"></script>
+<!-- prototype + scriptaculous -->
+<script src="../s5/ui/prototype/prototype.js" type="text/javascript"></script>
+<script src="../s5/ui/scriptaculous/scriptaculous.js" type="text/javascript"></script>
+<!-- Presentaculous JS -->
+<script src="../s5/ui/presentacular.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Cambridge, Massachusetts &#8226; May 5th 2005</h1>
+<h2>The Horde Framework: What and Why</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>The Horde Framework:<br/>What and Why</h1>
+<h3>Chuck Hagenbuch</h3>
+<h4><a href="http://www.horde.org/">The Horde Project</a></h4>
+</div>
+
+
+<div class="slide">
+<h1>Summary</h1>
+
+<ul>
+<li>What is it?</li>
+<li>Where did it come from?</li>
+<li>What does it provide?</li>
+<li>How do I use it?</li>
+
+</div>
+
+
+<div class="slide">
+<h1>What is Horde?</h1>
+<ul>
+<li>The Horde Project: an open source project driven by:</li>
+<li>The Horde Developers: volunteer developers providing:</li>
+<li>The Horde Application Framework: a PHP web application framework, consisting of:</li>
+<li>The Horde Libraries: PEAR-style packages powering:</li>
+<li>The Horde Applications: production quality integrated web applications</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Origins</h1>
+<ul>
+<li><a href="http://wso.williams.edu/">WSO</a> needed webmail to keep up with Hotmail</li>
+<li>PHP had an IMAP extension</li>
+<li>IMP 1.0.0: 7 PHP files, 1,686 lines including all docs and HTML</li>
+<li>Released on freshmeat.net</li>
+</ul>
+
+<div class="handout">
+
+<p>IMP 1.0.0 also somehow contained hardcoded links to my old .ml.org
+dynamic domain, an empty faq.shtml (all of the HTML that wasn't
+embedded into PHP code was in .shtml files), and a src/ directory with
+.phps symlinks to all of the PHP files.</p>
+
+<p>Back then (this was 1998), releasing something new and unknown on
+Freshmeat meant some people actually noticed it - there weren't nearly
+as many posts as there are now.</p>
+</div>
+
+</div>
+
+
+<div class="slide">
+<h1>Poof!</h1>
+<ul>
+<li>Suddenly I had users</li>
+<li>Requested mailing lists, CVS, and ... features</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Horde Today</h1>
+<ul>
+<li>~90,000 lines in .php files alone</li>
+<li>~60 framework packages</li>
+<li>5 core groupware applications with multiple major stable releases</li>
+<li>Over 50 applications in CVS</li>
+</ul>
+
+<div class="handout">
+<p>The line count obviously isn't a measure of quality, but the
+53-fold increase is impressive to me from a &quot;what have I
+done?&quot; standpoint. Also it doesn't count templates, CSS, docs,
+etc.</p>
+</div>
+
+</div>
+
+
+<div class="slide">
+<h1>Warning</h1>
+<ul>
+<li>Buzzwords and numbers and TLAs coming</li>
+<li>Slogan: Create. Communicate. Collaborate.</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Why: Libraries</h1>
+<ul>
+<li>Over 60 high quality PHP libraries in PEAR packages</li>
+<li>Work with PHP4 and PHP5</li>
+<li>Covers Authentication to MIME handling to XML transformations</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Why: Standards</h1>
+<ul>
+<li>Layout is done with XHTML, CSS 1 and 2</li>
+<li>Dynamic interfaces from DOM scripting</li>
+<li>Comprehensive MIME standards support</li>
+<li>ANSI SQL with db-specific code where needed</li>
+<li>IMP (mail client) uses pure IMAP</li>
+<li>Groupware apps all handle iCalendar and vCard</li>
+<li>SyncML server provides synchronization</li>
+<li>WebDAV server exposes content to other applications</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Why: Backend Independence</h1>
+<ul>
+<li>SQL drivers work for MySQL, PostgreSQL, Oracle, MSSQL, more</li>
+<li>LDAP support for contacts, users, more.</li>
+<li>VFS (virtual filesystem) support for local files, SQL, FTP, more</li>
+<li>All backends are designed to be pluggable with just a new driver</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Why: Applications</h1>
+<ul>
+<li>Over 50 in CVS</li>
+<li>Groupware is all in at least 2nd major release</li>
+<li>All applications integrate users and their data</li>
+<li>Developer tools including Chora and Whups</li>
+<li>Applications can access each others' data without tight coupling</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Why: Internationalization</h1>
+<ul>
+<li>Full Unicode support in IMP and most apps</li>
+<li>Standards-compliant character set handling</li>
+<li>39 different translations</li>
+</ul>
+
+<div class="handout">
+<p>Just looking at this slide title you can understand where
+&quot;i18n&quot; came from. It's not some standard with the number 18
+- it's &quot;i&quot;, followed by 18 other letters, followed by by
+&quot;n&quot;. Same for l10n - localization has 10 letters between
+&quot;l&quot; and &quot;n&quot;.</div>
+
+</div>
+
+
+<div class="slide">
+<h1>Show me pretty pictures!</h1>
+<ul>
+<li>Better yet, Chuck will show you his personal life</li>
+<li>Chuck, tab into your other browser window now</li>
+</ul>
+<div class="handout">
+<p>If you're reading this online after the talk, it'd be awfully nice
+of me to put up some actual screenshots for you. I'll try and do that
+at some point.</p>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Show me the code!</h1>
+<ul>
+<li>Chuck, tab into Emacs now</li>
+</ul>
+<div class="handout">
+<p>This time you're in luck - just browse around <a
+href="http://cvs.horde.org/">http://cvs.horde.org/</a> and <a
+href="http://dev.horde.org/">http://dev.horde.org/</a> for plenty of
+code and API docs.</p>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>No no. EXPLAIN the code</h1>
+<p>Okay. Here are the basic things an application gets from Horde:</p>
+<ul>
+<li>Authentication and permissions</li>
+<li>Preferences management</li>
+<li>Access to other applications APIs</li>
+<li>Exporting your API through SOAP and XMLRPC</li>
+<li>WebDAV browsing with the appropriate API methods</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>What makes a Horde application?</h1>
+
+<p>Typically Horde applications share a common structure and code
+organization. The <a
+href="http://cvs.horde.org/skeleton/">skeleton</a> application
+provides this for you. But all you really need is:</p>
+
+<ul>
+<li>An entry in <code>horde/config/registry.php</code></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>That's all?</h1>
+<p>Technically, yes. But to take full advantage of Horde, you'll want:</p>
+<ul>
+<li>An entry in <code>horde/config/registry.php</code></li>
+<li>A config/ directory with at least conf.xml and prefs.php files</li>
+<li>A lib/api.php file describing your app's API</li>
+<li>A lib/base.php file that initializes Horde and loads libraries</li>
+<li>A locale/ directory for translations</li>
+<li>A themes/ directory for styles and graphics</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>registry.php</h1>
+<p>Here's an application's registry.php entry:</p>
+<code><pre>$this->applications['whups'] = array(
+    'fileroot' => dirname(__FILE__) . '/../whups',
+    'webroot' => $this->applications['horde']['webroot'] . '/whups',
+    'name' => _("Tickets"),
+    'status' => 'active',
+    'provides' => 'tickets',
+    'menu_parent' => 'devel',
+);</pre></code>
+</div>
+
+
+<div class="slide">
+<h1>registry.php - fileroot</h1>
+<p><code><pre>    'fileroot' => dirname(__FILE__) . '/../whups',</pre></code></p>
+
+<p>The <code>fileroot</code> setting tells Horde where the application
+- in this case Whups - lives on the filesystem. The
+<code>__FILE__</code> constant is the current file;
+<code>dirname()</code> strips off the filename and turns it into just
+a directory.</p>
+
+<div class="handout">This means that the location is by default
+relative to registry.php - under the horde/ directory - which is
+almost always right. But it's configurable just in case.</div>
+
+</div>
+
+
+<div class="slide">
+<h1>registry.php - webroot</h1>
+<p><code><pre>    'webroot' => $this->applications['horde']['webroot'] . '/whups',</pre></code></p>
+
+<p>The <code>webroot</code> setting tells Horde where the application
+lives relative to the webserver's document root. Usually this is
+predictable as well, but you might want to give an application its own
+domain - for example, <a
+href="http://cvs.php.net/">http://cvs.php.net/</a>, which is powered
+by Horde and Chora.</p>
+
+</div>
+
+
+<div class="slide">
+<h1>registry.php - name</h1>
+<p><code><pre>    'name' => _("Tickets"),</pre></code></p>
+
+<p>The <code>name</code> setting surprisingly sets the human-readable
+name of the application. The <code>_()</code> is an alias for
+<code>gettext()</code>, which translates the name into other
+languages.</p>
+
+</div>
+
+
+<div class="slide">
+<h1>registry.php - status</h1>
+<p><code><pre>    'status' => 'active',</pre></code></p>
+
+<p>The <code>status</code> setting tells Horde what kind of
+application this is. Possible statuses are:</p>
+
+<ul>
+<li>inactive</li>
+<li>hidden</li>
+<li>notoolbar</li>
+<li>heading</li>
+<li>block</li>
+<li>admin</li>
+<li>active</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>registry.php - provides</h1>
+<p><code><pre>    'provides' => 'tickets',</pre></code></p>
+
+<p>The <code>provides</code> setting tells Horde if the application
+provides any APIs. In this case Whups provides the tickets API, which
+allows for adding and listing tickets. In turn, Horde knows that if it
+gets a request for a <code>tickets/search</code> method, it should
+pass it along to Whups.</p>
+
+</div>
+
+
+<div class="slide">
+<h1>registry.php - menu_parent</h1>
+<p><code><pre>    'menu_parent' => 'devel',</pre></code></p>
+
+<p>The <code>menu_parent</code> setting is just for the sidebar - it
+tells Horde what item to make the application of a child of. This lets
+you customize the menu to your heart's content. This can be left out
+or set to <code>null</code> for top-level items.</p>
+</div>
+
+
+<div class="slide">
+<h1>How about something cool?</h1>
+<p>Okay. Let's add calendar alarms to the sidebar menu. Here's the plan:</p>
+<ul>
+<li>Create a tree_alarms.php block for Kronolith</li>
+<li>Add it to registry.php so the menu invokes it</li>
+<li>Add alarms to the menu under Calendar</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Creating the Block</h1>
+<p>Horde Blocks are <em>very</em> easy to write. Just give them a name, a type, and fill in a few functions.</p>
+<p>For tree blocks, which add things to Horde_Tree objects, all we need is a _buildTree() function</p>
+
+<p><code><pre>
+    function _buildTree(&$tree, $indent = 0, $parent = null)
+    {
+        ...</pre></code></p>
+
+<div class="handout">
+<p>Here's the full code:</p>
+
+<p><code><pre>&lt;?php
+
+$block_name = _("Menu Alarms");
+$block_type = 'tree';
+
+/**
+ * @package Horde_Block
+ */
+class Horde_Block_kronolith_tree_alarms extends Horde_Block {
+
+    var $_app = 'kronolith';
+
+    function _buildTree(&$tree, $indent = 0, $parent = null)
+    {
+        @define('KRONOLITH_BASE', dirname(__FILE__) . '/../..');
+        require_once KRONOLITH_BASE . '/lib/base.php';
+
+        $alarmCount = 0;
+        $alarms = Kronolith::listAlarms(new Horde_Date(time()), $GLOBALS['display_calendars']);
+        foreach ($alarms as $calId => $calAlarms) {
+            $GLOBALS['kronolith']->open($calId);
+            foreach ($calAlarms as $eventId) {
+                $event = &$GLOBALS['kronolith']->getEvent($eventId);
+                if ($event->hasException(date('Y'), date('n'), date('j'))) {
+                    continue;
+                }
+
+                $alarmCount++;
+                $url = Util::addParameter(Horde::applicationUrl('viewevent.php'),
+                                          array('eventID' => $eventId,
+                                                'calendar' => $calId));
+
+                $tree->addNode($parent . $calId . $eventId,
+                               $parent,
+                               $event->getTitle(),
+                               $indent + 1,
+                               false,
+                               array('icon' => 'alarm.png',
+                                     'icondir' => $GLOBALS['registry']->getImageDir(),
+                                     'url' => $url));
+            }
+        }
+
+        if ($registry->get('url', $parent)) {
+            $purl = $registry->get('url', $parent);
+        } elseif ($registry->get('status', $parent) == 'heading' ||
+                  !$registry->get('webroot')) {
+            $purl = null;
+        } else {
+            $purl = Horde::url($registry->getInitialPage($parent));
+        }
+        $pnode_params = array('url' => $purl,
+                              'icon' => $registry->get('icon', $parent),
+                              'icondir' => '');
+
+        if ($alarmCount) {
+            $tree->addNode($parent, $registry->get('menu_parent', $parent),
+                           '<strong>' . $registry->get('name', $parent) . '</strong>',
+                           $indent, false, $pnode_params);
+        } else {
+            $tree->addNode($parent, $registry->get('menu_parent', $parent),
+                           $registry->get('name', $parent), $indent, false, $pnode_params);
+        }
+    }
+
+}</pre></code></p>
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Adding it to registry.php</h1>
+<p>Tree blocks are easy to add into (or take out of) registry.php:</p>
+
+<p><code><pre>$this->applications['kronolith-alarms'] = array(
+    'status' => 'block',
+    'app' => 'kronolith',
+    'blockname' => 'tree_alarms',
+    'menu_parent' => 'kronolith',
+);</pre></code></p>
+</div>
+
+
+<div class="slide">
+<h1>That's it!</h1>
+<p><img src="screenshot.png" style="border: 2px solid black"></p>
+</div>
+
+
+<div class="slide">
+<h1>Random Plug</h1>
+<p>A random plug for <a
+href="http://www.meyerweb.com/eric/tools/s5/">S5</a> by Eric Meyer,
+the slide show &quot;system&quot; I used for this talk. It's just
+XHTML, CSS, and Javascript. Incredibly slick.</p>
+</div>
+
+
+<div class="slide">
+<h1>Any Questions?</h1>
+</div>
+
+
+<div class="slide">
+<h1>Resources</h1>
+<ul>
+<li>The Horde website: <a href="http://www.horde.org/">http://www.horde.org/</a></li>
+<li>Developer Documentation: <a href="http://dev.horde.org/">http://dev.horde.org/</a></li>
+<li>Mailing lists: <a href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></li>
+<li>Wiki: <a href="http://wiki.horde.org/">http://wiki.horde.org/</a></li>
+<li>Bug Tracking: <a href="http://bugs.horde.org/">http://bugs.horde.org/</a></li>
+</ul>
+</div>
+
+
+</div>
+
+</body>
+</html>

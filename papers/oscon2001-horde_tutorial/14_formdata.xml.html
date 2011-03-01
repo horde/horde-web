@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Form Data</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="13_horde.xml.html" onmouseout="status='';" onmouseover="status='Go to Horde Class'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='13_horde.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Horde Class</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Form Data</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="15_url.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>URLs</div></td></tr></table></td><td width="1%" align="right"><a href="15_url.xml.html" onmouseout="status='';" onmouseover="status='Go to URLs'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+  <p>Horde::getFormData()</p>
+
+  <code><font color="#000000">
+<br><font color="#0000BB">&lt;?php<br><br></font><font color="#FF8000">// Get a variable from GET or POST data<br></font><font color="#0000BB">$f_var&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">Horde</font><font color="#007700">::</font><font color="#0000BB">getFormData</font><font color="#007700">(</font><font color="#DD0000">'var'</font><font color="#007700">);<br><br></font><font color="#FF8000">// Remove magic quotes from a variable if necessary<br></font><font color="#0000BB">$HTTP_POST_VARS</font><font color="#007700">[</font><font color="#DD0000">'foo'</font><font color="#007700">]&nbsp;=&nbsp;</font><font color="#0000BB">Horde</font><font color="#007700">::</font><font color="#0000BB">dispelMagicQuotes</font><font color="#007700">(</font><font color="#0000BB">$HTTP_POST_VARS</font><font color="#007700">[</font><font color="#DD0000">'foo'</font><font color="#007700">]);<br><br></font><font color="#0000BB">?&gt;<br></font>&nbsp;&nbsp;</font>
+</code><br />
+
+
+  <ul>
+<li>Static method in the Horde class</li><li>Handles GET or POST data</li><li>Strips magic quotes if they are on</li></ul><br />
+
+
+</td></tr></table></div>
+</body>
+</html>

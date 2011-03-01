@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>Presentations</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" /></head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="5_whatisdesign.xml.html" onmouseout="window.status='';" onmouseover="window.status='Go to: What Is Design?'; return true;" accesskey="P"><img src="presentation_back.gif" border="0" alt="Back" title="Back" /></a></td><td style="cursor: hand;" onclick="location.href='5_whatisdesign.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>What Is Design?</div></td></tr></table></td>
+<td width='50%' align='center' style='cursor: hand;' class='oratorHeaderBack' valign='center' nowrap='nowrap' onclick='location.href="/horde/orator/slide.php?p=kongress2002-design_patterns&amp;s=6&amp;Sax=4a99a93860805f0c7ae2863ae66b17ca";'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>APIs</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="7_designpatterns.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Design Patterns</div></td></tr></table></td><td width="1%" align="right"><a href="7_designpatterns.xml.html" onmouseout="window.status='';" onmouseover="window.status='Go to: Design Patterns'; return true;" accesskey="N"><img src="presentation_forward.gif" border="0" alt="Forward" title="Forward" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+  <div align="center" class="osHeading">APIs: Application Programming Interfaces</div>
+
+  <p>
+    An API, or an Application Programming Interface, is the way your
+    application, or one of its components, interacts with any other
+    code using it.
+  </p>
+
+  <p>
+    That sentence implies an assumption that is one of the fundamental
+    aspects of creating a well-designed application: when using
+    components, you should use their APIs and not muck around with
+    internals or include pages directly. And conversely, when writing
+    an API, you must expose enough functionality that users can make
+    full use of the API without having to muck with internals.
+  </p>
+
+  <p>
+    Here is an example of an API for a Browser detection class: <a target="_blank" href="http://dev.horde.org/api/framework/Horde_Browser/Browser.html">http://dev.horde.org/api/framework/Horde_Browser/Browser.html</a>. It includes methods to do the things you'd expect of such a
+    class, along with accessors for all of the member variables that
+    you would want to access. Why is this important? Why go through
+    the overhead of calling a function instead of just accessing
+    things directly? Well, we recently changed some of the internal
+    data structures/member variables of the class. And we had a few
+    pieces of code that had been accessing member variables
+    directly. Guess what: they all broke. Now that we have all of the
+    appropriate accessors and are using them everywhere, even if we
+    change the internal variables again, that won't happen.
+  </p>
+
+  <p>
+    The other lesson to draw from this is that when someone changes
+    how something works, they'll almost always fix anything that that
+    change breaks in the same file - but tracking down any affected
+    code outside of that file usually only happens bit by bit as
+    people find breaks. So as much as you can insure that changes
+    won't affect anything other than their immediate class - i.e.,
+    don't change the API, and stick to the API - things will break
+    that much less.
+  </p>
+
+</td></tr></table></div>
+</body>
+</html>

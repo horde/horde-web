@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Horde Registry</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="31_prefsui.xml.html" onmouseout="status='';" onmouseover="status='Go to Preferences UI'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='31_prefsui.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Preferences UI</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Horde Registry</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="33_registry2.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Registry Links</div></td></tr></table></td><td width="1%" align="right"><a href="33_registry2.xml.html" onmouseout="status='';" onmouseover="status='Go to Registry Links'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+<p>Horde's Registry is the glue that holds different applications together</p>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br><br></font><font color="#007700">require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/Registry.php'</font><font color="#007700">;<br><br></font><font color="#FF8000">// The Registry has a singleton method that should be used to ensure<br>// that there is only ever one instance of the Registry during a request.<br></font><font color="#0000BB">$registry&nbsp;</font><font color="#007700">=&nbsp;&amp;</font><font color="#0000BB">Registry</font><font color="#007700">::</font><font color="#0000BB">singleton</font><font color="#007700">();<br><br></font><font color="#FF8000">// All applications should put themselves on the application stack when they start running<br>// This also takes care of reading the application's configuration file.<br></font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">pushApp</font><font color="#007700">(</font><font color="#DD0000">'curapp'</font><font color="#007700">);<br><br></font><font color="#FF8000">// When an app is finished, pop it off the application stack<br>// This also returns the global $conf variable to that of the previous application.<br></font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">popApp</font><font color="#007700">();<br><br></font><font color="#FF8000">// Routines can determine the current app:<br></font><font color="#0000BB">$curapp&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">getApp</font><font color="#007700">();<br><br></font><font color="#FF8000">// Find out if the current application allows guests<br></font><font color="#007700">if&nbsp;(</font><font color="#0000BB">$registry</font><font color="#007700">-&gt;</font><font color="#0000BB">allowGuests</font><font color="#007700">())&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF8000">// Guest access allowed<br>&nbsp;&nbsp;&nbsp;&nbsp;// allowGuests() checks the current app, if one is not specified<br></font><font color="#007700">}<br><br></font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+  <ul>
+<li>The Registry system keeps track of Horde's application stack, and which app is currently running.</li><li>When you switch applications, the registry will take care of switching the gettext textdomain correctly.</li><li>It also lets you determine configuration information about installed applications, such as whether they allow guest users.</li></ul><br />
+
+
+
+</td></tr></table></div>
+</body>
+</html>

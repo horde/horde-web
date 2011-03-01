@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Application Building With Horde</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="2007-02-28" />
+<meta name="author" content="Chuck Hagenbuch" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="../s5/ui/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="../s5/ui/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="../s5/ui/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="../s5/ui/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="../s5/ui/SyntaxHighlighter/SyntaxHighlighter.css" type="text/css" media="screen"></link>
+<!-- S5 JS -->
+<script src="../s5/ui/slides.js" type="text/javascript"></script>
+<!-- prototype + scriptaculous -->
+<script src="../s5/ui/prototype/prototype.js" type="text/javascript"></script>
+<script src="../s5/ui/scriptaculous/scriptaculous.js" type="text/javascript"></script>
+<!-- Presentaculous JS -->
+<script src="../s5/ui/presentacular.js" type="text/javascript"></script>
+<!-- Syntax highlighting JS -->
+<script src="../s5/ui/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script src="../s5/ui/SyntaxHighlighter/shBrushPhp.js" type="text/javascript"></script>
+<script type="text/javascript">
+Event.observe(window, 'load', function() {
+    dp.SyntaxHighlighter.HighlightAll('code');
+});
+</script>
+</head>
+<body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Cambridge, Massachusetts &#8226; February 28th 2007</h1>
+<h2>Application Building With Horde</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+<div class="presentation">
+
+
+<div class="slide">
+<h1>Application Building With Horde</h1>
+<h3>Chuck Hagenbuch</h3>
+<h4><a href="http://www.horde.org/">The Horde Project</a></h4>
+</div>
+
+<div class="slide">
+ <h1>I thought Horde was just ...</h1>
+ <ul class="incremental">
+  <li>Webmail?</li>
+  <li>Groupware?</li>
+  <li>A blue design with a sidebar?</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Different kinds of Horde Applications</h1>
+ <p>
+  <a href="graphics/janschneider.de.png" target="_blank"><img src="graphics/janschneider.de.png" height="200" width="200" /></a>
+  <a href="graphics/gloudemans.info.png" target="_blank"><img src="graphics/gloudemans.info.png" height="200" width="200" /></a>
+  <a href="graphics/dimp.png" target="_blank"><img src="graphics/dimp.png" height="200" width="200" /></a>
+ </p>
+</div>
+
+<div class="slide">
+<h1>&quot;What is Horde?&quot;</h1>
+<ul class="incremental">
+ <li>The Horde Project: an open source project driven by:</li>
+ <li>The Horde Developers: volunteer developers providing:</li>
+ <li>The Horde Application Framework: a PHP web application framework, consisting of:</li>
+ <li>The Horde Libraries: PEAR-style packages powering:</li>
+ <li>The Horde Applications: real-world integrated web applications</li>
+</ul>
+</div>
+
+<div class="slide">
+ <h1>Why: Libraries</h1>
+ <ul class="incremental">
+  <li>Over 60 high quality PHP libraries in PEAR packages</li>
+  <li>PHP4 and PHP5</li>
+  <li>Authentication and Permissions to MIME handling to user preferences to XML transformations</li>
+  <li>Coding standards that were the basis for the PEAR coding standards</li>
+  <li>Initial PEAR packages including Log and Mail were contributed from Horde to PEAR</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Why: Standards</h1>
+ <ul class="incremental">
+  <li>XHTML/CSS Layout</li>
+  <li>Comprehensive MIME standards support</li>
+  <li>Groupware apps all handle iCalendar and vCard</li>
+  <li>SOAP and XML-RPC access to all application APIs</li>
+  <li>SyncML server</li>
+  <li>WebDAV server</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Why: Backend Independence</h1>
+ <ul class="incremental">
+  <li>SQL drivers work for MySQL, PostgreSQL, Oracle, MSSQL, more</li>
+  <li>LDAP support for contacts, preferences, users, more.</li>
+  <li>VFS (virtual filesystem) support for local files, SQL, FTP, more</li>
+  <li>Pluggable drivers for all backends</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Why: Applications</h1>
+ <ul class="incremental">
+  <li>Over 50 in CVS</li>
+  <li>Used by MIT, Portugal Telecom, and many many more</li>
+  <li>Groupware apps are all in at least 2nd major release</li>
+  <li>All applications integrate users and their data</li>
+  <li>Developer tools including Chora and Whups</li>
+  <li>Access to APIs without tight coupling</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Why: Internationalization</h1>
+ <ul class="incremental">
+  <li>Full Unicode support in IMP and most apps</li>
+  <li>Standards-compliant character set handling</li>
+  <li>39 different translations</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Why: The Project</h1>
+ <ul class="incremental">
+  <li>Incredibly feature-rich</li>
+  <li>Built through more than eight years of development ...</li>
+  <li>... of real-world production web applications</li>
+  <li>Constantly updated, improved, innovated, and refactored</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Application Building</h1>
+ <p>All of these applications, APIs, libraries, etc. are why you can
+ build any kind of application or site with Horde.</p>
+</div>
+
+<div class="slide">
+ <h1>What makes a Horde application?</h1>
+
+ <p>Typically Horde applications share a common structure and code
+ organization. The <a
+ href="http://cvs.horde.org/skeleton/">skeleton</a> application
+ provides this for you.</p>
+ <p class="incremental"><img src="graphics/skeleton.gif" alt="With a skeleton!" /></p>
+</div>
+
+<div class="slide">
+ <h1>What makes..., cont.</h1>
+ <p>But all you really need is:</p>
+ <ul class="incremental">
+  <li>An entry in <code>horde/config/registry.php</code></li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>That's all?</h1>
+ <p>Technically, yes. But to take full advantage of Horde, you'll also want:</p>
+ <ul class="incremental">
+  <li>A <code>config/</code> directory with at least <code>conf.xml</code> and <code>prefs.php</code> files</li>
+  <li>A <code>lib/api.php</code> file describing your app's API</li>
+  <li>A <code>locale/</code> directory for translations</li>
+  <li>A <code>themes/</code> directory for styles and graphics</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>registry.php</h1>
+ <p>Here's an application's registry.php entry:</p>
+ <textarea name="code" class="php" rows="10" cols="100">$this->applications['whups'] = array(
+    'fileroot' =&gt; dirname(__FILE__) . '/../whups',
+    'webroot' =&gt; $this-&gt;applications['horde']['webroot'] . '/whups',
+    'name' =&gt; _("Tickets"),
+    'status' =&gt; 'active',
+    'provides' =&gt; 'tickets',
+    'menu_parent' =&gt; 'devel',
+);</textarea>
+</div>
+
+<div class="slide">
+ <h1>Building our catalog applications</h1>
+ <ul class="incremental">
+  <li>Rdo: lightweight, PDO-based ORM</li>
+  <li>Automatic generation of Model classes</li>
+  <li>Override with customized Model</li>
+  <li>Automatic generation of Horde_Forms from Model</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Getting started</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+define('AUTH_HANDLER', true);
+include '/var/www/horde/lib/base.php';
+include 'Horde/Loader.php';
+include 'Horde/Variables.php';
+Horde_Loader::addClassPath(
+    dirname(__FILE__));
+Horde_Loader::addClassPath(
+    '/var/www/horde/incubator/Horde_Form');
+include '/var/www/horde/incubator/Horde_Rdo/Table.php';
+include '/var/www/horde/incubator/Horde_Rdo/Form.php';</textarea>
+</div>
+
+<div class="slide">
+ <h1>Introduction to Rdo</h1>
+ <ul class="incremental">
+  <li>ORM - Object-Relational Mapping</li>
+  <li>Uses PDO drivers</li>
+  <li>Use of PHP 5 interfaces - Iterator, IteratorAggregate, ArrayAccess, Countable, etc.</li>
+  <li>Beta</li>
+  <li>(... though so is Gmail)</li>
+ </ul>
+</div>
+
+<div class="slide">
+ <h1>Rdo Example Usage</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+$um = new UserMapper();
+
+$userCount = $um-&gt;count(); // Count all users.
+
+$exists = $um-&gt;exists(1); // Check if id 1 exists.
+
+// Look for Alice
+$user = $um-&gt;find(Horde_Rdo::FIND_FIRST,
+                  array('name' => 'Alice'));
+if ($user) {
+    echo "Found Alice: id $user-&gt;id\n";
+} else {
+    // Create a new user.
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Rdo: Creating &amp; Editing</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+$user = $um-&gt;create(array(
+    'name' => 'Alice',
+    'phone' => '212-555-6565'));
+echo "Created new user with id: {$user-&gt;id}\n";
+
+// Change the name of the user and save.
+$user-&gt;name = 'Bob';
+$user-&gt;save();</textarea>
+</div>
+
+<div class="slide">
+ <h1>Rdo: More Find &amp; Delete</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+// List all users.
+echo "Looking for all:\n";
+foreach ($um-&gt;find(Horde_Rdo::FIND_ALL) as $user) {
+    echo "  (" . $user-&gt;id
+        . ") " . $user-&gt;name . "\n";
+}
+
+// Fetch id 2 and delete.
+$user = $um-&gt;find(2);
+$user-&gt;delete();</textarea>
+</div>
+
+<div class="slide">
+ <h1>Form Generation</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+$vars = Variables::getDefaultVariables();
+$form = new Horde_Form_Helper($mapper, $vars,
+                              'My Form Title');
+$form-&gt;getRenderer()-&gt;renderActive($form, '#'); // Edit form
+$form-&gt;delete(); // process a delete action
+$form-&gt;update(); // process an update form
+$form-&gt;create(); // process a create form</textarea>
+</div>
+
+<div class="slide">
+ <h1>Introduction to Horde_Form</h1>
+ <ul class="incremental">
+  <li>Over 40 validating field types</li>
+  <li>Can be created programmatically or automatically from Horde_Form_Helper</li>
+  <li>Full server-side validation</li>
+  <li>Javascript helpers for many tasks (date picker, color picker, et. al.)</li>
+ </ul>
+</div>
+
+
+<!-- Lens slides -->
+<div class="slide">
+ <h1>Horde_Rdo_Lens</h1>
+ <h2>Motivation: How many times do I have to loop through this #*)&%% array?</h2>
+ <textarea name="code" class="php" rows="10" cols="100">
+$data = array();
+while ($row = mysql_fetch_array()) {
+    $data[] = $row;
+}
+
+foreach ($data as $index => $row) {
+    $data[$index]['foo'] = format_somehow($row['foo']);
+}
+
+foreach ($data as $row) {
+    echo '&lt;p&gt;' . display($row) . '&lt;/p&gt;';
+}</textarea>
+</div>
+
+<div class="slide">
+ <h1>Remember Flyweight?</h1>
+ <p><a target="_blank" href="http://en.wikipedia.org/wiki/Flyweight_pattern">http://en.wikipedia.org/wiki/Flyweight_pattern</a></p>
+
+ <div class="handout">
+  <p>Flyweight is a software design pattern. When many objects must be
+  manipulated and these cannot afford to have extraneous data,
+  flyweight is appropriate.</p>
+
+  <p>In the flyweight pattern, the data has no pointers to the data
+  type methods, because these would consume too much space. Instead,
+  the subroutines are called directly. In some cases, flyweight
+  inheritance is performed by &quot;shift-in&quot; and
+  &quot;shift-out&quot; data markers as a higher-level operation
+  cycles through an array of flyweight data.</p>
+
+  <p>One classic example of a flyweight pattern are the characters
+  stored in a word processor. Each character represents an object that
+  has a font face, font size, and other formatting data. As you can
+  imagine, a large document with this data structure would bloat the
+  memory footprint of the word processor. Moreover, since much of this
+  data is repeated, there must be a way to reduce the footprint - the
+  Flyweight pattern. Each of the character objects would contain a
+  reference to a separate formatting object which contains the
+  required properties. This greatly reduces the memory footprint by
+  combining all of the like-formatted characters into simpler objects
+  that reference a single formatting object.</p>
+ </div>
+</div>
+
+<div class="slide">
+ <h1>Lens use</h1>
+ <textarea name="code" class="php" rows="10" cols="100">
+$items = $mapper-&gt;find(Horde_Rdo::FIND_ALL);
+$formattedItems = new Horde_Rdo_Decorating_Iterator(
+    $items, new Horde_Rdo_Lens());
+
+echo '&lt;ul&gt;';
+foreach ($formattedItems as $item) {
+     echo '&lt;li&gt;' . $item-&gt;name
+         . ' :' . $item-&gt;desc . '&lt;/li&gt;';
+}
+echo '&lt;/ul&gt;';</textarea>
+</div>
+
+
+<!-- WebDAV -->
+<div class="slide">
+ <h1>Doing more with our data</h1>
+ <p>Let's provide a different way to see the packages we're
+ expecting. How about WebDAV?</p>
+</div>
+
+<div class="slide">
+ <h1>WebDAV browsing made simple</h1>
+ <p><img src="graphics/webdav.png" /></p>
+</div>
+
+<div class="slide">
+ <h1>Obrowser, where art thou?</h1>
+ <p>Alternate ways to see what WebDAV sees:</p>
+ <p><img src="graphics/obrowser_1.png" /></p>
+</div>
+
+<div class="slide">
+ <h1>Obrowser, cont.</h1>
+ <p><img src="graphics/obrowser_2.png" /></p>
+</div>
+
+<div class="slide">
+ <h1>Obrowser, cont.</h1>
+ <p><img src="graphics/obrowser_3.png" /></p>
+</div>
+
+<div class="slide">
+ <h1>Implementing /browse</h1>
+ <ul class="incremental">
+  <li>This is the API method that implements both WebDAV and obrowser functionality</li>
+  <li>Takes a path and an optional list of property names</li>
+  <li>Returns an array depending on the path</li>
+  <li><a target="_blank" href="source.php?file=browse">Code</a></li>
+ </ul>
+</div>
+
+
+<!-- Fin -->
+<div class="slide">
+<h1>Questions?</h1>
+</div>
+
+<div class="slide">
+ <h1>Resources</h1>
+ <ul>
+  <li>The Horde website: <a href="http://www.horde.org/" target="_blank">http://www.horde.org/</a></li>
+  <li>Developer Documentation: <a href="http://dev.horde.org/" target="_blank">http://dev.horde.org/</a></li>
+  <li>Building a Google Maps mashup with Horde: <a href="http://horde.org/papers/nyphpcon-2006-06/">http://horde.org/papers/nyphpcon-2006-06/</a></li>
+  <li>Wiki Developer Documentation: <a href="http://wiki.horde.org/Doc/Dev" target="_blank">http://wiki.horde.org/Doc/Dev</a></li>
+  <li>Mailing lists: <a href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></li>
+ </ul>
+</div>
+
+<!-- End Slides -->
+</div>
+</body>
+</html>

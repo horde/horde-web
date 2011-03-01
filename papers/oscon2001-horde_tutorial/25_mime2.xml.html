@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: MIME Messages</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="24_mime.xml.html" onmouseout="status='';" onmouseover="status='Go to MIME Viewers'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='24_mime.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>MIME Viewers</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>MIME Messages</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="26_mime3.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Other MIME</div></td></tr></table></td><td width="1%" align="right"><a href="26_mime3.xml.html" onmouseout="status='';" onmouseover="status='Go to Other MIME'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+  <p>MIME Messages</p>
+  <code><font color="#000000">
+<br><font color="#0000BB">&lt;?php<br><br></font><font color="#007700">require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/MIME/Message.php'</font><font color="#007700">;<br>require_once&nbsp;</font><font color="#0000BB">HORDE_BASE&nbsp;</font><font color="#007700">.&nbsp;</font><font color="#DD0000">'/lib/MIME/Part.php'</font><font color="#007700">;<br><br></font><font color="#FF8000">// Create a MIME message<br></font><font color="#0000BB">$message&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">MIME_Message</font><font color="#007700">();<br><br></font><font color="#FF8000">// Create a message body<br></font><font color="#0000BB">$bodyPart&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">MIME_Part</font><font color="#007700">(</font><font color="#DD0000">'text/plain'</font><font color="#007700">,&nbsp;</font><font color="#DD0000">'message contents'</font><font color="#007700">);<br><br></font><font color="#FF8000">// Add attachments (MIME_Part objects) to it<br></font><font color="#0000BB">$message</font><font color="#007700">-&gt;</font><font color="#0000BB">addPart</font><font color="#007700">(</font><font color="#0000BB">$bodyPart</font><font color="#007700">);<br></font><font color="#0000BB">$message</font><font color="#007700">-&gt;</font><font color="#0000BB">addPart</font><font color="#007700">(</font><font color="#0000BB">$attachment1</font><font color="#007700">);<br><br></font><font color="#FF8000">// Generate the full message body. It still needs headers.<br></font><font color="#0000BB">$generated&nbsp;</font><font color="#007700">=&nbsp;</font><font color="#0000BB">$message</font><font color="#007700">-&gt;</font><font color="#0000BB">toString</font><font color="#007700">();<br><br></font><font color="#0000BB">?&gt;<br></font>&nbsp;&nbsp;</font>
+</code><br />
+
+
+  <ul>
+<li>The MIME_Message class lets you easily generate a message made up of MIME_Part objects</li><li>MIME_Part objects known their mimetype, can generate the necessary headers, and correspond to individual attachments.</li></ul><br />
+
+</td></tr></table></div>
+</body>
+</html>

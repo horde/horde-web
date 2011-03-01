@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Configuration</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="7_structure.xml.html" onmouseout="status='';" onmouseover="status='Go to File Structure'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='7_structure.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>File Structure</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Configuration</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="9_constants.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Constants</div></td></tr></table></td><td width="1%" align="right"><a href="9_constants.xml.html" onmouseout="status='';" onmouseover="status='Go to Constants'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+  <p>Horde configuration files are simply arrays:</p>
+  <code><font color="#000000">
+<br><font color="#0000BB">&lt;?php<br><br>$conf</font><font color="#007700">[</font><font color="#DD0000">'sitename'</font><font color="#007700">]&nbsp;=&nbsp;</font><font color="#DD0000">'APP'</font><font color="#007700">;<br></font><font color="#0000BB">$conf</font><font color="#007700">[</font><font color="#DD0000">'debug_level'</font><font color="#007700">]&nbsp;=&nbsp;</font><font color="#0000BB">E_ALL</font><font color="#007700">;<br></font><font color="#0000BB">$conf</font><font color="#007700">[</font><font color="#DD0000">'max_exec_time'</font><font color="#007700">]&nbsp;=&nbsp;</font><font color="#0000BB">0</font><font color="#007700">;<br></font><font color="#0000BB">$conf</font><font color="#007700">[</font><font color="#DD0000">'use_ssl'</font><font color="#007700">]&nbsp;=&nbsp;</font><font color="#0000BB">2</font><font color="#007700">;<br></font><font color="#0000BB">$conf</font><font color="#007700">[</font><font color="#DD0000">'umask'</font><font color="#007700">]&nbsp;=&nbsp;</font><font color="#DD0000">'077'</font><font color="#007700">;<br></font><font color="#0000BB">$conf</font><font color="#007700">[</font><font color="#DD0000">'compress_pages'</font><font color="#007700">]&nbsp;=&nbsp;</font><font color="#0000BB">true</font><font color="#007700">;<br><br></font><font color="#0000BB">?&gt;<br></font>&nbsp;&nbsp;</font>
+</code><br />
+
+
+  <p>Actual configuration files are heavily commented to make them
+  easier for end users to edit. There are also hopes of having them
+  be parsed by a configuration file generation tool in the
+  future.</p>
+
+</td></tr></table></div>
+</body>
+</html>

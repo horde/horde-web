@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Presentations :: Preferences UI</title>
+<link href="presentation.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table class='oratorHeader' border='0' cellspacing='0' cellpadding='1' width='100%'><tr>
+<td width='1%' align='left' class='oratorHeaderBack' valign='center' nowrap='nowrap'><a href="30_prefs.xml.html" onmouseout="status='';" onmouseover="status='Go to Preferences'; return true;"><img src="presentation_back.gif" border="0" alt="" /></a></td><td style="cursor: hand;" onclick="location.href='30_prefs.xml.html';" align="left" class="oratorHeaderBack" width="24%"><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Preferences</div></td></tr></table></td>
+<td width='50%' align='center' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitle'>Preferences UI</div></td></tr></table></td>
+<td style='cursor: hand;' onclick='location.href="32_registry.xml.html";' width='24%' align='right' class='oratorHeaderBack' valign='center' nowrap='nowrap'><table border="0" cellspacing="0" cellpadding="0"><tr><td nowrap="nowrap"><div class='oratorTitleHigh'>Horde Registry</div></td></tr></table></td><td width="1%" align="right"><a href="32_registry.xml.html" onmouseout="status='';" onmouseover="status='Go to Horde Registry'; return true;"><img src="presentation_forward.gif" border="0" alt="" /></a></td>
+</tr></table>
+<br /><br /><div align='center'>
+<table border='0' width='600'><tr><td align='left'>
+
+<p>The preferences UI is completely auto-generated</p>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br><br></font><font color="#FF8000">// Preference groups look like this:<br></font><font color="#0000BB">$prefGroups</font><font color="#007700">[</font><font color="#DD0000">'display'</font><font color="#007700">]&nbsp;=&nbsp;array(<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'column'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#0000BB">_</font><font color="#007700">(</font><font color="#DD0000">"Other Options"</font><font color="#007700">),<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'label'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#0000BB">_</font><font color="#007700">(</font><font color="#DD0000">"Display Options"</font><font color="#007700">),<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'desc'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#0000BB">_</font><font color="#007700">(</font><font color="#DD0000">"Change display options."</font><font color="#007700">),<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'members'&nbsp;</font><font color="#007700">=&gt;&nbsp;array(</font><font color="#DD0000">'sortby'</font><font color="#007700">,&nbsp;</font><font color="#DD0000">'sortdir'</font><font color="#007700">,&nbsp;</font><font color="#DD0000">'max_msgs'</font><font color="#007700">,&nbsp;</font><font color="#DD0000">'num_words'</font><font color="#007700">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'nav_expanded'</font><font color="#007700">));<br><br></font><font color="#FF8000">// Individual preferences look like this:<br></font><font color="#0000BB">$_prefs</font><font color="#007700">[</font><font color="#DD0000">'fullname'</font><font color="#007700">]&nbsp;=&nbsp;array(</font><font color="#DD0000">'value'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#DD0000">''</font><font color="#007700">,<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'locked'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#0000BB">false</font><font color="#007700">,<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'shared'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#0000BB">true</font><font color="#007700">,<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'type'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#DD0000">'text'</font><font color="#007700">,<br>&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">'desc'&nbsp;</font><font color="#007700">=&gt;&nbsp;</font><font color="#0000BB">_</font><font color="#007700">(</font><font color="#DD0000">"Your full name:"</font><font color="#007700">));<br><br></font><font color="#0000BB">?&gt;</font>
+</font>
+</code><br />
+
+  <ul>
+<li>Preference types are: text, textarea, select, enum, number, checkbox, link, implicit, and special.</li><li>Implicit preferences do not appear in the UI by themselves; they are set other places.</li><li>Links are not preferences; they just provide a link to somewhere else from the preference UI.</li><li>Special preferences are preferences that need special logic or UI, and they are handled specially by the application.</li><li>A special preference is just something that shows up in the UI; it will not be stored. Implicit preferences should be used for the values that a special preference needs to store.</li></ul><br />
+
+
+
+</td></tr></table></div>
+</body>
+</html>
