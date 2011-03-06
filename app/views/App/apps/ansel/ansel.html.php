@@ -1,4 +1,4 @@
-<p><div style="float:left;margin:3px;"><a title="Image View" href="screenshots/index.php">
+<p><div style="float:left;margin:3px;"><a title="Image View" href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ansel', 'action' => 'screenshot')) ?>">
 <img alt="Image View" src="<?php echo $GLOBALS['host_base']?>/images/screenshots/ansel/imageview_thumb.jpg" /></a></div>
 
 <p>Ansel is a full featured photo management application. With it, you can create
@@ -43,5 +43,5 @@ methods that make it extremely easy to embed gallery views on your own website.
 </p>
 
 <p>If you are interested in helping develop Ansel, or just want to ask questions
-and keep an eye on its progress, be sure to join our 
+and keep an eye on its progress, be sure to join our
 <a href="http://www.horde.org/mail">mailing list!</a></p>
