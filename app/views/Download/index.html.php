@@ -18,6 +18,7 @@
 	</div>
      <div class="rightcol" style="background: none;">
          <?php echo $this->render('releasedAppsList');?>
+         <?php echo $this->render('sponsors');?>
     </div>
     <div class="clear"></div>
   </div>

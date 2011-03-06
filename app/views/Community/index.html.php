@@ -1,9 +1,9 @@
 <div class="content">
   <div class="main">
-    <div class="mainarea">
+    <div class="mainareasplit">
         <h2><span></span>Community</h2>
         <?php echo $this->render('communitynav');?>
-       
+
         <div class="section">
          <div class="sectionintro">
             <p>The Horde Project is about creating high quality Open Source <a
@@ -56,6 +56,9 @@
         modules (IMAP, for instance) are present.</p>
         </div>
 	</div>
+     <div class="rightcol" style="background: none;">
+         <?php echo $this->render('sponsors');?>
+    </div>
     <div class="clear"></div>
   </div>
 </div>
