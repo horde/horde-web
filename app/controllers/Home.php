@@ -32,9 +32,9 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         parent::_setup();
         $view = $this->getView();
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/Home'));    
+            array($GLOBALS['fs_base'] . '/app/views/Home'));
     }
-    
+
     /**
      *
      * @param Horde_Controller_Response $response
@@ -45,7 +45,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         $view->page_title = 'The Horde Project';
         $view->maxHordeItems = 3;
         $view->maxPlanetItems = 5;
-        $view->quote = HordeWeb_Utils::getQuote();
+
         // Get the planet feed.
         $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
         if (!$view->planet = $cache->get('planet', 600)) {

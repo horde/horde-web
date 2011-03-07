@@ -61,6 +61,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $this->urlWriter = $view->urlWriter = $this->getUrlWriter();
         $view->homeurl = $this->urlWriter->urlFor('home');
         $view->feedurl = '';
+        $view->quote = HordeWeb_Utils::getQuote();
 
         // This seems to be needed for some helpers to work correctly.
         $view->controller = $this;

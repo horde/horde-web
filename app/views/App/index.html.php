@@ -5,10 +5,11 @@
         <?php echo $this->render('communitynav') ?>
         <div class="applications">
           <div class="sectionintro">
-            <p>This is a list of the major applications developed by the horde
-            team. There is a more complete list of everything available from our
-            source repository <a href="<?php echo $this->urlWriter->urlFor('development') ?>">in the development section</a> of the
-            site.</p>
+            <p>This is a list of the major released applications developed by
+            the horde team. There is a more complete list of everything available
+            from our source repository
+            <a href="<?php echo $this->urlWriter->urlFor('development') ?>">
+            in the development section</a> of the site.</p>
 
             <p>We also have an extensive list of projects that are currently either planned
             or underway in our wiki: <a

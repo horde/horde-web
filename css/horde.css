@@ -42,7 +42,7 @@ ul {
 
 body {
 	background:url(../images/background.jpg) repeat;
-	font-family:Helvetica Neue, Arial, Helvetica, Tahoma;
+	font-family: Helvetica Neue, Arial, Helvetica, Tahoma;
 	font-size:12px;
 	color:#797979;
 }
@@ -702,4 +702,8 @@ div.screenshots h3 {
 }
 div.screenshots table td {
     padding: 10px;
+}
+
+.ui-accordion-content-active {
+    max-height: 100px;
 }
