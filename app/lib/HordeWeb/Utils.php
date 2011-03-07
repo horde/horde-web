@@ -97,4 +97,5 @@ class HordeWeb_Utils
 
         return $crumb;
     }
+
 }

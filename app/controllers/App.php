@@ -84,6 +84,15 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             $view->page_title = '404 Not Found';
             $template = '404';
         }
+
+        // Build the bug/news widget
+        // @TODO allow multiple feeds and add cache
+        $slugs = array($this->_matchDict->app);
+        foreach ($slugs as $slug) {
+            $base_feed_url = Horde::url('http://bugs.horde.org/queue/rss.php')->add('slug', $slug);
+            $view->open_feed_bug = Horde_Feed::readUri($base_feed_url->copy()->add('type_id', 1));
+            $view->open_feed_enhancement = Horde_Feed::readUri($base_feed_url->copy()->add('type_id', 2));
+        }
         $layout->setView($view);
         $layout->setLayoutName('main');
         $response->setBody($layout->render($template));

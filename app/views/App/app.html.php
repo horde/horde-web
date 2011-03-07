@@ -8,15 +8,31 @@
         </div
 	</div>
      <div class="rightcol" style="background: none;">
-         <h2>Latest News</h2>
-
-         <h2>Stable Releases</h2>
-
-         <h2>Open Bugs</h2>
-
-         <h2>Open Enhancements</h2>
+       <div id="accordion">
+         <h3><a href="#">Latest News</a></h3>
+         <div></div>
+         <h3><a href="#">Stable Releases</a></h3>
+         <div></div>
+         <h3><a href="#">Open Bugs</a></h3>
+         <div>
+           <?php foreach ($this->open_feed_bug as $item):?>
+             <?php echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $item))); ?>
+           <?php endforeach;?>
+         </div>
+         <h3><a href="#">Open Enhancements</a></h3>
+         <div>
+           <?php foreach ($this->open_feed_enhancement as $item):?>
+             <?php echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $item))); ?>
+           <?php endforeach;?></div>
+       </div>
          <?php echo $this->render('sponsors');?>
     </div>
     <div class="clear"></div>
   </div>
 </div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#accordion").accordion({ autoHeight: false });
+  });
+
+</script>
