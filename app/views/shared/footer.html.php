@@ -14,9 +14,10 @@
 							<div class="follow-us">
 								<h3>Follow us</h3>
 								<ul>
+                                    <li><a target="_blank" href="http://bit.ly/iggr7v" class="newsletter">Newsletter</a></li>
 									<li><a target="_blank" href="http://www.twitter.com/hordeproject" class="twitter">Twitter</a></li>
-                                    <!-- Comment out, at least until we have facebook fan page ;) -->
-									<!--<li><a target="_blank" href="http://www.facebook.com/pages/horde" class="facebook">Facebook</a></li>-->
+									<li><a target="_blank" href="http://github.com/horde" class="github">GitHub</a></li>
+									<li><a target="_blank" href="https://www.ohloh.net/p/horde" class="ohloh">Ohloh</a></li>
 								</ul>
 							</div>
                             <?php echo $this->render('contact'); ?>

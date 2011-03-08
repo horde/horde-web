@@ -383,10 +383,17 @@ div.footer .add-nav {
 	background:url(../images/twitter.png) no-repeat;
 	padding-left:24px;
 }
-
-.follow-us .facebook {
-	background:url(../images/facebook.png) no-repeat;
-	padding-left:24px;
+.follow-us .github {
+    background: url(../images/github.png) no-repeat;
+    padding-left: 24px;
+}
+.follow-us .ohloh {
+    background: url(../images/ohloh.png) no-repeat;
+    padding-left: 24px;
+}
+.follow-us .newsletter {
+    background: url(../images/newsletter.png) no-repeat;
+    padding-left: 24px;
 }
 
 .contact-info {
