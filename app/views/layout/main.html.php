@@ -4,9 +4,6 @@
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen" />
-<link href="<?php echo $GLOBALS['host_base'] ?>/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script src="<?php echo $GLOBALS['host_base']?>/js/jquery-1.4.4.min.js"></script>
-<script src="<?php echo $GLOBALS['host_base']?>/js/jquery-ui.min.js"></script>
 </head>
 <body>
 	<div class="area">
