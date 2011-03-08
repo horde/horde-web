@@ -739,6 +739,29 @@ div.screenshots table td {
     padding: 10px;
 }
 
-.ui-accordion-content-active {
-    max-height: 100px;
-} \ No newline at end of file
+table.roadmap {
+    border-collapse: collapse;
+}
+
+table.roadmap th {
+    background-color: #c5c5c5;
+}
+
+table.roadmap th, table.roadmap td {
+    border: 1px solid #000;
+    padding: 2px;
+}
+
+table.roadmap .done {
+    background-color: #0c0;
+}
+table.roadmap .progress {
+    background-color: #ee0;
+}
+table.roadmap .planned {
+    background-color: #fa0;
+}
+table.roadmap .cancelled {
+    background-color: #c5c5c5;
+    text-decoration: line-through;
+}
