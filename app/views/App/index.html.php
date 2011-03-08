@@ -3,7 +3,7 @@
     <div class="mainareasplit">
         <?php echo $this->renderPartial('appbreadcrumb') ?>
         <?php echo $this->render('communitynav') ?>
-        <div class="applications">
+        <div class="section">
           <div class="sectionintro">
             <p>This is a list of the major released applications developed by
             the horde team. There is a more complete list of everything available

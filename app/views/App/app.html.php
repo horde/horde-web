@@ -3,7 +3,7 @@
     <div class="mainareasplit">
         <?php echo $this->renderPartial('appbreadcrumb') ?>
         <span class="appMenu"><?php echo $this->render('appnav') ?></span>
-        <div class="apptext">
+        <div class="section">
           <?php echo $this->render($this->appname) ?>
         </div
 	</div>

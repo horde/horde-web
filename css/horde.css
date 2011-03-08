@@ -701,10 +701,6 @@ ul.appnav li a:hover, ul.communitynav li a:hover {
 
 div.hordeauthor h2,
 div.hordedocs h1,
-div.horderelease h3,
-div.screenshots h3,
-div.applications h3,
-div.apptext h3,
 div.section h3 {
     background: none;
     color: #797979;

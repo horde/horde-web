@@ -2,7 +2,7 @@
   <div class="main">
     <div class="mainareasplit">
         <h2><span></span>Download <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => $this->appname)) ?>"><?php echo ucfirst($this->appname)?></a></h2>
-        <div class="horderelease">
+        <div class="section">
             <h3>Current Stable Release</h3>
             <ul>
             <?php foreach ($this->stableapp as $val): ?>
