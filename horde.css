@@ -225,6 +225,11 @@ div.side p {
     padding-right: 5px;
 }
 
+.horde4 {
+    float: left;
+    padding-right: 5px;
+}
+
 code, .literal, .literal-block {
     color: #060;
     background-color: #eee;
