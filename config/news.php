@@ -349,7 +349,6 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
-                array('2011-03-08', 'Kronolith H4 (3.0-ALPHA1)', '2011/000580'),
                 array('2010-09-28', 'Kronolith H3 (2.3.5)', '2010/000562'),
                 array('2010-04-27', 'Kronolith H3 (2.3.4)', '2010/000546'),
                 array('2009-12-15', 'Kronolith H3 (2.3.3)', '2009/000536'),
@@ -363,6 +362,7 @@ $horde_news = array(
                 array('2007-03-15', 'Kronolith H3 (2.1.5)', '2007/000322'),
             ),
             'dev' => array(
+                array('2011-03-08', 'Kronolith H4 (3.0-ALPHA1)', '2011/000580'),
                 array('2008-09-11', 'Kronolith H3 (2.3-RC1)', '2008/000437'),
                 array('2008-05-10', 'Kronolith H3 (2.2-RC3)', '2008/000390'),
                 array('2008-01-22', 'Kronolith H3 (2.2-RC2)', '2008/000371'),
