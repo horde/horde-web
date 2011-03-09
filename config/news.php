@@ -202,7 +202,7 @@ $horde_news = array(
                 array('2007-03-14', 'Horde 3.1.4', '2007/000315'),
             ),
             'dev' => array(
-                array('2011-03-08', 'Horde 4.0.0alpha1', '2011/000000'),
+                array('2011-03-08', 'Horde 4.0-ALPHA1', '2011/000577'),
                 array('2009-04-13', 'Horde 3.3.4-RC1', '2009/000498'),
                 array('2008-09-11', 'Horde 3.3-RC1', '2008/000440'),
                 array('2008-05-10', 'Horde 3.2-RC4', '2008/000394'),
@@ -233,7 +233,7 @@ $horde_news = array(
     'imp' => array(
         'name' => 'IMP',
         'news' => array(
-            '2011-03-08' => 'IMP version 5.0.0alpha1, for use with the upcoming Horde 4 is now available',
+            '2011-03-08' => 'IMP version H4 (5.0-ALPHA1), for use with the upcoming Horde 4 is now available',
             '2009-12-15' => 'The development of IMP 5.0 has reached bug fixing mode. There will probably still be added a few more features before the final release, but most work is going into fixing bugs and finishing Horde 4, the groundwork of IMP 5.',
             '2008-09-26' => 'The final release of the IMP Webmail Client H3 (4.3) is available',
             '2008-07-10' => 'A feature to attach personal contact information to outgoing messages has been added and will be available with IMP H3 (4.3).',
@@ -261,7 +261,7 @@ $horde_news = array(
                 array('2007-03-14', 'IMP H3 (4.1.4)', '2007/000316'),
             ),
             'dev' => array(
-                array('2011-03-08', 'IMP H4 5.0.0alpha1', '2011/000000'),
+                array('2011-03-08', 'IMP H4 (5.0-ALPHA1)', '2011/000578'),
                 array('2008-09-11', 'IMP H3 (4.3-RC2)', '2008/000442'),
                 array('2008-07-31', 'IMP H3 (4.2.1-RC1)', '2008/000423'),
                 array('2008-05-10', 'IMP H3 (4.2-RC4)', '2008/000399'),
@@ -275,7 +275,7 @@ $horde_news = array(
     'ingo' => array(
         'name' => 'Ingo',
         'news' => array(
-            '2011-03-08' => 'Ingo H4 2.0.0alpha1 released',
+            '2011-03-08' => 'Ingo H4 (2.0-ALPHA1) released',
             '2008-09-11' => 'The final release of Ingo H3 (1.2.1) is available.',
             '2008-05-25' => 'The final release of Ingo H3 (1.2) is available.',
         ),
@@ -292,7 +292,7 @@ $horde_news = array(
                 array('2007-03-16', 'Ingo H3 (1.1.3)', '2007/000323'),
             ),
             'dev' => array(
-                array('2011-03-11', 'Ingo H4 2.0.0alpha1', '2011/000000'),
+                array('2011-03-11', 'Ingo H4 (2.0-ALPHA1)', '2011/000579'),
                 array('2008-05-10', 'Ingo H3 (1.2-RC3)', '2008/000393'),
                 array('2008-01-22', 'Ingo H3 (1.2-RC2)', '2008/000370'),
             ),
@@ -336,7 +336,7 @@ $horde_news = array(
     'kronolith' => array(
         'name' => 'Kronolith',
         'news' => array(
-            '2011-03-08' => 'Kronolith H4 3.0.0alpha1 released',
+            '2011-03-08' => 'Kronolith H4 (3.0-ALPHA1) released',
             '2009-11-28' => 'The Ajax frontend for the upcoming Kronolith version 3.0 is more or less feature complete. If you want to contribute testing, development or bug fixing, check it out from the Horde Git repository.',
             '2008-10-22' => 'Starting with version 3.0, Kronolith is now able to store all events in UTC time. This allows sharing of events across different timezones.',
             '2008-09-26' => 'The Kronolith Calendar Application H3 (2.3) has been released.',
@@ -349,7 +349,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
-                array('2011-03-08', 'Kronolith H4 3.0.0alpha1', '2011/000000'),
+                array('2011-03-08', 'Kronolith H4 (3.0-ALPHA1)', '2011/000580'),
                 array('2010-09-28', 'Kronolith H3 (2.3.5)', '2010/000562'),
                 array('2010-04-27', 'Kronolith H3 (2.3.4)', '2010/000546'),
                 array('2009-12-15', 'Kronolith H3 (2.3.3)', '2009/000536'),
@@ -398,6 +398,7 @@ $horde_news = array(
     'mnemo' => array(
         'name' => 'Mnemo',
         'news' => array(
+            '2011-03-08' => 'Mnemo version H4 (3.0-ALPHA1) released',
             '2009-12-15' => 'There will not be any further releases of MIMP. MIMP has been integrated completely into the upcoming IMP 5.',
             '2008-05-25' => 'The final release of Mnemo H3 (2.2) is available.',
         ),
@@ -411,6 +412,7 @@ $horde_news = array(
                 array('2008-01-09', 'Mnemo H3 (2.1.2)', '2008/000364'),
             ),
             'dev' => array(
+                array('2011-03-08', 'Mnemo H4 (3.0-ALPHA1)', '2011/000583'),
                 array('2008-05-10', 'Mnemo H3 (2.2-RC3)', '2008/000391'),
                 array('2008-01-22', 'Mnemo H3 (2.2-RC2)', '2008/000369'),
             ),
@@ -420,7 +422,7 @@ $horde_news = array(
     'nag' => array(
         'name' => 'Nag',
         'news' => array(
-            '2011-03-08' => 'Nag H4 version 3.0.0alpha1 released',
+            '2011-03-08' => 'Nag version H4 (3.0-ALPHA1) released',
             '2009-12-15' => 'The upcoming Nag version 3.0 will be integrated into the Ajax frontend of the Kronolith 3.0 calendar application. You can still use it seperately, but if installed, you can manage your tasks completely through Kronolith\'s Ajax interface.',
             '2008-09-26' => 'The final release of Nag H3 (2.3) is available.',
             '2008-07-02' => 'Assignees can be assigned to tasks now. Support for that has been in the database table for a long time, but the functionality and interfaces have been added for Nag H3 (2.3) right now.',
@@ -440,7 +442,7 @@ $horde_news = array(
                 array('2007-03-15', 'Nag H3 (2.1.3)', '2007/000318'),
             ),
             'dev' => array(
-                array('2011-03-08', 'Nag H4 3.0.0alpha1', '2011/000000'),
+                array('2011-03-08', 'Nag H4 (3.0-ALPHA1)', '2011/000582'),
                 array('2008-09-11', 'Nag H3 (2.3-RC1)', '2008/000436'),
                 array('2008-05-10', 'Nag H3 (2.2-RC3)', '2008/000396'),
                 array('2008-01-22', 'Nag H3 (2.2-RC2)', '2008/000368'),
@@ -472,7 +474,7 @@ $horde_news = array(
     'turba' => array(
         'name' => 'Turba',
         'news' => array(
-            '2011-03-08' => 'Turbe H4 3.0.0alpha1 has been released.',
+            '2011-03-08' => 'Turbe H4 (3.0-ALPHA1) has been released.',
             '2008-09-26' => 'Turba H3 (2.3) has been released.',
             '2008-08-11' => 'Support for photos and logos has been added and will be available with Turba H3 (2.3).',
             '2008-06-13' => 'Turba H3 (2.2.1) has been released with a minor security fix.',
@@ -495,7 +497,7 @@ $horde_news = array(
                 array('2007-03-15', 'Turba H3 (2.1.4)', '2007/000317'),
             ),
             'dev' => array(
-                array('2011-03-08', 'Turba H4 3.0.0alpha1', '2011/000000'),
+                array('2011-03-08', 'Turba H4 (3.0-ALPHA1)', '2011/000581'),
                 array('2008-09-11', 'Turba H3 (2.3-RC1)', '2008/000438'),
                 array('2008-05-10', 'Turba H3 (2.2-RC4)', '2008/000392'),
                 array('2008-02-15', 'Turba H3 (2.2-RC3)', '2008/000379'),
