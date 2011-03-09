@@ -129,57 +129,39 @@ $horde_apps_dev = array(
     ),
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '3.3.4-RC1',
-        'date' => 'April 13 2009',
-        'file' => 'horde-3.3.4-rc1.tar.gz'
+        'ver' => '4.0.0alpha1',
+        'date' => 'March 8, 2011',
     ),
     'imp' => array(
-        'name' => 'IMP',
-        'ver' => 'H3 (4.3-RC2)',
-        'date' => 'September 11 2008',
-        'file' => 'imp-h3-4.3-rc2.tar.gz'
-    ),
-    'dimp' => array(
-        'name' => 'DIMP',
-        'ver' => 'H3 (1.1-RC2)',
-        'date' => 'September 11 2008',
-        'file' => 'dimp-h3-1.1-rc2.tar.gz'
-    ),
-    'mimp' => array(
-        'name' => 'MIMP',
-        'ver' => 'H3 (1.1.1-RC1)',
-        'date' => 'July 31 2008',
-        'file' => 'mimp-h3-1.1.1-rc1.tar.gz'
+        'name' => 'IMP H4',
+        'ver' => '5.0.0alpha1',
+        'date' => 'March 8, 2011',
     ),
     'turba' => array(
-        'name' => 'Turba',
-        'ver' => 'H3 (2.3-RC1)',
-        'date' => 'September 11 2008',
-        'file' => 'turba-h3-2.3-rc1.tar.gz'
+        'name' => 'Turba H4',
+        'ver' => '3.0.0alpha1',
+        'date' => 'March 8, 2011',
     ),
     'ingo' => array(
-        'name' => 'Ingo',
-        'ver' => 'H3 (1.2-RC3)',
-        'date' => 'May 10 2008',
-        'file' => 'ingo-h3-1.2-rc3.tar.gz'
+        'name' => 'Ingo H4',
+        'ver' => '2.0.0alpha1',
+        'date' => 'March 8, 2011',
     ),
     'kronolith' => array(
-        'name' => 'Kronolith',
-        'ver' => 'H3 (2.3-RC1)',
+        'name' => 'Kronolith H4',
+        'ver' => '3.0.0alpha1',
         'date' => 'September 11 2008',
         'file' => 'kronolith-h3-2.3-rc1.tar.gz'
     ),
     'nag' => array(
-        'name' => 'Nag',
-        'ver' => 'H3 (2.3-RC1)',
-        'date' => 'September 11 2008',
-        'file' => 'nag-h3-2.3-rc1.tar.gz'
+        'name' => 'Nag H4',
+        'ver' => '3.0.0alpha1',
+        'date' => 'March 8, 2011',
     ),
     'mnemo' => array(
-        'name' => 'Mnemo',
-        'ver' => 'H3 (2.2-RC3)',
-        'date' => 'May 10 2008',
-        'file' => 'mnemo-h3-2.2-rc3.tar.gz'
+        'name' => 'Mnemo H4',
+        'ver' => '3.0.0alpha1',
+        'date' => 'March 8, 2011',
     ),
     'whups' => array(
         'name' => 'Whups',
