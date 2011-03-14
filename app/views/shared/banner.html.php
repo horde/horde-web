@@ -4,7 +4,7 @@
         <li><a href="<? echo $this->urlWriter->urlFor('home')?>" title="Home" class="home first">Home</a></li>
         <li><a href="<?php echo $this->urlWriter->urlFor('download')?>" title="Download" class="download">Download</a></li>
         <li><a href="http://wiki.horde.org" title="Wiki" class="wiki">Wiki</a></li>
-        <li><a href="" title="Support" class="support">Support</a></li>
-        <li><a href="" title="Contact Us" class="contactus last">Contact Us</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('support')?>" title="Support" class="support">Support</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('contact')?>" title="Contact Us" class="contactus last">Contact Us</a></li>
     </ul>
 </div>

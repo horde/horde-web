@@ -17,7 +17,9 @@ $mapper->connect('home', $_root . '/', array('controller' => 'home'));
 $mapper->connect('community', $_root . '/community/:action', array('controller' => 'community', 'action' => 'index'));
 $mapper->connect('localization', $_root . '/community/localization', array('controller' => 'community', 'action' => 'localization'));
 $mapper->connect('team', $_root . '/community/team', array('controller' => 'community', 'action' => 'team'));
-$mapper->connect('support', $_root . '/community/support', array('controller' => 'community', 'action' => 'support'));
+
+/* Support */
+$mapper->connect('support', $_root . '/support/:action', array('controller' => 'support', 'action' => 'index'));
 
 /* Apps */
 $mapper->connect('apps', $_root . '/apps', array('controller' => 'app'));
@@ -43,7 +45,6 @@ if (($pos = strpos($path, '?')) !== false) {
 }
 if (!$path) $path = '/';
 $match = $mapper->match($path);
-//var_dump($match);
 $config = new Horde_Core_Controller_RequestConfiguration();
 if (empty($match['controller']) || !class_exists('HordeWeb_' . ucfirst($match['controller']) . '_Controller')) {
     $match['controller'] = 'home';
