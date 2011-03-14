@@ -4,9 +4,9 @@
 							<div class="add-nav">
 								<h3>Site Navigation</h3>
 								<ul>
-									<li><a href="/" class="item-home">Home</a></li>
-									<li><a href="/" class="item-download">Download</a></li>
-									<li><a href="/" class="item-wiki">Wiki</a></li>
+									<li><a href="<? echo $this->urlWriter->urlFor('home')?>" title="Home" class="home">Home</a></li>
+									<li><a href="<?php echo $this->urlWriter->urlFor('download')?>" title="Download" class="download">Download</a></li>
+									<li><a href="http://wiki.horde.org" title="Wiki" class="wiki">Wiki</a></li>
 									<li><a href="/" class="item-support">Support</a></li>
 									<li><a href="/" class="item-contactus">Contact Us</a></li>
 								</ul>
