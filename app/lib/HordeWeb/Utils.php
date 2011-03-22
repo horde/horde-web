@@ -106,4 +106,13 @@ class HordeWeb_Utils
         return $crumb;
     }
 
+    static public function fimg($country)
+    {
+        if (file_exists($GLOBALS['fs_base'] . '/images/flags/' . $country . '.gif')) {
+            echo '<img align="middle" src="' . $GLOBALS['host_base'] . '/images/flags/' . $country . '.gif" border="0" alt="' . strtoupper($country) . '" width="18" height="12" />&nbsp;&nbsp;';
+        } else {
+            echo '<img align="middle" src="'. $GLOBALS['host_base'] . '/images/blank.gif" border="0" alt="" width="18" height="12" />&nbsp;&nbsp;';
+        }
+    }
+
 }

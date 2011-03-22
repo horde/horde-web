@@ -29,6 +29,10 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
             $view->page_title = 'The Horde Project::Team';
             $template = 'team';
             break;
+        case 'localization':
+            $view->page_title = 'The Horde Project::Localization';
+            $template = 'localization';
+            break;
         default:
             $this->_notFound($response);
             return;
