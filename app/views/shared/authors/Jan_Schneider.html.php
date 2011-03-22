@@ -1,5 +1,6 @@
 <div class="hordeauthor">
   <h2>Jan Schneider</h2>
+  <div style="float:right;"><img src="http://www.gravatar.com/avatar/7615197bca77bdf0366c4634b16e338c" /></div>
   <ul>
     <li>Studied Computer Science and Educational Science at <a
         href="http://www.uni-bielefeld.de">University of Bielefeld</a>,

@@ -24,6 +24,11 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
             $view->page_title = 'The Horde Project::Community';
             $template = 'index';
             break;
+        case 'team':
+            $view->addTemplatePath($GLOBALS['fs_base'] . '/app/views/shared/authors');
+            $view->page_title = 'The Horde Project::Team';
+            $template = 'team';
+            break;
         default:
             $this->_notFound($response);
             return;

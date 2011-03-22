@@ -93,6 +93,14 @@ class HordeWeb_Utils
                     $crumb .= '::';
                 }
                 $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), ucfirst($view->appname), array('controller' => 'app', 'action' => 'app'));
+            break;
+        case 'HordeWeb_Community_Controller':
+            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'));
+            if (!empty($params)) {
+                foreach ($params as $name => $action) {
+                    $crumb .= '::' . $view->linkToUnlessCurrent($name, array('controller' => 'community', 'action' => $action));
+                }
+            }
         }
 
         return $crumb;

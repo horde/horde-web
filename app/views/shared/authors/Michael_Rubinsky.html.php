@@ -1,5 +1,6 @@
 <div class="hordeauthor">
-  <h2>Michael J. Rubinsky</h2>
+  <h2>Michael J Rubinsky</h2>
+  <div style="float:right;"><img src="http://www.gravatar.com/avatar/fb930e44282b804151c29212eebaa883" /></div>
   <ul class="hordeauthor">
       <li>Graduate of <a href="http://www.usip.edu" />Philadelphia College of Pharmacy and Science</a> (since renamed to University of the Sciences in Philadelphia).</li>
       <li>Joined the Horde team in 2004 when my IMSP classes were incorporated into the Horde Framework.</li>
