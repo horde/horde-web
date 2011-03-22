@@ -11,12 +11,27 @@
            <em>using</em> Horde software, for example your email account, please
            contact your <b>service provider</b> directly.</p>
          </div>
+         <h2><span></span>Support Options</h2>
          <p>For information on the various support channels, please use the
          links below.</p>
-         <ul>
-             <li>Community based support (mailing lists, irc etc...).</li>
-             <li>Professional support.</li>
-         </ul>
+
+         <h3>Community</h3>
+         <p>Just like the development of the Horde Project is a community and
+         volunteer effort, so is the support. Horde has a very robust and
+         friendly community comprised of developers, administrators and users
+         that volunteer their time and many years of experience to provide
+         support.</p>
+         <p>Please see our
+         <?php echo $this->linkTo('Community Support', array('controller' => 'community', 'action' => 'support'))?>
+         page for more information.
+
+         <h3>Professional Services</h3>
+         <p>Horde, LLC provides professional support for Horde software. If you
+         are in need of support beyond the scope or ability of the community you
+         may hire a Horde, LLC consultant to meet your needs.</p>
+         <p>Please see our
+         Professional Servcies page for more information.</p>
+
         </div>
     </div>
     <div class="rightcol" style="background: none;">
