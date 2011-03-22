@@ -56,7 +56,9 @@
         href="http://www.apache.org/">Apache</a> but also <a
         href="http://www.microsoft.com/iis/">IIS</a>, <a
         href="http://wwws.sun.com/software/products/web_srvr/home_web_srvr.html">Sun Web
-        Server</a>, etc.</p>
+        Server</a>, and <a
+        href="http://redmine.lighttpd.net/projects/show/lighttpd">Lighttpd</a>
+        etc.</p>
 
         <p>Horde modules should run on any platform that can run PHP
         (including as a cgi), assuming any required support modules
