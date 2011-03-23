@@ -24,11 +24,19 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
             $view->page_title = 'The Horde Project::Development';
             $template = 'index';
             break;
+         case 'contribute':
+         case 'docs':
+             $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
+             $template = $this->_matchDict->action;
+             break;
+         case 'cvs':
+         case 'git':
+
         default:
             $this->_notFound($response);
             return;
         }
-        
+
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -40,7 +48,7 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
         parent::_setup();
         $view = $this->getView();
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/Development'));    
+            array($GLOBALS['fs_base'] . '/app/views/Development'));
     }
 
 }
