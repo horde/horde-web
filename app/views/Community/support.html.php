@@ -28,8 +28,7 @@
             <h3>Mailing Lists and IRC</h3>
 
             <p>You can address any support issues to one of the <a href="mail/">
-            mailing lists</a>. You can also ask for help on <a href="irc.php">
-            IRC</a>.</p>
+            mailing lists</a>. You can also ask for help on IRC</a>.</p>
 
             <p>There is a <tt>#horde</tt> channel on <tt>irc.freenode.net</tt>
             (<i>see</i> <a href="http://www.freenode.net/">
