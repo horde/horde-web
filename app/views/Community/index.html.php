@@ -7,7 +7,8 @@
         <div class="sectionintro">
           <p>The Horde Project is about creating high quality Open Source <a
           href="<?php echo $this->urlWriter->urlFor('apps') ?>">applications</a>,
-          based on PHP and the Horde Framework.</p>
+          based on PHP and the Horde Framework. We strive to be the most
+          flexible web based groupware solution on the planet.</p>
         </div>
         <h3>The Project</h3>
         <p>The Horde Project is an open source project with a very active and
