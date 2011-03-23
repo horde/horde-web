@@ -101,6 +101,14 @@ class HordeWeb_Utils
                     $crumb .= '::' . $view->linkToUnlessCurrent($name, array('controller' => 'community', 'action' => $action));
                 }
             }
+            break;
+        case 'HordeWeb_Development_Controller':
+            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'));
+            if (!empty($params)) {
+                foreach ($params as $name => $action) {
+                    $crumb .= '::' . $view->linkToUnlessCurrent($name, array('controller' => 'development', 'action' => $action));
+                }
+            }
         }
 
         return $crumb;
