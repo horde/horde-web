@@ -38,6 +38,9 @@ $mapper->connect(
 $mapper->connect(
     $_root . '/download/:app', array('controller' => 'download', 'action' => 'app'));
 
+/* Contact */
+$mapper->connect(
+    $_root . '/contact/:action', array('controller' => 'contact', 'action' => 'index'));
 
 $path = $request->getPath();
 if (($pos = strpos($path, '?')) !== false) {
