@@ -8,10 +8,10 @@
 							</div>
 							<div class="text">
 								<h2><a href="<?php echo $this->urlWriter->urlFor('community');?>">Community</a></h2>
-								<p>Lorem ipsum dolor sit amet, consetetur
-                                   sadipscing elitr, sed diam nonumy eirmo
-                                   tempor invidunt ut labore et dolore magna
-                                   aliquyam erat, sed diam voluptua.</p>
+								<p>Learn about The Horde Project, the
+                                community surronding it, and why it is the
+                                most flexible groupware solution on the planet.
+                                </p>
 							</div>
 						</div>
 					</li>
@@ -22,10 +22,10 @@
 							</div>
 							<div class="text">
 								<h2><a href="<?php echo $this->urlWriter->urlFor('development');?>">Development</a></h2>
-								<p>Lorem ipsum dolor sit amet, consetetur
-                                   sadipscing elitr, sed diam nonumy eirmod
-                                   tempor invidunt ut labore et dolore magna
-                                   aliquyam erat, sed diam voluptua.</p>
+								<p>Are you a developer? Learn more about the
+                                Horde Framework, how it can help you with your
+                                development goals, or see how to get involved
+                                with contributing to the project.
 							</div>
 						</div>
 					</li>
@@ -36,10 +36,10 @@
 							</div>
 							<div class="text">
 								<h2><a href="<?php echo $this->urlWriter->urlFor('services');?>">Services</a></h2>
-								<p>Lorem ipsum dolor sit amet, consetetur
-                                   sadipscing elitr, sed diam nonumy eirmod
-                                   tempor invidunt ut labore et dolore magna
-                                   aliquyam erat, sed diam voluptua.</p>
+								<p>Looking for professional level support or
+                                custom development? See how Horde's team of
+                                experienced, professional developers can help.
+                                </p>
 							</div>
 						</div>
 					</li>
