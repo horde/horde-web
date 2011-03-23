@@ -27,13 +27,30 @@
 
             <h3>Mailing Lists and IRC</h3>
 
-            <p>You can address any support issues to one of the <a href="mail/">mailing
-            lists</a>. You can also ask for help on <a href="irc.php">IRC</a>.</p>
+            <p>You can address any support issues to one of the <a href="mail/">
+            mailing lists</a>. You can also ask for help on <a href="irc.php">
+            IRC</a>.</p>
 
-            <div class="hint"><p>Note: your best bet for help is the mailing lists. There
-            are more people reading the mailing lists than the bug system email. The
-            more people that see your message, the more likely you are to get help. Make
-            sure to include
+            <p>There is a <tt>#horde</tt> channel on <tt>irc.freenode.net</tt>
+            (<i>see</i> <a href="http://www.freenode.net/">
+            http://www.freenode.net/</a>), for discussion of Horde applications,
+            the Horde Framework, random development questions, and anything else
+            that seems relevant. Come join us!</p>
+
+            <p>If you are coming to the channel for support, keep in mind that
+            your audience is limited and most are there working on development;
+            it's not a dedicated support channel.  Please be courteous, patient,
+            and understanding. As always with IRC, ask your question and be
+            patient for an answer. People are often busy or not even in front of
+            the screen. Also, please take a look at <a
+            href="http://www.asktog.com/columns/047HowToWriteAReport.html">How to
+            Deliver a Report Without Getting Lynched</a> or ESR's <a
+            href="http://www.tuxedo.org/~esr/faqs/smart-questions.html">How To Ask
+            Questions The Smart Way</a>. It will help us help you.</p>
+            <div class="hint"><p>Note: your best bet for help is the mailing
+            lists. There are more people reading the mailing lists than the bug
+            system email. The more people that see your message, the more likely
+            you are to get help. Make sure to include
             <a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html">enough
             information</a> so that people can help you.</p></div>
 
