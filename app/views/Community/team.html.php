@@ -19,7 +19,7 @@
         echo $this->render('Marcus_Ryan');
         echo $this->render('Anil_Madhavapeddy');
         echo $this->render('Rich_Lafferty');?>
-	  </div>
+      </div>
     </div>
     <div class="rightcol" style="background: none;">
          <?php echo $this->render('sponsors');?>

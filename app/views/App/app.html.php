@@ -6,7 +6,7 @@
         <div class="section">
           <?php echo $this->render($this->appname) ?>
         </div>
-	</div>
+    </div>
      <div class="rightcol" style="background: none;">
        <div id="accordion">
          <h2>Latest News</h3>

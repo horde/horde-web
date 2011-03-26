@@ -2,26 +2,26 @@
 <table border="0">
 <tr>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/mobilegalleries') ?><br />
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/mobilegalleries') ?><br />
         Gallery List
     </td>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/mobilesubgalleries') ?><br />
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/mobilesubgalleries') ?><br />
         Sub-Galleries
     </td>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/mobilegallerylist') ?><br />
-	Gallery View
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/mobilegallerylist') ?><br />
+    Gallery View
     </td>
 </tr>
 <tr>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/mobileimageview1') ?><br />
-	Image View
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/mobileimageview1') ?><br />
+    Image View
     </td>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/mobileimageview2') ?><br />
-	Image View
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/mobileimageview2') ?><br />
+    Image View
     </td>
     <td align="center">
     </td>
@@ -32,11 +32,11 @@
 <table border="0">
 <tr>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/gallerygroups') ?><br />
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/gallerygroups') ?><br />
         Gallery Groupings By User
     </td>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/stacks') ?><br />
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/stacks') ?><br />
         Gallery Stacks (Shadowed Thumbnails)
     </td>
     <td align="center">
@@ -46,16 +46,16 @@
 </tr>
 <tr>
     <td align="center">
-	<?php echo HordeWeb_Utils::sslink('ansel', '2/date') ?><br />
-	Browse by Dates
+    <?php echo HordeWeb_Utils::sslink('ansel', '2/date') ?><br />
+    Browse by Dates
     </td>
     <td align="center">
-	  <?php echo HordeWeb_Utils::sslink('ansel', '2/gallerygeo') ?><br />
-	  Gallery View with Geolocation
+      <?php echo HordeWeb_Utils::sslink('ansel', '2/gallerygeo') ?><br />
+      Gallery View with Geolocation
     </td>
     <td align="center">
-	  <?php echo HordeWeb_Utils::sslink('ansel', '2/imageview') ?><br />
-	  Image View
+      <?php echo HordeWeb_Utils::sslink('ansel', '2/imageview') ?><br />
+      Image View
     </td>
 </tr>
 <tr>

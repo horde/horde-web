@@ -1,0 +1,167 @@
+http://online.securityfocus.com/archive/1/306268
+
+Sylvain Robitaille                              syl@alcor.concordia.ca
+
+Systems analyst                                   Concordia University
+Instructional & Information Technology        Montreal, Quebec, Canada
+
+# Of course, folks using Imp-2 with non-PostgreSQL databases will
+# need to adapt the following to the appropriate db.* file
+
+--- lib/db.pgsql.20030108       2000-12-20 15:45:33.000000000 -0500
++++ lib/db.pgsql 2003-01-08 15:18:25.000000000 -0500
+@@ -26,6 +26,13 @@
+ function imp_add_address ($address, $nickname, $fullname, $user, $server) {
+        global $default;
+
++        /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++        $address  = addslashes($address);
++        $nickname = addslashes($nickname);
++        $fullname = addslashes($fullname);
++        $user     = addslashes($user);
++        $server   = addslashes($server);
++
+        /* post: adds $address, $nickname, $fullname to the addressbook for $user@$server
+           returns true on success and false on failure
+     */
+@@ -41,6 +48,10 @@
+ function imp_check_prefs ($user, $server) {
+        global $_imp_prefs_exist, $default;
+
++        /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++        $user     = addslashes($user);
++        $server   = addslashes($server);
++
+        if (isset($_imp_prefs_exist)) {
+                return $_imp_prefs_exist;
+        }
+@@ -59,6 +70,11 @@
+ function imp_delete_address ($address, $user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $address  = addslashes($address);
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: deletes $address from the addressbook of $user@$server
+     returns true on success and false on failure
+     */
+@@ -72,6 +88,10 @@
+ function imp_get_addresses ($user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: returns a 2d array of addresses where each
+     element is an array in which element 0 is the address,
+     element 1 is the nickname, and element 2 is the fullname.
+@@ -92,6 +112,10 @@
+ function imp_get_from ($user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: returns the signature for the database key $user@$server
+     (a string), or false on failure.
+     */
+@@ -105,6 +129,10 @@
+ function imp_get_fullname ($user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: returns the signature for the database key $user@$server
+     (a string), or false on failure.
+     */
+@@ -118,6 +146,10 @@
+ function imp_get_lang ($user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: returns the signature for the database key $user@$server
+     (a string), or false on failure.
+     */
+@@ -131,6 +163,10 @@
+ function imp_get_signature ($user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: returns the signature for the database key $user@$server
+     (a string), or false on failure.
+     */
+@@ -144,6 +180,11 @@
+ function imp_set_from ($from, $user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $from     = addslashes($from);
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: sets the replyto to $from for the database key $user@$server
+     returns true on success and false on failure
+     */
+@@ -165,6 +206,11 @@
+ function imp_set_fullname ($fullname, $user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $fullname = addslashes($fullname);
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: sets the fullname to $fullname for the database key $user@$server
+     returns true on success and false on failure
+     */
+@@ -186,6 +232,11 @@
+ function imp_set_lang ($lang, $user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $lang     = addslashes($lang);
++   $user     = addslashes($user);
++   $server   = addslashes($server);
++
+    /* post: sets the language to $lang for the database key $user@$server
+     returns true on success and false on failure
+     */
+@@ -208,6 +259,11 @@
+ function imp_set_signature ($signature, $user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $signature = addslashes($signature);
++   $user      = addslashes($user);
++   $server    = addslashes($server);
++
+    /* post: sets the signature to $signature for the database key $user@$server
+     returns true on success and false on failure
+     */
+@@ -230,6 +286,14 @@
+ function imp_update_address ($old_address, $address, $nickname, $fullname, $user, $server) {
+    global $default;
+
++   /* 2003/01/08 Sylvain Robitaille: Sanitize our input. */
++   $old_address = addslashes($old_address);
++   $address     = addslashes($address);
++   $nickname    = addslashes($nickname);
++   $fullname    = addslashes($fullname);
++   $user        = addslashes($user);
++   $server      = addslashes($server);
++
+    /* post: changes the entry for $old_address to $address, $nickname, $fullname.
+     returns true on success and false on failure
+     */

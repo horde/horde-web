@@ -63,7 +63,7 @@
         <li><?php HordeWeb_Utils::fimg('ua') ?>Ukrainian</li>
         </ul>
       </div>
-	</div>
+    </div>
      <div class="rightcol" style="background: none;">
          <?php echo $this->render('sponsors');?>
     </div>

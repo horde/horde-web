@@ -1,0 +1,21 @@
+diff -c lib/src/functions/get_barefrom.func.orig lib/src/functions/get_barefrom.func
+*** lib/src/functions/get_barefrom.func.orig    Mon Feb  8 13:17:29 1999
+--- lib/src/functions/get_barefrom.func Mon Feb  8 13:25:55 1999
+****************** 8,14 ****
+        $real_server = $server;
+     }
+     
+!    if ($default->user_change_from) {
+        if ($default->use_db) $barefrom = imp_get_from($user,$server);
+        if (!isset($barefrom) || !$barefrom) $barefrom = "$user@$real_server";
+     } else $barefrom = "$user@$real_server";
+--- 8,14 ----
+        $real_server = $server;
+     }
+     
+!    if ($default->user_change_from || (isset($default->force_replyto) && $default->force_replyto)) {
+        if ($default->use_db) $barefrom = imp_get_from($user,$server);
+        if (!isset($barefrom) || !$barefrom) $barefrom = "$user@$real_server";
+     } else $barefrom = "$user@$real_server";
+
+

@@ -7,18 +7,18 @@
 <script src="js/jquery-1.4.4.min.js"></script>
 <script src="js/slides.min.jquery.js"></script>
 <script>
-	$(function(){
-		$('#slides').slides({
-			preload: true,
-			play: 5000,
-			pause: 2500,
-			hoverPause: true
-		});
-	});
+    $(function(){
+        $('#slides').slides({
+            preload: true,
+            play: 5000,
+            pause: 2500,
+            hoverPause: true
+        });
+    });
 </script>
 </head>
 <body>
-	<div class="area">
+    <div class="area">
         <div class="inside">
             <?php echo $this->render('banner'); ?>
             <?php echo $this->contentForLayout ?>

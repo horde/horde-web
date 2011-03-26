@@ -24,14 +24,13 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
             $view->page_title = 'The Horde Project::Development';
             $template = 'index';
             break;
-         case 'contribute':
-         case 'docs':
-             $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
-             $template = $this->_matchDict->action;
-             break;
-         case 'cvs':
-         case 'git':
-
+        case 'contribute':
+        case 'docs':
+        case 'git':
+            $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
+            $template = $this->_matchDict->action;
+            break;
+        case 'cvs':
         default:
             $this->_notFound($response);
             return;

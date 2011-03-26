@@ -45,7 +45,7 @@
             <p>Old versions can be obtained from one of our <a href="../../mirrors/">FTP Mirrors</a>.</p>
             <?php endif; ?>
         </div>
-	</div>
+    </div>
     <div class="rightcol" style="background: none;">
         <?php echo $this->render('releasedAppsList');?>
         <?php echo $this->render('sponsors');?>

@@ -1,0 +1,45 @@
+<table border="0" width="100%" cellspacing="0" cellpadding="2">
+ <tr>
+  <td id="mainarea" width="100%" valign="top">
+
+    <p>IMP H3 (4.2) is now available. This is a major upgrade on top
+    of <a href="../4.1/">IMP 4.1</a>.</p>
+
+    <p>The major changes compared to the IMP 4.1 versions are:</p>
+    <ul>
+     <li>Message and mailbox caching on the server side, resulting in much increased performance and much less web server and IMAP server load.</li>
+     <li>Rewrite of much of IMP's core libraries, resulting in more efficient memory usage, more efficient IMAP queries, smaller session sizes, and increased performance.</li>
+     <li>WCAG 1.0 Priority 2/Section 508 accessibility guidelines compliance.</li>
+     <li>Javascript auto-complete contact list searching.</li>
+     <li>Can now have multiple browser windows open without destroying the open session.</li>
+     <li>Logging of sent messages.</li>
+     <li>Add protection against CSRF attacks.</li>
+     <li>Improve WYSIWYG editors to support more browsers and offer more choices.</li>
+     <li>Server configuration to limit maximum number of recipients per message and maximum number of sent messages over a certain period of time.</li>
+     <li>Improved templating of output code to ease local customization.</li>
+     <li>Additional maintenance tasks to clean old messages from mailboxes.</li>
+     <li>Sorting is now saved per mailbox rather than across all mailboxes.</li>
+     <li>On IE and Firefox, warn users before closing popup compose window.</li>
+     <li>Add support for symmetric PGP encryption.</li>
+     <li>Preference added to dictate default cursor location in compose textarea.</li>
+     <li>Preference added to only verify PGP &amp; S/MIME signed messages on user request.</li>
+     <li>Forward messages as RFC 822 parts by default; provide more options for forwarding messages; and be smarter about what part to use as body text depending on current editor (text vs. html).</li>
+     <li>Javascript code now uses the prototype js library, resulting in more robust code and more available functionality - for example, non-modal newmail popups.</li>
+     <li>Add server configuration to limit the maximum size of MIME message data that can be displayed inline.</li>
+     <li>Use tidy extension (if available) to clean up display of HTML messages and clean up HTML composed messages.</li>
+     <li>Add RSS/Atom feed for mailboxes.</li>
+     <li>More/improved display options for the folder lists and better handling of non-private namespaces.</li>
+     <li>Improvements/cleanups to the imap quota drivers.</li>
+     <li>Add additional hooks after certain actions (i.e. post-login, post-compose).</li>
+     <li>Add support for sending e-mails with Internationalized Domain Names (IDN).</li>
+     <li>Fetch public PGP keys from keyserver if not available in address book.</li>
+     <li>Add configuration for folders that may not be modified.</li>
+    </ul>
+
+    <p>IMP 4.2 requires PHP 4.3.0 or higher, and will operate with version 3.0
+    or higher of the <a href="../../horde/">Horde Application
+    Framework</a>.</p>
+
+  </td>
+ </tr>
+</table>

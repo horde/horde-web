@@ -6,7 +6,7 @@
         <div class="section">
             <?php echo $this->render('appscreenshots') ?>
         </div>
-	</div>
+    </div>
     <div class="clear"></div>
   </div>
 </div>

@@ -30,7 +30,7 @@
           <li><?php echo $this->linkTo('Support', array('controller' => 'support'))?>
           - Here you will find various support options.</li>
       </ul>
-	</div>
+    </div>
     <div class="clear"></div>
   </div>
 </div>

@@ -1,0 +1,24 @@
+--- mailbox.php3-message_summaries.inc	Wed Dec 16 09:01:27 1998
++++ mailbox.php3-message_summaries.inc.shane	Thu Dec 17 14:38:56 1998
+@@ -23,7 +23,21 @@
+ <td><font size=2 face="Arial,Helvetica"><?php if(isset($msg_size)) { echo $msg_size; } else { echo 'Unknown'; } ?></a></font></td>
+ <td align="right">
+ 
++
+ <?php
++/*
++ * If the message is marked deleted, and the deleted_image default
++ * option is on, then display the trash can icon
++*/
++  if ($default->deleted_image && $h->Deleted == 'D' )
++	{ echo "<img src=\"$default->graphics_url/deleted.gif\" alt=\"deleted\" border=0>"; }
++/*
++ * If the message is marked unread (Unseen), and the unread_image
++ * default option is on, then display the newmail icon
++*/
++  if ($default->unread_image && $h->Unseen  == 'U') 
++	{ echo "<img src=\"$default->graphics_url/newmail.gif\" alt=\"new mail\" border=0>"; }
++
+   if ($default->fetch_mime_info)
+     if (isset($flag) && $flag)
+       for ($fc=0; $fc < (count($flags) > 10 ? 10 : count($flag)); $fc++)

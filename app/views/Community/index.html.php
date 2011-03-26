@@ -66,7 +66,7 @@
         (IMAP, for instance) are present. The latest version of Horde, Horde 4
         requires the use of PHP 5.2 or above.</p>
       </div>
-	</div>
+    </div>
      <div class="rightcol" style="background: none;">
          <?php echo $this->render('sponsors');?>
     </div>

@@ -15,7 +15,7 @@
 
         <li><p><a href="<?php echo $this->urlWriter->urlFor('development') ?>"><em><strong>Source Code</strong></em></a> - the latest code, from either the bleeding edge developer ("HEAD") releases or a stable branch, is always available using Git or CVS.</p></li>
        </ul>
-	</div>
+    </div>
      <div class="rightcol" style="background: none;">
          <?php echo $this->render('releasedAppsList');?>
          <?php echo $this->render('sponsors');?>

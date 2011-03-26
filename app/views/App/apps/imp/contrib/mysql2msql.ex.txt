@@ -1,0 +1,8 @@
+%s/mysql.lib.php3/msql.lib.php3/ 
+%s/MySQL/mSQL/ 
+%s/$db_server, $db_user, $db_pass/$db_server/ 
+%s/$default->db_server_name,/$default->db_server_name/ 
+%s/$default->db_user_name, $default->db_password// 
+%s/mysql_db_query/msql/ 
+%s/mysql/msql/ 
+wq

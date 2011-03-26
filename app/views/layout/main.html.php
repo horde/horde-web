@@ -6,7 +6,7 @@
 <link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen" />
 </head>
 <body>
-	<div class="area">
+    <div class="area">
         <div class="inside">
             <?php echo $this->render('banner'); ?>
             <div class="podest" id="podest"></div>

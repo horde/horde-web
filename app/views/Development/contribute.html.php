@@ -87,7 +87,7 @@
 
             <strong>Welcome aboard!</strong>
       </div>
-	</div>
+    </div>
     <div class="rightcol" style="background: none;"><?php echo $this->render('sponsors'); ?></div>
     <div class="clear"></div>
   </div>
