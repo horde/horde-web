@@ -71,7 +71,7 @@ EOT;
             $css->addStylesheet($sh_js_fs . 'shThemeEclipse.css', $sh_js_uri . 'shThemeEclipse.css');
             // fall through
         case 'contribute':
-        case 'docs':
+        //case 'docs':
             $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
             $template = $this->_matchDict->action;
             break;

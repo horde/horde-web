@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>Development</h2>
+      <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Git' => 'git'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
         <div class="sectionintro">
