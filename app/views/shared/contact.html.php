@@ -3,11 +3,9 @@
     <dl>
         <dt>Email:</dt>
         <dd><a href="mailto:info@horde.org">info@horde.org</a></dd>
-        <dt>Office:</dt>
-        <dd>lorem ipsum<br>lorem ipsum<br>lorem ipsum, 1234565<br>lorem ipsum</dd>
+        <dt>Postal Address:</dt>
+        <dd>P.O. Box 79322<br>Atlanta, GA<br>30307<br>United States</dd>
         <dt>Phone:</dt>
-        <dd>+123 1231 123123</dd>
-        <dt>Fax:</dt>
-        <dd>+123 1231 123123</dd>
+        <dd>+1.404.475.4830</dd>
     </dl>
 </div>
