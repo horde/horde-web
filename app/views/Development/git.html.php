@@ -255,7 +255,7 @@
         default git behavior, but the following config verifies that the setting is
         configured properly:
 
-        <p><pre class="brush:bash">git config push.default matching</pre></p>
+        <pre class="brush:bash">git config push.default matching</pre>
 
         <h3>Stashing</h3>
 
@@ -292,7 +292,8 @@
         and commit notification e-mails look nicer. Git provides an easy way to
         manipulate your local commits:</p>
 
-        <pre class="brush:bash">git rebase -i origin (origin means edit all commits applied on top of the last pull from the central repository)</pre>
+        <pre class="brush:bash">git rebase -i origin</pre>
+        (origin means edit all commits applied on top of the last pull from the central repository)</pre>
 
         <p>Use the 'squash' option to combine multiple commits. Instructions on the
         edit screen explain the various other features.</p>
