@@ -5,11 +5,19 @@
         <span class="appMenu"><?php echo $this->render('appnav') ?></span>
         <div class="section">
           <?php echo $this->render($this->appname) ?>
-        </div
+        </div>
 	</div>
      <div class="rightcol" style="background: none;">
        <div id="accordion">
          <h2>Latest News</h3>
+            <?php $i = 0; ?>
+            <?php foreach ($this->latestNews as $entry):
+               if ($i++ >= 5) {
+                   break;
+               }
+              echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
+              endforeach;
+            ?>
          <div></div>
          <h2>Stable Releases</h3>
          <div></div>

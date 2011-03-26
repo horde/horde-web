@@ -43,7 +43,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->page_title = 'The Horde Project';
-        $view->maxHordeItems = 3;
+        $view->maxHordeItems = 5;
         $view->maxPlanetItems = 5;
 
         // Get the planet feed.
@@ -57,13 +57,11 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             $cache->set('planet', $view->planet);
         }
 
-        // Get the Horde feed, for whatever that's currently worth. Just
-        // release announcements at the moment. Probably replace with a
-        // local Jonah feed.
+        // Get the complete Horde feed (no tags)
         $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
         if (!$view->hordefeed = $cache->get('hordefeed', 600)) {
             try {
-                $view->hordefeed = Horde_Feed::readUri('http://horde.org/atom.php');
+                $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url']);
             } catch (Exception $e) {
                 $view->hordefeed = null;
             }

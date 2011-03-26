@@ -15,5 +15,5 @@ $host_base = 'http://localhost/hordeweb';
 $fs_base = '/private/var/www/html/hordeweb';
 
 /* RSS feed url */
-$feed_base = '';
 $site_name = "The Horde Project";
+$feed_url = 'http://dev.horde.org/horde/jonah/delivery/rss.php?channel_id=1';
