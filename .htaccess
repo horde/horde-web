@@ -2,7 +2,10 @@ allow from all
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
     RewriteCond   %{REQUEST_FILENAME}  !-d
     RewriteCond   %{REQUEST_FILENAME}  !-f
     RewriteRule ^(.*)$ dispatch.php [QSA,L]
+
+    RewriteRule ^$ dispatch.php [QSA,L]
 </IfModule>
