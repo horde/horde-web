@@ -16,10 +16,10 @@
                             <div class="follow-us">
                                 <h3>Follow us</h3>
                                 <ul>
-                                    <li><a target="_blank" href="http://bit.ly/iggr7v" class="newsletter">Newsletter</a></li>
-                                    <li><a target="_blank" href="http://www.twitter.com/hordeproject" class="twitter">Twitter</a></li>
-                                    <li><a target="_blank" href="http://github.com/horde" class="github">GitHub</a></li>
-                                    <li><a target="_blank" href="https://www.ohloh.net/p/horde" class="ohloh">Ohloh</a></li>
+                                    <li><a href="http://bit.ly/iggr7v" class="newsletter">Newsletter</a></li>
+                                    <li><a href="http://www.twitter.com/hordeproject" class="twitter">Twitter</a></li>
+                                    <li><a href="http://github.com/horde" class="github">GitHub</a></li>
+                                    <li><a href="https://www.ohloh.net/p/horde" class="ohloh">Ohloh</a></li>
                                 </ul>
                             </div>
                             <?php echo $this->render('contact'); ?>
