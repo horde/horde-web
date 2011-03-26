@@ -8,9 +8,10 @@
                             </div>
                             <div class="text">
                                 <h2><a href="<?php echo $this->urlWriter->urlFor('community');?>">Community</a></h2>
-                                <p>Learn about The Horde Project, the
-                                community surronding it, and why it is the
-                                most flexible groupware solution on the planet.
+                                <p>Wondering what Horde is? Curious how to use one of Horde's
+                                   many more advanced features? Learn more about Horde and
+                                   its powerful applications with Frequently Asked Questions,
+                                   Screenshots and more.
                                 </p>
                             </div>
                         </div>
@@ -22,10 +23,8 @@
                             </div>
                             <div class="text">
                                 <h2><a href="<?php echo $this->urlWriter->urlFor('development');?>">Development</a></h2>
-                                <p>Are you a developer? Learn more about the
-                                Horde Framework, how it can help you with your
-                                development goals, or see how to get involved
-                                with contributing to the project.
+                                <p>As the most flexible groupware platform in the world, Horde makes an ideal place to create your own custom applications.  Learn more about our feature-rich collection of web development libraries and how to get started.
+                                </p>
                             </div>
                         </div>
                     </li>
@@ -36,9 +35,7 @@
                             </div>
                             <div class="text">
                                 <h2><a href="<?php echo $this->urlWriter->urlFor('services');?>">Services</a></h2>
-                                <p>Looking for professional level support or
-                                custom development? See how Horde's team of
-                                experienced, professional developers can help.
+                                <p>More than just software: Our team of trusted professionals helps you build large installations or custom applications.  Learn how our experience and technology delivers the most flexible platform to realize your grand ideas.
                                 </p>
                             </div>
                         </div>
