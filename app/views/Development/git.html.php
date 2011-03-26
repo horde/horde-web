@@ -59,12 +59,13 @@
 
         <h3>Making Development Repos Web-Accessible</h3>
 
-        <p>Make sure you have cloned the <tt>horde</tt> repo. Once initialized, creating
-        a web-accessible development installation can be done simply by running the
-        <tt>install_dev</tt> PHP script located at <tt>horde-git/framework/bin</tt>.
-        To properly run this script, a local copy of install_dev.conf must be created on
-        your system, with the variables inside that file edited as necessary to apply
-        to your system.</p>
+        <p>Make sure you have cloned the <tt>horde</tt> repo. Once initialized,
+        creating a web-accessible development installation can be done simply by
+        running the <tt>install_dev</tt> PHP script located at
+        <tt>horde-git/framework/bin</tt>. To properly run this script, a local
+        copy of install_dev.conf must be created on your system, with the
+        variables inside that file edited as necessary to apply to your system.
+        </p>
 
         <p>For example:</p>
 
@@ -102,239 +103,239 @@
         config.  This can only be done if the horde/Role package has previously been
         installed on your system.  This can done via:</p>
 
-<pre><code>cd /path/to/framework
-pear install Role/package.xml
-pear run-scripts horde/Role</pre></code>
+        <pre><code>cd /path/to/framework
+        pear install Role/package.xml
+        pear run-scripts horde/Role</pre></code>
 
-<h4 id="patch">Creating Patches</h4>
+        <h3 id="patch">Creating Patches</h3>
 
-<p>To submit patches, first make the changes in your local repository. You will
-need to <a href="#createcommit">commit these changes locally</a>.  After
-committing, use the following command:</p>
+        <p>To submit patches, first make the changes in your local repository. You will
+        need to <a href="#createcommit">commit these changes locally</a>.  After
+        committing, use the following command:</p>
 
-<code>git format-patch -M -B origin</code>
+        <code>git format-patch -M -B origin</code>
 
-<p>This command creates a separate patch file for each commit that exists
-locally on your machine but does not exist in the master Horde branch (origin).
-These patch files will be located in your local directory.</p>
+        <p>This command creates a separate patch file for each commit that exists
+        locally on your machine but does not exist in the master Horde branch (origin).
+        These patch files will be located in your local directory.</p>
 
-<h3>Developer Git</h3>
+        <h2><span></span>Developer Git</h2>
 
-<p>Access to the live Git repository is only available over SSH. You will want
-to create an SSH key and use that with your account on dev.horde.org to avoid
-having to enter your password on every pull/push.</p>
+        <p>Access to the live Git repository is only available over SSH. You will want
+        to create an SSH key and use that with your account on dev.horde.org to avoid
+        having to enter your password on every pull/push.</p>
 
-<p>You will also need to create an account on GitHub as the master repo will
-be <a href="http://lists.horde.org/archives/dev/Week-of-Mon-20100830/025224.html">mirrored to GitHub every time a commit is pushed</a>.
-The following needs to be done:</p>
+        <p>You will also need to create an account on GitHub as the master repo will
+        be <a href="http://lists.horde.org/archives/dev/Week-of-Mon-20100830/025224.html">mirrored to GitHub every time a commit is pushed</a>.
+        The following needs to be done:</p>
 
-<ol>
-    <li>Create a GitHub account.</li>
-    <li><a href="http://help.github.com/linux-key-setup/">Setup your SSH public key</a>. This SSH key must exist in your github.com account.</li>
-    <li><a href="http://lists.horde.org/archives/dev/Week-of-Mon-20100830/025226.html">Make sure the github host key is stored in your git.horde.org account</a>.</li>
-    <li>Join the Horde organization on GitHub (send e-mail to core@lists.horde.org).</li>
-</ol>
+        <ol>
+            <li>Create a GitHub account.</li>
+            <li><a href="http://help.github.com/linux-key-setup/">Setup your SSH public key</a>. This SSH key must exist in your github.com account.</li>
+            <li><a href="http://lists.horde.org/archives/dev/Week-of-Mon-20100830/025226.html">Make sure the github host key is stored in your git.horde.org account</a>.</li>
+            <li>Join the Horde organization on GitHub (send e-mail to core@lists.horde.org).</li>
+        </ol>
 
 
-<h4>Cloning repository</h4>
+        <h3>Cloning repository</h3>
 
-<p>To clone a repository, use this command:</p>
+        <p>To clone a repository, use this command:</p>
 
-<code>git clone ssh://dev.horde.org/horde/git/[REPO]</code>
+        <code>git clone ssh://dev.horde.org/horde/git/[REPO]</code>
 
-<p>where <tt>REPO</tt> is one of the available repositories listed above.</p>
+        <p>where <tt>REPO</tt> is one of the available repositories listed above.</p>
 
-<p>This will create a <tt>REPO</tt> directory in your current directory.
-Once completed, an up to date copy of the master Git repository will be
-available on your system. You must use the SSH protocol rather than the git
-protocol because the Horde Git repository only supports pushing commits
-through SSH. (Since Git will automatically use the protocol used to clone the
-repository for all future push/pull operations, it is easiest to set your
-local repository up correctly from the beginning.)</p>
+        <p>This will create a <tt>REPO</tt> directory in your current directory.
+        Once completed, an up to date copy of the master Git repository will be
+        available on your system. You must use the SSH protocol rather than the git
+        protocol because the Horde Git repository only supports pushing commits
+        through SSH. (Since Git will automatically use the protocol used to clone the
+        repository for all future push/pull operations, it is easiest to set your
+        local repository up correctly from the beginning.)</p>
 
 
-<h4>Updating repository</h4>
+        <h3>Updating repository</h3>
 
-<p>To update your local repository, <span style="color:red">you MUST rebase
-the changes on top of your local repo copy. Failure to do so will result in
-useless, annoying commit merge messages both added to the master repository and
-sent in the commit e-mails.</span></p>
+        <p>To update your local repository, <span style="color:red">you MUST rebase
+        the changes on top of your local repo copy. Failure to do so will result in
+        useless, annoying commit merge messages both added to the master repository and
+        sent in the commit e-mails.</span></p>
 
-<p>To update/rebase the changes, you can use the following command:</p>
+        <p>To update/rebase the changes, you can use the following command:</p>
 
-<code>git pull --rebase</code>
+        <code>git pull --rebase</code>
 
-<p>Better still, to prevent an unnecessary merge, you can configure
-<tt><a href="http://www.kernel.org/pub/software/scm/git/docs/git-pull.html">git
-pull</a></tt> to always rebase when pulling for a particular repo by using the
-following command:</p>
+        <p>Better still, to prevent an unnecessary merge, you can configure
+        <tt><a href="http://www.kernel.org/pub/software/scm/git/docs/git-pull.html">git
+        pull</a></tt> to always rebase when pulling for a particular repo by using the
+        following command:</p>
 
-<code>git config branch.[reponame].rebase true</code>
+        <code>git config branch.[reponame].rebase true</code>
 
-<p>One disadvantage of <tt>git pull</tt> is that (as of Git v1.6.1.1) it does
-not indicate which files are updated. To see a list of files that are updated,
-you should run these two commands instead:</p>
+        <p>One disadvantage of <tt>git pull</tt> is that (as of Git v1.6.1.1) it does
+        not indicate which files are updated. To see a list of files that are updated,
+        you should run these two commands instead:</p>
 
-<pre><code>git fetch
-git rebase -v origin</code></pre>
+        <pre><code>git fetch
+        git rebase -v origin</code></pre>
 
-<p>A helpful alias for <code>.gitconfig</code> to update your local repository
-while seeing changed files and avoiding conflicts is:</p>
+        <p>A helpful alias for <code>.gitconfig</code> to update your local repository
+        while seeing changed files and avoiding conflicts is:</p>
 
-<pre><code>[alias]
-    get = !git fetch &amp;&amp;
-        ( git rebase -v origin/master || ( git stash &amp;&amp;
-            ( git rebase -v origin/master || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp;
-        git stash pop ) )</code></pre>
+        <pre><code>[alias]
+            get = !git fetch &amp;&amp;
+                ( git rebase -v origin/master || ( git stash &amp;&amp;
+                    ( git rebase -v origin/master || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp;
+                git stash pop ) )</code></pre>
 
-<p>For more information on rebasing, and the commands needed if conflicts are
-detected during the rebase/merge, see:
-<a href="http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
-and <a href="http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
+        <p>For more information on rebasing, and the commands needed if conflicts are
+        detected during the rebase/merge, see:
+        <a href="http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
+        and <a href="http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
 
 
-<h4 id="createcommit">Creating commits</h4>
+        <h3 id="createcommit">Creating commits</h3>
 
-<p>First, you should make sure your contact information is correct. The
-easiest way to do so is to issue the following commands:</p>
+        <p>First, you should make sure your contact information is correct. The
+        easiest way to do so is to issue the following commands:</p>
 
-<pre><code>git config user.name "FirstName LastName"
-git config user.email "user@example.com"</code></pre>
+        <pre><code>git config user.name "FirstName LastName"
+        git config user.email "user@example.com"</code></pre>
 
-<p>Go ahead and hack away. When finished, commit the files to your local
-repo. There are several ways to do this. To add specific files to a commit,
-use the following commands:</p>
+        <p>Go ahead and hack away. When finished, commit the files to your local
+        repo. There are several ways to do this. To add specific files to a commit,
+        use the following commands:</p>
 
-<pre><code>git add filename [filename2] [filename3...]
-git commit</code></pre>
+        <pre><code>git add filename [filename2] [filename3...]
+        git commit</code></pre>
 
-<p><tt><a
-href="http://www.kernel.org/pub/software/scm/git/docs/git-add.html">git
-add</a></tt> has many powerful tools to indicate what files or portions of
-a file you want to commit: the <tt>-i</tt> option (interactive mode), and
-<tt>-p</tt> option (patch mode) are good examples. Read the man page for
-further information on these options (and others).</p>
+        <p><tt><a
+        href="http://www.kernel.org/pub/software/scm/git/docs/git-add.html">git
+        add</a></tt> has many powerful tools to indicate what files or portions of
+        a file you want to commit: the <tt>-i</tt> option (interactive mode), and
+        <tt>-p</tt> option (patch mode) are good examples. Read the man page for
+        further information on these options (and others).</p>
 
-<p>You can also list the files to be committed on the command line to
-commit:</p>
+        <p>You can also list the files to be committed on the command line to
+        commit:</p>
 
-<code>git commit [filename1] [filename2] ... [filenameX]</code>
+        <code>git commit [filename1] [filename2] ... [filenameX]</code>
 
-<p>If you want to commit all modified files, you can use the following
-shortcut command:</p>
+        <p>If you want to commit all modified files, you can use the following
+        shortcut command:</p>
 
-<code>git commit -a</code>
+        <code>git commit -a</code>
 
-<p>If you want to commit all modified files, and want a shortcut to also
-specify the commit message on the command line, use the following command:</p>
+        <p>If you want to commit all modified files, and want a shortcut to also
+        specify the commit message on the command line, use the following command:</p>
 
-<code>git commit -a -m "[commit message]"</code>
+        <code>git commit -a -m "[commit message]"</code>
 
-<h4>Pushing commits</h4>
+        <h3>Pushing commits</h3>
 
-<p>Once you finish with your local commits and want to push them to the
-master repository, use the following command:</p>
+        <p>Once you finish with your local commits and want to push them to the
+        master repository, use the following command:</p>
 
-<code>git push</code>
+        <code>git push</code>
 
-<p>When pushing, it is most likely the desired action to ONLY push changes to
-branches that are currently being tracked on the master server. This is the
-default git behavior, but the following config verifies that the setting is
-configured properly:
+        <p>When pushing, it is most likely the desired action to ONLY push changes to
+        branches that are currently being tracked on the master server. This is the
+        default git behavior, but the following config verifies that the setting is
+        configured properly:
 
-<p><code>git config push.default matching</code></p>
+        <p><code>git config push.default matching</code></p>
 
-<h4>Stashing</h4>
+        <h3>Stashing</h3>
 
-<p>Say you are working in a git tree and have previously made some local
-commits. You then started working on other code and modified several other
-files. However, you then decide you want to push the previously made commits
-to the central repository (e.g. those commits fix a critical bug). However, git
-will not let you push your commits because your tree is not clean.</p>
+        <p>Say you are working in a git tree and have previously made some local
+        commits. You then started working on other code and modified several other
+        files. However, you then decide you want to push the previously made commits
+        to the central repository (e.g. those commits fix a critical bug). However, git
+        will not let you push your commits because your tree is not clean.</p>
 
-<p>In the absence of originally using a branch to do the newer hacking, you
-can easily create a temporary branch, move the work-in-progress to the
-temporary branch, push your commits to the server, and then re-apply your
-work-in-progress to the current branch. Git has a wonderful built-in
-command that will do all this work for you:
-<tt><a href="http://www.kernel.org/pub/software/scm/git/docs/git-stash.html">stash</a></tt>.
-To stash all work-in-progress on the current tree, use:</p>
+        <p>In the absence of originally using a branch to do the newer hacking, you
+        can easily create a temporary branch, move the work-in-progress to the
+        temporary branch, push your commits to the server, and then re-apply your
+        work-in-progress to the current branch. Git has a wonderful built-in
+        command that will do all this work for you:
+        <tt><a href="http://www.kernel.org/pub/software/scm/git/docs/git-stash.html">stash</a></tt>.
+        To stash all work-in-progress on the current tree, use:</p>
 
-<code>git stash</code>
+        <code>git stash</code>
 
-<p>When you need to pull the changes back, use:</p>
+        <p>When you need to pull the changes back, use:</p>
 
-<code>git stash apply</code>
+        <code>git stash apply</code>
 
-<p>Stash has many more features that won't be explained here - check the
-documentation (e.g. working with multiple stashes, popping a stash).</p>
+        <p>Stash has many more features that won't be explained here - check the
+        documentation (e.g. working with multiple stashes, popping a stash).</p>
 
-<h4>Combining commits</h4>
+        <h3>Combining commits</h3>
 
-<p>It may often happen that you have many local commits that you want to push
-to the central repository. It may often be that many of these changes are
-similar (i.e. nits/doc cleanup/whitespace) or that some of the commits fixed
-things caused by a previous local, non-pushed, commit. In this case, it may
-be better to clean up the commit list to make the ultimate project history
-and commit notification e-mails look nicer. Git provides an easy way to
-manipulate your local commits:</p>
+        <p>It may often happen that you have many local commits that you want to push
+        to the central repository. It may often be that many of these changes are
+        similar (i.e. nits/doc cleanup/whitespace) or that some of the commits fixed
+        things caused by a previous local, non-pushed, commit. In this case, it may
+        be better to clean up the commit list to make the ultimate project history
+        and commit notification e-mails look nicer. Git provides an easy way to
+        manipulate your local commits:</p>
 
-<code>git rebase -i origin (origin means edit all commits applied on top of the last pull from the central repository)</code>
+        <code>git rebase -i origin (origin means edit all commits applied on top of the last pull from the central repository)</code>
 
-<p>Use the 'squash' option to combine multiple commits. Instructions on the
-edit screen explain the various other features.</p>
+        <p>Use the 'squash' option to combine multiple commits. Instructions on the
+        edit screen explain the various other features.</p>
 
-<h4>Creating/Managing remote branches</h4>
+        <h3>Creating/Managing remote branches</h3>
 
-<p>It may be useful to share work on a local branch with other developers.
-For example, a large change that might not yet be ready for primetime, but
-could benefit for some eyeballs, might be useful to share on a branch rather
-than the master repo. To create a branch on the master Horde repository, use
-the following command:</p>
+        <p>It may be useful to share work on a local branch with other developers.
+        For example, a large change that might not yet be ready for primetime, but
+        could benefit for some eyeballs, might be useful to share on a branch rather
+        than the master repo. To create a branch on the master Horde repository, use
+        the following command:</p>
 
-<code>git push origin [localbranch]</code>
+        <code>git push origin [localbranch]</code>
 
-<p>After you push your new topic branch, you can do the following to have your
-existing topic branch track the remote branch you just created (this is not
-done automatically) [this requires Git 1.7.0+]:</p>
+        <p>After you push your new topic branch, you can do the following to have your
+        existing topic branch track the remote branch you just created (this is not
+        done automatically) [this requires Git 1.7.0+]:</p>
 
-<code>git branch --set-upstream [local branch name] origin/[remote branch name]</code>
+        <code>git branch --set-upstream [local branch name] origin/[remote branch name]</code>
 
-<p>Now all users can track this branch by issuing this command:</p>
+        <p>Now all users can track this branch by issuing this command:</p>
 
-<code>git checkout -t origin/[remote branch name]</code>
+        <code>git checkout -t origin/[remote branch name]</code>
 
-<p>You should keep the topic branch up to date with the main branch during
-development so that your topic branch only contains the changes related to the
-work being done in the branch:</p>
+        <p>You should keep the topic branch up to date with the main branch during
+        development so that your topic branch only contains the changes related to the
+        work being done in the branch:</p>
 
-<code>
-git checkout [topic]<br />
-git merge master <br />
-# resolve conflicts<br/>
-git pull --rebase <br />
-git push
-</code>
+        <code>
+        git checkout [topic]<br />
+        git merge master <br />
+        # resolve conflicts<br/>
+        git pull --rebase <br />
+        git push
+        </code>
 
-<p>During a long-lived branch, you will find yourself having to resolve the same
-conflicts over and over again. The git tool <em>git-rerere</em> is designed to
-help alleviate this issue. Once it is enabled, it will
-<strong>automatically</strong> take note of each conflict, and it's eventual
-resolution. Next time git comes across the exact same conflict, it will
-know on it's own how to resolve it. To use this feature you must explicitly
-enable it:</p>
-<code>
-    git config --global rerere.enabled 1
-</code>
+        <p>During a long-lived branch, you will find yourself having to resolve the same
+        conflicts over and over again. The git tool <em>git-rerere</em> is designed to
+        help alleviate this issue. Once it is enabled, it will
+        <strong>automatically</strong> take note of each conflict, and it's eventual
+        resolution. Next time git comes across the exact same conflict, it will
+        know on it's own how to resolve it. To use this feature you must explicitly
+        enable it:</p>
+        <code>
+            git config --global rerere.enabled 1
+        </code>
 
-<p>To delete the remote branch, issue this command:</p>
+        <p>To delete the remote branch, issue this command:</p>
 
-<code>git push origin :[branchname]</code>
+        <code>git push origin :[branchname]</code>
 
-<p>To remove stale remote branches from your branch list, issue this
- command:</p>
+        <p>To remove stale remote branches from your branch list, issue this
+         command:</p>
 
-<code>git remote prune origin</code>
+        <code>git remote prune origin</code>
 
 
       </div>
