@@ -4,6 +4,11 @@
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen" />
+<?php
+    Horde::includeStylesheetFiles(array('nobase' => true, 'nohorde' => true));
+    Horde::includeScriptFiles();
+    Horde::outputInlineScript();
+?>
 </head>
 <body>
     <div class="area">

@@ -40,7 +40,7 @@
 
         <p>To clone a repository, use the following command:</p>
 
-        <code>git clone --depth 1 git://github.com/horde/[REPO]</code>
+        <pre class="brush:bash">git clone --depth 1 git://github.com/horde/[REPO]</pre>
 
         <p>where <tt>REPO</tt> is one of the available repositories listed
         above. The <tt>--depth 1</tt> option creates a <i>shallow</i> clone
@@ -55,7 +55,7 @@
         <p>To update the repository, enter the repository directory and use this
         command:</p>
 
-        <code>git pull</code>
+        <pre class="brush:bash">git pull</pre>
 
         <h3>Making Development Repos Web-Accessible</h3>
 
@@ -69,10 +69,12 @@
 
         <p>For example:</p>
 
-        <pre><code>cd /path/to/horde-git/framework/bin
+        <pre class="brush:bash">
+        cd /path/to/horde-git/framework/bin
         cp install_dev.conf.dist install_dev.conf
         vi install_dev.conf (replace vi with your favorite editing tool)
-        php ./install_dev</code></pre>
+        php ./install_dev
+        </pre>
 
         <p>Running that script will symlink the entire horde package into the
         web-accessible directory you specified in <tt>install_dev.conf</tt>, symlink all
@@ -91,7 +93,7 @@
         part of the normal INSTALL documents, but if you wish you can manually
         run these as so:</p>
 
-        <pre><code>horde/bin/db_migrate {application_name}</code></pre>
+        <pre class="brush:bash">horde/bin/db_migrate {application_name}</pre>
 
         <p>All installed applications that contain a migration/ directory will need this
         to be run. INCLUDING the <em>content</em> application, as this is the system
@@ -103,9 +105,11 @@
         config.  This can only be done if the horde/Role package has previously been
         installed on your system.  This can done via:</p>
 
-        <pre><code>cd /path/to/framework
+        <pre class="brush:bash">
+        cd /path/to/framework
         pear install Role/package.xml
-        pear run-scripts horde/Role</pre></code>
+        pear run-scripts horde/Role
+        </pre>
 
         <h3 id="patch">Creating Patches</h3>
 
@@ -113,7 +117,7 @@
         need to <a href="#createcommit">commit these changes locally</a>.  After
         committing, use the following command:</p>
 
-        <code>git format-patch -M -B origin</code>
+        <pre class="brush:bash">git format-patch -M -B origin</pre>
 
         <p>This command creates a separate patch file for each commit that exists
         locally on your machine but does not exist in the master Horde branch (origin).
@@ -141,7 +145,7 @@
 
         <p>To clone a repository, use this command:</p>
 
-        <code>git clone ssh://dev.horde.org/horde/git/[REPO]</code>
+        <pre class="brush:bash">git clone ssh://dev.horde.org/horde/git/[REPO]</pre>
 
         <p>where <tt>REPO</tt> is one of the available repositories listed above.</p>
 
@@ -163,30 +167,34 @@
 
         <p>To update/rebase the changes, you can use the following command:</p>
 
-        <code>git pull --rebase</code>
+        <pre class="brush:bash">git pull --rebase</pre>
 
         <p>Better still, to prevent an unnecessary merge, you can configure
         <tt><a href="http://www.kernel.org/pub/software/scm/git/docs/git-pull.html">git
         pull</a></tt> to always rebase when pulling for a particular repo by using the
         following command:</p>
 
-        <code>git config branch.[reponame].rebase true</code>
+        <pre class="brush:bash">git config branch.[reponame].rebase true</pre>
 
         <p>One disadvantage of <tt>git pull</tt> is that (as of Git v1.6.1.1) it does
         not indicate which files are updated. To see a list of files that are updated,
         you should run these two commands instead:</p>
 
-        <pre><code>git fetch
-        git rebase -v origin</code></pre>
+        <pre class="brush:bash">
+        git fetch
+        git rebase -v origin
+        </pre>
 
-        <p>A helpful alias for <code>.gitconfig</code> to update your local repository
+        <p>A helpful alias for <pre class="brush:bash">.gitconfig</pre> to update your local repository
         while seeing changed files and avoiding conflicts is:</p>
 
-        <pre><code>[alias]
+        <pre class="brush:bash">
+        [alias]
             get = !git fetch &amp;&amp;
                 ( git rebase -v origin/master || ( git stash &amp;&amp;
                     ( git rebase -v origin/master || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp;
-                git stash pop ) )</code></pre>
+                git stash pop ) )
+        </pre>
 
         <p>For more information on rebasing, and the commands needed if conflicts are
         detected during the rebase/merge, see:
@@ -199,15 +207,19 @@
         <p>First, you should make sure your contact information is correct. The
         easiest way to do so is to issue the following commands:</p>
 
-        <pre><code>git config user.name "FirstName LastName"
-        git config user.email "user@example.com"</code></pre>
+        <pre class="brush:bash">
+        git config user.name "FirstName LastName"
+        git config user.email "user@example.com"
+        </pre>
 
         <p>Go ahead and hack away. When finished, commit the files to your local
         repo. There are several ways to do this. To add specific files to a commit,
         use the following commands:</p>
 
-        <pre><code>git add filename [filename2] [filename3...]
-        git commit</code></pre>
+        <pre class="brush:bash">
+        git add filename [filename2] [filename3...]
+        git commit
+        </pre>
 
         <p><tt><a
         href="http://www.kernel.org/pub/software/scm/git/docs/git-add.html">git
@@ -219,31 +231,31 @@
         <p>You can also list the files to be committed on the command line to
         commit:</p>
 
-        <code>git commit [filename1] [filename2] ... [filenameX]</code>
+        <pre class="brush:bash">git commit [filename1] [filename2] ... [filenameX]</pre>
 
         <p>If you want to commit all modified files, you can use the following
         shortcut command:</p>
 
-        <code>git commit -a</code>
+        <pre class="brush:bash">git commit -a</pre>
 
         <p>If you want to commit all modified files, and want a shortcut to also
         specify the commit message on the command line, use the following command:</p>
 
-        <code>git commit -a -m "[commit message]"</code>
+        <pre class="brush:bash">git commit -a -m "[commit message]"</pre>
 
         <h3>Pushing commits</h3>
 
         <p>Once you finish with your local commits and want to push them to the
         master repository, use the following command:</p>
 
-        <code>git push</code>
+        <pre class="brush:bash">git push</pre>
 
         <p>When pushing, it is most likely the desired action to ONLY push changes to
         branches that are currently being tracked on the master server. This is the
         default git behavior, but the following config verifies that the setting is
         configured properly:
 
-        <p><code>git config push.default matching</code></p>
+        <p><pre class="brush:bash">git config push.default matching</pre></p>
 
         <h3>Stashing</h3>
 
@@ -261,11 +273,11 @@
         <tt><a href="http://www.kernel.org/pub/software/scm/git/docs/git-stash.html">stash</a></tt>.
         To stash all work-in-progress on the current tree, use:</p>
 
-        <code>git stash</code>
+        <pre class="brush:bash">git stash</pre>
 
         <p>When you need to pull the changes back, use:</p>
 
-        <code>git stash apply</code>
+        <pre class="brush:bash">git stash apply</pre>
 
         <p>Stash has many more features that won't be explained here - check the
         documentation (e.g. working with multiple stashes, popping a stash).</p>
@@ -280,7 +292,7 @@
         and commit notification e-mails look nicer. Git provides an easy way to
         manipulate your local commits:</p>
 
-        <code>git rebase -i origin (origin means edit all commits applied on top of the last pull from the central repository)</code>
+        <pre class="brush:bash">git rebase -i origin (origin means edit all commits applied on top of the last pull from the central repository)</pre>
 
         <p>Use the 'squash' option to combine multiple commits. Instructions on the
         edit screen explain the various other features.</p>
@@ -293,29 +305,29 @@
         than the master repo. To create a branch on the master Horde repository, use
         the following command:</p>
 
-        <code>git push origin [localbranch]</code>
+        <pre class="brush:bash">git push origin [localbranch]</pre>
 
         <p>After you push your new topic branch, you can do the following to have your
         existing topic branch track the remote branch you just created (this is not
         done automatically) [this requires Git 1.7.0+]:</p>
 
-        <code>git branch --set-upstream [local branch name] origin/[remote branch name]</code>
+        <pre class="brush:bash">git branch --set-upstream [local branch name] origin/[remote branch name]</pre>
 
         <p>Now all users can track this branch by issuing this command:</p>
 
-        <code>git checkout -t origin/[remote branch name]</code>
+        <pre class="brush:bash">git checkout -t origin/[remote branch name]</pre>
 
         <p>You should keep the topic branch up to date with the main branch during
         development so that your topic branch only contains the changes related to the
         work being done in the branch:</p>
 
-        <code>
+        <pre class="brush:bash">
         git checkout [topic]<br />
         git merge master <br />
         # resolve conflicts<br/>
         git pull --rebase <br />
         git push
-        </code>
+        </pre>
 
         <p>During a long-lived branch, you will find yourself having to resolve the same
         conflicts over and over again. The git tool <em>git-rerere</em> is designed to
@@ -324,18 +336,18 @@
         resolution. Next time git comes across the exact same conflict, it will
         know on it's own how to resolve it. To use this feature you must explicitly
         enable it:</p>
-        <code>
+        <pre class="brush:bash">
             git config --global rerere.enabled 1
-        </code>
+        </pre>
 
         <p>To delete the remote branch, issue this command:</p>
 
-        <code>git push origin :[branchname]</code>
+        <pre class="brush:bash">git push origin :[branchname]</pre>
 
         <p>To remove stale remote branches from your branch list, issue this
          command:</p>
 
-        <code>git remote prune origin</code>
+        <pre class="brush:bash">git remote prune origin</pre>
 
 
       </div>
