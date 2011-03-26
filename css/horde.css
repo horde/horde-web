@@ -376,17 +376,16 @@ div.planethorde ul li p.author {
 }
 div.footer {
     background:url(../images/bg-footer.jpg) repeat-x;
+    background-color: #1c1d21;
     color:#9ea3b0;
     line-height:20px;
     padding:15px;
-    height:188px;
 }
 
 div.footer .holder {
 }
 
 div.footer .section {
-    float: left;
     background: url(../images/bg-section.gif) repeat-y 1px 0;
     width:870px;
 }
@@ -394,44 +393,80 @@ div.footer .section {
 div.footer .add-nav {
     float: left;
     margin-right: 30px;
-    width: 138px;
+    width: 125px;
 }
 
-.follow-us {
+div.footer .add-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.footer .add-nav li {
+    line-height: 20px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+
+div.footer .follow-us {
     float: left;
     margin-right: 27px;
-    width: 102px;
+    width: 110px;
 }
 
-.follow-us ul {
+div.footer .follow-us ul {
     list-style:none;
 }
 
-.follow-us .twitter {
+div.footer .follow-us .twitter {
     background:url(../images/twitter.png) no-repeat;
     padding-left:24px;
 }
-.follow-us .github {
+div.footer .follow-us .github {
     background: url(../images/github.png) no-repeat;
     padding-left: 24px;
 }
-.follow-us .ohloh {
+div.footer .follow-us .ohloh {
     background: url(../images/ohloh.png) no-repeat;
     padding-left: 24px;
 }
-.follow-us .newsletter {
+div.footer .follow-us .newsletter {
     background: url(../images/newsletter.png) no-repeat;
     padding-left: 24px;
 }
 
-.contact-info {
+div.footer .contact-info {
     float: left;
     width: 205px;
 }
 
-.contact-info a {
+div.footer .contact-info a {
     text-decoration:none;
     color:#FFFFFF;
+}
+
+div.footer .contact-info dl {
+    margin: 0;
+    overflow: hidden;
+    width: 205px;
+    line-height: 1.10em;
+}
+
+div.footer .contact-info dt {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-right: 4px;
+    width: 53px;
+}
+
+div.footer .contact-info dd {
+    color: #D4D4D4;
+    float: left;
+    margin-left: 3px;
+    padding-bottom: 10px;
 }
 
 .footer h3 {
@@ -442,58 +477,10 @@ div.footer .add-nav {
     font-weight:bold;
 }
 
-.add-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 138px;
-}
-
-.add-nav li {
-    line-height: 20px;
-    overflow: hidden;
-    vertical-align: top;
-    width: 138px;
-}
-
 .footer .section ul a {
     color: #9EA3B0;
     outline: 0 none;
     text-decoration:none;
-}
-
-.contact-info dl {
-    line-height: 15px;
-    margin: 0;
-    overflow: hidden;
-    width: 205px;
-}
-
-.contact-info dt {
-    clear: left;
-    color: #FFFFFF;
-    float: left;
-    font-weight: bold;
-    padding-right: 4px;
-    width: 46px;
-}
-
-.contact-info dd {
-    color: #D4D4D4;
-    float: left;
-    margin: 0;
-    padding-bottom: 10px;
-    width: 154px;
-    word-spacing: -1px;
-}
-
-.contact-info dt {
-    clear: left;
-    color: #FFFFFF;
-    float: left;
-    font-weight: bold;
-    padding-right: 4px;
-    width: 46px;
 }
 
 .testimonials {

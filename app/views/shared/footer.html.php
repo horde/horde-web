@@ -1,5 +1,4 @@
                 <div class="footer">
-                    <div class="holder">
                         <div class="section">
                             <div class="add-nav">
                                 <h3>Site Navigation</h3>
@@ -25,7 +24,6 @@
                             </div>
                             <?php echo $this->render('contact'); ?>
                             <?php echo $this->render('quotes', array('locals' => array('quote' => $quote))); ?>
+                            <div class="clear"></div>
                         </div>
-                    </div>
-                    <div class="clear"></div>
                 </div>
