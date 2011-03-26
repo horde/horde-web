@@ -9,6 +9,7 @@
     Horde::includeScriptFiles();
     Horde::outputInlineScript();
 ?>
+<script src="js/analytics.js"></script>
 </head>
 <body>
     <div class="area">
