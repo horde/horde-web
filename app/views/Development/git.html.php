@@ -292,8 +292,11 @@
         and commit notification e-mails look nicer. Git provides an easy way to
         manipulate your local commits:</p>
 
-        <pre class="brush:bash">git rebase -i origin</pre>
-        (origin means edit all commits applied on top of the last pull from the central repository)</pre>
+        <pre class="brush:bash">
+        # origin means edit all commits applied on top of the last pull
+        # from the central repository.
+        git rebase -i origin
+        </pre>
 
         <p>Use the 'squash' option to combine multiple commits. Instructions on the
         edit screen explain the various other features.</p>
@@ -323,10 +326,10 @@
         work being done in the branch:</p>
 
         <pre class="brush:bash">
-        git checkout [topic]<br />
-        git merge master <br />
-        # resolve conflicts<br/>
-        git pull --rebase <br />
+        git checkout [topic]
+        git merge master
+        # resolve conflicts
+        git pull --rebase
         git push
         </pre>
 
