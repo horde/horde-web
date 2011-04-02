@@ -70,7 +70,7 @@ class HordeWeb_Utils
     {
         $full = $GLOBALS['host_base'] . '/images/screenshots/' . $app . '/' . $imagename . ($png ? '.png' : '.jpg');
         $thumb = $GLOBALS['host_base'] . '/images/screenshots/' . $app . '/' . $imagename . '-thumb.jpg';
-        $s = "<a href=\"$full\"><img border=\"0\" ";
+        $s = "<a class=\"lightbox\" href=\"$full\"><img border=\"0\" ";
         $s .= "src=\"$thumb\" alt=\"$imagename\" /></a>";
 
         if (!empty($text)) {
