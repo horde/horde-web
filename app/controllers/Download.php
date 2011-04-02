@@ -35,6 +35,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
         $view->addTemplatePath(
             array($GLOBALS['fs_base'] . '/app/views/Download'));
         $view->stable = HordeWeb_Utils::getStableApps();
+        $view->h4Stable = HordeWeb_Utils::getH4Apps();
     }
 
     /**
@@ -111,6 +112,11 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
 
         if (empty($app_info)) {
             $app_info['name'] = ucfirst($app);
+        }
+        $h4apps = $view->h4Stable;
+        if (!empty($h4apps[$app])) {
+            $url = new Horde_Url('http://pear.horde.org');
+            $view->h4app = $url->link() . $view->h4Stable[$app]['name'] . ' ' . $view->h4Stable[$app]['version'] . '</a>';
         }
 
         $view->stableapp = $stableapp;

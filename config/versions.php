@@ -4,6 +4,44 @@
  *        update this during release.
  *
  */
+$horde_four_apps = array(
+    'horde' => array(
+        'name' => 'Horde',
+        'ver' => '4.0',
+        'date' => 'April 4 2011'
+    ),
+    'imp' => array(
+        'name' => 'IMP',
+        'ver' => 'H4 (5.0)',
+        'date' => 'April 4 2011'
+    ),
+    'turba' => array(
+        'name' => 'Turba',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 4 2011'
+    ),
+    'ingo' => array(
+        'name' => 'Ingo',
+        'ver' => 'H4 (2.0)',
+        'date' => 'April 4 2011'
+    ),
+    'kronolith' => array(
+        'name' => 'Kronolith',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 4 2011'
+    ),
+    'nag' => array(
+        'name' => 'Nag',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 4 2011'
+    ),
+    'mnemo' => array(
+        'name' => 'Mnemo',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 4 2011'
+    ),
+);
+
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
