@@ -4,13 +4,15 @@
         <h2><span></span>Download <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => $this->appname)) ?>"><?php echo ucfirst($this->appname)?></a></h2>
         <div class="section">
             <h3>Current Horde 4 Stable Release</h3>
+            <?php if ($this->h4app):?>
             <p>Horde 4 and all Horde 4 applications now utilize a PEAR based
                 installation method. You can install all Horde 4 applications
                 and libraries by follow the directions on our PEAR server.
                 You may also download the PEAR tarball directly.</p>
-            <?php if ($this->h4app):?>
-            <?php echo $this->h4app;?>
-            <? endif;?>
+                <?php echo $this->h4app ?>
+            <?php else: ?>
+            <p>No Horde 4 release at this time.</p>
+            <?php endif;?>
 
             <h3>Current Horde 3 Stable Release</h3>
             <ul>
