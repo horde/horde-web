@@ -27,8 +27,8 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
         case 'git':
         case 'cvs':
             $css = new Horde_Themes_Css();
-            Horde::addScriptFile('syntaxhighlighter/scripts/shCore.js', 'horde', true);
-            Horde::addScriptFile('syntaxhighlighter/scripts/shAutoloader.js', 'horde', true);
+            Horde::addScriptFile('syntaxhighlighter/scripts/shCore.js', 'horde');
+            Horde::addScriptFile('syntaxhighlighter/scripts/shAutoloader.js', 'horde');
             $path = $GLOBALS['registry']->get('jsuri', 'horde') . '/syntaxhighlighter/scripts/';
             $brushes = <<<EOT
               SyntaxHighlighter.autoloader(
