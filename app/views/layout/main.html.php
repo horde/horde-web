@@ -4,7 +4,7 @@
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen">
-<script type="text/javascript" src="js/analytics.js"></script>
+<script type="text/javascript" src="<?php echo $GLOBALS['host_base']?>/js/analytics.js"></script>
 <?php
     Horde::includeStylesheetFiles(array('nobase' => true, 'nohorde' => true));
     Horde::includeScriptFiles();
