@@ -533,6 +533,7 @@ div.sliderview p {
     line-height: 20px;
     width: 450px;
 }
+
 /* Informer widget */
 #b-webi-widget,
 #b-webi-widget a,
@@ -688,7 +689,7 @@ ul.appnav li a:hover, ul.communitynav li a:hover {
     text-decoration: underline;
 }
 
-ul.download-list {
+ul.download-list, ul.sidebarNews {
     list-style-position: inside;
     margin-bottom: 15px;
 }
