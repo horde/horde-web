@@ -692,7 +692,6 @@ ul.download-list {
 }
 
 div.hordeauthor h2,
-div.hordedocs h1,
 div.section h3 {
     background: none;
     color: #797979;
@@ -709,10 +708,7 @@ div.applications h3 a {
 div.mainarea ul, div.mainareasplit ul {
     margin-left: 30px;
 }
-div.hordedocs a {
-    color: #556aa1;
-}
-div.hordedocs .footer {
+div.section .footer {
     background: none;
     height: inherit;
 }

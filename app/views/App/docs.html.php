@@ -3,7 +3,7 @@
     <div class="mainareasplit">
         <?php echo $this->renderPartial('appbreadcrumb') ?>
         <span class="appMenu"><?php echo $this->render('appnav') ?></span>
-        <div class="hordedocs"><?php echo $this->content?></div>
+        <div class="section"><?php echo $this->content?></div>
     </div>
     <div class="clear"></div>
   </div>
