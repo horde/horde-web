@@ -686,6 +686,11 @@ ul.appnav li a:hover, ul.communitynav li a:hover {
     text-decoration: underline;
 }
 
+ul.download-list {
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
 div.hordeauthor h2,
 div.hordedocs h1,
 div.section h3 {
