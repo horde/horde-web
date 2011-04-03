@@ -10,6 +10,7 @@
      <div class="rightcol" style="background: none;">
        <div id="accordion">
          <h2>Latest News</h3>
+         <ul class="sidebarNews">
             <?php $i = 0; ?>
             <?php foreach ($this->latestNews as $entry):
                if ($i++ >= 5) {
@@ -18,6 +19,7 @@
               echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
               endforeach;
             ?>
+         </ul>
          <div></div>
          <h2>Stable Releases</h3>
          <div></div>
