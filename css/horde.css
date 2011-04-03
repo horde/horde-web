@@ -670,9 +670,9 @@ ul.appnav, ul.communitynav {
     float: left;
     width: 100%;
     list-style: none;
-    margin: 5px 0 25px 0;
+    margin: 5px 0 25px 0 !important;
 }
- ul.appnav li,  ul.communitynav li {
+ul.appnav li,  ul.communitynav li {
     margin-right: 15px;
     color: #556aa1;
     float:left;
