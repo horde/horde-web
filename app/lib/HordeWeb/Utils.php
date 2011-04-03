@@ -93,15 +93,16 @@ class HordeWeb_Utils
 
     static public function breadcrumbs($controller, $params = array())
     {
+        $separator = '&nbsp;&nbsp;&ndash;&nbsp;&nbsp;';
         $view = $controller->getView();
         switch (get_class($controller)) {
         case 'HordeWeb_App_Controller':
             $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'))
-                . '::'
+                . $separator
                 . $view->linkToUnlessCurrent('Applications', array('controller' => 'app'));
 
                 if (!empty($view->appname)) {
-                    $crumb .= '::';
+                    $crumb .= $separator;
                 }
                 $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), ucfirst($view->appname), array('controller' => 'app', 'action' => 'app'));
             break;
@@ -109,7 +110,7 @@ class HordeWeb_Utils
             $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'));
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
-                    $crumb .= '::' . $view->linkToUnlessCurrent($name, array('controller' => 'community', 'action' => $action));
+                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'community', 'action' => $action));
                 }
             }
             break;
@@ -117,7 +118,7 @@ class HordeWeb_Utils
             $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'));
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
-                    $crumb .= '::' . $view->linkToUnlessCurrent($name, array('controller' => 'development', 'action' => $action));
+                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'development', 'action' => $action));
                 }
             }
         }
