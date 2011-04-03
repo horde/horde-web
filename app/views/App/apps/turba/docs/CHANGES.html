@@ -1,19 +1,57 @@
-<h1>Changes by Release</h1><pre>
+<h3>Changes by Release</h3><pre>
+----
+v3.0
+----
+
+[mjr] Fix deletion of virtual address books (<a href="http://bugs.horde.org/ticket/">Bug #</a> 9779).
+[jan] Fix saving searches to virtual address books (<a href="http://bugs.horde.org/ticket/9776">Bug #9776</a>).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[jan] Move all executable scripts to bin/ and prefix with turba-.
+[jan] Add fields to the first address if multiple passed to addField() API
+      method (<a href="http://bugs.horde.org/ticket/3482">Request #3482</a>).
+
+
+--------
+v3.0-RC2
+--------
+
+[mjr] Fix issue that caused the inability to preview contact images while
+      uploading (<a href="http://bugs.horde.org/ticket/9702">Bug #9702</a>).
+
+
+--------
+v3.0-RC1
+--------
+
+[jan] Update installation and upgrade instructions.
+[gwr] Adapted the Kolab driver to Horde 4.
+[mjr] Fix issue that caused erroneous file listings for objects in sources
+      without a __uid value.
+[cjh] Fix storing of binary fields.
+[mjr] Fix/refactor IMSP driver.
+
+
 ----------
-v2.3.6-cvs
+v3.0-BETA1
 ----------
 
-[jan] Add upgrade scripts for next-generation SQL share driver.
-[jan] Fix splitting up names when exporting to N properties of vCards.
-[jan] Only set the encoding parameter for binary data in vCards, if data is not
-      empty (<a href="http://bugs.horde.org/ticket/9413">Bug #9413</a>).
-[jan] Fix searching for fields matching an email address if using 'emails'
-      attribute instead of 'email' (<a href="http://bugs.horde.org/ticket/9472">Bug #9472</a>).
-[jan] Use personal address books first if determining the default one (Valentin
-      Vidic, <a href="http://bugs.horde.org/ticket/9367">Request #9367</a>).
-[jan] Use name format preference not only for paging, but for sorting too
-      (<a href="http://bugs.horde.org/ticket/8806">Request #8806</a>).
-[jan] Fix photo corruption when exporting to vCard 3.0 (<a href="http://bugs.horde.org/ticket/9100">Bug #9100</a>).
+[mjr] Fix the listTimeObjects API for shared sources (<a href="http://bugs.horde.org/ticket/9649">Bug #9649</a>).
+[jan] Fix importing contacts with SyncML (Simon Bühler, <a href="http://bugs.horde.org/ticket/9641">Bug #9641</a>).
+
+
+-----------
+v3.0-ALPHA1
+-----------
+
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Create a default address book if the user doesn't own any yet.
+[jan] Rename sources.php to backends.php.
+[mjr] If default addressbook is not browsable, try one from the addressbook pref
+      (Request: 6536).
+[jan] Add duplicate search and merging.
+[mjr] The listTimeObjects API now returns categories for each source
+      individually instead of returning only the categories available
+      (<a href="http://bugs.horde.org/ticket/8504">Request #8504</a>).
 
 
 ------
@@ -50,7 +88,7 @@ v2.3.3
 [jan] Add and fix Oracle-specific SQL scripts.
 [jan] Add Croatian translation (Matej Vela &lt;matej.vela@carnet.hr>,
       Iva Rumora &lt;iva.rumora@zg.t-com.hr>).
-[mjr] Fix permission checking for virtual address books. 
+[mjr] Fix permission checking for virtual address books.
 [jan] Update deleted attributes during synchronization (lst_hoe02@kwsoft.de,
       Request #6658).
 [jan] Support X-ANNIVERSARY, X-CHILDREN, and X-SPOUSE vCard fields
@@ -505,7 +543,7 @@ v2.0.4
 v2.0.3
 ------
 
-[jan] Add Turkish translation (Servet G�ney &lt;sguney@metu.edu.tr>, Ahmet �zt�rk
+[jan] Add Turkish translation (Servet Güney &lt;sguney@metu.edu.tr>, Ahmet Öztürk
       &lt;oahmet@metu.edu.tr>).
 
 

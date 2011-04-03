@@ -1,5 +1,5 @@
-<div class="document" id="installing-passwd-3-0">
-<h1 class="title">Installing Passwd 3.0</h1>
+<div class="document" id="installing-passwd-4-0">
+<h1 class="title">Installing Passwd 4.0</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -15,64 +15,47 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#obtaining-passwd" id="id1">1&nbsp;&nbsp;&nbsp;Obtaining Passwd</a></li>
-<li><a class="reference internal" href="#prerequisites" id="id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
-<li><a class="reference internal" href="#installing-passwd" id="id3">3&nbsp;&nbsp;&nbsp;Installing Passwd</a></li>
-<li><a class="reference internal" href="#configuring-passwd" id="id4">4&nbsp;&nbsp;&nbsp;Configuring Passwd</a></li>
-<li><a class="reference internal" href="#security-considerations" id="id5">5&nbsp;&nbsp;&nbsp;Security considerations</a></li>
-<li><a class="reference internal" href="#poppassd-server-software" id="id6">6&nbsp;&nbsp;&nbsp;Poppassd Server Software</a></li>
-<li><a class="reference internal" href="#ldap-implementation-information" id="id7">7&nbsp;&nbsp;&nbsp;LDAP Implementation Information</a></li>
-<li><a class="reference internal" href="#sql-implementation-information" id="id8">8&nbsp;&nbsp;&nbsp;SQL Implementation Information</a></li>
-<li><a class="reference internal" href="#smbpasswd-implementation-information" id="id9">9&nbsp;&nbsp;&nbsp;Smbpasswd Implementation Information</a></li>
-<li><a class="reference internal" href="#expect-script-information" id="id10">10&nbsp;&nbsp;&nbsp;Expect Script Information</a></li>
-<li><a class="reference internal" href="#expect-pecl-information" id="id11">11&nbsp;&nbsp;&nbsp;Expect PECL Information</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id12">12&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-passwd" id="id2">2&nbsp;&nbsp;&nbsp;Installing Passwd</a><ul class="auto-toc">
+<li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-release-tarballs" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuring-passwd" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Passwd</a></li>
+<li><a class="reference internal" href="#security-considerations" id="id6">4&nbsp;&nbsp;&nbsp;Security considerations</a></li>
+<li><a class="reference internal" href="#poppassd-server-software" id="id7">5&nbsp;&nbsp;&nbsp;Poppassd Server Software</a></li>
+<li><a class="reference internal" href="#ldap-implementation-information" id="id8">6&nbsp;&nbsp;&nbsp;LDAP Implementation Information</a></li>
+<li><a class="reference internal" href="#sql-implementation-information" id="id9">7&nbsp;&nbsp;&nbsp;SQL Implementation Information</a></li>
+<li><a class="reference internal" href="#smbpasswd-implementation-information" id="id10">8&nbsp;&nbsp;&nbsp;Smbpasswd Implementation Information</a></li>
+<li><a class="reference internal" href="#expect-script-information" id="id11">9&nbsp;&nbsp;&nbsp;Expect Script Information</a></li>
+<li><a class="reference internal" href="#expect-pecl-information" id="id12">10&nbsp;&nbsp;&nbsp;Expect PECL Information</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id13">11&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the Passwd Password
 Changing Application.</p>
 <p>For information on the capabilities and features of Passwd, see the file
 <a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Passwd distribution.</p>
-<div class="section" id="obtaining-passwd">
-<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Obtaining Passwd</a></h1>
-<p>Passwd can be obtained from the Horde website and FTP server, at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/passwd/">http://www.horde.org/passwd/</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/pub/passwd/">ftp://ftp.horde.org/pub/passwd/</a></p>
-</blockquote>
-<p>Or use the mirror closest to you:</p>
-<blockquote>
-<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
-<p>Bleeding-edge development versions of Passwd are available via CVS; see the
-file <a class="reference external" href="../../horde/docs/?f=HACKING.html">horde/docs/HACKING</a> in the Horde distribution, or the website
-<a class="reference external" href="http://www.horde.org/source/">http://www.horde.org/source/</a>, for information on accessing the Horde CVS
-repository.</p>
-</div>
 <div class="section" id="prerequisites">
-<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, Passwd <strong>requires</strong> the following:</p>
 <ol class="arabic">
 <li><p class="first">A working Horde installation.</p>
-<p>Passwd runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common
-tools for Web applications written in PHP.  You must install Horde before
+<p>Passwd runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+for web applications written in PHP.  You must install Horde before
 installing Passwd.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">Passwd 3.0 requires version 3.0+ of the Horde Framework -
+<p class="last">Passwd 4.0 requires version 4.0+ of the Horde Framework -
 earlier versions of Horde will <strong>not</strong> work.</p>
 </div>
-<p>The Horde Framework can be obtained from the Horde website and FTP server,
-at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
-</blockquote>
-<p>Many of Passwd's prerequisites are also Horde prerequisites.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">Be sure to have completed all of the steps in the
 <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
-installing Passwd.</p>
+installing Passwd. Many of Passwd's prerequisites are also
+Horde prerequisites. Additionally, many of Passwd's optional
+features are configured via the Horde install.</p>
 </div>
 </li>
 <li><p class="first">The following PHP capabilities, depending on the drivers you want use:</p>
@@ -97,6 +80,13 @@ Implementation Information</a> for details.</p>
 </li>
 <li><p class="first">The following PEAR modules:
 (See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PEAR modules)</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">If you are going to install Passwd the recommended way,
+i.e. using the PEAR installer, you can skip the remainder of
+this section. Installing Passwd through PEAR will
+automatically download and install all required PEAR modules.</p>
+</div>
 <ol class="loweralpha">
 <li><p class="first">Crypt_CHAP [OPTIONAL]</p>
 <p>Passwd uses this package to encrypt passwords for the smbldap driver.</p>
@@ -118,7 +108,51 @@ passwords are stored/set (could be localhost).</li>
 </ol>
 </div>
 <div class="section" id="installing-passwd">
-<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Installing Passwd</a></h1>
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Passwd</a></h1>
+<p>There are several ways to install Passwd. The recommended way to install Passwd
+is using the PEAR installer. Alternatively it can be installed from
+tarballs. Finally, if you want to run the latest development code, or get the
+latest, not yet released, fixes, you can install Passwd from Git.</p>
+<div class="section" id="installing-with-pear">
+<h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
+<p>First follow the instructions in <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> to prepare a PEAR
+environment for Horde and install the Horde Framework.</p>
+<p>When installing Passwd through PEAR now, the installer will automatically
+install any dependencies of Passwd too. By default, only the required
+dependencies will be installed:</p>
+<pre class="literal-block">
+pear install horde/passwd
+</pre>
+<p>If you want to install Passwd even with all optional dependencies, you need to
+specify the <tt class="docutils literal"><span class="pre">-a</span></tt> flag. Please note that this might also try to install PHP
+extensions through PECL that might need further configuration or activation in
+your PHP configuration:</p>
+<pre class="literal-block">
+pear install -a horde/passwd
+</pre>
+<p>If you want to install Passwd with all optional dependencies, but without the
+binary PECL packages that need to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the
+<tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
+<pre class="literal-block">
+pear install -a -B horde/passwd
+</pre>
+</div>
+<div class="section" id="installing-from-release-tarballs">
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></h2>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">As of today, there are no tarballs released for Passwd 4
+yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
+Passwd 4.</p>
+</div>
+<p>Passwd can be obtained from the Horde website and FTP server, at</p>
+<blockquote>
+<p><a class="reference external" href="http://www.horde.org/passwd/">http://www.horde.org/passwd/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/passwd/">ftp://ftp.horde.org/pub/passwd/</a></p>
+</blockquote>
+<p>Or use the mirror closest to you:</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
 <p>Passwd is written in PHP, and must be installed in a web-accessible directory.
 The precise location of this directory will differ from system to system.
 Conventionally, Passwd is installed directly underneath Horde in the web
@@ -138,36 +172,11 @@ mv passwd-x.y.z passwd
 http://your-server/horde/passwd/
 </pre>
 </div>
+</div>
 <div class="section" id="configuring-passwd">
-<h1><a class="toc-backref" href="#id4">4&nbsp;&nbsp;&nbsp;Configuring Passwd</a></h1>
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Passwd</a></h1>
 <ol class="arabic">
-<li><p class="first">Configuring Horde for Passwd</p>
-<ol class="loweralpha">
-<li><p class="first">Register the application</p>
-<p>In <tt class="docutils literal">horde/config/registry.php</tt>, find the <tt class="docutils literal"><span class="pre">applications['passwd']</span></tt>
-stanza.  The default settings here should be okay, but you can change
-them if desired.  If you have changed the location of Passwd relative to
-Horde, either in the URL, in the filesystem or both, you must update the
-<tt class="docutils literal">fileroot</tt> and <tt class="docutils literal">webroot</tt> settings to their correct values.</p>
-</li>
-</ol>
-</li>
 <li><p class="first">Configuring Passwd</p>
-<p>To configure Passwd, change to the <tt class="docutils literal">config/</tt> directory of the installed
-distribution, and make copies of all of the configuration <tt class="docutils literal">dist</tt> files
-without the <tt class="docutils literal">dist</tt> suffix:</p>
-<pre class="literal-block">
-cd config/
-for foo in *.dist; do cp $foo `basename $foo .dist`; done
-</pre>
-<p>Or on Windows:</p>
-<pre class="literal-block">
-copy *.dist *.
-</pre>
-<p>Documentation on the format and purpose of those files can be found in each
-file.  You may edit these files if you wish to customize Passwd's
-appearance and behavior.  With one exception (<tt class="docutils literal">backends.php</tt>) the
-defaults will be correct for most sites.</p>
 <p>You must login to Horde as a Horde Administrator to finish the
 configuration of Passwd.  Use the Horde <tt class="docutils literal">Administration</tt> menu item to get
 to the administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to
@@ -178,12 +187,14 @@ done click on <tt class="docutils literal">Generate Password Configuration</tt> 
 the Passwd configuration directory or file, it will not be able to write
 the file.  In this case, go back to <tt class="docutils literal">Configuration</tt> and choose one of the
 other methods to create the configuration file <tt class="docutils literal">passwd/config/conf.php</tt>.</p>
-<p>Note for international users: Passwd uses GNU gettext to provide local
-translations of text displayed by applications; the translations are found
-in the <tt class="docutils literal">po/</tt> directory.  If a translation is not yet available for your
-locale (and you wish to create one), see the <tt class="docutils literal">horde/po/README</tt> file, or
-if you're having trouble using a provided translation, please see the
-<a class="reference external" href="../../horde/docs/?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+<p>To configure Passwd, change to the <tt class="docutils literal">config/</tt> directory of the installed
+distribution, and copy the <tt class="docutils literal">backends.php.dist</tt> configuration file to
+<tt class="docutils literal">backends.php</tt> and edit it to your needs.</p>
+<p>Documentation on the format and purpose of the other configuration files in
+the <tt class="docutils literal">config/</tt> directory can be found in each file. You may create
+<tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize Passwd's
+appearance and behavior. See the header of the configuration files for
+details and examples. The defaults will be correct for most sites.</p>
 </li>
 <li><p class="first">Testing Passwd</p>
 <p>Once you have configured Passwd, bring up the included test page in your
@@ -198,7 +209,7 @@ http://your-server/horde/passwd/test.php
 </ol>
 </div>
 <div class="section" id="security-considerations">
-<h1><a class="toc-backref" href="#id5">5&nbsp;&nbsp;&nbsp;Security considerations</a></h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Security considerations</a></h1>
 <div class="note">
 <p class="first admonition-title">Note</p>
 <p class="last">Some drivers like poppassd always use clear text password
@@ -220,7 +231,7 @@ this module with guest access if they choose to do so.</p>
 </div>
 </div>
 <div class="section" id="poppassd-server-software">
-<h1><a class="toc-backref" href="#id6">6&nbsp;&nbsp;&nbsp;Poppassd Server Software</a></h1>
+<h1><a class="toc-backref" href="#id7">5&nbsp;&nbsp;&nbsp;Poppassd Server Software</a></h1>
 <p>The following are some links that users have submitted.  No warrenty is made
 for the following links or any software obtained from then.  These are all
 user submitted links, and have not been tested or verified.  Use these links
@@ -233,7 +244,7 @@ are your own risk!</p>
 </ul>
 </div>
 <div class="section" id="ldap-implementation-information">
-<h1><a class="toc-backref" href="#id7">7&nbsp;&nbsp;&nbsp;LDAP Implementation Information</a></h1>
+<h1><a class="toc-backref" href="#id8">6&nbsp;&nbsp;&nbsp;LDAP Implementation Information</a></h1>
 <p>The module includes support for changing LDAP stored passwords.</p>
 <p>LDAP can store passwords in multiple ways, namely:</p>
 <ol class="loweralpha simple">
@@ -263,14 +274,14 @@ access to attribute=userPassword
 </pre>
 </div>
 <div class="section" id="sql-implementation-information">
-<h1><a class="toc-backref" href="#id8">8&nbsp;&nbsp;&nbsp;SQL Implementation Information</a></h1>
+<h1><a class="toc-backref" href="#id9">7&nbsp;&nbsp;&nbsp;SQL Implementation Information</a></h1>
 <p>The module includes support for changing passwords stored in a SQL database.
 The SQL driver is similar to the LDAP driver except that it also supports MD5
 encryption using hex encoding (md5-hex).  If you created your passwords using
 the PHP md5() function then use md5-hex.</p>
 </div>
 <div class="section" id="smbpasswd-implementation-information">
-<h1><a class="toc-backref" href="#id9">9&nbsp;&nbsp;&nbsp;Smbpasswd Implementation Information</a></h1>
+<h1><a class="toc-backref" href="#id10">8&nbsp;&nbsp;&nbsp;Smbpasswd Implementation Information</a></h1>
 <p>To use this module, you must pass the address of your Samba domain controller
 on which to change the password.  This can be &quot;localhost&quot; for the server that
 Horde runs on.  The remote system name may be passed as the NETBIOS name, the
@@ -296,7 +307,7 @@ smbd.</p>
 use encrypted passwords.</p>
 </div>
 <div class="section" id="expect-script-information">
-<h1><a class="toc-backref" href="#id10">10&nbsp;&nbsp;&nbsp;Expect Script Information</a></h1>
+<h1><a class="toc-backref" href="#id11">9&nbsp;&nbsp;&nbsp;Expect Script Information</a></h1>
 <p>This code allows users to change their passwords via an expect script.  The
 module requires the expect program and a telnet or ssh program.  You may need
 to change some of the expect patterns in <tt class="docutils literal">scripts/passwd_expect</tt> such as the
@@ -305,13 +316,13 @@ to change some of the expect patterns in <tt class="docutils literal">scripts/pa
 for the transport, if possible.</p>
 </div>
 <div class="section" id="expect-pecl-information">
-<h1><a class="toc-backref" href="#id11">11&nbsp;&nbsp;&nbsp;Expect PECL Information</a></h1>
+<h1><a class="toc-backref" href="#id12">10&nbsp;&nbsp;&nbsp;Expect PECL Information</a></h1>
 <p>This code allows users to change their passwords via the PHP PECL expect
 extension. It requires the PECL expect extension and a ssh program.</p>
 <p>You can find the extension on <a class="reference external" href="http://pecl.php.net/package/expect">http://pecl.php.net/package/expect</a></p>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id12">12&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id13">11&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Passwd, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
@@ -330,10 +341,4 @@ information on reasonable support expectations, please read</p>
 <p>Thanks for using Passwd!</p>
 <p>The Passwd team</p>
 </div>
-</div>
-<div class="footer">
-<hr class="footer" />
-<a class="reference external" href="http://cvs.horde.org/co.php/passwd/docs/INSTALL?onb=FRAMEWORK_3">View document source</a>.
-Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
-
 </div>

@@ -1,10 +1,87 @@
-<h1>Changes by Release</h1><pre>
+<h3>Changes by Release</h3><pre>
+----
+v3.0
+----
+
+[jan] Fix fatal error when using the max_events permission (<a href="http://bugs.horde.org/ticket/9784">Bug #9784</a>).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[mjr] Add migration for mysql specific geospatial fields (<a href="http://bugs.horde.org/ticket/9758">Bug #9758</a>).
+[jan] Set default alarm in dynamic view (<a href="http://bugs.horde.org/ticket/9752">Bug #9752</a>).
+[jan] Set default alarm in dynamic view (<a href="http://bugs.horde.org/ticket/9752">Bug #9752</a>).
+[jan] Move all executable scripts to bin/ and prefix with kronolith-.
+
+
+--------
+v3.0-RC2
+--------
+
+[jan] Fix javascript error when viewing events with desktop notifications
+      (<a href="http://bugs.horde.org/ticket/9727">Bug #9727</a>).
+
+
+--------
+v3.0-RC1
+--------
+
+[jan] Update installation and upgrade instructions.
+[jan] Fix custom event alarm settings in traditional view (<a href="http://bugs.horde.org/ticket/9154">Bug #9154</a>).
+
+
 ----------
-v2.3.6-cvs
+v3.0-BETA1
 ----------
 
-[jan] Add upgrade scripts for next-generation SQL share driver.
-[jan] Export recurrence exceptions in a more portable way.
+[jan] Only load external events in IFRAME if configured.
+[jan] Fix retrieving event UIDs without date limit (Simon Bühler, <a href="http://bugs.horde.org/ticket/9651">Bug #9651</a>).
+[jan] Fix saving display status of other applications' calendars (<a href="http://bugs.horde.org/ticket/9636">Bug #9636</a>).
+[mjr] Add migration for converting existing event categories to tags.
+
+
+-----------
+v3.0-ALPHA1
+-----------
+
+[jan] Add configuration whether to load other applications in an IFRAME.
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Send a subscription link with the notification about shared
+      calendars if necessary.
+[jan] Default calendars no longer have the user name as the ID.
+[jan] Create a default calendar if the user doesn't own any yet.
+[jan] Add CalDAV client support (<a href="http://bugs.horde.org/ticket/8525">Request #8525</a>).
+[jan] Send agenda emails with HTML part and convert to Horde_View.
+[mjr] More complete handling of recurring event exceptions when dealing with the
+      iCalendar format (<a href="http://bugs.horde.org/ticket/9091">Request #9091</a>).
+[jan] Add remote calendars to the possible list of calendars for free/busy
+      information.
+[jan] Send alarm and iTip notifications with HTML part and convert to
+      Horde_View.
+[jan] Add option to notify users about calendar permission changes.
+[mjr] listTimeObject calendars are now viewable independently in the calendar
+      portal blocks (<a href="http://bugs.horde.org/ticket/8530">Request #8530</a>).
+[mjr] Recurring event exceptions are now indicated as such in the UI.
+[mjr] Deleting a recurring event now also deletes all exceptions to that event.
+[mjr] Add support for inline maps to the Ajax interface.
+[jan] Add preference to limit the events per day in the month view.
+[jan] Add system calendars (<a href="http://bugs.horde.org/ticket/2059">Request #2059</a>).
+[jan] Add URL field to events.
+[jan] Add task management capabilities to the Ajax interface.
+[jan] Manage holidays like any other calendar driver.
+[mjr] Add resource scheduling.
+[jan] Integrate tasks into Ajax interface (Gonçalo Queirós
+      &lt;mail@goncaloqueiros.net>).
+[mjr] Extend listTimeObjects API to include optional links and icons.
+[jan] Allow searching of any type of calendar and improve searching of
+      recurring events.
+[cjh] With only SHOW permissions, display event titles as "busy".
+[mjr] Replace categories and keywords by tags.
+[jan] Set colors per calendar (<a href="http://bugs.horde.org/ticket/7480">Request #7480</a>).
+[jan] Add individual notification methods for single events (Alfonso Marín
+      Marín &lt;almarin@um.es>).
+[jan] Add Ajax interface.
+[jan] Store events in UTC and convert to the user's timezone on the fly.
+[jan] Remove alarm reminder code.
+[jan] Change listEvents API method to return keys as dates instead of
+      timestamps.
 
 
 ------
@@ -44,7 +121,7 @@ v2.3.3
 [jan] Speed up listing alarms (patrick.abiven@apitech.fr, <a href="http://bugs.horde.org/ticket/8638">Request #8638</a>).
 [jan] Simplify and improve portability of listing events without date limits
       in the SQL driver (<a href="http://bugs.horde.org/ticket/8590">Bug #8590</a>).
-[mjr] Fix issue that caused the default alarm time to be applied to 
+[mjr] Fix issue that caused the default alarm time to be applied to
       listTimeObjects events (<a href="http://bugs.horde.org/ticket/8588">Bug #8588</a>).
 
 

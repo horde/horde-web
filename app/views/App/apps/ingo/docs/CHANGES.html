@@ -1,10 +1,44 @@
-<h1>Changes by Release</h1><pre>
+<h3>Changes by Release</h3><pre>
+----
+v2.0
+----
+
+[jan] Fix removing flags with Sieve driver (Vilius Sumskas &lt;vilius@lnk.lt>,
+      Bug #9785).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+
+--------
+v2.0-RC2
+--------
+
+[jan] Fix updating forward rules in SQL driver (<a href="http://bugs.horde.org/ticket/9699">Bug #9699</a>).
+
+
+--------
+v2.0-RC1
+--------
+
+[jan] Update installation and upgrade instructions.
+[jan] Fix instantiation of VFS transport driver (<a href="http://bugs.horde.org/ticket/9605">Bug #9605</a>).
+[jan] Fix moving rules with the SQL driver (<a href="http://bugs.horde.org/ticket/9672">Bug #9672</a>).
+
+
 ----------
-v1.2.6-cvs
+v2.0-BETA1
 ----------
 
-[mms] Fix encoding of vacation message in maildrop driver (<a href="http://bugs.horde.org/ticket/9532">Bug #9532</a>).
-[jan] Add upgrade scripts for next-generation SQL share driver.
+[jan] Fix creating new rules with PostgreSQL (<a href="http://bugs.horde.org/ticket/9638">Bug #9638</a>).
+
+
+-----------
+v2.0-ALPHA1
+-----------
+
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Rename 'driver' configuration and classes to 'transport' to avoid
+      confusion with script and storage drivers.
+[mms] Use IMP API for IMAP actions.
+[mms] Convert to Horde 4 standards.
 
 
 ------
@@ -78,7 +112,6 @@ v1.2.1
 
 [jan] Don't show script icon in menu if preference to automatically update
       scripts is both set and locked (<a href="http://bugs.horde.org/ticket/7251">Request #7251</a>).
-[mjr] Change MDB2 sequence name to 'id' (Bug 7240)
 [jan] Fix adding more than 5 wildcard blacklists (<a href="http://bugs.horde.org/ticket/7077">Bug #7077</a>).
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).

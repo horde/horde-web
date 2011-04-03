@@ -1,9 +1,47 @@
-<h1>Changes by Release</h1><pre>
+<h3>Changes by Release</h3><pre>
+----
+v3.0
+----
+
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[jan] Fix creating new tasks through WebDAV (<a href="http://bugs.horde.org/ticket/9675">Bug #9675</a>).
+[jan] Move all executable scripts to bin/ and prefix with nag-.
+
+
+--------
+v3.0-RC1
+--------
+
+[jan] Update installation and upgrade instructions.
+[gwr] Adapted the Kolab driver to Horde 4.
+
+
 ----------
-v2.3.7-cvs
+v3.0-BETA1
 ----------
 
-[jan] Add upgrade scripts for next-generation SQL share driver.
+[mjr] Fix saving tasks via PUT method.
+[mjr] Fix deleting task lists.
+[mjr] Fix hiding the External prefs group (<a href="http://bugs.horde.org/ticket/9643">Bug #9643</a>).
+
+
+-----------
+v3.0-ALPHA1
+-----------
+
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Send alarm notifications with HTML part and convert to Horde_View.
+[jan] Default task lists no longer have the user name as the ID.
+[jan] Create a default task list if the user doesn't own any yet.
+[jan] Add start date to possible colums in task list (Joel Smith
+      &lt;js-horde@jk1.net>, <a href="http://bugs.horde.org/ticket/9083">Request #9083</a>).
+[jan] Add system task lists (<a href="http://bugs.horde.org/ticket/2059">Request #2059</a>).
+[jan] Set colors per task list (<a href="http://bugs.horde.org/ticket/7480">Request #7480</a>).
+[cjh] Quick Add support: there is a javascript UI element for quickly adding
+      tasks, and an API method (tasks/quickAdd) that provides the same
+      functionality.
+[jan] Add individual notification methods for single tasks (Alfonso Marín
+      Marín &lt;almarin@um.es>).
 
 
 ------

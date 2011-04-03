@@ -1,68 +1,42 @@
-<div class="document" id="installing-ansel-1-0">
-<h1 class="title">Installing Ansel 1.0</h1>
-<table class="docinfo" frame="void" rules="none">
-<col class="docinfo-name" />
-<col class="docinfo-content" />
-<tbody valign="top">
-<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2009-07-16</td>
-</tr>
-<tr><th class="docinfo-name">Revision:</th>
-<td>1.8.2.5</td></tr>
-</tbody>
-</table>
+<div class="document" id="installing-ansel-2-0">
+<h1 class="title">Installing Ansel 2.0</h1>
+
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#obtaining-ansel" id="id1">1&nbsp;&nbsp;&nbsp;Obtaining Ansel</a></li>
-<li><a class="reference internal" href="#prerequisites" id="id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
-<li><a class="reference internal" href="#installing-ansel" id="id3">3&nbsp;&nbsp;&nbsp;Installing Ansel</a></li>
-<li><a class="reference internal" href="#configuring-ansel" id="id4">4&nbsp;&nbsp;&nbsp;Configuring Ansel</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id5">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-ansel" id="id2">2&nbsp;&nbsp;&nbsp;Installing Ansel</a><ul class="auto-toc">
+<li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-release-tarballs" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuring-ansel" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Ansel</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the Ansel Photo Manager.</p>
 <p>For information on the capabilities and features of Ansel, see the file
 <a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Ansel distribution.</p>
-<div class="section" id="obtaining-ansel">
-<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Obtaining Ansel</a></h1>
-<p>Ansel can be obtained from the Horde website and FTP server, at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/ansel/">http://www.horde.org/ansel/</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/pub/ansel/">ftp://ftp.horde.org/pub/ansel/</a></p>
-</blockquote>
-<p>Or use the mirror closest to you:</p>
-<blockquote>
-<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
-<p>Bleeding-edge development versions of Ansel are available via CVS; see the
-file <a class="reference external" href="../../horde/docs/?f=HACKING.html">horde/docs/HACKING</a> in the Horde distribution, or the website
-<a class="reference external" href="http://www.horde.org/source/">http://www.horde.org/source/</a>, for information on accessing the Horde CVS
-repository.</p>
-</div>
 <div class="section" id="prerequisites">
-<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, Ansel <strong>requires</strong> the following:</p>
 <ol class="arabic">
 <li><p class="first">A working Horde installation.</p>
-<p>Ansel runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common
-tools for Web applications written in PHP. You must install Horde before
+<p>Ansel runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+for web applications written in PHP.  You must install Horde before
 installing Ansel.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">Ansel 1.0 requires version 3.2.2 or greater of the
-Horde Framework - earlier versions of Horde will <strong>not</strong> work.</p>
+<p class="last">Ansel 2.0 requires version 4.0+ of the Horde Framework -
+earlier versions of Horde will <strong>not</strong> work.</p>
 </div>
-<p>The Horde Framework can be obtained from the Horde website and FTP server,
-at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
-</blockquote>
-<p>Many of Ansel's prerequisites are also Horde prerequisites.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">Be sure to have completed all of the steps in the
 <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
-installing Ansel.</p>
+installing Ansel. Many of Ansel's prerequisites are also
+Horde prerequisites. Additionally, many of Ansel's optional
+features are configured via the Horde install.</p>
 </div>
 </li>
 <li><p class="first">The following PHP capabilities:</p>
@@ -81,6 +55,13 @@ tested. If you use MySQL, you need at least version 5.0.</p>
 </li>
 <li><p class="first">The following PEAR packages:
 (See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PEAR packages)</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">If you are going to install Ansel the recommended way,
+i.e. using the PEAR installer, you can skip the remainder of
+this section. Installing Ansel through PEAR will
+automatically download and install all required PEAR modules.</p>
+</div>
 <ol class="loweralpha">
 <li><p class="first">MDB2</p>
 <p>Ansel uses the MDB2 classes for database access.  In addition, you will
@@ -102,16 +83,18 @@ described below. You can alternatively use the <a class="reference internal" hre
 <a class="reference internal" href="#imagemagick">ImageMagick</a> software, but one of these is <strong>required</strong>.</p>
 </li>
 <li><p class="first"><span class="target" id="opencv">OpenCV</span></p>
-<p>The opencv module provides the ability to detect human faces in images.
-If you would like to be able to have Ansel automatically detect faces in
-your images, you will need to install the opencv module. You will still be
-able to manually select faces from your images if you do not have opencv
-installed.</p>
+<p>The php-facedetect module provides the ability to detect human faces in
+images. If you would like to be able to have Ansel automatically detect
+faces in your images, you will need to install both the opencv library as
+well as the phpfacedetect extension. You will still be able to manually
+select faces from your images if you do not have this extension installed.</p>
 <!-- _ `OpenCV library`: http://sourceforge.net/projects/opencvlibrary/ -->
-<!-- _ `PHP module`: http://d.hatena.ne.jp/moriyoshi/20070924/1190595577 -->
-<p>Alternatively, you may use the php-facedetect module instead of the
-php-opencv module. You will still need to install the OpenCV library.</p>
 <!-- _ `PHP Module`: http://www.xarg.org/project/php-facedetect/ -->
+<dl class="docutils">
+<dt>NOTE: The php-facedetect extension <strong>requires</strong> the use of opencv library</dt>
+<dd><p class="first last">version 1.x. Version 2 will NOT work at this time.</p>
+</dd>
+</dl>
 </li>
 <li><p class="first"><span class="target" id="libpuzzle">libpuzzle</span></p>
 <p>The libpuzzle module provides the ability to determine similarities
@@ -124,10 +107,10 @@ need to install this module.</p>
 </li>
 <li><p class="first">The <span class="target" id="imagemagick">ImageMagick</span> software.</p>
 <p>If using the <a class="reference external" href="http://www.imagemagick.org/">ImageMagick software</a> you need to set the path to the
-<tt class="docutils literal">convert</tt> utility in Horde's setup screen
-(<tt class="docutils literal">Administration/Setup/Horde/Image Manipulation</tt>). You can alternatively
-use the <a class="reference internal" href="#gd">GD</a> extension or the <a class="reference internal" href="#imagick">imagick</a> extension, but one of these is
-<strong>required</strong>.</p>
+<tt class="docutils literal">convert</tt> utility in Horde's configuration screen
+(<tt class="docutils literal">Administration/Configuration/Horde/Image Manipulation</tt>). You can
+alternatively use the <a class="reference internal" href="#gd">GD</a> extension or the <a class="reference internal" href="#imagick">imagick</a> extension, but one of
+these is <strong>required</strong>.</p>
 </li>
 <li><p class="first"><span class="target" id="agora">Agora</span>, the Horde forums application.</p>
 <p><a class="reference internal" href="#agora">Agora</a> provides the ability for comments to be added to photos via the
@@ -141,7 +124,51 @@ risk.</p>
 </ol>
 </div>
 <div class="section" id="installing-ansel">
-<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Installing Ansel</a></h1>
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Ansel</a></h1>
+<p>There are several ways to install Ansel. The recommended way to install Ansel
+is using the PEAR installer. Alternatively it can be installed from
+tarballs. Finally, if you want to run the latest development code, or get the
+latest, not yet released, fixes, you can install Ansel from Git.</p>
+<div class="section" id="installing-with-pear">
+<h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
+<p>First follow the instructions in <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> to prepare a PEAR
+environment for Horde and install the Horde Framework.</p>
+<p>When installing Ansel through PEAR now, the installer will automatically
+install any dependencies of Ansel too. By default, only the required
+dependencies will be installed:</p>
+<pre class="literal-block">
+pear install horde/ansel
+</pre>
+<p>If you want to install Ansel even with all optional dependencies, you need to
+specify the <tt class="docutils literal"><span class="pre">-a</span></tt> flag. Please note that this might also try to install PHP
+extensions through PECL that might need further configuration or activation in
+your PHP configuration:</p>
+<pre class="literal-block">
+pear install -a horde/ansel
+</pre>
+<p>If you want to install Ansel with all optional dependencies, but without the
+binary PECL packages that need to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the
+<tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
+<pre class="literal-block">
+pear install -a -B horde/ansel
+</pre>
+</div>
+<div class="section" id="installing-from-release-tarballs">
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></h2>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">As of today, there are no tarballs released for Ansel 2
+yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
+Ansel 2.</p>
+</div>
+<p>Ansel can be obtained from the Horde website and FTP server, at</p>
+<blockquote>
+<p><a class="reference external" href="http://www.horde.org/ansel/">http://www.horde.org/ansel/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/ansel/">ftp://ftp.horde.org/pub/ansel/</a></p>
+</blockquote>
+<p>Or use the mirror closest to you:</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
 <p>Ansel is written in PHP, and must be installed in a web-accessible
 directory. The precise location of this directory will differ from system to
 system. Conventionally, Ansel is installed directly underneath Horde in the
@@ -161,56 +188,11 @@ mv ansel-h3-x.y.z ansel
 http://your-server/horde/ansel/
 </pre>
 </div>
+</div>
 <div class="section" id="configuring-ansel">
-<h1><a class="toc-backref" href="#id4">4&nbsp;&nbsp;&nbsp;Configuring Ansel</a></h1>
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Ansel</a></h1>
 <ol class="arabic">
-<li><p class="first">Configuring Horde for Ansel</p>
-<ol class="loweralpha">
-<li><p class="first">Register the application</p>
-<p>In <tt class="docutils literal">horde/config/registry.php</tt>, find the <tt class="docutils literal"><span class="pre">applications['ansel']</span></tt>
-stanza. The default settings here should be okay, but you can change
-them if desired. If you have changed the location of Ansel relative
-to Horde, either in the URL, in the filesystem or both, you must update
-the <tt class="docutils literal">fileroot</tt> and <tt class="docutils literal">webroot</tt> settings to their correct values.</p>
-</li>
-<li><p class="first">The geotagging features of Ansel require a Google Maps API key. Once you
-have a key, you should enter it in the <tt class="docutils literal">API Keys</tt> section of Horde's
-configuration interface. You can obtain a Google Maps API key at the URL:</p>
-<pre class="literal-block">
-http://code.google.com/apis/maps/signup.html
-</pre>
-</li>
-</ol>
-</li>
-<li><p class="first">Creating the database tables</p>
-<p>The specific steps to create Ansel's database tables depend on which
-database you've chosen to use.</p>
-<p>First, look in <tt class="docutils literal">scripts/sql/</tt> to see if a script already exists for your
-database type. If so, you should be able to simply execute that script as
-superuser in your database. (Note that executing the script as the &quot;horde&quot;
-user will probably fail when granting privileges.)</p>
-<p>If such a script does not exist, you'll need to build your own, using the
-file <tt class="docutils literal">ansel.sql</tt> as a starting point.  If you need assistance in creating
-database tables, you may wish to let us know on the Ansel mailing list.</p>
-<p>You will also need to make sure that the &quot;horde&quot; user in your database has
-table-creation privileges, so that the tables that <a class="reference external" href="http://pear.php.net/MDB2">PEAR MDB2</a> uses to
-provide portable sequences can be created.</p>
-</li>
 <li><p class="first">Configuring Ansel</p>
-<p>To configure Ansel, change to the <tt class="docutils literal">config/</tt> directory of the installed
-distribution, and make copies of all of the configuration <tt class="docutils literal">dist</tt> files
-without the <tt class="docutils literal">dist</tt> suffix:</p>
-<pre class="literal-block">
-cd config/
-for foo in *.dist; do cp $foo `basename $foo .dist`; done
-</pre>
-<p>Or on Windows:</p>
-<pre class="literal-block">
-copy *.dist *.
-</pre>
-<p>Documentation on the format and purpose of those files can be found in each
-file. You may edit these files if you wish to customize Ansel's appearance
-and behavior.</p>
 <p>You must login to Horde as a Horde Administrator to finish the
 configuration of Ansel. Use the Horde <tt class="docutils literal">Administration</tt> menu item to get
 to the administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to
@@ -221,12 +203,6 @@ done click on <tt class="docutils literal">Generate Photos Configuration</tt> to
 Ansel configuration directory or file, it will not be able to write the
 file. In this case, go back to <tt class="docutils literal">Configuration</tt> and choose one of the
 other methods to create the configuration file <tt class="docutils literal">ansel/config/conf.php</tt>.</p>
-<p>Note for international users: Ansel uses GNU gettext to provide local
-translations of text displayed by applications; the translations are found
-in the <tt class="docutils literal">po/</tt> directory. If a translation is not yet available for your
-locale (and you wish to create one), see the <tt class="docutils literal">horde/po/README</tt> file, or
-if you're having trouble using a provided translation, please see the
-<a class="reference external" href="../../horde/docs/?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
 <p>Note for users of Lighttpd web server: The pretty url generation relies on
 rewrite rules being configured on your web server. Since lighttpd does not
 support htaccess files like Apache, there is also a configuration file for
@@ -235,16 +211,28 @@ lighttpd included that contains the necessary rewrite rules. This file is:</p>
 docs/lighttpd-ansel.conf
 </pre>
 <p>Instructions for using it are included in the file.</p>
+<p>Documentation on the format and purpose of the other configuration files in
+the <tt class="docutils literal">config/</tt> directory can be found in each file. You may create
+<tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize Ansel's
+appearance and behavior. See the header of the configuration files for
+details and examples. The defaults will be correct for most sites.</p>
+</li>
+<li><p class="first">Creating the database tables</p>
+<p>Once you finished the configuration in the previous step, you can create all
+database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
+Ansel row of the configuration screen.</p>
+<p>Alternatively you creating the Ansel database tables can be accomplished with
+horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in the
+Horde configuration, just run the following:</p>
+<pre class="literal-block">
+horde/bin/horde-db-migrate ansel
+</pre>
 </li>
 <li><p class="first">Testing Ansel</p>
 <p>Once you have configured Ansel, bring up the included test page in your Web
 browser to ensure that all necessary prerequisites have been met. See the
-<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> document for further details on Horde test
-scripts. If you installed Ansel as described above, the URL to the test
-page would be:</p>
-<pre class="literal-block">
-http://your-server/horde/ansel/test.php
-</pre>
+<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> document for further details on the Horde test
+script.</p>
 <p>Next, use Ansel to create galleries and photos. Test at least the
 following:</p>
 <ul class="simple">
@@ -259,7 +247,7 @@ following:</p>
 </ol>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id5">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Ansel, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
@@ -278,10 +266,4 @@ For information on reasonable support expectations, please read</p>
 <p>Thanks for using Ansel!</p>
 <p>The Ansel team</p>
 </div>
-</div>
-<div class="footer">
-<hr class="footer" />
-<a class="reference external" href="http://cvs.horde.org/co.php/ansel/docs/INSTALL?onb=FRAMEWORK_3">View document source</a>.
-Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
-
 </div>

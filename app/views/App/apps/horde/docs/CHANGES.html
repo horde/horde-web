@@ -1,19 +1,134 @@
-<h1>Changes by Release</h1><pre>
+<h3>Changes by Release</h3><pre>
+----
+v4.0
+----
+
+[jan] Fix Cyrsql authentication driver (Vilius Sumskas &lt;vilius@lnk.lt>, Bug
+      #9781).
+[mjr] Fix ActiveSync provisioning.
+[mjr] Fix for broken Nokia MfE clients (<a href="http://bugs.horde.org/ticket/9757">Bug #9757</a>).
+[jan] Delete object mappings too when deleting SyncML anchors (<a href="http://bugs.horde.org/ticket/9377">Request #9377</a>).
+[jan] Delay sidebar creation if the sidebar is generated through JavaScript.
+
+
+--------
+v4.0-RC2
+--------
+
+[jan] Fix incorrect lowercasing of objectClasses in LDAP groups driver.
+[jan] Fix fatal error in desktop notifications (<a href="http://bugs.horde.org/ticket/9727">Bug #9727</a>).
+[jan] Rename all scripts in bin/ to be prefixed with horde- and installed in
+      PEAR's bin_dir (<a href="http://bugs.horde.org/ticket/9647">Request #9647</a>).
+[jan] Don't throw exception when setting port number while using localhost in
+      MySQL configuration (<a href="http://bugs.horde.org/ticket/9738">Bug #9738</a>).
+[jan] Fix building LDAP filter for groups from configuration (<a href="http://bugs.horde.org/ticket/9739">Bug #9739</a>).
+[jan] Fix loading of Horde's vhost conf.php file (<a href="http://bugs.horde.org/ticket/9704">Bug #9704</a>).
+[jan] Fix OpenOffice MIME viewer.
+[jan] Fire access keys on hidden elements in Internet Explorer (<a href="http://bugs.horde.org/ticket/8057">Bug #8057</a>).
+[jan] Don't fire access keys twice in Chrome browsers.
+[jan] Fix JavaScript date calculations across DST boundaries.
+[jan] Sort applications in preference menu by name.
+[jan] Add translations for file upload error messages.
+[mms] Fix identities pref UI when default_identity is locked (<a href="http://bugs.horde.org/ticket/9701">Bug #9701</a>).
+[mms] Added Horde::debug().
+
+
+--------
+v4.0-RC1
+--------
+
+[jan] Update installation and upgrade instructions.
+[jan] Fix converting identities with non-ascii characters to new format.
+[jan] Fix passing arguments to sendmail binary (Gonçalo Queirós, <a href="http://bugs.horde.org/ticket/9693">Bug #9693</a>).
+[mjr] Service_Facebook refactored for OAuth2 authentication (<a href="http://bugs.horde.org/ticket/9122">Bug #9122</a>).
+[mjr] IMSP drivers refactored for Horde 4.
+[gwr] Allow disabling applications for administrators.
+[jan] Don't show sub-permissions for adding that exist already.
+[jan] Fix listing more than one sub-permission (<a href="http://bugs.horde.org/ticket/9671">Bug #9671</a>).
+[jan] Fix calendar synchronization with certain Nokia phones (<a href="http://bugs.horde.org/ticket/9646">Bug #9646</a>).
+
+
+----------
+v4.0-BETA1
+----------
+
+[jan] Catch fatal errors about missing tables during initial configuration.
+[mms] Fix client-side IMAP sorting using envelope data.
+[mms] Workaround PHP &lt; 5.2.6 (broken stream handling) (<a href="http://bugs.horde.org/ticket/9644">Bug #9644</a>).
+[mjr] Fix updating schema for individual libraries.
+[mjr] Improved control over which application view to load.
+[jan] Find translateable strings in configuration files.
+[mms] Fix clearing expanded state for javascript trees (<a href="http://bugs.horde.org/ticket/9659">Bug #9659</a>).
+[jan] Only show advanced preferences link if there are some.
+[mms] Fix updates for refreshing Blocks (<a href="http://bugs.horde.org/ticket/9655">Bug #9655</a>).
+[mjr] Fix viewing applications with no mobile view from mobile devices.
+[jan] Fix error when not using a Group backend. (<a href="http://bugs.horde.org/ticket/9642">Bug #9642</a>).
+
+
 -----------
-v3.3.12-cvs
+v4.0-ALPHA1
 -----------
 
-[jan] Add an experimental new Share SQL driver with better performance.
-[jan] Fix integer overflow in ASN.1 parser for S/MIME messages.
-[jan] Fix splitread database usage in VFS (<a href="http://bugs.horde.org/ticket/9467">Bug #9467</a>).
-[jan] Fix invalidating permission cache in SQL driver (<a href="http://bugs.horde.org/ticket/9392">Bug #9392</a>).
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Add a new Share SQL driver with better performance.
+[cjh] Drop Log SQL driver.
+[mms] Update prototypejs to v1.7.
+[mms] Add theme caching.
+[mms] Add hook to allow browser capabilities to be modified.
+[jan] Add a configuration switch for automatic creation of default shares.
+[cjh] Move from Net_DNS to Net_DNS2.
+[jan] Translations for the framework packages are now bundled with those
+      packages.
+[bak] Remove LDAP driver from Horde_SessionHandler
+[jan] Require mandatory UTF-8 support for both servers and clients.
+[jan] Renamed Setup to Configuration and Options to Preferences.
+[mms] Moved sidebar code out of block/portal code (<a href="http://bugs.horde.org/ticket/9160">Request #9160</a>).
+[cjh] Remove fckeditor, standardizing on ckeditor.
+[jan] Move all translations from po/ to locale/ and use short locale
+      identifiers where possible.
+[jan] Remove frameset.
+[jan] Remove dhtmlHistory library.
+[mms] Removed support for krb5 authentication driver.
+[jan] Allow to specify the URL parameter name for the alternate login setting.
+[mms] Remove reliance on PEAR Mail library.
+[jan] Send alarm emails again if the alarm has changed (<a href="http://bugs.horde.org/ticket/8717">Bug #8717</a>).
+[mms] Add advanced preferences options screen.
+[mms] Complete rewrite of preferences UI display.
+[mjr] Horde_Image can now act as an Iterator for multi-page images.
+[mms] Remove Horde_Cipher library.
+[mms] Add 'cssfiles' hook to add custom CSS files to a page.
+[jan] Add configuration to not automatically show all available shares.
+[jan] Add configuration to disallow world permissions for user shares.
+[jan] Store alarm dates in UTC (<a href="http://bugs.horde.org/ticket/8381">Bug #8381</a>).
+[mms] Add abstracted AJAX interface (<a href="http://bugs.horde.org/ticket/4561">Request #4561</a>).
+[mms] Update scriptaculous to v1.8.3.
+[mjr] Add Horde_Image_Exif (ported from Ansel) and add a exiftool driver.
+[mjr] Horde_Image now has a native Imagick driver (removed proxy code).
+[mms] All Horde login/authentication handled by single login page.
+[mms] Move imple processing to a Horde service.
+[mms] Refactor Maintenance:: -> Horde_LoginTasks::.
+[mms] In Postgres, horde_prefs table now stores data in BYTEA instead of
+      TEXT (<a href="http://bugs.horde.org/ticket/8130">Bug #8130</a>).
+[mms] Improved caching of Registry data significantly reduces session sizes
+      and total session storage requirements (<a href="http://bugs.horde.org/ticket/8024">Request #8024</a>).
+[mms] IMAP auth driver now uses Horde_Imap_Client library.
+[mms] Use Gnumeric package to render MS Excel files.
+[mms] Use AbiWord package to render MS Word files.
+[cjh] Remove sapdb session handler backend.
+[jan] Add share locking (Alfonso Marín Marín &lt;almarin@um.es>).
+[cjh] Remove javascript popup alarms.
+[cjh] Update the Auth_passwd driver's add/update/remove user
+      implementations (<a href="http://bugs.horde.org/ticket/7810">Bug #7810</a>).
+[cjh] Add a Horde_Routes dispatcher for Rampage applications.
+[mjr] Fix a possible infinite loop with certain recurring events in Horde_Date.
+[jan] Use DateTime internally in Horde_Date.
 
 
 -------
 v3.3.11
 -------
 
-[mms] SECURITY: Fix XSS when viewing details of a vCard (<a href="http://bugs.horde.org/ticket/9357">Bug #9357</a>).
+[mms] SECURITY: Fix XSS when viewing details of a vCard.
 [jan] Fix exporting recurrence exceptions to vCalendar 1.0.
 [jan] Skip event status synchronization with Outlook, which is broken.
 [jan] Don't send SIF data to recent Funambol clients, unless requested.
@@ -108,6 +223,8 @@ v3.3.6
       (whatdoyouwant@gmail.com, <a href="http://bugs.horde.org/ticket/8626">Bug #8626</a>).
 [mjr] Various improvements and fixes to the Net_IMSP driver
       (noah@lsit.ucsb.edu; Bug #8532, #8533, #8534, and #8535).
+[jan] Export recurrence exceptions to Funambol clients (Alfonso Marín Marín
+      &lt;almarin@um.es>, <a href="http://bugs.horde.org/ticket/8065">Request #8065</a>).
 [jan] Export all email addresses to Funambol clients (lst_hoe02@kwsoft.de,
       Request #8571).
 [jan] Export all fax numbers to Funambol clients (lst_hoe02@kwsoft.de,
@@ -199,7 +316,7 @@ v3.3.4-RC1
 [jan] Silence errors messages from iconv_substr() (jens@peino.de, <a href="http://bugs.horde.org/ticket/8128">Bug #8128</a>).
 [jan] Don't catch Alt key combinations for access keys on Mac OS.
 [mjr] Fix bitwise clause generation in the sql and hierarchical sql driver. This
-      fixes issues with Oracle and possibly other RDBMs.
+      fixes issues with Oracle and possibly other RDBMS.
 [mjr] Correct numerous bugs in Horde_Image dealing with ImageMagick version
       inconsistencies.
 [jan] Fix charset conversion in preference hooks (<a href="http://bugs.horde.org/ticket/7489">Bug #7489</a>).
@@ -228,8 +345,6 @@ v3.3.3
 [cjh] SECURITY: Validate the Horde_Image driver name
       (found by Gunnar Wrobel &lt;p@rdus.de>).
 [cjh] Allow "." in phone number fields (<a href="http://bugs.horde.org/ticket/7858">Request #7858</a>).
-[cjh] Restore backwards compatibility in MIME::_rfc822Encode calls,
-      used in Kronolith and Whups FW3 calls (<a href="http://bugs.horde.org/ticket/7862">Bug #7862</a>).
 [cjh] Fix the SQL Share driver closing the global database connection
       improperly when using PostgreSQL (<a href="http://bugs.horde.org/ticket/7825">Bug #7825</a>).
 [jan] Add support for Mozilla Sunbirds snooze properties (<a href="http://bugs.horde.org/ticket/7470">Request #7470</a>).
@@ -254,6 +369,7 @@ v3.3.1
 [cjh] SECURITY: Add another check to the XSS filter.
 [jan] Add script to import preferences from SquirrelMail database.
 [cjh] Allow the password file Auth driver to require a specific group.
+[cjh] Use YYYY-MM-DDTHH:MM:SS for Alarm date queries (<a href="http://bugs.horde.org/ticket/7580">Bug #7580</a>).
 [jan] Add XPath wrapper to Horde_DOM library.
 [cjh] Don't use executeMultiple in the SQL Share driver when we might
       reset the connection in between queries (<a href="http://bugs.horde.org/ticket/7542">Bug #7542</a>).
@@ -319,7 +435,7 @@ v3.3-RC1
       instantiated by a listShares call.
 [mjr] Fix issue with hierarchical SQL share driver that caused any child shares
       to be orphaned when the parent share was moved in the hierarchy.
-[mjr] Fix issue with SQL share drivers that was causing permission checks to 
+[mjr] Fix issue with SQL share drivers that was causing permission checks to
       fail under certain conditions by no longer explicitly storing owner
       permissions in the Perms backend.
 [cjh] Fix overwriting a variable in the tableset_html VarRenderer
@@ -413,11 +529,6 @@ v3.2.1
 [mms] Allow Horde memcache driver to use UNIX sockets (<a href="http://bugs.horde.org/ticket/6848">Bug #6848</a>).
 [mjr] Various fixes for hierarchical SQL Share driver involving share names,
       better error checking and logging.
-[cjh] Fix order of checks in String::convertCharset (<a href="http://bugs.horde.org/ticket/6794">Bug #6794</a>).
-[mms] Fix parsing of addresses in headers when the RFC 2047-encoded personal
-      part of the address contains address list delimiters (<a href="http://bugs.horde.org/ticket/6747">Bug #6747</a>).
-[cjh] Fix generation of unique keys in configuration for machines too fast for
-      microtime() (mail@dunix-data.de, <a href="http://bugs.horde.org/ticket/6762">Bug #6762</a>).
 [gwr] Added group driver for Kolab.
 [gwr] Added IMAP based preferences driver for Kolab.
 [mms] Fix missing timestamp variable in Horde SQL cache driver
@@ -427,6 +538,11 @@ v3.2.1
 [mjr] Fix issue in Horde_Image that caused errors when performing certain image
       operations immediately after an image had been cropped when using the
       ImageMagick driver.
+[cjh] Fix order of checks in String::convertCharset (<a href="http://bugs.horde.org/ticket/6794">Bug #6794</a>).
+[mms] Fix parsing of addresses in headers when the RFC 2047-encoded personal
+      part of the address contains address list delimiters (<a href="http://bugs.horde.org/ticket/6747">Bug #6747</a>).
+[cjh] Fix generation of unique keys in configuration for machines too fast for
+      microtime() (mail@dunix-data.de, <a href="http://bugs.horde.org/ticket/6762">Bug #6762</a>).
 
 
 ----
