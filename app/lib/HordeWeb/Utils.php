@@ -93,7 +93,7 @@ class HordeWeb_Utils
 
     static public function breadcrumbs($controller, $params = array())
     {
-        $separator = '&nbsp;&nbsp;&ndash;&nbsp;&nbsp;';
+        $separator = '&nbsp;&nbsp;&raquo;&nbsp;&nbsp;';
         $view = $controller->getView();
         switch (get_class($controller)) {
         case 'HordeWeb_App_Controller':
