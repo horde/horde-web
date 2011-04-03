@@ -4,10 +4,12 @@ html, body, div, form, fieldset, legend, label
     margin: 0;
     padding: 0;
 }
+div.section div.document h2 a,
 a {
     color: #556aa1;
     text-decoration: none;
 }
+div.section div.document h2 a:hover,
 a:hover {
     text-decoration: underline;
 }
@@ -692,6 +694,8 @@ ul.download-list {
 }
 
 div.hordeauthor h2,
+div.section div.document h1,
+div.section div.document h2,
 div.section h3 {
     background: none;
     color: #797979;
@@ -699,6 +703,7 @@ div.section h3 {
     line-height: inherit;
     letter-spacing: -1px;
     font-weight: bold;
+    font-size: 117%;
     border-bottom: 2px dotted #afafaf;
     margin: 15px 0 7px 0;
 }
@@ -748,4 +753,9 @@ table.roadmap .planned {
 table.roadmap .cancelled {
     background-color: #c5c5c5;
     text-decoration: line-through;
+}
+
+div.mainareasplit ul.simple {
+    list-style-type: none;
+    margin-left: 0;
 }
