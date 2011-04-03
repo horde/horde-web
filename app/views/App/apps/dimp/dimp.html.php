@@ -1,8 +1,9 @@
-<p>DIMP is a project to create a version of <a href="../imp/">IMP</a>
+<p>DIMP is a project to create a version of
+<?php echo $this->linkTo('IMP', array('controller' => 'app', 'action' => 'app', 'app' => 'imp'))?> 
 utilizing AJAX-like technologies to allow a more dynamic user
 experience (thus DIMP... <strong>D</strong>ynamic <strong>IMP</strong>).</p>
 
-<p>As of <a href="/imp/roadmap/">IMP 5.0</a>, the DIMP display has been
+<p>As of <?php echo $this->linkTo('IMP 5.0', array('controller' => 'app', 'action' => 'app', 'app' => 'imp'))?>, the DIMP display has been
 fully incorporated into IMP. All support and development questions are
 handled through the IMP project.</p>
 
