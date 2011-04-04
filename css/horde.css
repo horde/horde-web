@@ -760,3 +760,24 @@ div.mainareasplit ul.simple {
     list-style-type: none;
     margin-left: 0;
 }
+.dimmed, .dimmed td {
+    color: #aaa;
+}
+.dimmed table.roadmap th, .dimmed table.roadmap .cancelled {
+    background-color: #fff;
+}
+.dimmed table.roadmap th, .dimmed table.roadmap td {
+    border-color: #aaa;
+}
+.dimmed table.roadmap .done {
+    background-color: #cfc;
+}
+.dimmed table.roadmap .progress {
+    background-color: #eea;
+}
+.dimmed table.roadmap .planned {
+    background-color: #fd9;
+}
+.dimmed table.roadmap .cancelled {
+    background-color: #d99;
+}

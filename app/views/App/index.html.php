@@ -122,12 +122,6 @@
             a single list. Tasks have due dates, completion times, and can be
             imported and exported in multiple formats.</p>
 
-            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'trean')) ?>">Trean</a></h3>
-            <p>Trean is a bookmarks manager for Horde, allowing you to store your
-            bookmarks in one place and access them from any browser. Bookmarks can
-            be grouped into categories which can be shared with arbitrary
-            users.</p>
-
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'turba')) ?>">Turba</a></h3>
             <p>Turba is the Horde address book / contact management program. It
             provides a generic frontend to searching and managing LDAP, SQL, IMSP,

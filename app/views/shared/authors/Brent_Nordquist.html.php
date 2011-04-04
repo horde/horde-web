@@ -1,5 +1,5 @@
-<p><b>Brent J. Nordquist</b> N0BJN</p>
-
+<div class="hordeauthor">
+<h2>Brent J. Nordquist N0BJN</h2>
 <ul>
 <li>Director of Server Systems at
     <a href="http://www.bethel.edu/">Bethel College and Seminary</a>,
@@ -11,3 +11,4 @@
 <li><a href="http://tinyurl.com/7sti">* Fast pipe * Always on * Get out of the way</a> - Tim Bray</li>
 <li><a href="http://www.nordist.net/contact.html">Contact information</a>.</li>
 </ul>
+</div>

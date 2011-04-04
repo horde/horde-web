@@ -1,38 +1,38 @@
-<h4>Ingo H3 (1.0)</h4>
+<h3>Ingo H3 (1.0)</h3>
 
 <table cellspacing="10">
   <tr valign="bottom">
-    <td align="center"><a href="rules.png">
-      <img src="rules_thumb.png" alt="Filters Screen" border="0" /></a><br />
+    <td align="center">
+      <?php echo HordeWeb_Utils::sslink('ingo', 'rules', true) ?><br />
       Filters Screen
     </td>
-    <td align="center"><a href="vacation.png">
-      <img src="vacation_thumb.png" alt="Vacation Screen" border="0" /></a><br />
+    <td align="center">
+      <?php echo HordeWeb_Utils::sslink('ingo', 'vacation', true) ?><br />
       Vacation Screen
     </td>
-    <td align="center"><a href="rule.png">
-      <img src="rule_thumb.png" alt="Rule Creation Screen" border="0" /></a><br />
+    <td align="center">
+      <?php echo HordeWeb_Utils::sslink('ingo', 'rule', true) ?><br />
       Rule Creation Screen
     </td>
   </tr>
   <tr valign="bottom">
-    <td align="center"><a href="blacklist.png">
-      <img src="blacklist_thumb.png" alt="Blacklist Screen" border="0" /></a><br />
+    <td align="center">
+      <?php echo HordeWeb_Utils::sslink('ingo', 'blacklist', true) ?><br />
       Blacklist Screen
     </td>
-    <td align="center"><a href="whitelist.png">
-      <img src="whitelist_thumb.png" alt="Whitelist Screen" border="0" /></a><br />
+    <td align="center">
+      <?php echo HordeWeb_Utils::sslink('ingo', 'whitelist', true) ?><br />
       Whitelist Screen
     </td>
     <td align="center">&nbsp;</td>
   </tr>
   <tr valign="bottom">
-    <td align="center"><a href="procmail.png">
-      <img src="procmail_thumb.png" alt="Procmail Script" border="0" /></a><br />
+    <td align="center">
+      <?php echo HordeWeb_Utils::sslink('ingo', 'procmail', true) ?><br />
       Procmail Script
     </td>
-    <td align="center"><a href="sieve.png">
-      <img src="sieve_thumb.png" alt="Sieve Script" border="0" /></a><br />
+    <td align="center">
+      <?php echo HordeWeb_Utils::sslink('ingo', 'sieve', true) ?><br />
       Sieve Script
     </td>
     <td align="center">&nbsp;</td>
