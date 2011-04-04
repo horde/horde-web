@@ -1,6 +1,7 @@
 <?php
 /**
- * Download controller class
+ * Screenshots controller for the (as yet non-existent) consolidated download
+ * page.
  *
  * Handles requests to the download page.
  *

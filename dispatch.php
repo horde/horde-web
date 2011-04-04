@@ -40,7 +40,10 @@ $mapper->connect(
 
 /* Contact */
 $mapper->connect(
-    $_root . '/contact/:action', array('controller' => 'contact', 'action' => 'index'));
+    'contact', $_root . '/contact/', array('controller' => 'home', 'action' => 'contact'));
+/* Mail */
+$mapper->connect(
+    'mail', $_root . '/mail', array('controller' => 'home', 'action' => 'mail'));
 
 $path = $request->getPath();
 if (($pos = strpos($path, '?')) !== false) {

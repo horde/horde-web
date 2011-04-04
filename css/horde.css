@@ -781,3 +781,14 @@ div.mainareasplit ul.simple {
 .dimmed table.roadmap .cancelled {
     background-color: #d99;
 }
+
+div.mail {
+    margin: 10px 0;
+    padding: 0;
+}
+.mail table {
+    margin-left: 10px;
+}
+.mail th {
+    text-align: left;
+}

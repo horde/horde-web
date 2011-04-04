@@ -22,6 +22,12 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         case 'index':
             $this->_index($response);
             break;
+        case 'contact':
+            $this->_contact($response);
+            break;
+        case 'mail':
+            $this->_mail($response);
+            break;
         default:
             $this->_notFound($response);
         }
@@ -72,6 +78,30 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         $layout->setView($view);
         $layout->setLayoutName('home');
         $response->setBody($layout->render('index'));
+    }
+
+    protected function _contact(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $view->page_title = 'The Horde Project::Contact Us';
+
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render('contactus'));
+
+    }
+
+    protected function _mail(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $view->page_title = 'The Horde Project::Mailing Lists';
+        $view->lists = HordeWeb_Utils::getLists();
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render('mail'));
+
     }
 
 }

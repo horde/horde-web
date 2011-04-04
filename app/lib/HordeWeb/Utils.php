@@ -21,7 +21,7 @@ class HordeWeb_Utils
      */
     static public function getStableApps()
     {
-        require$GLOBALS['fs_base'] . '/config/versions.php';
+        require $GLOBALS['fs_base'] . '/config/versions.php';
         return $horde_apps_stable;
     }
 
@@ -133,6 +133,12 @@ class HordeWeb_Utils
         } else {
             echo '<img align="middle" src="'. $GLOBALS['host_base'] . '/images/blank.gif" border="0" alt="" width="18" height="12" />&nbsp;&nbsp;';
         }
+    }
+
+    static public function getLists()
+    {
+        require $GLOBALS['fs_base'] . '/config/lists.php';
+        return $lists;
     }
 
 }
