@@ -61,4 +61,12 @@ $quotes = array(
         'quote' => '"Horde Groupware is probably not the first collaboration software that comes to mind when thinking about deploying a new system. Perhaps it should. Contrary to most of the popular collaboration software on the market such as Open-Xchange, Scalix and Zimbra, the guys behind Horde understand how to write efficient code and use appropriate tools."',
         'author' => 'Viktor Petersson, Email Service Guide'
     ),
+    array(
+        'quote' => '"Horde 3 beats the competitors already, and Horde 4 looks to beat them hands down."',
+        'author' => 'Arthur P. Meiners'
+    ),
+    array(
+        'quote' => '"None of the other groupware solutions seem to offer as broad a level of synchronisation capabilities as Horde, unless you go for Euro 10.00 to 30.00/month or year per user commercial plugins."',
+        'author' => 'Arthur P. Meiners'
+    ),
 );
