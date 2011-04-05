@@ -38,7 +38,8 @@ class HordeWeb_Utils
 
     static public function getDevApps()
     {
-        return $GLOBALS['horde_apps_dev'];
+        require $GLOBALS['fs_base'] .'/config/versions.php';
+        return $horde_apps_dev;
     }
 
     static public function app_download_link($key, $elt, $graphic = false)

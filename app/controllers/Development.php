@@ -70,7 +70,9 @@ EOT;
             $css->addStylesheet($sh_js_fs . 'shThemeEclipse.css', $sh_js_uri . 'shThemeEclipse.css');
             // fall through
         case 'contribute':
-        //case 'docs':
+        case 'documentation':
+        case 'modules':
+        case 'versions':
             $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
             $template = $this->_matchDict->action;
             break;
@@ -94,4 +96,12 @@ EOT;
             array($GLOBALS['fs_base'] . '/app/views/Development'));
     }
 
+    public function cvs_and_ver($module)
+    {
+        $horde_apps_stable = HordeWeb_Utils::getStableApps();
+        $horde_apps_dev = HordeWeb_Utils::getDevApps();
+        return '<td><a href="http://cvs.horde.org/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
+            . '</td><td>' . (isset($horde_apps_stable[$module]) ? htmlspecialchars($horde_apps_stable[$module]['ver']) : (isset($horde_apps_dev[$module]) ? htmlspecialchars($horde_apps_dev[$module]['ver']) : '&nbsp;'))
+            . '</td>';
+    }
 }
