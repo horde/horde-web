@@ -20,7 +20,7 @@
             <li>Active development. Horde benefits from a large and active community of developers and users, and continues to add features nearly every day.</li>
         </ul>
 
-        <h3>Why Choose Horde LL?</h3>
+        <h3>Why Choose Horde LLC?</h3>
         <p>Horde LLC was founded by the people that have spent the past 10 years creating the Horde Groupware Suite.  We are experts in our craft, and have a track record of helping some of the largest Horde deployments in the world (100,000 users to 5,000,000 users in some cases!) deploy Horde successfully.  Who better to ask than the experts?</p>
 
         <h3>Contact us for a free assessment of your project</h3>
