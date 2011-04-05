@@ -1,5 +1,5 @@
 
-<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshot'))?>">
+<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
  <img src="<?php echo $GLOBALS['host_base'] ?>/images/screenshots/groupware/portal_1_1-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
  </a>
 <div class="sectionintro"><p>
@@ -66,7 +66,7 @@ suite including webmail support.</p>
 </ul>
 
 <p>Calendar:</p>
-<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshot'))?>">
+<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
  <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/kronolith_1_1-thumb.jpg" align="right" hspace="13" alt="Calendar" border="0">
 </a>
 <ul>
@@ -87,7 +87,7 @@ suite including webmail support.</p>
 </ul>
 
 <p>Contacts:</p>
-<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshot'))?>">
+<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
 <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/turba_1_1-thumb.jpg" align="right" hspace="13" alt="Contacts" border="0"></a>
 <ul>
  <li>Distribution lists/email groups, also across address books</li>
@@ -100,7 +100,7 @@ suite including webmail support.</p>
 </ul>
 
 <p>Tasks:</p>
-<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshot'))?>">
+<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
 <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/nag_1_1-thumb.jpg" align="right" hspace="13" alt="Tasks" border="0"></a>
 <ul>
  <li>Priorities and due dates</li>
@@ -114,7 +114,7 @@ suite including webmail support.</p>
 </ul>
 
 <p>Notes:</p>
-<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshot'))?>">
+<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
 <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/mnemo_1_1-thumb.jpg" align="right" hspace="13" alt="Notes" border="0"></a>
 <ul>
  <li>Fulltext search</li>

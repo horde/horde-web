@@ -1,4 +1,4 @@
-<p><div style="float:left;margin:3px;"><a title="Image View" href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ansel', 'action' => 'screenshot')) ?>">
+<p><div style="float:left;margin:3px;"><a title="Image View" href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ansel', 'action' => 'screenshots')) ?>">
 <img alt="Image View" src="<?php echo $GLOBALS['host_base']?>/images/screenshots/ansel/imageview_thumb.jpg" /></a></div>
 
 <p>Ansel is a full featured photo management application. With it, you can create
