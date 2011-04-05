@@ -12,7 +12,7 @@
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'imp')) ?>">IMP</a>,
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ingo')) ?>">Ingo</a>,
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'kronolith')) ?>">Kronolith</a>,
- <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'turba')) ?>">Turba</a>,\
+ <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'turba')) ?>">Turba</a>,
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'nag')) ?>">Nag</a>
  and <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'mnemo')) ?>">Mnemo</a>.
 </p>
