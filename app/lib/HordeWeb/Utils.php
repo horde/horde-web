@@ -64,7 +64,6 @@ class HordeWeb_Utils
     static public function app_patches_url($key, $elt)
     {
         return 'ftp://ftp.horde.org/pub/' .
-            '/' .
             rtrim(isset($elt['dir']) ? $elt['dir'] : $key, ' /') .
             '/patches/';
     }
