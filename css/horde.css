@@ -792,3 +792,15 @@ div.mail {
 .mail th {
     text-align: left;
 }
+
+.exciter {
+    font-style: italic;
+}
+
+h3.exciter {
+    font-weight: bold;
+}
+
+p.exciter {
+    font-size: 1.2em;
+}
