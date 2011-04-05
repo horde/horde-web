@@ -10,7 +10,7 @@
         <h3>Why Horde Groupware?</h3>
         <p>Horde is the most flexible groupware on the planet, and that makes it the perfect platform on which to build your business productivity software:</p>
         <ul>
-            <li>Horde connects to (and officially supports) more backends (SQL, LDAP, IMAP, Sieve, SMTP, caching systems, etc) than any other groupware system.  This means you can continue to use your existing userbase and your users do not have to remember any additional passwords.</li>
+            <li>Horde connects to (and officially supports) more backends (all the leading SQL, LDAP, IMAP, Sieve, SMTP, cache platforms available today)  than any other open source groupware system.  This means you can continue to use your existing userbase and your users do not have to remember any additional passwords.</li>
             <li>Data entered in Horde may be updated or consumed via a wide range of front-end protocols (HTTP/HTML, DAV, SyncML, ActiveSync, iCalendar, more).  Why let your data be siloed?  Horde gets presents your information where you need it.</li>
             <li>Template and CSS-based design makes customization easy.  There are nearly unlimited numbers of ways to customize and configure Horde to fit almost any need.</li>
             <li>Maturity. Horde's source code goes back over 10 years and benefits from years of engineering, bugfixes, security reports testing and user feedback.</li>
