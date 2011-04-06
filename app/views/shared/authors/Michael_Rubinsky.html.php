@@ -7,13 +7,13 @@
           Pharmacy and Science</a> (since renamed to University of the Sciences
           in Philadelphia).</li>
       <li>In my spare time I enjoy
-          <a href="http://rubinskyfamily.com/photos/gallery.php?gallery=3279">
+          <a href="http://rubinskyfamily.com/galleries/3279">
           flying small aircraft</a>, <a href="http://rubinskygallery.com">black
           and white photography</a> and spending time with my
           <a href="http://rubinskyfamily.com">family</a></li>
       <li>Website: <a href="http://theupstairsroom.com">
           http://theupstairsroom.com</a>.</li>
-      <li>Personal: <a href="http://rubinskyfamily.com/mike">
+      <li>Personal: <a href="http://rubinskyfamily.com/">
           http://rubinskyfamily.com</a>.</li>
   </ul>
 </div>
