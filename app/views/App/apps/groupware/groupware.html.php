@@ -1,9 +1,7 @@
-
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
- <img src="<?php echo $GLOBALS['host_base'] ?>/images/screenshots/groupware/portal_1_1-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
- </a>
-<div class="sectionintro"><p>
- Horde Groupware is a free, enterprise ready, browser based collaboration
+<img src="<?php echo $GLOBALS['host_base'] ?>/images/screenshots/groupware/portal_1_1-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
+</a>
+<p class="exciter">Horde Groupware is a free, enterprise ready, browser based collaboration
  suite. Users can manage and share calendars, contacts, tasks and notes with
  the standards compliant <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">
  components</a> from the Horde Project. Horde Groupware bundles the separately
@@ -15,7 +13,6 @@
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'mnemo')) ?>">
  Mnemo</a>.
 </p>
-</div>
 <p>
  It can be extended with any of the released
  <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">Horde

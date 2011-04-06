@@ -4,14 +4,12 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Documentation' => 'documentation'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
-        <div class="sectionintro">
-          <p>There are a number of different versions of Horde applications and
-          the Horde Framework that have been made available at one time or
-          another. Here we'll try and keep track of which versions of which
-          applications work with each other and with which versions of
-          Horde. We'll list versions of Horde, and then the application
-          versions which work with them.</p>
-        </div>
+        <p class="exciter">There are a number of different versions of Horde
+        applications and the Horde Framework that have been made available at
+        one time or another. Here we'll try and keep track of which versions of
+        which applications work with each other and with which versions of
+        Horde. We'll list versions of Horde, and then the application
+        versions which work with them.</p>
 
         <h3>Horde 4.x</h3>
 

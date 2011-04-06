@@ -4,27 +4,26 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Git' => 'git'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
-        <div class="sectionintro">
-          <p>All new development work should be done against current git code.
-          The master branch is considered the mainline, authoritative branch
-          that will eventually become the next release.</p>
 
-            <p>You can use the Horde Git repository as an anonymous user or as a
-            developer.</p>
+          <p class="exciter">All new development work should be done against
+          current git code. The master branch is considered the mainline,
+          authoritative branch that will eventually become the next release.</p>
 
-            <p>You will need a Git client, if you don't already have one.
-            Information on Git can be found at <a href="http://git-scm.com/">
-            http://git-scm.com/</a>.</p>
+          <p>You can use the Horde Git repository as an anonymous user or as a
+          developer.</p>
 
-            <p>These command lines should be the bare-bones needed to get you
-            started with Horde and Git; this is not a Git tutorial, however. The
-            standard Git documentation is available <a
-            href="http://www.kernel.org/pub/software/scm/git/docs/">here</a>.
-            Additional tips and useful links can be found at <a
-            href="http://www.gitready.com/">git ready</a> and
-            <a href="http://andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
-            25 Tips for Intermediate Git Users</a>.</p>
-        </div>
+          <p>You will need a Git client, if you don't already have one.
+          Information on Git can be found at <a href="http://git-scm.com/">
+          http://git-scm.com/</a>.</p>
+
+          <p>These command lines should be the bare-bones needed to get you
+          started with Horde and Git; this is not a Git tutorial, however. The
+          standard Git documentation is available <a
+          href="http://www.kernel.org/pub/software/scm/git/docs/">here</a>.
+          Additional tips and useful links can be found at <a
+          href="http://www.gitready.com/">git ready</a> and
+          <a href="http://andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
+          25 Tips for Intermediate Git Users</a>.</p>
 
         <h3>Available Repositories</h3>
         <ul>

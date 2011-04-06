@@ -3,10 +3,9 @@
     <div class="mainareasplit">
       <h2><span></span>Contact Info</h2>
       <div class="section">
-        <div class="sectionintro">
-        <p>The best way to get in touch with The Horde Project and it's
+
+        <p class="exciter">The best way to get in touch with The Horde Project and it's
         community depends on your needs. We have the following options:</p>
-        </div>
 
         <h3>Email/IRC</h3>
         <p> We have numerous
@@ -21,7 +20,7 @@
         concern. Please see our security reporting procedures at
         <a href="http://wiki.horde.org/SecurityManagement">http://wiki.horde.org/SecurityManagement</a>
         </p>
-        
+
         <h3>Consulting Services</h3>
         <p>If you are looking to contact us about possible consulting servcies
         or other custom work, you may contact us at

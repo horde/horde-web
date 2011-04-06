@@ -4,10 +4,8 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Documentation' => 'documentation'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
-        <div class="sectionintro">
-          <p>The following documentation is available regarding the Horde
-          project:</p>
-        </div>
+         <p class="exciter">The following documentation is available regarding
+         the Horde project:</p>
 
         <h3>Applications</h3>
 

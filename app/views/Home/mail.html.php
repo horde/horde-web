@@ -3,8 +3,6 @@
     <div class="mainareasplit">
       <h2><span></span>Horde Mailing Lists</h2>
       <div class="section">
-        <div class="sectionintro"></div>
-
         <!-- SiteSearch Google -->
         <table align="right" cellspacing="0" cellpadding="0" style="margin-left:10px"><tr><td>
           <div class="note">

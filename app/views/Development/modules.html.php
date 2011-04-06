@@ -4,13 +4,11 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Documentation' => 'documentation'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
-        <div class="sectionintro">
-          <p>The following modules are in
-          the <a href="http://cvs.horde.org/">Horde CVS Repository</a>, with
-          the listed production level code tags available. If no tags are
-          listed, then there has not yet been a stable release of that
-          module.</p>
-        </div>
+        <p class="exciter">The following modules are in
+        the <a href="http://cvs.horde.org/">Horde CVS Repository</a>, with
+        the listed production level code tags available. If no tags are
+        listed, then there has not yet been a stable release of that
+        module.</p>
 
         <p><b>For the most current code you MUST use the <?php echo
         $this->linkTo('Git', array('controller' => 'development', 'action' =>

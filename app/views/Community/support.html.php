@@ -4,15 +4,15 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Support' => 'support'))?></h2>
         <?php echo $this->render('communitynav');?>
         <div class="section">
-         <div class="sectionintro">
-            <p>Just like the development of the Horde Project is a community and
-            volunteer effort, so is the support. Effort is made to provide the
-            right tools to efficiently help you with the resources available.
-            Please use these tools fully and intelligently.</p>
-            <p>If you require support that is unable to be obtained via the
-            community channels, please check out our professional support
-            options.</p>
-         </div>
+            <p class="exciter">Just like the development of the Horde Project
+            is a community and volunteer effort, so is the support. Effort is
+            made to provide the right tools to efficiently help you with the
+            resources available. Please use these tools fully and intelligently.</p>
+
+            <p class="exciter">If you require support that is unable to be
+            obtained via the community channels, please check out our
+            professional support options.</p>
+
             <h2><span></span>Resources</h2>
             <div class="warning"><p>Please be careful not to have unreasonable expectations:
             you cannot demand your questions to be answered, bugs to be fixed or features
@@ -26,7 +26,6 @@
             responses.</p>
 
             <h3>Mailing Lists and IRC</h3>
-
             <p>You can address any support issues to one of the <a href="mail/">
             mailing lists</a>. You can also ask for help on IRC</a>.</p>
 

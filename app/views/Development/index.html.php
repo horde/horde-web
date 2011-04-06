@@ -4,12 +4,10 @@
       <h2><span></span>Development</h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
-        <div class="sectionintro">
-          <p>See how to get involved with Horde development. Whether you
-          are developing an in-house custom application, or are interested in
-          contributing to Horde find out how to get started, and where to find
-          help.</p>
-        </div>
+          <p class="exciter">See how to get involved with Horde development.
+          Whether you are developing an in-house custom application, or are
+          interested in contributing to Horde - find out how to get started, and
+          where to find help.</p>
 
           <h3>Contribute</h3>
           <p>Want to get involved? The Horde Project is open to anyone interested
