@@ -71,6 +71,7 @@ EOT;
             // fall through
         case 'contribute':
         case 'documentation':
+        case 'licenses':
         case 'modules':
         case 'versions':
             $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
