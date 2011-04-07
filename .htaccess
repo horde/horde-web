@@ -80,7 +80,6 @@ Redirect permanent /jeta/about /apps/jeta
 Redirect permanent /jeta /apps/jeta
 Redirect permanent /klutz /apps/klutz
 # Screenshots don't work yet.
-RedirectMatch permanent /kronolith/screenshots.* /apps/kronolith
 Redirect permanent /kronolith/vote /apps/kronolith
 Redirect permanent /kronolith /apps/kronolith
 Redirect permanent /mimp/vote /apps/mimp
