@@ -1,2 +1,0 @@
-<ul class="communitynav">
-</ul>
