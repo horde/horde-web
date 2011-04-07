@@ -21,8 +21,6 @@
             ?>
          </ul>
          <div></div>
-         <h2>Stable Releases</h3>
-         <div></div>
        </div>
          <?php echo $this->render('sponsors');?>
     </div>
