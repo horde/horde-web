@@ -51,27 +51,30 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         $view->page_title = 'The Horde Project';
         $view->maxHordeItems = 5;
         $view->maxPlanetItems = 5;
+        $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
 
         // Get the planet feed.
-        $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
-        if (!$view->planet = $cache->get('planet', 600)) {
+        if ($planet = $cache->get('planet', 600)) {
+            $view->planet = unserialize($planet);
+        } else {
             try {
                 $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
             } catch (Exception $e) {
                 $view->planet = null;
             }
-            $cache->set('planet', $view->planet);
+            $cache->set('planet', serialize($view->planet));
         }
 
         // Get the complete Horde feed (no tags)
-        $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
-        if (!$view->hordefeed = $cache->get('hordefeed', 600)) {
+        if ($hordefeed = $cache->get('hordefeed', 600)) {
+            $view->hordefeed = unserialize($hordefeed);
+        } else {
             try {
                 $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url']);
             } catch (Exception $e) {
                 $view->hordefeed = null;
             }
-            $cache->set('hordefeed', $view->hordefeed);
+            $cache->set('hordefeed', serialize($view->hordefeed));
         }
 
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
