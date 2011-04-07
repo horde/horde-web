@@ -8,4 +8,5 @@
                                 <li><a href=""><img src="http://www.horde.org/graphics/logos/verendus.jpg" height="31"/></a></li>
                             </ul>
                             <div class="clear"></div>
+                            <div class="thanks"><?php echo $this->linkTo('Thanks', array('controller' => 'home', 'action' => 'thanks')); ?></div>
                         </div>

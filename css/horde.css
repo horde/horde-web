@@ -718,11 +718,8 @@ div.horderelease p {
     margin-left: 20px;
 }
 
-div.screenshots h3 {
-    font-size: 21px;
-}
 div.screenshots table td {
-    padding: 10px;
+    padding: 5px;
 }
 
 table.roadmap {
@@ -787,4 +784,10 @@ div.mail {
 }
 .mail th {
     text-align: left;
+}
+
+.thanks
+{
+    color: #556AA1;
+    font-weight: bold;
 }

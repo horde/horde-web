@@ -1,18 +1,16 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>This is not the page you were looking for
-      <small>[error 404]</small></h2>
+      <h2><span></span>GONE!
+      <small>[error 410]</small></h2>
 
-      <p>This is one of those annoying Error 404 pages, which basically means
-      that one of the following things has happened:</p>
+      <p>Oh No! You seem to be looking for a page that has been removed from
+      our website. Probably because of one of the following:</p>
       <ul>
-        <li>You've followed a link from a site which is no longer working
-        (maybe they typed the link wrong or maybe we moved the page from the
-        place they originally linked to).</li>
-        <li>You've slightly mis-typed the address.</li>
-        <li>Some other bizarre scenario that involves a page or file disappearing
-        that we couldn't think of.</li>
+        <li>The page contained very outdated information and no longer applied.</li>
+        <li>You've followed an outdated link form another website.</li>
+        <li>Some other bizarre scenario that involves a warping of the
+        space-time continuum. Don't panic.</li>
       </ul>
       <p>Basically, the page or file isn't here. Here are some of our more
       interesting links. Hopefully what you seek may be found there.</p>

@@ -9,22 +9,24 @@
     <?php echo HordeWeb_Utils::sslink('ansel', '2/mobilesubgalleries') ?><br />
         Sub-Galleries
     </td>
+</tr>
+<tr>
     <td align="center">
     <?php echo HordeWeb_Utils::sslink('ansel', '2/mobilegallerylist') ?><br />
     Gallery View
     </td>
-</tr>
-<tr>
     <td align="center">
     <?php echo HordeWeb_Utils::sslink('ansel', '2/mobileimageview1') ?><br />
     Image View
     </td>
-    <td align="center">
+</tr>
+<tr>
+   <td align="center">
     <?php echo HordeWeb_Utils::sslink('ansel', '2/mobileimageview2') ?><br />
     Image View
     </td>
     <td align="center">
-    </td>
+   </td>
 </tr>
 </table>
 
@@ -39,27 +41,29 @@
     <?php echo HordeWeb_Utils::sslink('ansel', '2/stacks') ?><br />
         Gallery Stacks (Shadowed Thumbnails)
     </td>
+</tr>
+<tr>
     <td align="center">
         <?php echo HordeWeb_Utils::sslink('ansel', '2/polaroidstacks') ?><br />
         Gallery Stacks (Polaroid Thumbnails)
     </td>
-</tr>
-<tr>
     <td align="center">
     <?php echo HordeWeb_Utils::sslink('ansel', '2/date') ?><br />
     Browse by Dates
     </td>
-    <td align="center">
+</tr>
+<tr>
+ <td align="center">
       <?php echo HordeWeb_Utils::sslink('ansel', '2/gallerygeo') ?><br />
       Gallery View with Geolocation
     </td>
     <td align="center">
       <?php echo HordeWeb_Utils::sslink('ansel', '2/imageview') ?><br />
       Image View
-    </td>
+ </td>
 </tr>
 <tr>
-    <td align="center">
+  <td align="center">
       <?php echo HordeWeb_Utils::sslink('ansel', '2/lightbox')?><br />
       Lightbox View
     </td>
@@ -67,10 +71,13 @@
       <?php echo HordeWeb_Utils::sslink('ansel', '2/externalwebsite')?><br />
       Ansel Gallery View Driving External Website
     </td>
+</tr>
+<tr>
     <td align="center">
       <?php echo HordeWeb_Utils::sslink('ansel', '2/uploader')?><br />
       New Uploader
-    </td>
+  </td>
+</tr>
 </table>
 <h3>Ansel H3 (1.0)</h3>
 <table cellspacing="10">

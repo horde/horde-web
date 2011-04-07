@@ -29,6 +29,7 @@ allow from all
 # /vacation
 
 RedirectMatch permanent (.*)/index.php $1
+Redirect permanent /thanks.php /thanks
 Redirect permanent /documentation.php /development/documentation
 Redirect permanent /irc.php /community/support
 Redirect permanent /localization.php /community/localization
@@ -38,9 +39,8 @@ Redirect permanent /about /community
 RedirectMatch permanent /consulting.* /services
 # This doesn't work, no idea why:
 RedirectMatch permanent /download/app/(index\.php)\?app=(.*) /download/$2
-# Still missing:
 Redirect permanent /mail /community/mail
-Redirect permanent /pear /
+Redirect permanent /pear http://pear.horde.org
 Redirect permanent /source/contribute.php /development/contribute
 Redirect permanent /source/cvs.php /development/cvs
 Redirect permanent /source/git.php /development/git
@@ -81,7 +81,6 @@ Redirect permanent /jeta/about /apps/jeta
 Redirect permanent /jeta /apps/jeta
 Redirect permanent /klutz /apps/klutz
 # Screenshots don't work yet.
-RedirectMatch permanent /kronolith/screenshots.* /apps/kronolith
 Redirect permanent /kronolith/vote /apps/kronolith
 Redirect permanent /kronolith /apps/kronolith
 Redirect permanent /mimp/vote /apps/mimp

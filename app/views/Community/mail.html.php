@@ -1,10 +1,9 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>Horde Mailing Lists</h2>
-      <div class="section">
-        <div class="sectionintro"></div>
-
+     <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Mailing Lists' => 'mail'))?></h2>
+     <?php echo $this->render('communitynav'); ?>
+     <div class="section">
         <!-- SiteSearch Google -->
         <table align="right" cellspacing="0" cellpadding="0" style="margin-left:10px"><tr><td>
           <div class="note">
