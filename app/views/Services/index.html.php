@@ -5,9 +5,9 @@
         <?php echo $this->render('servicesnav');?>
         <div class="section">
 
-            <h3 class="exciter">More than just software</h3>
+            <h3>More than just software</h3>
 
-            <p class="exciter">Our team of trusted professionals helps you
+            <p>Our team of trusted professionals helps you
             build large installations or custom applications.</p>
 
             <h3>Why Horde Groupware?</h3>
