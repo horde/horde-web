@@ -506,13 +506,17 @@ div.footer .contact-info dd {
 }
 
 
-div.slide-Everywhere {
-    background:url(../images/iphones.png) no-repeat 30px;
-}
-
 div.sliderview {
     width:900px;
     height:310px;
+}
+
+div.slide-Everywhere {
+    background:url(../images/iphones.png) no-repeat 30px;
+}
+div.slide-CCC {
+    background:url(../images/groupware.png) no-repeat 30px 22px;
+    height: 320px;
 }
 
 div.sliderview h2 {
