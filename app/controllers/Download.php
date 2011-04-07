@@ -45,7 +45,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
     protected function _index(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::Downloads';
+        $view->page_title = 'Downloads - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -55,7 +55,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
     protected function _app(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::Downloads';
+        $view->page_title = 'Downloads - The Horde Project';
         $horde_apps_stable = $view->stable;
         $horde_apps_dev = HordeWeb_Utils::getDevApps();
         $app = $this->_matchDict->app;

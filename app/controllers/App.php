@@ -63,7 +63,10 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         // @TODO: Look this up in some kind of config/lookup array.
-        $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->app);
+        $app = $this->_matchDict->app == 'imp'
+            ? Horde_String::upper($this->_matchDict->app)
+            : Horde_String::ucfirst($this->_matchDict->app);
+        $view->page_title = $app . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -77,7 +80,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _app(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->app);
+        $view->page_title = ucfirst($this->_matchDict->app) . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $template = 'app';
         // Do we know about this app?
@@ -104,7 +107,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->addTemplatePath(array($GLOBALS['fs_base'] . '/app/views/shared/authors'));
-        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Authors';
+        $view->page_title = 'Authors - ' . ucfirst($view->appname) . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -114,7 +117,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _roadmap(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Roadmap';
+        $view->page_title = 'Roadmap - ' . ucfirst($view->appname) . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -124,7 +127,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _docs(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Docs';
+        $view->page_title = 'Documentation - ' . ucfirst($view->appname) . ' - The Horde Project';
         Horde::startBuffer();
         $file = Horde_Util::getFormData('f', 'docs.html');
         include $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs/' . $file;
@@ -151,7 +154,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
              "imageBlank": "' . $GLOBALS['host_base'] . '/images/lightbox-blank.gif"});})';
         Horde::addInlineScript($js);
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::' . ucfirst($view->appname) . '::Screenshots';
+        $view->page_title = 'Screenshots - ' . ucfirst($view->appname) . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');

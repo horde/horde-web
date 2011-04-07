@@ -83,7 +83,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     protected function _contact(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::Contact Us';
+        $view->page_title = 'Contact Us - The Horde Project';
 
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
@@ -95,7 +95,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
     protected function _mail(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'The Horde Project::Mailing Lists';
+        $view->page_title = 'Mailing Lists - The Horde Project';
         $view->lists = HordeWeb_Utils::getLists();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);

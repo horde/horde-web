@@ -21,7 +21,7 @@ class HordeWeb_Services_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         switch ($this->_matchDict->action) {
         case 'index':
-            $view->page_title = 'The Horde Project::Services';
+            $view->page_title = 'Horde, LLC';
             $template = 'index';
             break;
         default:

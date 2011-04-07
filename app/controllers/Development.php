@@ -21,7 +21,7 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         switch ($this->_matchDict->action) {
         case 'index':
-            $view->page_title = 'The Horde Project::Development';
+            $view->page_title = 'Development - The Horde Project';
             $template = 'index';
             break;
         case 'git':
@@ -74,7 +74,7 @@ EOT;
         case 'licenses':
         case 'modules':
         case 'versions':
-            $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
+            $view->page_title = ucfirst($this->_matchDict->action) . ' - The Horde Project';
             $template = $this->_matchDict->action;
             break;
 

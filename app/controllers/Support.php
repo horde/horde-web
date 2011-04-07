@@ -21,7 +21,7 @@ class HordeWeb_Support_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         switch ($this->_matchDict->action) {
         case 'index':
-            $view->page_title = 'The Horde Project::Support';
+            $view->page_title = 'Support - The Horde Project';
             $template = 'index';
             break;
         default:

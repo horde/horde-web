@@ -21,19 +21,19 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         switch ($this->_matchDict->action) {
         case 'index':
-            $view->page_title = 'The Horde Project::Community';
+            $view->page_title = 'Community - The Horde Project';
             $template = 'index';
             break;
         case 'team':
             $view->addTemplatePath($GLOBALS['fs_base'] . '/app/views/shared/authors');
-            $view->page_title = 'The Horde Project::Team';
+            $view->page_title = 'Team - The Horde Project';
             $template = 'team';
             break;
         case 'localization':
         case 'support':
         case 'documentation':
         case 'licenses':
-            $view->page_title = 'The Horde Project::' . ucfirst($this->_matchDict->action);
+            $view->page_title = ucfirst($this->_matchDict->action) . ' - The Horde Project';
             $template = $this->_matchDict->action;
             break;
         default:
