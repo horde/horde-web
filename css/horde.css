@@ -520,7 +520,7 @@ div.footer .section ul a {
 
 div.sliderview {
     width:900px;
-    height:310px;
+    height: 320px;
 }
 
 div.slide-horde4 {
@@ -529,8 +529,7 @@ div.slide-everywhere {
     background:url(../images/iphones.png) no-repeat 30px;
 }
 div.slide-ccc {
-    background:url(../images/groupware.png) no-repeat 30px 22px;
-    height: 320px;
+    background:url(../images/groupware.png) no-repeat 30px 15px;
 }
 div.slide-oss {
     background:url(../images/open_source.png) no-repeat 60px 20px;
