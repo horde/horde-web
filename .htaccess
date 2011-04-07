@@ -39,8 +39,7 @@ RedirectMatch permanent /consulting.* /services
 # This doesn't work, no idea why:
 RedirectMatch permanent /download/app/(index\.php)\?app=(.*) /download/$2
 Redirect permanent /mail /community/mail
-# Still missing:
-Redirect permanent /pear /
+Redirect permanent /pear http://pear.horde.org
 Redirect permanent /source/contribute.php /development/contribute
 Redirect permanent /source/cvs.php /development/cvs
 Redirect permanent /source/git.php /development/git
