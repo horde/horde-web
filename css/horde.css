@@ -392,16 +392,23 @@ div.planethorde ul li p.author {
     color:#9f9f9f;
 }
 
-div.footer, div.exciter {
+div.footer {
     background-color: #1c1d21;
     color:#9ea3b0;
     line-height:20px;
     padding:15px;
 }
-div.exciter {
-    color: #fff;
-    line-height: inherit;
+
+
+div.exciter, div.exciter h3 {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.3em;
+    margin-bottom: 10px;
 }
+
+
 div.footer .section {
     background: url(../images/bg-section.gif) repeat-y 1px 0;
     width:870px;
@@ -477,7 +484,7 @@ div.footer .contact-info dd {
     padding-bottom: 10px;
 }
 
-div.footer h3, div.exciter h3 {
+div.footer h3 {
     color: #FFFFFF;
     font-size: 14px;
     line-height: 20px;
