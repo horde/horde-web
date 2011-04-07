@@ -63,7 +63,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             exit;
         }
         $view->appname = $app;
-        $app_info = $stableapp = $stabledate = $devapp = $deprapp = $app_list = array();
+        $app_info = $h4app = $h4date = $stableapp = $stabledate = $devapp = $deprapp = $app_list = array();
         if ($app != 'groupware' && $app != 'webmail') {
             $app_list[] = 'horde';
         }
@@ -82,6 +82,14 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             $stableapp[] = '<a href="' . htmlspecialchars(HordeWeb_Utils::app_patches_url($val, $horde_apps_stable[$app])) . '">Patches for Current Stable Release</a>';
         } else {
             $stableapp[] = 'No current stable release';
+        }
+
+        $h4apps = $view->h4Stable;
+        if (!empty($h4apps[$app])) {
+            foreach ($app_list as $val) {
+                $h4app[] = HordeWeb_Utils::app_download_link($val, $h4apps[$val], false, $this);
+                $h4date[$val] = strtotime($h4apps[$val]['date']);
+            }
         }
 
         if (isset($horde_apps_dev[$app]) &&
@@ -113,12 +121,8 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
         if (empty($app_info)) {
             $app_info['name'] = ucfirst($app);
         }
-        $h4apps = $view->h4Stable;
-        if (!empty($h4apps[$app])) {
-            $url = new Horde_Url('http://pear.horde.org');
-            $view->h4app = $url->link() . $view->h4Stable[$app]['name'] . ' ' . $view->h4Stable[$app]['version'] . '</a>';
-        }
 
+        $view->h4app = $h4app;
         $view->stableapp = $stableapp;
         $view->stabledate = $stabledate;
         $view->devapp = $devapp;

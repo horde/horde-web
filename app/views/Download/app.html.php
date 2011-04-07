@@ -4,12 +4,17 @@
         <h2><span></span>Download <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => $this->appname)) ?>"><?php echo in_array($this->appname, array('imp', 'mimp', 'dimp')) ? Horde_String::upper($this->appname) : Horde_String::ucfirst($this->appname)?></a></h2>
         <div class="section">
             <h3>Current Horde 4 Stable Release</h3>
-            <?php if ($this->h4app):?>
+            <?php if ($this->h4app): ?>
+            <ul>
+            <?php foreach ($this->h4app as $val): ?>
+                <li><?php echo $val ?></li>
+            <?php endforeach; ?>
+            </ul>
             <p>Horde 4 and all Horde 4 applications now utilize a PEAR based
             installation method. You can install all Horde 4 applications and
             libraries by following the directions in the <a href="<?php echo
             $this->urlWriter->urlFor('app', array('app' => $this->appname,
-            'action' => 'docs')) ?>?f=INSTALL.html">documentation</a>.  You may
+            'action' => 'docs', 'f' => 'INSTALL.html')) ?>">documentation</a>.  You may
             also download the PEAR tarball from
             our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
             <?php else: ?>

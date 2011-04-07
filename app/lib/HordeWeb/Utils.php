@@ -42,20 +42,21 @@ class HordeWeb_Utils
         return $horde_apps_dev;
     }
 
-    static public function app_download_link($key, $elt, $graphic = false)
+    static public function app_download_link($key, $elt, $graphic = false, $controller = null)
     {
         $text = $elt['name'] . ' ' . $elt['ver'];
         if ($graphic) {
             $text = '<img class="download" src="' . $GLOBALS['host_base'] . '/images/download.png" alt="' . $text . '" />';
         }
 
-        return '<a href="' . self::app_download_url($key, $elt) . '">' . $text . '</a> (' . $elt['date'] . ')';
+        return '<a href="' . self::app_download_url($key, $elt, $controller) . '">' . $text . '</a> (' . $elt['date'] . ')';
     }
 
-    static public function app_download_url($key, $elt)
+    static public function app_download_url($key, $elt, $controller = null)
     {
         if (!empty($elt['pear'])) {
-            return 'http://pear.horde.org/';
+            $view = $controller->getView();
+            return $view->urlWriter->urlFor('app', array('app' => $key, 'action' => 'docs', 'f' => 'INSTALL.html'));
         }
         $dir = isset($elt['dir']) ? $elt['dir'] : $key;
         return 'ftp://ftp.horde.org/pub/' .
