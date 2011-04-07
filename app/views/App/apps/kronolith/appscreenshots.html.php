@@ -31,7 +31,7 @@
 
 
 <h3>Kronolith 3.0, Mobile View</h3>
-<table class="screenshots" border="0">
+<table border="0">
 <tr>
     <td align="center">
     <?php echo HordeWeb_Utils::sslink('kronolith', '3/mobile-month', true) ?><br />
@@ -51,7 +51,7 @@
 </table>
 
 <h3>Kronolith 2.0, with Horde's Mozilla theme:</h3>
-<table class="screenshots" border="0">
+<table border="0">
 <tr>
     <td align="center">
     <?php echo HordeWeb_Utils::sslink('kronolith', 'month', true) ?><br />
