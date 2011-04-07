@@ -39,6 +39,9 @@ function app_download_link($key, $elt, $graphic = false)
 
 function app_download_url($key, $elt)
 {
+    if (!empty($elt['pear'])) {
+        return 'http://pear.horde.org/';
+    }
     $dir = isset($elt['dir']) ? $elt['dir'] : $key;
     return rtrim($GLOBALS['ftp_base'], ' /') .
         '/' .
