@@ -1,52 +1,33 @@
 allow from all
 
 # Old website's URLs. Still missing:
-# /thanks.php
-# /bounties
 # /demo
 # /licences
 # /logos
-# /mirrors
-# /rsync
-# /survey
-# /sync
-# /themes
 #
-# /agora
-# /giapeto
-# /imapproxy
-# /jonah
-# /luxor
-# /midas
-# /nic
-# /rakim
-# /sam
-# /scry
-# /swoosh
-# /trean
-# /troll
-# /ulaform
 # /vacation
 
 RedirectMatch permanent (.*)/index.php $1
-Redirect permanent /thanks.php /thanks
-Redirect permanent /documentation.php /development/documentation
-Redirect permanent /irc.php /community/support
-Redirect permanent /localization.php /community/localization
-Redirect permanent /projects.php /apps
-Redirect permanent /support.php /community/support
+
 Redirect permanent /about /community
 RedirectMatch permanent /consulting.* /services
+Redirect permanent /documentation.php /development/documentation
 # This doesn't work, no idea why:
 RedirectMatch permanent /download/app/(index\.php)\?app=(.*) /download/$2
+Redirect permanent /irc.php /community/support
+Redirect permanent /localization.php /community/localization
 Redirect permanent /mail /community/mail
 Redirect permanent /pear http://pear.horde.org
+Redirect permanent /projects.php /apps
 Redirect permanent /source/contribute.php /development/contribute
 Redirect permanent /source/cvs.php /development/cvs
 Redirect permanent /source/git.php /development/git
 Redirect permanent /source/modules.php /development/modules
 Redirect permanent /source/versions.php /development/versions
 Redirect permanent /source /development
+Redirect permanent /support.php /community/support
+Redirect permanent /sync http://wiki.horde.org/SyncML
+Redirect permanent /thanks.php /thanks
 
 Redirect permanent /accounts/vote /apps/accounts
 Redirect permanent /accounts /apps/accounts
@@ -69,10 +50,10 @@ Redirect permanent /horde /apps/horde
 RedirectMatch permanent /imp/\d\.\d /apps/imp
 Redirect permanent /imp/about /apps/imp
 Redirect permanent /imp/contrib /apps/imp
-Redirect permanent /imp/screenshots/3 /apps/imp
-Redirect permanent /imp/screenshots/4 /apps/imp
-Redirect permanent /imp/screenshots/5 /apps/imp
-Redirect permanent /imp/screenshots/old /apps/imp
+Redirect permanent /imp/screenshots/3 /apps/imp/screenshots
+Redirect permanent /imp/screenshots/4 /apps/imp/screenshots
+Redirect permanent /imp/screenshots/5 /apps/imp/screenshots
+Redirect permanent /imp/screenshots/old /apps/imp/screenshots
 Redirect permanent /imp/vote /apps/imp
 Redirect permanent /imp /apps/imp
 Redirect permanent /ingo/vote /apps/ingo
@@ -80,7 +61,7 @@ Redirect permanent /ingo /apps/ingo
 Redirect permanent /jeta/about /apps/jeta
 Redirect permanent /jeta /apps/jeta
 Redirect permanent /klutz /apps/klutz
-# Screenshots don't work yet.
+Redirect permanent /kronolith/screenshots/3 /apps/kronolith/screenshots
 Redirect permanent /kronolith/vote /apps/kronolith
 Redirect permanent /kronolith /apps/kronolith
 Redirect permanent /mimp/vote /apps/mimp
@@ -103,6 +84,29 @@ Redirect permanent /whups/vote /apps/whups
 Redirect permanent /whups /apps/whups
 # Wicked still need to be converted to new website logic.
 Redirect permanent /wicked /apps/wicked
+
+Redirect gone /bounties
+Redirect gone /mirrors
+Redirect gone /rsync
+Redirect gone /survey
+Redirect gone /themes
+
+Redirect gone /agora
+Redirect gone /giapeto
+Redirect gone /imapproxy
+Redirect gone /jonah
+Redirect gone /luxor
+Redirect gone /midas
+Redirect gone /nic
+Redirect gone /rakim
+Redirect gone /sam
+Redirect gone /scry
+Redirect gone /swoosh
+Redirect gone /trean
+Redirect gone /troll
+Redirect gone /ulaform
+
+ErrorDocument 410 /410
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
