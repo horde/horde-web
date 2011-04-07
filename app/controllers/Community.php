@@ -29,6 +29,11 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
             $view->page_title = 'Team - The Horde Project';
             $template = 'team';
             break;
+        case 'mail':
+            $view->page_title = 'Mailing Lists - The Horde Project';
+            $view->lists = HordeWeb_Utils::getLists();
+            $template = 'mail';
+            break;
         case 'localization':
         case 'support':
         case 'documentation':

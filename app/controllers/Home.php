@@ -26,14 +26,13 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             $view->page_title = 'Contact Us - The Horde Project';
             $template = 'contactus';
             break;
-        case 'mail':
-            $view->page_title = 'Mailing Lists - The Horde Project';
-            $view->lists = HordeWeb_Utils::getLists();
-            $template = 'mail';
-            break;
         case 'thanks':
             $view->page_title = 'Thanks - The Horde Project';
             $template = 'thanks';
+            break;
+        case '410':
+            $this->page_title = '410 - Page Gone';
+            $template = '410';
             break;
         default:
             $this->_notFound($response);

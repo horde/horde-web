@@ -15,6 +15,7 @@ $mapper->connect('home', $_root . '/', array('controller' => 'home'));
 $mapper->connect('contact', $_root . '/contact/', array('controller' => 'home', 'action' => 'contact'));
 $mapper->connect('mail', $_root . '/mail', array('controller' => 'home', 'action' => 'mail'));
 $mapper->connect('thanks', $_root . '/thanks', array('controller' => 'home', 'action' => 'thanks'));
+$mapper->connect($_root . '/410', array('controller' => 'home', 'action' => '410'));
 
 /* Community */
 $mapper->connect('community', $_root . '/community/:action', array('controller' => 'community', 'action' => 'index'));
