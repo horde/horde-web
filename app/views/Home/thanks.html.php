@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>Horde Mailing Lists</h2>
+      <h2><span></span>Thanks!</h2>
       <div class="section">
         <p>The Horde project owes thanks to a number of people who have made
         contributions of time, money, and services in order to keep this thing
@@ -23,9 +23,6 @@
         <h3>Logo</h3>
         <p>The <a href="logos/">Horde logos</a> were designed by Colin Viebrock.</p>
 
-        <h3>Mirrors</h3>
-        <p>We'd also like to thank our generous <a href="mirrors/">mirror sites</a>
-        throughout the world.</p>
       </div>
     </div>
      <div class="rightcol" style="background: none;">
