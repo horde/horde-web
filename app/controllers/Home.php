@@ -21,16 +21,30 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         switch ($this->_matchDict->action) {
         case 'index':
             $this->_index($response);
-            break;
+            return;
         case 'contact':
-            $this->_contact($response);
+            $view->page_title = 'Contact Us - The Horde Project';
+            $template = 'contactus';
             break;
         case 'mail':
-            $this->_mail($response);
+            $view->page_title = 'Mailing Lists - The Horde Project';
+            $view->lists = HordeWeb_Utils::getLists();
+            $template = 'mail';
+            break;
+        case 'thanks':
+            $view->page_title = 'Thanks - The Horde Project';
+            $template = 'thanks';
             break;
         default:
             $this->_notFound($response);
+            return;
         }
+
+        $view = $this->getView();
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render($template));
     }
 
     protected function _setup()
@@ -81,30 +95,6 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         $layout->setView($view);
         $layout->setLayoutName('home');
         $response->setBody($layout->render('index'));
-    }
-
-    protected function _contact(Horde_Controller_Response $response)
-    {
-        $view = $this->getView();
-        $view->page_title = 'Contact Us - The Horde Project';
-
-        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
-        $layout->setView($view);
-        $layout->setLayoutName('main');
-        $response->setBody($layout->render('contactus'));
-
-    }
-
-    protected function _mail(Horde_Controller_Response $response)
-    {
-        $view = $this->getView();
-        $view->page_title = 'Mailing Lists - The Horde Project';
-        $view->lists = HordeWeb_Utils::getLists();
-        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
-        $layout->setView($view);
-        $layout->setLayoutName('main');
-        $response->setBody($layout->render('mail'));
-
     }
 
 }

@@ -12,6 +12,9 @@ $mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
 
 /* Routes */
 $mapper->connect('home', $_root . '/', array('controller' => 'home'));
+$mapper->connect('contact', $_root . '/contact/', array('controller' => 'home', 'action' => 'contact'));
+$mapper->connect('mail', $_root . '/mail', array('controller' => 'home', 'action' => 'mail'));
+$mapper->connect('thanks', $_root . '/thanks', array('controller' => 'home', 'action' => 'thanks'));
 
 /* Community */
 $mapper->connect('community', $_root . '/community/:action', array('controller' => 'community', 'action' => 'index'));
@@ -38,12 +41,6 @@ $mapper->connect(
 $mapper->connect(
     $_root . '/download/:app', array('controller' => 'download', 'action' => 'app'));
 
-/* Contact */
-$mapper->connect(
-    'contact', $_root . '/contact/', array('controller' => 'home', 'action' => 'contact'));
-/* Mail */
-$mapper->connect(
-    'mail', $_root . '/mail', array('controller' => 'home', 'action' => 'mail'));
 
 $path = $request->getPath();
 if (($pos = strpos($path, '?')) !== false) {
