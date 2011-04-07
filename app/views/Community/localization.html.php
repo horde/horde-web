@@ -4,16 +4,13 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Localization' => 'localization'))?></h2>
       <?php echo $this->render('communitynav');?>
       <div class="section">
+
+        <h3>Localization</h3>
+
         <p class="exciter">These translations are currently available for at least some
         applications. You can find complete statistics about the state of the
         different translations <a href="http://dev.horde.org/i18n/">here</a>.
         </p>
-
-        <h3>Localization</h3>
-
-        <p>These translations are currently available for at least some
-        applications. You can find complete statistics about the state of the
-        different translations <a href="http://dev.horde.org/i18n/">here</a>.</p>
 
         <ul>
         <li><?php HordeWeb_Utils::fimg('om') ?>Arabic (Oman)</li>
