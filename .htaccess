@@ -29,6 +29,7 @@ allow from all
 # /vacation
 
 RedirectMatch permanent (.*)/index.php $1
+Redirect permanent /thanks.php /thanks
 Redirect permanent /documentation.php /development/documentation
 Redirect permanent /irc.php /community/support
 Redirect permanent /localization.php /community/localization
