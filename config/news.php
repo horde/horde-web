@@ -51,6 +51,7 @@ $horde_news = array(
     'dimp' => array(
         'name' => 'DIMP',
         'news' => array(
+            '2011-04-05' => 'IMP 5 has been released, integrating all functionality of DIMP. DIMP is discontinued.',
             '2009-12-15' => 'There won\'t be any DIMP version 2.0 anymore. DIMP has been integrated completely into the upcoming IMP 5.',
             '2008-09-26' => 'DIMP H3 (1.1) has been released.',
             '2008-06-10' => 'The ability to drag and drop folders has been re-added for DIMP H3 (1.1). This feature existed earlier but had been removed for the final 1.0 release because it wasn\'t stable enough at that time.',
@@ -166,6 +167,7 @@ $horde_news = array(
     'horde' => array(
         'name' => 'Horde',
         'news' => array(
+            '2011-04-05' => 'Horde 4 has been released. This is a major milestone in Horde development, packed with two years\' worth of development.',
             '2011-03-08' => 'Horde 4 Alpha 1, the first test packages of the upcoming Horde 4 line is now available',
             '2008-09-26' => 'The final release of The Horde Application Framework 3.3 is available.',
             '2008-07-17' => 'A Basque translation, contributed by Euskal Herriko Unibertsitatea has been added for Horde and several applications.',
@@ -177,6 +179,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-05', 'Horde 4.0', '2010/000607'),
                 array('2010-11-22', 'Horde 3.3.11', '2010/000574'),
                 array('2010-10-25', 'Horde 3.3.10', '2010/000569'),
                 array('2010-09-28', 'Horde 3.3.9', '2010/000557'),
@@ -236,6 +239,7 @@ $horde_news = array(
     'imp' => array(
         'name' => 'IMP',
         'news' => array(
+            '2011-04-05' => 'IMP H4 (5.0) has been released. It bundles all, much improved, interfaces that were available as separate applications, and includes a brand new interface for smartphones.',
             '2011-03-08' => 'IMP version H4 (5.0-ALPHA1), for use with the upcoming Horde 4 is now available',
             '2009-12-15' => 'The development of IMP 5.0 has reached bug fixing mode. There will probably still be added a few more features before the final release, but most work is going into fixing bugs and finishing Horde 4, the groundwork of IMP 5.',
             '2008-09-26' => 'The final release of the IMP Webmail Client H3 (4.3) is available',
@@ -246,6 +250,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-05', 'IMP H4 (5.0)', '2010/000608'),
                 array('2010-10-25', 'IMP H3 (4.3.9)', '2010/000570'),
                 array('2010-09-28', 'IMP H3 (4.3.8)', '2010/000558'),
                 array('2010-04-27', 'IMP H3 (4.3.7)', '2010/000542'),
@@ -281,12 +286,14 @@ $horde_news = array(
     'ingo' => array(
         'name' => 'Ingo',
         'news' => array(
+            '2011-04-05' => 'Ingo H4 (2.0) has been released.',
             '2011-03-08' => 'Ingo H4 (2.0-ALPHA1) released',
             '2008-09-11' => 'The final release of Ingo H3 (1.2.1) is available.',
             '2008-05-25' => 'The final release of Ingo H3 (1.2) is available.',
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-05', 'Ingo H4 (2.0)', '2010/000609'),
                 array('2010-09-28', 'Ingo H3 (1.2.5)', '2010/000560'),
                 array('2010-04-27', 'Ingo H3 (1.2.4)', '2010/000544'),
                 array('2009-12-15', 'Ingo H3 (1.2.3)', '2009/000534'),
@@ -345,6 +352,7 @@ $horde_news = array(
     'kronolith' => array(
         'name' => 'Kronolith',
         'news' => array(
+            '2011-04-05' => 'Kronolith H4 (3.0) has been released with brand new ajax and smartphone interfaces, resource booking, and much more.',
             '2011-03-08' => 'Kronolith H4 (3.0-ALPHA1) released',
             '2009-11-28' => 'The Ajax frontend for the upcoming Kronolith version 3.0 is more or less feature complete. If you want to contribute testing, development or bug fixing, check it out from the Horde Git repository.',
             '2008-10-22' => 'Starting with version 3.0, Kronolith is now able to store all events in UTC time. This allows sharing of events across different timezones.',
@@ -358,6 +366,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-05', 'Kronolith H4 (3.0)', '2010/000611'),
                 array('2010-09-28', 'Kronolith H3 (2.3.5)', '2010/000562'),
                 array('2010-04-27', 'Kronolith H3 (2.3.4)', '2010/000546'),
                 array('2009-12-15', 'Kronolith H3 (2.3.3)', '2009/000536'),
@@ -385,6 +394,7 @@ $horde_news = array(
     'mimp' => array(
         'name' => 'MIMP',
         'news' => array(
+            '2011-04-05' => 'IMP 5 has been released, integrating all functionality of MIMP. MIMP is discontinued.',
             '2009-12-15' => 'There won\'t be any DIMP version 2.0 anymore. DIMP has been integrated completely into the upcoming IMP 5.',
             '2008-09-26' => 'The final release of MIMP H3 (1.1.1) is available',
             '2008-05-25' => 'The final release of MIMP H3 (1.1) is available.',
@@ -410,12 +420,14 @@ $horde_news = array(
     'mnemo' => array(
         'name' => 'Mnemo',
         'news' => array(
+            '2011-04-05' => 'Mnemo version H4 (3.0) has been released.',
             '2011-03-08' => 'Mnemo version H4 (3.0-ALPHA1) released',
             '2009-12-15' => 'There will not be any further releases of MIMP. MIMP has been integrated completely into the upcoming IMP 5.',
             '2008-05-25' => 'The final release of Mnemo H3 (2.2) is available.',
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-05', 'Mnemo H4 (3.0)', '2010/000613'),
                 array('2010-09-28', 'Mnemo H3 (2.2.4)', '2010/000564'),
                 array('2009-12-15', 'Mnemo H3 (2.2.3)', '2009/000537'),
                 array('2009-09-14', 'Mnemo H3 (2.2.2)', '2009/000515'),
@@ -437,6 +449,7 @@ $horde_news = array(
     'nag' => array(
         'name' => 'Nag',
         'news' => array(
+            '2011-04-05' => 'Nag version H4 (3.0) has been released, providing much tighter integration into the Kronolith calendar application.',
             '2011-03-08' => 'Nag version H4 (3.0-ALPHA1) released',
             '2009-12-15' => 'The upcoming Nag version 3.0 will be integrated into the Ajax frontend of the Kronolith 3.0 calendar application. You can still use it seperately, but if installed, you can manage your tasks completely through Kronolith\'s Ajax interface.',
             '2008-09-26' => 'The final release of Nag H3 (2.3) is available.',
@@ -445,6 +458,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-05', 'Nag H4 (3.0)', '2010/000612'),
                 array('2010-09-28', 'Nag H3 (2.3.6)', '2010/000563'),
                 array('2010-04-27', 'Nag H3 (2.3.5)', '2010/000545'),
                 array('2009-12-15', 'Nag H3 (2.3.4)', '2009/000535'),
@@ -492,6 +506,7 @@ $horde_news = array(
     'turba' => array(
         'name' => 'Turba',
         'news' => array(
+            '2011-03-08' => 'Turba H4 (3.0) has been released.',
             '2011-03-08' => 'Turba H4 (3.0-ALPHA1) has been released.',
             '2008-09-26' => 'Turba H3 (2.3) has been released.',
             '2008-08-11' => 'Support for photos and logos has been added and will be available with Turba H3 (2.3).',
@@ -500,6 +515,7 @@ $horde_news = array(
         ),
         'releases' => array(
             'stable' => array(
+                array('2010-04-05', 'Turba H4 (3.0)', '2010/000610'),
                 array('2010-09-28', 'Turba H3 (2.3.5)', '2010/000559'),
                 array('2010-04-27', 'Turba H3 (2.3.4)', '2010/000543'),
                 array('2009-12-15', 'Turba H3 (2.3.3)', '2009/000533'),

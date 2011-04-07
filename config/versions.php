@@ -3,8 +3,9 @@
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '3.3.11',
-        'date' => 'November 22 2010'
+        'ver' => '4.0',
+        'date' => 'April 5 2011',
+        'pear' => true,
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
@@ -21,8 +22,9 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H3 (4.3.9)',
-        'date' => 'October 25 2010'
+        'ver' => 'H4 (5.0)',
+        'date' => 'April 5 2011',
+        'pear' => true,
     ),
     'dimp' => array(
         'name' => 'DIMP',
@@ -36,33 +38,33 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H3 (2.3.5)',
-        'date' => 'September 28 2010'
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true,
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H3 (1.2.5)',
-        'date' => 'September 28 2010'
-    ),
-    'klutz' => array(
-        'name' => 'Klutz',
-        'ver' => 'H3 (1.0)',
-        'date' => 'March 19 2009'
+        'ver' => 'H4 (2.0)',
+        'date' => 'April 5 2011',
+        'pear' => true,
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H3 (2.3.5)',
-        'date' => 'September 28 2010'
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true,
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H3 (2.3.6)',
-        'date' => 'September 28 2010'
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true,
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H3 (2.2.4)',
-        'date' => 'September 28 2010'
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true,
     ),
     'chora' => array(
         'name' => 'Chora',
@@ -108,7 +110,12 @@ $horde_apps_stable = array(
         'name' => 'Ansel',
         'ver' => 'H3 (1.1.2)',
         'date' => 'September 28 2010'
-    )
+    ),
+    'klutz' => array(
+        'name' => 'Klutz',
+        'ver' => 'H3 (1.0)',
+        'date' => 'March 19 2009'
+    ),
 );
 
 $horde_apps_dev = array(
