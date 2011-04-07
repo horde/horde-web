@@ -22,6 +22,9 @@ $mapper->connect('community', $_root . '/community/:action', array('controller' 
 $mapper->connect('localization', $_root . '/community/localization', array('controller' => 'community', 'action' => 'localization'));
 $mapper->connect('team', $_root . '/community/team', array('controller' => 'community', 'action' => 'team'));
 
+/* Licenses */
+$mapper->connect('licenses', $_root . '/licenses/:action', array('controller' => 'licenses', 'action' => 'index'));
+
 /* Support */
 $mapper->connect('support', $_root . '/support/:action', array('controller' => 'support', 'action' => 'index'));
 

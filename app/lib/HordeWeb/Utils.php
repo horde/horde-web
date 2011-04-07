@@ -126,6 +126,14 @@ class HordeWeb_Utils
                     $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'development', 'action' => $action));
                 }
             }
+            break;
+        case 'HordeWeb_Licenses_Controller':
+            $crumb = $view->linkToUnlessCurrent('Licenses', array('controller' => 'licenses'));
+            if (!empty($params)) {
+                foreach ($params as $name => $action) {
+                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'licenses', 'action' => $action));
+                }
+            }
         }
 
         return $crumb;
