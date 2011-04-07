@@ -6,7 +6,7 @@ and more.</p>
 <h3>Obtaining Horde</h3>
 
 <p>The Horde Framework can be obtained from our
-<a href="<?php echo $this->urlWriter->urlFor('download', array('app' => 'horde')) ?>">
+<a href="<?php echo $this->urlWriter->urlFor(array('controller' => 'download', 'action' => 'app', 'app' => 'horde')) ?>">
 Download Page</a>.</p>
 
 <p>You can also see who is on the <a href="<?php echo $this->urlWriter->urlFor('team') ?>">
@@ -21,9 +21,9 @@ Core Team</a>.</p>
 <h3>Notes</h3>
 
 <p>As of Horde 4.0, The Horde Framework libraries and all applications,
-including the base Horde application (which provides core
-functionality), are installable via <a href="http://pear.horde.org">PEAR</a>.
-See the <a href="http://pear.horde.org">PEAR</a> server page, or the Horde
-application
-<?php echo Horde::Url($this->urlWriter->urlFor(array('controller' => 'app', 'app' => 'horde', 'action' => 'docs')))->add('f', 'INSTALL.html')->link()?>
+including the base Horde application (which provides core functionality), are
+installable via <a href="http://pear.horde.org">PEAR</a>.  See
+the <a href="http://pear.horde.org">PEAR</a> server page, or the Horde
+application <a href="<?php echo $this->urlWriter->urlFor(array('controller' =>
+'app', 'app' => 'horde', 'action' => 'docs', 'f' => 'INSTALL.html')) ?>">
 INSTALL</a> file for more information.</p>
