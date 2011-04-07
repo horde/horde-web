@@ -1,33 +1,37 @@
-<!--<h4>Kronolith 3.0, Dynamic View</h4>
+<h3>Kronolith 3.0, Dynamic View</h3>
 
 <table border="0">
 <tr>
     <td align="center">
-    <?php echo HordeWeb_Utils::sslink('kronolith', '3/ajax-month', true) ?><br />
-        Month View
+    <?php echo HordeWeb_Utils::sslink('kronolith', '3/month', true) ?><br />
+        Dynamic Month View
     </td>
     <td align="center">
-    <?php echo HordeWeb_Utils::sslink('kronolith', '3/ajax-week', true) ?><br />
-        Week View
-    </td>
-    <td align="center">
-    <?php echo HordeWeb_Utils::sslink('kronolith', '3/ajax-tasks', true) ?><br />
-    Tasks View
+    <?php echo HordeWeb_Utils::sslink('kronolith', '3/week', true) ?><br />
+        Dynamic Week View
     </td>
 </tr>
 <tr>
     <td align="center">
-    <?php echo HordeWeb_Utils::sslink('kronolith', '3/ajax-event', true) ?><br />
-    Event View
+    <?php echo HordeWeb_Utils::sslink('kronolith', '3/day', true) ?><br />
+    Dynamic Day View
     </td>
     <td align="center">
-    <?php echo HordeWeb_Utils::sslink('kronolith', '3/ajax-calendar', true) ?><br />
-    Calendar View
-    </td>
-    <td align="center">
+    <?php echo HordeWeb_Utils::sslink('kronolith', '3/tasks', true) ?><br />
+    Integrated Tasks View
     </td>
 </tr>
-</table>-->
+<tr>
+    <td align="center">
+    <?php echo HordeWeb_Utils::sslink('kronolith', '3/agenda', true) ?><br />
+    Agenda View
+    </td>
+    <td align="center">
+    <?php echo HordeWeb_Utils::sslink('kronolith', '3/map', true) ?><br />
+    Event View showing OSM map
+    </td>
+</tr>
+</table>
 
 
 <h3>Kronolith 3.0, Mobile View</h3>
