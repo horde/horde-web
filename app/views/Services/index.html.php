@@ -5,10 +5,12 @@
       <?php echo $this->render('servicesnav');?>
       <div class="section">
 
-        <h3>More than just software</h3>
+        <div class="exciter">
+          <h3>More than just software</h3>
 
-        <p>Our team of trusted professionals helps you build large
-        installations or custom applications.</p>
+          Our team of trusted professionals helps you build large installations
+          or custom applications.
+        </div>
 
         <h3>Why Horde Groupware?</h3>
         <p>Horde is the most flexible groupware on the planet, and that makes
