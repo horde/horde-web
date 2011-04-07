@@ -4,11 +4,12 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Contribute' => 'contribute'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
-
-          <p class="exciter">There are several ways you can contributing to Horde. We are always looking
-          for new poeple to help and not only in programming. There are plenty of
-          important tasks that don't involve writing or maintaining code, such as
-          documentation or localization.</p>
+        <div class="sectionintro">
+            <p>There are several ways you can contributing to Horde. We are always looking
+            for new poeple to help and not only in programming. There are plenty of
+            important tasks that don't involve writing or maintaining code, such as
+            documentation or localization.</p>
+        </div>
 
           <h3>Getting Started</h3>
           <p>As first steps you should:</p>

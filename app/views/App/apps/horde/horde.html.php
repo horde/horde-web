@@ -1,8 +1,8 @@
-<p class="exciter">The <b>Horde Application Framework</b> is a general-purpose
-web application framework written in PHP, providing classes for dealing with
-preferences, compression, browser detection, connection tracking, MIME handling,
-and more.</p>
-
+<div class="sectionintro">
+<p>The <b>Horde Application Framework</b> is a general-purpose web application
+framework in PHP, providing classes for dealing with preferences, compression,
+browser detection, connection tracking, MIME handling, and more.</p>
+</div>
 <h3>Obtaining Horde</h3>
 
 <p>The Horde Framework can be obtained from our

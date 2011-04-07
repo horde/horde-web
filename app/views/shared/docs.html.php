@@ -1,4 +1,4 @@
-         <p class="exciter">The following documentation is available regarding
+         <p class="sectionintro">The following documentation is available regarding
          the Horde project:</p>
 
         <h3>Applications</h3>

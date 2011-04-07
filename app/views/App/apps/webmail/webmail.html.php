@@ -1,14 +1,14 @@
-<div class="section">
+<div class="sectionintro">
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail', 'action' => 'screenshots')) ?>">
 <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/portal_1_1-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
 </a>
-
-<p class="exciter"> Horde Groupware Webmail Edition is a free, enterprise ready,
-browser based communication suite. Users can read, send and organize email
-messages and manage and share calendars, contacts, tasks and notes with the
-standards compliant <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">
-components</a> from the Horde Project. Horde Groupware Webmail Edition bundles
-the separately available applications
+<p>
+ Horde Groupware Webmail Edition is a free, enterprise ready, browser based
+ communication suite. Users can read, send and organize email messages and
+ manage and share calendars, contacts, tasks and notes with the standards
+ compliant <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">
+ components</a> from the Horde Project. Horde Groupware Webmail Edition bundles
+ the separately available applications
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'imp')) ?>">IMP</a>,
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ingo')) ?>">Ingo</a>,
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'kronolith')) ?>">Kronolith</a>,
@@ -16,7 +16,8 @@ the separately available applications
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'nag')) ?>">Nag</a>
  and <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'mnemo')) ?>">Mnemo</a>.
 </p>
-
+</div>
+<div class="section">
 <p>
  It can be extended with any of the released
  <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">Horde applications</a>

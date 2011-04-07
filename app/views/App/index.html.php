@@ -4,27 +4,27 @@
         <?php echo $this->renderPartial('appbreadcrumb') ?>
         <?php echo $this->render('communitynav') ?>
         <div class="section">
-            <p class="exciter">This is a list of the major released applications
-            developed by the
-            <?php echo $this->linkTo('Horde team', array('controller' => 'community', 'action' => 'team')) ?>.
-            There is a more complete list of everything available from our
-            source repository, including applications still under development,
-            <?php echo $this->linkTo('development', array('controller' => 'development')) ?>
-            of the site.</p>
+          <div class="sectionintro">
+            <p>This is a list of the major released applications developed by
+            the horde team. There is a more complete list of everything available
+            from our source repository
+            <a href="<?php echo $this->urlWriter->urlFor('development') ?>">
+            in the development section</a> of the site.</p>
 
-            <p class="exciter">We also have an extensive list of projects that are currently either planned
+            <p>We also have an extensive list of projects that are currently either planned
             or underway in our wiki: <a
             href="http://wiki.horde.org/Projects">http://wiki.horde.org/Projects</a>. These
             projects are very open to new ideas, new blood, and anyone is welcome to add to
             the list, provided they have at least some code or the beginnings of a
             specification</p>
 
-            <p class="exciter">Still didn't find what you were looking for?
+            <p>Still didn't find what you were looking for?
             <a href="<?php echo $this->urlWriter->urlFor('services'); ?>">Horde
             developers and consultants</a> are available to develop custom
             applications and modules.</p>
 
-            <h2><span></span>The Horde Framework Libraries</h2>
+          </div>
+
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'horde')) ?>">The Horde Application Framework</a></h3>
             <p>The Horde Framework is the glue that all Horde applications have in
             common. It is many things, including some coding standards, common

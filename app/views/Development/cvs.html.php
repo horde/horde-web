@@ -4,11 +4,11 @@
       <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('CVS' => 'cvs'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
-          <h3 class="exciter"><span></span>The CVS Repository</h3>
-          <p class="exciter">Horde now uses Git for all new development, however Horde 3 code
-          continues to live in the CVS repository. All <strong>NEW</strong>
-          development should be done against Git code, with CVS code only being
-          used for bug and security fixes.</p>
+        <div class="sectionintro">
+          <p>Horde now uses Git for all new development, however Horde 3 code
+          continues to live in the CVS repository. All NEW development should be
+          done against Git code, with CVS code only being used for bug and
+          security fixes.</p>
 
           <p>You can use the Horde CVS repository as an anonymous user, or as a
           developer.</p>
@@ -24,7 +24,8 @@
           standard CVS documentation is available <a
           href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">here</a>, and
           there are many HOWTOs available on the web.</p>
-
+          </div>
+          <h3><span></span>The CVS Repository</h3>
           <p>All of the code in our repository is split into a set of modules.
           However, sometimes there are multiple branches available of a module.
           A CVS branch is a mechanism for keeping multiple versions of a module;
