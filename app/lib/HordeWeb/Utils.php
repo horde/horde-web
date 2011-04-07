@@ -54,6 +54,9 @@ class HordeWeb_Utils
 
     static public function app_download_url($key, $elt)
     {
+        if (!empty($elt['pear'])) {
+            return 'http://pear.horde.org/';
+        }
         $dir = isset($elt['dir']) ? $elt['dir'] : $key;
         return 'ftp://ftp.horde.org/pub/' .
             rtrim($dir, ' /') .
