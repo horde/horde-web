@@ -398,17 +398,16 @@ div.footer {
     line-height:20px;
     padding:15px;
 }
-
-
-div.exciter, div.exciter h3 {
-    width: 75%;
-    text-align: center;
-    margin: auto;
-    font-size: 1.3em;
-    margin-bottom: 10px;
+div.exciter {
+    background-color: #797979;
+    color: #fff;
+    padding:15px;
 }
-
-
+div.exciter h3 {
+    color: #fff;
+    font-size:1.5em;
+    margin: 0 0 15px;
+}
 div.footer .section {
     background: url(../images/bg-section.gif) repeat-y 1px 0;
     width:870px;
