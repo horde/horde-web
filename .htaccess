@@ -2,7 +2,6 @@ allow from all
 
 # Old website's URLs. Still missing:
 # /demo
-# /licences
 # /logos
 #
 # /vacation
@@ -15,6 +14,10 @@ Redirect permanent /documentation.php /development/documentation
 # This doesn't work, no idea why:
 RedirectMatch permanent /download/app/(index\.php)\?app=(.*) /download/$2
 Redirect permanent /irc.php /community/support
+Redirect permanent /licenses/asl.php /licenses/apache
+Redirect permanent /licenses/bsdl.php /licenses/bsd
+Redirect permanent /licenses/gpl.php /licenses/gpl
+Redirect permanent /licenses/lgpl.php /licenses/lgpl
 Redirect permanent /localization.php /community/localization
 Redirect permanent /mail /community/mail
 Redirect permanent /pear http://pear.horde.org
