@@ -108,7 +108,8 @@ class HordeWeb_Utils
                 if (!empty($view->appname)) {
                     $crumb .= $separator;
                 }
-                $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), ucfirst($view->appname), array('controller' => 'app', 'action' => 'app'));
+                // @todo: App name look up.
+                $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), $view->appname == 'imp' ? Horde_String::upper($view->appname) : Horde_String::ucfirst($view->appname), array('controller' => 'app', 'action' => 'app'));
             break;
         case 'HordeWeb_Community_Controller':
             $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'));
