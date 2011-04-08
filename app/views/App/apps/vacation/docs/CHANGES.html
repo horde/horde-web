@@ -1,0 +1,227 @@
+<h1>Changes by Release</h1><pre>
+----------
+v3.2.2-cvs
+----------
+
+[jan] Fix fatal error in portal block.
+
+
+------
+v3.2.1
+------
+
+[jan] Don't overwrite mail account configuration in Plesk driver
+      (tyler@netaccess.ca, <a href="http://bugs.horde.org/ticket/7111">Bug #7111</a>).
+[jan] Fix driver capability check if users are allowed to change From: headers
+      (<a href="http://bugs.horde.org/ticket/8808">Bug #8808</a>).
+
+
+----
+v3.2
+----
+
+[jan] Enable output compression.
+[jan] Add placeholder for bare user name to customsql driver (<a href="http://bugs.horde.org/ticket/7916">Request #7916</a>).
+[jan] Allow drivers to report capabilities, e.g. whether setting From: headers
+      is supported (Michael Brennen &lt;michael@fishnet.us>).
+[jan] Add Postfix Admin driver (Michael Brennen &lt;michael@fishnet.us>).
+[jan] Add TLS support to LDAP driver (<a href="http://bugs.horde.org/ticket/7958">Request #7958</a>).
+
+
+----
+v3.1
+----
+
+[jan] Fix retrieving 'hordeauth' setting when using realms (<a href="http://bugs.horde.org/ticket/7881">Bug #7881</a>).
+
+
+--------
+v3.1-RC1
+--------
+
+[jan] Add custom SQL driver.
+[cjh] Use the current password as the salt in the SQL driver (<a href="http://bugs.horde.org/ticket/6496">Bug #6496</a>).
+[jan] Add Plesk driver.
+[jan] Add GDBM database template for big endian systems.
+[jan] Add SSL option to ftp and qmail drivers (<a href="http://bugs.horde.org/ticket/5511">Request #5511</a>).
+[jan] Add full character set support (<a href="http://bugs.horde.org/ticket/5028">Request #5028</a>).
+[jan] Fix retrieving vacation status from LDAP with mixed-case attribute names.
+[jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
+
+
+------
+v3.0.1
+------
+
+[jan] Improve error checking.
+[jan] Add Slovenian translation (Duck &lt;duck@obala.net>).
+[jan] Add configuration option for search bind DNs and passwords.
+[jan] Add configuration option for search timeouts.
+[jan] Optionally allow users to set their From: address (Christian Hernmarck
+      &lt;christian@hernmarck.ch>, <a href="http://bugs.horde.org/ticket/1833">Request #1833</a>).
+[jan] Improve accessibility.
+[jan] Add support for Berkeley DB 4 vacation databases (Gregory Colpart
+      &lt;reg@evolix.fr>).
+
+
+----
+v3.0
+----
+
+[jan] Fix support for realm based configuration.
+[jan] Add Greek translation (Konstantinos C. Milosis &lt;kmilosis@yahoo.com>).
+[jan] Add encryption type configuration to SQL driver (<a href="http://bugs.horde.org/ticket/2377">Request #2377</a>).
+[mas] Fix compatibility with PHP 5.1.2. (tinu@humbapa.ch, <a href="http://bugs.horde.org/ticket/3516">Bug #3516</a>)
+
+
+--------
+v3.0-RC1
+--------
+
+[ben] Better support for MS-SQL.
+[jan] Add configuration option to disable subject headers
+      (c.affolter@stepping-stone.ch, <a href="http://bugs.horde.org/ticket/2643">Request #2643</a>).
+[jan] Allow to set protocol version in qmail LDAP driver
+      (m.zdila@episoftware.com, <a href="http://bugs.horde.org/ticket/2834">Request #2834</a>).
+[jan] Prevent deletion of existing vacation notices in qmail driver
+      (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/2572">Request #2572</a>).
+[jan] Select the enable/disable button depending on the current state
+      (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/2572">Request #2572</a>).
+[cjh] Make the LDAP driver more configurable (<a href="http://bugs.horde.org/ticket/1648">Request #1648</a>).
+[cjh] Add passive mode to FTP driver configuration options (<a href="http://bugs.horde.org/ticket/1782">Request #1782</a>).
+[cjh] Use bind variables in the SQL driver (selsky@columbia.edu,
+      Request #1680).
+[jmf] Work with newer Mail packages by turning off validation.
+[jan] Add Czech translation (Pavel Chytil &lt;pavel@chytil.tk>).
+[jmf] Allow multiple aliases.
+[jmf] Add ability to retrieve alias automatically via FTP from an aliases or
+      virtual file on the mail server.
+[jmf] Add configuration option to hide alias entry.
+[jan] Add Persian (Western) translation (Vahid Ghafarpour
+      &lt;vahid@ghafarpour.com>).
+[jan] Add realm support to SQL driver and automatically create db entry if
+      none exists yet (Martin Luethi &lt;horde@humbapa.ch>).
+[jan] Allow Horde authentication for all drivers (Martin Luethi
+      &lt;horde@humbapa.ch>).
+[cjh] Add an option for ignoring realm information in the email address
+      written to .forward files.
+[cjh] Make the default vacation message configurable.
+[cjh] If we can retrieve the current vacation message for the user, pre-load
+      the textarea with it.
+[cjh] Implement fetching of current details for the forwards driver.
+[ejr] Rename graphics/plane.gif to graphics/vacation.png.
+[jan] Add Bulgarian translation (Miroslav Pendev &lt;pendev@hotmail.com>).
+[ejr] Try to set permissions on files transferred with forwards ftp driver.
+[ejr] Remove custom ftp/tmpfile code and use the Horde_VFS:: class for all ftp
+      stuff.
+
+
+------
+v2.2.2
+------
+
+[jan] Close XSS when setting the parent frame's page title by javascript (cjh).
+[jan] Add Polish translation (Piotr Kuczynski &lt;pkuczynski@hypode.pl>).
+[jan] Fix qmail driver not including VFS.php.
+
+
+------
+v2.2.1
+------
+
+[jan] Add Galician translation (Rafael Varela Pet &lt;srrafa@usc.es>, Guillermo
+      Mendez &lt;guille@usc.es>).
+[cjh] Add a configuration parameter that specifies a regular expression
+      which vacation messages must match.
+[cjh] Add an optional backend parameter to use the password the user
+      is currently logged in with.
+[ejr] Add alias support.
+[jan] Add Dutch translation (Ariën Huisken &lt;arien@huisken-systems.nl>).
+[jan] Add Romanian translation (Eugen Hoanca &lt;eugenh@urban-grafx.ro>,
+      Marius Dragulescu &lt;mariusd@urban-grafx.ro>).
+[ejr] Fix alias support, fix some phpdoc.
+
+
+----
+v2.2
+----
+
+[ejr] Add javascript form input validation.
+[ejr] Add script to create database files.
+[ejr] Add comments/copyrights as needed, clean up html and php code, etc.
+[ejr] Add alias support.
+[ejr] Add address checking/parsing.
+[ejr] Add api support.
+[ejr] Add qmail driver.
+[ejr] Remove config/prefs.php.dist as it wasn't needed/used.
+
+
+----
+v2.1
+----
+
+[cjh] Close several small XSS vulnerabilities
+      (Mitja Kolsek &lt;mitja.kolsek@acros.si>).
+[jan] Add Italian translation (Alessio Ciregia &lt;alessio@ifc.cnr.it>).
+[ejr] Restore default realm functionality, add database files and script to
+      generate them, make this CHNANGES file match the rest of Horde's.
+[jan] Add Brazilian Portugues translation (Walber Alexandre
+      &lt;walberalexandre@bol.com.br>).
+[ejr] Add exim sql backend (Ilya Krel &lt;mail@krel.org>).
+[ejr] Changed to Driver class system, remove userid variable.
+
+
+------
+v2.0.1
+------
+
+[ejr] Released this version as V 2.0.1 (previous was V2.0).
+[jan] Add Traditional Chinese translation (David Chang &lt;david@thbuo.gov.tw>).
+[ejr] fix bogus tag and class tag in password input area.
+[ejr] recode temporary file handling, add phpdoc.
+[jan] Add Norwegian Nynorsk translation (Per-Stian Vatne &lt;psv@orsta.org>).
+[jan] Add Finnish translation (Tero Matinlassi
+      &lt;tero.matinlassi@edu.vantaa.fi>).
+[ejr] Updated templates/common-header.inc (refered by Joel Vandal).
+[ejr] Implemented new CVS HEAD themes.
+[ejr] Updated to new CVS HEAD notification system.
+[ejr] Changed ftp_put() parameter from string to integer for php 4.2.x.
+      Thanks to Pradit Wattanasuwan who found this (I'm still on 4.1.x).
+
+
+----
+v2.0
+----
+
+[ejr] Released this version as V 2.0 (previous was V1.0a).
+[ejr] Added Danish Translations by Epsen Juergensen.
+[ejr] Added real realm support.
+[ejr] Small change to lib/base.php login checking (newline, selfUrl() call).
+[ejr] Removed admin user checks since horde doesn't support admin array any
+      more.
+[ejr] Added new refused user code due to issues with old code matching too
+      much.
+[ejr] Spanish translations.
+[ejr] Updated German translations (Jens A Tkotz).
+[ejr] Added remove_realm setting.
+[ejr] Fixed bug in po/Makefile.
+[ejr] Fixed bug in config/conf.php.dist.
+[ejr] New fr_FR translation by D. Huhardeaux.
+[ejr] More locale work.
+[ejr] Added title code to templates/common-footer.inc.
+[ejr] Started gettext language support.
+[ejr] Added unlink() call to remove temp file after installing .forward file.
+[ejr] Fixed Location redirect in index.php thanks to John Wedoff.
+[ejr] Added help menu item (English only, and needs work).
+[ejr] Fixed require statement above -- thanks to Serge Grondin.
+[ejr] Fixed require statement in main.php (syntax, path).
+[ejr] Added support for my accounts module.
+[ejr] Updated documentation.
+[ejr] Added menu bar support.
+[ejr] removed tabs from all php code.
+[ejr] Added refused user list to config/conf.php.
+[ejr] Fixed path error in noconfigured.inc and index.php.
+[ejr] Made userid field only show if the person is in the admin group.
+[ejr] Add graphic plane.gif (Thanks to Eric Keto for help with graphic).
+[ejr] Rewrite Passwd module into a vacation module (see Passwd docs for info).
+</pre>
