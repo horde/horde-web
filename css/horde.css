@@ -768,6 +768,9 @@ div.mainareasplit ul.simple {
 .dimmed, .dimmed td, .dimmed h3, div.section .dimmed h3 {
     color: #aaa;
 }
+.dimmed a {
+    color: #8090b0;
+}
 .dimmed table.roadmap th {
     background-color: #fff;
 }
