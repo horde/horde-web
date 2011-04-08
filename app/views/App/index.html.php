@@ -69,7 +69,6 @@
 
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'sork')) ?>">Sork</a></h3>
             <p>Sork is a collection of four other Horde modules:
-            <a href="accounts/">accounts</a>,
             <a href="forwards/">forwards</a>,
             <a href="passwd/">passwd</a>,
             <a href="vacation/">vacation</a>.

@@ -9,11 +9,10 @@ style vacation notices on Sendmail or Courier mail based systems via an FTP
 transport. It also has some support for LDAP, Qmail, and SQL servers.</p>
 
 <p>Vacation is part of a suite of account management modules for Horde
-consisting of <?php echo $this->linkTo('Accounts', array('controller' => 'app',
-'action' => 'app', 'app' => 'accounts')) ?>, <?php echo
-$this->linkTo('Forwards', array('controller' => 'app', 'action' => 'app', 'app'
-=> 'forwards')) ?>, <?php echo $this->linkTo('Passwd', array('controller' =>
-'app', 'action' => 'app', 'app' => 'passwd')) ?>, and Vacation.</p>
+consisting of <?php echo $this->linkTo('Forwards', array('controller' => 'app',
+'action' => 'app', 'app' => 'forwards')) ?>, <?php echo $this->linkTo('Passwd',
+array('controller' => 'app', 'action' => 'app', 'app' => 'passwd')) ?>, and
+Vacation.</p>
 
 <p>Collectively these modules now comprise what is known as <em>Sork</em>.
 There is a mailing list available for these modules.  See <a

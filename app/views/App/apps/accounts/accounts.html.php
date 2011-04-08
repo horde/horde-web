@@ -1,3 +1,6 @@
+<strong>Accounts has been discontinued. Account information for the currently
+logged in user is avaible through Horde's Account portal block now.</strong>
+
 <p>Accounts is a very simple module which provides two functions:</p>
 
 <ul>
