@@ -21,5 +21,6 @@ commits, graph generation, change collation, etc (all features planned for
 eventual inclusion into Chora).</p>
 
 <p>If you are interested in helping develop this module, or just want to ask
-questions and keep an eye on its progress, be sure to join our <a
-href="../mail/">mailing list</a>!</p>
+questions and keep an eye on its progress, be sure to join our <?php echo
+$this->linkTo('mailing list', array('controller' => 'community', 'action' =>
+'mail')) ?>!</p>

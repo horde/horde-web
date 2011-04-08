@@ -1,8 +1,7 @@
 <p>Turba is the Horde contact management application. It is a production level
-address book, and makes heavy use of the Horde framework to provide
-integration with
-<?php echo $this->linkTo('IMP', array('controller' => 'app', 'action' => 'app', 'app' => 'imp')) ?>
- and other Horde applications.</p>
+address book, and makes heavy use of the Horde framework to provide integration
+with <?php echo $this->linkTo('IMP', array('controller' => 'app', 'action' =>
+'app', 'app' => 'imp')) ?> and other Horde applications.</p>
 
 <p>Turba is a complete basic contact management application. SQL, LDAP, IMSP,
 Kolab, and Horde Preferences backends are available and are well tested. You
@@ -18,5 +17,6 @@ Turba_Driver subclass that implements a few simple methods and talks to your
 storage method of choice.</p>
 
 <p>If you are interested in helping develop Turba, or just want to ask
-questions and keep an eye on its progress, be sure to join our <a
-href="../mail/">mailing list</a>!</p>
+questions and keep an eye on its progress, be sure to join our <?php echo
+$this->linkTo('mailing list', array('controller' => 'community', 'action' =>
+'mail')) ?>!</p>
