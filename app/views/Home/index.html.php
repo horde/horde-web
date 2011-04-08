@@ -8,10 +8,11 @@
                     </div>
                     <div class="text">
                       <h2><a href="<?php echo $this->urlWriter->urlFor('community');?>">Community</a></h2>
-                      <p>Wondering what Horde is? Curious how to use one of
-                        Horde's many more advanced features?  Learn more about
-                        Horde and its powerful applications with Frequently
-                        Asked Questions, Screenshots and more.
+                      <p>Wondering <strong>what Horde is</strong>? Curious how
+                      to use one of Horde's many more advanced features?  Learn
+                      more about Horde and its <strong>powerful
+                      applications</strong> with Frequently Asked Questions,
+                      Screenshots and more.
                       </p>
                     </div>
                   </div>
@@ -24,9 +25,10 @@
                     <div class="text">
                       <h2><a href="<?php echo $this->urlWriter->urlFor('development');?>">Development</a></h2>
                       <p>As the most flexible groupware platform in the world,
-                      Horde makes an ideal place to create your own custom
-                      applications. Learn more about our feature-rich
-                      collection of web development libraries and how to get
+                      Horde makes an ideal place to create your
+                      own <strong>custom applications</strong>. Learn more
+                      about our feature-rich collection of
+                      web <strong>development libraries</strong> and how to get
                       started.
                       </p>
                     </div>
@@ -40,10 +42,11 @@
                     <div class="text">
                       <h2><a href="<?php echo $this->urlWriter->urlFor('services');?>">Services</a></h2>
                       <p>More than just software: Our team of trusted
-                      professionals helps you build large installations or
-                      custom applications. Learn how our experience and
-                      technology delivers the most flexible platform to realize
-                      your grand ideas.
+                      <strong>professionals helps</strong> you
+                      build <strong>large installations</strong> or custom
+                      applications. Learn how our experience and technology
+                      delivers the most flexible platform to realize your grand
+                      ideas.
                       </p>
                     </div>
                   </div>
