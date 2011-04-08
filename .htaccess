@@ -75,7 +75,10 @@ Redirect permanent /nag/about /apps/nag
 Redirect permanent /nag/contrib /apps/nag
 Redirect permanent /nag/vote /apps/nag
 Redirect permanent /nag /apps/nag
-# Passwd still need to be converted to new website logic.
+Redirect permanent /passwd/about /apps/passwd
+Redirect permanent /passwd/more.php /apps/passwd
+Redirect permanent /passwd/poppassd /apps/passwd
+Redirect permanent /passwd/vote /apps/passwd
 Redirect permanent /passwd /apps/passwd
 Redirect permanent /sork /apps/sork
 Redirect permanent /turba/about /apps/turba

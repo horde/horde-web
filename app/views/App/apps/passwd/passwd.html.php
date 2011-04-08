@@ -7,10 +7,12 @@ via Poppassd, LDAP, Unix expect scripts, the Unix smbpasswd command for
 SMB/CIFS passwords, Kolab, ADSI, Pine, Serv-U FTP, VMailMgr, vpopmail, and SQL
 passwords.</p>
 
-<p>Passwd is part of a suite of account management modules for Horde
-consisting of <a href="../accounts/">Accounts</a>, <a
-href="../forwards/">Forwards</a>, Passwd, and <a
-href="../vacation/">Vacation</a>.</p>
+<p>Passwd is part of a suite of account management modules for Horde consisting
+of <?php echo $this->linkTo('Accounts', array('controller' => 'app', 'action'
+=> 'app', 'app' => 'accounts')) ?>, <?php echo $this->linkTo('Forwards',
+array('controller' => 'app', 'action' => 'app', 'app' => 'forwards')) ?>,
+Passwd, and <?php echo $this->linkTo('Vacation', array('controller' => 'app',
+'action' => 'app', 'app' => 'vacation')) ?>.</p>
 
 <p>Collectively these modules now comprise what is known as <em>Sork</em>.
 There is a mailing list available for these modules.  See <a
