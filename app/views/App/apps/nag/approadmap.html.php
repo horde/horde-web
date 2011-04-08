@@ -12,13 +12,32 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Nag 2.4</h3>
+<h3>Nag 4.0</h3>
+
+<p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> April, 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Merge into <?php echo $this->linkTo('Kronolith', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith')) ?></td><td class="planned">Planned</td></tr>
+  <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="planned">Planned</td></tr>
+  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
+  <tr><td>Recurring tasks</td><td class="planned">Planned</td>
+  <tr><td>Task dependencies</td><td class="planned">Planned</td>
+</table>
+
+<h3>Nag 3.1</h3>
 
 <p><b>Status:</b> Not planned</p>
 
+<div class="dimmed">
+
 <h3>Nag 3.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> April 5th, 2011</p>
 
@@ -34,8 +53,6 @@ at least some of the following changes:
   <tr><td>Recurring tasks</td><td class="cancelled">Postponed</td>
   <tr><td>Task dependencies</td><td class="cancelled">Postponed</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Nag 2.3</h3>
 

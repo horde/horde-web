@@ -13,9 +13,24 @@ at least some of the following changes:
 </ul>
 
 
+<h3>IMP 6.0</h3>
+
+<p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> April, 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="progress">In Progress</td>
+</table>
+
+<div class="dimmed">
+
 <h3>IMP 5.0</h3>
 
-<p><b>Status:</b> Beta</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> April 5th, 2011</p>
 
@@ -45,8 +60,6 @@ at least some of the following changes:
 <p>IMP 5.0 successfully parses both the original UW-IMAP MIME torture test
 and Ryan Finnie's updated MIME torture test. These tests can be found at
 <a href="ftp://ftp.horde.org/pub/imp/test/">ftp://ftp.horde.org/pub/imp/test/</a>.</p>
-
-<div class="dimmed">
 
 <h3>IMP 4.3</h3>
 

@@ -12,13 +12,30 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Horde 3.4</h3>
+<h3>Horde 5.0</h3>
+
+<p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> April, 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Tableless form renderer</td><td class="planned">Planned</td></tr>
+  <tr><td>Complete configuration with web interface</td><td class="planned">Planned</td>
+  <tr><td>Dynamic resortable portal screen</td><td class="planned">Planned</td></tr>
+</table>
+
+<h3>Horde 4.1</h3>
 
 <p><b>Status:</b> Not planned</p>
 
+<div class="dimmed">
+
 <h3>Horde 4.0</h3>
 
-<p><b>Status:</b> Largely done</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> April 5th, 2011</p>
 
@@ -26,17 +43,15 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>Installable, extendable, upgradable through PEAR installer</td><td class="progress">In progress</td></tr>
+  <tr><td>Installable, extendable, upgradable through PEAR installer</td><td class="done">Done</td></tr>
   <tr><td>Multiple WYSIWYG editors</td><td class="done">Done</td></tr>
   <tr><td>Tableless form renderer</td><td class="cancelled">Postponed</td></tr>
-  <tr><td>Native PHP 5 code</td><td class="progress">In progress</td>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td>
   <tr><td>MIME code refactoring</td><td class="done">Done</td>
   <tr><td>IMAP code refactoring</td><td class="done">Done</td>
   <tr><td>Complete configuration with web interface</td><td class="cancelled">Postponed</td>
   <tr><td>Dynamic resortable portal screen</td><td class="cancelled">Postponed</td></tr>
 </table>
-
-<div class="dimmed">
 
 <h3>Horde 3.3</h3>
 

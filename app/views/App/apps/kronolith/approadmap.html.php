@@ -12,13 +12,29 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Kronolith 2.4</h3>
+<h3>Kronolith 4.0</h3>
+
+<p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> April, 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
+  <tr><td>Simpler meeting scheduling</td><td class="planned">Planned</td>
+</table>
+
+<h3>Kronolith 3.1</h3>
 
 <p><b>Status:</b> Not planned</p>
 
+<div class="dimmed">
+
 <h3>Kronolith 3.0</h3>
 
-<p><b>Status:</b> Beta</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> April 5th, 2011</p>
 
@@ -35,8 +51,6 @@ at least some of the following changes:
   <tr><td>Resource scheduling</td><td class="done">Done</td>
   <tr><td>Simpler meeting scheduling</td><td class="cancelled">Postponed</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Kronolith 2.3</h3>
 

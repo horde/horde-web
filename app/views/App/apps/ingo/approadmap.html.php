@@ -12,9 +12,27 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Ingo 2.0</h3>
+<h3>Ingo 3.0</h3>
 
 <p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> April, 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td>
+  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td>
+  <tr><td>Composite driver to manage different backends for different services</td><td class="planned">Planned</td>
+</table>
+
+<div class="dimmed">
+
+<h3>Ingo 2.0</h3>
+
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> April 5th, 2011</p>
 
@@ -28,8 +46,6 @@ at least some of the following changes:
   <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="cancelled">Postponed</td>
   <tr><td>Composite driver to manage different backends for different services</td><td class="cancelled">Postponed</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Ingo 1.2</h3>
 

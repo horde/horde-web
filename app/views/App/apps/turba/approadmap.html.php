@@ -12,13 +12,15 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Turba 2.4</h3>
+<h3>Turba 3.1</h3>
 
 <p><b>Status:</b> Not planned</p>
 
+<div class="dimmed">
+
 <h3>Turba 3.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> April 5th, 2011</p>
 
@@ -29,11 +31,9 @@ at least some of the following changes:
   <tr><td>Native PHP 5 code</td><td class="done">Done</td>
 </table>
 
-<div class="dimmed">
-
 <h3>Turba 2.3</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> September 2008</p>
 
