@@ -60,7 +60,7 @@
             <?php if (count($this->app_info) > 1): ?>
             <h3>Obtaining Old Versions</h3>
 
-            <p>Old versions can be obtained from one of our <a href="../../mirrors/">FTP Mirrors</a>.</p>
+            <p>Old versions can be obtained from our <a href="ftp://ftp.horde.org/pub/">FTP server</a>.</p>
             <?php endif; ?>
         </div>
     </div>
