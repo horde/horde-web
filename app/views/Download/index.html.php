@@ -6,7 +6,7 @@
          <li><p><em><strong>Stable Releases</strong></em> - code that has been tested,
          documented, and possibly packaged in .rpm, .deb, or other
          formats. Releases can be obtained from a project's download page. See the
-         <a href="<?php echo $this->urlWriter->urlFor('projects');?>">Horde Project List</a> for a list of stable, or
+         <a href="<?php echo $this->urlWriter->urlFor('apps');?>">Horde Project List</a> for a list of stable, or
          soon-to-be released, applications.</p></li>
 
          <li><p><a href="http://snaps.horde.org/"><em><strong>Nightly
