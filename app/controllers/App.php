@@ -55,6 +55,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
                   $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app));
         $view->appname = $this->_matchDict->app;
         $view->hasAuthors = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/appauthors.html.php');
+        $view->hasDocs = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs');
         $view->hasScreenshots = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/appscreenshots.html.php');
         $view->hasRoadmap = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/approadmap.html.php');
     }
