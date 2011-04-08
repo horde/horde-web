@@ -118,7 +118,7 @@ ErrorDocument 410 /410
     RewriteEngine On
     RewriteBase /
 
-    RewriteCond %{HTTP_HOST} !^www.
+    RewriteCond %{HTTP_HOST} horde.org
     RewriteRule ^(.*)$ http://www.horde.org/$1 [R=301,L]
 
     RewriteCond   %{REQUEST_FILENAME}  !-d
