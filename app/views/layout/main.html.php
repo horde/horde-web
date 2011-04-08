@@ -6,7 +6,7 @@
 <link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen">
 <script type="text/javascript" src="<?php echo $GLOBALS['host_base']?>/js/analytics.js"></script>
 <?php
-    Horde::includeStylesheetFiles(array('nobase' => true, 'nohorde' => true));
+    Horde::includeStylesheetFiles(array('nobase' => true, 'nohorde' => true), true);
     Horde::includeScriptFiles();
     Horde::outputInlineScript();
 ?>
