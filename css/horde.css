@@ -756,7 +756,8 @@ table.roadmap .planned {
     background-color: #fa0;
 }
 table.roadmap .cancelled {
-    background-color: #c5c5c5;
+    color: white;
+    background-color: #c00;
     text-decoration: line-through;
 }
 
@@ -764,10 +765,10 @@ div.mainareasplit ul.simple {
     list-style-type: none;
     margin-left: 0;
 }
-.dimmed, .dimmed td {
+.dimmed, .dimmed td, .dimmed h3, div.section .dimmed h3 {
     color: #aaa;
 }
-.dimmed table.roadmap th, .dimmed table.roadmap .cancelled {
+.dimmed table.roadmap th {
     background-color: #fff;
 }
 .dimmed table.roadmap th, .dimmed table.roadmap td {
@@ -783,6 +784,7 @@ div.mainareasplit ul.simple {
     background-color: #fd9;
 }
 .dimmed table.roadmap .cancelled {
+    color: #ddd;
     background-color: #d99;
 }
 
