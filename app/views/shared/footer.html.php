@@ -23,7 +23,7 @@
                                 </ul>
                             </div>
                             <?php echo $this->render('contact'); ?>
-                            <?php echo $this->render('quotes', array('locals' => array('quote' => $quote))); ?>
+                            <?php echo $this->render('quotes', array('locals' => array('quote' => $this->quote))); ?>
                             <div class="clear"></div>
                         </div>
                 </div>
