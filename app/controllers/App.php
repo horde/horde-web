@@ -67,6 +67,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             ? Horde_String::upper($this->_matchDict->app)
             : Horde_String::ucfirst($this->_matchDict->app);
         $view->page_title = $app . ' - The Horde Project';
+        $view->stable = HordeWeb_Utils::getStableApps();
+        $view->appListController = array('controller' => 'app', 'action' => 'app');
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
