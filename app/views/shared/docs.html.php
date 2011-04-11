@@ -44,5 +44,5 @@
 
         <h3>Licenses</h3>
 
-        <p>The <a href="licenses/">Horde Licenses</a> page contains the various
+        <p>The <a href="<?php echo $this->urlWriter->urlFor('licenses') ?>">Horde Licenses</a> page contains the various
         licenses used for Horde applications.</p>
