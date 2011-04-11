@@ -93,13 +93,21 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         }
 
         // Build the bug/news widget
-        // The tag for the search should *normally* be the app name...might need
-        // to tweak this.
-        // @TODO allow multiple feeds and add cache
+        // The tag for the search should *normally* be the app name
+        $cache = HordeWeb_Utils::getCache();
         $slugs = array($this->_matchDict->app);
         foreach ($slugs as $slug) {
             $base_feed_url = Horde::url($GLOBALS['feed_url'])->add('tag_id', $slug)->setRaw(true);
-            $view->latestNews = Horde_Feed::readUri($base_feed_url);
+            if ($latestnews = $cache->get('hordefeed' . $slug, 600)) {
+                $view->latestNews = unserialize($latestnews);
+            } else {
+                try {
+                    $view->latestNews = Horde_Feed::readUri($base_feed_url);
+                } catch (Exception $e) {
+                    $view->latestnews = null;
+                }
+                $cache->set('hordefeed' . $slug, serialize($view->latestNews));
+            }
         }
         $layout->setView($view);
         $layout->setLayoutName('main');

@@ -154,4 +154,12 @@ class HordeWeb_Utils
         return $lists;
     }
 
+    /**
+     * @TODO: Remove core - configure via config values from config/
+     */
+    static public function getCache()
+    {
+        return $GLOBALS['injector']->getInstance('Horde_Cache');
+    }
+
 }
