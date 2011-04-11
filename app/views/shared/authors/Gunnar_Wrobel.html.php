@@ -1,5 +1,5 @@
 <div class="hordeauthor">
-  <h2>Gunnar Wrobel</h2>
+  <h2><a name="gunnar">Gunnar Wrobel</a></h2>
   <div style="float:right"><img src="http://www.gravatar.com/avatar/dbcdeab8ab553f349692c2988b4bde25" /></div>
   <ul>
       <li>Originally a scientist in biological/medical research. Who then became a bioinformatician. Who then dropped the "bio" part.</li>

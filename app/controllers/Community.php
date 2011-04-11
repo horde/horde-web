@@ -38,6 +38,7 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
         case 'support':
         case 'documentation':
         case 'licenses':
+        case 'papers':
             $view->page_title = ucfirst($this->_matchDict->action) . ' - The Horde Project';
             $template = $this->_matchDict->action;
             break;

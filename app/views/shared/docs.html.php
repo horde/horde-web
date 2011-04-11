@@ -30,7 +30,8 @@
 
         <h3>Library</h3>
 
-        <p>The <a href="<?php echo $GLOBALS['host_base']?>/papers/">Horde
+        <p>The <a
+        href="<?php echo $this->urlWriter->urlFor('community', array('action' => 'papers')) ?>">Horde
         Library</a> is a collection of papers, reports, and presentations given
         by Horde developers over the years.</p>
 

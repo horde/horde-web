@@ -1,5 +1,5 @@
 <div class="hordeauthor">
-  <h2>Jon Parise</h2>
+  <h2><a name="jon">Jon Parise</a></h2>
   <ul>
     <li>Software engineer at <a href="http://www.ea.com/">Electronic Arts</a> (<a href="http://lotr.ea.com/">Lord of the Rings</a>)</li>
     <li><a href="http://www.etc.cmu.edu/">Masters of Entertainment Technology</a> from <a href="http://www.cmu.edu/">Carnegie Mellon University</a> (Class of 2003)</li>
