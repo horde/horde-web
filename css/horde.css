@@ -271,7 +271,6 @@ div.clear {
 }
 
 div.hordeauthor h2,
-div.hordeauthor h2 a,
 div.section div.document h1,
 div.section div.document h2,
 div.section h3 {
@@ -286,6 +285,12 @@ div.section h3 {
     margin: 15px 0 7px 0;
 }
 
+div.hordeauthor h2 a {
+    color: #797979;
+}
+div.hordeauthor h2 a:hover {
+    text-decoration: none;
+}
 body div.news {
     height:120px;
     background:#cfcfcf url(../images/rss_news.png) left bottom no-repeat;
