@@ -19,12 +19,12 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
     protected function _processRequest(Horde_Controller_Response $response)
     {
         switch ($this->_matchDict->action) {
-        case 'index':
-            $this->_index($response);
-            break;
         case 'app':
             $this->_app($response);
             break;
+        default:
+            $this->_notFound($response);
+
         }
     }
 

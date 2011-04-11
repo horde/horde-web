@@ -41,7 +41,7 @@ $mapper->connect('services', $_root . '/services/:action', array('controller' =>
 
 /* Downloads */
 $mapper->connect(
-    'download', $_root . '/download', array('controller' => 'download', 'action' => 'index'));
+    'download', $_root . '/download', array('controller' => 'download'));
 $mapper->connect(
     $_root . '/download/:app', array('controller' => 'download', 'action' => 'app'));
 
