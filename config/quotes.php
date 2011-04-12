@@ -69,4 +69,8 @@ $quotes = array(
         'quote' => '"None of the other groupware solutions seem to offer as broad a level of synchronisation capabilities as Horde, unless you go for Euro 10.00 to 30.00/month or year per user commercial plugins."',
         'author' => 'Arthur P. Meiners'
     ),
+    array(
+        'quote' => '"Horde is one of the best Webmail you can offer your users. It\'s unmatched in terms of features and flexibility among the open source solutions that you can install on a server. It\'s perfect for small businesses."',
+        'author' => 'interfaSys'
+    ),
 );
