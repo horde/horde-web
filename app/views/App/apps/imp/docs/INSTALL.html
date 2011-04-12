@@ -98,10 +98,10 @@ to work best with IMP include:</p>
 The selected POP server MUST support POP3 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc1939.html">RFC 1939</a>/STD 53).</p>
 <div class="note">
 <p class="first admonition-title">Note</p>
-<p class="last">If using a POP server, caching, on-demand filtering, searching,
-and sorting are disabled. POP3 support is limited essentially to
-only viewing messages. An IMAP server is <strong>REQUIRED</strong> for all
-other advanced features.</p>
+<p class="last">If using a POP server, it MUST support the UIDL capability.
+Caching, on-demand filtering, searching, and sorting will be
+disabled; POP3 support is limited to essentially only viewing
+messages and performing basic mail actions.</p>
 </div>
 </li>
 <li><p class="first">Sendmail or SMTP server.</p>
