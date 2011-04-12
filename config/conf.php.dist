@@ -1,0 +1,19 @@
+<?php
+/**
+ * Site-wide configuration stuff.
+ *
+ */
+
+define('HORDE_BASE', '/usr/local/horde/horde/horde');
+//ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . '/usr/local/horde/head_pear' . PATH_SEPARATOR . ini_get('include_path'));
+
+
+/* Server hostname/base url */
+$host_base = 'http://localhost/hordeweb';
+
+/* Filesystem base */
+$fs_base = '/private/var/www/html/hordeweb';
+
+/* RSS feed url */
+$site_name = "The Horde Project";
+$feed_url = 'http://dev.horde.org/horde/jonah/delivery/rss.php?channel_id=1';

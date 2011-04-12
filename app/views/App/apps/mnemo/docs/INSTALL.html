@@ -1,0 +1,171 @@
+<div class="document" id="installing-mnemo-3-0">
+<h1 class="title">Installing Mnemo 3.0</h1>
+
+<p>This document contains instructions for installing the Mnemo web-based notes
+application on your system.</p>
+<p>For information on the capabilities and features of Mnemo, see the file
+<a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Mnemo distribution.</p>
+<div class="section" id="prerequisites">
+<h1>Prerequisites</h1>
+<p>To function properly, Mnemo requires the following:</p>
+<ol class="arabic">
+<li><p class="first">A working Horde installation.</p>
+<p>Mnemo runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+for web applications written in PHP.  You must install Horde before
+installing Mnemo.</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Mnemo 3.0 requires version 4.0+ of the Horde Framework -
+earlier versions of Horde will <strong>not</strong> work.</p>
+</div>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Be sure to have completed all of the steps in the
+<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
+installing Mnemo. Many of Mnemo's prerequisites are also
+Horde prerequisites. Additionally, many of Mnemo's optional
+features are configured via the Horde install.</p>
+</div>
+</li>
+<li><p class="first">SQL support in PHP <em>or</em> a configured Kolab Server.</p>
+<p>Mnemo will store its data in either an SQL database or on a Kolab Server.
+If you use SQL, build PHP with whichever SQL driver you require; see the
+Horde <a class="reference external" href="../../horde/docs/?f=INSTALL.html">INSTALL</a> file for details.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="installing-mnemo">
+<h1>Installing Mnemo</h1>
+<p>There are several ways to install Mnemo. The recommended way to install Mnemo
+is using the PEAR installer. Alternatively it can be installed from
+tarballs. Finally, if you want to run the latest development code, or get the
+latest, not yet released, fixes, you can install Mnemo from Git.</p>
+<div class="section" id="installing-with-pear">
+<h2>Installing with PEAR</h2>
+<p>First follow the instructions in <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> to prepare a PEAR
+environment for Horde and install the Horde Framework.</p>
+<p>When installing Mnemo through PEAR now, the installer will automatically
+install any dependencies of Mnemo too. By default, only the required
+dependencies will be installed:</p>
+<pre class="literal-block">
+pear install horde/mnemo
+</pre>
+<p>If you want to install Mnemo even with all optional dependencies, you need to
+specify the <tt class="docutils literal"><span class="pre">-a</span></tt> flag. Please note that this might also try to install PHP
+extensions through PECL that might need further configuration or activation in
+your PHP configuration:</p>
+<pre class="literal-block">
+pear install -a horde/mnemo
+</pre>
+<p>If you want to install Mnemo with all optional dependencies, but without the
+binary PECL packages that need to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the
+<tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
+<pre class="literal-block">
+pear install -a -B horde/mnemo
+</pre>
+</div>
+<div class="section" id="installing-from-release-tarballs">
+<h2>Installing from Release Tarballs</h2>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">As of today, there are no tarballs released for Mnemo 3
+yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
+Mnemo 3.</p>
+</div>
+<p>Mnemo can be obtained from the Horde website and FTP server, at</p>
+<blockquote>
+<p><a class="reference external" href="http://www.horde.org/mnemo/">http://www.horde.org/mnemo/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/mnemo/">ftp://ftp.horde.org/pub/mnemo/</a></p>
+</blockquote>
+<p>Or use the mirror closest to you:</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
+<p>Mnemo is written in PHP, and must be installed in a web-accessible directory.
+The precise location of this directory will differ from system to system.
+Conventionally, Mnemo is installed directly underneath Horde in the
+webserver's document tree.</p>
+<p>Since Mnemo is written in PHP, there is no compilation necessary; simply
+expand the distribution where you want it to reside and rename the root
+directory of the distribution to whatever you wish to appear in the URL.  For
+example, with the Apache webserver's default document root of
+<tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
+<pre class="literal-block">
+cd /usr/local/apache/htdocs/horde
+tar zxvf /path/to/mnemo-x.y.z.tar.gz
+mv mnemo-x.y.z mnemo
+</pre>
+<p>and would then find Mnemo at the URL:</p>
+<pre class="literal-block">
+http://your-server/horde/mnemo/
+</pre>
+</div>
+</div>
+<div class="section" id="configuring-mnemo">
+<h1>Configuring Mnemo</h1>
+<ol class="arabic">
+<li><p class="first">Configuring Horde for Mnemo</p>
+<p>Mnemo requires a permanent <tt class="docutils literal">Shares</tt> backend in Horde to manage notepads
+and to add notes to notepads.  If you didn't setup a Share backend yet, go
+to the configuration interface, select Horde from the list of applications
+and select the <tt class="docutils literal">Shares</tt> tab. Unless you are using Kolab, you should select
+<tt class="docutils literal">SQL</tt>.</p>
+</li>
+<li><p class="first">Configuring Mnemo</p>
+<p>You must login to Horde as a Horde Administrator to finish the
+configuration of Mnemo.  Use the Horde <tt class="docutils literal">Administration</tt> menu item to get
+to the administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to
+get the configuration page.  Select <tt class="docutils literal">Notes</tt> from the selection list of
+applications.  Fill in or change any configuration values as needed.  When
+done click on <tt class="docutils literal">Generate Notes Configuration</tt> to generate the <tt class="docutils literal">conf.php</tt>
+file.  If your web server doesn't have write permissions to the Mnemo
+configuration directory or file, it will not be able to write the file.  In
+this case, go back to <tt class="docutils literal">Configuration</tt> and choose one of the other methods
+to create the configuration file <tt class="docutils literal">mnemo/config/conf.php</tt>.</p>
+<p>Documentation on the format and purpose of the other configuration files in
+the <tt class="docutils literal">config/</tt> directory can be found in each file. You may create
+<tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize Mnemo's
+appearance and behavior. See the header of the configuration files for
+details and examples. The defaults will be correct for most sites.</p>
+</li>
+<li><p class="first">Creating the database table</p>
+<p>Once you finished the configuration in the previous step, you can create all
+database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
+Mnemo row of the configuration screen.</p>
+<p>Alternatively you creating the Mnemo database tables can be accomplished with
+horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in the
+Horde configuration, just run the following:</p>
+<pre class="literal-block">
+horde/bin/horde-db-migrate mnemo
+</pre>
+</li>
+<li><p class="first">Testing Mnemo</p>
+<p>Use Mnemo to create, modify, and delete notes. Test at least the following:</p>
+<ul class="simple">
+<li>Creating a new note</li>
+<li>Modifying a note</li>
+<li>Deleting a note</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="obtaining-support">
+<h1>Obtaining Support</h1>
+<p>If you encounter problems with Mnemo, help is available!</p>
+<p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<p>The Horde Project runs a number of mailing lists, for individual applications
+and for issues relating to the project as a whole.  Information, archives, and
+subscription information can be found at</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<p>Lastly, Horde developers, contributors and users may also be found on IRC,
+on the channel #horde on the Freenode Network (irc.freenode.net).</p>
+<p>Please keep in mind that Mnemo is free software written by volunteers.  For
+information on reasonable support expectations, please read</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<p>Thanks for using Mnemo!</p>
+<p>The Horde team</p>
+</div>
+</div>

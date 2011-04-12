@@ -1,0 +1,127 @@
+allow from all
+
+# Old website's URLs. Still missing:
+# /demo
+# /logos
+
+RedirectMatch permanent (.*)/index.php $1
+
+Redirect permanent /about /community
+RedirectMatch permanent /consulting.* /services
+Redirect permanent /documentation.php /development/documentation
+# This doesn't work, no idea why:
+RedirectMatch permanent /download/app/(index\.php)\?app=(.*) /download/$2
+Redirect permanent /irc.php /community/support
+Redirect permanent /licenses/asl.php /licenses/apache
+Redirect permanent /licenses/bsdl.php /licenses/bsd
+Redirect permanent /licenses/gpl.php /licenses/gpl
+Redirect permanent /licenses/lgpl.php /licenses/lgpl
+Redirect permanent /localization.php /community/localization
+Redirect permanent /mail /community/mail
+Redirect permanent /pear http://pear.horde.org
+Redirect permanent /projects.php /apps
+Redirect permanent /source/contribute.php /development/contribute
+Redirect permanent /source/cvs.php /development/cvs
+Redirect permanent /source/git.php /development/git
+Redirect permanent /source/modules.php /development/modules
+Redirect permanent /source/versions.php /development/versions
+Redirect permanent /source /development
+Redirect permanent /support.php /community/support
+Redirect permanent /sync http://wiki.horde.org/SyncML
+Redirect permanent /thanks.php /thanks
+
+Redirect permanent /accounts/vote /apps/accounts
+Redirect permanent /accounts /apps/accounts
+Redirect permanent /ansel/screenshots/2 /apps/ansel/screenshots
+Redirect permanent /ansel /apps/ansel
+Redirect permanent /chora/about /apps/chora
+Redirect permanent /chora/vote /apps/chora
+Redirect permanent /chora /apps/chora
+Redirect permanent /chora /apps/chora
+Redirect permanent /dimp /apps/dimp
+Redirect permanent /forwards/vote /apps/forwards
+Redirect permanent /forwards /apps/forwards
+Redirect permanent /gollem/vote /apps/gollem
+Redirect permanent /gollem /apps/gollem
+Redirect permanent /groupware /apps/groupware
+Redirect permanent /hermes /apps/hermes
+Redirect permanent /horde/vote /apps/horde
+Redirect permanent /horde /apps/horde
+# These IMP pages exist but don't load yet.
+RedirectMatch permanent /imp/\d\.\d /apps/imp
+Redirect permanent /imp/about /apps/imp
+Redirect permanent /imp/contrib /apps/imp
+Redirect permanent /imp/screenshots/3 /apps/imp/screenshots
+Redirect permanent /imp/screenshots/4 /apps/imp/screenshots
+Redirect permanent /imp/screenshots/5 /apps/imp/screenshots
+Redirect permanent /imp/screenshots/old /apps/imp/screenshots
+Redirect permanent /imp/vote /apps/imp
+Redirect permanent /imp /apps/imp
+Redirect permanent /ingo/vote /apps/ingo
+Redirect permanent /ingo /apps/ingo
+Redirect permanent /jeta/about /apps/jeta
+Redirect permanent /jeta /apps/jeta
+Redirect permanent /klutz /apps/klutz
+Redirect permanent /kronolith/screenshots/3 /apps/kronolith/screenshots
+Redirect permanent /kronolith/vote /apps/kronolith
+Redirect permanent /kronolith /apps/kronolith
+Redirect permanent /mimp/vote /apps/mimp
+Redirect permanent /mimp /apps/mimp
+Redirect permanent /mnemo/vote /apps/mnemo
+Redirect permanent /mnemo /apps/mnemo
+Redirect permanent /nag/about /apps/nag
+Redirect permanent /nag/contrib /apps/nag
+Redirect permanent /nag/vote /apps/nag
+Redirect permanent /nag /apps/nag
+Redirect permanent /passwd/about /apps/passwd
+Redirect permanent /passwd/more.php /apps/passwd
+Redirect permanent /passwd/poppassd /apps/passwd
+Redirect permanent /passwd/vote /apps/passwd
+Redirect permanent /passwd /apps/passwd
+Redirect permanent /sork /apps/sork
+Redirect permanent /turba/about /apps/turba
+Redirect permanent /turba/contrib /apps/turba
+Redirect permanent /turba/vote /apps/turba
+Redirect permanent /turba /apps/turba
+Redirect permanent /webmail /apps/webmail
+Redirect permanent /whups/vote /apps/whups
+Redirect permanent /whups /apps/whups
+# Wicked still need to be converted to new website logic.
+Redirect permanent /wicked /apps/wicked
+
+Redirect gone /bounties
+Redirect gone /mirrors
+Redirect gone /rsync
+Redirect gone /survey
+Redirect gone /themes
+
+Redirect gone /agora
+Redirect gone /giapeto
+Redirect gone /imapproxy
+Redirect gone /jonah
+Redirect gone /luxor
+Redirect gone /midas
+Redirect gone /nic
+Redirect gone /rakim
+Redirect gone /sam
+Redirect gone /scry
+Redirect gone /swoosh
+Redirect gone /trean
+Redirect gone /troll
+Redirect gone /ulaform
+
+ErrorDocument 410 /410
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{HTTP_HOST} ^horde.org$
+    RewriteRule ^(.*)$ http://www.horde.org/$1 [R=301,L]
+
+    RewriteCond   %{REQUEST_FILENAME}  !-d
+    RewriteCond   %{REQUEST_FILENAME}  !-f
+    RewriteRule ^(.*)$ dispatch.php [QSA,L]
+
+    RewriteRule ^$ dispatch.php [QSA,L]
+</IfModule>

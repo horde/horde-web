@@ -1,4 +1,53 @@
 <?php
+/**
+ * @TODO: Use a database for this, and write command line tools to automatically
+ *        update this during release.
+ *
+ */
+$horde_four_apps = array(
+    'horde' => array(
+        'name' => 'Horde',
+        'ver' => '4.0',
+        'date' => 'April 5 2011',
+        'pear' => true
+    ),
+    'imp' => array(
+        'name' => 'IMP',
+        'ver' => 'H4 (5.0)',
+        'date' => 'April 5 2011',
+        'pear' => true
+    ),
+    'turba' => array(
+        'name' => 'Turba',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true
+    ),
+    'ingo' => array(
+        'name' => 'Ingo',
+        'ver' => 'H4 (2.0)',
+        'date' => 'April 5 2011',
+        'pear' => true
+    ),
+    'kronolith' => array(
+        'name' => 'Kronolith',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true
+    ),
+    'nag' => array(
+        'name' => 'Nag',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true
+    ),
+    'mnemo' => array(
+        'name' => 'Mnemo',
+        'ver' => 'H4 (3.0)',
+        'date' => 'April 5 2011',
+        'pear' => true
+    ),
+);
 
 $horde_apps_stable = array(
     'horde' => array(

@@ -1,6 +1,6 @@
 (function () {
 	var $W = window, $D = document;
-	
+
 	var isIE = "ActiveXObject" in $W;
 
 	var addEventListener = isIE ?
@@ -10,7 +10,7 @@
 			function (element, event_name, listener, capture) {
 				return (element.addEventListener(event_name, listener, capture || false), element);
 			};
-	
+
 	var each = function (list, f) {
 			for(var i = 0, len = list.length >>> 0; i < len; i++) {
 				if(i in list) {
@@ -35,7 +35,7 @@
 			});
 			return r;
 		};
-		
+
 	var indexOf = function (value, list) {
 			for(var i = 0, len = list.length >>> 0; i < len; i++) {
 				if(list[i] == value) {
@@ -111,7 +111,7 @@
 
 	var isChrome = testUA(/\bchrome\b/),
 		isSafari = !isChrome && testUA(/safari/);
-	
+
 	var $ = "getElementsByClassName" in $D ?
 		function (class_name, root) {
 			root = root || $D;

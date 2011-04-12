@@ -1,0 +1,128 @@
+<h3>Changes by Release</h3><pre>
+--------
+v1.0-cvs
+--------
+
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Require delete permissions for merging/renaming pages.
+[jan] Don't use WikiWords in menus (<a href="http://bugs.horde.org/ticket/7021">Request #7021</a>).
+[jan] Drop support for coWiki markup.
+[jan] Fix Oracle SQL scripts.
+[jan] Implement pessimistic locking based on Horde_Lock.
+[mjr] Add default lighttpd-style rewrite rules.
+[jan] Add Brazilian Portuguese translation (Luis Felipe Marzagao
+      &lt;duli@fedoraproject.org>).
+[cjh] Support arbitrary charsets for page names (<a href="http://bugs.horde.org/ticket/7805">Bug #7805</a>).
+[cjh] Fix saveTemplate API call (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7620">Bug #7620</a>).
+[jan] Add Italian translation (Fabio Pedretti &lt;fabio.pedretti@ing.unibs.it>).
+[jan] Add Precedence and Auto-Submitted headers to notification messages.
+[cjh] Add an API method for fetching recent changes, and allow specifying
+      the number of days to look back in the RecentChanges page
+      (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7230">Request #7230</a>).
+[jan] Add script to convert data to UTF-8 in the backend.
+[cjh] Allow downloading from/uploading to a remote wiki server
+      (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7191">Request #7191</a>).
+[cjh] Add getMultiplePageInfo() and getPageHistory() API calls, along with
+      page checksums (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7189">Request #7189</a>).
+[cjh] Add Download this page as... link (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7168">Request #7168</a>).
+[cjh] Add renderPage() API call (duck@obala.net).
+[cjh] Add list(), getPageInfo(), show(), and pageExists() API calls
+      (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7149">Request #7149</a>).
+[jan] Add display and edit API methods (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/6130">Request #6130</a>).
+[jan] Add Japanese translation (Takeshi Taguchi &lt;taguchi@iij.ad.jp>).
+[cjh] Fix permission checks for non-admins when deleting and reverting
+      (<a href="http://bugs.horde.org/ticket/5806">Bug #5806</a>).
+[cjh] Fix removing the most recent revision with some databases (<a href="http://bugs.horde.org/ticket/5807">Bug #5807</a>).
+[jan] Work around problems with Text_Wiki and PHP 5.2.5+ (<a href="http://bugs.horde.org/ticket/5951">Bug #5951</a>).
+[mms] Compress download data.
+[jan] Add OpenSearch interface for page search through browser bars.
+[jan] Add Ukrainian translation (Andriy Kopystyansky &lt;anri@polynet.lviv.ua>).
+[cjh] Support mod_rewrite style URLs with Text_Wiki 1.2 (<a href="http://bugs.horde.org/ticket/4740">Bug #4740</a>).
+[jan] Allow to add images from other pages (<a href="http://bugs.horde.org/ticket/5448">Request #5448</a>).
+[cjh] Enforce READ permissions for all page modes (<a href="http://bugs.horde.org/ticket/5328">Bug #5328</a>).
+[jan] Add Slovenian translation (Duck &lt;duck@obala.net>).
+[jan] Fix searching for non-ascii strings (<a href="http://bugs.horde.org/ticket/4644">Bug #4644</a>).
+[mms] Add initial CAPTCHA support.
+[cjh] Fix deletion of the most recent revision.
+[cjh] Table of Contents is now floated to the right and collapses/expands on
+      click.
+[jan] Show similar pages before creating a new one.
+[cjh] Ensure external links attached to images go through Horde::externalUrl()
+      (tasin@fhm.edu, <a href="http://bugs.horde.org/ticket/3151">Bug #3151</a>).
+[cjh] Include matching context in PageSearch results (<a href="http://bugs.horde.org/ticket/2485">Request #2485</a>).
+[cjh] Encode notification emails correctly (tasin@fhm.edu, <a href="http://bugs.horde.org/ticket/3153">Bug #3153</a>).
+[cjh] Don't create pages until they have content (<a href="http://bugs.horde.org/ticket/2534">Bug #2534</a>).
+[cjh] Run all revert actions through a non-JavaScript, POST
+      confirmation page.
+[cjh] Run all page/version deletion through a non-JavaScript, POST
+      confirmation page.
+[ben] Better support for MS-SQL.
+[cjh] Add [[link ...]] syntax for calling $registry->link() in pages
+      (<a href="http://bugs.horde.org/ticket/1474">Bug #1474</a>).
+[cjh] Fix Wiki Page Block when the page being displayed has attachments
+      (<a href="http://bugs.horde.org/ticket/2258">Bug #2258</a>).
+[cjh] Only list standard pages in Wicked's "Back to" history (<a href="http://bugs.horde.org/ticket/2252">Bug #2252</a>).
+[cjh] Delete all attachments to a page when that page is deleted.
+[cjh] Attachments can now be deleted (<a href="http://bugs.horde.org/ticket/2246">Bug #2246</a>).
+[cjh] Send notification emails when files are attached (<a href="http://bugs.horde.org/ticket/2248">Bug #2248</a>).
+[mas] Include changelogs in emails, if available. (<a href="http://bugs.horde.org/ticket/2068">Bug #2068</a>)
+[cjh] If there is only one search result, go directly to it.
+[jan] Support type="htmlphp" attribute for code blocks.
+[cjh] Show a summary of any attachments on a page (<a href="http://bugs.horde.org/ticket/1473">Bug #1473</a>).
+[cjh] Fix updating of attachments (<a href="http://bugs.horde.org/ticket/1579">Bug #1579</a>).
+[cjh] Add a config option to toggle use of pretty URLS with mod_rewrite
+      (<a href="http://bugs.horde.org/ticket/1878">Bug #1878</a>).
+[jan] Support arbitrary charsets for page contents (with Text_Wiki > 1.0.0).
+[cjh] Require PERMS_EDIT to attach files to a page (tasin@fhm.edu, <a href="http://bugs.horde.org/ticket/1880">Bug #1880</a>).
+[cjh] Send email on MergeOrRename (<a href="http://bugs.horde.org/ticket/916">Bug #916</a>).
+[cjh] Go to the newly merged or renamed page after MergeOrRename (<a href="http://bugs.horde.org/ticket/916">Bug #916</a>).
+[cjh] Display the page that was edited after editing instead of going to
+      WikiHome (<a href="http://bugs.horde.org/ticket/1478">Bug #1478</a>).
+[cjh] Require PERMS_EDIT to MergeOrRename a page (<a href="http://bugs.horde.org/ticket/915">Bug #915</a>).
+[cjh] Use bind variables in SQL driver (selsky@columbia.edu, #1746).
+[cjh] Multiple-definition guard for separator() (<a href="http://bugs.horde.org/ticket/1710">Bug #1710</a>).
+[jmf] References to special pages in wiki text no longer look deleted.
+[jmf] Ability to set permissions on special pages.
+[jmf] Prevent loosing attachments when renaming pages.
+[jan] Add test page.
+[jan] Add Finnish translation (Leena Heino &lt;liinu@uta.fi>).
+[jmf] Add command-line script to manipulate wiki pages (Vijay Mahrra
+      &lt;vijay.mahrra@es.easynet.net>).
+[jmf] Add "Create" buttons on TitleSearch and PageSearch pages (Vijay Mahrra
+      &lt;vijay.mahrra@es.easynet.net>).
+[jmf] Add quick diff link (show changes from last version) when viewing page.
+[jmf] Add configuration option to require change descriptions.
+[jan] Notify about page deletions.
+[jmf] Add support for displaying attached images.
+[jmf] Add the ability to attach files to pages.
+[jmf] Add the ability to merge and rename pages.
+[jan] Add Spanish translation (Manuel Perez Ayala &lt;mperaya@alcazaba.unex.es>).
+[jmf] Implement templates (templates are pages which begin or end with
+      "Template").
+[jan] Add Traditional Chinese translation (David Chang &lt;david@tmv.gov.tw>).
+[jan] Add history drop down list to jump to the last visited pages.
+[cjh] Add MostPopular and LeastPopular wiki pages.
+[cjh] Log page views.
+[cjh] A parameter of autocreate=1 must now be passed to display.php for pages
+      that don't exist to be created automatically. This is done by default
+      for "?" links, but for external incoming links and results of the top
+      left jump box, users will get a form that allows them to confirm
+      creation of the new page.
+[cjh] Add AllPages Page and Block implementations.
+[cjh] Wicked now provides Horde_Blocks for doing TitleSearches and viewing
+      RecentChanges.
+[cjh] TitleSearch now works and is available as a global menu option.
+[cjh] Add a Preview button in the EditPage screen.
+[cjh] Move BackLinks and LikePages to the toolbar.
+[cjh] Store and display changelogs for page revisions.
+[cjh] In the history view, diffs between page versions work now.
+[jmf] Add jump box.
+[jan] Update to work with Text_Wiki 0.8.
+[cjh] Use Text_Diff for diff generation.
+[jan] Add Page::allows().
+[jan] Add Wicked::mail().
+[jan] Add diff and notification support.
+[jan] Add German translation.
+[jan] Allow keeping guests from editing and creating pages.
+[tjc] Initial version.
+</pre>

@@ -1,0 +1,187 @@
+<div class="document" id="installing-wicked-1-0">
+<h1 class="title">Installing Wicked 1.0</h1>
+
+<p>This document contains instructions for installing the Wicked web-based Wiki
+application on your system.</p>
+<p>For information on the capabilities and features of Wicked, see the file
+<a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Wicked distribution.</p>
+<div class="section" id="prerequisites">
+<h1>Prerequisites</h1>
+<p>To function properly, Wicked <strong>requires</strong> the following:</p>
+<ol class="arabic">
+<li><p class="first">A working Horde installation</p>
+<p>Wicked runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+for web applications written in PHP.  You must install Horde before
+installing Wicked.</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Wicked 1.0 requires version 4.0+ of the Horde Framework -
+earlier versions of Horde will <strong>not</strong> work.</p>
+</div>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Be sure to have completed all of the steps in the
+<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
+installing Wicked. Many of Wicked's prerequisites are also
+Horde prerequisites. Additionally, many of Wicked's optional
+features are configured via the Horde install.</p>
+</div>
+</li>
+<li><p class="first">SQL support in PHP</p>
+<p>Wicked stores its data in an SQL database. Build PHP with whichever
+SQL driver you require; see the Horde INSTALL file for details.</p>
+</li>
+<li><p class="first">The following PEAR modules:
+(See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PEAR modules)</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">If you are going to install Wicked the recommended way,
+i.e. using the PEAR installer, you can skip the remainder of
+this section. Installing Wicked through PEAR will
+automatically download and install all required PEAR modules.</p>
+</div>
+<ol class="loweralpha">
+<li><p class="first">The Text_Wiki PEAR module (&gt;= 1.2.0)</p>
+<p>Text_Wiki is responsible for all parsing of wiki markup and rendering
+into the different output formats.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="installing-wicked">
+<h1>Installing Wicked</h1>
+<p>There are several ways to install Wicked. The recommended way to install Wicked
+is using the PEAR installer. Alternatively it can be installed from
+tarballs. Finally, if you want to run the latest development code, or get the
+latest, not yet released, fixes, you can install Wicked from Git.</p>
+<div class="section" id="installing-with-pear">
+<h2>Installing with PEAR</h2>
+<p>First follow the instructions in <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> to prepare a PEAR
+environment for Horde and install the Horde Framework.</p>
+<p>When installing Wicked through PEAR now, the installer will automatically
+install any dependencies of Wicked too. By default, only the required
+dependencies will be installed:</p>
+<pre class="literal-block">
+pear install horde/wicked
+</pre>
+<p>If you want to install Wicked even with all optional dependencies, you need to
+specify the <tt class="docutils literal"><span class="pre">-a</span></tt> flag. Please note that this might also try to install PHP
+extensions through PECL that might need further configuration or activation in
+your PHP configuration:</p>
+<pre class="literal-block">
+pear install -a horde/wicked
+</pre>
+<p>If you want to install Wicked with all optional dependencies, but without the
+binary PECL packages that need to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the
+<tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
+<pre class="literal-block">
+pear install -a -B horde/wicked
+</pre>
+</div>
+<div class="section" id="installing-from-release-tarballs">
+<h2>Installing from Release Tarballs</h2>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">As of today, there are no tarballs released for Wicked 1
+yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
+Wicked 1.</p>
+</div>
+<p>Wicked can be obtained from the Horde website and FTP server, at</p>
+<blockquote>
+<p><a class="reference external" href="http://www.horde.org/wicked/">http://www.horde.org/wicked/</a></p>
+<p><a class="reference external" href="ftp://ftp.horde.org/pub/wicked/">ftp://ftp.horde.org/pub/wicked/</a></p>
+</blockquote>
+<p>Or use the mirror closest to you:</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
+<p>Wicked is written in PHP, and must be installed in a web-accessible directory.
+The precise location of this directory will differ from system to system.
+Conventionally, Wicked is installed directly underneath Horde in the web
+server's document tree.</p>
+<p>Since Wicked is written in PHP, there is no compilation necessary; simply
+expand the distribution where you want it to reside and rename the root
+directory of the distribution to whatever you wish to appear in the URL.  For
+example, with the Apache web server's default document root of
+<tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
+<pre class="literal-block">
+cd /usr/local/apache/htdocs/horde
+tar zxvf /path/to/wicked-0.1.tar.gz
+mv wicked-0.1 wicked
+</pre>
+<p>and would then find Wicked at the URL:</p>
+<pre class="literal-block">
+http://your-server/horde/wicked/
+</pre>
+</div>
+</div>
+<div class="section" id="configuring-wicked">
+<h1>Configuring Wicked</h1>
+<ol class="arabic">
+<li><p class="first">Configuring Wicked</p>
+<p>You must login to Horde as a Horde Administrator to finish the configuring
+of Wicked.  Use the Horde <tt class="docutils literal">Administration</tt> menu item to get to the
+administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to get
+the configuration page.  Select <tt class="docutils literal">Wiki</tt> from the selection list of
+applications.  Fill in or change any configuration values as needed.  When
+done click on <tt class="docutils literal">Generate Wiki Configuration</tt> to generate the <tt class="docutils literal">conf.php</tt>
+file.  If your web server doesn't have write permissions to the Wicked
+configuration directory or file, it will not be able to write the file.  In
+this case, go back to <tt class="docutils literal">Configuration</tt> and choose one of the other methods
+to create the configuration file <tt class="docutils literal">wicked/config/conf.php</tt>.</p>
+<p>Documentation on the format and purpose of the other configuration files in
+the <tt class="docutils literal">config/</tt> directory can be found in each file. You may create
+<tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize Wicked's
+appearance and behavior. See the header of the configuration files for
+details and examples. The defaults will be correct for most sites.</p>
+</li>
+<li><p class="first">Creating the database table</p>
+<p>Once you finished the configuration in the previous step, you can create all
+database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
+Wicked row of the configuration screen.</p>
+<p>Alternatively you creating the Wicked database tables can be accomplished
+with horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in
+the Horde configuration, just run the following:</p>
+<pre class="literal-block">
+horde/bin/horde-db-migrate wicked
+</pre>
+</li>
+<li><p class="first">Testing Wicked</p>
+<p>Test at least the following:</p>
+<ul class="simple">
+<li>Modify a page</li>
+<li>Create a new page via a WikiLink</li>
+<li>Delete a page</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="url-styles">
+<h1>URL Styles</h1>
+<p>Wicked can use two forms of URL's; mod_rewrite style, or GET style. Your web
+server must have mod_rewrite enabled to use the mod_rewrite style. Apache
+Servers or Apache Proxy Servers may also need to have AllowEncodedSlashes
+and/or AcceptPathInfo enabled to use the mod_rewrite style. The GET style URL's
+should work without any special configuration.</p>
+</div>
+<div class="section" id="obtaining-support">
+<h1>Obtaining Support</h1>
+<p>If you encounter problems with Wicked, help is available!</p>
+<p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<p>The Horde Project runs a number of mailing lists, for individual applications
+and for issues relating to the project as a whole.  Information, archives, and
+subscription information can be found at</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<p>Lastly, Horde developers, contributors and users may also be found on IRC,
+on the channel #horde on the Freenode Network (irc.freenode.net).</p>
+<p>Please keep in mind that Wicked is free software written by volunteers.  For
+information on reasonable support expectations, please read</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<p>Thanks for using Wicked!</p>
+<p>The Wicked team</p>
+</div>
+</div>
