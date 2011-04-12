@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-        <h2><span></span>Download <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => $this->appname)) ?>"><?php echo in_array($this->appname, array('imp', 'mimp', 'dimp')) ? Horde_String::upper($this->appname) : Horde_String::ucfirst($this->appname)?></a></h2>
+        <h2><span></span>Download <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => $this->appname)) ?>"><?php echo $this->app_info['name'] ?></a></h2>
         <div class="section">
             <h3>Current Horde 4 Stable Release</h3>
             <?php if ($this->h4app): ?>

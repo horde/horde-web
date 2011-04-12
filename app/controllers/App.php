@@ -58,16 +58,17 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $view->hasDocs = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs');
         $view->hasScreenshots = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/appscreenshots.html.php');
         $view->hasRoadmap = file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/approadmap.html.php');
+
+        // @TODO: Look this up in some kind of config/lookup array.
+        $view->appnameHuman = in_array($this->_matchDict->app, array('imp', 'mimp', 'dimp'))
+            ? Horde_String::upper($this->_matchDict->app)
+            : Horde_String::ucfirst($this->_matchDict->app);
     }
 
     protected function _index(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        // @TODO: Look this up in some kind of config/lookup array.
-        $app = $this->_matchDict->app == 'imp'
-            ? Horde_String::upper($this->_matchDict->app)
-            : Horde_String::ucfirst($this->_matchDict->app);
-        $view->page_title = $app . ' - The Horde Project';
+        $view->page_title = $view->appnameHuman . ' - The Horde Project';
         $view->stable = HordeWeb_Utils::getStableApps();
         $view->appListController = array('controller' => 'app', 'action' => 'app');
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
@@ -83,7 +84,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _app(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = ucfirst($this->_matchDict->app) . ' - The Horde Project';
+        $view->page_title = $view->appnameHuman . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $template = 'app';
         // Do we know about this app?
@@ -118,7 +119,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->addTemplatePath(array($GLOBALS['fs_base'] . '/app/views/shared/authors'));
-        $view->page_title = 'Authors - ' . ucfirst($view->appname) . ' - The Horde Project';
+        $view->page_title = 'Authors - ' . $view->appnameHuman . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -128,7 +129,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _roadmap(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'Roadmap - ' . ucfirst($view->appname) . ' - The Horde Project';
+        $view->page_title = 'Roadmap - ' . $view->appnameHuman . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -138,7 +139,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _docs(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = 'Documentation - ' . ucfirst($view->appname) . ' - The Horde Project';
+        $view->page_title = 'Documentation - ' . $view->appnameHuman . ' - The Horde Project';
         Horde::startBuffer();
         $file = Horde_Util::getFormData('f', 'docs.html');
         include $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs/' . $file;
@@ -165,7 +166,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
              "imageBlank": "' . $GLOBALS['host_base'] . '/images/lightbox-blank.gif"});})';
         Horde::addInlineScript($js);
         $view = $this->getView();
-        $view->page_title = 'Screenshots - ' . ucfirst($view->appname) . ' - The Horde Project';
+        $view->page_title = 'Screenshots - ' . $view->appnameHuman . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
