@@ -28,13 +28,6 @@
             <?php endforeach; ?>
             </ul>
 
-            <h3>Current Development Release</h3>
-            <ul>
-            <?php foreach ($this->devapp as $val): ?>
-                <li><?php echo $val ?></li>
-            <?php endforeach; ?>
-            </ul>
-
             <?php if (!empty($this->deprapp)): ?>
             <h3>Deprecated Release</h3>
 
@@ -52,6 +45,14 @@
             <a href="../../source/snapshots.php">nightly snapshots</a> and our
             <a href="../../source/git.php">git repository</a>.</p>
 
+            <?php if (count($this->devapp)): ?>
+            <h3>Current Development Release</h3>
+            <ul>
+            <?php foreach ($this->devapp as $val): ?>
+                <li><?php echo $val ?></li>
+            <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
             <p>The H3 development version of
             <?php echo htmlspecialchars($this->app_info['name']) ?> is available via
             <a href="../../source/snapshots.php">nightly snapshots</a> and

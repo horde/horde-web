@@ -94,6 +94,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             }
         }
 
+        $devapp = array();
         if (isset($horde_apps_dev[$app]) &&
             ($stabledate[$app] < strtotime($horde_apps_dev[$val]['date']))) {
             foreach ($app_list as $val) {
@@ -107,8 +108,6 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             if (empty($app_info)) {
                 $app_info = $horde_apps_dev[$app];
             }
-        } else {
-            $devapp[] = 'No current development release';
         }
 
         if (isset($horde_apps_deprecated[$app])) {
