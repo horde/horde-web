@@ -77,7 +77,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
 
         if (isset($horde_apps_stable[$app])) {
             foreach ($app_list as $val) {
-                $stableapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_stable[$val]);
+                $stableapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_stable[$val], false, $this);
                 $stabledate[$val] = strtotime($horde_apps_stable[$val]['date']);
             }
             $app_info = $horde_apps_stable[$app];
