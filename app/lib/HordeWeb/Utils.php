@@ -55,8 +55,11 @@ class HordeWeb_Utils
     static public function app_download_url($key, $elt, $controller = null)
     {
         if (!empty($elt['pear'])) {
-            $view = $controller->getView();
-            return $view->urlWriter->urlFor('app', array('app' => $key, 'action' => 'docs', 'f' => 'INSTALL.html'));
+            if ($controller) {
+                return $controller->getView()->urlWriter->urlFor('app', array('app' => $key, 'action' => 'docs', 'f' => 'INSTALL.html'));
+            } else {
+                return 'http://pear.horde.org/';
+            }
         }
         $dir = isset($elt['dir']) ? $elt['dir'] : $key;
         return 'ftp://ftp.horde.org/pub/' .
