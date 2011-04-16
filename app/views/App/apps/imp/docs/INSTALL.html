@@ -30,7 +30,7 @@ in the top-level directory of the IMP distribution.</p>
 <p>To function properly, IMP <strong>requires</strong> the following:</p>
 <ol class="arabic">
 <li><p class="first">A working Horde installation.</p>
-<p>IMP runs within the <a class="reference external" href="http://www.horde.org/horde/">Horde Application Framework</a>, a set of common tools
+<p>IMP runs within the <a class="reference external" href="http://www.horde.org/apps/horde">Horde Application Framework</a>, a set of common tools
 for web applications written in PHP. You must install Horde before
 installing IMP.</p>
 <div class="important">
@@ -48,6 +48,13 @@ are configured via the Horde install.</p>
 </div>
 </li>
 <li><p class="first">The following PHP capabilities:</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Certain features in IMP 5 will not work with the suhosin
+<strong>extension</strong> (e.g. search mailboxes). You must disable the
+suhosin extension to use these features. It is reported that
+IMP 5 does work the suhosin <strong>patch</strong>.</p>
+</div>
 <ol class="loweralpha">
 <li><p class="first">File Upload Support</p>
 <p>File upload support is <strong>required</strong> to allow attachments in mail
@@ -55,6 +62,14 @@ composition and to allow various importing features to work (e.g.
 importing PGP or S/MIME keys, importing mbox files).  See
 <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on how to enable file upload
 support.</p>
+</li>
+<li><p class="first">OpenSSL support <tt class="docutils literal"><span class="pre">--with-openssl</span></tt></p>
+<p>The OpenSSL PHP extension is used by IMP to provide S/MIME support.
+Without the extension, all S/MIME options will be disabled.</p>
+<p>Additionally, the OpenSSL PHP extension is REQUIRED if using TLS or SSL
+to connect to the IMAP/POP3 server.</p>
+<p>See <a class="reference external" href="http://www.php.net/openssl">http://www.php.net/openssl</a> for information on compiling OpenSSL
+into PHP.</p>
 </li>
 </ol>
 </li>
@@ -117,7 +132,7 @@ integrated with other Horde applications to provide a unified interface to
 contact management throughout the Horde suite.</p>
 <p>Turba is available from:</p>
 <blockquote>
-<p><a class="reference external" href="http://www.horde.org/turba/">http://www.horde.org/turba/</a></p>
+<p><a class="reference external" href="http://www.horde.org/apps/turba">http://www.horde.org/apps/turba</a></p>
 </blockquote>
 <p>Turba provides the local address book and an LDAP directory search function
 to IMP.</p>
@@ -129,7 +144,7 @@ integrated with other Horde applications to provide a unified interface to
 mail filter management throughout the Horde suite.</p>
 <p>Ingo is available from:</p>
 <blockquote>
-<p><a class="reference external" href="http://www.horde.org/ingo/">http://www.horde.org/ingo/</a></p>
+<p><a class="reference external" href="http://www.horde.org/apps/ingo">http://www.horde.org/apps/ingo</a></p>
 </blockquote>
 <p>Ingo provides the mail filtering interfaces to IMP.</p>
 <p>You must use the 2.x branch of Ingo with IMP 5.x.</p>
@@ -140,7 +155,7 @@ with other Horde applications to provide a unified interface to task
 management throughout the Horde suite.</p>
 <p>Nag is available from:</p>
 <blockquote>
-<p><a class="reference external" href="http://www.horde.org/nag/">http://www.horde.org/nag/</a></p>
+<p><a class="reference external" href="http://www.horde.org/apps/nag">http://www.horde.org/apps/nag</a></p>
 </blockquote>
 <p>If Nag is available on your system, users can easily create new tasks from
 individual email messages.</p>
@@ -152,7 +167,7 @@ integrated with other Horde applications to provide a unified interface to
 access VFS filesystems throughout the Horde suite.</p>
 <p>Gollem is available from:</p>
 <blockquote>
-<p><a class="reference external" href="http://www.horde.org/gollem/">http://www.horde.org/gollem/</a></p>
+<p><a class="reference external" href="http://www.horde.org/apps/gollem">http://www.horde.org/apps/gollem</a></p>
 </blockquote>
 <p>Gollem allows a user to attach files from various VFS filesystems to
 outgoing messages in IMP.</p>
@@ -165,9 +180,10 @@ in the web server configuration. e.g. Apache servers require:</p>
 <pre class="literal-block">
 AcceptPathInfo On
 </pre>
-<p>If the webserver does not provide PATH_INFO information, IMP attempts to
-create the information using other server variables, but this process is
-slower and less reliable.</p>
+<p>Lighttpd servers require:</p>
+<pre class="literal-block">
+&quot;broken-scriptfilename&quot; =&gt; &quot;enable&quot;
+</pre>
 </li>
 <li><p class="first">A configured VFS backend.</p>
 <p>During composition of messages, it is possible that the PHP session may
@@ -216,7 +232,7 @@ IMP 5.</p>
 </div>
 <p>IMP can be obtained from the Horde website and FTP server, at</p>
 <blockquote>
-<p><a class="reference external" href="http://www.horde.org/imp/">http://www.horde.org/imp/</a></p>
+<p><a class="reference external" href="http://www.horde.org/apps/imp">http://www.horde.org/apps/imp</a></p>
 <p><a class="reference external" href="ftp://ftp.horde.org/pub/imp/">ftp://ftp.horde.org/pub/imp/</a></p>
 </blockquote>
 <p>Or use the mirror closest to you:</p>
@@ -390,18 +406,18 @@ enabled in IMP's configuration screen
 <p>If you encounter problems with IMP, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<a class="reference external" href="http://wiki.horde.org/FAQ">http://wiki.horde.org/FAQ</a></blockquote>
 <p>The Horde Project runs a number of mailing lists, for individual applications
 and for issues relating to the project as a whole.  Information, archives, and
 subscription information can be found at</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<a class="reference external" href="http://www.horde.org/community/mail">http://www.horde.org/community/mail</a></blockquote>
 <p>Lastly, Horde developers, contributors and users may also be found on IRC,
 on the channel #horde on the Freenode Network (irc.freenode.net).</p>
 <p>Please keep in mind that IMP is free software written by volunteers.  For
 information on reasonable support expectations, please read</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
 <p>Thanks for using IMP!</p>
 <p>The IMP team</p>
 </div>

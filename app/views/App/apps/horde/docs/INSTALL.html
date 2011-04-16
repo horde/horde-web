@@ -33,19 +33,20 @@ system.</p>
 functionality; it provides a base for other applications and tools for
 developers. When you have installed Horde as described below, you will
 probably want to install some of the available Horde applications, such as
-<a class="reference external" href="http://www.horde.org/imp/">IMP</a> (a webmail client), or <a class="reference external" href="http://www.horde.org/kronolith/">Kronolith</a> (a calendar). There is a list of Horde
-applications and projects at <a class="reference external" href="http://www.horde.org/projects.php">http://www.horde.org/projects.php</a>.</p>
+<a class="reference external" href="http://www.horde.org/apps/imp">IMP</a> (a webmail client), or <a class="reference external" href="http://www.horde.org/apps/kronolith">Kronolith</a> (a calendar). There is a list of Horde
+applications and projects at <a class="reference external" href="http://www.horde.org/apps">http://www.horde.org/apps</a>.</p>
 <p>If you are interested in developing applications for Horde, there is developer
 documentation and references available at <a class="reference external" href="http://dev.horde.org/">http://dev.horde.org/</a>, and some
-tutorials and papers on Horde available at <a class="reference external" href="http://www.horde.org/papers/">http://www.horde.org/papers/</a>.</p>
+tutorials and papers on Horde available at
+<a class="reference external" href="http://www.horde.org/community/papers">http://www.horde.org/community/papers</a>.</p>
 <p>For information on the capabilities and features of Horde, see the file
 <a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Horde distribution.</p>
 <div class="section" id="quick-install">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Quick Install</a></h1>
 <p>These are very terse instructions how to install Horde and its prerequisites
-on a LAMP sytem.  They are addressed to experienced administrators who know
-exactly what they are doing.  For more detailed instructions, start reading
-below at <a class="reference internal" href="#prerequisites">Prerequisites</a>.</p>
+on a <a class="reference external" href="http://www.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a> (Linux, Apache, MySQL, PHP) sytem.  They are addressed to
+experienced administrators who know exactly what they are doing.  For more
+detailed instructions, start reading below at <a class="reference internal" href="#prerequisites">Prerequisites</a>.</p>
 <ol class="arabic">
 <li><p class="first">Compiling PHP for Apache 2:</p>
 <pre class="literal-block">
@@ -77,8 +78,6 @@ pear run-scripts horde/horde_role
 pear install horde/horde
 </pre>
 </li>
-</ol>
-<ol class="arabic" start="5">
 <li><p class="first">Configure Horde:</p>
 <pre class="literal-block">
 cd config/
@@ -496,7 +495,7 @@ Horde 4.</p>
 </div>
 <p>The Horde Framework can be obtained from the Horde website and FTP server, at</p>
 <blockquote>
-<p><a class="reference external" href="http://www.horde.org/horde/">http://www.horde.org/horde/</a></p>
+<p><a class="reference external" href="http://www.horde.org/apps/horde">http://www.horde.org/apps/horde</a></p>
 <p><a class="reference external" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
 </blockquote>
 <p>Or, better yet, use a mirror that is closer to you.  The mirror list can be
@@ -506,19 +505,18 @@ found at:</p>
 <p>The FTP directory contains the Horde PHP files which can be unpacked using
 <tt class="docutils literal">tar</tt> and <tt class="docutils literal">gunzip</tt> (see <a class="reference internal" href="#installing-horde">Installing Horde</a>, below).</p>
 <p>Bleeding-edge development versions of Horde and its applications are available
-via Git; see the file <a class="reference external" href="?f=HACKING.html">docs/HACKING</a>, or visit the website
-<a class="reference external" href="http://www.horde.org/source/">http://www.horde.org/source/</a>, for information on accessing the Horde Git
-repository.</p>
+via Git; visit the website <a class="reference external" href="http://www.horde.org/development">http://www.horde.org/development</a>, for information on
+accessing the Horde Git repository.</p>
 <p>You will probably also want one or more Horde applications, since Horde
 doesn't do much by itself; a list of available applications, with links to
 descriptions and downloads, can be found at</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/projects.php">http://www.horde.org/projects.php</a></blockquote>
+<a class="reference external" href="http://www.horde.org/apps">http://www.horde.org/apps</a></blockquote>
 <p>While previous versions of Horde were numbered to correspond with a particular
 version of the IMP webmail application, that is no longer true as of Horde
 version 2.0. The current version of Horde will work with the current version
 of Horde applications. For more information about which versions are
-compatible see <a class="reference external" href="http://www.horde.org/source/versions.php">http://www.horde.org/source/versions.php</a>.</p>
+compatible see <a class="reference external" href="http://www.horde.org/development/versions">http://www.horde.org/development/versions</a>.</p>
 <p>Horde is written in PHP, and must be installed in a web-accessible directory.
 The precise location of this directory will differ from system to system. If
 you have no idea where you should be installing Horde, install it directly
@@ -775,7 +773,7 @@ be much more likely to help you if all this information is provided.</p>
 <h1><a class="toc-backref" href="#id9">6&nbsp;&nbsp;&nbsp;Configuring Applications</a></h1>
 <p>A list of available Horde applications can be found at</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/projects.php">http://www.horde.org/projects.php</a></blockquote>
+<a class="reference external" href="http://www.horde.org/apps">http://www.horde.org/apps</a></blockquote>
 <p>Instructions on configuring Horde applications can be found in the <tt class="docutils literal">INSTALL</tt>
 file in the application's <tt class="docutils literal">docs/</tt> directory.</p>
 </div>
@@ -802,27 +800,26 @@ or higher is much more reasonable).</p>
 <p>Note for international users: Horde uses GNU gettext to provide local
 translations of text displayed by applications; the translations are found in
 the po/ directory.  If a translation is not yet available for your locale (and
-you wish to create one), see the <tt class="docutils literal">horde/po/README</tt> file, or if you're having
-trouble using a provided translation, please see the
-<a class="reference external" href="?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+you wish to create one), or if you're having trouble using a provided
+translation, please see the <a class="reference external" href="?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
 </div>
 <div class="section" id="obtaining-support">
 <h1><a class="toc-backref" href="#id12">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Horde, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/faq/">http://www.horde.org/faq/</a></blockquote>
+<a class="reference external" href="http://wiki.horde.org/FAQ">http://wiki.horde.org/FAQ</a></blockquote>
 <p>The Horde Project runs a number of mailing lists, for individual applications
 and for issues relating to the project as a whole. Information, archives, and
 subscription information can be found at</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/mail/">http://www.horde.org/mail/</a></blockquote>
+<a class="reference external" href="http://www.horde.org/community/mail">http://www.horde.org/community/mail</a></blockquote>
 <p>Lastly, Horde developers, contributors and users may also be found on IRC,
 on the channel #horde on the Freenode Network (irc.freenode.net).</p>
 <p>Please keep in mind that Horde is free software written by volunteers.
 For information on reasonable support expectations, please read</p>
 <blockquote>
-<a class="reference external" href="http://www.horde.org/support.php">http://www.horde.org/support.php</a></blockquote>
+<a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
 <p>Thanks for using Horde!</p>
 <p>The Horde Team</p>
 </div>
