@@ -7,7 +7,19 @@
 <link rel="SHORTCUT ICON" type="image/x-icon" href="<?php echo $GLOBALS['host_base'] ?>/images/favicon.ico" />
 <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="js/slides.min.jquery.js"></script>
-<script type="text/javascript" src="js/analytics.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-22320801-1']);
+_gaq.push(['_trackPageview']);
+
+if (document.location.host.indexOf('horde.org') != -1) {
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+}
+</script>
 <script type="text/javascript">
 $(function(){
     $('#slides').slides({
@@ -29,6 +41,7 @@ $(function(){
         </div>
     </div>
 </body>
-<!-- Don't include yet, it's based on prototypejs -->
+<!-- Don't include yet, it's based on prototypejs -->:q
+
 <!--<script src="js/informer.js"></script>-->
 </html>
