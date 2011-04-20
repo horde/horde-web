@@ -9,8 +9,9 @@ RedirectMatch permanent (.*)/index.php $1
 Redirect permanent /about /community
 RedirectMatch permanent /consulting.* /services
 Redirect permanent /documentation.php /development/documentation
-# This doesn't work, no idea why:
+# This don't work, no idea why:
 RedirectMatch permanent /download/app/(index\.php)\?app=(.*) /download/$2
+RedirectMatch permanent /(.*)/docs/?f=(.*).html /apps/$1/docs/$2
 Redirect permanent /irc.php /community/support
 Redirect permanent /licenses/asl.php /licenses/apache
 Redirect permanent /licenses/bsdl.php /licenses/bsd
