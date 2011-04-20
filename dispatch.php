@@ -30,8 +30,10 @@ $mapper->connect('support', $_root . '/support/:action', array('controller' => '
 
 /* Apps */
 $mapper->connect('apps', $_root . '/apps', array('controller' => 'app'));
+$mapper->connect($_root . '/apps/:app/docs/:file', array('controller' => 'app', 'action' => 'docs', 'file' => 'docs'));
 $mapper->connect('app', $_root . '/apps/:app/:action', array('controller' => 'app', 'action' => 'app'));
 $mapper->connect($_root . '/apps/:app/screenshots', array('controller' => 'app', 'action' => 'screenshots'));
+
 
 /* Development */
 $mapper->connect('development', $_root . '/development/:action', array('controller' => 'development', 'action' => 'index'));
