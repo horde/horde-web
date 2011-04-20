@@ -796,26 +796,23 @@ while (!feof([STDIN|STDOUT|STDERR])) {
 <h2><a class="toc-backref" href="#id44">30.1&nbsp;&nbsp;&nbsp;fpassthru()</a></h2>
 <p>This function can fail depending on the size of the stream. Instead, use
 fread() to get the stream data:</p>
-<p>// NO: fpassthru($stream);
-while (!feof($stream)) {</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/CODING_STANDARDS</tt>, line 870)</p>
-Unexpected indentation.</div>
-<blockquote>
-echo fread($stream, 8192);</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/CODING_STANDARDS</tt>, line 871)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<p>}</p>
+<pre class="literal-block">
+// NO: fpassthru($stream);
+while (!feof($stream)) {
+    echo fread($stream, 8192);
+}
+</pre>
 </div>
 <div class="section" id="stream-get-contents">
 <h2><a class="toc-backref" href="#id45">30.2&nbsp;&nbsp;&nbsp;stream_get_contents()</a></h2>
 <p>This function was broken before PHP 5.2.7; the offset parameter did not
 respect a value of 0 (i.e. rewinding to beginning of stream).</p>
 <p>Use rewind() instead:</p>
-<p>// NO: $foo = stream_get_contents($stream, -1, 0);
+<pre class="literal-block">
+// NO: $foo = stream_get_contents($stream, -1, 0);
 rewind($stream);
-$foo = stream_get_contents($stream);</p>
+$foo = stream_get_contents($stream);
+</pre>
 </div>
 </div>
 </div>
