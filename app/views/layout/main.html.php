@@ -25,16 +25,16 @@ Horde::outputInlineScript();
 ?>
 </head>
 <body>
-    <div class="area">
-        <div class="inside">
-            <?php echo $this->render('banner'); ?>
-            <div class="podest" id="podest"></div>
-            <?php echo $this->contentForLayout ?>
-            <?php echo $this->render('footer');?>
-        </div>
-    </div>
-</body>
-<script src="<?php echo $GLOBALS['host_base'] ?>/js/toc.js"></script>
+<div class="area">
+  <div class="inside">
+    <?php echo $this->render('banner'); ?>
+    <div class="podest" id="podest"></div>
+    <?php echo $this->contentForLayout ?>
+    <?php echo $this->render('footer');?>
+  </div>
+</div>
+<script type="text/javascript" src="<?php echo $GLOBALS['host_base'] ?>/js/toc.js"></script>
 <!-- Don't include yet, it's based on prototypejs -->
 <!--<script src="js/informer.js"></script>-->
+</body>
 </html>
