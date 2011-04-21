@@ -34,6 +34,7 @@ Horde::outputInlineScript();
         </div>
     </div>
 </body>
+<script src="<?php echo $GLOBALS['host_base'] ?>/js/toc.js"></script>
 <!-- Don't include yet, it's based on prototypejs -->
 <!--<script src="js/informer.js"></script>-->
 </html>
