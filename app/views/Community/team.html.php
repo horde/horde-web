@@ -12,7 +12,7 @@
         echo $this->render('Ben_Klang');
         echo $this->render('Gunnar_Wrobel');?>
         <br />
-        <h2>Retired Developers</h2>
+        <h2><span>&nbsp;</span>Retired Developers</h2>
         <?php
         echo $this->render('Matt_Selsky');
         echo $this->render('Jon_Parise');
