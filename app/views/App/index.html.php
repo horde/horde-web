@@ -166,6 +166,7 @@
         </div>
     </div>
     <div class="rightcol" style="background: none;">
+      <?php echo $this->render('toc'); ?>
       <?php echo $this->render('releasedAppsList');?>
       <?php echo $this->render('sponsors');?>
     </div>
