@@ -80,7 +80,19 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
+        $response->setHeaders(array('Status' => '404 Not Found', 'HTTP/1.0' => '404 Not Found'));
         $response->setBody($layout->render('404'));
+    }
+
+    protected function _pageGone(Horde_Contoller_Response $response)
+    {
+        $view = $this->getView();
+        $view->page_title = '410 - Page Gone';
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setHeaders(array('Status' => '410 Page Gone', 'HTTP/1.0' => '410 Page Gone'));
+        $response->setBody($layout->render('410'));
     }
 
 }

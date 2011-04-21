@@ -31,9 +31,8 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             $template = 'thanks';
             break;
         case '410':
-            $this->page_title = '410 - Page Gone';
-            $template = '410';
-            break;
+            $this->_pageGone($response);
+            return;
         default:
             $this->_notFound($response);
             return;
