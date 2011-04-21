@@ -716,8 +716,10 @@ ul.appnav li a:hover, ul.communitynav li a:hover {
     text-decoration: underline;
 }
 
-ul.download-list, ul.sidebarNews {
+ul.sidebar, ul.sidebar ul {
     list-style-position: inside;
+}
+ul.sidebar {
     margin-bottom: 15px;
 }
 

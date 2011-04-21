@@ -10,7 +10,7 @@
      <div class="rightcol" style="background: none;">
        <div id="accordion">
          <h2>Latest News</h3>
-         <ul class="sidebarNews">
+         <ul class="sidebar">
             <?php $i = 0; ?>
             <?php foreach ($this->latestNews as $entry):
                if ($i++ >= 5) {
