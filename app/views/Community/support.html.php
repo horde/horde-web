@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Support' => 'support'))?></h2>
+      <h2><span>&nbsp;</span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Support' => 'support'))?></h2>
         <?php echo $this->render('communitynav');?>
         <div class="section">
          <div class="sectionintro">
@@ -13,7 +13,7 @@
             community channels, please check out our professional support
             options.</p>
          </div>
-            <h2><span></span>Resources</h2>
+            <h2><span>&nbsp;</span>Resources</h2>
             <div class="warning"><p>Please be careful not to have unreasonable expectations:
             you cannot demand your questions to be answered, bugs to be fixed or features
             implemented. If you require service or delivery guarantees please consider

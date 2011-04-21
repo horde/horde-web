@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-     <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Mailing Lists' => 'mail'))?></h2>
+     <h2><span>&nbsp;</span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Mailing Lists' => 'mail'))?></h2>
      <?php echo $this->render('communitynav'); ?>
      <div class="section">
         <!-- SiteSearch Google -->
@@ -33,7 +33,7 @@ href="http://www.list.org/">Mailman</a>. You can also view the <a
 href="http://www.list.org/mailman-member/">Mailman Members' Documentation</a>
 for some further information.</p>
 
- <h2><span></span>Before posting a question, consider the following points:</h2>
+ <h2><span>&nbsp;</span>Before posting a question, consider the following points:</h2>
  <p>
  <ul>
   <li><a href="http://wiki.horde.org/FAQ"><strong>Read the FAQ</a>
@@ -58,7 +58,7 @@ for some further information.</p>
 
  <?php foreach ($this->lists as $group => $group_lists): ?>
  <div class="box mail">
-  <h2><span></span><?php echo $group ?></h2>
+  <h2><span>&nbsp;</span><?php echo $group ?></h2>
   <table width="100%" cellspacing="2">
   <tr>
     <th>

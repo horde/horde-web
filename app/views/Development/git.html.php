@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Git' => 'git'))?></h2>
+      <h2><span>&nbsp;</span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('Git' => 'git'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
         <div class="sectionintro">
@@ -34,7 +34,7 @@
         </ul>
         <br />
 
-        <h2><span></span>Anonymous Git</h2>
+        <h2><span>&nbsp;</span>Anonymous Git</h2>
         <p>Anonymous Git access is available via GitHub using the
         <tt>git://</tt> protocol.</p>
 
@@ -123,7 +123,7 @@
         locally on your machine but does not exist in the master Horde branch (origin).
         These patch files will be located in your local directory.</p>
 
-        <h2><span></span>Developer Git</h2>
+        <h2><span>&nbsp;</span>Developer Git</h2>
 
         <p>Access to the live Git repository is only available over SSH. You will want
         to create an SSH key and use that with your account on dev.horde.org to avoid

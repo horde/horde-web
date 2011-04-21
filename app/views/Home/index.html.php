@@ -54,7 +54,7 @@
               </ul>
               <div class="main">
                 <div class="mainareasplit">
-                  <h2><span></span>Latest News</h2>
+                  <h2><span>&nbsp;</span>Latest News</h2>
                   <div class="planethorde">
                     <ul>
                       <?php if (empty($this->hordefeed)):?>
@@ -66,7 +66,7 @@
                       array('entry' => $entry))); endforeach; ?>
                     </ul>
                   </div>
-                  <h2><span></span>Planet Horde</h2>
+                  <h2><span>&nbsp;</span>Planet Horde</h2>
                   <div class="planethorde">
                     <ul>
                       <?php if (empty($this->planet)):?>

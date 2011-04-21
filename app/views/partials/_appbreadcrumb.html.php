@@ -1,1 +1,1 @@
-<h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller)?></h2>
+<h2><span>&nbsp;</span><?php echo HordeWeb_Utils::breadcrumbs($this->controller)?></h2>

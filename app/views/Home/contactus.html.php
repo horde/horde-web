@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>Contact Info</h2>
+      <h2><span>&nbsp;</span>Contact Info</h2>
       <div class="section">
         <div class="sectionintro">
         <p>The best way to get in touch with The Horde Project and it's

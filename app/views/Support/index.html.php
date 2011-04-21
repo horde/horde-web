@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-        <h2><span></span>Support</h2>
+        <h2><span>&nbsp;</span>Support</h2>
         <div class="section">
          <div class="sectionintro">
            <p>The Horde Project provides two levels of support for our software
@@ -11,7 +11,7 @@
            <em>using</em> Horde software, for example your email account, please
            contact your <b>service provider</b> directly.</p>
          </div>
-         <h2><span></span>Support Options</h2>
+         <h2><span>&nbsp;</span>Support Options</h2>
          <p>For information on the various support channels, please use the
          links below.</p>
 

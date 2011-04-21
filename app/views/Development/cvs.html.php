@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('CVS' => 'cvs'))?></h2>
+      <h2><span>&nbsp;</span><?php echo HordeWeb_Utils::breadcrumbs($this->controller, array('CVS' => 'cvs'))?></h2>
       <?php echo $this->render('developmentnav');?>
       <div class="section">
         <div class="sectionintro">
@@ -25,7 +25,7 @@
           href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">here</a>, and
           there are many HOWTOs available on the web.</p>
           </div>
-          <h3><span></span>The CVS Repository</h3>
+          <h3><span>&nbsp;</span>The CVS Repository</h3>
           <p>All of the code in our repository is split into a set of modules.
           However, sometimes there are multiple branches available of a module.
           A CVS branch is a mechanism for keeping multiple versions of a module;
@@ -54,7 +54,7 @@
           because one supercedes the other. However, we do tag releases, so you can
           check out IMP 3.0 with the IMP_3_0 tag.</p>
 
-         <h2><span></span>Anonymous CVS</h2>
+         <h2><span>&nbsp;</span>Anonymous CVS</h2>
 
         <p>Anonymous CVS access is available using pserver. To log in to the
         server, use the following commands:</p>
@@ -89,7 +89,7 @@
         connections a minute. The server supports a maximum of eight anonymous
         CVS connections simultaneously.</p>
 
-        <h2><span></span>Developer CVS</h2>
+        <h2><span>&nbsp;</span>Developer CVS</h2>
 
         <p>Access to the live CVS tree is only available over SSH. You must
         set the CVS_RSH variable to ssh, or the location of the ssh binary on

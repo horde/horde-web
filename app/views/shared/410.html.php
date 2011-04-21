@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>GONE!
+      <h2><span>&nbsp;</span>GONE!
       <small>[error 410]</small></h2>
 
       <p>Oh No! You seem to be looking for a page that has been removed from

@@ -32,7 +32,7 @@
             common ways of handling things like preferences, permissions, browser
             detection, user help, and more.</p>
 
-            <h2><span></span>Horde Email Platform</h2>
+            <h2><span>&nbsp;</span>Horde Email Platform</h2>
 
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail')) ?>">Horde Groupware Webmail Edition</a></h3>
 
@@ -77,7 +77,7 @@
             e-mail forwards, and setting up e-mail vacation notices (auto responder
             messages).</p>
 
-            <h2><span></span>Horde Groupware Suite</h2>
+            <h2><span>&nbsp;</span>Horde Groupware Suite</h2>
 
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware')) ?>">Horde Groupware</a></h3>
 
@@ -126,7 +126,7 @@
             provides a generic frontend to searching and managing LDAP, SQL, IMSP,
             and several other contact sources.</p>
 
-            <h2><span></span>Horde Developer Tools</h2>
+            <h2><span>&nbsp;</span>Horde Developer Tools</h2>
 
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'chora')) ?>">Chora</a></h3>
             <p>Chora is the Horde repository viewer, and it provides an advanced web-based
@@ -141,7 +141,7 @@
             system integrated with the rest of Horde. It
             runs <a href="http://bugs.horde.org/">http://bugs.horde.org/</a>.</p>
 
-            <h2><span></span>Horde Business Tools</h2>
+            <h2><span>&nbsp;</span>Horde Business Tools</h2>
 
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'hermes')) ?>">Hermes</a></h3>
             <p>Hermes is a Horde time-tracking application. It ties into address books (to
@@ -149,7 +149,7 @@
             objects). It comes with a stop watch, search and reporting capabilities, a
             MacOSX Dashboard widget and an invoice interface.</p>
 
-            <h2><span></span>Horde Web Content/Media Management Tools</h2>
+            <h2><span>&nbsp;</span>Horde Web Content/Media Management Tools</h2>
 
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ansel')) ?>">Ansel</a></h3>
             <p>Ansel is a full featured photo management application integrated with the

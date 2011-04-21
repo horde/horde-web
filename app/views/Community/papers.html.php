@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>Community</h2>
+      <h2><span>&nbsp;</span>Community</h2>
       <?php echo $this->render('communitynav');?>
       <div class="section">
 

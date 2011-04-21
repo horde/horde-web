@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>This is not the page you were looking for
+      <h2><span>&nbsp;</span>This is not the page you were looking for
       <small>[error 404]</small></h2>
 
       <p>This is one of those annoying Error 404 pages, which basically means

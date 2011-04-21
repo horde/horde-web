@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-      <h2><span></span>Horde LLC Services</h2>
+      <h2><span>&nbsp;</span>Horde LLC Services</h2>
       <?php echo $this->render('servicesnav');?>
       <div class="section">
 
