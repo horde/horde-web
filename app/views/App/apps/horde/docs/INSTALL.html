@@ -15,16 +15,15 @@
 <li><a class="reference internal" href="#prerequisites" id="id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
 <li><a class="reference internal" href="#installing-horde" id="id3">3&nbsp;&nbsp;&nbsp;Installing Horde</a><ul class="auto-toc">
 <li><a class="reference internal" href="#installing-with-pear" id="id4">3.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
-<li><a class="reference internal" href="#installing-from-release-tarballs" id="id5">3.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></li>
-<li><a class="reference internal" href="#installing-from-git" id="id6">3.3&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
+<li><a class="reference internal" href="#installing-from-git" id="id5">3.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-horde" id="id7">4&nbsp;&nbsp;&nbsp;Configuring Horde</a></li>
-<li><a class="reference internal" href="#dynamic-view-troubleshooting" id="id8">5&nbsp;&nbsp;&nbsp;Dynamic View Troubleshooting</a></li>
-<li><a class="reference internal" href="#configuring-applications" id="id9">6&nbsp;&nbsp;&nbsp;Configuring Applications</a></li>
-<li><a class="reference internal" href="#temporary-files" id="id10">7&nbsp;&nbsp;&nbsp;Temporary Files</a></li>
-<li><a class="reference internal" href="#translations" id="id11">8&nbsp;&nbsp;&nbsp;Translations</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id12">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#configuring-horde" id="id6">4&nbsp;&nbsp;&nbsp;Configuring Horde</a></li>
+<li><a class="reference internal" href="#dynamic-view-troubleshooting" id="id7">5&nbsp;&nbsp;&nbsp;Dynamic View Troubleshooting</a></li>
+<li><a class="reference internal" href="#configuring-applications" id="id8">6&nbsp;&nbsp;&nbsp;Configuring Applications</a></li>
+<li><a class="reference internal" href="#temporary-files" id="id9">7&nbsp;&nbsp;&nbsp;Temporary Files</a></li>
+<li><a class="reference internal" href="#translations" id="id10">8&nbsp;&nbsp;&nbsp;Translations</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id11">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the Horde Framework on your
@@ -62,6 +61,11 @@ make install
 </li>
 <li><p class="first">Restart Apache.</p>
 </li>
+<li><p class="first">Make sure your PEAR package is up-to-date:</p>
+<pre class="literal-block">
+pear upgrade PEAR
+</pre>
+</li>
 <li><p class="first">Register Horde PEAR channel:</p>
 <pre class="literal-block">
 pear channel-discover pear.horde.org
@@ -95,6 +99,9 @@ http://your-server/horde/
 <p>Go to Administration =&gt; Configuration. Click <tt class="docutils literal">Update All DB Schemas</tt>.</p>
 </li>
 <li><p class="first">Test Horde (optional)</p>
+</li>
+</ol>
+<blockquote>
 <p>Enable the test script in the Horde configuration at the <tt class="docutils literal">General</tt> in the
 <tt class="docutils literal">PHP Settings</tt> section, or edit <tt class="docutils literal">horde/config/conf.php</tt> and set
 <tt class="docutils literal">'testdisable'</tt> to false.</p>
@@ -106,8 +113,7 @@ http://your-server/horde/test.php
 <p class="first admonition-title">Important</p>
 <p class="last">Disable the test script again after you are done.</p>
 </div>
-</li>
-</ol>
+</blockquote>
 </div>
 <div class="section" id="prerequisites">
 <h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
@@ -431,14 +437,17 @@ tarballs. Finally, if you want to run the latest development code, or get the
 latest, not yet released, fixes, you can install Horde from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
-<p>First you need to register the Horde PEAR channel server to your local PEAR
+<p>Before beginning, make sure your PEAR package is up-to-date:</p>
+<blockquote>
+pear upgrade PEAR</blockquote>
+<p>Next, you need to register the Horde PEAR channel server to your local PEAR
 system. This has to be done only <strong>once</strong> ever on a single PEAR system:</p>
 <pre class="literal-block">
 pear channel-discover pear.horde.org
 </pre>
 <p>Next install a so-called &quot;role&quot; for Horde. This role defines where Horde is
-supposed to be installed. This should be a directory in your web server's web
-root, e.g. <tt class="docutils literal">/var/www/horde</tt>. Again this has to be done only <strong>once</strong> ever on
+installed. This should be a directory in your web server's web root, e.g.
+<tt class="docutils literal">/var/www/horde</tt>. Again this has to be done only <strong>once</strong> ever on
 a single PEAR system:</p>
 <pre class="literal-block">
 pear install horde/horde_role
@@ -485,60 +494,8 @@ php_value include_path /var/www/horde/pear/php
 SetEnv PHP_PEAR_SYSCONF_DIR /var/www/horde
 </pre>
 </div>
-<div class="section" id="installing-from-release-tarballs">
-<h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></h2>
-<div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">As of today, there are no tarballs released for Horde 4
-yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
-Horde 4.</p>
-</div>
-<p>The Horde Framework can be obtained from the Horde website and FTP server, at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/apps/horde">http://www.horde.org/apps/horde</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/pub/horde/">ftp://ftp.horde.org/pub/horde/</a></p>
-</blockquote>
-<p>Or, better yet, use a mirror that is closer to you.  The mirror list can be
-found at:</p>
-<blockquote>
-<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
-<p>The FTP directory contains the Horde PHP files which can be unpacked using
-<tt class="docutils literal">tar</tt> and <tt class="docutils literal">gunzip</tt> (see <a class="reference internal" href="#installing-horde">Installing Horde</a>, below).</p>
-<p>Bleeding-edge development versions of Horde and its applications are available
-via Git; visit the website <a class="reference external" href="http://www.horde.org/development">http://www.horde.org/development</a>, for information on
-accessing the Horde Git repository.</p>
-<p>You will probably also want one or more Horde applications, since Horde
-doesn't do much by itself; a list of available applications, with links to
-descriptions and downloads, can be found at</p>
-<blockquote>
-<a class="reference external" href="http://www.horde.org/apps">http://www.horde.org/apps</a></blockquote>
-<p>While previous versions of Horde were numbered to correspond with a particular
-version of the IMP webmail application, that is no longer true as of Horde
-version 2.0. The current version of Horde will work with the current version
-of Horde applications. For more information about which versions are
-compatible see <a class="reference external" href="http://www.horde.org/development/versions">http://www.horde.org/development/versions</a>.</p>
-<p>Horde is written in PHP, and must be installed in a web-accessible directory.
-The precise location of this directory will differ from system to system. If
-you have no idea where you should be installing Horde, install it directly
-under the root of your webserver's document tree.</p>
-<p>Since Horde is written in PHP, there is no compilation necessary; simply
-expand the distribution where you want it to reside and rename the root
-directory of the distribution to whatever you wish to appear in the
-URL. Please note that the default configuration expects Horde to be installed
-in the directory <tt class="docutils literal">/horde</tt> though. For example, with the Apache webserver's
-default document root of <tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
-<pre class="literal-block">
-cd /usr/local/apache/htdocs
-tar zxvf /path/to/horde-x.y.z.tar.gz
-mv horde-x.y.z horde
-</pre>
-<p>You would then find Horde at the URL:</p>
-<pre class="literal-block">
-http://your-server/horde/
-</pre>
-</div>
 <div class="section" id="installing-from-git">
-<h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
+<h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
 <p>See:</p>
 <pre class="literal-block">
 http://horde.org/source/git.php
@@ -546,7 +503,7 @@ http://horde.org/source/git.php
 </div>
 </div>
 <div class="section" id="configuring-horde">
-<h1><a class="toc-backref" href="#id7">4&nbsp;&nbsp;&nbsp;Configuring Horde</a></h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Configuring Horde</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring the web server</p>
 <p>Horde requires the following webserver settings. Examples shown are for
@@ -747,7 +704,7 @@ Handler</tt> tab in the Horde configuration.</p>
 </ol>
 </div>
 <div class="section" id="dynamic-view-troubleshooting">
-<h1><a class="toc-backref" href="#id8">5&nbsp;&nbsp;&nbsp;Dynamic View Troubleshooting</a></h1>
+<h1><a class="toc-backref" href="#id7">5&nbsp;&nbsp;&nbsp;Dynamic View Troubleshooting</a></h1>
 <p>Horde's dynamic, AJAX-based views differ from traditional Horde applications in
 that they require javascript support; in fact, javascript performs the bulk of
 the page display.  As such, debugging the dynamic views is more complex than
@@ -770,7 +727,7 @@ reliable way to reproduce the error.  Developers/other interested folks will
 be much more likely to help you if all this information is provided.</p>
 </div>
 <div class="section" id="configuring-applications">
-<h1><a class="toc-backref" href="#id9">6&nbsp;&nbsp;&nbsp;Configuring Applications</a></h1>
+<h1><a class="toc-backref" href="#id8">6&nbsp;&nbsp;&nbsp;Configuring Applications</a></h1>
 <p>A list of available Horde applications can be found at</p>
 <blockquote>
 <a class="reference external" href="http://www.horde.org/apps">http://www.horde.org/apps</a></blockquote>
@@ -778,7 +735,7 @@ be much more likely to help you if all this information is provided.</p>
 file in the application's <tt class="docutils literal">docs/</tt> directory.</p>
 </div>
 <div class="section" id="temporary-files">
-<h1><a class="toc-backref" href="#id10">7&nbsp;&nbsp;&nbsp;Temporary Files</a></h1>
+<h1><a class="toc-backref" href="#id9">7&nbsp;&nbsp;&nbsp;Temporary Files</a></h1>
 <p>Various Horde applications will generate temporary files in PHP's temporary
 directory (see the <tt class="docutils literal">General</tt> tab in the Horde configuration).  For various
 reasons, some of these files may not be removed when the user's session
@@ -796,7 +753,7 @@ garbage collection rate is recommended (setting session.gc_divisor to 10,000
 or higher is much more reasonable).</p>
 </div>
 <div class="section" id="translations">
-<h1><a class="toc-backref" href="#id11">8&nbsp;&nbsp;&nbsp;Translations</a></h1>
+<h1><a class="toc-backref" href="#id10">8&nbsp;&nbsp;&nbsp;Translations</a></h1>
 <p>Note for international users: Horde uses GNU gettext to provide local
 translations of text displayed by applications; the translations are found in
 the po/ directory.  If a translation is not yet available for your locale (and
@@ -804,7 +761,7 @@ you wish to create one), or if you're having trouble using a provided
 translation, please see the <a class="reference external" href="?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id12">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id11">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Horde, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>

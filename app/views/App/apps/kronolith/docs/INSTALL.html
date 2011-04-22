@@ -14,11 +14,10 @@
 <li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
 <li><a class="reference internal" href="#installing-kronolith" id="id2">2&nbsp;&nbsp;&nbsp;Installing Kronolith</a><ul class="auto-toc">
 <li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
-<li><a class="reference internal" href="#installing-from-release-tarballs" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-kronolith" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Kronolith</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#configuring-kronolith" id="id4">3&nbsp;&nbsp;&nbsp;Configuring Kronolith</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id5">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the Kronolith web-based
@@ -122,43 +121,9 @@ the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 pear install -a -B horde/kronolith
 </pre>
 </div>
-<div class="section" id="installing-from-release-tarballs">
-<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></h2>
-<div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">As of today, there are no tarballs released for Kronolith 3
-yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
-Kronolith 3.</p>
-</div>
-<p>Kronolith can be obtained from the Horde website and FTP server, at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/apps/kronolith">http://www.horde.org/apps/kronolith</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/pub/kronolith/">ftp://ftp.horde.org/pub/kronolith/</a></p>
-</blockquote>
-<p>Or use the mirror closest to you:</p>
-<blockquote>
-<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
-<p>Kronolith is written in PHP, and must be installed in a web-accessible
-directory.  The precise location of this directory will differ from system to
-system.  Conventionally, Kronolith is installed directly underneath Horde in
-the webserver's document tree.</p>
-<p>Since Kronolith is written in PHP, there is no compilation necessary; simply
-expand the distribution where you want it to reside and rename the root
-directory of the distribution to whatever you wish to appear in the URL.  For
-example, with the Apache webserver's default document root of
-<tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
-<pre class="literal-block">
-cd /usr/local/apache/htdocs/horde
-tar zxvf /path/to/kronolith-x.y.z.tar.gz
-mv kronolith-x.y.z kronolith
-</pre>
-<p>and would then find Kronolith at the URL</p>
-<blockquote>
-<a class="reference external" href="http://your-server/horde/kronolith/">http://your-server/horde/kronolith/</a></blockquote>
-</div>
 </div>
 <div class="section" id="configuring-kronolith">
-<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Kronolith</a></h1>
+<h1><a class="toc-backref" href="#id4">3&nbsp;&nbsp;&nbsp;Configuring Kronolith</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring Horde for Kronolith</p>
 <p>Kronolith requires a permanent <tt class="docutils literal">Shares</tt> backend in Horde to manage
@@ -234,7 +199,7 @@ following:</p>
 </ol>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id5">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Kronolith, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>

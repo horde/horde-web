@@ -64,41 +64,6 @@ binary PECL packages that need to be compiled, specify both the <tt class="docut
 pear install -a -B horde/mnemo
 </pre>
 </div>
-<div class="section" id="installing-from-release-tarballs">
-<h2>Installing from Release Tarballs</h2>
-<div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">As of today, there are no tarballs released for Mnemo 3
-yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
-Mnemo 3.</p>
-</div>
-<p>Mnemo can be obtained from the Horde website and FTP server, at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/apps/mnemo">http://www.horde.org/apps/mnemo</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/pub/mnemo/">ftp://ftp.horde.org/pub/mnemo/</a></p>
-</blockquote>
-<p>Or use the mirror closest to you:</p>
-<blockquote>
-<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
-<p>Mnemo is written in PHP, and must be installed in a web-accessible directory.
-The precise location of this directory will differ from system to system.
-Conventionally, Mnemo is installed directly underneath Horde in the
-webserver's document tree.</p>
-<p>Since Mnemo is written in PHP, there is no compilation necessary; simply
-expand the distribution where you want it to reside and rename the root
-directory of the distribution to whatever you wish to appear in the URL.  For
-example, with the Apache webserver's default document root of
-<tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
-<pre class="literal-block">
-cd /usr/local/apache/htdocs/horde
-tar zxvf /path/to/mnemo-x.y.z.tar.gz
-mv mnemo-x.y.z mnemo
-</pre>
-<p>and would then find Mnemo at the URL:</p>
-<pre class="literal-block">
-http://your-server/horde/mnemo/
-</pre>
-</div>
 </div>
 <div class="section" id="configuring-mnemo">
 <h1>Configuring Mnemo</h1>
