@@ -141,7 +141,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $view->page_title = 'Documentation - ' . $view->appnameHuman . ' - The Horde Project';
         Horde::startBuffer();
-        include $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs/' . $this->_matchDict->file . '.html';
+        include $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs/' . ($this->_matchDict->file ? $this->_matchDict->file : 'docs') . '.html';
         $view->content = Horde::endBuffer();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
