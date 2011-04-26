@@ -30,7 +30,7 @@
          are in need of support beyond the scope or ability of the community you
          may hire a Horde, LLC consultant to meet your needs.</p>
          <p>Please see our
-         Professional Servcies page for more information.</p>
+         <?php echo $this->linkTo('Professional Services', array('controller' => 'services'))?> page for more information.</p>
 
         </div>
     </div>
