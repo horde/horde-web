@@ -28,7 +28,7 @@
 <p>A flyer for Horde Groupware summarizes the features and requirements is
 available as a <a href="<?php echo $GLOBALS['host_base']?>/papers/groupware.pdf">
 PDF file for download</a>
-(<a href="<?php echo $GLOABALS['host_base'] ?>/papers/groupware-cmyk.pdf">
+(<a href="<?php echo $GLOBALS['host_base'] ?>/papers/groupware-cmyk.pdf">
 CMYK version</a>).</p>
 
 <p>Please see the
