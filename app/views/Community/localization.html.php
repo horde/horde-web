@@ -22,6 +22,7 @@
         <li><?php HordeWeb_Utils::fimg('es') ?>Catalan</li>
         <li><?php HordeWeb_Utils::fimg('cn') ?>Chinese (Simplified)</li>
         <li><?php HordeWeb_Utils::fimg('tw') ?>Chinese (Traditional)</li>
+        <li><?php HordeWeb_Utils::fimg('hr') ?>Croatian</li>
         <li><?php HordeWeb_Utils::fimg('cz') ?>Czech</li>
         <li><?php HordeWeb_Utils::fimg('dk') ?>Danish</li>
         <li><?php HordeWeb_Utils::fimg('nl') ?>Dutch</li>
@@ -42,9 +43,9 @@
         <li><?php HordeWeb_Utils::fimg('lv') ?>Latvian</li>
         <li><?php HordeWeb_Utils::fimg('lt') ?>Lithuanian</li>
         <li><?php HordeWeb_Utils::fimg('mk') ?>Macedonian</li>
-        <li><?php HordeWeb_Utils::fimg('no') ?>Norwegian BokmÂl</li>
+        <li><?php HordeWeb_Utils::fimg('no') ?>Norwegian Bokmål</li>
         <li><?php HordeWeb_Utils::fimg('no') ?>Norwegian Nynorsk</li>
-        <li><?php HordeWeb_Utils::fimg('ir') ?>Persian (Western)</li>
+        <li><?php HordeWeb_Utils::fimg('ir') ?>Farsi (Persian)</li>
         <li><?php HordeWeb_Utils::fimg('pl') ?>Polish</li>
         <li><?php HordeWeb_Utils::fimg('pt') ?>Portuguese</li>
         <li><?php HordeWeb_Utils::fimg('ro') ?>Romanian</li>
