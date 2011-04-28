@@ -11,4 +11,4 @@ bugs site, and we use many of the advanced features there.</p>
 <h3>More Information</h3>
 
 <p>If you're interested in contributing to or using Whups, <a href="<?php echo
-$base_url ?>/mail/">join the mailing list</a>.</p>
+$this->urlWriter->urlFor('community', array('action' => 'mail')) ?>">join the mailing list</a>.</p>
