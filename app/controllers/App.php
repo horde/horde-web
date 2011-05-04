@@ -72,8 +72,10 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _index(Horde_Controller_Response $response)
     {
         $view = $this->getView();
-        $view->page_title = $view->appnameHuman . ' - The Horde Project';
-        $view->stable = $this->_matchDict['app'] == 'h3' ? HordeWeb_Utils::getH3Apps() : HordeWeb_Utils::getH4Apps();
+        $view->page_title = ($this->_matchDict['app'] == 'h3' ?
+            'Horde 3' : 'Horde 4') . ' Applications - The Horde Project';
+        $view->stable = $this->_matchDict['app'] == 'h3' ?
+             HordeWeb_Utils::getH3Apps() : HordeWeb_Utils::getH4Apps();
         $view->appListController = array('controller' => 'app', 'action' => 'app');
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
