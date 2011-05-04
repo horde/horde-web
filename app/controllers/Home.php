@@ -30,6 +30,10 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             $view->page_title = 'Thanks - The Horde Project';
             $template = 'thanks';
             break;
+        case 'logos':
+            $view->page_title = 'Logos - The Horde Project';
+            $template = 'logos';
+            break;
         case '410':
             $this->_pageGone($response);
             return;

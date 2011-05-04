@@ -98,6 +98,11 @@ class HordeWeb_Utils
         return $s;
     }
 
+    static public function logoImg($logo)
+    {
+        return '<img src="' . $GLOBALS['host_base'] . '/images/logos/' . $logo . '" alt="' . $logo . '" />';
+    }
+
     static public function breadcrumbs($controller, $params = array())
     {
         $separator = '&nbsp;&nbsp;&raquo;&nbsp;&nbsp;';

@@ -2,7 +2,6 @@ allow from all
 
 # Old website's URLs. Still missing:
 # /demo
-# /logos
 
 RedirectMatch permanent (.*)/index.php $1
 
