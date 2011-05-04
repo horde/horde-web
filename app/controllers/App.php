@@ -20,10 +20,13 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     {
         switch ($this->_matchDict->action) {
         case 'index':
-        case 'h3':
             $this->_index($response);
             break;
         case 'app':
+            if ($this->_matchDict->app == 'h3') {
+                $this->_index($response);
+                break;
+            }
             $this->_app($response);
             break;
         case 'authors':
@@ -70,12 +73,12 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->page_title = $view->appnameHuman . ' - The Horde Project';
-        $view->stable = $this->_matchDict['action'] == 'h3' ? HordeWeb_Utils::getH3Apps() : HordeWeb_Utils::getH4Apps();
+        $view->stable = $this->_matchDict['app'] == 'h3' ? HordeWeb_Utils::getH3Apps() : HordeWeb_Utils::getH4Apps();
         $view->appListController = array('controller' => 'app', 'action' => 'app');
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
-        $response->setBody($layout->render( $this->_matchDict['action'] == 'h3' ? 'horde3' : 'index'));
+        $response->setBody($layout->render( $this->_matchDict['app'] == 'h3' ? 'horde3' : 'index'));
     }
 
     /**

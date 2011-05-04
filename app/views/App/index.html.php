@@ -20,7 +20,7 @@
 
             <p>Can't find your favorite application listed for Horde 4? Not all
             of our applications have been ported to Horde 4 yet. Please check
-            our <a href="<?php echo $this->urlWriter->urlFor(array('controller' => 'app', 'action' => 'h3'))?>">Horde 3 Apps</a> page.</p>
+            our <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'h3'))?>">Horde 3 Apps</a> page.</p>
             <p>Still didn't find what you were looking for?
             <a href="<?php echo $this->urlWriter->urlFor('services'); ?>">Horde
             developers and consultants</a> are available to develop custom
