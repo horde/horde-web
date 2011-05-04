@@ -31,12 +31,12 @@
             <p>Horde 4 and all Horde 4 applications now utilize a PEAR based
             installation method. You can install all Horde 4 applications and
             libraries by following the directions in the <a href="<?php echo
-            $this->urlWriter->urlFor('app', array('app' => $this->appname,
-            'action' => 'docs', 'f' => 'INSTALL.html')) ?>">documentation</a>.  You may
+            $this->urlWriter->urlFor(array('controller' => 'app', 'app' => 'horde',
+            'action' => 'docs', 'file' => 'INSTALL')) ?>">documentation</a>.  You may
             also download the PEAR tarball from
             our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
 
-            <h2><span>&nbsp;</span>Horde Application Framework</h2>
+            <h2><span>&nbsp;</span>Horde Application Framework (</h2>
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'horde')) ?>">The Horde Application Framework</a></h3>
             <p>The Horde Framework is the glue that all Horde applications have in
             common. It is many things, including some coding standards, common
