@@ -109,6 +109,13 @@ class HordeWeb_Utils
         return $s;
     }
 
+    /**
+     * Generates an img tag for a logo
+     *
+     * @param string $logo  The logo
+     *
+     * @return string  The img tag
+     */
     static public function logoImg($logo)
     {
         return '<img src="' . $GLOBALS['host_base'] . '/images/logos/' . $logo . '" alt="' . $logo . '" />';

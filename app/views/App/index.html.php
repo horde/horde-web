@@ -36,8 +36,11 @@
             also download the PEAR tarball from
             our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
 
-            <h2><span>&nbsp;</span>Horde Application Framework (</h2>
-            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'horde')) ?>">The Horde Application Framework</a></h3>
+            <h2><span>&nbsp;</span>Horde Application Framework</h2>
+            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'horde')) ?>">
+            The Horde Application Framework</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'horde')) ?>)
+            </span></h3>
             <p>The Horde Framework is the glue that all Horde applications have in
             common. It is many things, including some coding standards, common
             code, and inter-application communication. The shared code provides
@@ -52,13 +55,21 @@
             installing the separate applications individually, or install the
             Horde 3 version of the bundles.</p>
 
-            <h3 id="imp"><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'imp')) ?>">IMP</a></h3>
+            <h3 id="imp"><a
+            href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'imp')) ?>">
+            IMP</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'imp')) ?>)
+            </span></h3>
             <p>IMP provides webmail access to any IMAP or POP3
             mailbox, and handles internet standard MIME attachments, user defined
             filters, preferences, and more. IMP was the first Horde application, and in
             some respects Horde grew out of it.</p>
 
-            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ingo')) ?>">Ingo</a></h3>
+            <h3><a
+            href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ingo')) ?>">
+            Ingo</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'ingo')) ?>)
+            </span></h3>
             <p>Ingo is an email filter rules manager.  It can generate Sieve, procmail and
             IMAP scripts and upload them to or execute them on the server (using a
             timsieved or VFS FTP driver, or the PHP IMAP extension, respectively).</p>
@@ -91,26 +102,41 @@
             fully manage a hierarchical file system stored in a variety of backends such as
             a SQL database, as part of a real filesystem, or on an FTP server.</p>
 -->
-            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'kronolith')) ?>">Kronolith</a></h3>
+            <h3><a
+            href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'kronolith')) ?>">
+            Kronolith</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'kronolith')) ?>)
+            </span></h3>
             <p>The Kronolith calendar provides a robust web-based calendar for any
             number of users or groups, with the ability to show any number of
             calendars in a single overlaid view. Users can create any number of
             calendars and grant read, edit, or full permissions to any user,
             group, or any combination thereof.</p>
 
-            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'mnemo')) ?>">Mnemo</a></h3>
+            <h3><a
+            href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'mnemo')) ?>">
+            Mnemo</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'mnemo')) ?>)
+            </span></h3>
             <p>Mnemo is a note manager. It has the same sharing features as
             Kronolith and Nag, allowing workgroups to have a common notepad as
             well as private notes for individuals.</p>
 
-            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'nag')) ?>">Nag</a></h3>
+            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'nag')) ?>">
+            Nag</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'nag')) ?>)
+            </span></h3>
             <p>Nag is a multiuser task list manager. Users can create any number
             of &quot;task lists&quot;, which can be shared with individual users,
             groups, or any combination. Any number of task lists can be viewed in
             a single list. Tasks have due dates, completion times, and can be
             imported and exported in multiple formats.</p>
 
-            <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'turba')) ?>">Turba</a></h3>
+            <h3><a
+            href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'turba')) ?>">
+            Turba</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'turba')) ?>)
+            </span></h3>
             <p>Turba is the Horde address book / contact management program. It
             provides a generic frontend to searching and managing LDAP, SQL, IMSP,
             and several other contact sources.</p>
