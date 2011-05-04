@@ -1,13 +1,25 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v4.0.2-git
+v4.0.3-git
 ----------
 
+[mjr] Fix issue causing credentials to be lost when accessing the API during
+      ActiveSync requests (<a href="http://bugs.horde.org/ticket/9733">Bug #9733</a>).
+[jan] Store preferences for guests in the session.
+
+
+------
+v4.0.2
+------
+
+[jan] SECURITY: Fix permission checks of guest users on system shares.
+[mms] SECURITY: Fix deletion of unwanted HTML nodes in XSS filter.
 [mms] Fix authentication failure when TOS is not accepted.
 [jan] Don't show IMP compose link if user doesn't have permissions to IMP (Bug
       #10016).
 [mms] Fix issue causing slow syncs only in SyncML (<a href="http://bugs.horde.org/ticket/10008">Bug #10008</a>).
 [jan] Fix adding categories.
+[jan] Fix listing users in Customsql driver (<a href="http://bugs.horde.org/ticket/9963">Bug #9963</a>).
 [jan] Fix calculation of last password change in LDAP account portal block (Bug
       #9770).
 [jan] Don't check for outdated DB schemas if database support is disabled (Bug
