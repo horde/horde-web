@@ -814,6 +814,10 @@ div.mail {
     text-align: left;
 }
 
+.alert {
+    font-weight: bold;
+    font-size: 20px;
+}
 .thanks, .logos
 {
     color: #556AA1;

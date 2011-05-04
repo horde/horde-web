@@ -36,6 +36,17 @@ class HordeWeb_Utils
         return $horde_four_apps;
     }
 
+    /**
+     * Get list of Horde 4 released applications.
+     *
+     * @return array
+     */
+    static public function getH3Apps()
+    {
+        require $GLOBALS['fs_base'] .'/config/versions.php';
+        return $horde_three_apps;
+    }
+
     static public function getDevApps()
     {
         require $GLOBALS['fs_base'] .'/config/versions.php';

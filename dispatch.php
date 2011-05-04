@@ -30,7 +30,8 @@ $mapper->connect('licenses', $_root . '/licenses/:action', array('controller' =>
 $mapper->connect('support', $_root . '/support/:action', array('controller' => 'support', 'action' => 'index'));
 
 /* Apps */
-$mapper->connect('apps', $_root . '/apps', array('controller' => 'app'));
+$mapper->connect('apps', $_root . '/apps', array('controller' => 'app', 'action' => 'index'));
+$mapper->connect('apps', $_root . '/apps/h3', array('controller' => 'app', 'action' => 'h3'));
 $mapper->connect($_root . '/apps/:app/docs/:file', array('controller' => 'app', 'action' => 'docs'));
 $mapper->connect('app', $_root . '/apps/:app/:action', array('controller' => 'app', 'action' => 'app'));
 $mapper->connect($_root . '/apps/:app/screenshots', array('controller' => 'app', 'action' => 'screenshots'));

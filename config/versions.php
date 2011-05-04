@@ -48,7 +48,117 @@ $horde_four_apps = array(
         'pear' => true
     ),
 );
-
+$horde_three_apps = array(
+    'horde' => array(
+        'name' => 'Horde',
+        'ver' => '3.3.11',
+        'date' => 'November 22 2010'
+    ),
+    'groupware' => array(
+        'name' => 'Horde Groupware',
+        'ver' => '1.2.9',
+        'date' => 'November 22 2010',
+        // Define 'dir' if it is not the same as the array key
+        'dir' => 'horde-groupware'
+    ),
+    'webmail' => array(
+        'name' => 'Horde Groupware Webmail Edition',
+        'ver' => '1.2.9',
+        'date' => 'November 22 2010',
+        'dir' => 'horde-webmail'
+    ),
+    'imp' => array(
+        'name' => 'IMP',
+        'ver' => 'H3 (4.3.9)',
+        'date' => 'October 25 2010',
+    ),
+    'dimp' => array(
+        'name' => 'DIMP',
+        'ver' => 'H3 (1.1.6)',
+        'date' => 'October 25 2010'
+    ),
+    'mimp' => array(
+        'name' => 'MIMP',
+        'ver' => 'H3 (1.1.3)',
+        'date' => 'December 15 2009'
+    ),
+    'turba' => array(
+        'name' => 'Turba',
+        'ver' => 'H3 (2.3.5)',
+        'date' => 'September 28 2010'
+    ),
+    'ingo' => array(
+        'name' => 'Ingo',
+        'ver' => 'H3 (1.2.5)',
+        'date' => 'September 28 2010'
+    ),
+    'kronolith' => array(
+        'name' => 'Kronolith',
+        'ver' => 'H3 (2.3.5)',
+        'date' => 'September 28 2010'
+    ),
+    'nag' => array(
+        'name' => 'Nag',
+        'ver' => 'H3 (2.3.6)',
+        'date' => 'September 28 2010',
+        'pear' => true,
+    ),
+    'mnemo' => array(
+        'name' => 'Mnemo',
+        'ver' => 'H3 (2.2.4)',
+        'date' => 'September 28 2010'
+    ),
+    'chora' => array(
+        'name' => 'Chora',
+        'ver' => 'H3 (2.1.1)',
+        'date' => 'April 28 2010'
+    ),
+    'gollem' => array(
+        'name' => 'Gollem',
+        'ver' => 'H3 (1.1.2)',
+        'date' => 'September 28 2010'
+    ),
+    'passwd' => array(
+        'name' => 'Passwd',
+        'ver' => 'H3 (3.1.3)',
+        'date' => 'April 28 2010'
+    ),
+    'forwards' => array(
+        'name' => 'Forwards',
+        'ver' => 'H3 (3.2.1)',
+        'date' => 'April 28 2010'
+    ),
+    'vacation' => array(
+        'name' => 'Vacation',
+        'ver' => 'H3 (3.2.1)',
+        'date' => 'April 28 2010'
+    ),
+    'jeta' => array(
+        'name' => 'Jeta',
+        'ver' => 'H3 (1.0)',
+        'date' => 'January 28 2007'
+    ),
+    'whups' => array(
+        'name' => 'Whups',
+        'ver' => 'H3 (1.0.1)',
+        'date' => 'November 6 2009'
+    ),
+    'hermes' => array(
+        'name' => 'Hermes',
+        'ver' => 'H3 (1.0.1)',
+        'date' => 'April 28 2010'
+    ),
+    'ansel' => array(
+        'name' => 'Ansel',
+        'ver' => 'H3 (1.1.2)',
+        'date' => 'September 28 2010'
+    ),
+    'klutz' => array(
+        'name' => 'Klutz',
+        'ver' => 'H3 (1.0)',
+        'date' => 'March 19 2009'
+    ),
+);
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
