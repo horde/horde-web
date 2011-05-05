@@ -7,20 +7,20 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.1',
-        'date' => 'April 20 2011',
+        'ver' => '4.0.2',
+        'date' => 'May 3 2011',
         'pear' => true
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (5.0.3)',
+        'date' => 'May 3 2011',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (3.0.2)',
+        'date' => 'May 3 2011',
         'pear' => true
     ),
     'ingo' => array(
@@ -31,14 +31,14 @@ $horde_four_apps = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (3.0.2)',
+        'date' => 'May 3 2011',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0)',
-        'date' => 'April 5 2011',
+        'ver' => 'H4 (3.0.1)',
+        'date' => 'May 3 2011',
         'pear' => true
     ),
     'mnemo' => array(
@@ -162,8 +162,8 @@ $horde_three_apps = array(
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.1',
-        'date' => 'April 20 2011',
+        'ver' => '4.0.2',
+        'date' => 'May 3 2011',
         'pear' => true,
     ),
     'groupware' => array(
@@ -181,8 +181,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (5.0.3)',
+        'date' => 'May 3 2011',
         'pear' => true,
     ),
     'dimp' => array(
@@ -197,8 +197,8 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (3.0.2)',
+        'date' => 'May 3 2011',
         'pear' => true,
     ),
     'ingo' => array(
@@ -209,14 +209,14 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (3.0.2)',
+        'date' => 'May 3 2011',
         'pear' => true,
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0)',
-        'date' => 'April 5 2011',
+        'ver' => 'H4 (3.0.1)',
+        'date' => 'May 3 2011',
         'pear' => true,
     ),
     'mnemo' => array(
