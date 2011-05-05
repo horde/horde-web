@@ -26,16 +26,18 @@
           <?php echo $this->linkTo('clone our Git repository', array(
             'controller' => 'development', 'action' => 'git'))?>. Weekly <a
           href="http://localhost/source/snapshots.php">snapshots</a> are also
-          made available, and of course, there is also the release downloads.
-          You may also browse our <a href="http://git.horde.org">Git</a> and
+          made available.</p>
+          <p>You may also browse our <a href="http://git.horde.org">Git</a> and
           older <a href="http://cvs.horde.org">CVS</a> code trees directly
           online.
 
           <h3>Versions</h3>
           <p>Being a mature project, there are quite a few older versions of our
           software. Horde 4 is the most recent version of the Application
-          Framework. See how the different versions of the various pieces of
-          Horde fit together.
+          Framework and all new development is to be done against this.</P
+          <p>See how the different <?php echo $this->linkTo('versions', array(
+            'controller' => 'development', 'action' => 'versions'))?> of the
+          various pieces of Horde fit together.</p>
 
       </div>
     </div>
