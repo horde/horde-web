@@ -14,15 +14,22 @@
           <h3>Contribute</h3>
           <p>Want to get involved? The Horde Project is open to anyone interested
           in contributing.
-          <?php echo $this->linkTo('See how', array('controller' => 'development', 'action' => 'contribute'))?>
+          <?php echo $this->linkTo(
+            'See how', array(
+              'controller' => 'development',
+              'action' => 'contribute'))?>
           to get started.
 
           <h3>Source Code</h3>
           <p>Horde code may be obtained from a variety of sources, depending on
           your needs. If you intend to contribute to the project, you should
-          clone our Git repository. Weekly snapshots are also made available, and
-          of course, there is also the release downloads. You may also browse
-          our Git and older CVS code trees directly online.
+          <?php echo $this->linkTo('clone our Git repository', array(
+            'controller' => 'development', 'action' => 'git'))?>. Weekly <a
+          href="http://localhost/source/snapshots.php">snapshots</a> are also
+          made available, and of course, there is also the release downloads.
+          You may also browse our <a href="http://git.horde.org">Git</a> and
+          older <a href="http://cvs.horde.org">CVS</a> code trees directly
+          online.
 
           <h3>Versions</h3>
           <p>Being a mature project, there are quite a few older versions of our
