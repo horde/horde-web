@@ -48,6 +48,7 @@ $horde_four_apps = array(
         'pear' => true
     ),
 );
+
 $horde_three_apps = array(
     'horde' => array(
         'name' => 'Horde',
@@ -159,6 +160,7 @@ $horde_three_apps = array(
         'date' => 'March 19 2009'
     ),
 );
+
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
@@ -274,6 +276,16 @@ $horde_apps_stable = array(
         'name' => 'Klutz',
         'ver' => 'H3 (1.0)',
         'date' => 'March 19 2009'
+    ),
+    'content' => array(
+        'ver' => 'H4 (1.0)',
+        'date' => 'April 5 2011',
+        'pear' => true,
+    ),
+    'timeobjects' => array(
+        'ver' => 'H4 (1.0.1)',
+        'date' => 'May 9 2011',
+        'pear' => true,
     ),
 );
 
