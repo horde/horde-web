@@ -76,9 +76,14 @@ latest, not yet released, fixes, you can install Ingo from Git.</p>
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> to prepare a PEAR
 environment for Horde and install the Horde Framework.</p>
-<p>When installing Ingo through PEAR now, the installer will automatically
-install any dependencies of Ingo too. By default, only the required
-dependencies will be installed:</p>
+<p>When installing Ingo through PEAR now, the installer will automatically install
+any dependencies of Ingo too. If you want to install Ingo with all optional
+dependencies, but without the binary PECL packages that need to be compiled,
+specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
+<pre class="literal-block">
+pear install -a -B horde/ingo
+</pre>
+<p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
 pear install horde/ingo
 </pre>
@@ -88,12 +93,6 @@ extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
 pear install -a horde/ingo
-</pre>
-<p>If you want to install Ingo with all optional dependencies, but without the
-binary PECL packages that need to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the
-<tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
-<pre class="literal-block">
-pear install -a -B horde/ingo
 </pre>
 </div>
 </div>
