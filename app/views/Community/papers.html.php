@@ -10,6 +10,14 @@
         chronological order.</p>
 
         <p><a
+        href="<?php echo $GLOBALS['host_base'] ?>/papers/20110512_LinuxTag_horde4.pdf">
+        The Horde 4 PHP framework</a> was presented at <a
+        href="http://www.linuxtag.org/2011/">LinuxTag 2011</a> by <a
+        href="<?php echo $this->urlWriter->urlFor('team', array('anchor' => 'gunnar')) ?>">
+        Gunnar</a>. The presentation is available as a PDF and on <a
+        href="http://www.slideshare.net/wrobel/the-horde-4-php-framework-7956019">Slideshare</a>.</p>
+
+        <p><a
         href="<?php echo $this->urlWriter->urlFor('team', array('anchor' => 'jan')) ?>">
         Jan</a> presented
         <a
