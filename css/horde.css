@@ -597,19 +597,11 @@ div.sliderview p {
 }
 
 #b-webi-widget {
-    width: 136px;
     margin-left: 2px;
     background: #fff;
-    border: 1px solid #AFAFAF;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
 }
 #b-webi-widget .b-webi-header {
-    font: bold 13px/22px Tahoma;
-    color: #797979;
-    padding: 3px 0 0 3px;
-    margin-top: 10px;
+    visibility: hidden;
 }
 #b-webi-widget .b-webi-footer {
     text-align: center;

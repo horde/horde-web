@@ -1,6 +1,7 @@
 <div class="adsbox">
-  <h2>Sponsors</h2>
+  <h2>Featured At</h2>
   <?php echo $this->render('informer'); ?><br />
+  <h2>Sponsors</h2>
   <ul class="ads">
     <li>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
