@@ -19,6 +19,13 @@
 </ul>
 </div>
 <p>These are instructions to upgrade from earlier Passwd versions.</p>
+<p>Upgrading Passwd is as easy as running:</p>
+<pre class="literal-block">
+pear upgrade -a -B horde/passwd
+</pre>
+<p>If you want to upgrade from a Passwd version prior to 4.0, please
+follow the instructions in <a href="#id4"><span class="problematic" id="id5">INSTALL_</span></a> to install the most recent Passwd
+version using the PEAR installer.</p>
 <p>After updating to a newer Passwd version, you <strong>always</strong> need to update
 configurations and database schemes. Log in as an administrator, go to
 Administration =&gt; Configuration and update anything that's highlighted as
@@ -45,5 +52,11 @@ present, its value overrides any other value of $userid it is passed. If you
 wish to use this functionality of the composite driver, look at the example
 _passwd_hook_username function in horde/config/hooks.php.dist.</p>
 </div>
+</div>
+<div class="system-messages section">
+<h1>Docutils System Messages</h1>
+<div class="system-message" id="id4">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/passwd/docs/UPGRADING</tt>, line 17); <em><a href="#id5">backlink</a></em></p>
+Unknown target name: &quot;install&quot;.</div>
 </div>
 </div>

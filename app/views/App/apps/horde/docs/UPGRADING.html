@@ -17,43 +17,44 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#upgrading-horde-from-3-3-x-to-4-x" id="id7">2&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.3.x to 4.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#new-configuration-scheme" id="id8">2.1&nbsp;&nbsp;&nbsp;New configuration scheme</a></li>
-<li><a class="reference internal" href="#new-database-migrations" id="id9">2.2&nbsp;&nbsp;&nbsp;New database migrations</a></li>
-<li><a class="reference internal" href="#postgresql" id="id10">2.3&nbsp;&nbsp;&nbsp;PostgreSQL</a></li>
-<li><a class="reference internal" href="#configuration-changes" id="id11">2.4&nbsp;&nbsp;&nbsp;Configuration changes</a></li>
-<li><a class="reference internal" href="#preferences" id="id12">2.5&nbsp;&nbsp;&nbsp;Preferences</a></li>
-<li><a class="reference internal" href="#id1" id="id13">2.6&nbsp;&nbsp;&nbsp;Hooks</a></li>
-<li><a class="reference internal" href="#alarms" id="id14">2.7&nbsp;&nbsp;&nbsp;Alarms</a></li>
-<li><a class="reference internal" href="#groups" id="id15">2.8&nbsp;&nbsp;&nbsp;Groups</a></li>
-<li><a class="reference internal" href="#pear-packages" id="id16">2.9&nbsp;&nbsp;&nbsp;PEAR packages</a></li>
-<li><a class="reference internal" href="#removed-features" id="id17">2.10&nbsp;&nbsp;&nbsp;Removed features</a></li>
+<li><a class="reference internal" href="#new-installation-method" id="id8">2.1&nbsp;&nbsp;&nbsp;New installation method</a></li>
+<li><a class="reference internal" href="#new-configuration-scheme" id="id9">2.2&nbsp;&nbsp;&nbsp;New configuration scheme</a></li>
+<li><a class="reference internal" href="#new-database-migrations" id="id10">2.3&nbsp;&nbsp;&nbsp;New database migrations</a></li>
+<li><a class="reference internal" href="#postgresql" id="id11">2.4&nbsp;&nbsp;&nbsp;PostgreSQL</a></li>
+<li><a class="reference internal" href="#configuration-changes" id="id12">2.5&nbsp;&nbsp;&nbsp;Configuration changes</a></li>
+<li><a class="reference internal" href="#preferences" id="id13">2.6&nbsp;&nbsp;&nbsp;Preferences</a></li>
+<li><a class="reference internal" href="#id1" id="id14">2.7&nbsp;&nbsp;&nbsp;Hooks</a></li>
+<li><a class="reference internal" href="#alarms" id="id15">2.8&nbsp;&nbsp;&nbsp;Alarms</a></li>
+<li><a class="reference internal" href="#groups" id="id16">2.9&nbsp;&nbsp;&nbsp;Groups</a></li>
+<li><a class="reference internal" href="#pear-packages" id="id17">2.10&nbsp;&nbsp;&nbsp;PEAR packages</a></li>
+<li><a class="reference internal" href="#removed-features" id="id18">2.11&nbsp;&nbsp;&nbsp;Removed features</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-horde-from-3-3-x-to-3-3-5" id="id18">3&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.3.x to 3.3.5</a></li>
-<li><a class="reference internal" href="#upgrading-horde-from-3-2-x-to-3-3-x" id="id19">4&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.2.x to 3.3.x</a></li>
-<li><a class="reference internal" href="#upgrading-horde-from-3-1-x-to-3-2-x" id="id20">5&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.x to 3.2.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#sql-backends" id="id21">5.1&nbsp;&nbsp;&nbsp;SQL Backends</a></li>
-<li><a class="reference internal" href="#beta-sql-drivers" id="id22">5.2&nbsp;&nbsp;&nbsp;Beta SQL Drivers</a></li>
-<li><a class="reference internal" href="#memcache-configuration" id="id23">5.3&nbsp;&nbsp;&nbsp;Memcache Configuration</a></li>
-<li><a class="reference internal" href="#application-hooks" id="id24">5.4&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
-<li><a class="reference internal" href="#group-hooks" id="id25">5.5&nbsp;&nbsp;&nbsp;Group Hooks</a></li>
-<li><a class="reference internal" href="#custom-themes" id="id26">5.6&nbsp;&nbsp;&nbsp;Custom Themes</a></li>
-<li><a class="reference internal" href="#static-log-out-links" id="id27">5.7&nbsp;&nbsp;&nbsp;Static Log out Links</a></li>
+<li><a class="reference internal" href="#upgrading-horde-from-3-3-x-to-3-3-5" id="id19">3&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.3.x to 3.3.5</a></li>
+<li><a class="reference internal" href="#upgrading-horde-from-3-2-x-to-3-3-x" id="id20">4&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.2.x to 3.3.x</a></li>
+<li><a class="reference internal" href="#upgrading-horde-from-3-1-x-to-3-2-x" id="id21">5&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.x to 3.2.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sql-backends" id="id22">5.1&nbsp;&nbsp;&nbsp;SQL Backends</a></li>
+<li><a class="reference internal" href="#beta-sql-drivers" id="id23">5.2&nbsp;&nbsp;&nbsp;Beta SQL Drivers</a></li>
+<li><a class="reference internal" href="#memcache-configuration" id="id24">5.3&nbsp;&nbsp;&nbsp;Memcache Configuration</a></li>
+<li><a class="reference internal" href="#application-hooks" id="id25">5.4&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
+<li><a class="reference internal" href="#group-hooks" id="id26">5.5&nbsp;&nbsp;&nbsp;Group Hooks</a></li>
+<li><a class="reference internal" href="#custom-themes" id="id27">5.6&nbsp;&nbsp;&nbsp;Custom Themes</a></li>
+<li><a class="reference internal" href="#static-log-out-links" id="id28">5.7&nbsp;&nbsp;&nbsp;Static Log out Links</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-horde-from-3-1-1-to-3-1-2" id="id28">6&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.1 to 3.1.2</a><ul class="auto-toc">
-<li><a class="reference internal" href="#session-configuration" id="id29">6.1&nbsp;&nbsp;&nbsp;Session Configuration</a></li>
-<li><a class="reference internal" href="#additional-indexes-for-the-preference-table" id="id30">6.2&nbsp;&nbsp;&nbsp;Additional Indexes for the Preference Table</a></li>
+<li><a class="reference internal" href="#upgrading-horde-from-3-1-1-to-3-1-2" id="id29">6&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.1 to 3.1.2</a><ul class="auto-toc">
+<li><a class="reference internal" href="#session-configuration" id="id30">6.1&nbsp;&nbsp;&nbsp;Session Configuration</a></li>
+<li><a class="reference internal" href="#additional-indexes-for-the-preference-table" id="id31">6.2&nbsp;&nbsp;&nbsp;Additional Indexes for the Preference Table</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-horde-from-3-1-to-3-1-1" id="id31">7&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1 to 3.1.1</a><ul class="auto-toc">
-<li><a class="reference internal" href="#mysql-session-handler" id="id32">7.1&nbsp;&nbsp;&nbsp;MySQL Session Handler</a></li>
+<li><a class="reference internal" href="#upgrading-horde-from-3-1-to-3-1-1" id="id32">7&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1 to 3.1.1</a><ul class="auto-toc">
+<li><a class="reference internal" href="#mysql-session-handler" id="id33">7.1&nbsp;&nbsp;&nbsp;MySQL Session Handler</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-horde-from-3-0-x-to-3-1-x" id="id33">8&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.0.x to 3.1.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#id2" id="id34">8.1&nbsp;&nbsp;&nbsp;SQL Backends</a></li>
-<li><a class="reference internal" href="#id3" id="id35">8.2&nbsp;&nbsp;&nbsp;Groups</a></li>
-<li><a class="reference internal" href="#history" id="id36">8.3&nbsp;&nbsp;&nbsp;History</a></li>
+<li><a class="reference internal" href="#upgrading-horde-from-3-0-x-to-3-1-x" id="id34">8&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.0.x to 3.1.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id2" id="id35">8.1&nbsp;&nbsp;&nbsp;SQL Backends</a></li>
+<li><a class="reference internal" href="#id3" id="id36">8.2&nbsp;&nbsp;&nbsp;Groups</a></li>
+<li><a class="reference internal" href="#history" id="id37">8.3&nbsp;&nbsp;&nbsp;History</a></li>
 </ul>
 </li>
 </ul>
@@ -61,6 +62,14 @@
 <p>These are instructions to upgrade from earlier Horde versions. Please backup
 your existing data before running any of the steps described below. You can't
 use the updated data with your old Horde version anymore.</p>
+<p>Upgrading Horde (and all installed Horde libraries and applications)
+is as easy as running:</p>
+<pre class="literal-block">
+pear upgrade -a -B -c horde
+</pre>
+<p>If you want to upgrade from a Horde version prior to 4.0, please
+follow the instructions in <a class="reference external" href="?f=INSTALL.html">INSTALL</a> to install the most recent Horde
+version using the PEAR installer.</p>
 <p>After updating to a newer Horde version, or a newer version of <strong>any</strong> Horde
 application, you <strong>always</strong> need to update configurations and database
 schemes. Log in as an administrator, go to Administration =&gt; Configuration and
@@ -82,8 +91,17 @@ details on this hook.</p>
 </div>
 <div class="section" id="upgrading-horde-from-3-3-x-to-4-x">
 <h1><a class="toc-backref" href="#id7">2&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.3.x to 4.x</a></h1>
+<div class="section" id="new-installation-method">
+<h2><a class="toc-backref" href="#id8">2.1&nbsp;&nbsp;&nbsp;New installation method</a></h2>
+<p>Since Horde 4 the supported installation method has been changed to
+install Horde and all dependencies through the PEAR installer. See
+<a class="reference external" href="?f=INSTALL.html">INSTALL</a> for instructions how to install Horde through PEAR.</p>
+<p>Existing <strong>data</strong> from the latest Horde can be migrated from the
+configuration screen in the administration section. It is recommended
+to re-create the <strong>configuration</strong> from scratch though.</p>
+</div>
 <div class="section" id="new-configuration-scheme">
-<h2><a class="toc-backref" href="#id8">2.1&nbsp;&nbsp;&nbsp;New configuration scheme</a></h2>
+<h2><a class="toc-backref" href="#id9">2.2&nbsp;&nbsp;&nbsp;New configuration scheme</a></h2>
 <p>With Horde 4 it is no longer necessary to create any configuration files
 besides <tt class="docutils literal">conf.php</tt> files. The default configuration files in the <tt class="docutils literal">config/</tt>
 directory should work for most systems. If some changes in those files are
@@ -95,7 +113,7 @@ there. See the header of the configuration files for details and examples.</p>
 configuration interface.</p>
 </div>
 <div class="section" id="new-database-migrations">
-<h2><a class="toc-backref" href="#id9">2.2&nbsp;&nbsp;&nbsp;New database migrations</a></h2>
+<h2><a class="toc-backref" href="#id10">2.3&nbsp;&nbsp;&nbsp;New database migrations</a></h2>
 <p>With Horde 4 database updates are no longer done by running SQL scripts through
 your database server's console or web frontend. A migration framework has been
 created instead that can be used through the web interface and a command line
@@ -110,7 +128,7 @@ application, component, or <tt class="docutils literal">migration/</tt> director
 individually.</p>
 </div>
 <div class="section" id="postgresql">
-<h2><a class="toc-backref" href="#id10">2.3&nbsp;&nbsp;&nbsp;PostgreSQL</a></h2>
+<h2><a class="toc-backref" href="#id11">2.4&nbsp;&nbsp;&nbsp;PostgreSQL</a></h2>
 <p>If using PostgreSQL, you must upgrade the value column of the preference table
 from TEXT to BYTEA <strong>before</strong> running any other upgrade tasks. The necessary
 SQL statement is found at:</p>
@@ -119,13 +137,13 @@ scripts/upgrades/2009-04-13_horde_pgsql_upgrade.sql
 </pre>
 </div>
 <div class="section" id="configuration-changes">
-<h2><a class="toc-backref" href="#id11">2.4&nbsp;&nbsp;&nbsp;Configuration changes</a></h2>
+<h2><a class="toc-backref" href="#id12">2.5&nbsp;&nbsp;&nbsp;Configuration changes</a></h2>
 <p>Many configuration names and values have changed. It is suggested that you
 start with a fresh configuration instead of trying to import some existing
 configuration from Horde 3.</p>
 </div>
 <div class="section" id="preferences">
-<h2><a class="toc-backref" href="#id12">2.5&nbsp;&nbsp;&nbsp;Preferences</a></h2>
+<h2><a class="toc-backref" href="#id13">2.6&nbsp;&nbsp;&nbsp;Preferences</a></h2>
 <p>The following preferences are no longer used and can be removed from the
 horde_prefs table if you want to save database storage:</p>
 <blockquote>
@@ -138,7 +156,7 @@ horde_prefs table if you want to save database storage:</p>
 </blockquote>
 </div>
 <div class="section" id="id1">
-<h2><a class="toc-backref" href="#id13">2.6&nbsp;&nbsp;&nbsp;Hooks</a></h2>
+<h2><a class="toc-backref" href="#id14">2.7&nbsp;&nbsp;&nbsp;Hooks</a></h2>
 <p>The hooks format has been changed completely. <tt class="docutils literal">hooks.php</tt> no longer contains
 separate functions for each hook, but a single class with separate methods for
 each hook. Please take a look at the new examples in <tt class="docutils literal">hooks.php.dist</tt> before
@@ -157,7 +175,7 @@ preferences.</li>
 </blockquote>
 </div>
 <div class="section" id="alarms">
-<h2><a class="toc-backref" href="#id14">2.7&nbsp;&nbsp;&nbsp;Alarms</a></h2>
+<h2><a class="toc-backref" href="#id15">2.8&nbsp;&nbsp;&nbsp;Alarms</a></h2>
 <p>The alarm system is using UTC dates now. This can cause problems for a short
 time after updating to Horde and before the alarms have been refreshed. To
 avoid any problems you should empty the horde_alarms table after upgrading
@@ -172,18 +190,18 @@ location when using the PEAR installation method. The new name is
 default. Update your cron jobs accordingly.</p>
 </div>
 <div class="section" id="groups">
-<h2><a class="toc-backref" href="#id15">2.8&nbsp;&nbsp;&nbsp;Groups</a></h2>
+<h2><a class="toc-backref" href="#id16">2.9&nbsp;&nbsp;&nbsp;Groups</a></h2>
 <p>The groups system has been rewritten. Group hierarchies, i.e. parent and child
 groups are no longer supported. Support for nested groups will be added at a
 later point.</p>
 </div>
 <div class="section" id="pear-packages">
-<h2><a class="toc-backref" href="#id16">2.9&nbsp;&nbsp;&nbsp;PEAR packages</a></h2>
+<h2><a class="toc-backref" href="#id17">2.10&nbsp;&nbsp;&nbsp;PEAR packages</a></h2>
 <p>The Crypt_Blowfish package is required now. If you installed Horde using the
 PEAR installer, it will be installed automatically though.</p>
 </div>
 <div class="section" id="removed-features">
-<h2><a class="toc-backref" href="#id17">2.10&nbsp;&nbsp;&nbsp;Removed features</a></h2>
+<h2><a class="toc-backref" href="#id18">2.11&nbsp;&nbsp;&nbsp;Removed features</a></h2>
 <ul class="simple">
 <li>Database abstraction has been moved to a new Horde_Db component. Any database
 support beside MySQL (native and PDO), PostgreSQL, and SQLite have been
@@ -201,7 +219,7 @@ further below for instructions how to migrate away from DataTree backends.</li>
 </div>
 </div>
 <div class="section" id="upgrading-horde-from-3-3-x-to-3-3-5">
-<h1><a class="toc-backref" href="#id18">3&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.3.x to 3.3.5</a></h1>
+<h1><a class="toc-backref" href="#id19">3&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.3.x to 3.3.5</a></h1>
 <p>The signup_email column of the horde_signups table is no longer needed. You
 can execute the provide SQL script to remove that column, e.g.:</p>
 <pre class="literal-block">
@@ -209,7 +227,7 @@ mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; sc
 </pre>
 </div>
 <div class="section" id="upgrading-horde-from-3-2-x-to-3-3-x">
-<h1><a class="toc-backref" href="#id19">4&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.2.x to 3.3.x</a></h1>
+<h1><a class="toc-backref" href="#id20">4&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.2.x to 3.3.x</a></h1>
 <p>The sequence name for the SQL share driver has been changed from 'sequence' to
 'id' You must execute the provided PHP script to update your database:</p>
 <pre class="literal-block">
@@ -222,9 +240,9 @@ pear install MDB2_Schema
 </pre>
 </div>
 <div class="section" id="upgrading-horde-from-3-1-x-to-3-2-x">
-<h1><a class="toc-backref" href="#id20">5&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.x to 3.2.x</a></h1>
+<h1><a class="toc-backref" href="#id21">5&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.x to 3.2.x</a></h1>
 <div class="section" id="sql-backends">
-<h2><a class="toc-backref" href="#id21">5.1&nbsp;&nbsp;&nbsp;SQL Backends</a></h2>
+<h2><a class="toc-backref" href="#id22">5.1&nbsp;&nbsp;&nbsp;SQL Backends</a></h2>
 <p>A few new tables have been added to Horde.</p>
 <p>Execute one of the provided SQL scripts to update your data to the new Horde
 version, e.g.:</p>
@@ -233,7 +251,7 @@ mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; sc
 </pre>
 </div>
 <div class="section" id="beta-sql-drivers">
-<h2><a class="toc-backref" href="#id22">5.2&nbsp;&nbsp;&nbsp;Beta SQL Drivers</a></h2>
+<h2><a class="toc-backref" href="#id23">5.2&nbsp;&nbsp;&nbsp;Beta SQL Drivers</a></h2>
 <p>There are now beta-level SQL drivers for Groups, Shares, and Permissions. There
 is a script <tt class="docutils literal"><span class="pre">horde-convert-datatree-perms-to-sql</span></tt> that will migrate all of
 your DataTree-based permissions to the SQL backend, and
@@ -247,17 +265,17 @@ but they have not received the same level of testing, thus the beta
 designation.</p>
 </div>
 <div class="section" id="memcache-configuration">
-<h2><a class="toc-backref" href="#id23">5.3&nbsp;&nbsp;&nbsp;Memcache Configuration</a></h2>
+<h2><a class="toc-backref" href="#id24">5.3&nbsp;&nbsp;&nbsp;Memcache Configuration</a></h2>
 <p>All memcache configuration has been moved to the $conf['memcache'] parameter.</p>
 </div>
 <div class="section" id="application-hooks">
-<h2><a class="toc-backref" href="#id24">5.4&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
+<h2><a class="toc-backref" href="#id25">5.4&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
 <p>All hooks that are specific to a single application have been moved to that
 application's <tt class="docutils literal">config/hooks.php</tt> file. Split up your existing Hooks from
 <tt class="docutils literal">horde/config/hooks.php</tt> and move them to the correct application.</p>
 </div>
 <div class="section" id="group-hooks">
-<h2><a class="toc-backref" href="#id25">5.5&nbsp;&nbsp;&nbsp;Group Hooks</a></h2>
+<h2><a class="toc-backref" href="#id26">5.5&nbsp;&nbsp;&nbsp;Group Hooks</a></h2>
 <p>The format for group hook functions has changed from
 _group_hook_groupName($username) to _group_hook($groupName,
 $userName).  So you will need to modify any existing group hook
@@ -266,7 +284,7 @@ functions in config/hooks.php for the new interface.</p>
 config/hooks.php that will call the old style hook functions for you.</p>
 </div>
 <div class="section" id="custom-themes">
-<h2><a class="toc-backref" href="#id26">5.6&nbsp;&nbsp;&nbsp;Custom Themes</a></h2>
+<h2><a class="toc-backref" href="#id27">5.6&nbsp;&nbsp;&nbsp;Custom Themes</a></h2>
 <p>Themes only have a single <tt class="docutils literal">info.php</tt> file with the theme name in Horde's
 <tt class="docutils literal">themes</tt> directory now. If you have any custom themes that provide their own
 images, you must add a <tt class="docutils literal">themed_graphics</tt> file to the theme's directory (for
@@ -275,7 +293,7 @@ use the custom images. The file can be empty or contain whatever you wish; it
 simply needs to exist.</p>
 </div>
 <div class="section" id="static-log-out-links">
-<h2><a class="toc-backref" href="#id27">5.7&nbsp;&nbsp;&nbsp;Static Log out Links</a></h2>
+<h2><a class="toc-backref" href="#id28">5.7&nbsp;&nbsp;&nbsp;Static Log out Links</a></h2>
 <p>If you have hardcoded a log out link in any custom templates or menu
 items, you must update it to use Horde::getServiceLink(). This is
 because logging out is now protected by a token to avoid CSRF
@@ -283,9 +301,9 @@ exploits.</p>
 </div>
 </div>
 <div class="section" id="upgrading-horde-from-3-1-1-to-3-1-2">
-<h1><a class="toc-backref" href="#id28">6&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.1 to 3.1.2</a></h1>
+<h1><a class="toc-backref" href="#id29">6&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1.1 to 3.1.2</a></h1>
 <div class="section" id="session-configuration">
-<h2><a class="toc-backref" href="#id29">6.1&nbsp;&nbsp;&nbsp;Session Configuration</a></h2>
+<h2><a class="toc-backref" href="#id30">6.1&nbsp;&nbsp;&nbsp;Session Configuration</a></h2>
 <p>A new configuration setting has been added to disable GET-based
 sessions.  If this setting is enabled, session IDs will only be stored
 in session cookies, requiring the users to enable cookies in their
@@ -299,7 +317,7 @@ browser caches, or browser bookmarks.</p>
 </div>
 </div>
 <div class="section" id="additional-indexes-for-the-preference-table">
-<h2><a class="toc-backref" href="#id30">6.2&nbsp;&nbsp;&nbsp;Additional Indexes for the Preference Table</a></h2>
+<h2><a class="toc-backref" href="#id31">6.2&nbsp;&nbsp;&nbsp;Additional Indexes for the Preference Table</a></h2>
 <p>Optionally execute the provided SQL script 2006-06-29_horde_prefs_indexes.sql
 to create two additional indexes in the preference table, e.g.:</p>
 <pre class="literal-block">
@@ -310,9 +328,9 @@ if you have large preference tables.</p>
 </div>
 </div>
 <div class="section" id="upgrading-horde-from-3-1-to-3-1-1">
-<h1><a class="toc-backref" href="#id31">7&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1 to 3.1.1</a></h1>
+<h1><a class="toc-backref" href="#id32">7&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.1 to 3.1.1</a></h1>
 <div class="section" id="mysql-session-handler">
-<h2><a class="toc-backref" href="#id32">7.1&nbsp;&nbsp;&nbsp;MySQL Session Handler</a></h2>
+<h2><a class="toc-backref" href="#id33">7.1&nbsp;&nbsp;&nbsp;MySQL Session Handler</a></h2>
 <p>The mysql session handler has been improved to correctly lock concurrent
 accesses to the same session. You need to set in the Horde configuration if
 you want to use row-level locking and transactions or table-level
@@ -328,9 +346,9 @@ ALTER TABLE horde_sessionhandler ENGINE = InnoDB
 </div>
 </div>
 <div class="section" id="upgrading-horde-from-3-0-x-to-3-1-x">
-<h1><a class="toc-backref" href="#id33">8&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.0.x to 3.1.x</a></h1>
+<h1><a class="toc-backref" href="#id34">8&nbsp;&nbsp;&nbsp;Upgrading Horde from 3.0.x to 3.1.x</a></h1>
 <div class="section" id="id2">
-<h2><a class="toc-backref" href="#id34">8.1&nbsp;&nbsp;&nbsp;SQL Backends</a></h2>
+<h2><a class="toc-backref" href="#id35">8.1&nbsp;&nbsp;&nbsp;SQL Backends</a></h2>
 <p>A few new tables have been added to Horde.</p>
 <p>Execute one of the provided SQL scripts to update your data to the new Horde
 version, e.g.:</p>
@@ -339,12 +357,12 @@ mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; sc
 </pre>
 </div>
 <div class="section" id="id3">
-<h2><a class="toc-backref" href="#id35">8.2&nbsp;&nbsp;&nbsp;Groups</a></h2>
+<h2><a class="toc-backref" href="#id36">8.2&nbsp;&nbsp;&nbsp;Groups</a></h2>
 <p>The Horde_Group API uses group IDs instead of group names to avoid ambiguity.
 Be sure to update any custom code that uses Horde_Group.</p>
 </div>
 <div class="section" id="history">
-<h2><a class="toc-backref" href="#id36">8.3&nbsp;&nbsp;&nbsp;History</a></h2>
+<h2><a class="toc-backref" href="#id37">8.3&nbsp;&nbsp;&nbsp;History</a></h2>
 <p>The Horde_History storage has been moved out to a separate database table to
 drastically improve performance.</p>
 <div class="warning">

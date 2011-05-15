@@ -48,6 +48,13 @@
 <p>These are instructions to upgrade from earlier IMP versions. Please backup your
 existing data before running any of the steps described below. You can't use
 the updated data with your old IMP version anymore.</p>
+<p>Upgrading IMP is as easy as running:</p>
+<pre class="literal-block">
+pear upgrade -a -B horde/imp
+</pre>
+<p>If you want to upgrade from an IMP version prior to 5.0, please follow
+the instructions in <a href="#id27"><span class="problematic" id="id28">INSTALL_</span></a> to install the most recent IMP version
+using the PEAR installer.</p>
 <p>After updating to a newer IMP version, you <strong>always</strong> need to update
 configurations and database schemes. Log in as an administrator, go to
 Administration =&gt; Configuration and update anything that's highlighted as
@@ -287,5 +294,11 @@ your <tt class="docutils literal">config/prefs.php</tt> file and your preference
 format you must run the script located at
 <tt class="docutils literal">scripts/upgrades/convert_vfolders.php</tt>.</p>
 </div>
+</div>
+<div class="system-messages section">
+<h1>Docutils System Messages</h1>
+<div class="system-message" id="id27">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/imp/docs/UPGRADING</tt>, line 19); <em><a href="#id28">backlink</a></em></p>
+Unknown target name: &quot;install&quot;.</div>
 </div>
 </div>

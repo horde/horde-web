@@ -30,6 +30,13 @@
 <p>These are instructions to upgrade from earlier Kronolith versions. Please
 backup your existing data before running any of the steps described below. You
 can't use the updated data with your old Kronolith version anymore.</p>
+<p>Upgrading Kronolith is as easy as running:</p>
+<pre class="literal-block">
+pear upgrade -a -B horde/kronolith
+</pre>
+<p>If you want to upgrade from a Kronolith version prior to 3.0, please
+follow the instructions in <a href="#id12"><span class="problematic" id="id13">INSTALL_</span></a> to install the most recent
+Kronolith version using the PEAR installer.</p>
 <p>After updating to a newer Kronolith version, you <strong>always</strong> need to update
 configurations and database schemes. Log in as an administrator, go to
 Administration =&gt; Configuration and update anything that's highlighted as
@@ -108,5 +115,11 @@ used to be called &quot;search_abook&quot; and contained a serialized PHP array.
 preference is called &quot;search_sources&quot;, contains a tab-separated list, and goes
 along with the &quot;search_fields&quot; preference.</p>
 </div>
+</div>
+<div class="system-messages section">
+<h1>Docutils System Messages</h1>
+<div class="system-message" id="id12">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/kronolith/docs/UPGRADING</tt>, line 19); <em><a href="#id13">backlink</a></em></p>
+Unknown target name: &quot;install&quot;.</div>
 </div>
 </div>
