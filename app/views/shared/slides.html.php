@@ -1,16 +1,5 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
-                    <div class="slide-linuxtag sliderview">
-                        <h2>Horde at LinuxTag.</h2>
-                        <p>The Horde Project is presenting their latest
-                        applications with a booth and a talk
-                        on <a href="http://www.linuxtag.org/2011/">LinuxTag</a>,
-                        Berlin, from May 11th to 14th. Meet us at hall 7.2a,
-                        booth 139a, or listen
-                        to <a href="http://www.linuxtag.org/2011/de/program/program/vortragsliste.html?talkid=345">Gunnar
-                        Wrobel's talk</a> on Friday, 12pm.</p>
-                    </div>
-
                     <div class="slide-horde4 sliderview">
                         <h2>Horde 4 has landed.</h2>
                         <p>The Horde team and community have spent more than
