@@ -17,6 +17,14 @@
         Gunnar</a>. The presentation is available as a PDF and on <a
         href="http://www.slideshare.net/wrobel/the-horde-4-php-framework-7956019">Slideshare</a>.</p>
 
+        <p>A brief overview on the upcoming Horde 4 was presented at <a
+        href="http://www.cebit.de/">CeBIT 2011</a> by <a
+        href="<?php echo $this->urlWriter->urlFor('team', array('anchor' => 'gunnar')) ?>">
+        Gunnar</a> in German. The presentation is available as <a
+        href="<?php echo $GLOBALS['host_base'] ?>/papers/horde4.pdf">
+        PDF</a> and <a
+        href="http://www.techcast.com/events/cebit11/mi11">on video</a>.</p>
+
         <p><a
         href="<?php echo $this->urlWriter->urlFor('team', array('anchor' => 'jan')) ?>">
         Jan</a> presented
