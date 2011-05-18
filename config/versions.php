@@ -7,8 +7,8 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.2',
-        'date' => 'May 3 2011',
+        'ver' => '4.0.3',
+        'date' => 'May 18 2011',
         'pear' => true
     ),
     'imp' => array(
@@ -31,8 +31,8 @@ $horde_four_apps = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.2)',
-        'date' => 'May 3 2011',
+        'ver' => 'H4 (3.0.3)',
+        'date' => 'May 18 2011',
         'pear' => true
     ),
     'nag' => array(
@@ -43,8 +43,8 @@ $horde_four_apps = array(
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0)',
-        'date' => 'April 5 2011',
+        'ver' => 'H4 (3.0.1)',
+        'date' => 'May 18 2011',
         'pear' => true
     ),
 );
@@ -164,8 +164,8 @@ $horde_three_apps = array(
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.2',
-        'date' => 'May 3 2011',
+        'ver' => '4.0.3',
+        'date' => 'May 18 2011',
         'pear' => true,
     ),
     'groupware' => array(
@@ -211,8 +211,8 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.2)',
-        'date' => 'May 3 2011',
+        'ver' => 'H4 (3.0.3)',
+        'date' => 'May 18 2011',
         'pear' => true,
     ),
     'nag' => array(
@@ -223,8 +223,8 @@ $horde_apps_stable = array(
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0)',
-        'date' => 'April 5 2011',
+        'ver' => 'H4 (3.0.1)',
+        'date' => 'May 18 2011',
         'pear' => true,
     ),
     'chora' => array(
@@ -300,45 +300,52 @@ $horde_apps_dev = array(
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '1.2.3-RC1',
-        'date' => 'April 18 2009',
-        'dir' => 'horde-webmail',
-        'file' => 'horde-webmail-1.2.3-rc1.tar.gz'
+        'ver' => '4.0-RC1',
+        'date' => 'May 18 2011',
+        'pear' => true,
     ),
     'horde' => array(
         'name' => 'Horde',
         'ver' => '4.0-RC2',
         'date' => 'March 29 2011',
+        'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
         'ver' => 'H4 (5.0-RC2)',
         'date' => 'March 29 2011',
+        'pear' => true,
     ),
     'turba' => array(
-        'name' => 'Turba H4',
+        'name' => 'Turba',
         'ver' => 'H4 (3.0-RC2)',
         'date' => 'March 29 2011',
+        'pear' => true,
     ),
     'ingo' => array(
-        'name' => 'Ingo H4',
+        'name' => 'Ingo',
         'ver' => 'H4 (2.0-RC2)',
         'date' => 'March 29 2011',
+        'pear' => true,
     ),
     'kronolith' => array(
-        'name' => 'Kronolith H4',
+        'name' => 'Kronolith',
         'ver' => 'H4 (3.0-RC2)',
         'date' => 'March 29 2011',
+        'pear' => true,
     ),
     'nag' => array(
-        'name' => 'Nag H4',
+        'name' => 'Nag',
         'ver' => 'H4 (3.0-RC2)',
         'date' => 'March 29 2011',
+        'pear' => true,
+        'pear' => true,
     ),
     'mnemo' => array(
-        'name' => 'Mnemo H4',
+        'name' => 'Mnemo',
         'ver' => 'H4 (3.0-RC2)',
         'date' => 'March 29 2011',
+        'pear' => true,
     ),
     'whups' => array(
         'name' => 'Whups',
