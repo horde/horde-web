@@ -45,6 +45,13 @@
                 <li><?php echo $val ?></li>
             <?php endforeach; ?>
             </ul>
+
+            <p>Horde 4 and all Horde 4 applications now utilize a PEAR based
+            installation method. To upgrade to a development release, you need
+            to attach the release's stability state to the application name,
+            e.g.:</p>
+            <pre>pear upgrade <?php echo $this->appname ?>-beta</pre>
+
             <?php endif; ?>
 
             <h3>Obtaining Current Development Snapshots</h3>
