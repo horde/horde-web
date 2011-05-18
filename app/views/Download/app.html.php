@@ -38,13 +38,6 @@
             </ul>
             <?php endif; ?>
 
-            <h3>Obtaining Current Development Versions</h3>
-
-            <p>The current development version of
-            <?php echo htmlspecialchars($this->app_info['name'])?> is available via
-            <a href="../../source/snapshots.php">nightly snapshots</a> and our
-            <a href="../../source/git.php">git repository</a>.</p>
-
             <?php if (count($this->devapp)): ?>
             <h3>Current Development Release</h3>
             <ul>
@@ -53,7 +46,15 @@
             <?php endforeach; ?>
             </ul>
             <?php endif; ?>
-            <p>The H3 development version of
+
+            <h3>Obtaining Current Development Snapshots</h3>
+
+            <p>The Horde 4 development version of
+            <?php echo htmlspecialchars($this->app_info['name'])?> is available via
+            <a href="../../source/snapshots.php">nightly snapshots</a> and
+            <a href="../../source/git.php">Git</a>.
+            <br />
+            The Horde 3 development version of
             <?php echo htmlspecialchars($this->app_info['name']) ?> is available via
             <a href="../../source/snapshots.php">nightly snapshots</a> and
             <a href="../../source/cvs.php">CVS</a>.</p>
