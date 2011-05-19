@@ -1,29 +1,1308 @@
-<h1>Changes by Release</h1><pre>
+<h3>Changes by Release</h3><pre>
+--------
+v4.0-RC2
+--------
+
+
+
+--------
+v4.0-RC1
+--------
+
+Horde Changes
+-------------
+[jan] Add button to update all configurations with default values at once.
+[jan] Update DataTree conversion scripts for Horde 4.
+[jan] Fix rendering of DataTree browse tree.
+[mjr] Fix issue with deleting identities (<a href="http://bugs.horde.org/ticket/9997">Bug #9997</a>).
+[mjr] Fix issue causing credentials to be lost when accessing the API during
+      ActiveSync requests (<a href="http://bugs.horde.org/ticket/9733">Bug #9733</a>).
+[jan] Store preferences for guests in the session.
+[jan] SECURITY: Fix permission checks of guest users on system shares.
+[mms] SECURITY: Fix deletion of unwanted HTML nodes in XSS filter.
+[mms] Fix authentication failure when TOS is not accepted.
+[jan] Don't show IMP compose link if user doesn't have permissions to IMP (Bug
+      #10016).
+[mms] Fix issue causing slow syncs only in SyncML (<a href="http://bugs.horde.org/ticket/10008">Bug #10008</a>).
+[jan] Fix adding categories.
+[jan] Fix listing users in Customsql driver (<a href="http://bugs.horde.org/ticket/9963">Bug #9963</a>).
+[jan] Fix calculation of last password change in LDAP account portal block (Bug
+      #9770).
+[jan] Don't check for outdated DB schemas if database support is disabled (Bug
+      #9986).
+[mjr] Fix editing settings of fixed portal blocks (<a href="http://bugs.horde.org/ticket/9910">Bug #9910</a>).
+[mjr] Fix the blockTitle and blockContent API methods.
+[jan] Fix creating folders with SQL VFS driver (<a href="http://bugs.horde.org/ticket/9894">Bug #9894</a>).
+[jan] Fix LDAP parameters of account portal block (Klaus Steinberger, Bug
+      #9770).
+[jan] Fix migration detection on Windows.
+[mjr] Correctly sanitize DSN when using custom cyrus auth driver (<a href="http://bugs.horde.org/ticket/9879">Bug #9879</a>).
+[mjr] Fix some display issues when geocoding with HordeMap (<a href="http://bugs.horde.org/ticket/9883">Bug #9883</a>).
+[mms] Don't load sidebar content if not expanded.
+[jan] Fix deleting groups.
+[jan] Fix adding new groups (<a href="http://bugs.horde.org/ticket/9881">Bug #9881</a>).
+[jan] Fix displaying the Facebook preference group.
+[mms] Add appinitialized hook.
+[cjh] Fix cyrsql configuration, rename cyrus host and port parameters to not
+      clash with Horde_Db parameters (<a href="http://bugs.horde.org/ticket/9864">Bug #9864</a>).
+[cjh] Fix signups, and update style on signup and reset password pages to
+      match the login page (<a href="http://bugs.horde.org/ticket/9856">Bug #9856</a>, partially from Ian Roth
+      &lt;iron_hat@hotmail.com>).
+[cjh] Show an unknown app icon rather than a broken image if an application
+      doesn't have an icon (<a href="http://bugs.horde.org/ticket/9867">Bug #9867</a>).
+[jan] Fix setting incorrect database charset in PDO drivers.
+[mms] Add pushapp_post hook.
+[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
+[jan] Fix resetting passwords (Vilius Sumskas &lt;vilius@lnk.lt>, <a href="http://bugs.horde.org/ticket/9800">Bug #9800</a>).
+[jan] Fix Cyrsql authentication driver (Vilius Sumskas &lt;vilius@lnk.lt>, Bug
+      #9781).
+[mjr] Fix ActiveSync provisioning.
+[mjr] Fix for broken Nokia MfE clients (<a href="http://bugs.horde.org/ticket/9757">Bug #9757</a>).
+[jan] Delete object mappings too when deleting SyncML anchors (<a href="http://bugs.horde.org/ticket/9377">Request #9377</a>).
+[jan] Delay sidebar creation if the sidebar is generated through JavaScript.
+[jan] Fix incorrect lowercasing of objectClasses in LDAP groups driver.
+[jan] Fix fatal error in desktop notifications (<a href="http://bugs.horde.org/ticket/9727">Bug #9727</a>).
+[jan] Rename all scripts in bin/ to be prefixed with horde- and installed in
+      PEAR's bin_dir (<a href="http://bugs.horde.org/ticket/9647">Request #9647</a>).
+[jan] Don't throw exception when setting port number while using localhost in
+      MySQL configuration (<a href="http://bugs.horde.org/ticket/9738">Bug #9738</a>).
+[jan] Fix building LDAP filter for groups from configuration (<a href="http://bugs.horde.org/ticket/9739">Bug #9739</a>).
+[jan] Fix loading of Horde's vhost conf.php file (<a href="http://bugs.horde.org/ticket/9704">Bug #9704</a>).
+[jan] Fix OpenOffice MIME viewer.
+[jan] Fire access keys on hidden elements in Internet Explorer (<a href="http://bugs.horde.org/ticket/8057">Bug #8057</a>).
+[jan] Don't fire access keys twice in Chrome browsers.
+[jan] Fix JavaScript date calculations across DST boundaries.
+[jan] Sort applications in preference menu by name.
+[jan] Add translations for file upload error messages.
+[mms] Fix identities pref UI when default_identity is locked (<a href="http://bugs.horde.org/ticket/9701">Bug #9701</a>).
+[mms] Added Horde::debug().
+[jan] Update installation and upgrade instructions.
+[jan] Fix converting identities with non-ascii characters to new format.
+[jan] Fix passing arguments to sendmail binary (Gonçalo Queirós, <a href="http://bugs.horde.org/ticket/9693">Bug #9693</a>).
+[mjr] Service_Facebook refactored for OAuth2 authentication (<a href="http://bugs.horde.org/ticket/9122">Bug #9122</a>).
+[mjr] IMSP drivers refactored for Horde 4.
+[gwr] Allow disabling applications for administrators.
+[jan] Don't show sub-permissions for adding that exist already.
+[jan] Fix listing more than one sub-permission (<a href="http://bugs.horde.org/ticket/9671">Bug #9671</a>).
+[jan] Fix calendar synchronization with certain Nokia phones (<a href="http://bugs.horde.org/ticket/9646">Bug #9646</a>).
+[jan] Catch fatal errors about missing tables during initial configuration.
+[mms] Fix client-side IMAP sorting using envelope data.
+[mms] Workaround PHP &lt; 5.2.6 (broken stream handling) (<a href="http://bugs.horde.org/ticket/9644">Bug #9644</a>).
+[mjr] Fix updating schema for individual libraries.
+[mjr] Improved control over which application view to load.
+[jan] Find translateable strings in configuration files.
+[mms] Fix clearing expanded state for javascript trees (<a href="http://bugs.horde.org/ticket/9659">Bug #9659</a>).
+[jan] Only show advanced preferences link if there are some.
+[mms] Fix updates for refreshing Blocks (<a href="http://bugs.horde.org/ticket/9655">Bug #9655</a>).
+[mjr] Fix viewing applications with no mobile view from mobile devices.
+[jan] Fix error when not using a Group backend. (<a href="http://bugs.horde.org/ticket/9642">Bug #9642</a>).
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Add a new Share SQL driver with better performance.
+[cjh] Drop Log SQL driver.
+[mms] Update prototypejs to v1.7.
+[mms] Add theme caching.
+[mms] Add hook to allow browser capabilities to be modified.
+[jan] Add a configuration switch for automatic creation of default shares.
+[cjh] Move from Net_DNS to Net_DNS2.
+[jan] Translations for the framework packages are now bundled with those
+      packages.
+[bak] Remove LDAP driver from Horde_SessionHandler
+[jan] Require mandatory UTF-8 support for both servers and clients.
+[jan] Renamed Setup to Configuration and Options to Preferences.
+[mms] Moved sidebar code out of block/portal code (<a href="http://bugs.horde.org/ticket/9160">Request #9160</a>).
+[cjh] Remove fckeditor, standardizing on ckeditor.
+[jan] Move all translations from po/ to locale/ and use short locale
+      identifiers where possible.
+[jan] Remove frameset.
+[jan] Remove dhtmlHistory library.
+[mms] Removed support for krb5 authentication driver.
+[jan] Allow to specify the URL parameter name for the alternate login setting.
+[mms] Remove reliance on PEAR Mail library.
+[jan] Send alarm emails again if the alarm has changed (<a href="http://bugs.horde.org/ticket/8717">Bug #8717</a>).
+[mms] Add advanced preferences options screen.
+[mms] Complete rewrite of preferences UI display.
+[mjr] Horde_Image can now act as an Iterator for multi-page images.
+[mms] Remove Horde_Cipher library.
+[mms] Add 'cssfiles' hook to add custom CSS files to a page.
+[jan] Add configuration to not automatically show all available shares.
+[jan] Add configuration to disallow world permissions for user shares.
+[jan] Store alarm dates in UTC (<a href="http://bugs.horde.org/ticket/8381">Bug #8381</a>).
+[mms] Add abstracted AJAX interface (<a href="http://bugs.horde.org/ticket/4561">Request #4561</a>).
+[mms] Update scriptaculous to v1.8.3.
+[mjr] Add Horde_Image_Exif (ported from Ansel) and add a exiftool driver.
+[mjr] Horde_Image now has a native Imagick driver (removed proxy code).
+[mms] All Horde login/authentication handled by single login page.
+[mms] Move imple processing to a Horde service.
+[mms] Refactor Maintenance:: -> Horde_LoginTasks::.
+[mms] In Postgres, horde_prefs table now stores data in BYTEA instead of
+      TEXT (<a href="http://bugs.horde.org/ticket/8130">Bug #8130</a>).
+[mms] Improved caching of Registry data significantly reduces session sizes
+      and total session storage requirements (<a href="http://bugs.horde.org/ticket/8024">Request #8024</a>).
+[mms] IMAP auth driver now uses Horde_Imap_Client library.
+[mms] Use Gnumeric package to render MS Excel files.
+[mms] Use AbiWord package to render MS Word files.
+[cjh] Remove sapdb session handler backend.
+[jan] Add share locking (Alfonso Marín Marín &lt;almarin@um.es>).
+[cjh] Remove javascript popup alarms.
+[cjh] Update the Auth_passwd driver's add/update/remove user
+      implementations (<a href="http://bugs.horde.org/ticket/7810">Bug #7810</a>).
+[cjh] Add a Horde_Routes dispatcher for Rampage applications.
+[mjr] Fix a possible infinite loop with certain recurring events in Horde_Date.
+[jan] Use DateTime internally in Horde_Date.
+
+Mail Changes
+------------
+[jan] Add missing files to package.
+[mms] Add quick flag filtering to traditional view.
+[mms] Fix viewing linked attachments (<a href="http://bugs.horde.org/ticket/9972">Bug #9972</a>).
+[mms] Add support for the content-id access type of message/external-body.
+[mms] Consolidate IMAP error handling code in IMP_Imap_Exception.
+[mms] Use translated namespace name if available.
+[mms] Fix resuming reply drafts in HTML mode (<a href="http://bugs.horde.org/ticket/9928">Bug #9928</a>).
+[mms] Fix updating flags/logs on original messages after resuming from draft.
+[mms] Fix flagging messages in search mailboxes in dynamic view.
+[mms] Don't attempt to poll non-IMAP mailboxes (<a href="http://bugs.horde.org/ticket/9896">Bug #9896</a>).
+[mms] Fix deleting attachments from compose message in dynamic view (Bug
+      #9899).
+[mms] Newmail portal block can now be configured to auto-update.
+[mms] Fix deleteMessages and flagMessages API calls (<a href="http://bugs.horde.org/ticket/9888">Bug #9888</a>).
+[mms] More intelligent polling in dynamic view (<a href="http://bugs.horde.org/ticket/9808">Request #9808</a>).
+[mms] Fix spurious viewport loading in rare situations (<a href="http://bugs.horde.org/ticket/9768">Bug #9768</a>).
+[mms] Show human readable message in multipart/report parts in the richest
+      format possible (<a href="http://bugs.horde.org/ticket/9873">Bug #9873</a>).
+[mms] Fix unneeded body part downloads in alternative parts (<a href="http://bugs.horde.org/ticket/9862">Bug #9862</a>).
+[mms] Fix importing PGP private keys.
+[mms] More intelligent part naming if name is not specified in the message
+      (<a href="http://bugs.horde.org/ticket/9853">Request #9853</a>).
+[jan] Avoid double escaping of folder names in sent-mail drop down list.
+[jan] Fix translation of special folders on certain IMAP servers.
+[jan] Fix display of status icons in traditional view (<a href="http://bugs.horde.org/ticket/9844">Bug #9844</a>).
+[mms] Fix displaying all message parts in standard view (<a href="http://bugs.horde.org/ticket/9827">Bug #9827</a>).
+[mms] Allow .eml files to be imported into a mailbox (<a href="http://bugs.horde.org/ticket/9827">Request #9827</a>).
+[mms] Fix vertical layout resize in dynamic view (<a href="http://bugs.horde.org/ticket/9834">Bug #9834</a>).
+[mms] Fix link for filters menu item (<a href="http://bugs.horde.org/ticket/9831">Bug #9831</a>).
+[mms] Fix composing messages in mobile view.
+[mms] IMP will refuse to work with POP3 servers that don't support UIDL.
+[mms] Many POP3 fixes.
+[jan] Notify about new mails in any Horde application.
+[mms] New mail notifications now handled by the Horde Notification system
+      (<a href="http://bugs.horde.org/ticket/9751">Request #9751</a>).
+[mms] Fix resuming messages with attachments (<a href="http://bugs.horde.org/ticket/9780">Bug #9780</a>).
+[mms] Fix javascript actions in standard view in IE 7/8 (Bugs #9801, 9809).
+[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
+[mms] Fix printing of message parts in IE, regardless of local user settings
+      (<a href="http://bugs.horde.org/ticket/9756">Bug #9756</a>).
+[mms] Fix IMP_Maillog regression from RC2 (<a href="http://bugs.horde.org/ticket/9763">Bug #9763</a>).
+[mms] Fix honoring default encryption option in dynamic view.
+[jan] Show full alarm notifications in dynamic view (<a href="http://bugs.horde.org/ticket/9748">Request #9748</a>).
+[jan] Fix saving S/MIME certs to address book.
+[mms] Support importing of compressed mailbox files if the zip extension is
+      not available.
+[mms] Fix max_folders permission (<a href="http://bugs.horde.org/ticket/9741">Bug #9741</a>).
+[jan] Rename all scripts in bin/ to be prefixed with imp- (<a href="http://bugs.horde.org/ticket/9647">Request #9647</a>).
+[jan] Correctly render notifications with embedded HTML in dynamic view
+      (<a href="http://bugs.horde.org/ticket/9729">Bug #9729</a>).
+[mms] Fix moving to new mailbox, tasklist, and notepad in traditional view
+      (<a href="http://bugs.horde.org/ticket/9732">Bug #9732</a>).
+[jan] Add left and right keys as aliases for up and down keys in dynamic view.
+[mms] Add mailbox sorting and select all messages to vertical layout in the
+      dynamic view (<a href="http://bugs.horde.org/ticket/9708">Request #9708</a>).
+[jan] Fix expansion of quoted sections in thread view.
+[jan] Fix message previews in traditional view (<a href="http://bugs.horde.org/ticket/9695">Bug #9695</a>).
+[jan] Support importing of compressed mailbox files.
+[jan] Fix upgrading of search_fields preference.
+[jan] Fix key navigation in traditional mailbox view.
+[mms] Don't cache FETCH data for the Spam and Trash mailboxes.
+[mms] All views now honor 'initial_page' preference.
+[mms] Fix loading virtual folder as initial page in standard view (<a href="http://bugs.horde.org/ticket/9696">Bug #9696</a>).
+[jan] Update installation and upgrade instructions.
+[mms] Fix upgrading virtual folders from IMP 4 (<a href="http://bugs.horde.org/ticket/9692">Bug #9692</a>).
+[mms] Fix editing the size search criteria.
+[mms] Optimize importing messages from mbox file.
+[mms] Fix deletion from Virtual Inbox in standard view (<a href="http://bugs.horde.org/ticket/9686">Bug #9686</a>).
+[mms] Fix loading virtual folders from drop-down folder list (<a href="http://bugs.horde.org/ticket/9687">Bug #9687</a>).
+[mms] Fix thread sort by newest messages first (<a href="http://bugs.horde.org/ticket/9685">Bug #9685</a>).
+[mms] Add import/download mailbox ability to dynamic view.
+[jan] Remove application tabs from AJAX interface (<a href="http://bugs.horde.org/ticket/9679">Bug #9679</a>).
+[mms] Move all portal rendering code to Horde.
+[mms] Fix flag display in message list in traditional view (<a href="http://bugs.horde.org/ticket/9673">Bug #9673</a>).
+[mms] Fix purging deleted messages in dynamic view (<a href="http://bugs.horde.org/ticket/9627">Bug #9627</a>).
+[mms] Fix display of non-IMAP mailbox elements in folder lists (<a href="http://bugs.horde.org/ticket/9650">Bug #9650</a>).
+[mms] Fix print part display.
+[jan] Fix listing users through IMP API.
+[jan] Add configuration whether to load other applications in an IFRAME.
+[mms] Indicate negative rights in ACL display (<a href="http://bugs.horde.org/ticket/4488">Request #4488</a>).
+[jan] Provide default configuration files instead of .dist versions.
+[mms] Add priority and request read receipt information to saved drafts
+      (<a href="http://bugs.horde.org/ticket/9457">Request #9457</a>).
+[mms] Added example in pre_sent hook to do forgotten attachment checking at
+      send time (<a href="http://bugs.horde.org/ticket/9028">Request #9028</a>).
+[mms] Add subfolder searching (subfolders dynamically determined at time of
+      search).
+[mms] Refactor inline message image blocking to operate on all messages, not
+      just HTML messages.
+[mms] Add attachment message filter.
+[mms] Add post_spam hook called after reporting spam/ham (<a href="http://bugs.horde.org/ticket/6455">Request #6455</a>).
+[mms] Implement stationery support in DIMP.
+[mms] Add preference to control displayed content for multipart/alternative
+      parts (<a href="http://bugs.horde.org/ticket/6711">Request #6711</a>).
+[mms] Allow multiple messages to be forwarded in a single outgoing message
+      (DIMP) (<a href="http://bugs.horde.org/ticket/9132">Request #9132</a>).
+[mms] Add personal recipient message filter (<a href="http://bugs.horde.org/ticket/8659">Request #8659</a>).
+[mms] Add mailing list message filter (<a href="http://bugs.horde.org/ticket/8659">Request #8659</a>).
+[mms] Add ability to define search criteria to be applied to any mailbox
+      (<a href="http://bugs.horde.org/ticket/8659">Request #8659</a>).
+[mms] Use recipient search (To/Cc/Bcc) by default instead of To search.
+[mms] Virtual folders now editable via a preferences group.
+[mms] Search code has been entirely rewritten.
+[jan] Rename servers.php to backends.php.
+[mms] Use alternate text part to generate reply/forward text when switching
+      compose modes if user has not altered message text (DIMP).
+[mms] Improved login error reporting/logging in IMP (<a href="http://bugs.horde.org/ticket/9211">Request #9211</a>).
+[mms] Add hook to skip MDN prompt based on content of message headers.
+[mms] Allow expand/collapse of folders in MIMP.
+[mms] Use single, unified mailbox cache.
+[mms] Add support for setting/retrieving special-use mailboxes from IMAP
+      server.
+[mms] Add preference to control if we check for recipient PGP public keys
+      when replying (<a href="http://bugs.horde.org/ticket/7962">Request #7962</a>).
+[mms] Automatically determine view based on browser and 'dynamic_view'
+      preference (<a href="http://bugs.horde.org/ticket/9159">Request #9159</a>).
+[mms] Add preference to define default font family/size for the HTML compose
+      editor.
+[mms] Honor nav_expanded preference (DIMP).
+[mms] Allow admin to define list of safe e-mail addresses that will not
+      experience HTML image blocking (<a href="http://bugs.horde.org/ticket/9129">Request #9129</a>).
+[mms] HTML compose editor uses Horde language for UI (<a href="http://bugs.horde.org/ticket/9084">Request #9084</a>;
+      leandro.damascena@gmail.com).
+[mms] Add config option to disable multipart/related conversions
+      (<a href="http://bugs.horde.org/ticket/9099">Request #9099</a>).
+[mms] Sentmail SQL driver now supports split read/write operation.
+[mms] Pass compose message data to mailer backend via stream; much more
+      efficient, especially with larger messages (<a href="http://bugs.horde.org/ticket/8909">Request #8909</a>).
+[mms] Add strip attachments support in DIMP.
+[mms] Add PGP & S/MIME compose support to DIMP.
+[mms] Check for incorrect identity on compose if a single recipient address
+      is tied to a different identity than the sending identity.
+[mms] Use CATENATE (RFC 4469), if available, to strip MIME parts (Request
+      #8092).
+[mms] Add preference to show flags created by other MUAs (<a href="http://bugs.horde.org/ticket/8882">Request #8882</a>).
+[mms] Added HTML signature support (<a href="http://bugs.horde.org/ticket/1406">Request #1406</a>).
+[mms] Simplified date sorting display (<a href="http://bugs.horde.org/ticket/8936">Request #8936</a>).
+[mms] Properly redirect messages pursuant to RFC 5322 [3.6.6].
+[mms] Add redirect message capability to DIMP.
+[mms] Add ability to add attachments to composed messages for advanced mobile
+      browsers - disabled by default (MIMP).
+[mms] Add checkbox interface to mailbox page for advanced mobile browsers -
+      disabled by default (MIMP).
+[mms] Add preference to allow viewing of all inline parts by default (MIMP).
+[mms] Add hook to alter composed message details before sending.
+[mms] DIMP now honors the 'allow_resume_all' configuration option.
+[mms] Remove 'sort_limit' configuration option.
+[mms] Mobile view no longer supports WML output.
+[jan] Implement iTip viewer actions in DIMP (<a href="http://bugs.horde.org/ticket/8061">Request #8061</a>).
+[mms] Display alarm notifications in DIMP (<a href="http://bugs.horde.org/ticket/6232">Request #6232</a>).
+[mms] Auto-determine charset for text attachments (<a href="http://bugs.horde.org/ticket/8858">Bug #8858</a>).
+[mms] Remove IE 6 (and below) and Safari 2 (and below) support for DIMP.
+[mms] Add chance to switch between forward options on compose page when using
+      auto-forward (DIMP).
+[mms] Add chance to switch reply type to single recipient on compose page when
+      using auto-reply (DIMP).
+[mms] Fix printing multipage HTML messages in Mozilla browsers (<a href="http://bugs.horde.org/ticket/8708">Bug #8708</a>).
+[mms] Provide command line script to obtain IMAP caching statistics.
+[mms] Catch flag changes from other IMAP clients when refreshing if CONDSTORE
+      is available on the IMAP server (DIMP).
+[mms] Improved forwarding options.
+[mms] Add support for LIST-STATUS IMAP extension; provides more efficient
+      mailbox polling.
+[mms] Add hook to allow determination of compose attachments MIME type.
+[mms] Move AJAX processing framework to Horde (<a href="http://bugs.horde.org/ticket/4561">Request #4561</a>).
+[mms] If selected message(s) disappear from mailbox, gracefully handle in the
+      user interface (DIMP).
+[mms] Only update search mailbox on explicit user action (<a href="http://bugs.horde.org/ticket/7297">Request #7297</a>)
+      (DIMP).
+[mms] Add auto-save draft to IMP (<a href="http://bugs.horde.org/ticket/7656">Request #7656</a>).
+[mms] Add keyboard shortcut to move to next unseen message (<a href="http://bugs.horde.org/ticket/8223">Request #8223</a>).
+[mms] Add hook to dynamically change mailbox label (<a href="http://bugs.horde.org/ticket/6734">Request #6734</a>).
+[mms] Improved address expansion in MIMP.
+[mms] Load folders on-demand in sidebar (DIMP).
+[mms] Add priority setting to DIMP.
+[mms] Simplify and improve priority header generation/display.
+[mms] Add Face: header support to IMP.
+[mms] Add splitbar to resize sidebar in DIMP.
+[mms] Use LIST-EXTENDED IMAP extension (RFC 5258), if available, to get
+      subscribed mailbox information.
+[mms] Split ham/spam reporting actions into two separate preferences (Request
+      #8221).
+[mms] When clicking on base reply button, auto-determine the best way to
+      reply to a message based on the header information.
+[mms] Add vertical-pane preview layout to DIMP.
+[mms] Wrap content-related MIME parts in a border when viewing inline to
+      indicate their relationship.
+[mms] For drafts, save the original message index for forwards/replies so when
+      eventually sent, log information can be updated (<a href="http://bugs.horde.org/ticket/8663">Request #8663</a>).
+[mms] Upgrade RTE to CKEditor v3.
+[mms] Sort by display name for to/from fields if supported on IMAP server.
+[mms] Add ability to quickly filter by flags in DIMP.
+[mms] Add ability to select sent-mail mailbox when composing in DIMP.
+[mms] Add ability to save drafts in MIMP.
+[mms] Add spam reporting in MIMP.
+[mms] Added contextmenu support in DIMP for Opera.
+[mms] Display HTML parts inline by using IFRAMEs (based on code by
+      rui.carneiro@portugalmail.net; Request #8592).
+[mms] Add ability to search by relative date intervals (<a href="http://bugs.horde.org/ticket/3438">Request #3438</a>).
+[mms] Add advanced search query interface to DIMP (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
+[mms] Add ability to search by a custom defined header (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
+[mms] Improved advanced search query interface (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
+[mms] More intelligent ordering of autocomplete search results.
+[mms] Add a mini search query interface to IMP (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
+[mms] Make DIMP quicksearch field selection persist across sessions.
+[mms] Move JS/CSS caching to Horde framework.
+[mms] Add simple search function to MIMP.
+[mms] DIMP now honors the 'mailbox_start' preference.
+[mms] Logins now handled by Horde login handler.
+[mms] When generating and sending compressed ZIP data, use server-side temp
+      streams to minimize memory usage.
+[mms] Decode bodypart data on server if possible (RFC 3516).
+[mms] Use PHP temporary streams when working with message body data to reduce
+      memory usage (<a href="http://bugs.horde.org/ticket/3359">Request #3359</a>).
+[mms] Add ability to expand/collapse all folders in DIMP.
+[mms] Add Folder Options menu to DIMP.
+[mms] Add save link to full message display in DIMP.
+[mms] Allow on-demand filter application (if filter backend supports) in DIMP.
+[mms] Add full IMAP subscription support to DIMP (<a href="http://bugs.horde.org/ticket/8059">Request #8059</a>).
+[mms] Add message information to preview screen (DIMP).
+[mms] Add Alt + PGUP/PGDN shortcut to scroll through preview message (DIMP).
+[jan] Show possible event conflicts in iTip viewer (<a href="http://bugs.horde.org/ticket/3991">Request #3991</a>, Gonçalo
+      Queirós &lt;goncalo.queiros@portugalmail.net>).
+[mms] Move subfolders of special folders to lower folder display tree in
+      DIMP (<a href="http://bugs.horde.org/ticket/8127">Bug #8127</a>).
+[mms] Simplify quicksearch UI in DIMP.
+[mms] Improve notification display (DIMP).
+[mms] Use mailbox names in folder confirmation actions (DIMP) (<a href="http://bugs.horde.org/ticket/8162">Request #8162</a>).
+[mms] Optimize viewport row insertion/updating (DIMP).
+[mms] Add support for defining and displaying custom IMAP flags and for
+      configuring the highlighting of system flags (<a href="http://bugs.horde.org/ticket/937">Request #937</a>).
+[mms] Move attachment display on mailbox page from hook to preference.
+[mms] Always process priority/precedence headers.
+[mms] Support $MDNSent keyword (RFC 3503) on IMAP server.
+[mms] Link URLs/e-mails in subjects in message views (<a href="http://bugs.horde.org/ticket/7487">Request #7487</a>).
+[mms] Implement spellcheck on send in DIMP.
+[mms] Sanity check - don't do message operations reliant on UID list if
+      UIDVALIDITY of mailbox has changed.
+[mms] Remember splitbar position on login/refresh (DIMP).
+[mms] Disable advanced functions if using POP3 driver (caching, on-demand
+      filtering, searching, sorting) because it is too resource intensive.
+[mms] Use native PHP code for POP3 driver (c-client no longer required).
+[mms] IMP code now uses Exceptions instead of PEAR_Errors.
+[mms] Fix wrong charset on filenames when stripping attachments (<a href="http://bugs.horde.org/ticket/7220">Bug #7220</a>).
+[mms] Use effects queue to prevent issues with users clicking on effects
+      elements too quickly.
+[mms] Trim leading/trailing whitespace from reply/forwarded text.
+[mms] Add full IMAP message flagging capabilities to DIMP.
+[mms] Decode IDN (RFC 3490) names in addresses (<a href="http://bugs.horde.org/ticket/5836">Request #5836</a>).
+[mms] Add ability to download attachments in MIMP (<a href="http://bugs.horde.org/ticket/2925">Request #2925</a>).
+[mms] Revamp JS event handling model.
+[mms] ESC in DIMP search box now clears the search (<a href="http://bugs.horde.org/ticket/7196">Request #7196</a>).
+[mms] Enhancements to status icon view (<a href="http://bugs.horde.org/ticket/7519">Request #7519</a>) (DIMP).
+[mms] If the browser supports it, embed image data in cached CSS files via
+      data URLs (<a href="http://bugs.horde.org/ticket/7174">Request #7174</a>).
+[mms] Translate special folder names (<a href="http://bugs.horde.org/ticket/7545">Request #7545</a>).
+[mms] Make autocompletion threshold parameters configurable (<a href="http://bugs.horde.org/ticket/7322">Request #7322</a>).
+[mms] Add compose attachment preview to DIMP.
+[mms] Add 'unit' parameter for quota display (Carlos Pires &lt;acmpires@sapo.pt>,
+      Request #7044).
+[mms] Add support for '$Forwarded' IMAP keyword (<a href="http://bugs.horde.org/ticket/3402">Request #3402</a>).
+[mms] Attachments in a signed message now can be downloaded via the
+      download all attachments link (<a href="http://bugs.horde.org/ticket/2939">Bug #2939</a>).
+[mms] Remember preview toggle header preference (<a href="http://bugs.horde.org/ticket/7264">Request #7264</a>) (DIMP).
+[mms] Fix stripping attachments when saving to sent-mail folder when attaching
+      the PGP public key (<a href="http://bugs.horde.org/ticket/4221">Bug #4221</a>).
+[mms] Removed Special Characters menu.
+[mms] Add 'undelete' to Other Actions menu (<a href="http://bugs.horde.org/ticket/7496">Bug #7496</a>) (DIMP).
+[mms] All PGP & S/MIME functions now work in DIMP (<a href="http://bugs.horde.org/ticket/5388">Bug #5388</a>).
+[mms] Encrypted bodytext now appears when replying/forwarding a message
+      (<a href="http://bugs.horde.org/ticket/1345">Request #1345</a>).
+[mms] When deleting/emptying a folder, display message count (<a href="http://bugs.horde.org/ticket/7424">Request #7424</a>).
+[mms] No longer need HTTP_Request - use Horde_Http_Client instead.
+[mms] Use Horde_Imap_Client as the IMAP library in IMP.
+[mms] DIMP and MIMP have been moved into IMP.
+[mms] Allow all parts in a message to be displayed (<a href="http://bugs.horde.org/ticket/1866">Bug #1866</a>).
+[jan] Re-add access keys (DIMP).
+[mms] Quota template has been moved inside of base include file (DIMP).
+[mms] Added an alerts log (<a href="http://bugs.horde.org/ticket/7173">Request #7173</a>) (DIMP).
+[mms] Added support to access IMP's Virtual Folders (DIMP).
+[mms] Shift-drag for messages will copy instead of move (DIMP).
+[mms] Remove support for Xinha as GUI HTML editor.
+[mms] Strip extra 'Fwd' and 'Re' cruft from subject line when replying to or
+      forwarding a message.
+[mms] Don't send server requests when autocompleting addresses when possible.
+[mms] Added readonly mailbox and disable compose hooks.
+[mms] Saving draft on session expiration now handled via VFS.
+[mms] Add preference to delete draft on resume & send.
+
+Address Book Changes
+--------------------
+[jan] Fix exporting department attribute over ActiveSync.
+[mjr] Fix adding contacts with a category selected.
+[jan] Fix LDAP schema checking (<a href="http://bugs.horde.org/ticket/9826">Bug #9826</a>).
+[jan] Fix creating temporary files with open_basedir restrictions.
+[mjr] Fix importing objects with categories (<a href="http://bugs.horde.org/ticket/9841">Bug #9841</a>).
+[mjr] Fix merging duplicate contacts (<a href="http://bugs.horde.org/ticket/9828">Bug #9828</a>).
+[mjr] Allow unsetting the GAL and Client Address Book settings (<a href="http://bugs.horde.org/ticket/9843">Bug #9843</a>).
+[mjr] Fix deletion of virtual address books (<a href="http://bugs.horde.org/ticket/9779">Bug #9779</a>).
+[jan] Fix saving searches to virtual address books (<a href="http://bugs.horde.org/ticket/9776">Bug #9776</a>).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[jan] Move all executable scripts to bin/ and prefix with turba-.
+[jan] Add fields to all addresses if multiple passed to addField() API method
+      (<a href="http://bugs.horde.org/ticket/3482">Request #3482</a>).
+[mjr] Fix issue that caused the inability to preview contact images while
+      uploading (<a href="http://bugs.horde.org/ticket/9702">Bug #9702</a>).
+[jan] Update installation and upgrade instructions.
+[gwr] Adapted the Kolab driver to Horde 4.
+[mjr] Fix issue that caused erroneous file listings for objects in sources
+      without a __uid value.
+[cjh] Fix storing of binary fields.
+[mjr] Fix/refactor IMSP driver.
+[mjr] Fix the listTimeObjects API for shared sources (<a href="http://bugs.horde.org/ticket/9649">Bug #9649</a>).
+[jan] Fix importing contacts with SyncML (Simon Bühler, <a href="http://bugs.horde.org/ticket/9641">Bug #9641</a>).
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Create a default address book if the user doesn't own any yet.
+[jan] Rename sources.php to backends.php.
+[mjr] If default addressbook is not browsable, try one from the addressbook pref
+      (Request: 6536).
+[jan] Add duplicate search and merging.
+[mjr] The listTimeObjects API now returns categories for each source
+      individually instead of returning only the categories available
+      (<a href="http://bugs.horde.org/ticket/8504">Request #8504</a>).
+
+Filters Changes
+---------------
+[mms] Fix folder selection (<a href="http://bugs.horde.org/ticket/9907">Bug #9907</a>).
+[mms] Fix filtering using the IMAP driver (<a href="http://bugs.horde.org/ticket/9859">Bug #9859</a>).
+[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
+[jan] Correctly escape vacation subjects with quote characters in Maildrop
+      driver (<a href="http://bugs.horde.org/ticket/9156">Bug #9156</a>).
+[jan] Catch all PEAR errors in Sieve driver.
+[jan] Allow script drivers to provide additional scripts to upload (<a href="http://bugs.horde.org/ticket/8110">Bug #8110</a>).
+[jan] Change default Sieve port to 4190 (<a href="http://bugs.horde.org/ticket/9791">Request #9791</a>).
+[jan] Fix reading default forward rule from preferences.
+[jan] Fix removing flags with Sieve driver (Vilius Sumskas &lt;vilius@lnk.lt>,
+      Bug #9785).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[jan] Fix updating forward rules in SQL driver (<a href="http://bugs.horde.org/ticket/9699">Bug #9699</a>).
+[jan] Update installation and upgrade instructions.
+[jan] Fix instantiation of VFS transport driver (<a href="http://bugs.horde.org/ticket/9605">Bug #9605</a>).
+[jan] Fix moving rules with the SQL driver (<a href="http://bugs.horde.org/ticket/9672">Bug #9672</a>).
+[jan] Fix creating new rules with PostgreSQL (<a href="http://bugs.horde.org/ticket/9638">Bug #9638</a>).
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Rename 'driver' configuration and classes to 'transport' to avoid
+      confusion with script and storage drivers.
+[mms] Use IMP API for IMAP actions.
+[mms] Convert to Horde 4 standards.
+
+Calendar Changes
+----------------
+[jan] Don't show event edit links if user doesn't have edit permissions on any
+      calendar.
+[jan] Fix parsing of recurrence end date in dynamic view (<a href="http://bugs.horde.org/ticket/10025">Bug #10025</a>).
+[jan] Fix displaying of new tasks in new task lists.
+[jan] Fix displaying colors of task lists.
+[jan] Delete tasks from tasks view when deleting tasks lists.
+[jan] Don't export multi-day events as multiple events to iCalendar data (Bug
+      #10007).
+[jan] Fix dragging tasks in the dynamic view.
+[mjr] Fix calendar embedding.
+[jan] Don't store all task lists in the session.
+[jan] Fix new task lists not showing up until next login (<a href="http://bugs.horde.org/ticket/9814">Bug #9814</a>).
+[mjr] Fix broken event alarm links in sidebar (<a href="http://bugs.horde.org/ticket/9897">Bug #9897</a>).
+[mjr] Fix drag/drop editing of recurring events (<a href="http://bugs.horde.org/ticket/9880">Bug #9880</a>).
+[jan] Fix undefined function on Windows (<a href="http://bugs.horde.org/ticket/9916">Bug #9916</a>).
+[jan] Support adding and editing of CalDAV events in dynamic view (<a href="http://bugs.horde.org/ticket/9865">Bug #9865</a>).
+[mjr] Allow migrations to complete despite of missing shares.
+[jan] Remove debug code in Ajax library (<a href="http://bugs.horde.org/ticket/9818">Bug #9818</a>).
+[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
+[jan] Fix fatal error when using the max_events permission (<a href="http://bugs.horde.org/ticket/9784">Bug #9784</a>).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[mjr] Add migration for mysql specific geospatial fields (<a href="http://bugs.horde.org/ticket/9758">Bug #9758</a>).
+[jan] Set default alarm in dynamic view (<a href="http://bugs.horde.org/ticket/9752">Bug #9752</a>).
+[jan] Move all executable scripts to bin/ and prefix with kronolith-.
+[jan] Fix javascript error when viewing events with desktop notifications
+      (<a href="http://bugs.horde.org/ticket/9727">Bug #9727</a>).
+[jan] Update installation and upgrade instructions.
+[jan] Fix custom event alarm settings in traditional view (<a href="http://bugs.horde.org/ticket/9154">Bug #9154</a>).
+[jan] Only load external events in IFRAME if configured.
+[jan] Fix retrieving event UIDs without date limit (Simon Bühler, <a href="http://bugs.horde.org/ticket/9651">Bug #9651</a>).
+[jan] Fix saving display status of other applications' calendars (<a href="http://bugs.horde.org/ticket/9636">Bug #9636</a>).
+[mjr] Add migration for converting existing event categories to tags.
+[jan] Add configuration whether to load other applications in an IFRAME.
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Send a subscription link with the notification about shared
+      calendars if necessary.
+[jan] Default calendars no longer have the user name as the ID.
+[jan] Create a default calendar if the user doesn't own any yet.
+[jan] Add CalDAV client support (<a href="http://bugs.horde.org/ticket/8525">Request #8525</a>).
+[jan] Send agenda emails with HTML part and convert to Horde_View.
+[mjr] More complete handling of recurring event exceptions when dealing with the
+      iCalendar format (<a href="http://bugs.horde.org/ticket/9091">Request #9091</a>).
+[jan] Add remote calendars to the possible list of calendars for free/busy
+      information.
+[jan] Send alarm and iTip notifications with HTML part and convert to
+      Horde_View.
+[jan] Add option to notify users about calendar permission changes.
+[mjr] listTimeObject calendars are now viewable independently in the calendar
+      portal blocks (<a href="http://bugs.horde.org/ticket/8530">Request #8530</a>).
+[mjr] Recurring event exceptions are now indicated as such in the UI.
+[mjr] Deleting a recurring event now also deletes all exceptions to that event.
+[mjr] Add support for inline maps to the Ajax interface.
+[jan] Add preference to limit the events per day in the month view.
+[jan] Add system calendars (<a href="http://bugs.horde.org/ticket/2059">Request #2059</a>).
+[jan] Add URL field to events.
+[jan] Add task management capabilities to the Ajax interface.
+[jan] Manage holidays like any other calendar driver.
+[mjr] Add resource scheduling.
+[jan] Integrate tasks into Ajax interface (Gonçalo Queirós
+      &lt;mail@goncaloqueiros.net>).
+[mjr] Extend listTimeObjects API to include optional links and icons.
+[jan] Allow searching of any type of calendar and improve searching of
+      recurring events.
+[cjh] With only SHOW permissions, display event titles as "busy".
+[mjr] Replace categories and keywords by tags.
+[jan] Set colors per calendar (<a href="http://bugs.horde.org/ticket/7480">Request #7480</a>).
+[jan] Add individual notification methods for single events (Alfonso Marín
+      Marín &lt;almarin@um.es>).
+[jan] Add Ajax interface.
+[jan] Store events in UTC and convert to the user's timezone on the fly.
+[jan] Remove alarm reminder code.
+[jan] Change listEvents API method to return keys as dates instead of
+      timestamps.
+
+Tasks Changes
+-------------
+[jan] Fix reversed logic of displaying sub-task tree icons depending on the
+      text direction (<a href="http://bugs.horde.org/ticket/10033">Bug #10033</a>).
+[jan] Fix encoding of non-ascii characters in parent task drop-down.
+[mjr] Fix editing tasklists (<a href="http://bugs.horde.org/ticket/9965">Bug #9965</a>).
+[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[jan] Fix creating new tasks through WebDAV (<a href="http://bugs.horde.org/ticket/9675">Bug #9675</a>).
+[jan] Move all executable scripts to bin/ and prefix with nag-.
+[jan] Update installation and upgrade instructions.
+[gwr] Adapted the Kolab driver to Horde 4.
+[mjr] Fix saving tasks via PUT method.
+[mjr] Fix deleting task lists.
+[mjr] Fix hiding the External prefs group (<a href="http://bugs.horde.org/ticket/9643">Bug #9643</a>).
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Send alarm notifications with HTML part and convert to Horde_View.
+[jan] Default task lists no longer have the user name as the ID.
+[jan] Create a default task list if the user doesn't own any yet.
+[jan] Add start date to possible colums in task list (Joel Smith
+      &lt;js-horde@jk1.net>, <a href="http://bugs.horde.org/ticket/9083">Request #9083</a>).
+[jan] Add system task lists (<a href="http://bugs.horde.org/ticket/2059">Request #2059</a>).
+[jan] Set colors per task list (<a href="http://bugs.horde.org/ticket/7480">Request #7480</a>).
+[cjh] Quick Add support: there is a javascript UI element for quickly adding
+      tasks, and an API method (tasks/quickAdd) that provides the same
+      functionality.
+[jan] Add individual notification methods for single tasks (Alfonso Marín
+      Marín &lt;almarin@um.es>).
+
+Notes Changes
+-------------
+[jan] Fix generating tooltip previews of encrypted notes.
+[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
+[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
+[mjr] Default sorting criteria by creation date (<a href="http://bugs.horde.org/ticket/7332">Bug #7332</a>).
+[jan] Move all executable scripts to bin/ and prefix with mnemo-.
+[jan] Update installation and upgrade instructions.
+[gwr] Adapted the Kolab driver to Horde 4.
+[jan] Fix PDF generation.
+[jan] Fix encrypting and decrypting of notes.
+[jan] Provide default configuration files instead of .dist versions.
+[jan] Default notepads no longer have the user name as the ID.
+[jan] Create a default notepad if the user doesn't own any yet.
+[jan] Try to create ISO-8859-1 encoded PDFs if this matches the user's language.
+[jan] Add script to convert notes to UTF-8 in the backend.
+
+
+------
+v1.2.9
+------
+
+Horde Changes
+-------------
+[mms] SECURITY: Fix XSS when viewing details of a vCard (<a href="http://bugs.horde.org/ticket/9357">Bug #9357</a>).
+[jan] Fix exporting recurrence exceptions to vCalendar 1.0.
+[jan] Skip event status synchronization with Outlook, which is broken.
+[jan] Don't send SIF data to recent Funambol clients, unless requested.
+[jan] Log all queries and errors by the history library.
+
+
+------
+v1.2.8
+------
+
+[jan] Add holiday drivers for Italy and Japan.
+
+
+Horde Changes
+-------------
+[jan] Fix searching DataTree elements (groups) if backend charset is different
+      from interface charset (<a href="http://bugs.horde.org/ticket/9323">Bug #9323</a>).
+[mms] Fix accessing IMAP ACLs that contain non-alphanumeric characters
+      (<a href="http://bugs.horde.org/ticket/9299">Bug #9299</a>).
+[jan] Avoid fatal errors when using DateTime with not properly configured
+      PHP 5.3+ (<a href="http://bugs.horde.org/ticket/9312">Bug #9312</a>).
+[jan] Fix importing recurrence exceptions from vCalendar 1.0.
+[mms] Fix preferences management regression (<a href="http://bugs.horde.org/ticket/9289">Bug #9289</a>).
+[jan] Fix conversion of all-day events and certain yearly recurring events for
+      Funambol clients.
+[mms] Fix memcache cache regression (<a href="http://bugs.horde.org/ticket/9279">Bug #9279</a>).
+[jan] Fix SyncML page sometimes deleting more anchors than selected.
+
+Mail Changes
+------------
+[mms] Fix error if user's account only contains an INBOX (<a href="http://bugs.horde.org/ticket/9273">Bug #9273</a>).
+
+Dynamic Mail Changes
+--------------------
+[jan] Fix redirecting to login screen if session times out (<a href="http://bugs.horde.org/ticket/9281">Bug #9281</a>).
+
+
+------
+v1.2.7
+------
+
+[mjr] Do not remove history entries when removing user data (<a href="http://bugs.horde.org/ticket/8755">Bug #8755</a>).
+
+Horde Changes
+-------------
+[jan] SECURITY: Add token protection to preference forms.
+[mms] SECURITY: Fix XSS in util/icon_browser.php.
+[mms] Fix generating RFC 2231 parameters with charset information (<a href="http://bugs.horde.org/ticket/9212">Bug #9212</a>).
+[mms] On invalid token during logout, redirect to initial page (<a href="http://bugs.horde.org/ticket/7669">Bug #7669</a>).
+[mjr] Don't allow fixed blocks to be changed to another type (<a href="http://bugs.horde.org/ticket/9141">Bug #9141</a>).
+[jan] Show future alarms in the alarm management screen too.
+[mjr] Fix bug in Horde_Cache that would prevent cache entries from being
+      expired in certain cases, and prevent cache key collisions.
+
+Mail Changes
+------------
+[jan] SECURITY: Properly escape user input in Fetchmail configuration.
+[mms] Fix updating POP3 indices when using mailbox caching (<a href="http://bugs.horde.org/ticket/8035">Bug #8035</a>).
+[jan] Include "anyone" user when listing users in the ACL screen (<a href="http://bugs.horde.org/ticket/9135">Bug #9135</a>).
+[mms] Turn DNS prefetching off when displaying untrusted message content
+      (Ticket #8836).
+
+Dynamic Mail Changes
+--------------------
+[mms] SECURITY: XSS - Make sure mailbox name displayed on mailbox page is
+      properly encoded (<a href="http://bugs.horde.org/ticket/9240">Bug #9240</a>).
+[jan] Fix notices with certain output buffer configurations
+      (Valentin.Vidic@CARNet.hr, <a href="http://bugs.horde.org/ticket/7851">Bug #7851</a>).
+[mms] Turn DNS prefetching off when displaying untrusted message content
+      (Ticket #8836).
+
+Address Book Changes
+--------------------
+[jan] Correctly export FN vCard property if 'alternative_name' is set, but not
+      'name' (<a href="http://bugs.horde.org/ticket/9207">Bug #9207</a>).
+[jan] Fix import of addresses from LDIF (Axel Jurak, <a href="http://bugs.horde.org/ticket/9215">Bug #9215</a>).
+[jan] Speed up browsing of long address books.
+
+Filters Changes
+---------------
+[jan] Fix procmail vacation rule if no dates are set (Gaudenz Steinlin
+      &lt;gaudenz@debian.org>, <a href="http://bugs.horde.org/ticket/8982">Bug #8982</a>).
+[jan] Fix filtering only unseen message if rule should filter all messages in
+      IMAP driver (Jan Kuipers &lt;jrkuipers@lauwerscollege.nl>, <a href="http://bugs.horde.org/ticket/9077">Bug #9077</a>).
+
+Calendar Changes
+----------------
+[gwr] Fix moving events between calendars for the Kolab driver (<a href="http://bugs.horde.org/ticket/7932">Bug #7932</a>)
+[jan] Import and export the privacy field in CSV data (<a href="http://bugs.horde.org/ticket/9139">Request #9139</a>).
+[mjr] Send an iTip REQUEST, not ADD, when updating an existing event
+      (<a href="http://bugs.horde.org/ticket/9131">Bug #9131</a>).
+[jan] Fix all-day events sometimes showing up an day early too (<a href="http://bugs.horde.org/ticket/9012">Bug #9012</a>).
+[mjr] Sort exception list before displaying (<a href="http://bugs.horde.org/ticket/7688">Request #7688</a>).
+
+Tasks Changes
+-------------
+[jan] Remove stray closing tag when displaying the date of completion.
+
+
+------
+v1.2.6
+------
+
+[jan] Fix certain configuration items getting lost during upgrades (<a href="http://bugs.horde.org/ticket/8793">Bug #8793</a>).
+[jan] Use TLS for SMTP connections if supported.
+
+Horde Changes
+-------------
+[mjr] Fix issue in Horde_Image that would cause generated images to lose
+      transparency in certain situations.
+[jan] Allow to update existing identities while requiring email confirmation
+      (Sebastian Radish, <a href="http://bugs.horde.org/ticket/8877">Bug #8877</a>).
+[jan] Fix casting errors when using SQL shares and groups on PostgreSQL
+      (<a href="http://bugs.horde.org/ticket/8899">Bug #8899</a>).
+[gwr] Allow conf.d style directory configuration overriding (<a href="http://bugs.horde.org/ticket/8172">Request #8172</a>).
+[jan] Fix sending alarms to multiple users (<a href="http://bugs.horde.org/ticket/8821">Bug #8821</a>).
+[mms] Fix display of S/MIME certificate data (<a href="http://bugs.horde.org/ticket/8826">Bug #8826</a>).
+[mjr] Fix bug in Horde_Image that caused polaroid effect to fail on really old
+      ImageMagick versions (earlier then 6.3.2).
+[jan] Work around Funambol clients requiring a "configuration" database
+      (<a href="http://bugs.horde.org/ticket/8621">Bug #8621</a>).
+[jan] Add support for synchronizing only those fields that are supported by
+      the client.
+[jan] Workaround broken PHP number formatting with some locales (<a href="http://bugs.horde.org/ticket/8780">Bug #8780</a>).
+
+Mail Changes
+------------
+[mms] Fix spellcheck-on-send when using fckeditor and no errors exist
+      (<a href="http://bugs.horde.org/ticket/8833">Bug #8833</a>).
+[mms] Fix authenticate API call and synchronization when using realms
+      (robin.west@dal.ca, Bugs #6749, #8872).
+[mms] Optimize folder tree initialization (<a href="http://bugs.horde.org/ticket/8805">Request #8805</a>).
+[mms] Add command line fetchmail script (tjacyno@galasoft.net, <a href="http://bugs.horde.org/ticket/8812">Request #8812</a>).
+[jan] Workaround broken PHP number formatting with some locales (<a href="http://bugs.horde.org/ticket/8780">Bug #8780</a>).
+
+Address Book Changes
+--------------------
+[jan] Remove deleted contacts from distribution lists in the same address book.
+[mjr] Allow creation of default, personal address book when other read-only
+      sources are present.
+[mjr] Log in history when deleting all of a user's contacts (<a href="http://bugs.horde.org/ticket/8755">Bug #8755</a>).
+[jan] Only export non-empty fields if exporting manually.
+[jan] Add export to vCard 3.0.
+[jan] Only synchronize those fields that are supported by the client
+      (<a href="http://bugs.horde.org/ticket/6658">Request #6658</a>, requires Horde 3.3.7).
+
+Filters Changes
+---------------
+[jan] Correctly escape addresses in procmail driver (<a href="http://bugs.horde.org/ticket/8875">Bug #8875</a>).
+[jan] Fix procmail scripts when using composite headers (<a href="http://bugs.horde.org/ticket/8804">Bug #8804</a>).
+[jan] Support some non-standard Date: headers in Sieve vacation rules
+      (<a href="http://bugs.horde.org/ticket/8783">Request #8783</a>).
+[jan] Support composite header rules with IMAP backends (<a href="http://bugs.horde.org/ticket/7343">Request #7343</a>).
+[jan] Fix unconditional debug output with Net_Sieve earlier than 1.2.0
+      (<a href="http://bugs.horde.org/ticket/8794">Bug #8794</a>).
+[jan] Add Sieve configuration to use UTF-8 encoded folder names (for Dovecot)
+      (<a href="http://bugs.horde.org/ticket/7391">Request #7391</a>).
+
+Calendar Changes
+----------------
+[jan] Delete Horde alarms when resetting an event alarm.
+[jan] Set an alarm to one minute, if users try to set an alarm without time.
+[gwr] Fix editing the start date of recurring events (kolab/issue3885).
+
+Tasks Changes
+-------------
+[jan] Set an alarm to one minute, if users try to set an alarm without time.
+[jan] Add missing preference for not sending update notifications to yourself
+      (Joel Smith &lt;js-horde@jk1.net>, <a href="http://bugs.horde.org/ticket/8978">Request #8978</a>).
+[gwr] Fix organizer field not saved in tasks (kolab/issue3888).
+
+
+------
+v1.2.5
+------
+
+[jan] Add Croatian translation (Matej Vela &lt;matej.vela@carnet.hr>,
+      Iva Rumora &lt;iva.rumora@zg.t-com.hr>).
+[jan] Add and fix Oracle SQL scripts.
+
+Horde Changes
+-------------
+[mms] SECURITY: Workaround XSS vulnerability in Firefox for data URLs
+      (<a href="http://bugs.horde.org/ticket/8715">Bug #8715</a>).
+[jan] SECURITY: Fix XSS in administrator section.
+[jan] Fix alarm system with Oracle backends.
+[mjr] Fix using the removeUserDataFromAllApplications method (Valentin Vidic
+      &lt;valentin.vidic@carnet.hr>, <a href="http://bugs.horde.org/ticket/8754">Bug #8754</a>).
+[mjr] Fix checking existing signup requests in the Auth_Signup_datatree driver.
+[jan] Fix syntax of MSSQL scripts (<a href="http://bugs.horde.org/ticket/8664">Bug #8664</a>).
+[jan] Export task alarms to Funambol clients (<a href="http://bugs.horde.org/ticket/8426">Request #8426</a>).
+[jan] Fix not catching Alt key combinations for access keys on Mac OS.
+[jan] Close popup window after saving categories.
+[jan] Check quota when copying files with VFS (Valentin Vidic
+      &lt;valentin.vidic@carnet.hr>, <a href="http://bugs.horde.org/ticket/8643">Bug #8643</a>).
+[jan] Fix detecting SyncML message sizes.
+[jan] Fix mapping of elements during synchronization (<a href="http://bugs.horde.org/ticket/8386">Bug #8386</a>).
+[mms] Fix potential session writing issues using PHP 5.0.5+.
+[jan] Fix error in PHP 5 SOAP server implementation.
+[mms] Fix updating memcache tracking info upon session destruction
+      (whatdoyouwant@gmail.com, <a href="http://bugs.horde.org/ticket/8626">Bug #8626</a>).
+[mjr] Various improvements and fixes to the Net_IMSP driver
+      (noah@lsit.ucsb.edu; Bug #8532, #8533, #8534, and #8535).
+[jan] Export all email addresses to Funambol clients (lst_hoe02@kwsoft.de,
+      Request #8571).
+[jan] Export all fax numbers to Funambol clients (lst_hoe02@kwsoft.de,
+      Request #8618).
+[jan] Fix detecting device information of certain synchronization devices.
+[jan] Fix warnings when listing sessions with Oracle or PEAR DB session
+      handlers (<a href="http://bugs.horde.org/ticket/8601">Bug #8601</a>).
+[mas] Fix SessionHandler_sql::getSessionIDs() SQL syntax (moreda@allenta.com,
+      Bug #8600).
+[mas] Fix Horde_SQL::readBlob() on MSSQL (moreda@allenta.com, <a href="http://bugs.horde.org/ticket/8599">Bug #8599</a>).
+[mms] Fix prototypejs regression on Internet Explorer (<a href="http://bugs.horde.org/ticket/6590">Bug #6590</a>).
+
+Mail Changes
+------------
+[cjh] Fix the default value for the nav_audio preference
+      (sistemisti-posta@csi.it, <a href="http://bugs.horde.org/ticket/8725">Bug #8725</a>).
+[mms] Make sure sent-mail folders exist if using the drop-down selection list
+      on the compose page (<a href="http://bugs.horde.org/ticket/8520">Bug #8520</a>).
+[mms] When replying to list, correctly extract e-mail address if multiple
+      entries exist in the List-Post header (<a href="http://bugs.horde.org/ticket/8719">Bug #8719</a>).
+[mms] For messages marked as innocent but not moved to Inbox, don't report
+      them as deleted within the current mailbox (<a href="http://bugs.horde.org/ticket/8221">Bug #8221</a>).
+[jan] Don't show address book preference group if address books are disabled
+      (<a href="http://bugs.horde.org/ticket/8692">Bug #8692</a>).
+[mms] Save References/In-Reply-To header info when saving a draft (<a href="http://bugs.horde.org/ticket/8661">Bug #8661</a>).
+[jan] Fix viewing S/MIME encrypted and signed messages from Outlook (Express)
+      (<a href="http://bugs.horde.org/ticket/8629">Bug #8629</a>).
+[mms] Don't use translated folder prefixes in rename dialog (<a href="http://bugs.horde.org/ticket/8554">Bug #8554</a>).
+[jan] Add hook to retrieve public S/MIME and PGP keys.
+
+Dynamic Mail Changes
+--------------------
+[jan] Add Basque translation (Euskal Herriko Unibertsitatea &lt;webmaster@ehu.es>).
+[mms] Fix sizing fckeditor compose editor frame in IE (<a href="http://bugs.horde.org/ticket/8616">Bug #8616</a>).
+
+Address Book Changes
+--------------------
+[jan] Fix syntax of MSSQL scripts (<a href="http://bugs.horde.org/ticket/8664">Bug #8664</a>).
+[jan] Add preference for the name format to use for sorting (<a href="http://bugs.horde.org/ticket/6721">Request #6721</a>).
+[jan] Condense whitespace in composite fields (<a href="http://bugs.horde.org/ticket/8654">Request #8654</a>).
+[mjr] Fix permission checking for virtual address books. 
+[jan] Update deleted attributes during synchronization (lst_hoe02@kwsoft.de,
+      Request #6658).
+[jan] Support X-ANNIVERSARY, X-CHILDREN, and X-SPOUSE vCard fields
+      (<a href="http://bugs.horde.org/ticket/8074">Request #8074</a>).
+[jan] Fix copying and moving of image fields (Ryu &lt;ryu@ryux.org>, <a href="http://bugs.horde.org/ticket/8523">Bug #8523</a>).
+[jan] Don't return an error on empty LDAP search results (<a href="http://bugs.horde.org/ticket/8595">Bug #8595</a>).
+[jan] Replace PHP5-only code from the LDIF exporter (<a href="http://bugs.horde.org/ticket/8586">Bug #8586</a>).
+
+Filters Changes
+---------------
+[jan] Log Sieve communication with DEBUG log level.
+[jan] Add PostgreSQL-specific upgrade script (<a href="http://bugs.horde.org/ticket/8630">Request #8630</a>).
+[jan] Fix procmail vacation rule (micha@kovoks.nl, <a href="http://bugs.horde.org/ticket/7052">Bug #7052</a>).
+[jan] Prevent deadlock with vacation rule in maildrop driver (<a href="http://bugs.horde.org/ticket/8577">Bug #8577</a>).
+
+Calendar Changes
+----------------
+[jan] Fix editing URLs of remote calendars.
+[gwr] Fix recurring weekly events with fixed number of occurences but multiple
+      incidences per week (kolab/issue3846).
+[gwr] Fix recurring weekly events with intervals > 1 (<a href="http://bugs.horde.org/ticket/8546">Bug #8546</a>).
+[jan] Optimize event link generation (patrick.abiven@apitech.fr).
+[jan] Fix charset of ajax responses.
+[jan] Speed up listing alarms (patrick.abiven@apitech.fr, <a href="http://bugs.horde.org/ticket/8638">Request #8638</a>).
+[jan] Simplify and improve portability of listing events without date limits
+      in the SQL driver (<a href="http://bugs.horde.org/ticket/8590">Bug #8590</a>).
+[mjr] Fix issue that caused the default alarm time to be applied to 
+      listTimeObjects events (<a href="http://bugs.horde.org/ticket/8588">Bug #8588</a>).
+
+Tasks Changes
+-------------
+[jan] Fix importing due date attribute from iCalendar (<a href="http://bugs.horde.org/ticket/8644">Bug #8644</a>).
+[jan] Fix charset when exporting tasks to iCalendar 2.0 (<a href="http://bugs.horde.org/ticket/8637">Bug #8637</a>).
+
+
+------
+v1.2.4
+------
+
+[jan] Create table with METAR weather stations (<a href="http://bugs.horde.org/ticket/8302">Request #8302</a>).
+[jan] Bundle a complete, working PEAR installation (<a href="http://bugs.horde.org/ticket/7902">Bug #7902</a>).
+[jan] Bundle Net_DNS, Net_IMAP and Net_LDAP2 PEAR packages.
+[mms] Upgrade prototype.js to v1.6.1.
+[jan] Fix synchronization with output compression enabled (<a href="http://bugs.horde.org/ticket/7769">Bug #7769</a>).
+
+Horde Changes
+-------------
+[jan] SECURITY: Fix vulnerability in image form fields that allows overwriting
+      of arbitrary local files.
+[cjh] SECURITY: Fix validation of "number" type preferences (<a href="http://bugs.horde.org/ticket/8399">Bug #8399</a>).
+[mms] SECURITY: Don't display unknown text parts inline (<a href="http://bugs.horde.org/ticket/8311">Bug #8311</a>).
+[jan] Use system timezone for timestamps in the logs (<a href="http://bugs.horde.org/ticket/8496">Bug #8496</a>).
+[jan] Fix exporting certain weekday recurrence rules to iCalendar
+      (lst_hoe02@kwsoft.de, <a href="http://bugs.horde.org/ticket/8510">Bug #8510</a>).
+[jan] Work around crash bug in Funambol clients when synchronizing all-day
+      events (<a href="http://bugs.horde.org/ticket/8474">Bug #8474</a>).
+[jan] Fix synchronizing tasks with certain devices (<a href="http://bugs.horde.org/ticket/8506">Bug #8506</a>).
+[jan] Workaround synchronizing of messed up categories in Nokia E phones
+      (<a href="http://bugs.horde.org/ticket/7824">Bug #7824</a>).
+[jan] Fix synchronizing photos with broken Nokia phones (xk3@mompl.org,
+      Bug #7407).
+[jan] Fix fatal error during synchronization if using certain session handlers
+      (<a href="http://bugs.horde.org/ticket/8443">Bug #8443</a>).
+[jan] Improve synchronizing yearly events with Funambol clients
+      (lst_hoe02@kwsoft.de, <a href="http://bugs.horde.org/ticket/7790">Request #7790</a>).
+[jan] Destroy session when a CLI script ends (<a href="http://bugs.horde.org/ticket/8482">Request #8482</a>).
+[jan] Fix data casting when caching permissions with the DataTree backend (Bug
+      #8435).
+[jan] Pass user's password to the signup_addextra hook.
+[jan] Add removeUserDataFromAllApplications API method
+      (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/8454">Request #8454</a>).
+[jan] Catch errors when resetting passwords.
+[jan] Support resetting passwords with composite authentication.
+[mms] Fix memcache issue where it took 1 second to release a lock.
+[mjr] Fix weatherdotcom block always displaying a 5 day forecast (<a href="http://bugs.horde.org/ticket/8357">Bug #8357</a>).
+[cjh] Use streams for file transfers in VFS_ssh2 (jives@jives.ixum.net,
+      Request #8323).
+[jan] Send notification messages about new signups with confirmation links.
+[jan] Drop signup_email column from sign-up table.
+[jan] Show photo in vCard viewer if provided as inline vCard data.
+[mjr] Fix issue where pref hooks would not be called for preferences marked as
+      shared and defined outside of the Horde scope.
+[jan] Add configuration whether to show user drop down list or text field in
+      permissions dialog.
+[jan] Export current locale to the environment.
+[jan] Fix unfolding of vCard 2.1/vCalendar 1.0 data.
+
+Mail Changes
+------------
+[jan] Add example hook for the search_sources preference (dom.lalot@gmail.com,
+      Request #7796).
+[mms] Fix renaming shared folders contained in empty namespaces (<a href="http://bugs.horde.org/ticket/8468">Bug #8468</a>).
+[mms] Correctly handle NO untagged responses on login (<a href="http://bugs.horde.org/ticket/8478">Bug #8478</a>).
+[mms] Correctly set charset of Bcc header in sent mail copy (<a href="http://bugs.horde.org/ticket/8362">Bug #8362</a>).
+[mms] Fix spellcheck in text-mode for certain words in non-English locales
+      (<a href="http://bugs.horde.org/ticket/8330">Bug #8330</a>).
+[mms] Fix some javascript if using IE 8 (uses IE 7 compatibility mode) (Bug
+      #8345).
+[jan] Allow to lock default_encrypt preference.
+[mjr] Add example hook for the add_source preference (<a href="http://bugs.horde.org/ticket/8285">Bug #8285</a>).
+[mms] Fix unqualified domain preference (<a href="http://bugs.horde.org/ticket/8272">Bug #8272</a>).
+[jan] Highlight signed messages depending on the signature verification.
+[mms] Fix display_folder hook (m.gabriel@das-netzwerkteam.de, <a href="http://bugs.horde.org/ticket/8254">Bug #8254</a>).
+[jan] Use correct charset when rendering inline PGP data.
+
+Dynamic Mail Changes
+--------------------
+[mms] Fix deleting messages after undeleting (<a href="http://bugs.horde.org/ticket/8298">Bug #8298</a>).
+[mms] Fix renaming folders with non-7bit characters
+      (rainer.groesslinger@gmail.com, <a href="http://bugs.horde.org/ticket/8286">Bug #8286</a>).
+
+Mobile Mail Changes
+-------------------
+[mms] Ignore 'compose_html' preference in IMP (<a href="http://bugs.horde.org/ticket/8415">Bug #8415</a>) (Requires IMP 4.3.5).
+[mms] Fix showing Cc and Bcc fields (<a href="http://bugs.horde.org/ticket/8167">Bug #8167</a>).
+[cjh] Implement custom menu items (<a href="http://bugs.horde.org/ticket/7630">Bug #7630</a>).
+
+Address Book Changes
+--------------------
+[mjr] Fix contacts being deleted during synchronization when moved from one
+      address book to another (ryu@ryux.org, <a href="http://bugs.horde.org/ticket/8487">Bug #8487</a>).
+[mjr] Add new API method for retrieving the default share for a source.
+[jan] Don't overwrite the compositing fields, when importing composite fields.
+[cjh] Fix searches for multiple strict fields and at least one non-strict field
+      (tinu@humbapa.ch, <a href="http://bugs.horde.org/ticket/7876">Bug #7876</a>).
+[mjr] Specific timeobject categories are now only advertised when they are
+      present in a configured source.
+
+Filters Changes
+---------------
+[jan] Correctly match negative header values with numeric comparison in Sieve
+      driver (bb@apc.ag, <a href="http://bugs.horde.org/ticket/7308">Bug #7308</a>).
+[jan] Implement removeUserData API (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/8452">Request #8452</a>).
+[jan] Take default settings for forwards, vacation and spam rules from
+      config/prefs.php in the SQL storage driver.
+[jan] No longer try to read spam folder from IMP's preferences.
+[jan] Fix maildrop rules without conditions (almarin@um.es, <a href="http://bugs.horde.org/ticket/8103">Bug #8103</a>).
+[cjh] Fix checks for the forward_file and forward_script procmail parameters
+      in the VFS driver (<a href="http://bugs.horde.org/ticket/7811">Bug #7811</a>).
+[cjh] Add %d (domain) as a replaceable variable in the vfs_path parameter
+      (dev@stean.ch, <a href="http://bugs.horde.org/ticket/7503">Request #7503</a>).
+[jan] Make it easier to select the "Create new folder" entry for target folders
+      (<a href="http://bugs.horde.org/ticket/7768">Bug #7768</a>).
+[cjh] Fix reading the current script in the VFS driver (rsalmon@mbpgroup.com,
+      Bug #7610).
+[cjh] Maildrop vacation rule: don't reply to bulk/list messages, add start/end
+      times, better character support in the message, allow subsequent rules
+      to execute (rsalmon@mbpgroup.com, <a href="http://bugs.horde.org/ticket/7140">Bug #7140</a>).
+[cjh] Fix compound header tests in the procmail and maildrop drivers
+      (rsalmon@mbpgroup.com, Bugs #7117, #7611).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
+
+Calendar Changes
+----------------
+[jan] Allow to add address lists as attendees through the address book popup
+      (<a href="http://bugs.horde.org/ticket/7834">Bug #7834</a>).
+[jan] Fix exporting certain weekday recurrence rules to iCalendar
+      (lst_hoe02@kwsoft.de, <a href="http://bugs.horde.org/ticket/8501">Bug #8501</a>).
+[jan] Export recurrence end dates as date-time values in iCalendar data to
+      improve compatibility with external clients (<a href="http://bugs.horde.org/ticket/7846">Bug #7846</a>).
+[jan] Fix synchronization with output compression enabled (<a href="http://bugs.horde.org/ticket/7769">Bug #7769</a>).
+[jan] Add configuration whether to show user drop down list or text field in
+      permissions dialog (requires Horde 3.3.5).
+[jan] Propagate the 'modified' API method (<a href="http://bugs.horde.org/ticket/8274">Request #8274</a>).
+[cjh] Fix the signature of the kronolith/import API method
+      (rpolli@babel.it, <a href="http://bugs.horde.org/ticket/8309">Bug #8309</a>).
+[jan] Correctly create all-day events if using the all-day link in the day
+      view (stpierre@nebrwesleyan.edu, <a href="http://bugs.horde.org/ticket/8220">Bug #8220</a>).
+[jan] Fix rendering of all-day events (<a href="http://bugs.horde.org/ticket/8176">Bug #8176</a>).
+
+Tasks Changes
+-------------
+[jan] Display application name as task list name when listing external tasks.
+[jan] Fix importing vTodo data including more iCalendar components.
+
+Notes Changes
+-------------
+[jan] Add passphrase confirmation field (<a href="http://bugs.horde.org/ticket/7379">Bug #7379</a>).
+[cjh] Work around BC break with Horde versions before 3.2 (<a href="http://bugs.horde.org/ticket/7820">Bug #7820</a>).
+[cjh] Add URL access to notes by "starts-with" search on the note title.
+[cjh] Add hooks for altering the displayed note body and showing help text next
+      to the note entry field.
+[cjh] Explicitly load DB library (<a href="http://bugs.horde.org/ticket/7648">Bug #7648</a>).
+[jan] Fix "replace" API method (Alfonso Marín Marín &lt;almarin@um.es>, <a href="http://bugs.horde.org/ticket/7436">Bug #7436</a>).
+[cjh] Add a PostgreSQL-specific upgrade script.
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
+[jan] Fix user name conversion with user hooks in the notepad panel (<a href="http://bugs.horde.org/ticket/7366">Bug #7366</a>).
+
+
+------
+v1.2.3
+------
+
+[jan] Bundle Text_Figlet package to enable the captcha form field.
+
+Horde Changes
+-------------
+[jan] Fix rendering of addresslink form fields (<a href="http://bugs.horde.org/ticket/8053">Bug #8053</a>).
+[mjr] Fix a botched merge in Horde_Image_gd that was causing an undefined
+      variable notice to be output in the image data.
+
+
+----------
+v1.2.3-RC1
+----------
+
+[jan] Use improved Date_Holidays package.
+[mms] Upgrade prototype.js to v1.6.0.3.
+
+Horde Changes
+-------------
+[mjr] Fix an issue that causing users with expired passwords to be allowed to
+      log in with the LDAP Auth driver.
+[jan] Properly handle synchronization requests to non-existant databases.
+[jan] Fix exporting all-day events to Funambol clients (Bugs #4487, #6847).
+[jan] Quote parameter values in iCalendar data if necessary (Gunnar Wrobel,
+      Bug #7758).
+[jan] Detect base64 encoded synchronization data from Blackberry devices
+      (Bugs #6995, #6949).
+[jan] Optionally use Net_DNS for host name lookups (adrieder@sbox.tugraz.at,
+      Request #7374).
+[jan] Add TLS support to LDAP drivers (web@marlboro.edu, <a href="http://bugs.horde.org/ticket/7958">Request #7958</a>).
+[jan] Add scope and sizelimit parameters to LDAP authentication driver
+      (dom.lalot@gmail.com, <a href="http://bugs.horde.org/ticket/7839">Request #7839</a>).
+[jan] Further improve HTML-to-text filter.
+[jan] Export recurrence end dates as date-time values in iCalendar data to
+      improve compatibility with external clients (<a href="http://bugs.horde.org/ticket/7846">Bug #7846</a>).
+[jan] Silence errors messages from iconv_substr() (jens@peino.de, <a href="http://bugs.horde.org/ticket/8128">Bug #8128</a>).
+[jan] Don't catch Alt key combinations for access keys on Mac OS.
+[mjr] Fix bitwise clause generation in the sql and hierarchical sql driver. This
+      fixes issues with Oracle and possibly other RDBMS.
+[mjr] Correct numerous bugs in Horde_Image dealing with ImageMagick version
+      inconsistencies.
+[jan] Fix charset conversion in preference hooks (<a href="http://bugs.horde.org/ticket/7489">Bug #7489</a>).
+[cjh] Proactively disable allow_url_include in core.php.
+[cjh] Add an index on session_lastmodified to the Horde sessionhandler tables.
+[mjr] Force the use of REQUEST_URI instead of PATH_INFO in Util::getPathInfo()
+      when being served by lighttpd due to issues with case insensitive
+      file systems.
+[cjh] Add support for SSL connections to MySQL databases (BryanRJ@gmail.com,
+      Request #7972).
+[cjh] Fix storing of unlocked preferences set by hooks (manuel@mausz.at,
+      Bug #6822).
+[jan] Highlight color input fields with the color from the picker.
+[jan] Fix importing vCards that have the charset specified in a MIME part
+      (<a href="http://bugs.horde.org/ticket/7816">Bug #7816</a>).
+[mms] Ensure all input array entries in String::convertCharset() are properly
+      iterated through (<a href="http://bugs.horde.org/ticket/7828">Bug #7828</a>, manuel@mausz.at).
+
+Mail Changes
+------------
+[mms] SECURITY: Don't cache local PGP public keys retrieved from the
+      addressbook (found by Peter Meier &lt;peter.meier@immerda.ch>).
+[mms] If using spellcheck on send, automatically send if no spelling errors
+      exist (<a href="http://bugs.horde.org/ticket/6892">Request #6892</a>).
+[jan] Show all addresses when printing messages.
+[mms] Fix cache issues in folder tree when deleting a mailbox (<a href="http://bugs.horde.org/ticket/7745">Bug #7745</a>).
+[mms] Fix updating POP3 indices when deleting in mailbox view (<a href="http://bugs.horde.org/ticket/8035">Bug #8035</a>).
+[jan] If updating a calendar event fails, try to import it instead (<a href="http://bugs.horde.org/ticket/7589">Bug #7589</a>).
+[mms] Fix [un]escaping of various URLs on message screen caused by security
+      fixes in v4.3.3 (<a href="http://bugs.horde.org/ticket/7926">Bug #7926</a>).
+[jan] Fix rendering of subjects in RTL scripts when using LTR translations
+      (vilius@lnk.lt, <a href="http://bugs.horde.org/ticket/3511">Bug #3511</a>).
+[mms] Add hook to allow hiding of IMAP folders (Gunnar Wrobel &lt;p@rdus.de>,
+      Request #7353).
+[jan] Fix logging of messages forwarded with attachments (<a href="http://bugs.horde.org/ticket/7911">Bug #7911</a>).
+
+Dynamic Mail Changes
+--------------------
+[mms] Make dimp work with IE 8 (uses IE 7 compatibility mode) (requires IMP
+      4.3.4+).
+[mms] Add confirmation box if attempting to send message without subject
+      (<a href="http://bugs.horde.org/ticket/8076">Request #8076</a>).
+[mms] Fix address autocomplete display on IE (<a href="http://bugs.horde.org/ticket/7982">Bug #7982</a>).
+[mms] Shift-Delete on multiple messages will move selection to next message
+      (<a href="http://bugs.horde.org/ticket/7533">Request #7533</a>).
+[mms] Fix occasional buggy behavior when drag/drop folders (<a href="http://bugs.horde.org/ticket/7414">Bug #7414</a>).
+[mms] The UP key will start at the bottom of the mailbox, if no current
+      message is selected (<a href="http://bugs.horde.org/ticket/7532">Request #7532</a>).
+[mms] Add 'undelete' to Other Actions menu (<a href="http://bugs.horde.org/ticket/7496">Bug #7496</a>).
+[mms] Display quota on startup (<a href="http://bugs.horde.org/ticket/7718">Bug #7718</a>).
+[jan] Fix portal link text in tab bar (<a href="http://bugs.horde.org/ticket/7719">Bug #7719</a>).
+[mms] Fix portal display in IE (<a href="http://bugs.horde.org/ticket/7398">Bug #7398</a>).
+[mms] Correctly show 'To' header when doing searches in sentmail and drafts
+      mailboxes (<a href="http://bugs.horde.org/ticket/7650">Bug #7650</a>).
+
+Calendar Changes
+----------------
+[jan] Render contact autocompletion list on top of free/busy blocks (<a href="http://bugs.horde.org/ticket/7273">Bug #7273</a>).
+[jan] Save recurrence exceptions when copying events (<a href="http://bugs.horde.org/ticket/7689">Bug #7689</a>).
+[jan] Prevent warnings if trying to add address lists as attendees (<a href="http://bugs.horde.org/ticket/7834">Bug #7834</a>).
+[jan] Fix start and end time calculation of multi-day events (<a href="http://bugs.horde.org/ticket/7788">Bug #7788</a>).
+[jan] Wrap URL in calendar information in IE7 (almarin@um.es, <a href="http://bugs.horde.org/ticket/8043">Bug #8043</a>).
+[jan] Fix "Date-string has wrong format" error with holidays (<a href="http://bugs.horde.org/ticket/7961">Bug #7961</a>).
+[jan] Use improved translation support in Date_Holidays (requires 0.21.0 now,
+      Bug #7272).
+[jan] Empty view cache when changing calendar selection
+      (stpierre@nebrwesleyan.edu, <a href="http://bugs.horde.org/ticket/7879">Bug #7879</a>).
+[mjr] Fix category CSS being included on embedded widgets.
+[jan] Allow to manually change attendee responses (paul@carnie.com.au,
+      Request #7443).
+[jan] Fix linking to last week across certain year boundaries (<a href="http://bugs.horde.org/ticket/7827">Bug #7827</a>).
+[jan] Add script to import events from SquirrelMail database.
+[cjh] Add private-***.png graphics to Tango and Silver themes (<a href="http://bugs.horde.org/ticket/7531">Bug #7531</a>).
+[cjh] Fix listing of users in the calendar/browse API call.
+[jan] Set timezone per user preference and fix recurring events when sending
+      reminders through Kronolith (develop@kristov.de, <a href="http://bugs.horde.org/ticket/7038">Bug #7038</a>).
+[cjh] Add a PostgreSQL-specific upgrade script for 2.2 to 2.3
+      (michael.menge@zdv.uni-tuebingen.de, <a href="http://bugs.horde.org/ticket/7454">Bug #7454</a>).
+
+Tasks Changes
+-------------
+[jan] Don't allow to set alarms if no due date has been set.
+[cjh] Add URL access to tasks by "starts-with" search on the task name.
+[cjh] Add hooks for altering the displayed task description and showing help
+      text next to the task description entry field.
+[cjh] Add estimated time to the fields available in the task list.
+[jan] Fix link escaping in notification messages (Alfonso Marín Marín
+      &lt;almarin@um.es>, <a href="http://bugs.horde.org/ticket/7509">Bug #7509</a>).
+[cjh] Add a PostgreSQL-specific upgrade script for 2.2 to 2.3.
+[cjh] Fix fatal error when completing tasks (<a href="http://bugs.horde.org/ticket/7400">Bug #7400</a>).
+
+
+------
+v1.2.2
+------
+
+[jan] Update broken Date_Holidays package (<a href="http://bugs.horde.org/ticket/7784">Bug #7784</a>).
+
+Horde Changes
+-------------
+[cjh] SECURITY: Escape output in the tag cloud block
+      (found by Gunnar Wrobel &lt;p@rdus.de>).
+[cjh] SECURITY: Validate the Horde_Image driver name
+      (found by Gunnar Wrobel &lt;p@rdus.de>).
+[cjh] Allow "." in phone number fields (<a href="http://bugs.horde.org/ticket/7858">Request #7858</a>).
+[cjh] Restore backwards compatibility in MIME::_rfc822Encode calls,
+      used in Kronolith and Whups FW3 calls (<a href="http://bugs.horde.org/ticket/7862">Bug #7862</a>).
+[cjh] Fix the SQL Share driver closing the global database connection
+      improperly when using PostgreSQL (<a href="http://bugs.horde.org/ticket/7825">Bug #7825</a>).
+[jan] Add support for Mozilla Sunbirds snooze properties (<a href="http://bugs.horde.org/ticket/7470">Request #7470</a>).
+[cjh] Try iconv_substr() in String::substr() if it's available
+      (duck@obala.net, <a href="http://bugs.horde.org/ticket/7826">Request #7826</a>).
+[cjh] Avoid warnings in Perms::getPermissionId with PostgreSQL
+      (Marcus Ryan &lt;marcus@riboflavin.net>, <a href="http://bugs.horde.org/ticket/7750">Bug #7750</a>).
+[jan] Fix parsing of LABEL attributes in the vCard viewer.
+
+Mail Changes
+------------
+[cjh] SECURITY: Escape output in message.php, pgp.php and smime.php
+      (found by Gunnar Wrobel &lt;p@rdus.de>).
+[jan] Use all credentials and mailer settings for iTip replies (<a href="http://bugs.horde.org/ticket/7388">Bug #7388</a>).
+[mms] Show translated 'INBOX' prefix for subfolders (<a href="http://bugs.horde.org/ticket/7759">Request #7759</a>).
+[mms] Workaround obsolete 'UT' date format (<a href="http://bugs.horde.org/ticket/5717">Request #5717</a>).
+[mms] Fix tracking folder changes when renaming (<a href="http://bugs.horde.org/ticket/7772">Bug #7772</a>).
+[cjh] Suppress browser autocomplete when redirecting messages (<a href="http://bugs.horde.org/ticket/7767">Bug #7767</a>).
+
+
 ------
 v1.2.1
 ------
 
-[jan] Patch broken Date_Holidays package (Bug #7413).
+[jan] SECURITY: Escape output in test.php files.
+[jan] Patch broken Date_Holidays package (<a href="http://bugs.horde.org/ticket/7413">Bug #7413</a>).
 [jan] Fix updating of preferences and other configuration files (Bugs #7439,
       #7538).
-[jan] Fix creating the alarm tables on PostgreSQL (Bug #7409).
+[jan] Fix creating the alarm tables on PostgreSQL (<a href="http://bugs.horde.org/ticket/7409">Bug #7409</a>).
+[mms] Upgrade prototype.js to v1.6.0.3.
+
+Horde Changes
+-------------
+[cjh] SECURITY: Add another check to the XSS filter.
+[jan] Add script to import preferences from SquirrelMail database.
+[cjh] Allow the password file Auth driver to require a specific group.
+[jan] Add XPath wrapper to Horde_DOM library.
+[cjh] Don't use executeMultiple in the SQL Share driver when we might
+      reset the connection in between queries (<a href="http://bugs.horde.org/ticket/7542">Bug #7542</a>).
+[jan] Fix database XML schema to create all lock table fields (<a href="http://bugs.horde.org/ticket/7433">Bug #7433</a>).
+[jan] Fix showing two sidebars after saving the display preference group for
+      the first time (<a href="http://bugs.horde.org/ticket/7475">Bug #7475</a>).
+[jan] Fix sharing with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
+[jan] Add javascript event handler for access keys.
+[cjh] Remove UNSIGNED from PostgreSQL scripts.
+[cjh] Call preference hooks in the scope of the preference
+      (vlukashov (at) parallels (dot) com, <a href="http://bugs.horde.org/ticket/7445">Bug #7445</a>).
+[jan] Fix resuming synchronization session on server farms
+      (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/7394">Bug #7394</a>).
+[jan] Fix synchronization of tasks with many items (adrieder@sbox.tugraz.at,
+      Bug #7395).
+[jwm] Fix regression: SOAP wsdl/disco shouldn't require authorization.
+
+Mail Changes
+------------
+[mms] Don't include Virtual Folder information in when tracking folder
+      tree changes (<a href="http://bugs.horde.org/ticket/7739">Bug #7739</a>).
+[mms] Marked stripped parts as 'attachment', not 'inline' (<a href="http://bugs.horde.org/ticket/4664">Request #4664</a>).
+[mms] Fix linking from addresses in mailbox to compose screen (<a href="http://bugs.horde.org/ticket/7432">Bug #7432</a>).
+[jan] Use mailer configuration when sending iTip replies (<a href="http://bugs.horde.org/ticket/7388">Bug #7388</a>).
+[jan] Always display multipart/appledouble attachments.
+
+Address Book Changes
+--------------------
+[jan] Add script to import contacts from SquirrelMail database.
+[gwr] Correct support for the freebusy URL in Kolab.
+[gwr] Add photo support for the Kolab driver.
+[jan] Import broken vCards from Synthesis clients (<a href="http://bugs.horde.org/ticket/7407">Bug #7407</a>).
+[cjh] Add two retries to find a contact after adding it (<a href="http://bugs.horde.org/ticket/7478">Bug #7478</a>).
+[cjh] Add a PostgreSQL-specific upgrade script for 2.2.1 to 2.3
+      (michael.menge@zdv.uni-tuebingen.de, <a href="http://bugs.horde.org/ticket/7462">Bug #7462</a>).
+[jan] Don't overwrite empty address books preference when creating new shares
+      (<a href="http://bugs.horde.org/ticket/7399">Bug #7399</a>).
 
 
 ----
 v1.2
 ----
 
-[jan] Change group field in shares table to work with LDAP groups (Bug #6883).
+[jan] Change group field in shares table to work with LDAP groups (<a href="http://bugs.horde.org/ticket/6883">Bug #6883</a>).
 
 Horde Changes
 -------------
-[jan] Fix synchronization issues with Blackberry clients (Bug #6949).
+[jan] Fix synchronization issues with Blackberry clients (<a href="http://bugs.horde.org/ticket/6949">Bug #6949</a>).
 [mms] Fix setting the horde user when using application authentication with
-      realms (Bug #6749).
+      realms (<a href="http://bugs.horde.org/ticket/6749">Bug #6749</a>).
 [jan] Fix user name conversion with user hooks in the permissions interfaces
-      (Bug #6371).
+      (<a href="http://bugs.horde.org/ticket/6371">Bug #6371</a>).
 [jan] Provide all settings for the read server in split SQL configuration
-      (Request #7024).
+      (<a href="http://bugs.horde.org/ticket/7024">Request #7024</a>).
 [jan] Improve HTML to text filter.
 [mjr] Hierarchical SQL Share driver now correctly removes all children when
       removing a share (Bug: 7347).
@@ -35,7 +1314,7 @@ Horde Changes
 
 Mail Changes
 ------------
-[jan] Add compose token to redirect view (Bug #7383).
+[jan] Add compose token to redirect view (<a href="http://bugs.horde.org/ticket/7383">Bug #7383</a>).
 [jan] Don't resize window if not composing messages in a popup.
 
 Dynamic Mail Changes
@@ -44,25 +1323,25 @@ Dynamic Mail Changes
 
 Address Book Changes
 --------------------
-[jan] Fix exporting address books with country fields as vCards (Bug #7372).
+[jan] Fix exporting address books with country fields as vCards (<a href="http://bugs.horde.org/ticket/7372">Bug #7372</a>).
 [mjr] Make sure we use all address books when searching via the api and the
-      user's addressbooks pref is empty (Bug #7357).
-[mjr] Correctly calculate the age of time objects (Bug #7330).
+      user's addressbooks pref is empty (<a href="http://bugs.horde.org/ticket/7357">Bug #7357</a>).
+[mjr] Correctly calculate the age of time objects (<a href="http://bugs.horde.org/ticket/7330">Bug #7330</a>).
 
 Calendar Changes
 ----------------
 [jan] Fix user name conversion with user hooks in the calendar panel
-      (Bug #7366).
+      (<a href="http://bugs.horde.org/ticket/7366">Bug #7366</a>).
 [gwr] Fixed handling of free events in the Kolab driver
-      (noethen@uni-paderborn.de, Bug #7192).
+      (noethen@uni-paderborn.de, <a href="http://bugs.horde.org/ticket/7192">Bug #7192</a>).
 [jan] Differentiate between days with events and days with busy events in the
       year view.
 
 Tasks Changes
 -------------
-[jan] Log completion date if adding a completed task (Bug #7275).
+[jan] Log completion date if adding a completed task (<a href="http://bugs.horde.org/ticket/7275">Bug #7275</a>).
 [jan] Fix user name conversion with user hooks in the task list panel
-      (Bug #7366).
+      (<a href="http://bugs.horde.org/ticket/7366">Bug #7366</a>).
 [jan] Fix displayed WebDAV subscription URLs in the task list manager.
 
 
@@ -76,20 +1355,20 @@ v1.2-RC1
 Horde Changes
 -------------
 [mms] Fix garbage collection handling on SQL session handler backends.
-[mjr] Change MDB2 sequence names to 'id' in SQL share driver (Bug #7240).
+[mjr] Change MDB2 sequence names to 'id' in SQL share driver (<a href="http://bugs.horde.org/ticket/7240">Bug #7240</a>).
 [cjh] When a URL is supplied for pass-through after logging in, go to that URL
-      in mobile browsers instead of going to the mobile portal (Bug #6332).
+      in mobile browsers instead of going to the mobile portal (<a href="http://bugs.horde.org/ticket/6332">Bug #6332</a>).
 [mms] Memcache session handler no longer writes data with a lifetime.
-[cjh] Add DIMP to the horde LDAP OIDs and hordePerson objectclass (Bug #7243).
+[cjh] Add DIMP to the horde LDAP OIDs and hordePerson objectclass (<a href="http://bugs.horde.org/ticket/7243">Bug #7243</a>).
 [mms] Update FCKeditor to v2.6.3.
 [jan] Use global mailer configuration when sending alarm emails
-      (adrieder@sbox.tugraz.at, Bug #7058).
-[jan] Reset background colors when resetting the category form (Bug #7226).
+      (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/7058">Bug #7058</a>).
+[jan] Reset background colors when resetting the category form (<a href="http://bugs.horde.org/ticket/7226">Bug #7226</a>).
 [jan] Improve Funambol contacts support (Requests #7099, #7100).
-[jan] Correctly parse GEO tags in vCard 2.1 data (Bug #6563).
-[jan] Remove Horde portal link from application menus (Bug #7221).
+[jan] Correctly parse GEO tags in vCard 2.1 data (<a href="http://bugs.horde.org/ticket/6563">Bug #6563</a>).
+[jan] Remove Horde portal link from application menus (<a href="http://bugs.horde.org/ticket/7221">Bug #7221</a>).
 [cjh] Create a driver for signups, allowing backends other than DataTree
-      (Duck &lt;duck@obala.net>, Request #7161).
+      (Duck &lt;duck@obala.net>, <a href="http://bugs.horde.org/ticket/7161">Request #7161</a>).
 [jan] Fix displaying images with the image form field.
 [mjr] Fix issue with hierarchical SQL share driver that caused permissons to
       erroneously be denied when the share contained group permissions and was
@@ -100,22 +1379,22 @@ Horde Changes
       fail under certain conditions by no longer explicitly storing owner
       permissions in the Perms backend.
 [cjh] Fix overwriting a variable in the tableset_html VarRenderer
-      (Paul Roy &lt;proy@corom.ca>, Bug #7120).
-[mms] Fix MIME encoding when using the ISO-2022-JP charset (Bug #1621).
+      (Paul Roy &lt;proy@corom.ca>, <a href="http://bugs.horde.org/ticket/7120">Bug #7120</a>).
+[mms] Fix MIME encoding when using the ISO-2022-JP charset (<a href="http://bugs.horde.org/ticket/1621">Bug #1621</a>).
 [jan] Fix SQL Share driver not using the correct database when using different
-      databases in Horde applications (Bug #6997).
-[cjh] Fix SQL portability in Share_sql driver (Bug #7084).
+      databases in Horde applications (<a href="http://bugs.horde.org/ticket/6997">Bug #6997</a>).
+[cjh] Fix SQL portability in Share_sql driver (<a href="http://bugs.horde.org/ticket/7084">Bug #7084</a>).
 [jan] Fix synchronizing large amounts of data split across several SyncML
       messages.
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [cjh] Fix Horde_Lock::getLockInfo (duck@obala.net, Bub #7046).
-[cjh] Fix SQL portability in Group_sql driver (Bug #7075).
-[jan] Fix PAM authentication driver, but also mark it as deprecated (Bug #6982).
+[cjh] Fix SQL portability in Group_sql driver (<a href="http://bugs.horde.org/ticket/7075">Bug #7075</a>).
+[jan] Fix PAM authentication driver, but also mark it as deprecated (<a href="http://bugs.horde.org/ticket/6982">Bug #6982</a>).
 [mjr] Fix issue with native SQL Share driver that caused filtering shares by
       attributes to fail.
-[jan] Fix synchronization of event alarms with Funambol clients (Bug #7003).
-[jan] Correctly detect Funambol clients on Blackberry devices (Bug #6995).
+[jan] Fix synchronization of event alarms with Funambol clients (<a href="http://bugs.horde.org/ticket/7003">Bug #7003</a>).
+[jan] Correctly detect Funambol clients on Blackberry devices (<a href="http://bugs.horde.org/ticket/6995">Bug #6995</a>).
 [mjr] Remove all user application permissions and group memberships from storage
       when removing the user from the system (Bug: 6999)
 [cjh] Call the postauthenticate hook in Auth::setAuth(), and allow the
@@ -130,39 +1409,39 @@ Horde Changes
       them is possible.
 [mjr] Fix issue in Horde_Image that was causing erratic results when cropping
       images.
-[jan] Fix validation of phone fields marked as required (Bug #6948).
-[mms] Fix quoting periods in display part of e-mail address (Bug #6899).
+[jan] Fix validation of phone fields marked as required (<a href="http://bugs.horde.org/ticket/6948">Bug #6948</a>).
+[mms] Fix quoting periods in display part of e-mail address (<a href="http://bugs.horde.org/ticket/6899">Bug #6899</a>).
 [mms] Fix error checking when parsing an undisclosed recipients mail header
-      and using an older version of PEAR::Mail (Bug #6930).
+      and using an older version of PEAR::Mail (<a href="http://bugs.horde.org/ticket/6930">Bug #6930</a>).
 [jan] Return to portal after editing or deleting blocks directly from there.
 
 Mail Changes
 ------------
-[mms] Fix loading of print stylesheets when printing a message (Bug #7310).
-[mjr] Fix redirect loop when conf[server][change_server] is true (Bug #6978).
+[mms] Fix loading of print stylesheets when printing a message (<a href="http://bugs.horde.org/ticket/7310">Bug #7310</a>).
+[mjr] Fix redirect loop when conf[server][change_server] is true (<a href="http://bugs.horde.org/ticket/6978">Bug #6978</a>).
 [mms] Fix message caching and optimize storage.
-[mms] Fix autocomplete address positioning on IE (Bug #7074).
+[mms] Fix autocomplete address positioning on IE (<a href="http://bugs.horde.org/ticket/7074">Bug #7074</a>).
 [cjh] When the selected view doesn't match the type of browser's default view
       (IMP or DIMP for a mobile browser, MIMP or DIMP for a desktop browser),
-      explicitly redirect to that view and disable the frameset (Bug #6332).
+      explicitly redirect to that view and disable the frameset (<a href="http://bugs.horde.org/ticket/6332">Bug #6332</a>).
 [jan] Add support for updating exsting events and cancelled recurring event
-      instances to iTip viewer (Bug #6636).
-[mms] Fix uploaded compose attachment names if magic quoting is on (Bug #7215).
+      instances to iTip viewer (<a href="http://bugs.horde.org/ticket/6636">Bug #6636</a>).
+[mms] Fix uploaded compose attachment names if magic quoting is on (<a href="http://bugs.horde.org/ticket/7215">Bug #7215</a>).
 [mms] Cache results of address formatting.
-[jan] Show name and email address in the address book popup (Request #6937).
+[jan] Show name and email address in the address book popup (<a href="http://bugs.horde.org/ticket/6937">Request #6937</a>).
 [mms] Messages from lists can now have large quotes automatically hidden.
 
 Dynamic Mail Changes
 --------------------
 [mms] Allow DIMP to work without cookies.
-[mms] Update quota at same time folders are polled (Request #7254).
+[mms] Update quota at same time folders are polled (<a href="http://bugs.horde.org/ticket/7254">Request #7254</a>).
 [mms] Fix logout link when session has timed out.
 [mms] Add caching of preview messages.
-[mms] Catch unwanted keypress submits in the compose screen (Bug #7162).
+[mms] Catch unwanted keypress submits in the compose screen (<a href="http://bugs.horde.org/ticket/7162">Bug #7162</a>).
 [mms] UI enhancement to indicate that RTE component is loading.
 [mms] Correctly close popup compose windows when opened from a page other than
       the base DIMP page.
-[mms] Remove border from iframe on IE (Bug #7136,
+[mms] Remove border from iframe on IE (<a href="http://bugs.horde.org/ticket/7136">Bug #7136</a>,
       benjamin.kostner@tirol.gv.at).
 
 Mobile Mail Changes
@@ -175,98 +1454,98 @@ Mobile Mail Changes
 
 Address Book Changes
 --------------------
-[jan] Improve vCard EMAIL field parsing (Bug #7281).
-[jan] Correctly import and export address extensions (Bug #7279).
+[jan] Improve vCard EMAIL field parsing (<a href="http://bugs.horde.org/ticket/7281">Bug #7281</a>).
+[jan] Correctly import and export address extensions (<a href="http://bugs.horde.org/ticket/7279">Bug #7279</a>).
 [jan] Export full country names to vCard addresses.
-[jan] Respect precedence of multiple vCard properties (Request #7122).
-[jan] Remove deleted address books from address book preference (Request #6938).
+[jan] Respect precedence of multiple vCard properties (<a href="http://bugs.horde.org/ticket/7122">Request #7122</a>).
+[jan] Remove deleted address books from address book preference (<a href="http://bugs.horde.org/ticket/6938">Request #6938</a>).
 [jan] Export LABEL properties to vCard if address fields are available.
 [gwr] Add support for storing public PGP keys when using Kolab.
 [gwr] Add support for adding addresses from IMP when using Kolab.
 [jan] Add configuration option for an alternative name field.
 [jan] Add support for image fields to SQL driver (requires Horde 3.3).
-[jan] Add more default field mappings for CSV import (Request #6901).
-[jan] Update field names for Outlook 2003 export (Request #6901).
+[jan] Add more default field mappings for CSV import (<a href="http://bugs.horde.org/ticket/6901">Request #6901</a>).
+[jan] Update field names for Outlook 2003 export (<a href="http://bugs.horde.org/ticket/6901">Request #6901</a>).
 [jan] Improve logic which entries to show in the sidebar menu.
-[jan] Add support for the category form field (Request #6884).
+[jan] Add support for the category form field (<a href="http://bugs.horde.org/ticket/6884">Request #6884</a>).
 [jan] Fix sorting so that sort order is always reflected correctly,
       independent of name format.
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [jan] Add ability to mark a contact as your own and API method to export it.
-[jan] Fix importing phone numbers from Synthesis clients (Bug #7011).
+[jan] Fix importing phone numbers from Synthesis clients (<a href="http://bugs.horde.org/ticket/7011">Bug #7011</a>).
 [mjr] Fix issue with searching composite fields when the number of search terms
-      is less than the number of composed fields (Bug #6796)
+      is less than the number of composed fields (<a href="http://bugs.horde.org/ticket/6796">Bug #6796</a>)
 [cjh] Allow importing multiple address into an email field if allow_multi
-      is set to true on the field in attributes.php (Bug #6897).
+      is set to true on the field in attributes.php (<a href="http://bugs.horde.org/ticket/6897">Bug #6897</a>).
 [mjr] Remove user permissions on all shares when deleting a user.
 [jan] Fix searching of client address books that have been disabled in the
-      preferences (Bug #6961).
+      preferences (<a href="http://bugs.horde.org/ticket/6961">Bug #6961</a>).
 [mjr] Fix issue with removeUserData api that caused the deleted user's
       address books to not be deleted as well as remove an erroneous error
-      notification (Bug #6969).
-[cjh] Fix the column selector/sorter in IE (Bug #6912).
+      notification (<a href="http://bugs.horde.org/ticket/6969">Bug #6969</a>).
+[cjh] Fix the column selector/sorter in IE (<a href="http://bugs.horde.org/ticket/6912">Bug #6912</a>).
 
 Filters Changes
 ---------------
 [jan] Don't show script icon in menu if preference to automatically update
-      scripts is both set and locked (Request #7251).
+      scripts is both set and locked (<a href="http://bugs.horde.org/ticket/7251">Request #7251</a>).
 [mjr] Change MDB2 sequence name to 'id' (Bug 7240)
-[jan] Fix adding more than 5 wildcard blacklists (Bug #7077).
+[jan] Fix adding more than 5 wildcard blacklists (<a href="http://bugs.horde.org/ticket/7077">Bug #7077</a>).
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
-[jan] Fix saving spam rules in the preference backend (Bug #7033).
+[jan] Fix saving spam rules in the preference backend (<a href="http://bugs.horde.org/ticket/7033">Bug #7033</a>).
 [jan] Correctly catch dates before the 10th of a month in Sieve timed
-      vacations (Bug #7023).
+      vacations (<a href="http://bugs.horde.org/ticket/7023">Bug #7023</a>).
 [mas] Fix vacation with procmail driver (Bugs #6509, #7052).
 [jan] Fix moving to INBOX with the maildrop driver.
 [jan] Disable drop down entries with informational purpose only.
 [jan] Fix filter activity messages with non-ASCII folder names
-      (taguchi@iij.ad.jp, Bug #6764).
+      (taguchi@iij.ad.jp, <a href="http://bugs.horde.org/ticket/6764">Bug #6764</a>).
 
 Calendar Changes
 ----------------
 [jan] Send correct iTip notifications when deleting recurring event instances
-      (Bug #6636).
+      (<a href="http://bugs.horde.org/ticket/6636">Bug #6636</a>).
 [mjr] Add support for embedding calendar widgets on external websites.
-[jan] Log moving of events in the history backend (Bug #3207).
+[jan] Log moving of events in the history backend (<a href="http://bugs.horde.org/ticket/3207">Bug #3207</a>).
 [jan] Fix listing alarms of recurring events crossing day boundaries
-      (Bug #7035).
-[jan] Fix deleting all events over WebDAV (Bug #7005).
+      (<a href="http://bugs.horde.org/ticket/7035">Bug #7035</a>).
+[jan] Fix deleting all events over WebDAV (<a href="http://bugs.horde.org/ticket/7005">Bug #7005</a>).
 [jan] Add Atom feeds.
 [jan] Fix encoding of holiday names.
 [jan] Add Estonian translation (Alar Sing &lt;alar.sing@err.ee>).
 [jan] Consider RECURRENCE-ID attributes in iCalendar data.
 [cjh] Fix a problem with the put() API call and events that already exist
-      (almarin@um.es, Bug #7088).
+      (almarin@um.es, <a href="http://bugs.horde.org/ticket/7088">Bug #7088</a>).
 [jan] Fix importing iCalendar events with only a single recurrence exception
-      (guyzdm@gmail.com, Bug #7068).
+      (guyzdm@gmail.com, <a href="http://bugs.horde.org/ticket/7068">Bug #7068</a>).
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [mjr] Add support for maintenance tasks and add a task for purging old events.
 [jan] Fix future events not being received under certain circumstances
       (Bugs #6946, #6966).
-[jan] Correctly sort recurring events (develop@kristov.de, Bug #7037).
+[jan] Correctly sort recurring events (develop@kristov.de, <a href="http://bugs.horde.org/ticket/7037">Bug #7037</a>).
 [jan] Fix display of recurring events crossing midnight in the portal block
-      (develop@kristov.de, Bug #7036).
+      (develop@kristov.de, <a href="http://bugs.horde.org/ticket/7036">Bug #7036</a>).
 [jan] Fix agenda emails containing wrong events.
 [mjr] Remove user permissions on all shares when deleting a user.
-[jan] Fix warning when importing events through the API (Bug #6865).
+[jan] Fix warning when importing events through the API (<a href="http://bugs.horde.org/ticket/6865">Bug #6865</a>).
 [cjh] Be case insensitive when comparing attendees
-      (aloyse.gilbert@gmail.com, Bug #6833).
+      (aloyse.gilbert@gmail.com, <a href="http://bugs.horde.org/ticket/6833">Bug #6833</a>).
 [jan] Use smaller icons for private events.
 
 Tasks Changes
 -------------
-[jan] Log moving of tasks in the history backend (Bug #3207).
-[jan] Fix deleting all tasks over WebDAV (Bug #7004).
+[jan] Log moving of tasks in the history backend (<a href="http://bugs.horde.org/ticket/3207">Bug #3207</a>).
+[jan] Fix deleting all tasks over WebDAV (<a href="http://bugs.horde.org/ticket/7004">Bug #7004</a>).
 [jan] Add Estonian translation (Alar Sing &lt;alar.sing@err.ee>).
 [jan] Send a more detailed notification message and use the recipient's
       preferred language and date/time format after a task has changed.
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [jan] Fix task relationship getting lost when importing tasks
-      (tkrah@fachschaft.imn.htwk-leipzig.de, bb.apc.ag, Bug #6770).
+      (tkrah@fachschaft.imn.htwk-leipzig.de, bb.apc.ag, <a href="http://bugs.horde.org/ticket/6770">Bug #6770</a>).
 [jan] Add preference to set columns for the list view.
 [jan] Allow to set task assignee.
 [jan] Add options to export screen for choosing task lists and task states.
@@ -276,12 +1555,58 @@ Tasks Changes
 
 Notes Changes
 -------------
-[jan] Log moving of memos in the history backend (Bug #3207).
+[jan] Log moving of memos in the history backend (<a href="http://bugs.horde.org/ticket/3207">Bug #3207</a>).
 [jan] Add Basque translation (Euskal Herriko Unibertsitatea EHU/UPV
       &lt;xabier.arrieta@ehu.es>).
 [mjr] Remove user permissions on all shares when deleting a user.
 [mjr] Fix issue with removeUserData api that caused the deleted user's task list
-      to not be deleted (Bug #6969).
+      to not be deleted (<a href="http://bugs.horde.org/ticket/6969">Bug #6969</a>).
+
+
+------
+v1.1.6
+------
+
+Horde Changes
+-------------
+[jan] SECURITY: Fix vulnerability in image form fields that allows overwriting
+      of arbitrary local files.
+[cjh] SECURITY: Fix validation of "number" type preferences (<a href="http://bugs.horde.org/ticket/8399">Bug #8399</a>).
+[mms] SECURITY: Don't display unknown text parts inline (<a href="http://bugs.horde.org/ticket/8311">Bug #8311</a>).
+
+
+------
+v1.1.5
+------
+
+[jan] Patch broken Date_Holidays package (<a href="http://bugs.horde.org/ticket/7784">Bug #7784</a>).
+
+Horde Changes
+-------------
+[cjh] SECURITY: Escape output in the tag cloud block
+      (found by Gunnar Wrobel &lt;p@rdus.de>).
+[cjh] SECURITY: Validate the Horde_Image driver name
+      (found by Gunnar Wrobel &lt;p@rdus.de>).
+
+Mail Changes
+------------
+[cjh] SECURITY: Escape output in message.php, pgp.php and smime.php
+      (found by Gunnar Wrobel &lt;p@rdus.de>).
+
+
+------
+v1.1.4
+------
+
+[jan] SECURITY: Escape output in test.php files.
+[jan] Patch broken Date_Holidays package (<a href="http://bugs.horde.org/ticket/7413">Bug #7413</a>).
+[jan] Fix updating of preferences and other configuration files (Bugs #7439,
+      #7538).
+[jan] Fix creating the alarm tables on PostgreSQL (<a href="http://bugs.horde.org/ticket/7409">Bug #7409</a>).
+
+Horde Changes
+-------------
+[cjh] SECURITY: Add another check to the XSS filter.
 
 
 ------
@@ -312,31 +1637,31 @@ v1.1.1
 
 Horde Changes
 -------------
-[cjh] SECURITY: Escape item names in the object browser (Bug #6906).
-[cjh] Select db before queries in MySQL SessionHandler (Bug #6673).
+[cjh] SECURITY: Escape item names in the object browser (<a href="http://bugs.horde.org/ticket/6906">Bug #6906</a>).
+[cjh] Select db before queries in MySQL SessionHandler (<a href="http://bugs.horde.org/ticket/6673">Bug #6673</a>).
 [jan] Format messages sent through MIME_Mail in flowed text format.
 [cjh] Catch errors if the Cache_file backend doesn't have permission to
-      garbage collect (Bug #6895).
+      garbage collect (<a href="http://bugs.horde.org/ticket/6895">Bug #6895</a>).
 [cjh] Fix deletion of SQL shares when using split read/write databases
-      (duck@obala.net, Bug #6870).
+      (duck@obala.net, <a href="http://bugs.horde.org/ticket/6870">Bug #6870</a>).
 [mms] Workaround broken IE behavior when downloading files with 8-bit
-      filenames (felix5ng@yahoo.com.hk, Bug #129).
+      filenames (felix5ng@yahoo.com.hk, <a href="http://bugs.horde.org/ticket/129">Bug #129</a>).
 [cjh] Fix storing of unlocked preferences set by hooks
-      (manuel@mausz.at, Bug #6822).
-[mms] Allow Horde memcache driver to use UNIX sockets (Bug #6848).
+      (manuel@mausz.at, <a href="http://bugs.horde.org/ticket/6822">Bug #6822</a>).
+[mms] Allow Horde memcache driver to use UNIX sockets (<a href="http://bugs.horde.org/ticket/6848">Bug #6848</a>).
 [mjr] Various fixes for hierarchical SQL Share driver involving share names,
       better error checking and logging.
-[cjh] Fix order of checks in String::convertCharset (Bug #6794).
+[cjh] Fix order of checks in String::convertCharset (<a href="http://bugs.horde.org/ticket/6794">Bug #6794</a>).
 [mms] Fix parsing of addresses in headers when the RFC 2047-encoded personal
-      part of the address contains address list delimiters (Bug #6747).
+      part of the address contains address list delimiters (<a href="http://bugs.horde.org/ticket/6747">Bug #6747</a>).
 [cjh] Fix generation of unique keys in configuration for machines too fast for
-      microtime() (mail@dunix-data.de, Bug #6762).
+      microtime() (mail@dunix-data.de, <a href="http://bugs.horde.org/ticket/6762">Bug #6762</a>).
 [gwr] Added group driver for Kolab.
 [gwr] Added IMAP based preferences driver for Kolab.
 [mms] Fix missing timestamp variable in Horde SQL cache driver
-      (keith@ajmani.org, Bug #6839).
+      (keith@ajmani.org, <a href="http://bugs.horde.org/ticket/6839">Bug #6839</a>).
 [cjh] Fix over-zealous preference caching when preferences are requested for a
-      different user (Bug #6820).
+      different user (<a href="http://bugs.horde.org/ticket/6820">Bug #6820</a>).
 [mjr] Fix issue in Horde_Image that caused errors when performing certain image
       operations immediately after an image had been cropped when using the
       ImageMagick driver.
@@ -344,7 +1669,7 @@ Horde Changes
 Address Book Changes
 --------------------
 [cjh] SECURITY: Escape contact names in the contact display view.
-[jan] Fix importing of certain phone numbers from vCard (Bug #6744).
+[jan] Fix importing of certain phone numbers from vCard (<a href="http://bugs.horde.org/ticket/6744">Bug #6744</a>).
 [mjr] Correct a function declaration in the 2.1_to_2.2_sql_schema.php upgrade
       script that was causing fatal errors.
 
@@ -354,25 +1679,25 @@ v1.1
 ----
 
 [cjh] Improve resource usage in datatree_to_sql share migration scripts
-      (Bug #6740).
+      (<a href="http://bugs.horde.org/ticket/6740">Bug #6740</a>).
 
 Horde Changes
 -------------
-[jan] Fix synchronization of contacts with some SyncML clients (Bug #6706).
+[jan] Fix synchronization of contacts with some SyncML clients (<a href="http://bugs.horde.org/ticket/6706">Bug #6706</a>).
 [mjr] Fix SQL bitwise comparison issue in native SQL share drivers that affected
-      PostgresSQL (Bug #6751).
-[cjh] Ensure users' email addresses are well-formed (Bug #6654).
+      PostgresSQL (<a href="http://bugs.horde.org/ticket/6751">Bug #6751</a>).
+[cjh] Ensure users' email addresses are well-formed (<a href="http://bugs.horde.org/ticket/6654">Bug #6654</a>).
 [jan] Remove About... link from help viewer.
 [mms] Update Xinha editor to support Safari 3.
 
 Mail Changes
 ------------
 [cjh] Make sure that email addresses entered in the Identities screen pass
-      basic well-formedness validation (Bug #6654).
+      basic well-formedness validation (<a href="http://bugs.horde.org/ticket/6654">Bug #6654</a>).
 [cjh] Fix default server selection on the login screen
-      (adrieder@sbox.tugraz.at, Bug #6738).
+      (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/6738">Bug #6738</a>).
 [cjh] Fix defaulting to the wrong address book in the Contacts popup
-      (steinhof@umich.edu, Bug #6723).
+      (steinhof@umich.edu, <a href="http://bugs.horde.org/ticket/6723">Bug #6723</a>).
 
 Dynamic Mail Changes
 --------------------
@@ -385,19 +1710,19 @@ Dynamic Mail Changes
 Address Book Changes
 --------------------
 [mjr] Fix importing email addresses from CSV files to be consistent with what
-      we allow to be entered via the UI. (Bug #6725)
+      we allow to be entered via the UI. (<a href="http://bugs.horde.org/ticket/6725">Bug #6725</a>)
 
 Calendar Changes
 ----------------
 [jan] Identify the correct event when using attend.php to update invitations
-      (Bug #6606).
+      (<a href="http://bugs.horde.org/ticket/6606">Bug #6606</a>).
 [jan] Decode user names and passwords when editing remote calendars.
-[cjh] Ensure that event_category is always a string (Bug #6696).
+[cjh] Ensure that event_category is always a string (<a href="http://bugs.horde.org/ticket/6696">Bug #6696</a>).
 
 Tasks Changes
 -------------
 [jan] Allow to import all fields that can be exported.
-[cjh] Fix displayed WebDAV subscription URLs in the panel (Bug #6709).
+[cjh] Fix displayed WebDAV subscription URLs in the panel (<a href="http://bugs.horde.org/ticket/6709">Bug #6709</a>).
 
 Notes Changes
 -------------
@@ -410,8 +1735,8 @@ v1.1-RC4
 
 [jan] Update Services_Weather package to fix changes in the weather.com API.
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
-      (Request #6590).
-[cjh] Add upgrade scripts for the new SQL share driver (Request #6109).
+      (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
+[cjh] Add upgrade scripts for the new SQL share driver (<a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
 
 Horde Changes
 -------------
@@ -421,28 +1746,28 @@ Horde Changes
 [cjh] Add a files-based Preferences backend (thomas.jarosch@intra2net.com,
       Request #6653).
 [cjh] Correct line-folding of encoded lines in iCalendar data
-      (Gunnar Wrobel &lt;p@rdus.de>, Bug #6555).
+      (Gunnar Wrobel &lt;p@rdus.de>, <a href="http://bugs.horde.org/ticket/6555">Bug #6555</a>).
 [cjh] Add a configuration option for whether users can share with groups
-      they aren't members of (thomas.jarosch@intra2net.com, Request #6619).
+      they aren't members of (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/6619">Request #6619</a>).
 [cjh] Ensure that alarms are created with a NULL alarm_snooze value
-      (michael.redinger@uibk.ac.at, Bug #6183).
+      (michael.redinger@uibk.ac.at, <a href="http://bugs.horde.org/ticket/6183">Bug #6183</a>).
 [cjh] Add an admintools script for creating PEAR::DB sequences manually.
-[cjh] Improved support for PGP fingerprints (Bug #6363).
+[cjh] Improved support for PGP fingerprints (<a href="http://bugs.horde.org/ticket/6363">Bug #6363</a>).
 [jan] Add rpc/ directory for prettified RPC URLs.
 [jan] Move SyncML anchors out of the DataTree into a separate database table.
-[cjh] Add beta SQL Permissions driver (duck@obala.net, Request #6150).
-[cjh] Add beta SQL Group driver (duck@obala.net, Request #6175).
+[cjh] Add beta SQL Permissions driver (duck@obala.net, <a href="http://bugs.horde.org/ticket/6150">Request #6150</a>).
+[cjh] Add beta SQL Group driver (duck@obala.net, <a href="http://bugs.horde.org/ticket/6175">Request #6175</a>).
 [jan] Use wider columns for the SyncML database table to correctly store long
-      UIDs (Bug #5025).
+      UIDs (<a href="http://bugs.horde.org/ticket/5025">Bug #5025</a>).
 [jan] Add "hordeweb" theme.
 [jan] Add MIME::parseAddressList().
 [jan] Add icons to edit and delete blocks directly from the portal.
 [jan] Allow users to specify login credentials for Horde applications in the
       preferences.
 [jan] Add NLS::setLanguageEnvironment() and NLS::setCharsetEnvironment().
-[cjh] Fix LDAP authentication (Bug #6450).
+[cjh] Fix LDAP authentication (<a href="http://bugs.horde.org/ticket/6450">Bug #6450</a>).
 [jan] Improve synchronization with Funambol clients.
-[mas] Fix false positive verification of S/MIME messages (Bug #6323).
+[mas] Fix false positive verification of S/MIME messages (<a href="http://bugs.horde.org/ticket/6323">Bug #6323</a>).
 
 Mail Changes
 ------------
@@ -451,17 +1776,17 @@ Mail Changes
 [cjh] Make request token lifetime configurable (faurep@agr.gc.ca, Request
       #6679).
 [mms] If using SMTP, send messages using 8BITMIME (RFC 1652) or BINARYMIME
-      (RFC 3030) if appropriate (Request #6645).
+      (RFC 3030) if appropriate (<a href="http://bugs.horde.org/ticket/6645">Request #6645</a>).
 [cjh] Work around a spellchecking issue with proc_close and --enable-sigchild
-      (Bug #6625).
+      (<a href="http://bugs.horde.org/ticket/6625">Bug #6625</a>).
 [jan] Show user drop down list in ACL screen if possible.
-[mms] Redirect after doing maintenance to the proper view (Bug #6179).
-[mms] Allow switching views in mobile login mode (Request #6332).
+[mms] Redirect after doing maintenance to the proper view (<a href="http://bugs.horde.org/ticket/6179">Bug #6179</a>).
+[mms] Allow switching views in mobile login mode (<a href="http://bugs.horde.org/ticket/6332">Request #6332</a>).
 [jan] Support vhosts setting when loading header.php, servers.php,
       spelling.php and trailer.txt configuration files.
 [mas] Use delete icon on search page to remove elements. (Liam Hoekenga
-      &lt;liamr@umich.edu>, Request #6515).
-[mms] Add link to delete entire thread on thread screen (Request #5884).
+      &lt;liamr@umich.edu>, <a href="http://bugs.horde.org/ticket/6515">Request #6515</a>).
+[mms] Add link to delete entire thread on thread screen (<a href="http://bugs.horde.org/ticket/5884">Request #5884</a>).
 [mms] Hide trash-related options when trash is disabled.
 [jan] Allow users to specify server name and login credentials in Horde's
       preferences (requires Horde 3.2.1).
@@ -486,100 +1811,100 @@ Mobile Mail Changes
 
 Address Book Changes
 --------------------
-[cjh] Fix editing contacts that were accessed by UID (Bug #6672).
-[cjh] Include composite fields in data exports (Bug #6517).
+[cjh] Fix editing contacts that were accessed by UID (<a href="http://bugs.horde.org/ticket/6672">Bug #6672</a>).
+[cjh] Include composite fields in data exports (<a href="http://bugs.horde.org/ticket/6517">Bug #6517</a>).
 [gwr] Add distribution list support to the Kolab driver.
 [cjh] Add vCard/syncing support for a large number of additional attributes
-      (horde@ssn.at, Request #6573).
-[cjh] Update composite fields in LDAP DNs (horde@ssn.at, Bug #6575).
+      (horde@ssn.at, <a href="http://bugs.horde.org/ticket/6573">Request #6573</a>).
+[cjh] Update composite fields in LDAP DNs (horde@ssn.at, <a href="http://bugs.horde.org/ticket/6575">Bug #6575</a>).
 [mjr] Fix paging in search results.
 [cjh] Allow setting default values for attributes.
 [cjh] Show a browse link in the address book list for each address book
-      (thomas.jarosch@intra2net.com, Request #6613).
+      (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/6613">Request #6613</a>).
 [mjr] Fixed a bug that caused field values to get mismatched with the column
       names when a single DB field is mapped to multiple Turba fields.
 [mjr] Fix changing sort order on the search view.
 [jan] Add preference to choose address books for synchronization.
-[jan] Improved importing of names from vCards (Bug #6568).
+[jan] Improved importing of names from vCards (<a href="http://bugs.horde.org/ticket/6568">Bug #6568</a>).
 [jan] Fix incomplete copying and moving of attributes to composite fields
-      (Bug #6565).
+      (<a href="http://bugs.horde.org/ticket/6565">Bug #6565</a>).
 [gwr] Fix the relation of key/uid within the Kolab driver.
-[gwr] Export/import of the emails attribute (Bug #6504).
-[mas] Encode DN correctly when exporting to LDIF. (Bug #6518).
+[gwr] Export/import of the emails attribute (<a href="http://bugs.horde.org/ticket/6504">Bug #6504</a>).
+[mas] Encode DN correctly when exporting to LDIF. (<a href="http://bugs.horde.org/ticket/6518">Bug #6518</a>).
 [gwr] Fix virtual address books when using shares.
 [gwr] Fix searching for the Kolab driver.
 [cjh] Replace the address book column sorter with a Scriptaculous-based one;
-      fixes re-ordering columns in some cases (Bug #6444).
+      fixes re-ordering columns in some cases (<a href="http://bugs.horde.org/ticket/6444">Bug #6444</a>).
 [jan] Always return to the last view after saving a contact.
 [jan] Correctly determine default address books in the API (SyncML, WebDAV).
 [jan] Add categories imported through the API (SyncML, WebDAV).
 [jan] Store categories as strings.
 [cjh] Show who created or made the last change to a contact along with the date
-      (Request #6305).
-[mjr] Prevent overwriting contact entries with the upgrade script (Bug #6308).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
+[mjr] Prevent overwriting contact entries with the upgrade script (<a href="http://bugs.horde.org/ticket/6308">Bug #6308</a>).
 
 Filters Changes
 ---------------
 [cjh] Procmail driver: make the directory in which vacation files are
-      generated configurable (jas@cse.yorku.ca, Request #6643).
+      generated configurable (jas@cse.yorku.ca, <a href="http://bugs.horde.org/ticket/6643">Request #6643</a>).
 [cjh] Procmail driver: include the original email subject in vacation
-      replies (Michael.Redinger@uibk.ac.at, Request #6432).
+      replies (Michael.Redinger@uibk.ac.at, <a href="http://bugs.horde.org/ticket/6432">Request #6432</a>).
 [cjh] Make the procmail delivery agent configurable, allow configuring a
       prefix for mailboxes (+ is needed for dmail, for example), don't
       generate empty VFS files, write a .forward file if needed to pass
-      mail to procmail (Michael.Redinger@uibk.ac.at, Request #6433).
+      mail to procmail (Michael.Redinger@uibk.ac.at, <a href="http://bugs.horde.org/ticket/6433">Request #6433</a>).
 [jan] Add Slovak translation (Martin Matuška &lt;martin@matuska.org>).
 [cjh] Make the command line utilities called from procmail configurable
-      (Michael.Redinger@uibk.ac.at, Request #6431).
+      (Michael.Redinger@uibk.ac.at, <a href="http://bugs.horde.org/ticket/6431">Request #6431</a>).
 [jan] Fix creating of duplicate special rules when converting from preferences
-      to SQL storage backend (Bug #6182).
+      to SQL storage backend (<a href="http://bugs.horde.org/ticket/6182">Bug #6182</a>).
 [jan] Follow Sieve specifications more closely when disabling Sieve scripts
-      (Bug #6337).
+      (<a href="http://bugs.horde.org/ticket/6337">Bug #6337</a>).
 [jan] Load default set of filters for SQL storage from config/prefs.php
-      (tinu@humbapa.ch, Request #6096).
+      (tinu@humbapa.ch, <a href="http://bugs.horde.org/ticket/6096">Request #6096</a>).
 [jan] Add Russian translation (Alexey Zakharov &lt;baber@mosga.net>).
 
 Calendar Changes
 ----------------
 [cjh] In WebDAV PUT operations, only look for existing events on the calendar
-      being uploaded (Bug #6617).
-[cjh] Use json_encode and json_decode if they are available (Bug #6457).
+      being uploaded (<a href="http://bugs.horde.org/ticket/6617">Bug #6617</a>).
+[cjh] Use json_encode and json_decode if they are available (<a href="http://bugs.horde.org/ticket/6457">Bug #6457</a>).
 [cjh] Use the first matching free/busy URL if more than one is found
-      (almarin@um.es, Request #6638).
+      (almarin@um.es, <a href="http://bugs.horde.org/ticket/6638">Request #6638</a>).
 [cjh] Allow subscribing/unsubscribing from external calendars through the API
-      (duck@obala.net, Request #6626).
+      (duck@obala.net, <a href="http://bugs.horde.org/ticket/6626">Request #6626</a>).
 [jan] Add another directory level for calendar owners to the WebDAV interface.
-[jan] Cut off categories at 80 characters to save them correctly (Bug #5211).
+[jan] Cut off categories at 80 characters to save them correctly (<a href="http://bugs.horde.org/ticket/5211">Bug #5211</a>).
 [gwr] Fixed removal of recurrence in the Kolab driver.
-[jan] Show full title in email alarms (Bug #6510).
+[jan] Show full title in email alarms (<a href="http://bugs.horde.org/ticket/6510">Bug #6510</a>).
 [jan] Add export of single events.
 [gwr] Fixed History support in the Kolab driver.
 [cjh] Don't report cancelled events as busy (m.gabriel@das-netzwerkteam.de,
       Bug #6376).
 [cjh] Show who created or made the last change to an event along with the date
-      (Request #6305).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
 [cjh] Make sure event time and location are shown in the day and week views
-      (Bug #6158).
+      (<a href="http://bugs.horde.org/ticket/6158">Bug #6158</a>).
 [cjh] Include Location and Attendee information in the plain-text portion
-      of iTip messages (almarin@um.es, Request #6271).
+      of iTip messages (almarin@um.es, <a href="http://bugs.horde.org/ticket/6271">Request #6271</a>).
 [cjh] Use the Free/Busy default domain on the attendee entry page as well
-      (Bug #6146).
+      (<a href="http://bugs.horde.org/ticket/6146">Bug #6146</a>).
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
 Tasks Changes
 -------------
-[cjh] Add an upgrade script for the new SQL share driver (Request #6109).
+[cjh] Add an upgrade script for the new SQL share driver (<a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
 [jan] Correctly determine default task list in the API (SyncML, WebDAV).
 [cjh] Show who created or made the last change to a task along with the date
-      (Request #6305).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
 Notes Changes
 -------------
 [gwr] Added History support in the Kolab driver.
-[cjh] Avoid errors when trying to export an empty notepad (Bug #6409).
+[cjh] Avoid errors when trying to export an empty notepad (<a href="http://bugs.horde.org/ticket/6409">Bug #6409</a>).
 [cjh] Show who created or made the last change to a note along with the date
-      (Request #6305).
+      (<a href="http://bugs.horde.org/ticket/6305">Request #6305</a>).
 [jan] Add Turkish translation (METU &lt;horde-tr@metu.edu.tr>).
 
 
@@ -589,65 +1914,65 @@ v1.1-RC3
 
 Horde Changes
 -------------
-[cjh] Fix Horde_Compress_zip::checkZipData (Bug #6413).
+[cjh] Fix Horde_Compress_zip::checkZipData (<a href="http://bugs.horde.org/ticket/6413">Bug #6413</a>).
 [jan] Allow adding attachments to the problem reporting form.
 [cjh] Make sure that when we used a cached Preferences object, we set the
-      correct scope (Bug #6395).
+      correct scope (<a href="http://bugs.horde.org/ticket/6395">Bug #6395</a>).
 [cjh] Set LC_TIME to C for consistency in date parsing in the SSH2 backend
-      (michael-dev@fami-braun.de, Bug #6396).
-[cjh] Add experimental native SQL Share driver (duck@obala.net, Request #6109).
-[cjh] Recognize IE8 in the Browser class (vilius@lnk.lt, Request #6390).
+      (michael-dev@fami-braun.de, <a href="http://bugs.horde.org/ticket/6396">Bug #6396</a>).
+[cjh] Add experimental native SQL Share driver (duck@obala.net, <a href="http://bugs.horde.org/ticket/6109">Request #6109</a>).
+[cjh] Recognize IE8 in the Browser class (vilius@lnk.lt, <a href="http://bugs.horde.org/ticket/6390">Request #6390</a>).
 [cjh] Don't treat no results as an error in the LDAP Groups driver
-      (asmarre@ull.es, Request #6362).
+      (asmarre@ull.es, <a href="http://bugs.horde.org/ticket/6362">Request #6362</a>).
 [cjh] Use conf.bak.php for backup files so they are parsed by PHP
-      (Request #6341).
-[cjh] Add a configuration setting for using pretty URLs (Request #6264).
+      (<a href="http://bugs.horde.org/ticket/6341">Request #6341</a>).
+[cjh] Add a configuration setting for using pretty URLs (<a href="http://bugs.horde.org/ticket/6264">Request #6264</a>).
 [cjh] Add a method for counting attribute values without returning full objects
-      from the DataTree (duck@obala.net, Request #6289).
+      from the DataTree (duck@obala.net, <a href="http://bugs.horde.org/ticket/6289">Request #6289</a>).
 [cjh] Protect logout links with CSRF tokens.
 [jan] Fix listing of folders with whitespace in the name using the SSH2 VFS
-      driver (Bug #6227).
+      driver (<a href="http://bugs.horde.org/ticket/6227">Bug #6227</a>).
 [jan] Don't indent first line of paragraphs when converting HTML to plain text.
 [cjh] Add a PHP 5 SoapServer RPC backend.
 [cjh] Add a method for getting just attributes, instead of full object and
-      tree structure, from the DataTree (duck@obala.net, Request #6209).
+      tree structure, from the DataTree (duck@obala.net, <a href="http://bugs.horde.org/ticket/6209">Request #6209</a>).
 [cjh] Add a mock Groups driver for sites that don't need Group support
-      (duck@obala.net, Request #6157).
+      (duck@obala.net, <a href="http://bugs.horde.org/ticket/6157">Request #6157</a>).
 [jan] Highlight links in HTML viewer that triggered a phishing warning.
 [jan] Fix some string parsing on systems that don't have the "en" or "en_US"
-      locales installed (Bug #6194).
+      locales installed (<a href="http://bugs.horde.org/ticket/6194">Bug #6194</a>).
 [jan] Avoid JavaScript popup if a translation for the WYSIWYG editor doesn't
-      exist (Bug #6174).
-[cjh] Fix autocreation of DataTree parents (almarin@um.es, Bug #6167).
-[jan] Fix linefolding with multibyte strings in iCalendar library (Bug #6103).
+      exist (<a href="http://bugs.horde.org/ticket/6174">Bug #6174</a>).
+[cjh] Fix autocreation of DataTree parents (almarin@um.es, <a href="http://bugs.horde.org/ticket/6167">Bug #6167</a>).
+[jan] Fix linefolding with multibyte strings in iCalendar library (<a href="http://bugs.horde.org/ticket/6103">Bug #6103</a>).
 [jan] Add multibyte-safe String::wordwrap() method.
 
 Mail Changes
 ------------
 [mas] Replace %l and %d with the current short username and domain name in spam
-      reporting shell calls. (Bug #6364)
-[cjh] Add a hook quota driver (Michael.Redinger@uibk.ac.at, Request #6322).
+      reporting shell calls. (<a href="http://bugs.horde.org/ticket/6364">Bug #6364</a>)
+[cjh] Add a hook quota driver (Michael.Redinger@uibk.ac.at, <a href="http://bugs.horde.org/ticket/6322">Request #6322</a>).
 [mms] Make xinha add BR tag instead of P tag on enter keypress (Mozilla only).
 [mms] Add fckeditor to list of supported javascript editors.
-[jan] Hide iTip actions if not using IMP frontend (Bug #6116).
+[jan] Hide iTip actions if not using IMP frontend (<a href="http://bugs.horde.org/ticket/6116">Bug #6116</a>).
 [cjh] Fix showing suggestions for the second or subsequent misspelled word
-      (Bug #6081).
+      (<a href="http://bugs.horde.org/ticket/6081">Bug #6081</a>).
 [jan] Add configuration option to force users to a certain view.
 [jan] Localize default folder names.
 [jan] Call a contacts/add API method to create links for adding contacts if
       available.
 [jan] Filter HTML body when replying to HTML messages with the WYIWYG editor.
 [jan] Allow users to set the HTML editor toolbar buttons in their preferences.
-[jan] Fix charset of composed HTML messages (Bug #6268).
+[jan] Fix charset of composed HTML messages (<a href="http://bugs.horde.org/ticket/6268">Bug #6268</a>).
 [cjh] Protect mailbox, message, and folder actions with CSRF tokens.
-[cjh] Fix action dropdowns in IE6 (Bug #6177).
+[cjh] Fix action dropdowns in IE6 (<a href="http://bugs.horde.org/ticket/6177">Bug #6177</a>).
 [cjh] Make sure to call Event.extend() when using inline event handlers, for
       IE6's benefit.
-[cjh] Fix improper enabling of HTML composition on replies (Bug #6176).
-[jan] Use subject's CN instead of OU for storing public keys (Bug #6169).
+[cjh] Fix improper enabling of HTML composition on replies (<a href="http://bugs.horde.org/ticket/6176">Bug #6176</a>).
+[jan] Use subject's CN instead of OU for storing public keys (<a href="http://bugs.horde.org/ticket/6169">Bug #6169</a>).
 [cjh] Make sure that custom checkbox preferences are stored as 0 or 1 instead
       of 'on' or ''.
-[jan] Fix popup URL generation (Bug #6139).
+[jan] Fix popup URL generation (<a href="http://bugs.horde.org/ticket/6139">Bug #6139</a>).
 
 Dynamic Mail Changes
 --------------------
@@ -680,109 +2005,109 @@ Horde Changes
 [jan] SECURITY: The XSS filter passes the complete XSS cheat sheet
       (http://ha.ckers.org/xss.html) now.
 [cjh] Add a PHP 5-only block for putting syndicated feeds on the Horde Portal
-      (duck@obala.net, Request #6107).
+      (duck@obala.net, <a href="http://bugs.horde.org/ticket/6107">Request #6107</a>).
 [cjh] Automate detection of which themes/app combinations have custom icons
-      (Bug #6105).
+      (<a href="http://bugs.horde.org/ticket/6105">Bug #6105</a>).
 [cjh] Fix listing of current session ids in the memcache SessionHandler
-      (Bug #6083).
+      (<a href="http://bugs.horde.org/ticket/6083">Bug #6083</a>).
 [cjh] Correct handling of cache misses from the Horde_Cache_sql driver
-      (Bug #6060).
+      (<a href="http://bugs.horde.org/ticket/6060">Bug #6060</a>).
 [mas] Add support for PGP revocation certificates to Crypt library.
 [cjh] Provide specific validation errors when datetime Horde_Form fields have
-      a date but not a time, or vice-versa (Bug #5992).
+      a date but not a time, or vice-versa (<a href="http://bugs.horde.org/ticket/5992">Bug #5992</a>).
 [cjh] Read email addresses from subjectAltName property of S/MIME certs
-      (Bug #5986).
+      (<a href="http://bugs.horde.org/ticket/5986">Bug #5986</a>).
 [cjh] Catch Horde_Block errors when doing ajax updates.
-[cjh] Allow Horde_Mobile_select to take already-encoded options (Bug #5849).
+[cjh] Allow Horde_Mobile_select to take already-encoded options (<a href="http://bugs.horde.org/ticket/5849">Bug #5849</a>).
 [jwm] Add support in Horde_RPC_soap for handling SOAP endpoints that only
       expose certain types and/or methods.
 [jwm] Make the SOAP service name in Horde_RPC_soap configurable.
 [jwm] Add basic logging of SOAP calls (method name and args, elapsed
       time, bytes sent in response).
 [cjh] Support LDAP password expiration when using Sun/Fedora Directory Server
-      (marco@csita.unige.it, Request #6012).
-[cjh] Remove the wrap attribute from preference textarea tags (Bug #6024).
+      (marco@csita.unige.it, <a href="http://bugs.horde.org/ticket/6012">Request #6012</a>).
+[cjh] Remove the wrap attribute from preference textarea tags (<a href="http://bugs.horde.org/ticket/6024">Bug #6024</a>).
 [cjh] Recommend and default to SSHA hashed passwords.
 [jan] Fix rendering of messages in some charsets that are only supported by
-      iconv (Bug #5962).
+      iconv (<a href="http://bugs.horde.org/ticket/5962">Bug #5962</a>).
 [jan] Display WYSIWYG editor with correct language.
-[jan] Fix creating of sub groups (Bug #5970).
-[jan] Fix linking of URLs encapsulated in angle brackets (Bug #4946).
+[jan] Fix creating of sub groups (<a href="http://bugs.horde.org/ticket/5970">Bug #5970</a>).
+[jan] Fix linking of URLs encapsulated in angle brackets (<a href="http://bugs.horde.org/ticket/4946">Bug #4946</a>).
 [jan] Fix edge cases of CSV file imports (Bugs #3839, #4025).
 [mms] For SessionHandler drivers, don't write to backend if the session data
       did not change while loading the current page.
 [cjh] The Auth:: package no longer depends on the PHP mhash extension
       for some encryption types.
-[cjh] Add stream support to some VFS backends (Request #5913).
+[cjh] Add stream support to some VFS backends (<a href="http://bugs.horde.org/ticket/5913">Request #5913</a>).
 [jan] Add client code to JSON-RPC class and implement JSON-RPC 1.1.
 
 Mail Changes
 ------------
 [mms] SECURITY: When sending linked attachments, protect against JAR attacks
-      in some Mozilla browsers (Bug #5892).
-[cjh] Fix the bottom Select: menu in the mailbox view (Bug #6128).
+      in some Mozilla browsers (<a href="http://bugs.horde.org/ticket/5892">Bug #5892</a>).
+[cjh] Fix the bottom Select: menu in the mailbox view (<a href="http://bugs.horde.org/ticket/6128">Bug #6128</a>).
 [mms] Add hook for adding formatting information to a message list row
-      (Request #5234).
+      (<a href="http://bugs.horde.org/ticket/5234">Request #5234</a>).
 [mms] If javascript is available, automatically size the popup compose window.
-[jan] Allow to write outside of HTML signatures in WYSIWYG editor (Bug #3753).
+[jan] Allow to write outside of HTML signatures in WYSIWYG editor (<a href="http://bugs.horde.org/ticket/3753">Bug #3753</a>).
 [jan] Highlight HTML signatures in WYSIWYG editor.
 [jan] Remember webmail mode selected on the last login.
 [mms] Compress download data.
 
 Dynamic Mail Changes
 --------------------
-[mms] Add preference to identify screen to load on login (Request #6028). 
+[mms] Add preference to identify screen to load on login (<a href="http://bugs.horde.org/ticket/6028">Request #6028</a>). 
 [jan] Add Finnish translation (Leena Heino &lt;liinu@uta.fi>).
 [mms] Add configuration option to disallow searching all mailboxes.
 [mms] Auto-resize address inputs in compose screen.
 [mms] Add hook for adding formatting information to a message list row
-      (Request #5234).
+      (<a href="http://bugs.horde.org/ticket/5234">Request #5234</a>).
 
 Address Book Changes
 --------------------
 [mjr] Degrade gracefuly when no VFS is configured.
 [cjh] Fixed the share flattening upgrade script.
 [mjr] Fixed issue that caused mangling of composite fields when moving or
-      copying contacts from one address book to another (Bug #6058).
+      copying contacts from one address book to another (<a href="http://bugs.horde.org/ticket/6058">Bug #6058</a>).
 [mjr] Fixed issue that caused listTimeObjects to only return objects from a
       single address book when using a shared SQL source.
 [cjh] Update address book management UI to match other groupware apps.
-[jan] Trim composite field values before saving to the backend (Bug #5979).
+[jan] Trim composite field values before saving to the backend (<a href="http://bugs.horde.org/ticket/5979">Bug #5979</a>).
 [mjr] Fixed issue where composite fields with 'attribute' value set were not
-      getting set in the backend when being imported via the API. (Bug #5978)
+      getting set in the backend when being imported via the API. (<a href="http://bugs.horde.org/ticket/5978">Bug #5978</a>)
 [mjr] Time object categories are now automatically detected.
 [mjr] Fix issue that caused listTimeObjects API to miss returning objects when
       the date range crosses over into the next year.
-[jan] Improved portability of the upgrade script (Bug #5949).
+[jan] Improved portability of the upgrade script (<a href="http://bugs.horde.org/ticket/5949">Bug #5949</a>).
 [mjr] Added anniversary support to the listTimeObjects API.
 
 Filters Changes
 ---------------
 [cjh] Add API methods for setting and disabling vacation rules
       (duck@obala.net).
-[mas] Fix procmail metacharacter quoting. (Bug #5581)
+[mas] Fix procmail metacharacter quoting. (<a href="http://bugs.horde.org/ticket/5581">Bug #5581</a>)
 [cjh] Fix procmail vacation recipe (Volker Then &lt;horde32@volkerthen.com>).
 [cjh] Fix position of closing quote in maildrop driver (laxis@magex.hu,
       Bug #6020).
-[jan] Fix paths in the script for converting to SQL storage (Bug #5957).
+[jan] Fix paths in the script for converting to SQL storage (<a href="http://bugs.horde.org/ticket/5957">Bug #5957</a>).
 
 Calendar Changes
 ----------------
-[jan] Fix importing of events with an existing UID (Bug #6122).
+[jan] Fix importing of events with an existing UID (<a href="http://bugs.horde.org/ticket/6122">Bug #6122</a>).
 [cjh] Fix timestamps in portal block event links.
 [mjr] Fix issue that caused recurring events on 2/29 to appear on 3/1 when
       recurrence type is HORDE_DATE_RECUR_YEARLY_DATE.
 [cjh] If JavaScript is available, open the Attendees window set to the current
-      event's date (Request #5813).
-[cjh] Fix display of events that end at 00:00 at a non-zero second (Bug #6047).
+      event's date (<a href="http://bugs.horde.org/ticket/5813">Request #5813</a>).
+[cjh] Fix display of events that end at 00:00 at a non-zero second (<a href="http://bugs.horde.org/ticket/6047">Bug #6047</a>).
 [cjh] Fix handling of local names in attendees.php
-      (m.gabriel@das-netzwerkteam.de, Bug #6041).
+      (m.gabriel@das-netzwerkteam.de, <a href="http://bugs.horde.org/ticket/6041">Bug #6041</a>).
 [cjh] Fix inline calendar search in the calendar panel.
 [cjh] New share management UI that doesn't require JavaScript.
 
 Tasks Changes
 -------------
-[jan] Fix tasks losing their parent task when being completed (Bug #6035).
+[jan] Fix tasks losing their parent task when being completed (<a href="http://bugs.horde.org/ticket/6035">Bug #6035</a>).
 [cjh] Add the ability to filter the list of task lists in the panel.
 [cjh] New share management UI that doesn't require JavaScript.
 [jan] Fix 2006-04-18_add_creator_and_assignee_fields.php upgrade script.
@@ -804,11 +2129,11 @@ v1.1-RC1
 Horde Changes
 -------------
 [jan] Apply user name hooks when editing share permissions
-      (steinkel@ctinetworks.com, Bug #5844).
-[jan] Fix some date handling with dates outside the unix epoch (Bug #5893).
-[jan] Fix fixed portal blocks (Bug #5853).
-[jan] Fix Share caching (Bug #5748).
-[cjh] Fix deleting categories (Gunnar Wrobel &lt;p@rdus.de>, Bug #5873).
+      (steinkel@ctinetworks.com, <a href="http://bugs.horde.org/ticket/5844">Bug #5844</a>).
+[jan] Fix some date handling with dates outside the unix epoch (<a href="http://bugs.horde.org/ticket/5893">Bug #5893</a>).
+[jan] Fix fixed portal blocks (<a href="http://bugs.horde.org/ticket/5853">Bug #5853</a>).
+[jan] Fix Share caching (<a href="http://bugs.horde.org/ticket/5748">Bug #5748</a>).
+[cjh] Fix deleting categories (Gunnar Wrobel &lt;p@rdus.de>, <a href="http://bugs.horde.org/ticket/5873">Bug #5873</a>).
 [cjh] Import dhtmlHistory.js from DIMP into Horde core.
 [cjh] UTF-8-encode DNs in the LDAP Groups driver (patrick.abiven@apitech.fr,
       Bugs #4692 and #4918).
@@ -821,54 +2146,54 @@ Horde Changes
 [cjh] Add an index on horde_datatree_attribute.attribute_value to improve
       DataTree performance (Andrew Morgan &lt;morgan@orst.edu>).
 [jan] Add SQL upgrade scripts.
-[jan] Fix escaping of parenthesis in PDF documents (PEAR Bug #12092).
-[jan] Fix alarm notification script (Bug #5660).
-[jan] Fix PDF generation with some locales (Gunnar Wrobel, Bug #4094).
+[jan] Fix escaping of parenthesis in PDF documents (<a href="http://pear.php.net/bugs/bug.php?id=12092">PEAR Bug #12092</a>).
+[jan] Fix alarm notification script (<a href="http://bugs.horde.org/ticket/5660">Bug #5660</a>).
+[jan] Fix PDF generation with some locales (Gunnar Wrobel, <a href="http://bugs.horde.org/ticket/4094">Bug #4094</a>).
 [jan] Move all application-specific hook examples to the applications' config/
       directories.
 [jan] Fix SMTP configuration being set to "Best available authentication"
-      (Bug #5679).
+      (<a href="http://bugs.horde.org/ticket/5679">Bug #5679</a>).
 [jan] Add bind parameters to LDAP account portal block configuration (Request
       #5705).
-[cjh] Fix login screen enter key behavior in some circumstances (Bug #5696).
+[cjh] Fix login screen enter key behavior in some circumstances (<a href="http://bugs.horde.org/ticket/5696">Bug #5696</a>).
 [mjr] Add a new block for displaying a tag cloud that works across all Horde
       applications implementing a searchTag api.
 [cjh] Use the Silk flag icons from http://famfamfam.com/lab/icons/flags/
-      for all flag sets (Bug #5681).
+      for all flag sets (<a href="http://bugs.horde.org/ticket/5681">Bug #5681</a>).
 [cjh] Fix generation of UIDs with PHP 5.2+.
 [cjh] Add a JSON-RPC Horde_RPC backend (joey@joeyhewitt.com).
 [cjh] Allow selecting any available sound when creating alarms as an
-      administrator (Request #5619).
-[cjh] Fix updating of last_maintenance preference with PHP 4 (Bug #5111).
+      administrator (<a href="http://bugs.horde.org/ticket/5619">Request #5619</a>).
+[cjh] Fix updating of last_maintenance preference with PHP 4 (<a href="http://bugs.horde.org/ticket/5111">Bug #5111</a>).
 [cjh] Allow considering all IPs to be "safe" for encryption operations,
       passphrase entry, etc., when using SSL hardware or other secure
-      environments (adrieder@sbox.tugraz.at, Request #5568).
+      environments (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/5568">Request #5568</a>).
 [cjh] Fix CSRF protection with Horde_Form objects submitted with preserve().
 [cjh] Centralize sounds for audio alarms in Horde.
-[cjh] Include CSRF protection when using Horde_Form Tokens (Request #4492).
+[cjh] Include CSRF protection when using Horde_Form Tokens (<a href="http://bugs.horde.org/ticket/4492">Request #4492</a>).
 [cjh] Add first_week_day preference and use it in the calendar widget (Bug
       #1729).
 [cjh] Cache permissions with Horde_Cache (duck@obala.net).
 [jan] Add configuration option for safe IP subnets.
 [cjh] Allow turning off a user's ability to edit share permissions (Request
       #4054).
-[cjh] Consolidate color pickers used for Labels and in Horde_Form (Bug #5112).
+[cjh] Consolidate color pickers used for Labels and in Horde_Form (<a href="http://bugs.horde.org/ticket/5112">Bug #5112</a>).
 [cjh] Log sending of problem report emails (Otto.Stolz@uni-konstanz.de,
       Request #5461).
-[cjh] Improve support for dates before 1970 and after 2038 (Bug #3741).
+[cjh] Improve support for dates before 1970 and after 2038 (<a href="http://bugs.horde.org/ticket/3741">Bug #3741</a>).
 [mms] Add option to send MIME messages in a format that may allow broken MUAs
       to handle 8-bit filename data.
 [cjh] Add Tango Blue (xconspirisist &lt;contact@xconspirisist.co.uk>,
-      roti@al.pmmf.hu, Request #2795) and Silver Surfer (Daniel
+      roti@al.pmmf.hu, <a href="http://bugs.horde.org/ticket/2795">Request #2795</a>) and Silver Surfer (Daniel
       Dembach &lt;daniel.dembach@googlemail.com>) themes.
 [mms] Created a Horde-wide object to access a singlet memcache configuration.
 [cjh] Test for PCRE UTF-8 support with extension tests
-      (thomas.jarosch@intra2net.com, Bug #1052).
+      (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/1052">Bug #1052</a>).
 [jan] Add category field to Horde_Form.
 [cjh] Better detection of Konqueror JavaScript features
-      (thomas.jarosch@intra2net.com, Request #5372).
+      (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/5372">Request #5372</a>).
 [cjh] Support the allow_multi parameter when displaying email address form
-      types (thomas.jarosch@intra2net.com, Request #5356).
+      types (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/5356">Request #5356</a>).
 [cjh] Add Scriptaculous and RedBox to Horde.
 [mms] Added sql driver for Horde_Cache::.
 [mms] Prevent tooltips from scrolling off screen (michael.sheldon@credativ.de,
@@ -877,11 +2202,11 @@ Horde Changes
 [mms] Preserve URL anchor information when performing login.
 [jan] Add method to fetch public key by email address from key server.
 [jan] Add parameter for a temporary directory to the VC svn driver
-      (meyer@mesw.de, Request #5051).
+      (meyer@mesw.de, <a href="http://bugs.horde.org/ticket/5051">Request #5051</a>).
 [jan] Change VC library to support open_basedir restrictions (meyer@mesw.de,
       Request #5051).
 [cjh] Added a query for checking existance of a user to the custom SQL
-      Auth driver (Request #5151).
+      Auth driver (<a href="http://bugs.horde.org/ticket/5151">Request #5151</a>).
 [jan] Add button to the setup screen to check for newer versions.
 [mas] Add MIME Viewer for WordPerfect documents.
 [mms] Use lzf compression to compress Horde_SessionObjects:: data in the
@@ -893,36 +2218,36 @@ Horde Changes
 [jan] Add context renderer to Text_Diff package.
 [jan] Add MIME_Mail class to simplify creation and sending of MIME messages.
 [cjh] Horde_Share now has a driver system with DataTree and Kolab backends
-      (Gunnar Wrobel &lt;wrobel@pardus.de>, Request #4263).
+      (Gunnar Wrobel &lt;wrobel@pardus.de>, <a href="http://bugs.horde.org/ticket/4263">Request #4263</a>).
 [cjh] Remove RPC_rest backend.
 [cjh] Add DELETE support to the webdav RPC implementation
-      (Håvard Wigtil &lt;havardw@pvv.org>, Request #4721).
-[cjh] Add a Horde-wide HTTP proxy config setting (Request #1039).
+      (Håvard Wigtil &lt;havardw@pvv.org>, <a href="http://bugs.horde.org/ticket/4721">Request #4721</a>).
+[cjh] Add a Horde-wide HTTP proxy config setting (<a href="http://bugs.horde.org/ticket/1039">Request #1039</a>).
 [mms] Use the geoip PECL extension if available.
 [cjh] Add preferences change hooks that are called when preferences are set
-      to new values (Request #4343).
+      to new values (<a href="http://bugs.horde.org/ticket/4343">Request #4343</a>).
 [cjh] Add Active Directory support to the LDAP account information driver
-      (air2@dds.nl, Request #3512).
+      (air2@dds.nl, <a href="http://bugs.horde.org/ticket/3512">Request #3512</a>).
 [cjh] Add a finger driver to the account information block
-      (difosfor@hotmail.com, Request #3546).
+      (difosfor@hotmail.com, <a href="http://bugs.horde.org/ticket/3546">Request #3546</a>).
 [cjh] Rewrite the Prefs code to keep the same Prefs object through multiple
       scope changes, instead of re-loading the Horde prefs, or prefs for
       a scope that had already been loaded. Fixes bugs when making changes
-      to preferences and then switching scopes again (Bug #2838).
+      to preferences and then switching scopes again (<a href="http://bugs.horde.org/ticket/2838">Bug #2838</a>).
 [cjh] Switch from hook functions for every group to a single hook function
       for all groups, allowing more dynamic Group_hooks implementations
-      (dorm@dorm.org, Request #4324).
+      (dorm@dorm.org, <a href="http://bugs.horde.org/ticket/4324">Request #4324</a>).
 [jan] Allow Kolab users to login with both, UID or mail address
-      (wrobel@gentoo.org, Bug #1317).
+      (wrobel@gentoo.org, <a href="http://bugs.horde.org/ticket/1317">Bug #1317</a>).
 [cjh] Switch between 'icon' and 'iconopen' images when toggling Horde_Tree
-      sections (Bug #2576).
+      sections (<a href="http://bugs.horde.org/ticket/2576">Bug #2576</a>).
 [cjh] Add a Horde_Form_Action for setting the cursor position in any
-      text field (Request #4431).
+      text field (<a href="http://bugs.horde.org/ticket/4431">Request #4431</a>).
 [cjh] Provide a link for dialing phone numbers if the "telephony/dial"
-      API method is present (thomas@gelf.net, Request #3241).
+      API method is present (thomas@gelf.net, <a href="http://bugs.horde.org/ticket/3241">Request #3241</a>).
 [jan] Add support for PUT method to WebDAV server
-      (d.bussink@student.utwente.nl, Request #3032).
-[jan] Add PHP 5 support for Kolab (wrobel@gentoo.org, Bug #4062).
+      (d.bussink@student.utwente.nl, <a href="http://bugs.horde.org/ticket/3032">Request #3032</a>).
+[jan] Add PHP 5 support for Kolab (wrobel@gentoo.org, <a href="http://bugs.horde.org/ticket/4062">Bug #4062</a>).
 [jan] Rewrite PAM authentication driver to use PAM extension from PECL.
 [mas] Implement IMAP_ACL_rfc2086::canEdit() for cases when the user is
       asking about their own rights.
@@ -932,12 +2257,12 @@ Horde Changes
 [cjh] Move developer and administrator tools into seperate PEAR
       packages that will be available from pear.horde.org.
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [jan] Add SMIL MIME viewer.
 [jan] Add support for virtual host based configuration.
-[jan] Add File_PDF::setTextColor() (PEAR Request #1767).
-[jan] Add File_PDF::setFontStyle() (d.baechtold@unico.ch, PEAR Request #5230).
-[jan] Add encoding parameter to XML_SVG_Document (PEAR Request #7461).
+[jan] Add File_PDF::setTextColor() (<a href="http://pear.php.net/bugs/bug.php?id=1767">PEAR Request #1767</a>).
+[jan] Add File_PDF::setFontStyle() (d.baechtold@unico.ch, <a href="http://pear.php.net/bugs/bug.php?id=5230">PEAR Request #5230</a>).
+[jan] Add encoding parameter to XML_SVG_Document (<a href="http://pear.php.net/bugs/bug.php?id=7461">PEAR Request #7461</a>).
 [jan] Add SMPP driver to Net_SMS package (Ian Eure &lt;ieure@php.net>, PEAR
       Request #5101).
 [jan] Add support for symmetric PGP encryption to Crypt library.
@@ -950,25 +2275,25 @@ Horde Changes
 [jan] Add caching for groups.
 [cjh] Allow dropping application (or other custom-purpose) configuration
       files into config/registry.d/.
-[cjh] Help now has a tree view of topics and is searchable (Request #2452).
-[cjh] translation.php now works with PHP 5 (Bug #3539).
+[cjh] Help now has a tree view of topics and is searchable (<a href="http://bugs.horde.org/ticket/2452">Request #2452</a>).
+[cjh] translation.php now works with PHP 5 (<a href="http://bugs.horde.org/ticket/3539">Bug #3539</a>).
 [jan] Highlight new configuration items in the configuration interface
-      (Request #3868).
+      (<a href="http://bugs.horde.org/ticket/3868">Request #3868</a>).
 [cjh] Add Shibboleth transparent authentication driver
       (Cassio Nishiguchi &lt;cassio@protectnetwork.org>).
 [cjh] Add native email address validation to Horde_Form_Type_email
       based on http://iamcal.com/publish/articles/php/parsing_email.
-[jan] Add multidomain support for Kolab servers (tokoe@kde.org, Request #3579).
+[jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [cjh] Deprecate htmlarea in favor of xinha.
 [mms] Add VFS SSH2/SFTP driver (Cliff Green &lt;green@umdnj.edu>).
 [mjr] Move the Horde_Config_Node and related classes out of Horde_Config and
       into it's own Horde_DOM package.
 [mjr] Add support for Horde_Share to the Net_IMSP package.
 [jan] Add connection pooling support with memcache extension 2.0.0
-      (adrieder@sbox.tugraz.at, Request #3213).
+      (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/3213">Request #3213</a>).
 [jan] Add memcached driver to the Horde_Cache package (Duck &lt;duck@obala.net>).
 [cjh] Add phpGroupWare/eGroupWare compatibility driver to Horde_RPC that
-      allows mapping xml-rpc methods into Horde applications (Request #2886).
+      allows mapping xml-rpc methods into Horde applications (<a href="http://bugs.horde.org/ticket/2886">Request #2886</a>).
 [cjh] Add _horde_hook_post_pushapp for doing actions directly after
       $registry->pushApp() succeeds.
 [jan] Update portal block content in the background instead of reloading the
@@ -986,112 +2311,112 @@ Mail Changes
 ------------
 [jan] Fix broken &lt;area> tags in HTML messages.
 [mms] When sending notification that linked attachment has been downloaded,
-      correctly set timezone in download time (Bug #4609).
+      correctly set timezone in download time (<a href="http://bugs.horde.org/ticket/4609">Bug #4609</a>).
 [cjh] If encrypting a message, encrypt an attached public key as well
-      (Bug #5733).
+      (<a href="http://bugs.horde.org/ticket/5733">Bug #5733</a>).
 [jan] Remove "default search field" preference, show all common fields instead.
 [cjh] Rename IMP_IMAP_Client::namespace to getNamespace() for PHP 5.3
       compatibility.
 [cjh] Cache PGP public keys for one hour (adrieder@sbox.tugraz.at,
       Request #5773).
 [mms] Add mailbox list caching across sessions.
-[cjh] Don't translate "Fwd:" in email subjects (Request #5674).
+[cjh] Don't translate "Fwd:" in email subjects (<a href="http://bugs.horde.org/ticket/5674">Request #5674</a>).
 [jan] Add link to strip all attachments from a message.
 [jan] Show owner of S/MIME cert in signed messages, not the message sender.
-[jan] Allow maintenance tasks to rename and delete fixed folders (Bug #5592).
+[jan] Allow maintenance tasks to rename and delete fixed folders (<a href="http://bugs.horde.org/ticket/5592">Bug #5592</a>).
 [mms] Allow all javascript and CSS in a page to be served in a single browser
       request.
 [jan] Move all IMP-specific hook examples from Horde's config/ directory.
-[jan] Fix compose window widgets with certain translations (Bug #5638).
-[jan] Fix sidebar tree generation with certain translations (Bug #5525).
-[cjh] Fix spellchecking HTML messages with active links (Bug #5629).
-[cjh] Fix a fatal error when composing for users with no signature (Bug #5682).
+[jan] Fix compose window widgets with certain translations (<a href="http://bugs.horde.org/ticket/5638">Bug #5638</a>).
+[jan] Fix sidebar tree generation with certain translations (<a href="http://bugs.horde.org/ticket/5525">Bug #5525</a>).
+[cjh] Fix spellchecking HTML messages with active links (<a href="http://bugs.horde.org/ticket/5629">Bug #5629</a>).
+[cjh] Fix a fatal error when composing for users with no signature (<a href="http://bugs.horde.org/ticket/5682">Bug #5682</a>).
 [cjh] The pspell extension is no longer supported for spell checking since
-      it doesn't work with HTML composition at all (Bug #5516).
+      it doesn't work with HTML composition at all (<a href="http://bugs.horde.org/ticket/5516">Bug #5516</a>).
 [cjh] Fix switching signatures when using HTML composition (Bugs #3753, #5594).
 [jan] Add configuration for folders that may not be modified.
 [mms] Inline PHP-generated javascript to avoid cross-domain leaking
-      (Bug #5307).
-[cjh] Preserve current mailbox when composing in the main window (Bug #5415).
+      (<a href="http://bugs.horde.org/ticket/5307">Bug #5307</a>).
+[cjh] Preserve current mailbox when composing in the main window (<a href="http://bugs.horde.org/ticket/5415">Bug #5415</a>).
 [cjh] Add initial version of a mailbox view in a block
-      (Karsten Fourmont &lt;karsten@horde.org>, Request #5011).
+      (Karsten Fourmont &lt;karsten@horde.org>, <a href="http://bugs.horde.org/ticket/5011">Request #5011</a>).
 [cjh] Add a few more new mail sounds and allow the user to choose
-      between them (Request #3260).
+      between them (<a href="http://bugs.horde.org/ticket/3260">Request #3260</a>).
 [mms] Preserve URL anchor information when performing login.
 [jan] Fetch public PGP keys from keyserver if not available in address book
       (Requires Horde 3.2).
 [mms] Add compose support for e-mails containing Internationalized Domain
-      Names (Request #5180).
+      Names (<a href="http://bugs.horde.org/ticket/5180">Request #5180</a>).
 [jan] Add a hook for post sending actions, after a message has been sent.
 [mms] Add option to login screen to allow user to select the application mode
       if either DIMP or MIMP is also installed.
 [jan] Add unified IMAP quota driver to obsolete the Cyrus and Courier drivers.
 [mms] Don't allow namespace delimiters in new mailbox names.
 [mms] Change 'Important' flag to 'Flagged For Followup' and clear the flag
-      after a reply (Request #4867).
+      after a reply (<a href="http://bugs.horde.org/ticket/4867">Request #4867</a>).
 [mms] Allow display of shared/public folders separate from a user's personal
-      folders (Request #3581).
+      folders (<a href="http://bugs.horde.org/ticket/3581">Request #3581</a>).
 [mms] Allow thumbnails to be generated for all attached images, regardless
       of image size.
-[cjh] Add a modal confirmation dialog for emptying a folder (Request #4812).
+[cjh] Add a modal confirmation dialog for emptying a folder (<a href="http://bugs.horde.org/ticket/4812">Request #4812</a>).
 [mms] Add ability for admin to limit size of reply text.
 [mms] Add RSS/Atom feed for mailboxes (Eric Garrido &lt;ekg2002@columbia.edu>,
       Request #2733).
 [mms] If tidy is available, use it to clean up outgoing HTML messages.
-[mms] Automatically delete blacklisted messages (Request #4569).
-[cjh] Implement non-modal newmail popups (Request #3327).
+[mms] Automatically delete blacklisted messages (<a href="http://bugs.horde.org/ticket/4569">Request #4569</a>).
+[cjh] Implement non-modal newmail popups (<a href="http://bugs.horde.org/ticket/3327">Request #3327</a>).
 [mms] Add option to restrict size of MIME message parts that can be displayed
       inline.
-[cjh] Add a Help entry for keyboard navigation (Bug #4716).
+[cjh] Add a Help entry for keyboard navigation (<a href="http://bugs.horde.org/ticket/4716">Bug #4716</a>).
 [mms] Most javascript code now uses the Prototype library.
 [jan] Address auto-completion searches only at beginning of names and
       addresses.
 [jan] Add button to empty the current folder.
 [jan] Show percentage of attachment limit usage in compose window
-      (Eric Garrido &lt;ekg2002@columbia.edu>, Request #3434).
+      (Eric Garrido &lt;ekg2002@columbia.edu>, <a href="http://bugs.horde.org/ticket/3434">Request #3434</a>).
 [jan] Add SQL driver for quotas (Tomas Simonaitis &lt;haden@homelan.lt>,
       Request #4053).
-[mms] Allow user to view PGP encrypted messages sent by themself (Bug #4332).
+[mms] Allow user to view PGP encrypted messages sent by themself (<a href="http://bugs.horde.org/ticket/4332">Bug #4332</a>).
 [mas] Make ACL editor more intuitive (Eric Garrido &lt;ekg2002@columbia.edu>,
       Request #3808).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [mms] Added preference to allow composition in reply/forward based on
-      "richest" format available in original message (Request #4270).
+      "richest" format available in original message (<a href="http://bugs.horde.org/ticket/4270">Request #4270</a>).
 [mms] Added preferences to determine default forwarding method and whether
       to include body text in forwards by default.
 [mms] Add preference to only verify PGP & S/MIME signed data upon user
-      request (Request #4022).
+      request (<a href="http://bugs.horde.org/ticket/4022">Request #4022</a>).
 [mms] Add preference to indicate default cursor location in compose text
-      area (Request #3245).
+      area (<a href="http://bugs.horde.org/ticket/3245">Request #3245</a>).
 [jan] Add support for symmetric PGP encryption (Requires Horde 3.2).
 [cjh] Add an onbeforeunload handler so Firefox and IE users can be prompted
       before accidentally closing a compose window (phyre@rogers.com,
       Request #4271).
 [jan] Move mail_hdr preference from identities to a regular preference.
 [mms] Remove current mailbox information from session - allows multiple
-      simultaneous open IMP windows (Request #3171).
-[mms] Add folder size display to folders screen (Request #4065).
-[mms] Add ability to filter HTML message output with tidy (Request #388).
+      simultaneous open IMP windows (<a href="http://bugs.horde.org/ticket/3171">Request #3171</a>).
+[mms] Add folder size display to folders screen (<a href="http://bugs.horde.org/ticket/4065">Request #4065</a>).
+[mms] Add ability to filter HTML message output with tidy (<a href="http://bugs.horde.org/ticket/388">Request #388</a>).
 [cjh] Show thumbnails of large images instead of linking to them
-      (Eric Garrido &lt;ekg2002@columbia.edu>, Request #3808).
+      (Eric Garrido &lt;ekg2002@columbia.edu>, <a href="http://bugs.horde.org/ticket/3808">Request #3808</a>).
 [mms] Page location in mailbox is remembered for subsequent mailbox visits.
 [mas] Add maintenance task to purge old messages from spam folder (Request
       #3860).
 [mms] Implement mailbox message list caching.
 [mms] Port AJAX spell checking code from DIMP.
 [mms] Port auto-complete contacts AJAX code from DIMP.
-[mms] Add preference to poll all folders for new mail (Request #2197).
+[mms] Add preference to poll all folders for new mail (<a href="http://bugs.horde.org/ticket/2197">Request #2197</a>).
 [mms] Allow admins to add "Printed By" headers to the top of all printed
-      messages (Request #1965).
-[mms] Allow user to save per-folder sort preferences (Request #1483).
-[jan] Add multidomain support for Kolab servers (tokoe@kde.org, Request #3579).
+      messages (<a href="http://bugs.horde.org/ticket/1965">Request #1965</a>).
+[mms] Allow user to save per-folder sort preferences (<a href="http://bugs.horde.org/ticket/1483">Request #1483</a>).
+[jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [cjh] Add a hook for post-login actions, after the session is established
       but before redirection.
 [mms] Recent search queries can be retrieved on the search page (Request
       #3337).
 [mms] Convert all templates to Horde_Template::.
-[cjh] Show vTodo parts in the iTip driver (Request #3344).
+[cjh] Show vTodo parts in the iTip driver (<a href="http://bugs.horde.org/ticket/3344">Request #3344</a>).
 [jan] Add maintenance task to purge old messages from sent-mail folders.
 [cjh] Move allow_cc and allow_bcc to compose_cc and compose_bcc preferences.
 [ben] Better support for MS-SQL.
@@ -1110,37 +2435,37 @@ Mail Changes
 
 Address Book Changes
 --------------------
-[jan] Fix birthday calculation on years before 1970 with DST (Bug #5791).
+[jan] Fix birthday calculation on years before 1970 with DST (<a href="http://bugs.horde.org/ticket/5791">Bug #5791</a>).
 [jan] Implement WebDAV DELETE.
 [jan] Change default SQL scheme to match with RFC 2426 (vCard 3.0) as closely
       as possible.
 [cjh] Add $matchBegin to the clientSearch API method (duck@obala.net,
       Request #5860).
 [cjh] Avoid variable names that might interfere with function variables in
-      sources.php.dist examples (Bug #5840).
+      sources.php.dist examples (<a href="http://bugs.horde.org/ticket/5840">Bug #5840</a>).
 [jan] Add clientFields() API method.
 [mjr] More efficient fetching of entries when using the listTimeObjects api.
 [jan] Move all Turba-specific hook examples from Horde's config/ directory.
 [cjh] Fix generation of UIDs with PHP 5.2+.
 [cjh] Handle categories when converting to and from vCards
-      (rsalmon@mbpgroup.com, Bug #5648).
-[cjh] Catch searches that seem non-empty but really aren't (Bug #5612).
+      (rsalmon@mbpgroup.com, <a href="http://bugs.horde.org/ticket/5648">Bug #5648</a>).
+[cjh] Catch searches that seem non-empty but really aren't (<a href="http://bugs.horde.org/ticket/5612">Bug #5612</a>).
 [mjr] Fix fatal errors when no share enabled sources are present.
 [mjr] Fix issue with naming new contact lists that was causing database errors,
       missing part of the contact list name, and other oddities.
 [cjh] Add support for approximate searches, if the underlying backend and Horde
-      code support them (Request #2901).
-[cjh] Add a print link for contacts (Request #2800).
+      code support them (<a href="http://bugs.horde.org/ticket/2901">Request #2901</a>).
+[cjh] Add a print link for contacts (<a href="http://bugs.horde.org/ticket/2800">Request #2800</a>).
 [cjh] Shared Address Books are now stored in a flat namespace so that they
       do not rely on the hierarchical (i.e. DataTree) properties of the
-      Horde_Share API (Bug #4960).
+      Horde_Share API (<a href="http://bugs.horde.org/ticket/4960">Bug #4960</a>).
 [cjh] If names are displayed "Lastname, Firstname", sort composite name
-      fields by lastname (Request #3909).
-[cjh] Show an overlay while running a search (Request #3154).
+      fields by lastname (<a href="http://bugs.horde.org/ticket/3909">Request #3909</a>).
+[cjh] Show an overlay while running a search (<a href="http://bugs.horde.org/ticket/3154">Request #3154</a>).
 [cjh] Add Anniversary, Spouse, and Children fields and support them in
-      vCard import/export (ntai@smartfruit.com, Request #5059).
-[cjh] Add LDIF import/export support (ritaselsky@gmail.com, Request #2506).
-[jan] Provide birthdays as events to external calendars (Request #723).
+      vCard import/export (ntai@smartfruit.com, <a href="http://bugs.horde.org/ticket/5059">Request #5059</a>).
+[cjh] Add LDIF import/export support (ritaselsky@gmail.com, <a href="http://bugs.horde.org/ticket/2506">Request #2506</a>).
+[jan] Provide birthdays as events to external calendars (<a href="http://bugs.horde.org/ticket/723">Request #723</a>).
 [mjr] Add driver to create address books from current user's Horde_Group
       memberships.
 [jan] Allow to search through API for matches at word boundaries only
@@ -1150,20 +2475,20 @@ Address Book Changes
 [cjh] Support for dereferencing LDAP aliases (aubert@femto-st.fr,
       Request #4532).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [cjh] Support vCard initials and salutation fields if present in the Turba
-      backend (s.heuer@hicom.de, Request #4248).
-[cjh] Don't show empty tabs if a contact does not have a full name (Bug #4243).
+      backend (s.heuer@hicom.de, <a href="http://bugs.horde.org/ticket/4248">Request #4248</a>).
+[cjh] Don't show empty tabs if a contact does not have a full name (<a href="http://bugs.horde.org/ticket/4243">Bug #4243</a>).
 [mjr] Add support for removing user data from backend storage when user is
       removed from Horde.
 [jmf] Sort listings on multiple columns.
 [cjh] Show numeric and alpha pagers at the top of listings, not the bottom
-      (Bug #1312).
-[jan] Add multidomain support for Kolab servers (tokoe@kde.org, Request #3579).
+      (<a href="http://bugs.horde.org/ticket/1312">Bug #1312</a>).
+[jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [jan] Use the same rendering code for contact details in the list views like
       in the contact views.
 [jan] Allow editing of composite fields (horde@olen.net,
-      rkean@keanconsulting.com, Request #2529).
+      rkean@keanconsulting.com, <a href="http://bugs.horde.org/ticket/2529">Request #2529</a>).
 [mjr] IMSP driver now has Horde_Share support.
 [cjh] Add dynamic filtering of lists of contacts.
 [mdj] Add support for split read/write database.
@@ -1174,47 +2499,47 @@ Address Book Changes
 Filters Changes
 ---------------
 [cjh] Allow specifying permissions to set in the VFS for uploaded scripts
-      (steinkel@ctinetworks.com, Request #5871).
+      (steinkel@ctinetworks.com, <a href="http://bugs.horde.org/ticket/5871">Request #5871</a>).
 [cjh] Add spam filter actions and numeric comparisons to the Maildrop
-      script driver (Request #5843).
+      script driver (<a href="http://bugs.horde.org/ticket/5843">Request #5843</a>).
 [cjh] Maildrop driver improvements: make INBOX-stripping configurable; fix
       REJECT action; make blacklist and whitelist matches exact (is); and add
       is, not is, not contain, not begins with, not ends with, matches,
       not matches, exists, and not exists rules (horde@nospam.obeliks.de,
       Request #5816).
 [jan] Add Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
-[jan] Improve forward rule generation with sieve scripts (Request #5746).
+[jan] Improve forward rule generation with sieve scripts (<a href="http://bugs.horde.org/ticket/5746">Request #5746</a>).
 [jan] Move all Ingo-specific hook examples from Horde's config/ directory.
 [cjh] Only expunge messages that we have moved or deleted completely when
-      using IMAP filters (Bug #4749).
-[cjh] Fix behavior of IMAP stop-script rules (Bug #5539).
-[cjh] Shouldn't show an input field for exists or not exists tests (Bug #5659).
-[cjh] Don't let users save rules with empty conditions (Bug #5641).
+      using IMAP filters (<a href="http://bugs.horde.org/ticket/4749">Bug #4749</a>).
+[cjh] Fix behavior of IMAP stop-script rules (<a href="http://bugs.horde.org/ticket/5539">Bug #5539</a>).
+[cjh] Shouldn't show an input field for exists or not exists tests (<a href="http://bugs.horde.org/ticket/5659">Bug #5659</a>).
+[cjh] Don't let users save rules with empty conditions (<a href="http://bugs.horde.org/ticket/5641">Bug #5641</a>).
 [cjh] Match email addresses exactly for procmail vacation rules, and include
       the Cc: and Bcc: fields in checks for which address the message was
-      sent to (Bug #4333).
+      sent to (<a href="http://bugs.horde.org/ticket/4333">Bug #4333</a>).
 [cjh] Ingo now provides a Postfix policy daemon that can be used to enforce
-      blacklist and whitelist rules at delivery time (Request #4904).
+      blacklist and whitelist rules at delivery time (<a href="http://bugs.horde.org/ticket/4904">Request #4904</a>).
 [cjh] Autocreate VFS paths when saving rules (stevekwok@hotmail.com>).
 [cjh] Add reverse conditions for procmail (horde@coursimault.com, Request
       #4037).
 [cjh] Allow numeric spam score comparisons with Sieve (adrieder@sbox.tugraz.at,
       Request #3837).
 [jan] Add Ukrainian translation (Andriy Kopystyansky &lt;anri@polynet.lviv.ua>).
-[cjh] Add timed vacation messages (groente@puscii.nl, Request #4938).
+[cjh] Add timed vacation messages (groente@puscii.nl, <a href="http://bugs.horde.org/ticket/4938">Request #4938</a>).
 [mas] Add body test for sieve (michael.menge@zdv.uni-tuebingen.de, Request
       #3875).
 [mas] Change 'Important' flag to 'Flagged For Followup' to match IMP.
 [jan] Add full character set support to vacation messages in maildrop and
       procmail drivers (Requests #4034, #4989).
-[cjh] Add sivtest driver (liamr@deathstar.org, Request #4777).
-[cjh] Add maildrop vacation support (jrvs@bothends.org, Request #3722).
-[jan] Add hook to provide addresses for vacation messages (Request #4542).
+[cjh] Add sivtest driver (liamr@deathstar.org, <a href="http://bugs.horde.org/ticket/4777">Request #4777</a>).
+[cjh] Add maildrop vacation support (jrvs@bothends.org, <a href="http://bugs.horde.org/ticket/3722">Request #3722</a>).
+[jan] Add hook to provide addresses for vacation messages (<a href="http://bugs.horde.org/ticket/4542">Request #4542</a>).
 [jan] Add "Save and Enable/Disable" buttons to forward, vacation, and spam
-      screens (Request #4543).
-[jan] Group vacation settings in tabs (Request #4541).
+      screens (<a href="http://bugs.horde.org/ticket/4543">Request #4543</a>).
+[jan] Group vacation settings in tabs (<a href="http://bugs.horde.org/ticket/4541">Request #4541</a>).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [mas] Check sieve quota before uploading a script. (gergely@risko.hu, Request
       #4278)
 [jmf] Blacklist and whitelist for imap scripts now work consistently with
@@ -1223,25 +2548,25 @@ Filters Changes
       Requests #3874, #4035).
 [cjh] Add ssh2 to the supported VFS backends (Cliff Green &lt;green@umdnj.edu>).
 [cjh] Add checks to avoid mail loops in the procmail forwards code
-      (Request #3502).
+      (<a href="http://bugs.horde.org/ticket/3502">Request #3502</a>).
 [jan] Use Horde_Form API to generate special rule forms.
-[jan] Add multidomain support for Kolab servers (tokoe@kde.org, Request #3579).
+[jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [jan] Add support for changing other users' filter rules.
 [jan] Add SQL storage driver.
 [jmf] Add simple spam-filtering setup page.
 
 Calendar Changes
 ----------------
-[jan] Don't allow to modify private events throught the API (Bug #5736).
-[jan] Don't overwrite event owner when changing events over WebDAV (Bug #5736).
+[jan] Don't allow to modify private events throught the API (<a href="http://bugs.horde.org/ticket/5736">Bug #5736</a>).
+[jan] Don't overwrite event owner when changing events over WebDAV (<a href="http://bugs.horde.org/ticket/5736">Bug #5736</a>).
 [jan] Implement WebDAV DELETE.
 [cjh] Event exceptions are now correctly reflected when subscribing to
       Kronolith calendars from Apple iCal.
 [cjh] When adding attendees, parse email groups and add each member
-      individually (Bug #5812).
+      individually (<a href="http://bugs.horde.org/ticket/5812">Bug #5812</a>).
 [cjh] External events are now enabled/disabled by individual category, such
       as showing a particular tasklist on your calendar, but not all tasks
-      (Request #4581).
+      (<a href="http://bugs.horde.org/ticket/4581">Request #4581</a>).
 [jan] Add SQL upgrade script.
 [cjh] Let the "show" URL of a calendar always show that calendar, instead of
       toggling whether or not it is displayed.
@@ -1249,13 +2574,13 @@ Calendar Changes
       that do not have guest permissions.
 [cjh] Fix generation of UIDs with PHP 5.2+.
 [cjh] Add preferences for showing event times and locations in screen
-      views, print views, both, or neither (Request #1982).
+      views, print views, both, or neither (<a href="http://bugs.horde.org/ticket/1982">Request #1982</a>).
 [cjh] Run attendee email address through MIME::encodeAddress() before
-      validating them (Bug #5670).
-[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, Bug #4851).
+      validating them (<a href="http://bugs.horde.org/ticket/5670">Bug #5670</a>).
+[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, <a href="http://bugs.horde.org/ticket/4851">Bug #4851</a>).
 [jan] Add Ukrainian translation (Andriy Kopystyansky &lt;anri@polynet.lviv.ua>).
 [cjh] Inline PHP-generated javascript to avoid cross-domain leaking
-      (Bug #5307).
+      (<a href="http://bugs.horde.org/ticket/5307">Bug #5307</a>).
 [cjh] Add a preference to not send notifications to the person who is
       adding/updating/deleting the event (steven.deboeck@excentis.com,
       Request #4770).
@@ -1264,8 +2589,8 @@ Calendar Changes
       (duck@obala.net).
 [cjh] Remove unneeded Kronolith_Driver::close method.
 [cjh] Fix error handling when moving events
-      (thomas.jarosch@intra2net.com, Bug #5401).
-[jan] Show icon for private events (Request #5190).
+      (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/5401">Bug #5401</a>).
+[jan] Show icon for private events (<a href="http://bugs.horde.org/ticket/5190">Request #5190</a>).
 [jan] Allow to edit existing event attendees.
 [jan] Add links to delete exceptions from recurring events.
 [jan] Add recurrence types by day of year and weekday of year.
@@ -1277,43 +2602,43 @@ Calendar Changes
 [jan] Hide less important event settings in the edit form by default.
 [jan] Add support for the Horde_Alarm framework (requires Horde 3.2).
 [cjh] Add ContactAutoCompleter javascript to the attendees screen
-      (Request #1635).
+      (<a href="http://bugs.horde.org/ticket/1635">Request #1635</a>).
 [jan] Add month tab to free/busy view (Gunnar Wrobel &lt;wrobel@pardus.de>,
       Request #4896).
 [cjh] Use extended Free/Busy information from Kolab (wrobel@pardus.de,
       Request #4869).
-[ben] Add daily agenda reminder (Request #4655).
+[ben] Add daily agenda reminder (<a href="http://bugs.horde.org/ticket/4655">Request #4655</a>).
 [cjh] Include event location in reminders (webmgr@muskingum.edu,
       Request #4771).
-[cjh] Use global proxy configuration for HTTP requests (Request #1039).
+[cjh] Use global proxy configuration for HTTP requests (<a href="http://bugs.horde.org/ticket/1039">Request #1039</a>).
 [jan] Display holidays generated with the Date_Holiday package (Stephan
-      Hohmann &lt;webmaster@dasourcerer.net>, Request #3862).
+      Hohmann &lt;webmaster@dasourcerer.net>, <a href="http://bugs.horde.org/ticket/3862">Request #3862</a>).
 [cjh] Consider failing to find any attendees to update an error
-      (Bug #4588).
+      (<a href="http://bugs.horde.org/ticket/4588">Bug #4588</a>).
 [cjh] Include a summary of which calendars were printed in print views
-      (Request #3263).
+      (<a href="http://bugs.horde.org/ticket/3263">Request #3263</a>).
 [jan] Add support for reading and saving events through external clients
-      (requires Horde 3.2, d.bussink@student.utwente.nl, Request #3032).
+      (requires Horde 3.2, d.bussink@student.utwente.nl, <a href="http://bugs.horde.org/ticket/3032">Request #3032</a>).
 [jan] Limit number of events in portal summary block (Duck &lt;duck@obala.net>).
-[cjh] Add a live search to the calendar panel (Request #4607).
+[cjh] Add a live search to the calendar panel (<a href="http://bugs.horde.org/ticket/4607">Request #4607</a>).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [cjh] Fix Day and Week display of events that overlap with an event that
-      doesn't start all the way to the left (Bug #2967).
+      doesn't start all the way to the left (<a href="http://bugs.horde.org/ticket/2967">Bug #2967</a>).
 [cjh] Move calendar selection/deselection to a collapsible panel.
 [jan] Allow to set user name and password for remote calendars
-      (tevans@tachometry.com, Request #3696).
-[jan] Allow to edit remote calendars (tevans@tachometry.com, Request #3696).
+      (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/3696">Request #3696</a>).
+[jan] Allow to edit remote calendars (tevans@tachometry.com, <a href="http://bugs.horde.org/ticket/3696">Request #3696</a>).
 [cjh] Move almost all hiding of elements during printing to CSS classes.
 [cjh] Allow the listEvents api call to list events from multiple calendars,
       and filter by whether or not events have an alarm
-      (Ben Klang &lt;ben@alkaloid.net>, Bug #4104).
+      (Ben Klang &lt;ben@alkaloid.net>, <a href="http://bugs.horde.org/ticket/4104">Bug #4104</a>).
 [mjr] Support for removing user data from backend when user is removed from
       Horde.
 [jan] Add private flag.
 [cjh] Add a default alarm preference.
-[cjh] Always include X-WR-CALNAME in iCalendar exports (Request #3618).
-[jan] Add multidomain support for Kolab servers (tokoe@kde.org, Request #3579).
+[cjh] Always include X-WR-CALNAME in iCalendar exports (<a href="http://bugs.horde.org/ticket/3618">Request #3618</a>).
+[jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [jan] Allow delegation of events.
 [cjh] Dynamic switching between Display, Edit, and Delete screens.
 [jan] Add preference to force day and week views to selected hours.
@@ -1333,7 +2658,7 @@ Tasks Changes
 [cjh] Add preferences for turning due dates on by default, setting the
       default due date's number of days in the future, and setting the
       default due date's time.
-[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, Bug #4851).
+[cjh] Add vCalendar 2.0 alarm export (munzli@olmero.ch, <a href="http://bugs.horde.org/ticket/4851">Bug #4851</a>).
 [jan] Add sub-tasks.
 [jan] Add start dates for tasks.
 [jan] Add support for the Horde_Alarm framework (requires Horde 3.2).
@@ -1341,17 +2666,17 @@ Tasks Changes
       for the full search and a direct link to full search if javascript
       is unavailable.
 [cjh] Allow explicitly searching All, Incomplete, or Completed tasks
-      (Request #4222).
+      (<a href="http://bugs.horde.org/ticket/4222">Request #4222</a>).
 [cjh] Allow configuring the tasklists that the task summary block shows,
       and let the user set a title for the block to differentiate multiple
-      instances (Request #2388).
-[cjh] Show task description tooltips in the task summary block (Request #3444).
+      instances (<a href="http://bugs.horde.org/ticket/2388">Request #2388</a>).
+[cjh] Show task description tooltips in the task summary block (<a href="http://bugs.horde.org/ticket/3444">Request #3444</a>).
 [cjh] Store completion date and add history entries for task completion.
 [cjh] Move tasklist selection/deselection to a collapsible panel.
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [cjh] Allow using the checkboxes to mark tasks as incomplete as well
-      as complete (michael.sheldon@credativ.de, Request #4250).
+      as complete (michael.sheldon@credativ.de, <a href="http://bugs.horde.org/ticket/4250">Request #4250</a>).
 [cjh] Sort date fields correctly with JS table sorting.
 [jan] Add private flag.
 [jan] Add a field for estimated time being spent on a task.
@@ -1363,18 +2688,18 @@ Notes Changes
 -------------
 [jan] Implement WebDAV DELETE.
 [cjh] Add quick links to the sidebar block for adding notes to a specific
-      notepad (Gunnar Wrobel &lt;p@rdus.de>, Request #5716).
+      notepad (Gunnar Wrobel &lt;p@rdus.de>, <a href="http://bugs.horde.org/ticket/5716">Request #5716</a>).
 [cjh] Fix generation of UIDs with PHP 5.2+.
 [cjh] Show tooltips in the summary block, and restrict tooltips to 20 lines
-      (Request #3443).
-[cjh] Optionally show a note's notepad in the list view (Request #2317).
+      (<a href="http://bugs.horde.org/ticket/3443">Request #3443</a>).
+[cjh] Optionally show a note's notepad in the list view (<a href="http://bugs.horde.org/ticket/2317">Request #2317</a>).
 [cjh] Add quick (inline) note searching.
 [cjh] Add the ability to save a note as a PDF.
 [jan] Add support for encrypted notes.
 [cjh] Move notepad selection/deselection to a collapsible panel.
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
-      (Request #4080)
-[cjh] Notes search should be either title or full text (Request #4277).
+      (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
+[cjh] Notes search should be either title or full text (<a href="http://bugs.horde.org/ticket/4277">Request #4277</a>).
 [cjh] Make the note edit view the full page width.
 
 
@@ -1395,8 +2720,8 @@ v1.0.7
 
 Horde Changes
 -------------
-[cjh] SECURITY: Escape item names in the object browser (Bug #6906).
-[jan] Fix large messages being rendered empty with PHP 5.2 (Bug #5792).
+[cjh] SECURITY: Escape item names in the object browser (<a href="http://bugs.horde.org/ticket/6906">Bug #6906</a>).
+[jan] Fix large messages being rendered empty with PHP 5.2 (<a href="http://bugs.horde.org/ticket/5792">Bug #5792</a>).
 
 Calendar Changes
 ----------------
@@ -1422,7 +2747,7 @@ v1.0.5
 Address Book Changes
 --------------------
 [cjh] SECURITY: Fix unchecked access to contacts in the same SQL table
-      (Bug #6208).
+      (<a href="http://bugs.horde.org/ticket/6208">Bug #6208</a>).
 
 
 ------
@@ -1438,24 +2763,24 @@ Horde Changes
 [jan] SECURITY: The XSS filter passes the complete XSS cheat sheet
       (http://ha.ckers.org/xss.html) now.
 [jan] Apply user name hooks when editing share permissions
-      (steinkel@ctinetworks.com, Bug #5844).
-[jan] Fix fixed portal blocks (Bug #5853).
+      (steinkel@ctinetworks.com, <a href="http://bugs.horde.org/ticket/5844">Bug #5844</a>).
+[jan] Fix fixed portal blocks (<a href="http://bugs.horde.org/ticket/5853">Bug #5853</a>).
 
 Mail Changes
 ------------
 [jan] Fix sentmail folder not being updated in the preference interface
-      (Bug #5842).
+      (<a href="http://bugs.horde.org/ticket/5842">Bug #5842</a>).
 [jan] Fix broken &lt;area> tags in HTML messages.
 
 Filters Changes
 ---------------
 [jan] Add Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
-[jan] Improve forward rule generation with sieve scripts (Request #5746).
+[jan] Improve forward rule generation with sieve scripts (<a href="http://bugs.horde.org/ticket/5746">Request #5746</a>).
 
 Calendar Changes
 ----------------
 [jan] Set the user's timezone in the free/busy information.
-[jan] Fix redirection after editing an event from the sidebar menu (Bug #5769).
+[jan] Fix redirection after editing an event from the sidebar menu (<a href="http://bugs.horde.org/ticket/5769">Bug #5769</a>).
 
 Tasks Changes
 -------------
@@ -1476,11 +2801,11 @@ v1.0.2
 Horde Changes
 -------------
 [cjh] Fix identity javascript when some fields are disabled
-      (veikko@immonen@otaverkko.fi, Bug #5595).
+      (veikko@immonen@otaverkko.fi, <a href="http://bugs.horde.org/ticket/5595">Bug #5595</a>).
 [cjh] Disable the Turkish locale if using PHP 5 (see
       http://bugs.php.net/bug.php?id=35050).
-[jan] Improved webroot detection (Request #4126).
-[jan] Fix selecting the language on the login screen (Bug #5098).
+[jan] Improved webroot detection (<a href="http://bugs.horde.org/ticket/4126">Request #4126</a>).
+[jan] Fix selecting the language on the login screen (<a href="http://bugs.horde.org/ticket/5098">Bug #5098</a>).
 [jan] Fix searching for single quotes in email headers (qa@cpanel.net, Bug
       #4854).
 [jan] Fix portal layouts with more than one horizontally expanded block per
@@ -1491,21 +2816,21 @@ Mail Changes
 [cjh] Lower memory usage when downloading folders (Andrew Morgan
       &lt;morgan@orst.edu>).
 [mms] Fix detection of default namespace information when no namespaces are
-      defined on the server (Bug #5538).
+      defined on the server (<a href="http://bugs.horde.org/ticket/5538">Bug #5538</a>).
 [mms] Don't lose message bodies when moving messages to trash when over quota
-      (Bug #5470).
-[cjh] Remove unused defaults in Fetchmail_imap (Bug #2799).
+      (<a href="http://bugs.horde.org/ticket/5470">Bug #5470</a>).
+[cjh] Remove unused defaults in Fetchmail_imap (<a href="http://bugs.horde.org/ticket/2799">Bug #2799</a>).
 [jan] Fix empty folder name appearing on Cyrus and servers with similar
-      namespaces (Bug #5138).
+      namespaces (<a href="http://bugs.horde.org/ticket/5138">Bug #5138</a>).
 [jan] Only show reply options in iCalendar viewer if a reply is requested.
 [cjh] Remove non-responsive www.keyserver.net and wwwkeys.pgp.net from
-      PGP options (Bug #5323).
-[jan] Fix moving messages when over quota on Dovecot servers (Bug #5270).
-[jan] Fix parsing of certain distribution lists (Bug #5134).
+      PGP options (<a href="http://bugs.horde.org/ticket/5323">Bug #5323</a>).
+[jan] Fix moving messages when over quota on Dovecot servers (<a href="http://bugs.horde.org/ticket/5270">Bug #5270</a>).
+[jan] Fix parsing of certain distribution lists (<a href="http://bugs.horde.org/ticket/5134">Bug #5134</a>).
 [mms] Fix rare occurrence where an action perfomed on the mailbox screen would
-      instead be performed on the INBOX (Bug #5202).
+      instead be performed on the INBOX (<a href="http://bugs.horde.org/ticket/5202">Bug #5202</a>).
 [mms] Don't show save attachments prompt in compose screen if configured to
-      automatically link all attachments (Request #5189).
+      automatically link all attachments (<a href="http://bugs.horde.org/ticket/5189">Request #5189</a>).
 
 Address Book Changes
 --------------------
@@ -1514,26 +2839,26 @@ Address Book Changes
 [mjr] Fix adding contacts to a new contact list in a source other than the
       source the contacts being added are from.
 [jan] Fix paging through search results from another than the default address
-      book (Bug #5137).
-[cjh] Fix copy/moving contacts to a new contact list (Bug #5144).
+      book (<a href="http://bugs.horde.org/ticket/5137">Bug #5137</a>).
+[cjh] Fix copy/moving contacts to a new contact list (<a href="http://bugs.horde.org/ticket/5144">Bug #5144</a>).
 
 Filters Changes
 ---------------
 [jan] Add Simplified Chinese translation (Anna Chen
       &lt;annachen2008@yahoo.com.cn>).
-[cjh] Fix check for bulk or list precedence in Sieve vacation (Bug #5543).
-[jan] Add additional checks to avoid adding empty test values (Bug #5392).
-[jan] Fix multiline vacation messages with procmail driver (Bug #5273).
+[cjh] Fix check for bulk or list precedence in Sieve vacation (<a href="http://bugs.horde.org/ticket/5543">Bug #5543</a>).
+[jan] Add additional checks to avoid adding empty test values (<a href="http://bugs.horde.org/ticket/5392">Bug #5392</a>).
+[jan] Fix multiline vacation messages with procmail driver (<a href="http://bugs.horde.org/ticket/5273">Bug #5273</a>).
 
 Calendar Changes
 ----------------
 [cjh] Display attendees list correctly without a mail/compose method (Bug
       #5127).
-[cjh] Send iCalendar data as UTF-8 (Bug #5427).
+[cjh] Send iCalendar data as UTF-8 (<a href="http://bugs.horde.org/ticket/5427">Bug #5427</a>).
 [jan] Fix duration of remote and imported full-day events (Bugs #4617, #4794).
-[jan] Fix recurring multiday events crossing a month border (Bug #5205).
+[jan] Fix recurring multiday events crossing a month border (<a href="http://bugs.horde.org/ticket/5205">Bug #5205</a>).
 [jan] Fix duration calculation in edit form for events covering more than a
-      month (Bug #5120).
+      month (<a href="http://bugs.horde.org/ticket/5120">Bug #5120</a>).
 
 
 ------
@@ -1551,41 +2876,41 @@ Horde Changes
 [jan] Fix RPC authentication on CGI SAPIs.
 [jan] Detect unencrypted PGP messages.
 [jan] Complete Cyrus virtual domain support in cyrsql driver (Vilius Sumskas
-      &lt;vilius@lnk.lt>, Request #4967).
+      &lt;vilius@lnk.lt>, <a href="http://bugs.horde.org/ticket/4967">Request #4967</a>).
 [jan] Add option whether to strip domains from usernames in the account block
-      (Request #4955).
-[jan] Fix email lists not being validated under certain conditions (Bug #4834).
+      (<a href="http://bugs.horde.org/ticket/4955">Request #4955</a>).
+[jan] Fix email lists not being validated under certain conditions (<a href="http://bugs.horde.org/ticket/4834">Bug #4834</a>).
 [cjh] Add a REST-ful preferences interface.
 [cjh] Faster DataTree-to-SQL History migration script
-      (josh@endries.org, Request #4732).
-[cjh] Improved automatic webroot detection (Ben Klang, Request #4126).
-[cjh] Rewrite and fix the OCI8 SessionHandler (Bug #3452).
+      (josh@endries.org, <a href="http://bugs.horde.org/ticket/4732">Request #4732</a>).
+[cjh] Improved automatic webroot detection (Ben Klang, <a href="http://bugs.horde.org/ticket/4126">Request #4126</a>).
+[cjh] Rewrite and fix the OCI8 SessionHandler (<a href="http://bugs.horde.org/ticket/3452">Bug #3452</a>).
 [cjh] Allow signup hooks to override the user_name and password fields
-      (thomas@gelf.net, Request #2904).
+      (thomas@gelf.net, <a href="http://bugs.horde.org/ticket/2904">Request #2904</a>).
 [cjh] Fix creation of mailbox quotas by the Auth_cyrus driver
-      (pascal@vmfacility.fr, Bug #4678).
+      (pascal@vmfacility.fr, <a href="http://bugs.horde.org/ticket/4678">Bug #4678</a>).
 [cjh] Add "Save and Finish" to the share edit window (webmgr@muskingum.edu,
       Request #4307).
-[cjh] Let mailto: and anchor (#) links through Horde::externalUrl (Bug #3079).
+[cjh] Let mailto: and anchor (#) links through Horde::externalUrl (<a href="http://bugs.horde.org/ticket/3079">Bug #3079</a>).
 [cjh] Add smbclient version of the SMB Auth class (larry@wimble.biz,
       Request #4338).
 [cjh] Remove problematic "data descriptor" segment from generated ZIP files
-      (reitsma@denison.edu, Bug #4670).
-[cjh] Strip accesskeys from menu tooltips when only showing icons (Bug #4667).
-[jan] Fix saving files in the root directory of an SQL VFS backend (Bug #4652,
+      (reitsma@denison.edu, <a href="http://bugs.horde.org/ticket/4670">Bug #4670</a>).
+[cjh] Strip accesskeys from menu tooltips when only showing icons (<a href="http://bugs.horde.org/ticket/4667">Bug #4667</a>).
+[jan] Fix saving files in the root directory of an SQL VFS backend (<a href="http://bugs.horde.org/ticket/4652">Bug #4652</a>,
       Ben Klang &lt;ben@alkaloid.net>).
-[jan] Fix displaying all maintenance tasks to be confirmed at once (Bug #4377).
+[jan] Fix displaying all maintenance tasks to be confirmed at once (<a href="http://bugs.horde.org/ticket/4377">Bug #4377</a>).
 [cjh] Fix return format of DataTree_null::getByAttributes()
-      (thomas.jarosch@intra2net.com, Bug #4651).
+      (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/4651">Bug #4651</a>).
 [jan] Support departments in vCard's ORG properties (martin@matuska.org,
       Request #4285).
 [cjh] Rename Auth_sasl backend to Auth_peclsasl to avoid conflicts with PEAR's
-      Auth_SASL (Bug #4547).
+      Auth_SASL (<a href="http://bugs.horde.org/ticket/4547">Bug #4547</a>).
 [cjh] Implement handling of vTimezones in iCalendar data
-      (Carl Thompson &lt;lists-horde@carlthompson.net>, Bug #4399).
+      (Carl Thompson &lt;lists-horde@carlthompson.net>, <a href="http://bugs.horde.org/ticket/4399">Bug #4399</a>).
 [cjh] keybindings.js now works with Safari/KHTML.
 [jan] Avoid recursive folder creation when sharing Kolab folders
-      (michael.sheldon@credativ.de, Bug #4325).
+      (michael.sheldon@credativ.de, <a href="http://bugs.horde.org/ticket/4325">Bug #4325</a>).
 [jan] Add Kolab specific account block driver to support special Kolab users
       (mzizka@hotmail.com, Request: #4119).
 [mms] Only dim below the last signature line of input text in the dimsignature
@@ -1597,32 +2922,32 @@ Mail Changes
 [jan] Improve displaying of PGP messages (requires Horde 3.1.4 partially).
 [mms] Make sure we pass a read/write IMAP stream to the filters API (Bug
       #5054).
-[mms] Do not allow move to trash unless trash folder is defined (Bug #5012).
-[jan] Fix an encoding issue with the address book popup (Bug #5050).
-[cjh] Ignore All spellchecking fixes (technology@pmi-portland.org, Bug #4922).
+[mms] Do not allow move to trash unless trash folder is defined (<a href="http://bugs.horde.org/ticket/5012">Bug #5012</a>).
+[jan] Fix an encoding issue with the address book popup (<a href="http://bugs.horde.org/ticket/5050">Bug #5050</a>).
+[cjh] Ignore All spellchecking fixes (technology@pmi-portland.org, <a href="http://bugs.horde.org/ticket/4922">Bug #4922</a>).
 [cjh] Absolute restriction on the width of the contacts window select elements
-      (Request #1985).
-[cjh] Send lowercase mailto: attributes in iCalendar replies (Bug #4872).
-[cjh] Don't improperly increment iCalendar SEQUENCE values (Bug #4863).
+      (<a href="http://bugs.horde.org/ticket/1985">Request #1985</a>).
+[cjh] Send lowercase mailto: attributes in iCalendar replies (<a href="http://bugs.horde.org/ticket/4872">Bug #4872</a>).
+[cjh] Don't improperly increment iCalendar SEQUENCE values (<a href="http://bugs.horde.org/ticket/4863">Bug #4863</a>).
 [mms] Always subscribe to created folders.
 [mms] Don't allow both trash folder and Virtual Trash to be selected in the
-      options (Bug #4698).
-[cjh] Turn mailto: links in HTML emails into IMP compose links (Bug #3079).
+      options (<a href="http://bugs.horde.org/ticket/4698">Bug #4698</a>).
+[cjh] Turn mailto: links in HTML emails into IMP compose links (<a href="http://bugs.horde.org/ticket/3079">Bug #3079</a>).
 [cjh] Attempt to calculate the actual filesystem block size in the
       IMP_Quota_command driver (Eric Rostetter
-      &lt;eric.rostetter@physics.utexas.edu>, Request #4360).
+      &lt;eric.rostetter@physics.utexas.edu>, <a href="http://bugs.horde.org/ticket/4360">Request #4360</a>).
 [cjh] Make sure to honor user date format preferences in iTip viewer
-      (Bug #4635).
-[cjh] Fix message list header underflow in IE7 (Bug #4608).
-[cjh] Don't return empty sent-mail folders from the identity (Bug #4380).
-[cjh] Don't rename folders from or to an empty string (Bug #4380).
-[mas] Don't replace spaces with '.' when expanding addresses. (Bug #4236)
+      (<a href="http://bugs.horde.org/ticket/4635">Bug #4635</a>).
+[cjh] Fix message list header underflow in IE7 (<a href="http://bugs.horde.org/ticket/4608">Bug #4608</a>).
+[cjh] Don't return empty sent-mail folders from the identity (<a href="http://bugs.horde.org/ticket/4380">Bug #4380</a>).
+[cjh] Don't rename folders from or to an empty string (<a href="http://bugs.horde.org/ticket/4380">Bug #4380</a>).
+[mas] Don't replace spaces with '.' when expanding addresses. (<a href="http://bugs.horde.org/ticket/4236">Bug #4236</a>)
 
 Address Book Changes
 --------------------
 [jan] Fix character set encoding of exported vCards.
 [mjr] Fix fatal error when exporting to vCard.
-[cjh] Organize basic search form from left to right (Request #4914).
+[cjh] Organize basic search form from left to right (<a href="http://bugs.horde.org/ticket/4914">Request #4914</a>).
 [jan] Fix links to only show contacts or lists, or both.
 [mjr] Don't remember the lastly selected address book in the session, if it
       was not browseable.
@@ -1638,12 +2963,12 @@ Filters Changes
 Calendar Changes
 ----------------
 [jan] Fix character set encoding of exported vCalendar/iCalendar data.
-[jan] Fixed MS-SQL driver (Bug #5088).
+[jan] Fixed MS-SQL driver (<a href="http://bugs.horde.org/ticket/5088">Bug #5088</a>).
 [jan] Add Catalan translation (Jordi Giralt &lt;projecte.k2@upcnet.es>).
-[jan] Fix searching for non-ascii strings (Bug #4773).
+[jan] Fix searching for non-ascii strings (<a href="http://bugs.horde.org/ticket/4773">Bug #4773</a>).
 [cjh] Display partial hours in free/busy view (cbs@cts.ucla.edu,
       Request #4755).
-[cjh] Honor date_format preference in reminders and notifications (Bug #4726).
+[cjh] Honor date_format preference in reminders and notifications (<a href="http://bugs.horde.org/ticket/4726">Bug #4726</a>).
 
 Tasks Changes
 -------------
@@ -1656,7 +2981,7 @@ v1.0
 ----
 
 [jan] Fix problems with CGI versions of PHP and the setup script.
-[jan] Fix email lists not being validated under certain conditions (Bug #4834).
+[jan] Fix email lists not being validated under certain conditions (<a href="http://bugs.horde.org/ticket/4834">Bug #4834</a>).
 
 Calendar Changes
 ----------------

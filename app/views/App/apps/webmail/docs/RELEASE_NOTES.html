@@ -1,77 +1,68 @@
-<h1>Release notes for the latest release</h1><pre>
-The Horde Team is pleased to announce the final release of the Horde Groupware
-Webmail Edition version 1.2.
+<h3>Release notes for the latest release</h3><pre>
+The Horde Team is pleased to announce the first release candidate of
+the Horde Groupware Webmail Edition version 4.0.
 
 Horde Groupware Webmail Edition is a free, enterprise ready, browser based
 communication suite. Users can read, send and organize email messages with
-three different webmail interfaces and manage and share calendars, contacts,
+four different webmail interfaces and manage and share calendars, contacts,
 tasks and notes with the standards compliant components from the Horde
 Project.
 
-The major changes compared to the Horde Groupware Webmail Edition version
-1.1.3 are:
-    * Further stabilized synchronization support.
-    * Improved deletion of user data.
-    * Added SQL driver for signups.
-    * Much improved folder listing library that reduces the time needed to
-      create the tree and should better handle servers with unconventional
-      namespaces.
-    * Improved autocomplete address performance and reliablity.
-    * Fixed spellcheck in HTML mode when using Xinha on IE and when using
-      fckeditor on Safari 3.
-    * If using imagemagick, allow creation of PDF thumbnails.
-    * Multiple quota driver bugfixes and improvements.
-    * Handle ';' to delimit addresses when composing.
-    * Improved IMAP caching and storage optimizations.
-    * Improved handling of webmail interfaces when the selected view is not the
-      browser's default.
-    * Added Basque and completed Estonian translations.
-    * Many improvements and bug fixes.
+The installation method for Horde Groupware Webmail Edition 4 has been
+changed to use the PEAR installer. Please follow the instructions on
+https://github.com/horde/horde/blob/master/bundles/webmail/docs/INSTALL
+to install Horde Groupware Webmail Edition.
 
-Traditional Mail changes:
-    * Added ability to search messages by size and improved search page UI.
-    * Added option to attach personal vCard to message.
-    * Added mailto: handler for Firefox 3+.
-    * Added CSRF tokens to the Compose screen.
-    * Improved address book popup interface.
+The major changes compared to the Horde Groupware Webmail Edition version 1
+are:
 
-Dynamic Mail changes:
-    * Improved UI for message list checkboxes.
-    * Improved message list scrollbar.
-    * Improved drag/drop javascript library, fixing several bugs and allowing
-      the ability to move folders.
-    * Update quota when polling messages.
-    * Fixed error when purging deleted messages.
-    * Fixed buggy behavior on various browsers, including right-clicks on
-      Firefox/Mac, mousewheel on Safari, various display issues on Opera 9.5,
-      and dynamic resizing on IE 6.
-    * Highlight search criteria text in message list.
-    * Allow multiple compose/message popup windows to be open.
-    * Cache preview messages.
-    * Indicate that the WYSIWYG editor is still loading.
+Global changes:
+    * Completely refactored for PHP 5.
+    * New installation process through PEAR installer.
+    * Simplified configuration process.
+    * ActiveSync support.
+    * Frameless layout.
+    * Grouping into advanced and simple user preferences.
+    * Improved caching and reduced session sizes.
+    * Much faster Share library.
+    * Reduced dependency on external libraries.
+    * Lots of improvements in all library components.
 
-Mobile Mail changes:
-    * Added MIME_Viewer to display mail system admin messages.
-    * Fixes for displaying messages with escaped characters in the headers.
+Mail changes:
+    * New mobile frontend.
+    * Much improved AJAX frontend including a vertical pane layout.
+    * New IMAP library written from scratch with broad RFC support and huge
+      performance improvements.
+    * More powerful search and filter functionality.
+    * Smart-reply feature.
+    * Improved new mail notifications.
+    * Localized special folders.
+    * Better display of HTML messages.
+    * HTML signatures.
+    * Draft auto-saving.
+    * Support for custom IMAP flags.
+    * Reduced memory usage.
 
-Address Book changes:
-    * Added support for contact logos and photos.
-    * Improved form fields for PGP and S/MIME keys.
-    * Improved Kolab support.
-    * Improved vCard support.
-    * Improved contact import and export support.
+Address book changes:
+    * Duplicates searching and merging.
 
-Filters changes:
-    * Added ability to hide the script icon.
+Filter changes:
+    * Changed default Sieve port to 4190.
 
 Calendar changes:
-    * Added maintenance task for purging old events.
-    * Added calendar feeds.
-    * Added calendar widgets embeddable into external websites.
-    * Changed year view to highlight days with busy events.
+    * New AJAX frontend with integrated tasks support.
+    * New mobile frontend.
+    * Resource scheduling.
+    * System calendars.
+    * Calendar coloring.
+    * Calendar and event tagging.
+    * Cross-timezone support.
+    * CalDAV client support.
+    * Improved recurring event exceptions.
+    * Improved notification and invitation messages.
 
 Tasks changes:
-    * Added task assignees.
-    * Customizable task list columns.
-    * Improved task notification messages.
-    * Improved WebDAV support.</pre>
+    * New Ajax frontend (in calendar).
+    * System task lists.
+    * Task list coloring.
+    * Quick task adding.</pre>
