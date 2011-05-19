@@ -18,7 +18,7 @@
             also download the PEAR tarball from
             our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
             <?php else: ?>
-            <p>No Horde 4 release at this time.</p>
+            <p>No stable Horde 4 release at this time.</p>
             <?php endif;?>
 
             <h3>Current Horde 3 Stable Release</h3>
