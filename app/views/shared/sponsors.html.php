@@ -22,8 +22,5 @@
     <li><a href="http://www.hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png" height="31"/></a></li>
     <li><a href="http://www.verendus.com"><img src="<?php echo $GLOBALS['host_base'] ?>/images/verendus.jpg" height="31"/></a></li>
   </ul>
-  <div id="fb-root"></div>
-  <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-  <fb:like-box href="http://www.facebook.com/pages/Horde-LLC/192707224109487" width="260" show_faces="false" stream="false" header="true"></fb:like-box>
-  <div class="clear"></div>
+  <iframe src="http://www.facebook.com/plugins/like.php?app_id=132513070157462&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHorde-LLC%2F192707224109487&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
 </div>
