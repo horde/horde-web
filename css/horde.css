@@ -598,11 +598,11 @@ div.sliderview p {
 }
 
 #b-webi-widget {
-    margin-left: 2px;
     background: #fff;
+    width: auto !important;
 }
 #b-webi-widget .b-webi-header {
-    visibility: hidden;
+    display: none;
 }
 #b-webi-widget .b-webi-footer {
     text-align: center;
@@ -616,7 +616,7 @@ div.sliderview p {
     border: 0;
 }
 #b-webi-widget .b-webi-content {
-    padding: 0 2px 6px;
+    padding: 0 0 6px;
     white-space: normal;
 }
 
@@ -670,10 +670,7 @@ div.sliderview p {
     color: #6a6a6a;
 }
 #b-webi-widget .b-webi-domain a {
-    width: 112px;
     border:0;
-    font: 12px Arial;
-    color: #303086;
 }
 #b-webi-widget .b-webi-item-opened .b-webi-domain {
     border-bottom: 1px solid #C9E7C5;
