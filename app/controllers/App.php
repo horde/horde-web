@@ -69,6 +69,9 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             : Horde_String::ucfirst($this->_matchDict->app);
     }
 
+    /**
+     * Application list page
+     */
     protected function _index(Horde_Controller_Response $response)
     {
         $view = $this->getView();
@@ -84,6 +87,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     }
 
     /**
+     *
+     * Specific application's page
      *
      * @param Horde_Controller_Response $response
      */
