@@ -49,7 +49,9 @@
 
             <h2><span>&nbsp;</span>Horde Email Platform</h2>
 
-            <h3>Horde Groupware Webmail Edition</h3>
+            <h3><a
+            href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail')) ?>">
+            Horde Groupware Webmail Edition</a></h3>
             <p>Looking for the Horde Groupware bundles? These meta-packages are
             still being put together for Horde 4. Can't wait? Consider
             installing the separate applications individually, or install the
