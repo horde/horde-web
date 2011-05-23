@@ -805,6 +805,23 @@ div.mainareasplit ul.simple {
     background-color: #d99;
 }
 
+/* Docutils */
+.note, .important, .hint, .warning, .alert {
+    background-color: #ffb;
+    padding: 5px;
+}
+.hint {
+    background-color: #ccf;
+}
+.note h2, .note p, .important h2, .important p, .hint h2, .hint p, .warning h2, .warning p, .alert h2, .alert p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.admonition-title {
+    color: #f00;
+    font-weight: bold;
+}
+
 div.mail {
     margin: 10px 0;
     padding: 0;
