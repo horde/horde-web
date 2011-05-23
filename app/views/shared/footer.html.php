@@ -18,6 +18,7 @@
                                 <ul>
                                     <li><a href="http://bit.ly/iggr7v" class="newsletter">Newsletter</a></li>
                                     <li><a href="http://www.twitter.com/hordeproject" class="twitter">Twitter</a></li>
+                                    <li><a href="http://www.facebook.com/pages/Horde-LLC/192707224109487" class="facebook">Facebook</a></li>
                                     <li><a href="http://github.com/horde" class="github">GitHub</a></li>
                                     <li><a href="https://www.ohloh.net/p/horde" class="ohloh">Ohloh</a></li>
                                 </ul>

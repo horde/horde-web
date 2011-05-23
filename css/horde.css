@@ -461,6 +461,10 @@ div.footer .follow-us .twitter {
     background:url(../images/twitter.png) no-repeat;
     padding-left:24px;
 }
+div.footer .follow-us .facebook {
+    background:url(../images/facebook.png) no-repeat;
+    padding-left:24px;
+}
 div.footer .follow-us .github {
     background: url(../images/github.png) no-repeat;
     padding-left: 24px;
