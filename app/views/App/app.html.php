@@ -8,20 +8,17 @@
       </div>
     </div>
     <div class="rightcol" style="background: none;">
+      <?php if ($this->latestNews): ?>
       <div id="accordion">
         <h2>Latest News</h2>
         <ul class="sidebar">
-          <?php $i = 0; ?>
-          <?php foreach ($this->latestNews as $entry):
-          if ($i++ >= 5) {
-              break;
-          }
-          echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry)));
-          endforeach;
-          ?>
+          <?php foreach ($this->latestNews as $entry): ?>
+          <?php echo $this->renderPartial('feedListItem', array('locals' => array('entry' => $entry))); ?>
+          <?php endforeach; ?>
         </ul>
         <div></div>
       </div>
+      <?php endif; ?>
       <?php echo $this->render('sponsors');?>
     </div>
     <div class="clear"></div>
