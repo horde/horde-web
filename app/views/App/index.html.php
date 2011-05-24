@@ -54,10 +54,13 @@
             Horde Groupware Webmail Edition</a><span class="downloadlink">
             (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'webmail')) ?>)
             </span></h3>
-            <p>Looking for the Horde Groupware bundles? These meta-packages are
-            still being put together for Horde 4. Can't wait? Consider
-            installing the separate applications individually, or install the
-            Horde 3 version of the bundles.</p>
+            <p>Horde Groupware Webmail Edition is a free, enterprise ready, browser based
+            communication suite. Users can read, send and organize email messages and
+            manage and share calendars, contacts, tasks and notes with the standards
+            compliant components from the Horde Project. Horde Groupware Webmail Edition
+            bundles the separately available applications IMP, Ingo, Kronolith, Turba, Nag
+            and Mnemo.
+            </p>
 
             <h3 id="imp"><a
             href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'imp')) ?>">
@@ -89,12 +92,24 @@
             messages).</p>
  -->
             <h2><span>&nbsp;</span>Horde Groupware Suite</h2>
+            <h3><a
+            href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail')) ?>">
+            Horde Groupware Webmail Edition</a><span class="downloadlink">
+            (<?php echo $this->linkTo('download page', array('controller' => 'download', 'action' => 'app', 'app' => 'webmail')) ?>)
+            </span></h3>
+            <p>Horde Groupware Webmail Edition is a free, enterprise ready, browser based
+            communication suite. Users can read, send and organize email messages and
+            manage and share calendars, contacts, tasks and notes with the standards
+            compliant components from the Horde Project. Horde Groupware Webmail Edition
+            bundles the separately available applications IMP, Ingo, Kronolith, Turba, Nag
+            and Mnemo.
+            </p>
 
-            <h3>Horde Groupware and Horde Groupware Webmail Edition</h3>
-            <p>Looking for the Horde Groupware bundles? These meta-packages are
+            <h3>Horde Groupware</h3>
+            <p>Looking for the Horde Groupware bundle? This meta-package is
             still being put together for Horde 4. Can't wait? Consider
-            installing the separate applications individually, or install the
-            Horde 3 version of the bundles.</p>
+            installing the Horde Groupware Webmail Edition, or install the
+            separate applications individually.</p>
 
             <h3>Gollem</h3>
             <p>The Horde Team is still working hard at getting Gollem ready for
