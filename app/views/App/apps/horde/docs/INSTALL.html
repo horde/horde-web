@@ -246,7 +246,8 @@ it needs to compile.</p>
 <p>You can also use the <a class="reference external" href="http://pecl.php.net/package/imagick">imagick</a> extension or the <a class="reference external" href="http://www.imagemagick.org">ImageMagick</a> package to do
 these manipulations instead. The <a class="reference external" href="http://pecl.php.net/package/imagick">imagick</a> extension is the recommended
 method for image manipulation. See the <tt class="docutils literal">Image Manipulation</tt> tab of the
-Horde configuration for more details.</p>
+Horde configuration for more details. ImageMagick version 6.5.7 or better
+is recommended.</p>
 </li>
 <li><p class="first">tidy <tt class="docutils literal"><span class="pre">--with-tidy</span></tt></p>
 <p>The tidy PHP extension is required to sanitize HTML data.</p>
@@ -387,6 +388,8 @@ kind of image manipulations.</p>
 <pre class="literal-block">
 pecl install imagick
 </pre>
+<p>The imagick extension <strong>must</strong> be compiled against ImageMagick version
+6.2.9 or better, though version 6.5.7 or better is recommended.</p>
 </li>
 <li><p class="first">lzf</p>
 <p>If the lzf module is available, Horde can compress cached data within
