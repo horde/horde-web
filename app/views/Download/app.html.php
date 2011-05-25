@@ -14,7 +14,7 @@
             installation method. You can install all Horde 4 applications and
             libraries by following the directions in the <a href="<?php echo
             $this->urlWriter->urlFor('app', array('app' => $this->appname,
-            'action' => 'docs', 'f' => 'INSTALL.html')) ?>">documentation</a>.  You may
+            'action' => 'docs')) ?>/INSTALL">documentation</a>.  You may
             also download the PEAR tarball from
             our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
             <?php else: ?>
@@ -58,13 +58,17 @@
 
             <p>The Horde 4 development version of
             <?php echo htmlspecialchars($this->app_info['name'])?> is available via
-            <a href="../../source/snapshots.php">nightly snapshots</a> and
-            <a href="../../source/git.php">Git</a>.
-            <br />
-            The Horde 3 development version of
-            <?php echo htmlspecialchars($this->app_info['name']) ?> is available via
-            <a href="../../source/snapshots.php">nightly snapshots</a> and
-            <a href="../../source/cvs.php">CVS</a>.</p>
+            <a href="<?php echo $this->urlWriter->urlFor('development')
+            ?>#snapshots">nightly snapshots</a> and
+            <a href="<?php echo $this->urlWriter->urlFor('development',
+            array('action' => 'git')) ?>">Git</a>.<br />
+
+            The Horde 3 development version of <?php echo
+            htmlspecialchars($this->app_info['name']) ?> is available via
+            <a href="<?php echo $this->urlWriter->urlFor('development')
+            ?>#snapshots">nightly snapshots</a> and
+            <a href="<?php echo $this->urlWriter->urlFor('development',
+            array('action' => 'cvs')) ?>">CVS</a>.</p>
 
             <?php if (count($this->app_info) > 1): ?>
             <h3>Obtaining Old Versions</h3>

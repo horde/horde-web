@@ -26,6 +26,7 @@
         older <a href="http://cvs.horde.org">CVS</a> code trees directly
         online.</p>
 
+        <a name="snapshots"></a>
         <h3>Snapshots</h3>
         <p>Nightly <a href="http://snaps.horde.org/">Snapshots</a> (tarballs of
         development code) are now provided for Git master (Horde 4 code) and
