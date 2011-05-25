@@ -843,7 +843,7 @@ div.mail {
     color: #556AA1;
     font-weight: bold;
 }
-span.downloadlink {
-    font-size: 12px;
-    font-weight: normal;
+
+h3 img.download {
+    margin-left: 5px;
 }

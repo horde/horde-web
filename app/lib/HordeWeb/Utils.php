@@ -53,6 +53,11 @@ class HordeWeb_Utils
         return $horde_apps_dev;
     }
 
+    static public function downloadIcon($view, $app)
+    {
+        return '<a href="' . $view->urlFor(array('controller' => 'download', 'action' => 'app', 'app' => $app)) . '"><img src="' . $GLOBALS['host_base'] . '/images/download.gif" class="download" alt="Download page" title="Download page" /></a>';
+    }
+
     static public function app_download_link($key, $elt, $graphic = false, $controller = null)
     {
         $text = $elt['name'] . ' ' . $elt['ver'];
