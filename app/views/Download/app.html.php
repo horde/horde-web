@@ -28,16 +28,6 @@
             <?php endforeach; ?>
             </ul>
 
-            <?php if (!empty($this->deprapp)): ?>
-            <h3>Deprecated Release</h3>
-
-            <ul>
-            <?php foreach ($this->deprapp as $val): ?>
-                <li><?php echo $val ?></li>
-            <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
-
             <?php if (count($this->devapp)): ?>
             <h3>Current Development Release</h3>
             <ul>

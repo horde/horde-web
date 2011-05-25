@@ -65,7 +65,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             exit;
         }
         $view->appname = $app;
-        $app_info = $h4app = $h4date = $stableapp = $stabledate = $devapp = $deprapp = $app_list = array();
+        $app_info = $h4app = $h4date = $stableapp = $stabledate = $devapp = $app_list = array();
         if ($app != 'groupware' && $app != 'webmail') {
             $app_list[] = 'horde';
         }
@@ -110,15 +110,6 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             }
         }
 
-        if (isset($horde_apps_deprecated[$app])) {
-            foreach ($app_list as $val) {
-                $deprapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_deprecated[$val]);
-            }
-            if (empty($app_info)) {
-                $app_info = $horde_apps_deprecated[$app];
-            }
-        }
-
         if (empty($app_info)) {
             $app_info['name'] = ucfirst($app);
         }
@@ -128,7 +119,6 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
         $view->stabledate = $stabledate;
         $view->devapp = $devapp;
         $view->app_info = $app_info;
-        $view->deprapp = $deprapp;
 
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
