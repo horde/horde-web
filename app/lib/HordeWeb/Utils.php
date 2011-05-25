@@ -57,7 +57,7 @@ class HordeWeb_Utils
     {
         $text = $elt['name'] . ' ' . $elt['ver'];
         if ($graphic) {
-            $text = '<img class="download" src="' . $GLOBALS['host_base'] . '/images/download.png" alt="' . $text . '" />';
+            $text = '<img class="download" src="' . $GLOBALS['host_base'] . '/images/download.gif" alt="' . $text . '" />';
         }
 
         return '<a href="' . self::app_download_url($key, $elt, $controller) . '">' . $text . '</a> (' . $elt['date'] . ')';
@@ -67,7 +67,7 @@ class HordeWeb_Utils
     {
         if (!empty($elt['pear'])) {
             if ($controller) {
-                return $controller->getView()->urlWriter->urlFor('app', array('app' => $key, 'action' => 'docs', 'f' => 'INSTALL.html'));
+                return $controller->getView()->urlWriter->urlFor('app', array('app' => $key, 'action' => 'docs')) . '/INSTALL';
             } else {
                 return 'http://pear.horde.org/';
             }
