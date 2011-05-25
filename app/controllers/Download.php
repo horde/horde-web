@@ -96,7 +96,8 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
 
         $devapp = array();
         if (isset($horde_apps_dev[$app]) &&
-            ($stabledate[$app] < strtotime($horde_apps_dev[$val]['date']))) {
+            ($stabledate[$app] < strtotime($horde_apps_dev[$val]['date'])) &&
+            ($h4date[$app] < strtotime($horde_apps_dev[$val]['date']))) {
             foreach ($app_list as $val) {
                 if ((($val == 'horde') && !isset($horde_apps_dev[$val])) ||
                     (isset($horde_apps_dev[$val]) && ($stabledate[$val] > strtotime($horde_apps_dev[$val]['date'])))) {
