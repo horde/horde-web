@@ -702,6 +702,52 @@ div.sliderview p {
     color: #303086;
 }
 
+/* Home page informer widget */
+
+#b-webi-widget .planethorde {
+    padding-top: 10px;
+}
+#b-webi-widget ul {
+    overflow: hidden;
+    margin-left: 10px;
+}
+#b-webi-widget li {
+    float: left;
+    margin-left: 20px;
+}
+#b-webi-widget h2 {
+    background: url(http://website.informer.com/w/horde3/wi_ribbon_blue.png) no-repeat 0 0;
+    height: 35px;
+    letter-spacing: -1px;
+    line-height: 26px;
+    font-size: 14px;
+}
+#b-webi-widget h2 span {
+    background: url(http://website.informer.com/w/horde3/wi_ribbon_left.png) no-repeat 0 0;
+    height: 43px;
+    left: -24px;
+    position: absolute;
+    top: -8px;
+    width: 24px;
+}
+#b-webi-widget h2 .b-webi-footer {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    color: #fff;
+    line-height: 26px;
+    padding: 0;
+    margin-bottom: 0;
+    letter-spacing: normal;
+}
+#b-webi-widget h2 .b-webi-footer a {
+   width: auto;
+}
+/* for ie 7 */
+*+html #b-webi-widget ul {
+    margin-bottom: 5px;
+}
+
 /* Application pages */
 ul.appnav, ul.communitynav {
     float: left;

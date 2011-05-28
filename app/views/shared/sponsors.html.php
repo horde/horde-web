@@ -1,6 +1,8 @@
 <div class="adsbox">
-  <h2>Featured At</h2>
-  <?php echo $this->render('informer'); ?><br />
+  <?php if (!$this->isCurrentPage(array('controller' => 'home'))):?>
+    <h2>Featured At</h2>
+    <?php echo $this->render('informer'); ?><br />
+  <?php endif; ?>
   <h2>Sponsors</h2>
   <ul class="ads">
     <li>

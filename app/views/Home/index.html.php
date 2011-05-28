@@ -54,6 +54,7 @@
               </ul>
               <div class="main">
                 <div class="mainareasplit">
+                  <?php echo $this->render('informer-home'); ?>
                   <h2><span>&nbsp;</span>Latest News</h2>
                   <div class="planethorde">
                     <ul>
