@@ -12,9 +12,29 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Ansel 1.2</h3>
+<h3>Ansel 3.0</h3>
 
-<p><b>Status:</b> Not planned</p>
+<p><b>Status:</b> Planned</p>
+
+<p><b>Planned release timeframe:</b> ??</p>
+
+<p><b>Features currently planned:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Video Support</td><td class="planned">Planned</td></tr>
+</table>
+
+<h3>Ansel 2.1</h3>
+<p><b>Status:</b> Planning </p>
+<p><b>Planned release timeframe:</b> Late 2011</p>
+<p><b>Features currently planned:</b></p>
+<table cellspacing="0" class="roadmap">
+<tr><th>Feature</th><th>Status</th></tr>
+<tr><td>Improved image search.</td><td class="planned">Planned</td></tr>
+<tr><td>Remote Galleries (Import/Export to Facebook, Flickr, etc...)</td><td class="planned">Planned</td></tr>
+</table>
+
 
 <h3>Ansel 2.0</h3>
 
@@ -25,15 +45,18 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Native PHP 5 code</td><td class="progress">In Progress</td>
-  <tr><td>Video Support</td><td class="planned">Planned</td></tr>
+  <tr><td>Video Support</td><td class="cancelled">Postponed</td></tr>
   <tr><td>More user-controlled gallery style editing</td><td class="done">Done</td></tr>
-  <tr><td>Improved image search.</td><td class="planned">Planned</td></tr>
-  <tr><td>Remote Galleries (Import/Export to Facebook, Flickr, etc...)</td><td class="planned">Planned</td></tr>
+  <tr><td>Remote Galleries (Import/Export to Facebook, Flickr, etc...)</td><td class="cancelled">Postponed</td></tr>
   <tr><td>Improved EXIF/IPTC metadata support</td><td class="done">Done</td></tr>
   <tr><td>Support for multipage TIFF files</td><td class="done">Done</td></tr>
 </table>
+
+<h3>Ansel 1.2</h3>
+
+<p><b>Status:</b> Not planned</p>
 
 <div class="dimmed">
 
@@ -46,7 +69,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Geotagging, Google Maps integration.</td><td class="done">Done</td></tr>
   <tr><td>Tag autocompletion</td><td class="done">Done</td></tr>
   <tr><td>Improved IE Support</td><td class="done">Done</td></tr>
