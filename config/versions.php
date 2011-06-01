@@ -7,20 +7,20 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.3',
-        'date' => 'May 18 2011',
+        'ver' => '4.0.4',
+        'date' => 'June 1 2011',
         'pear' => true
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.3)',
-        'date' => 'May 3 2011',
+        'ver' => 'H4 (5.0.5)',
+        'date' => 'June 1 2011',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.2)',
-        'date' => 'May 3 2011',
+        'ver' => 'H4 (3.0.3)',
+        'date' => 'June 1 2011',
         'pear' => true
     ),
     'ingo' => array(
@@ -164,8 +164,8 @@ $horde_three_apps = array(
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.3',
-        'date' => 'May 18 2011',
+        'ver' => '4.0.4',
+        'date' => 'June 1 2011',
         'pear' => true,
     ),
     'groupware' => array(
@@ -183,8 +183,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.3)',
-        'date' => 'May 3 2011',
+        'ver' => 'H4 (5.0.5)',
+        'date' => 'June 1 2011',
         'pear' => true,
     ),
     'dimp' => array(
@@ -199,8 +199,8 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.2)',
-        'date' => 'May 3 2011',
+        'ver' => 'H4 (3.0.3)',
+        'date' => 'June 1 2011',
         'pear' => true,
     ),
     'ingo' => array(
@@ -300,8 +300,8 @@ $horde_apps_dev = array(
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0-RC1',
-        'date' => 'May 18 2011',
+        'ver' => '4.0-RC2',
+        'date' => 'June 1 2011',
         'pear' => true,
     ),
     'horde' => array(
