@@ -7,7 +7,7 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.4',
+        'ver' => '4.0.5',
         'date' => 'June 1 2011',
         'pear' => true
     ),
@@ -164,7 +164,7 @@ $horde_three_apps = array(
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.4',
+        'ver' => '4.0.5',
         'date' => 'June 1 2011',
         'pear' => true,
     ),
