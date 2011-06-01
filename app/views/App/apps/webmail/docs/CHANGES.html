@@ -1,10 +1,49 @@
 <h3>Changes by Release</h3><pre>
 --------
+v4.0-RC3
+--------
+
+
+
+--------
 v4.0-RC2
 --------
 
 [jan] Allow to overwrite default configurations.
 [jan] Add installation script.
+
+Horde Changes
+-------------
+[gwr] Added a script for exporting/importing preferences from/to a backend.
+[mms] Fix regression with UTF7-IMAP encoding of non-ascii folder names (Bug
+      #10093).
+[mms] Allow numbers to be zero in certain preferences (<a href="http://bugs.horde.org/ticket/10120">Bug #10120</a>).
+[mms] Fix running Horde login tasks (<a href="http://bugs.horde.org/ticket/9767">Bug #9767</a>).
+[mms] Fix authenticating as several users in the same request (<a href="http://bugs.horde.org/ticket/10027">Bug #10027</a>).
+[mms] Fix colorpicker on categories preferences screen (<a href="http://bugs.horde.org/ticket/10118">Bug #10118</a>).
+[jan] Update Spanish translation.
+[jan] Update Slovak translation.
+[mjr] Fix Metar portal block.
+[gwr] Add support for the Kolab IMAP based preferences backend.
+[mms] Complete fix for issue causing slow syncs only (<a href="http://bugs.horde.org/ticket/10008">Bug #10008</a>).
+
+Mail Changes
+------------
+[jan] Fix loading message previews from search results (<a href="http://bugs.horde.org/ticket/10152">Bug #10152</a>).
+[mms] Fix sending messages with linked attachments (<a href="http://bugs.horde.org/ticket/10125">Bug #10125</a>).
+[mms] Handle response codes/errors returned from POP3 servers.
+[mms] Fix POP3 regressions.
+[mms] Workaround broken suhosin extension to allow search mailboxes (Request
+      #9842).
+
+Address Book Changes
+--------------------
+[rla] Support multiple address books in search portal block (<a href="http://bugs.horde.org/ticket/8786">Request #8786</a>).
+[mjr] Fix importing LDIF files (<a href="http://bugs.horde.org/ticket/10139">Bug #10139</a>).
+[mjr] Fix issue introduced in 3.0.1 that caused contact images to not display
+      (<a href="http://bugs.horde.org/ticket/10050">Bug #10050</a>).
+[jan] Fix editing of multiple contacts at once (<a href="http://bugs.horde.org/ticket/10085">Bug #10085</a>).
+[jan] Enable homeAdress and workAdress composite fields by default.
 
 
 --------
