@@ -11,6 +11,7 @@ Redirect permanent /documentation.php /development/documentation
 # This don't work, no idea why:
 RedirectMatch permanent /download/app/(index\.php)\?app=(.*) /download/$2
 RedirectMatch permanent /(.*)/docs/?f=(.*).html /apps/$1/docs/$2
+Redirect permanent /faq http://wiki.horde.org/FAQ
 Redirect permanent /irc.php /community/support
 Redirect permanent /licenses/asl.php /licenses/apache
 Redirect permanent /licenses/bsdl.php /licenses/bsd
