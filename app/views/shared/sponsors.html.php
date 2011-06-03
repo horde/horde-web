@@ -1,4 +1,4 @@
-<div class="adsbox">
+<div>
   <?php if (!$this->isCurrentPage(array('controller' => 'home'))):?>
     <h2>Featured At</h2>
     <?php echo $this->render('informer'); ?><br />
