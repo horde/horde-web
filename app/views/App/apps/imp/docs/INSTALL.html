@@ -22,7 +22,7 @@
 </div>
 <p>This document contains instructions for installing the IMP web-based mail
 client on your system.</p>
-<p>For information on the capabilities and features of IMP, see the file <a class="reference external" href="?f=README.html">README</a>
+<p>For information on the capabilities and features of IMP, see the file <a class="reference external" href="README">README</a>
 in the top-level directory of the IMP distribution.</p>
 <div class="section" id="prerequisites">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
@@ -40,7 +40,7 @@ earlier versions of Horde will <strong>not</strong> work.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">Be sure to have completed all of the steps in the
-<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
+<a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> file for the Horde Framework before
 installing IMP. Many of IMP's prerequisites are also Horde
 prerequisites. Additionally, many of IMP's optional features
 are configured via the Horde install.</p>
@@ -52,7 +52,7 @@ are configured via the Horde install.</p>
 <p>File upload support is <strong>required</strong> to allow attachments in mail
 composition and to allow various importing features to work (e.g.
 importing PGP or S/MIME keys, importing mbox files).  See
-<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on how to enable file upload
+<a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on how to enable file upload
 support.</p>
 </li>
 <li><p class="first">OpenSSL support <tt class="docutils literal"><span class="pre">--with-openssl</span></tt></p>
@@ -66,7 +66,7 @@ into PHP.</p>
 </ol>
 </li>
 <li><p class="first">The following PEAR modules:
-(See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PEAR modules)</p>
+(See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PEAR modules)</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">If you are going to install IMP the recommended way,
@@ -113,7 +113,7 @@ messages and performing basic mail actions.</p>
 </li>
 <li><p class="first">Sendmail or SMTP server.</p>
 <p>Horde sends mail via either a local sendmail or a remote SMTP server.</p>
-<p>See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for further information.</p>
+<p>See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for further information.</p>
 </li>
 </ol>
 <p>The following items are not required, but are strongly <strong>RECOMMENDED</strong>:</p>
@@ -192,7 +192,7 @@ tarballs. Finally, if you want to run the latest development code, or get the
 latest, not yet released, fixes, you can install IMP from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
-<p>First follow the instructions in <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> to prepare a PEAR
+<p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
 environment for Horde and install the Horde Framework.</p>
 <p>When installing IMP through PEAR now, the installer will automatically install
 any dependencies of IMP too. If you want to install IMP with all optional
@@ -235,7 +235,7 @@ Horde and a second time to IMP.</p>
 <p class="last">If this is a new install, you will not be able to configure IMP
 using the Horde Administration/Configuration page if you first
 enabled IMP authentication for Horde.  You must set Horde to use
-another authentication method (refer to the <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a>
+another authentication method (refer to the <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a>
 file), configure IMP, then reset Horde to use IMP authentication.
 One way to reset Horde in order to reach the Administration page
 is to replace the Horde configuration file <tt class="docutils literal">conf.php</tt> with the
@@ -286,7 +286,7 @@ horde/bin/horde-db-migrate imp
 </li>
 <li><p class="first">Securing IMP</p>
 <p>Before you can secure IMP, you need a secure Horde installation.  Please
-read the file in <a class="reference external" href="../../horde/docs/?f=SECURITY.html">horde/docs/SECURITY</a> for Horde security information
+read the file in <a class="reference external" href="../../horde/docs/SECURITY">horde/docs/SECURITY</a> for Horde security information
 before proceeding.</p>
 <p>There are two channels by which, unless steps are taken to avoid it, IMP
 encourages users to pass their IMAP and POP3 passwords around the Internet
@@ -322,7 +322,7 @@ machine, then:<ul>
 <li><p class="first">Testing IMP</p>
 <p>Once you have configured IMP, bring up the Horde test page in your Web
 browser to ensure that all necessary prerequisites have been met.  See the
-<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> document for further details on the Horde test
+<a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> document for further details on the Horde test
 script.</p>
 <p>The test script will also allow you to test your connection to the mail
 server and provide some auto-detected configuration parameters that can
@@ -341,7 +341,7 @@ back in, if you are using an SQL or LDAP preferences system).</li>
 </ul>
 </li>
 <li><p class="first">Tuning IMP (Performance)</p>
-<p>See <a class="reference external" href="../../horde/docs/?f=PERFORMANCE.html">horde/docs/PERFORMANCE</a>.</p>
+<p>See <a class="reference external" href="../../horde/docs/PERFORMANCE">horde/docs/PERFORMANCE</a>.</p>
 <p>IMP Specific Performance Information:</p>
 <p>IMP can use persistent caching on the server side to store information
 about user's messages.  This results in much reduced mail server traffic

@@ -23,7 +23,7 @@
 <p>This document contains instructions for installing the Kronolith web-based
 calendar application on your system.</p>
 <p>For information on the capabilities and features of Kronolith, see the file
-<a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Kronolith distribution.</p>
+<a class="reference external" href="README">README</a> in the top-level directory of the Kronolith distribution.</p>
 <div class="section" id="prerequisites">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, Kronolith requires the following:</p>
@@ -40,7 +40,7 @@ earlier versions of Horde will <strong>not</strong> work.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">Be sure to have completed all of the steps in the
-<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for the Horde Framework before
+<a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> file for the Horde Framework before
 installing Kronolith. Many of Kronolith's prerequisites are
 also Horde prerequisites. Additionally, many of Kronolith's
 optional features are configured via the Horde install.</p>
@@ -49,7 +49,7 @@ optional features are configured via the Horde install.</p>
 <li><p class="first">SQL support in PHP, or Kolab support in Horde</p>
 <p>Kronolith store its data in a backend - either an SQL database or a
 Kolab server. Build PHP with whichever SQL driver you require; see
-the Horde <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> file for more details on using databases
+the Horde <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> file for more details on using databases
 with Horde, or the Kolab webclient documentation for how to set up
 Kronolith for Kolab.</p>
 </li>
@@ -59,7 +59,7 @@ birthdays, you need an Operating System that supports negative
 timestamps. Microsoft Windows does <strong>not</strong> support such dates.</p>
 </li>
 <li><p class="first">The following PEAR package:
-(See <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> for instructions on installing PEAR package)</p>
+(See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PEAR package)</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">If you are going to install Kronolith the recommended way,
@@ -99,7 +99,7 @@ tarballs. Finally, if you want to run the latest development code, or get the
 latest, not yet released, fixes, you can install Kronolith from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
-<p>First follow the instructions in <a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a> to prepare a PEAR
+<p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
 environment for Horde and install the Horde Framework.</p>
 <p>When installing Kronolith through PEAR now, the installer will automatically
 install any dependencies of Kronolith too. If you want to install Kronolith
@@ -169,7 +169,7 @@ you must have the PHP CLI installed (a CGI binary is not supported - <tt class="
 <ol class="loweralpha">
 <li><p class="first">If you have not already set up the Horde Alarm system, you have to set up
 a cron entry for the Horde alarm script as documented in
-<a class="reference external" href="../../horde/docs/?f=INSTALL.html">horde/docs/INSTALL</a>. This will send reminders for individual events.</p>
+<a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a>. This will send reminders for individual events.</p>
 </li>
 <li><p class="first">To send daily agendas, you must create a cron entry for
 <tt class="docutils literal"><span class="pre">kronolith-agenda</span></tt>, and running the job once a day is recommended,
