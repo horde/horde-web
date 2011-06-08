@@ -13,8 +13,8 @@ $horde_four_apps = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.5)',
-        'date' => 'June 1 2011',
+        'ver' => 'H4 (5.0.6)',
+        'date' => 'June 8 2011',
         'pear' => true
     ),
     'turba' => array(
@@ -183,8 +183,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.5)',
-        'date' => 'June 1 2011',
+        'ver' => 'H4 (5.0.6)',
+        'date' => 'June 8 2011',
         'pear' => true,
     ),
     'dimp' => array(
