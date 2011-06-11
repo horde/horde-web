@@ -1,6 +1,6 @@
 <div class="hordeauthor">
   <h2><a name="ben">Ben Klang</a></h2>
-  <div style="float:right;"><img src="http://www.gravatar.com/avatar/0bc29a0e5e6fc84e02620dbb2d562ae5" /></div>
+  <div style="float:right;"><img src="<?php echo $this->gravatar->getAvatarUrl('ben@alkaloid.net')?>" /></div>
   <ul>
     <li>I am a Horde Core developer and one of the founding members of Horde LLC.</li>
     <li>My Horde contributions are primarily on the LDAP integration, WebDAV/CalDAV functionality, the Horde_Cache SQL driver and service management applications (Beatnik, Vilma, Operator).  I also administer the Horde Developer servers.</li>

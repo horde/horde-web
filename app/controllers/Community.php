@@ -27,6 +27,7 @@ class HordeWeb_Community_Controller extends HordeWeb_Controller_Base
         case 'team':
             $view->addTemplatePath($GLOBALS['fs_base'] . '/app/views/shared/authors');
             $view->page_title = 'Team - The Horde Project';
+            $view->gravatar = new Horde_Service_Gravatar();
             $template = 'team';
             break;
         case 'mail':

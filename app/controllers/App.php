@@ -131,6 +131,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $view->addTemplatePath(array($GLOBALS['fs_base'] . '/app/views/shared/authors'));
         $view->page_title = 'Authors - ' . $view->appnameHuman . ' - The Horde Project';
+        $view->gravatar = new Horde_Service_Gravatar();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');

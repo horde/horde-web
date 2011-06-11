@@ -1,6 +1,6 @@
 <div class="hordeauthor">
   <h2><a name="chuck">Chuck Hagenbuch</a></h2>
-  <div style="float:right;"><img src="http://www.gravatar.com/avatar/b3bd3975b63d5c5e61824de455b5a6f7" /></div>
+  <div style="float:right;"><img src="<?php echo $this->gravatar->getAvatarUrl('chuck@horde.org')?>" /></div>
   <ul>
     <li>I graduated in June, 2000 from <a href="http://www.williams.edu/">Williams College</a>.</li>
     <li>Besides Horde, I do some work on <a
