@@ -48,6 +48,10 @@ $mapper->connect(
 $mapper->connect(
     $_root . '/download/:app', array('controller' => 'download', 'action' => 'app'));
 
+/* Shop */
+$mapper->connect('shopus', $_root . '/shop/us', array('controller' => 'shop', 'action' => 'us'));
+$mapper->connect('shopeu', $_root . '/shop/eu', array('controller' => 'shop', 'action' => 'eu'));
+
 
 $path = $request->getPath();
 if (($pos = strpos($path, '?')) !== false) {
