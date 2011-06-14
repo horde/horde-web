@@ -1,8 +1,63 @@
 <h3>Changes by Release</h3><pre>
---------
-v4.0-RC3
---------
+----------
+v4.0.1-git
+----------
 
+
+
+----
+v4.0
+----
+
+[jan] Fix installation script when not using a custom PEAR install.
+
+Horde Changes
+-------------
+[jan] Fix extracting of translation strings in a release.
+[rla] Add user-specific admin permissions (<a href="http://bugs.horde.org/ticket/9350">Request #9350</a>).
+[jan] Don't strip domain from user name in account block.
+[jan] Fix account block with empty configuration parameters.
+
+Mail Changes
+------------
+[mms] Don't strip HTML part of compose message when stripping attachments
+      from saved sent-mail message (<a href="http://bugs.horde.org/ticket/10234">Bug #10234</a>).
+[mms] Fix regression when copying/moving messages into a new mailbox in
+      traditional view (<a href="http://bugs.horde.org/ticket/10232">Bug #10232</a>).
+[mms] Fix regression when flagging all messages in a mailbox (<a href="http://bugs.horde.org/ticket/10224">Bug #10224</a>).
+[jan] Fix folder links in virtual folders (<a href="http://bugs.horde.org/ticket/10221">Bug #10221</a>).
+[mms] Show translated name for special mailboxes in sent mail lists (Bug
+      #10220).
+[mms] Fix regression in filtering mailbox in traditional view (<a href="http://bugs.horde.org/ticket/10213">Bug #10213</a>).
+[mms] Fix regression in renaming mailboxes in dynamic view (<a href="http://bugs.horde.org/ticket/10207">Bug #10207</a>).
+[mms] Fix selecting sent-mail mailbox for not empty namespaces (<a href="http://bugs.horde.org/ticket/10090">Bug #10090</a>).
+[mms] Fix saving expand/collapse state in traditional folders view.
+[mms] Update all flag changes in dynamic mode (<a href="http://bugs.horde.org/ticket/10146">Bug #10146</a>).
+[mms] Fix editing saved searches in dynamic mode (<a href="http://bugs.horde.org/ticket/10189">Bug #10189</a>).
+[mms] Fix regression in saving sent mail in traditional view (<a href="http://bugs.horde.org/ticket/10193">Bug #10193</a>).
+[mms] Fix regression in deleting mailboxes in traditional view (<a href="http://bugs.horde.org/ticket/10170">Bug #10170</a>).
+[mms] Fix currently selected mailbox in folder lists (<a href="http://bugs.horde.org/ticket/10163">Bug #10163</a>).
+[jan] Don't show button to strip attachments if turned off in the preferences
+      (<a href="http://bugs.horde.org/ticket/10154">Bug #10154</a>).
+[jan] Fix printing from message popup (<a href="http://bugs.horde.org/ticket/10188">Bug #10188</a>).
+[jan] Fix viewing messages source from message popup (<a href="http://bugs.horde.org/ticket/10190">Bug #10190</a>).
+[jan] Fix editing saved searches in traditional view (<a href="http://bugs.horde.org/ticket/10184">Bug #10184</a>).
+
+Filters Changes
+---------------
+[jan] Fix moving rules to an explicit position (<a href="http://bugs.horde.org/ticket/10172">Bug #10172</a>).
+[mms] Fix storage backend conversion script.
+
+Calendar Changes
+----------------
+[jan] Fix holidays being off with certain system timezones (<a href="http://bugs.horde.org/ticket/9989">Bug #9989</a>).
+[jan] Only highlight days in the mini calendar that are currently displayed
+      (<a href="http://bugs.horde.org/ticket/10048">Bug #10048</a>).
+[jan] Fix advanced search with empty search criteria (<a href="http://bugs.horde.org/ticket/10038">Bug #10038</a>).
+[jan] Add header for timeobjects calendars.
+[jan] Fix date picker in advanced search form (<a href="http://bugs.horde.org/ticket/10039">Bug #10039</a>).
+[mjr] Remove visible exceptions when deleting recurring events (<a href="http://bugs.horde.org/ticket/10013">Bug #10013</a>).
+[mjr] Fix issue causing listTimeObject calendars to not appear (<a href="http://bugs.horde.org/ticket/10012">Bug #10012</a>).
 
 
 --------

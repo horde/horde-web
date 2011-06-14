@@ -64,7 +64,7 @@ pear run-scripts horde/horde_role
 </li>
 <li><p class="first">Install Horde Groupware Webmail Edition:</p>
 <pre class="literal-block">
-pear install -a -B horde/webmail-beta
+pear install -a -B horde/webmail
 </pre>
 </li>
 <li><p class="first">Run installation script:</p>
@@ -93,11 +93,10 @@ Lighttpd webservers, which we recommend.  These servers are available from:</p>
 </blockquote>
 </li>
 <li><p class="first">A web server with PATH_INFO support.</p>
-<p>The dynamic webmail interface of Horde Groupware Webmail Edition requires a
-web server that correctly sets the PATH_INFO environment variable for all
-PHP scripts. Every modern web server supports this, but you might have to
-enable this feature in the web server configuration.  e.g. Apache servers
-require:</p>
+<p>The dynamic interfaces of Horde Groupware Webmail Edition requires a web
+server that correctly sets the PATH_INFO environment variable for all PHP
+scripts. Every modern web server supports this, but you might have to enable
+this feature in the web server configuration.  e.g. Apache servers require:</p>
 <pre class="literal-block">
 AcceptPathInfo On
 </pre>
@@ -400,18 +399,18 @@ too. If you want to install Horde Groupware Webmail Edition with all optional
 dependencies, but without the binary PECL packages that have to be compiled,
 specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/webmail-beta
+pear install -a -B horde/webmail
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/webmail-beta
+pear install horde/webmail
 </pre>
 <p>If you want to install Horde Groupware Webmail Edition even with all binary
 dependencies, you need to remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might
 also try to install PHP extensions through PECL that might need further
 configuration or activation in your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/webmail-beta
+pear install -a horde/webmail
 </pre>
 </div>
 <div class="section" id="installing-into-separate-pear">
@@ -447,9 +446,8 @@ answer all questions:</p>
 webmail-install
 </pre>
 <p>If you installed Horde Groupware Webmail Edition into the global PEAR system,
-this script should be in your command path. If you installed into a local PEAR
-installation or if the script cannot be found in your path, you need to specify
-the full path to the script, e.g.:</p>
+this script should be in your command path. If the script cannot be found in
+your path, you need to specify the full path to the script, e.g.:</p>
 <pre class="literal-block">
 /var/www/webmail/pear/webmail-install
 </pre>
@@ -457,6 +455,11 @@ the full path to the script, e.g.:</p>
 installed:</p>
 <pre class="literal-block">
 pear config-get bin_dir
+</pre>
+<p>If you installed into a local PEAR installation, you need to tell PHP and PEAR
+where to find the installation and the script, e.g.:</p>
+<pre class="literal-block">
+PHP_PEAR_SYSCONF_DIR=/var/www/webmail php -d include_path=/var/www/webmail/pear/php /var/www/webmail/pear/webmail-install
 </pre>
 </div>
 </div>
