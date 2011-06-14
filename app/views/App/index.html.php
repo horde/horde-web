@@ -88,7 +88,7 @@
  -->
           <h2><span>&nbsp;</span>Horde Groupware Suite</h2>
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'webmail')) ?>"> Horde Groupware Webmail Edition</a> <?php echo
+          => 'webmail')) ?>">Horde Groupware Webmail Edition</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'webmail') ?></h3>
           <p>Horde Groupware Webmail Edition is a free, enterprise ready,
           browser based communication suite. Users can read, send and organize
@@ -98,11 +98,14 @@
           available applications IMP, Ingo, Kronolith, Turba, Nag and Mnemo.
           </p>
 
-          <h3>Horde Groupware</h3>
-          <p>Looking for the Horde Groupware bundle? This meta-package is
-          still being put together for Horde 4. Can't wait? Consider
-          installing the Horde Groupware Webmail Edition, or install the
-          separate applications individually.</p>
+          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+          => 'groupware')) ?>">Horde Groupware</a> <?php echo
+          HordeWeb_Utils::downloadIcon($this, 'groupware') ?></h3>
+          <p>Horde Groupware is a free, enterprise ready, browser based
+          collaboration suite. Users can manage and share calendars, contacts,
+          tasks and notes with the standards compliant components from the
+          Horde Project. Horde Groupware bundles the separately available
+          applications Kronolith, Turba, Nag and Mnemo.</p>
 
           <h3>Gollem</h3>
           <p>The Horde Team is still working hard at getting Gollem ready for
