@@ -7,14 +7,14 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.5',
-        'date' => 'June 1 2011',
+        'ver' => '4.0.6',
+        'date' => 'June 14 2011',
         'pear' => true
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.6)',
-        'date' => 'June 8 2011',
+        'ver' => 'H4 (5.0.7)',
+        'date' => 'June 14 2011',
         'pear' => true
     ),
     'turba' => array(
@@ -25,14 +25,14 @@ $horde_four_apps = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (2.0.2)',
+        'date' => 'June 14 2011',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.3)',
-        'date' => 'May 18 2011',
+        'ver' => 'H4 (3.0.4)',
+        'date' => 'June 14 2011',
         'pear' => true
     ),
     'nag' => array(
@@ -164,8 +164,8 @@ $horde_three_apps = array(
 $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.5',
-        'date' => 'June 1 2011',
+        'ver' => '4.0.6',
+        'date' => 'June 14 2011',
         'pear' => true,
     ),
     'groupware' => array(
@@ -183,8 +183,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.6)',
-        'date' => 'June 8 2011',
+        'ver' => 'H4 (5.0.7)',
+        'date' => 'June 14 2011',
         'pear' => true,
     ),
     'dimp' => array(
@@ -205,14 +205,14 @@ $horde_apps_stable = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.1)',
-        'date' => 'April 20 2011',
+        'ver' => 'H4 (2.0.2)',
+        'date' => 'June 14 2011',
         'pear' => true,
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.3)',
-        'date' => 'May 18 2011',
+        'ver' => 'H4 (3.0.4)',
+        'date' => 'June 14 2011',
         'pear' => true,
     ),
     'nag' => array(
