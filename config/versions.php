@@ -11,6 +11,18 @@ $horde_four_apps = array(
         'date' => 'June 14 2011',
         'pear' => true
     ),
+    'groupware' => array(
+        'name' => 'Horde Groupware',
+        'ver' => '4.0',
+        'date' => 'June 14 2011',
+        'pear' => true,
+    ),
+    'webmail' => array(
+        'name' => 'Horde Groupware Webmail Edition',
+        'ver' => '4.0',
+        'date' => 'June 14 2011',
+        'pear' => true,
+    ),
     'imp' => array(
         'name' => 'IMP',
         'ver' => 'H4 (5.0.7)',
@@ -173,13 +185,15 @@ $horde_apps_stable = array(
         'name' => 'Horde Groupware',
         'ver' => '4.0',
         'date' => 'June 14 2011',
-        'dir' => 'horde-groupware'
+        'dir' => 'horde-groupware',
+        'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
         'ver' => '4.0',
         'date' => 'June 14 2011',
-        'dir' => 'horde-webmail'
+        'dir' => 'horde-webmail',
+        'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
