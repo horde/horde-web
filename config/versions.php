@@ -162,6 +162,7 @@ $horde_three_apps = array(
 );
 
 $horde_apps_stable = array(
+    // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
         'ver' => '4.0.6',
@@ -170,15 +171,14 @@ $horde_apps_stable = array(
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '1.2.9',
-        'date' => 'November 22 2010',
-        // Define 'dir' if it is not the same as the array key
+        'ver' => '4.0',
+        'date' => 'June 14 2011',
         'dir' => 'horde-groupware'
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '1.2.9',
-        'date' => 'November 22 2010',
+        'ver' => '4.0',
+        'date' => 'June 14 2011',
         'dir' => 'horde-webmail'
     ),
     'imp' => array(
