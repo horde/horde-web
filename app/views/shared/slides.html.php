@@ -1,11 +1,15 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
                     <div class="slide-horde4 sliderview">
-                        <h2>Horde 4 has landed.</h2>
+                        <h2>Horde Groupware 4 has landed.</h2>
                         <p>The Horde team and community have spent more than
-                        two years on developing the next generation of the
-                        Horde Application Framework. A lot of work has been put
-                        into modernizing the code libraries and the complete
+                        two years on developing the next generation
+                        of <a href="<?php echo $this->urlWriter->urlFor('app',
+                        array('app' => 'groupware')) ?>">Horde Groupware</a>
+                        and <a href="<?php echo $this->urlWriter->urlFor('app',
+                        array('app' => 'webmail')) ?>">Horde Groupware Webmail
+                        Edition</a>. A lot of work has been put into
+                        modernizing the code libraries and the complete
                         application stack. New interfaces for modern browsers
                         and smartphones have been added. Existing functionality
                         has been improved further and new features have been
@@ -37,7 +41,6 @@
                         IMP, Ingo, Kronolith, Turba, Nag and Mnemo.</p>
                     </div>
 
-                    <!--
                     <div class="slide-oss sliderview">
                         <h2>Open Source, Standards-Based.</h2>
                         <p>The Horde Project is about creating high quality
@@ -49,7 +52,5 @@
                         databases.  Our intelligent, object oriented design
                         will perform on a wide range of infrastructure.</p>
                     </div>
-                    -->
-
                 </div>
             </div>
