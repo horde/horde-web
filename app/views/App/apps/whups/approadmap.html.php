@@ -20,8 +20,6 @@ at least some of the following changes:
 
 <p><b>Features currently planned for the next release:</b></p>
 
-<p><b>Features currently planned for the next release:</b></p>
-
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Native PHP 5 code</td><td class="progress">In Progress</td>
