@@ -39,12 +39,10 @@
 
  <h3>Related Resources</h3>
  <p>
-  <?php echo $this->linkTo('Gollem file manager', array('controller' => 'app', 'action' => 'app', 'app' => 'gollem'))?><br />
-  <?php echo $this->linkTo('Ingo filters manager', array('controller' => 'app', 'action' => 'app', 'app' => 'ingo'))?><br />
-  <?php echo $this->linkTo('Kronolith calendar module', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith'))?><br />
   <?php echo $this->linkTo('Turba contact manager', array('controller' => 'app', 'action' => 'app', 'app' => 'turba'))?><br />
-  <?php echo $this->linkTo('SORK account management modules (passwd, vacation, forwards)', array('controller' => 'app', 'action' => 'app', 'app' => 'sork'))?><br />
-  <?php echo $this->linkTo('Dynamic IMP', array('controller' => 'app', 'action' => 'app', 'app' => 'dimp'))?> - IMP with an AJAX user interface<br />
-  <?php echo $this->linkTo('Mobile IMP', array('controller' => 'app', 'action' => 'app', 'app' => 'mimp'))?> - IMP for mobile browsers<br />
+  <?php echo $this->linkTo('Ingo filters manager', array('controller' => 'app', 'action' => 'app', 'app' => 'ingo'))?><br />
+  <?php echo $this->linkTo('Gollem file manager', array('controller' => 'app', 'action' => 'app', 'app' => 'gollem'))?><br />
+  <?php echo $this->linkTo('Kronolith calendar module', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith'))?><br />
+  <?php echo $this->linkTo('Sork account management modules (Passwd, Vacation, Forwards)', array('controller' => 'app', 'action' => 'app', 'app' => 'sork'))?><br />
  </p>
 
