@@ -31,18 +31,21 @@
   <?php echo $this->linkTo('Logos', array('controller' => 'home', 'action' => 'logos'));?><br />
   <?php echo $this->linkTo('Thanks', array('controller' => 'home', 'action' => 'thanks')); ?><br /><br />
   <h2>Shop</h2>
-  <p>We have two spreadshirt shops:</p>
+  <p>We have three shops:</p>
   <span style="text-align:center;width:91px;float:left;">European Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopeu')?>">
-  <img width="90" height="90" src="http://image.spreadshirt.net/image-server/image/product/10874260/view/1/type/png/width/190/height/190/retro-235.png" alt="7647448-18385499"/>
+  <img width="90" height="90" src="http://image.spreadshirt.net/image-server/image/product/10874260/view/1/type/png/width/190/height/190/retro-235.png"/>
   </a></span>
   <span style="text-align:center;width:91px;float:left;">US Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopus')?>">
-  <img width="90" height="90" src="http://image.spreadshirt.com/image-server/image/product/18385499/view/1/type/png/width/190/height/190" alt="7647448-18385499"/>
+  <img width="90" height="90" src="http://image.spreadshirt.com/image-server/image/product/18385499/view/1/type/png/width/190/height/190"/>
+  </a></span>
+  <span style="text-align:center;width:61px;float:left;">CafePress<a class="boxl"
+  href="http://cafepress.com/hordeproject"> <img style="margin-top:15px"
+  width="60" height="60"
+  src="http://images6.cpcache.com/product/172203586v5_150x150_Front.jpg"/>
   </a></span>
   <!--Cafepress widget seems to have js issues...getting all kinds of errors while navigating-->
-   <div class="clear">
-   <p>You can also visit our <a href="http://cafepress.com/hordeproject">CafePress Shop</a>.
    <!--<div id="cpi-s1-1001" class="cpi cpi-s1" affiliate=""
    tracking="hordeproject" color="#797979" source="shop:hordeproject"
    width="100" height="100">
