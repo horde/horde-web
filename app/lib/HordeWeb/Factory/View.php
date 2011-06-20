@@ -6,7 +6,7 @@
  *
  * @author mrubinsk
  */
-class HordeWeb_Binder_View implements Horde_Injector_Binder
+class HordeWeb_Factory_View extends Horde_Core_Factory_Injector
 {
     public function create(Horde_Injector $injector)
     {
@@ -25,11 +25,6 @@ class HordeWeb_Binder_View implements Horde_Injector_Binder
         );
 
         return $view;
-    }
-
-    public function equals(Horde_Injector_Binder $binder)
-    {
-        return false;
     }
 
 }

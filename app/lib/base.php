@@ -15,7 +15,7 @@ $__autoloader->addClassPathMapper($myMapper);
 
 
 /* Binders */
-$GLOBALS['injector']->addBinder('HordeWeb_View', new HordeWeb_Binder_View());
+$GLOBALS['injector']->bindFactory('HordeWeb_View', 'HordeWeb_Factory_View', 'create');
 $registry = $GLOBALS['injector']->getInstance('Horde_Registry');
 
 /* Add our config to the injector */
