@@ -23,6 +23,11 @@
         <h3>Logo</h3>
         <p>The <a href="logos/">Horde logos</a> were designed by Colin Viebrock.</p>
 
+        <h3>Licenses</h3>
+        <a style="display:block; text-decoration:none" href="http://www.synthesis.ch/" target="_blank">
+        <img src="<?php echo $GLOBALS['host_base'] ?>/images/synthesis.jpg" height="31"/>
+        SyncML client licenses have been generously donated by Synthesis AG</a>
+
       </div>
     </div>
      <div class="rightcol" style="background: none;">
