@@ -41,8 +41,8 @@ $(function(){
             <?php echo $this->render('footer', array('locals' => array('quote' => $this->quote)));?>
         </div>
     </div>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </body>
 <!-- Don't include yet, it's based on prototypejs -->:q
-
 <!--<script src="js/informer.js"></script>-->
 </html>

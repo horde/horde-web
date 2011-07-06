@@ -884,17 +884,17 @@ div.mail {
     font-weight: bold;
     font-size: 20px;
 }
-.thanks
-{
-    background:url(../images/heart.png) no-repeat 0 3px;
-    padding-left:15px;
-    margin-left:3px;
-}
+
 .logos
 {
     background:url(../images/gear.png) no-repeat 0 3px;
     padding-left:15px;
-    margin-left:3px;
+}
+.thanks
+{
+    background:url(../images/heart.png) no-repeat 0 3px;
+    padding-left:15px;
+    margin-left: 10px;
 }
 
 h3 img.download {
