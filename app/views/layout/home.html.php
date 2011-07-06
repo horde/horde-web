@@ -3,6 +3,7 @@
 <head>
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="keywords" content="groupware,webmail,web,application,framework,php,consulting,support,development,library">
 <link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen">
 <link rel="SHORTCUT ICON" type="image/x-icon" href="<?php echo $GLOBALS['host_base'] ?>/images/favicon.ico" />
 <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
