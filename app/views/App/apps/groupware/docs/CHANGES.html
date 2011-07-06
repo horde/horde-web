@@ -1,8 +1,56 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v4.0.1-git
+v4.0.2-git
 ----------
 
+
+
+------
+v4.0.1
+------
+
+Horde Changes
+-------------
+[mjr] Fix returning shares in the proper order when fetching multiple shares
+      by id.
+[mjr] Fix incorrect method name in Pop3 Socket driver.
+[jan] Don't use CSS cache in mobile interfaces because it breaks jQuery Mobile
+      CSS.
+[mjr] Fix race conditions caused by broken clients sending an inappropriate
+      PING request.
+[jan] Fix duplication of objects during synchronization (joniw@t-online.de, Bug
+      #10081).
+[Jan] Don't allow to click disabled login button (<a href="http://bugs.horde.org/ticket/10267">Bug #10267</a>).
+[jan] Allow configuration of split read databases for PostgreSQL (Request
+      #7025).
+[mjr] Honor initial_application setting for mobile view (<a href="http://bugs.horde.org/ticket/10264">Bug #10264</a>).
+[mjr] Fix issue with initial Android ActiveSync pairing.
+[gwr] Support restricting the HTML tidy post processing by the message size
+      (<a href="http://bugs.horde.org/ticket/10266">Request #10266</a>).
+[gwr] Disabled the timeout on the logout token.
+[mjr] Fix integer overflow issue in Facebook code (<a href="http://bugs.horde.org/ticket/9889">Bug #9889</a>).
+[mms] Fix adding users with Cyrsql driver (vilius@lnk.lt, <a href="http://bugs.horde.org/ticket/10239">Bug #10239</a>).
+
+Address Book Changes
+--------------------
+[jan] Pass contact object to decode_attribute hook (kd@tu-cottbus.de, Bug
+      #10287).
+[jan] Complete fix for importing LDIF files (<a href="http://bugs.horde.org/ticket/10139">Bug #10139</a>).
+
+Calendar Changes
+----------------
+[jan] Update task due date in interface after dragging a task (<a href="http://bugs.horde.org/ticket/10001">Bug #10001</a>).
+[jan] Correctly sort events in portal block or widget if only displaying a
+      single calendar (<a href="http://bugs.horde.org/ticket/10099">Bug #10099</a>).
+[mjr] Allow syncing of multiple owner-owned calendars (<a href="http://bugs.horde.org/ticket/8734">Request #8734</a>).
+[jan] Don't show calendar drop down in event form without delete permissions
+      (<a href="http://bugs.horde.org/ticket/10201">Bug #10201</a>).
+[jan] Don't change event creator when saving events.
+[jan] Fetch events immediately after saving remote calendar.
+
+Tasks Changes
+-------------
+[jan] Add Ukrainian translation (Andriy Kopystyansky &lt;anri@polynet.lviv.ua>).
 
 
 ----
@@ -166,325 +214,6 @@ Horde Changes
 [mjr] Fix a possible infinite loop with certain recurring events in Horde_Date.
 [jan] Use DateTime internally in Horde_Date.
 
-Mail Changes
-------------
-[mms] Don't strip HTML part of compose message when stripping attachments
-      from saved sent-mail message (<a href="http://bugs.horde.org/ticket/10234">Bug #10234</a>).
-[mms] Fix regression when copying/moving messages into a new mailbox in
-      traditional view (<a href="http://bugs.horde.org/ticket/10232">Bug #10232</a>).
-[mms] Fix regression when flagging all messages in a mailbox (<a href="http://bugs.horde.org/ticket/10224">Bug #10224</a>).
-[jan] Fix folder links in virtual folders (<a href="http://bugs.horde.org/ticket/10221">Bug #10221</a>).
-[mms] Show translated name for special mailboxes in sent mail lists (Bug
-      #10220).
-[mms] Fix regression in filtering mailbox in traditional view (<a href="http://bugs.horde.org/ticket/10213">Bug #10213</a>).
-[mms] Fix regression in renaming mailboxes in dynamic view (<a href="http://bugs.horde.org/ticket/10207">Bug #10207</a>).
-[mms] Fix selecting sent-mail mailbox for not empty namespaces (<a href="http://bugs.horde.org/ticket/10090">Bug #10090</a>).
-[mms] Fix saving expand/collapse state in traditional folders view.
-[mms] Update all flag changes in dynamic mode (<a href="http://bugs.horde.org/ticket/10146">Bug #10146</a>).
-[mms] Fix editing saved searches in dynamic mode (<a href="http://bugs.horde.org/ticket/10189">Bug #10189</a>).
-[mms] Fix regression in saving sent mail in traditional view (<a href="http://bugs.horde.org/ticket/10193">Bug #10193</a>).
-[mms] Fix regression in deleting mailboxes in traditional view (<a href="http://bugs.horde.org/ticket/10170">Bug #10170</a>).
-[mms] Fix currently selected mailbox in folder lists (<a href="http://bugs.horde.org/ticket/10163">Bug #10163</a>).
-[jan] Don't show button to strip attachments if turned off in the preferences
-      (<a href="http://bugs.horde.org/ticket/10154">Bug #10154</a>).
-[jan] Fix printing from message popup (<a href="http://bugs.horde.org/ticket/10188">Bug #10188</a>).
-[jan] Fix viewing messages source from message popup (<a href="http://bugs.horde.org/ticket/10190">Bug #10190</a>).
-[jan] Fix editing saved searches in traditional view (<a href="http://bugs.horde.org/ticket/10184">Bug #10184</a>).
-[jan] Fix loading message previews from search results (<a href="http://bugs.horde.org/ticket/10152">Bug #10152</a>).
-[mms] Fix sending messages with linked attachments (<a href="http://bugs.horde.org/ticket/10125">Bug #10125</a>).
-[mms] Handle response codes/errors returned from POP3 servers.
-[mms] Fix POP3 regressions.
-[mms] Workaround broken suhosin extension to allow search mailboxes (Request
-      #9842).
-[jan] Add missing files to package.
-[mms] Add quick flag filtering to traditional view.
-[mms] Fix viewing linked attachments (<a href="http://bugs.horde.org/ticket/9972">Bug #9972</a>).
-[mms] Add support for the content-id access type of message/external-body.
-[mms] Consolidate IMAP error handling code in IMP_Imap_Exception.
-[mms] Use translated namespace name if available.
-[mms] Fix resuming reply drafts in HTML mode (<a href="http://bugs.horde.org/ticket/9928">Bug #9928</a>).
-[mms] Fix updating flags/logs on original messages after resuming from draft.
-[mms] Fix flagging messages in search mailboxes in dynamic view.
-[mms] Don't attempt to poll non-IMAP mailboxes (<a href="http://bugs.horde.org/ticket/9896">Bug #9896</a>).
-[mms] Fix deleting attachments from compose message in dynamic view (Bug
-      #9899).
-[mms] Newmail portal block can now be configured to auto-update.
-[mms] Fix deleteMessages and flagMessages API calls (<a href="http://bugs.horde.org/ticket/9888">Bug #9888</a>).
-[mms] More intelligent polling in dynamic view (<a href="http://bugs.horde.org/ticket/9808">Request #9808</a>).
-[mms] Fix spurious viewport loading in rare situations (<a href="http://bugs.horde.org/ticket/9768">Bug #9768</a>).
-[mms] Show human readable message in multipart/report parts in the richest
-      format possible (<a href="http://bugs.horde.org/ticket/9873">Bug #9873</a>).
-[mms] Fix unneeded body part downloads in alternative parts (<a href="http://bugs.horde.org/ticket/9862">Bug #9862</a>).
-[mms] Fix importing PGP private keys.
-[mms] More intelligent part naming if name is not specified in the message
-      (<a href="http://bugs.horde.org/ticket/9853">Request #9853</a>).
-[jan] Avoid double escaping of folder names in sent-mail drop down list.
-[jan] Fix translation of special folders on certain IMAP servers.
-[jan] Fix display of status icons in traditional view (<a href="http://bugs.horde.org/ticket/9844">Bug #9844</a>).
-[mms] Fix displaying all message parts in standard view (<a href="http://bugs.horde.org/ticket/9827">Bug #9827</a>).
-[mms] Allow .eml files to be imported into a mailbox (<a href="http://bugs.horde.org/ticket/9827">Request #9827</a>).
-[mms] Fix vertical layout resize in dynamic view (<a href="http://bugs.horde.org/ticket/9834">Bug #9834</a>).
-[mms] Fix link for filters menu item (<a href="http://bugs.horde.org/ticket/9831">Bug #9831</a>).
-[mms] Fix composing messages in mobile view.
-[mms] IMP will refuse to work with POP3 servers that don't support UIDL.
-[mms] Many POP3 fixes.
-[jan] Notify about new mails in any Horde application.
-[mms] New mail notifications now handled by the Horde Notification system
-      (<a href="http://bugs.horde.org/ticket/9751">Request #9751</a>).
-[mms] Fix resuming messages with attachments (<a href="http://bugs.horde.org/ticket/9780">Bug #9780</a>).
-[mms] Fix javascript actions in standard view in IE 7/8 (Bugs #9801, 9809).
-[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
-[mms] Fix printing of message parts in IE, regardless of local user settings
-      (<a href="http://bugs.horde.org/ticket/9756">Bug #9756</a>).
-[mms] Fix IMP_Maillog regression from RC2 (<a href="http://bugs.horde.org/ticket/9763">Bug #9763</a>).
-[mms] Fix honoring default encryption option in dynamic view.
-[jan] Show full alarm notifications in dynamic view (<a href="http://bugs.horde.org/ticket/9748">Request #9748</a>).
-[jan] Fix saving S/MIME certs to address book.
-[mms] Support importing of compressed mailbox files if the zip extension is
-      not available.
-[mms] Fix max_folders permission (<a href="http://bugs.horde.org/ticket/9741">Bug #9741</a>).
-[jan] Rename all scripts in bin/ to be prefixed with imp- (<a href="http://bugs.horde.org/ticket/9647">Request #9647</a>).
-[jan] Correctly render notifications with embedded HTML in dynamic view
-      (<a href="http://bugs.horde.org/ticket/9729">Bug #9729</a>).
-[mms] Fix moving to new mailbox, tasklist, and notepad in traditional view
-      (<a href="http://bugs.horde.org/ticket/9732">Bug #9732</a>).
-[jan] Add left and right keys as aliases for up and down keys in dynamic view.
-[mms] Add mailbox sorting and select all messages to vertical layout in the
-      dynamic view (<a href="http://bugs.horde.org/ticket/9708">Request #9708</a>).
-[jan] Fix expansion of quoted sections in thread view.
-[jan] Fix message previews in traditional view (<a href="http://bugs.horde.org/ticket/9695">Bug #9695</a>).
-[jan] Support importing of compressed mailbox files.
-[jan] Fix upgrading of search_fields preference.
-[jan] Fix key navigation in traditional mailbox view.
-[mms] Don't cache FETCH data for the Spam and Trash mailboxes.
-[mms] All views now honor 'initial_page' preference.
-[mms] Fix loading virtual folder as initial page in standard view (<a href="http://bugs.horde.org/ticket/9696">Bug #9696</a>).
-[jan] Update installation and upgrade instructions.
-[mms] Fix upgrading virtual folders from IMP 4 (<a href="http://bugs.horde.org/ticket/9692">Bug #9692</a>).
-[mms] Fix editing the size search criteria.
-[mms] Optimize importing messages from mbox file.
-[mms] Fix deletion from Virtual Inbox in standard view (<a href="http://bugs.horde.org/ticket/9686">Bug #9686</a>).
-[mms] Fix loading virtual folders from drop-down folder list (<a href="http://bugs.horde.org/ticket/9687">Bug #9687</a>).
-[mms] Fix thread sort by newest messages first (<a href="http://bugs.horde.org/ticket/9685">Bug #9685</a>).
-[mms] Add import/download mailbox ability to dynamic view.
-[jan] Remove application tabs from AJAX interface (<a href="http://bugs.horde.org/ticket/9679">Bug #9679</a>).
-[mms] Move all portal rendering code to Horde.
-[mms] Fix flag display in message list in traditional view (<a href="http://bugs.horde.org/ticket/9673">Bug #9673</a>).
-[mms] Fix purging deleted messages in dynamic view (<a href="http://bugs.horde.org/ticket/9627">Bug #9627</a>).
-[mms] Fix display of non-IMAP mailbox elements in folder lists (<a href="http://bugs.horde.org/ticket/9650">Bug #9650</a>).
-[mms] Fix print part display.
-[jan] Fix listing users through IMP API.
-[jan] Add configuration whether to load other applications in an IFRAME.
-[mms] Indicate negative rights in ACL display (<a href="http://bugs.horde.org/ticket/4488">Request #4488</a>).
-[jan] Provide default configuration files instead of .dist versions.
-[mms] Add priority and request read receipt information to saved drafts
-      (<a href="http://bugs.horde.org/ticket/9457">Request #9457</a>).
-[mms] Added example in pre_sent hook to do forgotten attachment checking at
-      send time (<a href="http://bugs.horde.org/ticket/9028">Request #9028</a>).
-[mms] Add subfolder searching (subfolders dynamically determined at time of
-      search).
-[mms] Refactor inline message image blocking to operate on all messages, not
-      just HTML messages.
-[mms] Add attachment message filter.
-[mms] Add post_spam hook called after reporting spam/ham (<a href="http://bugs.horde.org/ticket/6455">Request #6455</a>).
-[mms] Implement stationery support in DIMP.
-[mms] Add preference to control displayed content for multipart/alternative
-      parts (<a href="http://bugs.horde.org/ticket/6711">Request #6711</a>).
-[mms] Allow multiple messages to be forwarded in a single outgoing message
-      (DIMP) (<a href="http://bugs.horde.org/ticket/9132">Request #9132</a>).
-[mms] Add personal recipient message filter (<a href="http://bugs.horde.org/ticket/8659">Request #8659</a>).
-[mms] Add mailing list message filter (<a href="http://bugs.horde.org/ticket/8659">Request #8659</a>).
-[mms] Add ability to define search criteria to be applied to any mailbox
-      (<a href="http://bugs.horde.org/ticket/8659">Request #8659</a>).
-[mms] Use recipient search (To/Cc/Bcc) by default instead of To search.
-[mms] Virtual folders now editable via a preferences group.
-[mms] Search code has been entirely rewritten.
-[jan] Rename servers.php to backends.php.
-[mms] Use alternate text part to generate reply/forward text when switching
-      compose modes if user has not altered message text (DIMP).
-[mms] Improved login error reporting/logging in IMP (<a href="http://bugs.horde.org/ticket/9211">Request #9211</a>).
-[mms] Add hook to skip MDN prompt based on content of message headers.
-[mms] Allow expand/collapse of folders in MIMP.
-[mms] Use single, unified mailbox cache.
-[mms] Add support for setting/retrieving special-use mailboxes from IMAP
-      server.
-[mms] Add preference to control if we check for recipient PGP public keys
-      when replying (<a href="http://bugs.horde.org/ticket/7962">Request #7962</a>).
-[mms] Automatically determine view based on browser and 'dynamic_view'
-      preference (<a href="http://bugs.horde.org/ticket/9159">Request #9159</a>).
-[mms] Add preference to define default font family/size for the HTML compose
-      editor.
-[mms] Honor nav_expanded preference (DIMP).
-[mms] Allow admin to define list of safe e-mail addresses that will not
-      experience HTML image blocking (<a href="http://bugs.horde.org/ticket/9129">Request #9129</a>).
-[mms] HTML compose editor uses Horde language for UI (<a href="http://bugs.horde.org/ticket/9084">Request #9084</a>;
-      leandro.damascena@gmail.com).
-[mms] Add config option to disable multipart/related conversions
-      (<a href="http://bugs.horde.org/ticket/9099">Request #9099</a>).
-[mms] Sentmail SQL driver now supports split read/write operation.
-[mms] Pass compose message data to mailer backend via stream; much more
-      efficient, especially with larger messages (<a href="http://bugs.horde.org/ticket/8909">Request #8909</a>).
-[mms] Add strip attachments support in DIMP.
-[mms] Add PGP & S/MIME compose support to DIMP.
-[mms] Check for incorrect identity on compose if a single recipient address
-      is tied to a different identity than the sending identity.
-[mms] Use CATENATE (RFC 4469), if available, to strip MIME parts (Request
-      #8092).
-[mms] Add preference to show flags created by other MUAs (<a href="http://bugs.horde.org/ticket/8882">Request #8882</a>).
-[mms] Added HTML signature support (<a href="http://bugs.horde.org/ticket/1406">Request #1406</a>).
-[mms] Simplified date sorting display (<a href="http://bugs.horde.org/ticket/8936">Request #8936</a>).
-[mms] Properly redirect messages pursuant to RFC 5322 [3.6.6].
-[mms] Add redirect message capability to DIMP.
-[mms] Add ability to add attachments to composed messages for advanced mobile
-      browsers - disabled by default (MIMP).
-[mms] Add checkbox interface to mailbox page for advanced mobile browsers -
-      disabled by default (MIMP).
-[mms] Add preference to allow viewing of all inline parts by default (MIMP).
-[mms] Add hook to alter composed message details before sending.
-[mms] DIMP now honors the 'allow_resume_all' configuration option.
-[mms] Remove 'sort_limit' configuration option.
-[mms] Mobile view no longer supports WML output.
-[jan] Implement iTip viewer actions in DIMP (<a href="http://bugs.horde.org/ticket/8061">Request #8061</a>).
-[mms] Display alarm notifications in DIMP (<a href="http://bugs.horde.org/ticket/6232">Request #6232</a>).
-[mms] Auto-determine charset for text attachments (<a href="http://bugs.horde.org/ticket/8858">Bug #8858</a>).
-[mms] Remove IE 6 (and below) and Safari 2 (and below) support for DIMP.
-[mms] Add chance to switch between forward options on compose page when using
-      auto-forward (DIMP).
-[mms] Add chance to switch reply type to single recipient on compose page when
-      using auto-reply (DIMP).
-[mms] Fix printing multipage HTML messages in Mozilla browsers (<a href="http://bugs.horde.org/ticket/8708">Bug #8708</a>).
-[mms] Provide command line script to obtain IMAP caching statistics.
-[mms] Catch flag changes from other IMAP clients when refreshing if CONDSTORE
-      is available on the IMAP server (DIMP).
-[mms] Improved forwarding options.
-[mms] Add support for LIST-STATUS IMAP extension; provides more efficient
-      mailbox polling.
-[mms] Add hook to allow determination of compose attachments MIME type.
-[mms] Move AJAX processing framework to Horde (<a href="http://bugs.horde.org/ticket/4561">Request #4561</a>).
-[mms] If selected message(s) disappear from mailbox, gracefully handle in the
-      user interface (DIMP).
-[mms] Only update search mailbox on explicit user action (<a href="http://bugs.horde.org/ticket/7297">Request #7297</a>)
-      (DIMP).
-[mms] Add auto-save draft to IMP (<a href="http://bugs.horde.org/ticket/7656">Request #7656</a>).
-[mms] Add keyboard shortcut to move to next unseen message (<a href="http://bugs.horde.org/ticket/8223">Request #8223</a>).
-[mms] Add hook to dynamically change mailbox label (<a href="http://bugs.horde.org/ticket/6734">Request #6734</a>).
-[mms] Improved address expansion in MIMP.
-[mms] Load folders on-demand in sidebar (DIMP).
-[mms] Add priority setting to DIMP.
-[mms] Simplify and improve priority header generation/display.
-[mms] Add Face: header support to IMP.
-[mms] Add splitbar to resize sidebar in DIMP.
-[mms] Use LIST-EXTENDED IMAP extension (RFC 5258), if available, to get
-      subscribed mailbox information.
-[mms] Split ham/spam reporting actions into two separate preferences (Request
-      #8221).
-[mms] When clicking on base reply button, auto-determine the best way to
-      reply to a message based on the header information.
-[mms] Add vertical-pane preview layout to DIMP.
-[mms] Wrap content-related MIME parts in a border when viewing inline to
-      indicate their relationship.
-[mms] For drafts, save the original message index for forwards/replies so when
-      eventually sent, log information can be updated (<a href="http://bugs.horde.org/ticket/8663">Request #8663</a>).
-[mms] Upgrade RTE to CKEditor v3.
-[mms] Sort by display name for to/from fields if supported on IMAP server.
-[mms] Add ability to quickly filter by flags in DIMP.
-[mms] Add ability to select sent-mail mailbox when composing in DIMP.
-[mms] Add ability to save drafts in MIMP.
-[mms] Add spam reporting in MIMP.
-[mms] Added contextmenu support in DIMP for Opera.
-[mms] Display HTML parts inline by using IFRAMEs (based on code by
-      rui.carneiro@portugalmail.net; Request #8592).
-[mms] Add ability to search by relative date intervals (<a href="http://bugs.horde.org/ticket/3438">Request #3438</a>).
-[mms] Add advanced search query interface to DIMP (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
-[mms] Add ability to search by a custom defined header (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
-[mms] Improved advanced search query interface (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
-[mms] More intelligent ordering of autocomplete search results.
-[mms] Add a mini search query interface to IMP (<a href="http://bugs.horde.org/ticket/6875">Request #6875</a>).
-[mms] Make DIMP quicksearch field selection persist across sessions.
-[mms] Move JS/CSS caching to Horde framework.
-[mms] Add simple search function to MIMP.
-[mms] DIMP now honors the 'mailbox_start' preference.
-[mms] Logins now handled by Horde login handler.
-[mms] When generating and sending compressed ZIP data, use server-side temp
-      streams to minimize memory usage.
-[mms] Decode bodypart data on server if possible (RFC 3516).
-[mms] Use PHP temporary streams when working with message body data to reduce
-      memory usage (<a href="http://bugs.horde.org/ticket/3359">Request #3359</a>).
-[mms] Add ability to expand/collapse all folders in DIMP.
-[mms] Add Folder Options menu to DIMP.
-[mms] Add save link to full message display in DIMP.
-[mms] Allow on-demand filter application (if filter backend supports) in DIMP.
-[mms] Add full IMAP subscription support to DIMP (<a href="http://bugs.horde.org/ticket/8059">Request #8059</a>).
-[mms] Add message information to preview screen (DIMP).
-[mms] Add Alt + PGUP/PGDN shortcut to scroll through preview message (DIMP).
-[jan] Show possible event conflicts in iTip viewer (<a href="http://bugs.horde.org/ticket/3991">Request #3991</a>, Gonçalo
-      Queirós &lt;goncalo.queiros@portugalmail.net>).
-[mms] Move subfolders of special folders to lower folder display tree in
-      DIMP (<a href="http://bugs.horde.org/ticket/8127">Bug #8127</a>).
-[mms] Simplify quicksearch UI in DIMP.
-[mms] Improve notification display (DIMP).
-[mms] Use mailbox names in folder confirmation actions (DIMP) (<a href="http://bugs.horde.org/ticket/8162">Request #8162</a>).
-[mms] Optimize viewport row insertion/updating (DIMP).
-[mms] Add support for defining and displaying custom IMAP flags and for
-      configuring the highlighting of system flags (<a href="http://bugs.horde.org/ticket/937">Request #937</a>).
-[mms] Move attachment display on mailbox page from hook to preference.
-[mms] Always process priority/precedence headers.
-[mms] Support $MDNSent keyword (RFC 3503) on IMAP server.
-[mms] Link URLs/e-mails in subjects in message views (<a href="http://bugs.horde.org/ticket/7487">Request #7487</a>).
-[mms] Implement spellcheck on send in DIMP.
-[mms] Sanity check - don't do message operations reliant on UID list if
-      UIDVALIDITY of mailbox has changed.
-[mms] Remember splitbar position on login/refresh (DIMP).
-[mms] Disable advanced functions if using POP3 driver (caching, on-demand
-      filtering, searching, sorting) because it is too resource intensive.
-[mms] Use native PHP code for POP3 driver (c-client no longer required).
-[mms] IMP code now uses Exceptions instead of PEAR_Errors.
-[mms] Fix wrong charset on filenames when stripping attachments (<a href="http://bugs.horde.org/ticket/7220">Bug #7220</a>).
-[mms] Use effects queue to prevent issues with users clicking on effects
-      elements too quickly.
-[mms] Trim leading/trailing whitespace from reply/forwarded text.
-[mms] Add full IMAP message flagging capabilities to DIMP.
-[mms] Decode IDN (RFC 3490) names in addresses (<a href="http://bugs.horde.org/ticket/5836">Request #5836</a>).
-[mms] Add ability to download attachments in MIMP (<a href="http://bugs.horde.org/ticket/2925">Request #2925</a>).
-[mms] Revamp JS event handling model.
-[mms] ESC in DIMP search box now clears the search (<a href="http://bugs.horde.org/ticket/7196">Request #7196</a>).
-[mms] Enhancements to status icon view (<a href="http://bugs.horde.org/ticket/7519">Request #7519</a>) (DIMP).
-[mms] If the browser supports it, embed image data in cached CSS files via
-      data URLs (<a href="http://bugs.horde.org/ticket/7174">Request #7174</a>).
-[mms] Translate special folder names (<a href="http://bugs.horde.org/ticket/7545">Request #7545</a>).
-[mms] Make autocompletion threshold parameters configurable (<a href="http://bugs.horde.org/ticket/7322">Request #7322</a>).
-[mms] Add compose attachment preview to DIMP.
-[mms] Add 'unit' parameter for quota display (Carlos Pires &lt;acmpires@sapo.pt>,
-      Request #7044).
-[mms] Add support for '$Forwarded' IMAP keyword (<a href="http://bugs.horde.org/ticket/3402">Request #3402</a>).
-[mms] Attachments in a signed message now can be downloaded via the
-      download all attachments link (<a href="http://bugs.horde.org/ticket/2939">Bug #2939</a>).
-[mms] Remember preview toggle header preference (<a href="http://bugs.horde.org/ticket/7264">Request #7264</a>) (DIMP).
-[mms] Fix stripping attachments when saving to sent-mail folder when attaching
-      the PGP public key (<a href="http://bugs.horde.org/ticket/4221">Bug #4221</a>).
-[mms] Removed Special Characters menu.
-[mms] Add 'undelete' to Other Actions menu (<a href="http://bugs.horde.org/ticket/7496">Bug #7496</a>) (DIMP).
-[mms] All PGP & S/MIME functions now work in DIMP (<a href="http://bugs.horde.org/ticket/5388">Bug #5388</a>).
-[mms] Encrypted bodytext now appears when replying/forwarding a message
-      (<a href="http://bugs.horde.org/ticket/1345">Request #1345</a>).
-[mms] When deleting/emptying a folder, display message count (<a href="http://bugs.horde.org/ticket/7424">Request #7424</a>).
-[mms] No longer need HTTP_Request - use Horde_Http_Client instead.
-[mms] Use Horde_Imap_Client as the IMAP library in IMP.
-[mms] DIMP and MIMP have been moved into IMP.
-[mms] Allow all parts in a message to be displayed (<a href="http://bugs.horde.org/ticket/1866">Bug #1866</a>).
-[jan] Re-add access keys (DIMP).
-[mms] Quota template has been moved inside of base include file (DIMP).
-[mms] Added an alerts log (<a href="http://bugs.horde.org/ticket/7173">Request #7173</a>) (DIMP).
-[mms] Added support to access IMP's Virtual Folders (DIMP).
-[mms] Shift-drag for messages will copy instead of move (DIMP).
-[mms] Remove support for Xinha as GUI HTML editor.
-[mms] Strip extra 'Fwd' and 'Re' cruft from subject line when replying to or
-      forwarding a message.
-[mms] Don't send server requests when autocompleting addresses when possible.
-[mms] Added readonly mailbox and disable compose hooks.
-[mms] Saving draft on session expiration now handled via VFS.
-[mms] Add preference to delete draft on resume & send.
-
 Address Book Changes
 --------------------
 [rla] Support multiple address books in search portal block (<a href="http://bugs.horde.org/ticket/8786">Request #8786</a>).
@@ -525,33 +254,6 @@ Address Book Changes
 [mjr] The listTimeObjects API now returns categories for each source
       individually instead of returning only the categories available
       (<a href="http://bugs.horde.org/ticket/8504">Request #8504</a>).
-
-Filters Changes
----------------
-[jan] Fix moving rules to an explicit position (<a href="http://bugs.horde.org/ticket/10172">Bug #10172</a>).
-[mms] Fix storage backend conversion script.
-[mms] Fix folder selection (<a href="http://bugs.horde.org/ticket/9907">Bug #9907</a>).
-[mms] Fix filtering using the IMAP driver (<a href="http://bugs.horde.org/ticket/9859">Bug #9859</a>).
-[jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
-[jan] Correctly escape vacation subjects with quote characters in Maildrop
-      driver (<a href="http://bugs.horde.org/ticket/9156">Bug #9156</a>).
-[jan] Catch all PEAR errors in Sieve driver.
-[jan] Allow script drivers to provide additional scripts to upload (<a href="http://bugs.horde.org/ticket/8110">Bug #8110</a>).
-[jan] Change default Sieve port to 4190 (<a href="http://bugs.horde.org/ticket/9791">Request #9791</a>).
-[jan] Fix reading default forward rule from preferences.
-[jan] Fix removing flags with Sieve driver (Vilius Sumskas &lt;vilius@lnk.lt>,
-      Bug #9785).
-[mjr] Datatree share to SQL upgrade script refactored for Horde 4.
-[jan] Fix updating forward rules in SQL driver (<a href="http://bugs.horde.org/ticket/9699">Bug #9699</a>).
-[jan] Update installation and upgrade instructions.
-[jan] Fix instantiation of VFS transport driver (<a href="http://bugs.horde.org/ticket/9605">Bug #9605</a>).
-[jan] Fix moving rules with the SQL driver (<a href="http://bugs.horde.org/ticket/9672">Bug #9672</a>).
-[jan] Fix creating new rules with PostgreSQL (<a href="http://bugs.horde.org/ticket/9638">Bug #9638</a>).
-[jan] Provide default configuration files instead of .dist versions.
-[jan] Rename 'driver' configuration and classes to 'transport' to avoid
-      confusion with script and storage drivers.
-[mms] Use IMP API for IMAP actions.
-[mms] Convert to Horde 4 standards.
 
 Calendar Changes
 ----------------

@@ -11,22 +11,25 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#upgrading-kronolith-from-2-3-x-to-3-x" id="id2">1&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3.x to 3.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#preferences" id="id3">1.1&nbsp;&nbsp;&nbsp;Preferences</a></li>
-<li><a class="reference internal" href="#utc-timestamps" id="id4">1.2&nbsp;&nbsp;&nbsp;UTC timestamps</a></li>
-<li><a class="reference internal" href="#daily-agendas" id="id5">1.3&nbsp;&nbsp;&nbsp;Daily agendas</a></li>
+<li><a class="reference internal" href="#general-instructions" id="id2">1&nbsp;&nbsp;&nbsp;General instructions</a></li>
+<li><a class="reference internal" href="#upgrading-kronolith-from-2-3-x-to-3-x" id="id3">2&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3.x to 3.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#preferences" id="id4">2.1&nbsp;&nbsp;&nbsp;Preferences</a></li>
+<li><a class="reference internal" href="#utc-timestamps" id="id5">2.2&nbsp;&nbsp;&nbsp;UTC timestamps</a></li>
+<li><a class="reference internal" href="#daily-agendas" id="id6">2.3&nbsp;&nbsp;&nbsp;Daily agendas</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-kronolith-from-2-3-to-2-3-x" id="id6">2&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3 to 2.3.x</a></li>
-<li><a class="reference internal" href="#upgrading-kronolith-from-2-2-to-2-3-x" id="id7">3&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.2 to 2.3.x</a></li>
-<li><a class="reference internal" href="#upgrading-kronolith-from-2-1-x-to-2-2-x" id="id8">4&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.1.x to 2.2.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#sql-backends" id="id9">4.1&nbsp;&nbsp;&nbsp;SQL Backends</a></li>
-<li><a class="reference internal" href="#new-beta-sql-share-driver-support" id="id10">4.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></li>
-<li><a class="reference internal" href="#id1" id="id11">4.3&nbsp;&nbsp;&nbsp;Preferences</a></li>
+<li><a class="reference internal" href="#upgrading-kronolith-from-2-3-to-2-3-x" id="id7">3&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3 to 2.3.x</a></li>
+<li><a class="reference internal" href="#upgrading-kronolith-from-2-2-to-2-3-x" id="id8">4&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.2 to 2.3.x</a></li>
+<li><a class="reference internal" href="#upgrading-kronolith-from-2-1-x-to-2-2-x" id="id9">5&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.1.x to 2.2.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sql-backends" id="id10">5.1&nbsp;&nbsp;&nbsp;SQL Backends</a></li>
+<li><a class="reference internal" href="#new-beta-sql-share-driver-support" id="id11">5.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></li>
+<li><a class="reference internal" href="#id1" id="id12">5.3&nbsp;&nbsp;&nbsp;Preferences</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="general-instructions">
+<h1><a class="toc-backref" href="#id2">1&nbsp;&nbsp;&nbsp;General instructions</a></h1>
 <p>These are instructions to upgrade from earlier Kronolith versions. Please
 backup your existing data before running any of the steps described below. You
 can't use the updated data with your old Kronolith version anymore.</p>
@@ -41,14 +44,15 @@ Kronolith version using the PEAR installer.</p>
 configurations and database schemes. Log in as an administrator, go to
 Administration =&gt; Configuration and update anything that's highlighted as
 outdated.</p>
+</div>
 <div class="section" id="upgrading-kronolith-from-2-3-x-to-3-x">
-<h1><a class="toc-backref" href="#id2">1&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3.x to 3.x</a></h1>
+<h1><a class="toc-backref" href="#id3">2&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3.x to 3.x</a></h1>
 <div class="section" id="preferences">
-<h2><a class="toc-backref" href="#id3">1.1&nbsp;&nbsp;&nbsp;Preferences</a></h2>
+<h2><a class="toc-backref" href="#id4">2.1&nbsp;&nbsp;&nbsp;Preferences</a></h2>
 <p>The last_kronolith_maintenance preference has been removed.</p>
 </div>
 <div class="section" id="utc-timestamps">
-<h2><a class="toc-backref" href="#id4">1.2&nbsp;&nbsp;&nbsp;UTC timestamps</a></h2>
+<h2><a class="toc-backref" href="#id5">2.2&nbsp;&nbsp;&nbsp;UTC timestamps</a></h2>
 <p>Kronolith 3.0 using an SQL backend stores all event dates in UTC by
 default. This allows to share events across different timezones. If you are
 upgrading from earlier Kronolith versions, you can either turn this feature
@@ -62,7 +66,7 @@ kronolith-convert-to-utc
 </pre>
 </div>
 <div class="section" id="daily-agendas">
-<h2><a class="toc-backref" href="#id5">1.3&nbsp;&nbsp;&nbsp;Daily agendas</a></h2>
+<h2><a class="toc-backref" href="#id6">2.3&nbsp;&nbsp;&nbsp;Daily agendas</a></h2>
 <p>There is a new script in <tt class="docutils literal"><span class="pre">kronolith-agenda</span></tt> to send out daily agendas to all
 users. It should be run once a day. This replaces the <tt class="docutils literal">scripts/reminders.php</tt>
 script from older versions, but you have to take care yourself now that the
@@ -70,12 +74,12 @@ script isn't run more than once per day.</p>
 </div>
 </div>
 <div class="section" id="upgrading-kronolith-from-2-3-to-2-3-x">
-<h1><a class="toc-backref" href="#id6">2&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3 to 2.3.x</a></h1>
+<h1><a class="toc-backref" href="#id7">3&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.3 to 2.3.x</a></h1>
 <p>Kronolith requires at least version 0.21.0 of Date_Holidays now, which has
 much better support for translations.</p>
 </div>
 <div class="section" id="upgrading-kronolith-from-2-2-to-2-3-x">
-<h1><a class="toc-backref" href="#id7">3&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.2 to 2.3.x</a></h1>
+<h1><a class="toc-backref" href="#id8">4&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.2 to 2.3.x</a></h1>
 <p>Some fields in the SQL share driver tables have been changed. Execute the
 provided SQL script to update your database if you are using the native SQL
 share driver.</p>
@@ -83,9 +87,9 @@ share driver.</p>
 mysql --user=root --password=&lt;MySQL-root-password&gt;  &lt;db name&gt; &lt; scripts/upgrades/2.2_to_2.3.sql</blockquote>
 </div>
 <div class="section" id="upgrading-kronolith-from-2-1-x-to-2-2-x">
-<h1><a class="toc-backref" href="#id8">4&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.1.x to 2.2.x</a></h1>
+<h1><a class="toc-backref" href="#id9">5&nbsp;&nbsp;&nbsp;Upgrading Kronolith from 2.1.x to 2.2.x</a></h1>
 <div class="section" id="sql-backends">
-<h2><a class="toc-backref" href="#id9">4.1&nbsp;&nbsp;&nbsp;SQL Backends</a></h2>
+<h2><a class="toc-backref" href="#id10">5.1&nbsp;&nbsp;&nbsp;SQL Backends</a></h2>
 <p>Two new fields have been added to the default SQL table layout.</p>
 <p>Execute the provided SQL script to update your data to the new Kronolith
 version, e.g.:</p>
@@ -94,7 +98,7 @@ mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; sc
 </pre>
 </div>
 <div class="section" id="new-beta-sql-share-driver-support">
-<h2><a class="toc-backref" href="#id10">4.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></h2>
+<h2><a class="toc-backref" href="#id11">5.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></h2>
 <p>A new beta-level SQL Horde_Share driver has been added in Horde 3.2. This driver
 offers significant performance improvements over the existing Datatree driver,
 but it has not received the same level of testing, thus the beta designation.
@@ -108,7 +112,7 @@ kronolith-convert-datatree-shares-to-sql
 </pre>
 </div>
 <div class="section" id="id1">
-<h2><a class="toc-backref" href="#id11">4.3&nbsp;&nbsp;&nbsp;Preferences</a></h2>
+<h2><a class="toc-backref" href="#id12">5.3&nbsp;&nbsp;&nbsp;Preferences</a></h2>
 <p>The preference that stores the address books that are searched for attendees
 with free/busy urls has changed both the name and the format. The preference
 used to be called &quot;search_abook&quot; and contained a serialized PHP array. The new

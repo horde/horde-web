@@ -1,13 +1,22 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v4.0.7-git
+v4.0.8-git
 ----------
 
-[mjr] Fix incorrect method name in Pop3 Socket driver.
+
+
+------
+v4.0.7
+------
+
+[mjr] Fix returning shares in the proper order when fetching multiple shares
+      by id.
 [jan] Don't use CSS cache in mobile interfaces because it breaks jQuery Mobile
       CSS.
-[mjr] Fix race conditions caused by broken clients sending an inappropriate PING
-      request.
+[mjr] Fix race conditions caused by broken clients sending an inappropriate
+      PING request.
+[jan] Fix duplication of objects during synchronization (joniw@t-online.de, Bug
+      #10081).
 [jan] Don't allow to click disabled login button (<a href="http://bugs.horde.org/ticket/10267">Bug #10267</a>).
 [jan] Allow configuration of split read databases for PostgreSQL (Request
       #7025).
@@ -16,7 +25,8 @@ v4.0.7-git
 [gwr] Support restricting the HTML tidy post processing by the message size
       (<a href="http://bugs.horde.org/ticket/10266">Request #10266</a>).
 [gwr] Disabled the timeout on the logout token.
-[mjr] Fix integer overflow issue (Bug: 9889).
+[mjr] Fix integer overflow issue in Facebook code (<a href="http://bugs.horde.org/ticket/9889">Bug #9889</a>).
+[mms] Fix adding users with Cyrsql driver (vilius@lnk.lt, <a href="http://bugs.horde.org/ticket/10239">Bug #10239</a>).
 
 
 ------

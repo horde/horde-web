@@ -11,24 +11,27 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#upgrading-ingo-from-1-x-to-2-x" id="id1">1&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.x To 2.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#sieve-backend" id="id2">1.1&nbsp;&nbsp;&nbsp;Sieve Backend</a></li>
-<li><a class="reference internal" href="#configuration-options" id="id3">1.2&nbsp;&nbsp;&nbsp;Configuration Options</a></li>
+<li><a class="reference internal" href="#general-instructions" id="id1">1&nbsp;&nbsp;&nbsp;General instructions</a></li>
+<li><a class="reference internal" href="#upgrading-ingo-from-1-x-to-2-x" id="id2">2&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.x To 2.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sieve-backend" id="id3">2.1&nbsp;&nbsp;&nbsp;Sieve Backend</a></li>
+<li><a class="reference internal" href="#configuration-options" id="id4">2.2&nbsp;&nbsp;&nbsp;Configuration Options</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-ingo-from-1-2-1-to-1-2-2" id="id4">2&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2.1 To 1.2.2</a></li>
-<li><a class="reference internal" href="#upgrading-ingo-from-1-2-to-1-2-1" id="id5">3&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2 To 1.2.1</a></li>
-<li><a class="reference internal" href="#upgrading-ingo-from-1-1-x-to-1-2" id="id6">4&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.1.x To 1.2</a><ul class="auto-toc">
-<li><a class="reference internal" href="#sql-backend" id="id7">4.1&nbsp;&nbsp;&nbsp;SQL Backend</a></li>
-<li><a class="reference internal" href="#new-beta-sql-share-driver-support" id="id8">4.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></li>
+<li><a class="reference internal" href="#upgrading-ingo-from-1-2-1-to-1-2-2" id="id5">3&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2.1 To 1.2.2</a></li>
+<li><a class="reference internal" href="#upgrading-ingo-from-1-2-to-1-2-1" id="id6">4&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2 To 1.2.1</a></li>
+<li><a class="reference internal" href="#upgrading-ingo-from-1-1-x-to-1-2" id="id7">5&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.1.x To 1.2</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sql-backend" id="id8">5.1&nbsp;&nbsp;&nbsp;SQL Backend</a></li>
+<li><a class="reference internal" href="#new-beta-sql-share-driver-support" id="id9">5.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-ingo-from-1-0-x-to-1-1-x" id="id9">5&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.0.x To 1.1.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#backends-parameter-changes-procmail-driver" id="id10">5.1&nbsp;&nbsp;&nbsp;Backends parameter changes - procmail driver</a></li>
+<li><a class="reference internal" href="#upgrading-ingo-from-1-0-x-to-1-1-x" id="id10">6&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.0.x To 1.1.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#backends-parameter-changes-procmail-driver" id="id11">6.1&nbsp;&nbsp;&nbsp;Backends parameter changes - procmail driver</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="general-instructions">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;General instructions</a></h1>
 <p>These are instructions to upgrade from earlier Ingo versions. Please backup
 your existing data before running any of the steps described below. You can't
 use the updated data with your old Ingo version anymore.</p>
@@ -43,10 +46,11 @@ version using the PEAR installer.</p>
 configurations and database schemes. Log in as an administrator, go to
 Administration =&gt; Configuration and update anything that's highlighted as
 outdated.</p>
+</div>
 <div class="section" id="upgrading-ingo-from-1-x-to-2-x">
-<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.x To 2.x</a></h1>
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.x To 2.x</a></h1>
 <div class="section" id="sieve-backend">
-<h2><a class="toc-backref" href="#id2">1.1&nbsp;&nbsp;&nbsp;Sieve Backend</a></h2>
+<h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Sieve Backend</a></h2>
 <p>The port number for the timesieved daemon has been changed to the official
 Sieve port 4190 in the default configuration. If your timesieved daemon is
 still running on the former default port 2000, or any other port than 4190, you
@@ -59,14 +63,14 @@ $backends['sivtest']['params']['port'] = 2000;
 </pre>
 </div>
 <div class="section" id="configuration-options">
-<h2><a class="toc-backref" href="#id3">1.2&nbsp;&nbsp;&nbsp;Configuration Options</a></h2>
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Configuration Options</a></h2>
 <p>The following configuration options have been removed:</p>
 <blockquote>
 usefolderapi</blockquote>
 </div>
 </div>
 <div class="section" id="upgrading-ingo-from-1-2-1-to-1-2-2">
-<h1><a class="toc-backref" href="#id4">2&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2.1 To 1.2.2</a></h1>
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2.1 To 1.2.2</a></h1>
 <p>The group_uid field in the SQL share driver groups table has been changed from
 an INT to a VARCHAR(255). Execute the provided SQL script to update your
 database if you are using the native SQL share driver.</p>
@@ -74,7 +78,7 @@ database if you are using the native SQL share driver.</p>
 mysql --user=root --password=&lt;MySQL-root-password&gt;  &lt;db name&gt; &lt; 1.2.1_to_1.2.2.sql</blockquote>
 </div>
 <div class="section" id="upgrading-ingo-from-1-2-to-1-2-1">
-<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2 To 1.2.1</a></h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.2 To 1.2.1</a></h1>
 <p>The share_owner field in the SQL share driver table has been changed from a
 VARCHAR(32) to a VARCHAR(255). Execute the provided SQL script to update your
 database if you are using the native SQL share driver.</p>
@@ -82,11 +86,11 @@ database if you are using the native SQL share driver.</p>
 mysql --user=root --password=&lt;MySQL-root-password&gt;  &lt;db name&gt; &lt; 1.2_to_1.2.1.sql</blockquote>
 </div>
 <div class="section" id="upgrading-ingo-from-1-1-x-to-1-2">
-<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.1.x To 1.2</a></h1>
+<h1><a class="toc-backref" href="#id7">5&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.1.x To 1.2</a></h1>
 <p>This is a non-exhaustive, quick explanation of what has changed between Ingo
 version 1.1.x and 1.2.x.</p>
 <div class="section" id="sql-backend">
-<h2><a class="toc-backref" href="#id7">4.1&nbsp;&nbsp;&nbsp;SQL Backend</a></h2>
+<h2><a class="toc-backref" href="#id8">5.1&nbsp;&nbsp;&nbsp;SQL Backend</a></h2>
 <p>An SQL table has been added than can optionally be used as a storage backend
 for the filter rules. Using this backend no longer limits the number and size
 of rules.</p>
@@ -109,7 +113,7 @@ mysql --user=root --password=&lt;MySQL-root-password&gt; --skip-column-names --b
 </pre>
 </div>
 <div class="section" id="new-beta-sql-share-driver-support">
-<h2><a class="toc-backref" href="#id8">4.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></h2>
+<h2><a class="toc-backref" href="#id9">5.2&nbsp;&nbsp;&nbsp;New Beta SQL Share Driver Support</a></h2>
 <p>A new beta-level SQL Horde_Share driver has been added in Horde 3.2. This
 driver offers significant performance improvements over the existing Datatree
 driver, but it has not received the same level of testing, thus the beta
@@ -120,11 +124,11 @@ create the new SQL tables before running the migration script.</p>
 </div>
 </div>
 <div class="section" id="upgrading-ingo-from-1-0-x-to-1-1-x">
-<h1><a class="toc-backref" href="#id9">5&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.0.x To 1.1.x</a></h1>
+<h1><a class="toc-backref" href="#id10">6&nbsp;&nbsp;&nbsp;Upgrading Ingo From 1.0.x To 1.1.x</a></h1>
 <p>This is a non-exhaustive, quick explanation of what has changed between Ingo
 version 1.0.x and 1.1.x.</p>
 <div class="section" id="backends-parameter-changes-procmail-driver">
-<h2><a class="toc-backref" href="#id10">5.1&nbsp;&nbsp;&nbsp;Backends parameter changes - procmail driver</a></h2>
+<h2><a class="toc-backref" href="#id11">6.1&nbsp;&nbsp;&nbsp;Backends parameter changes - procmail driver</a></h2>
 <p>In <tt class="docutils literal">config/backends.php</tt>, the <tt class="docutils literal">procmailrc</tt> parameter in the procmail
 entry has been deprecated.  It has been replaced by the <tt class="docutils literal">filename</tt>
 parameter.</p>
