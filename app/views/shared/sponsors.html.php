@@ -19,8 +19,8 @@
       </form>
     </li>
     <li><a href="http://www.easydns.com/?V=55611cf92a7e0842"><img src="<?php echo $GLOBALS['host_base'] ?>/images/easyDNS.png" /></a></li>
-    <li><a href="http://www.hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png" height="31"/></a></li>
-    <li><a href="http://www.verendus.com"><img src="<?php echo $GLOBALS['host_base'] ?>/images/verendus.jpg" height="31"/></a></li>
+    <li><a href="http://www.hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png"/></a></li>
+    <li><a href="http://www.verendus.com"><img src="<?php echo $GLOBALS['host_base'] ?>/images/verendus.jpg"/></a></li>
   </ul>
   <h2>More</h2>
   <a href="http://twitter.com/hordeproject" class="twitter-follow-button" data-show-count="false">Follow @hordeproject</a>
@@ -35,16 +35,15 @@
   <h2>Shops</h2>
   <span style="text-align:center;width:91px;float:left;">European Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopeu')?>">
-  <img width="90" height="90" src="http://image.spreadshirt.net/image-server/image/product/10874260/view/1/type/png/width/190/height/190/retro-235.png"/>
+  <img src="<?php echo $GLOBALS['host_base'] ?>/images/store-eu.png"/>
   </a></span>
   <span style="text-align:center;width:91px;float:left;">US Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopus')?>">
-  <img width="90" height="90" src="http://image.spreadshirt.com/image-server/image/product/18385499/view/1/type/png/width/190/height/190"/>
+  <img src="<?php echo $GLOBALS['host_base'] ?>/images/store-us.png"/>
   </a></span>
   <span style="text-align:center;width:61px;float:left;">CafePress<a class="boxl"
   href="http://cafepress.com/hordeproject"> <img style="margin-top:15px"
-  width="60" height="60"
-  src="http://images6.cpcache.com/product/172203586v5_150x150_Front.jpg"/>
+  src="<?php echo $GLOBALS['host_base'] ?>/images/store-cafepress.jpg"/>
   </a></span>
   <!--Cafepress widget seems to have js issues...getting all kinds of errors while navigating-->
    <!--<div id="cpi-s1-1001" class="cpi cpi-s1" affiliate=""
