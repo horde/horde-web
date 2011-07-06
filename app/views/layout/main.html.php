@@ -3,26 +3,10 @@
 <head>
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="keywords" content="groupware,webmail,web,application,framework,php,consulting,support,development,library">
 <link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen">
 <link rel="SHORTCUT ICON" type="image/x-icon" href="<?php echo $GLOBALS['host_base'] ?>/images/favicon.ico" />
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-22320801-1']);
-_gaq.push(['_trackPageview']);
-
-if (document.location.host.indexOf('horde.org') != -1) {
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-}
-</script>
-<?php
-Horde::includeStylesheetFiles(array('nobase' => true, 'nohorde' => true), true);
-Horde::includeScriptFiles();
-Horde::outputInlineScript();
-?>
+<?php Horde::includeStylesheetFiles(array('nobase' => true, 'nohorde' => true), true) ?>
 </head>
 <body>
 <div class="area">
@@ -33,8 +17,17 @@ Horde::outputInlineScript();
     <?php echo $this->render('footer');?>
   </div>
 </div>
+<?php Horde::includeScriptFiles() ?>
 <script type="text/javascript" src="<?php echo $GLOBALS['host_base'] ?>/js/toc.js"></script>
-<!-- Don't include yet, it's based on prototypejs -->
-<!--<script src="js/informer.js"></script>-->
+<?php Horde::outputInlineScript() ?>
+<?php if (strpos($_SERVER['SERVER_NAME'], 'horde.org') !== false): ?>
+<script type="text/javascript" src="<?php if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') echo 'https://ssl'; else echo 'http://www' ?>.google-analytics.com/ga.js'"></script>
+<?php endif ?>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-22320801-1']);
+_gaq.push(['_trackPageview']);
+</script>
 </body>
 </html>
