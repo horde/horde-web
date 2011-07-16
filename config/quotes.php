@@ -73,4 +73,8 @@ $quotes = array(
         'quote' => '"Horde is one of the best Webmail you can offer your users. It\'s unmatched in terms of features and flexibility among the open source solutions that you can install on a server. It\'s perfect for small businesses."',
         'author' => 'interfaSys'
     ),
+    array(
+        'quote' => '"Die Installation ist mehr als einfach und auch die Administration ist selbsterklärend. Das neue Horde ist wirklich ein Wow-Effekt und perfekt für einen Zugriff per VPN und aus dem Heimnetzwerk. Meiner Meinung nach kann man nun auf die Google-Apps in Android verzichten."',
+        'author' => 'Seraphyn Blog'
+    ),
 );
