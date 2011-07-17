@@ -59,7 +59,7 @@ Groupware Webmail Edition and the <strong>calendar, contacts, tasks, and notes
  <li>Folder tree in left menu pane</li>
  <li>Message previews in mailbox view</li>
  <li>Downloading of message attachments in a ZIP file</li>
- <li>Fetching of messages from external email accounts</li>
+ <li style="text-decoration:line-through">Fetching of messages from external email accounts</li>
  <li>Flexible, individual alias addresses</li>
  <li>IMAP folder subscriptions</li>
  <li>Shared IMAP folders</li>
