@@ -17,7 +17,7 @@
                         available.</p>
                     </div>
 
-                    <div class="slide-everywhere sliderview">
+                    <div class="slide-everywhere sliderview" style="display:none">
                         <h2>Horde Everywhere.</h2>
                         <p>Horde gives you the ability to access your
                         information no matter where you are &ndash; On the road
@@ -28,7 +28,7 @@
                         time.</p>
                     </div>
 
-                    <div class="slide-ccc sliderview">
+                    <div class="slide-ccc sliderview" style="display:none">
                         <h2>Create. Communicate. Collaborate.</h2>
                         <p><a href="<?php echo $this->urlWriter->urlFor('app',
                         array('app' => 'webmail')) ?>">Horde Groupware Webmail
@@ -41,7 +41,7 @@
                         IMP, Ingo, Kronolith, Turba, Nag and Mnemo.</p>
                     </div>
 
-                    <div class="slide-oss sliderview">
+                    <div class="slide-oss sliderview" style="display:none">
                         <h2>Open Source, Standards-Based.</h2>
                         <p>The Horde Project is about creating high quality
                         Open Source applications, based on PHP and the Horde
