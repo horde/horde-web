@@ -64,62 +64,61 @@ $horde_four_apps = array(
 $horde_three_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '3.3.11',
-        'date' => 'November 22 2010'
+        'ver' => '3.3.12',
+        'date' => 'July 26 2011'
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '1.2.9',
-        'date' => 'November 22 2010',
+        'ver' => '1.2.10',
+        'date' => 'July 26 2011',
         // Define 'dir' if it is not the same as the array key
         'dir' => 'horde-groupware'
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '1.2.9',
-        'date' => 'November 22 2010',
+        'ver' => '1.2.10',
+        'date' => 'July 26 2011',
         'dir' => 'horde-webmail'
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H3 (4.3.9)',
-        'date' => 'October 25 2010',
+        'ver' => 'H3 (4.3.10)',
+        'date' => 'July 26 2011'
     ),
     'dimp' => array(
         'name' => 'DIMP',
-        'ver' => 'H3 (1.1.6)',
-        'date' => 'October 25 2010'
+        'ver' => 'H3 (1.1.7)',
+        'date' => 'July 26 2011'
     ),
     'mimp' => array(
         'name' => 'MIMP',
-        'ver' => 'H3 (1.1.3)',
-        'date' => 'December 15 2009'
+        'ver' => 'H3 (1.1.4)',
+        'date' => 'July 26 2011'
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H3 (2.3.5)',
-        'date' => 'September 28 2010'
+        'ver' => 'H3 (2.3.6)',
+        'date' => 'July 26 2011'
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H3 (1.2.5)',
-        'date' => 'September 28 2010'
+        'ver' => 'H3 (1.2.6)',
+        'date' => 'July 26 2011',
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H3 (2.3.5)',
-        'date' => 'September 28 2010'
+        'ver' => 'H3 (2.3.6)',
+        'date' => 'July 26 2011',
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H3 (2.3.6)',
-        'date' => 'September 28 2010',
-        'pear' => true,
+        'ver' => 'H3 (2.3.7)',
+        'date' => 'July 26 2011',
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H3 (2.2.4)',
-        'date' => 'September 28 2010'
+        'ver' => 'H3 (2.2.5)',
+        'date' => 'July 26 2011',
     ),
     'chora' => array(
         'name' => 'Chora',
