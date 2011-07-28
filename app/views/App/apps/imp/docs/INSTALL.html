@@ -22,8 +22,8 @@
 </div>
 <p>This document contains instructions for installing the IMP web-based mail
 client on your system.</p>
-<p>For information on the capabilities and features of IMP, see the file <a class="reference external" href="README">README</a>
-in the top-level directory of the IMP distribution.</p>
+<p>For information on the capabilities and features of IMP, see the file
+<a class="reference external" href="README">docs/README</a>.</p>
 <div class="section" id="prerequisites">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, IMP <strong>requires</strong> the following:</p>
@@ -341,19 +341,7 @@ back in, if you are using an SQL or LDAP preferences system).</li>
 </ul>
 </li>
 <li><p class="first">Tuning IMP (Performance)</p>
-<p>See <a class="reference external" href="../../horde/docs/PERFORMANCE">horde/docs/PERFORMANCE</a>.</p>
-<p>IMP Specific Performance Information:</p>
-<p>IMP can use persistent caching on the server side to store information
-about user's messages.  This results in much reduced mail server traffic
-and requires the server to parse the structure of every message only once.
-The tradeoff is your cache backend must be able to handle the potentially
-large amounts of cached data this option will produce. However, cache
-storage is potentially cheap when compared to the performance gained by
-using caching.</p>
-<p>To use this caching, you must have a <tt class="docutils literal">Cache System</tt> configured in Horde's
-<tt class="docutils literal">Administration/Configuration</tt> screen and have the relevant settings
-enabled in IMP's configuration screen
-(<tt class="docutils literal">Administration/Configuration/Webmail/Mailbox</tt>).</p>
+<p>See <a class="reference external" href="PERFORMANCE">docs/PERFORMANCE</a>.</p>
 </li>
 </ol>
 </div>
