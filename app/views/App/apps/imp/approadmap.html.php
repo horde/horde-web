@@ -38,7 +38,6 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="progress">In Progress</td>
   <tr><td><a href="http://bugs.horde.org/ticket/8659">Saved Filters/Complex Search Elements</a></td><td class="done">Done</td>
   <tr><td><a href="http://bugs.horde.org/ticket/1406">HTML Signatures</a></td><td class="done">Done</td>
   <tr><td>Provide vertical 3-pane view option in DIMP</td><td class="done">Done</td>

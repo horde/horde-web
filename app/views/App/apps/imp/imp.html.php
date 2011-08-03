@@ -22,9 +22,10 @@
 
 <p>IMP is currently at version 5 and requires Horde 4. It adds new features like
    a new mobile frontend for smartphones, much improved AJAX frontend with new
-   vertical layout, entirely new IMAP library with broad RFC support and huge
-   performance gains, HTML signatures, more powerful search and filters, and
-   much more. With IMP 5, the DIMP and MIMP applications are now part of IMP.
+   vertical layout, <a href="http://wiki.horde.org/Project/HordeImapLib">entirely
+   new IMAP library with broad RFC support and huge performance gains</a>, HTML
+   signatures, more powerful search and filters, and much more. With IMP 5,
+   the DIMP and MIMP applications are now entirely contained within IMP.
 </p>
 
 <p>
