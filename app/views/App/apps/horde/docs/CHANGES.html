@@ -40,11 +40,11 @@ v4.0.7
       CSS.
 [mjr] Fix race conditions caused by broken clients sending an inappropriate
       PING request.
-[jan] Fix duplication of objects during synchronization (joniw@t-online.de, Bug
-      #10081).
+[jan] Fix duplication of objects during synchronization (joniw@t-online.de, <a href="http://bugs.horde.org/ticket/10081">Bug
+      #10081</a>).
 [jan] Don't allow to click disabled login button (<a href="http://bugs.horde.org/ticket/10267">Bug #10267</a>).
-[jan] Allow configuration of split read databases for PostgreSQL (Request
-      #7025).
+[jan] Allow configuration of split read databases for PostgreSQL (<a href="http://bugs.horde.org/ticket/7025">Request
+      #7025</a>).
 [mjr] Honor initial_application setting for mobile view (<a href="http://bugs.horde.org/ticket/10264">Bug #10264</a>).
 [mjr] Fix issue with initial Android ActiveSync pairing.
 [gwr] Support restricting the HTML tidy post processing by the message size
@@ -76,8 +76,8 @@ v4.0.4
 ------
 
 [gwr] Added a script for exporting/importing preferences from/to a backend.
-[mms] Fix regression with UTF7-IMAP encoding of non-ascii folder names (Bug
-      #10093).
+[mms] Fix regression with UTF7-IMAP encoding of non-ascii folder names (<a href="http://bugs.horde.org/ticket/10093">Bug
+      #10093</a>).
 [mms] Allow numbers to be zero in certain preferences (<a href="http://bugs.horde.org/ticket/10120">Bug #10120</a>).
 [mms] Fix running Horde login tasks (<a href="http://bugs.horde.org/ticket/9767">Bug #9767</a>).
 [mms] Fix authenticating as several users in the same request (<a href="http://bugs.horde.org/ticket/10027">Bug #10027</a>).
@@ -111,15 +111,15 @@ v4.0.2
 [jan] SECURITY: Fix permission checks of guest users on system shares.
 [mms] SECURITY: Fix deletion of unwanted HTML nodes in XSS filter.
 [mms] Fix authentication failure when TOS is not accepted.
-[jan] Don't show IMP compose link if user doesn't have permissions to IMP (Bug
-      #10016).
+[jan] Don't show IMP compose link if user doesn't have permissions to IMP (<a href="http://bugs.horde.org/ticket/10016">Bug
+      #10016</a>).
 [mms] Fix issue causing slow syncs only in SyncML (<a href="http://bugs.horde.org/ticket/10008">Bug #10008</a>).
 [jan] Fix adding categories.
 [jan] Fix listing users in Customsql driver (<a href="http://bugs.horde.org/ticket/9963">Bug #9963</a>).
-[jan] Fix calculation of last password change in LDAP account portal block (Bug
-      #9770).
-[jan] Don't check for outdated DB schemas if database support is disabled (Bug
-      #9986).
+[jan] Fix calculation of last password change in LDAP account portal block (<a href="http://bugs.horde.org/ticket/9770">Bug
+      #9770</a>).
+[jan] Don't check for outdated DB schemas if database support is disabled (<a href="http://bugs.horde.org/ticket/9986">Bug
+      #9986</a>).
 [mjr] Fix editing settings of fixed portal blocks (<a href="http://bugs.horde.org/ticket/9910">Bug #9910</a>).
 
 
@@ -129,8 +129,8 @@ v4.0.1
 
 [mjr] Fix the blockTitle and blockContent API methods.
 [jan] Fix creating folders with SQL VFS driver (<a href="http://bugs.horde.org/ticket/9894">Bug #9894</a>).
-[jan] Fix LDAP parameters of account portal block (Klaus Steinberger, Bug
-      #9770).
+[jan] Fix LDAP parameters of account portal block (Klaus Steinberger, <a href="http://bugs.horde.org/ticket/9770">Bug
+      #9770</a>).
 [jan] Fix migration detection on Windows.
 [mjr] Correctly sanitize DSN when using custom cyrus auth driver (<a href="http://bugs.horde.org/ticket/9879">Bug #9879</a>).
 [mjr] Fix some display issues when geocoding with HordeMap (<a href="http://bugs.horde.org/ticket/9883">Bug #9883</a>).
@@ -156,8 +156,8 @@ v4.0
 [mms] Add pushapp_post hook.
 [jan] Fix application-specific permission checks (<a href="http://bugs.horde.org/ticket/9786">Bug #9786</a>).
 [jan] Fix resetting passwords (Vilius Sumskas &lt;vilius@lnk.lt>, <a href="http://bugs.horde.org/ticket/9800">Bug #9800</a>).
-[jan] Fix Cyrsql authentication driver (Vilius Sumskas &lt;vilius@lnk.lt>, Bug
-      #9781).
+[jan] Fix Cyrsql authentication driver (Vilius Sumskas &lt;vilius@lnk.lt>, <a href="http://bugs.horde.org/ticket/9781">Bug
+      #9781</a>).
 [mjr] Fix ActiveSync provisioning.
 [mjr] Fix for broken Nokia MfE clients (<a href="http://bugs.horde.org/ticket/9757">Bug #9757</a>).
 [jan] Delete object mappings too when deleting SyncML anchors (<a href="http://bugs.horde.org/ticket/9377">Request #9377</a>).
@@ -391,14 +391,14 @@ v3.3.6
 [jan] Export recurrence exceptions to Funambol clients (Alfonso Marín Marín
       &lt;almarin@um.es>, <a href="http://bugs.horde.org/ticket/8065">Request #8065</a>).
 [jan] Export all email addresses to Funambol clients (lst_hoe02@kwsoft.de,
-      Request #8571).
+      <a href="http://bugs.horde.org/ticket/8571">Request #8571</a>).
 [jan] Export all fax numbers to Funambol clients (lst_hoe02@kwsoft.de,
-      Request #8618).
+      <a href="http://bugs.horde.org/ticket/8618">Request #8618</a>).
 [jan] Fix detecting device information of certain synchronization devices.
 [jan] Fix warnings when listing sessions with Oracle or PEAR DB session
       handlers (<a href="http://bugs.horde.org/ticket/8601">Bug #8601</a>).
 [mas] Fix SessionHandler_sql::getSessionIDs() SQL syntax (moreda@allenta.com,
-      Bug #8600).
+      <a href="http://bugs.horde.org/ticket/8600">Bug #8600</a>).
 [mas] Fix Horde_SQL::readBlob() on MSSQL (moreda@allenta.com, <a href="http://bugs.horde.org/ticket/8599">Bug #8599</a>).
 [mms] Fix prototypejs regression on Internet Explorer (<a href="http://bugs.horde.org/ticket/6590">Bug #6590</a>).
 
@@ -421,14 +421,14 @@ v3.3.5
 [jan] Workaround synchronizing of messed up categories in Nokia E phones
       (<a href="http://bugs.horde.org/ticket/7824">Bug #7824</a>).
 [jan] Fix synchronizing photos with broken Nokia phones (xk3@mompl.org,
-      Bug #7407).
+      <a href="http://bugs.horde.org/ticket/7407">Bug #7407</a>).
 [jan] Fix fatal error during synchronization if using certain session handlers
       (<a href="http://bugs.horde.org/ticket/8443">Bug #8443</a>).
 [jan] Improve synchronizing yearly events with Funambol clients
       (lst_hoe02@kwsoft.de, <a href="http://bugs.horde.org/ticket/7790">Request #7790</a>).
 [jan] Destroy session when a CLI script ends (<a href="http://bugs.horde.org/ticket/8482">Request #8482</a>).
-[jan] Fix data casting when caching permissions with the DataTree backend (Bug
-      #8435).
+[jan] Fix data casting when caching permissions with the DataTree backend (<a href="http://bugs.horde.org/ticket/8435">Bug
+      #8435</a>).
 [jan] Pass user's password to the signup_addextra hook.
 [jan] Add removeUserDataFromAllApplications API method
       (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/8454">Request #8454</a>).
@@ -437,7 +437,7 @@ v3.3.5
 [mms] Fix memcache issue where it took 1 second to release a lock.
 [mjr] Fix weatherdotcom block always displaying a 5 day forecast (<a href="http://bugs.horde.org/ticket/8357">Bug #8357</a>).
 [cjh] Use streams for file transfers in VFS_ssh2 (jives@jives.ixum.net,
-      Request #8323).
+      <a href="http://bugs.horde.org/ticket/8323">Request #8323</a>).
 [jan] Send notification messages about new signups with confirmation links.
 [jan] Drop signup_email column from sign-up table.
 [jan] Show photo in vCard viewer if provided as inline vCard data.
@@ -467,11 +467,11 @@ v3.3.4-RC1
 [jan] Properly handle synchronization requests to non-existant databases.
 [jan] Fix exporting all-day events to Funambol clients (Bugs #4487, #6847).
 [jan] Quote parameter values in iCalendar data if necessary (Gunnar Wrobel,
-      Bug #7758).
+      <a href="http://bugs.horde.org/ticket/7758">Bug #7758</a>).
 [jan] Detect base64 encoded synchronization data from Blackberry devices
       (Bugs #6995, #6949).
 [jan] Optionally use Net_DNS for host name lookups (adrieder@sbox.tugraz.at,
-      Request #7374).
+      <a href="http://bugs.horde.org/ticket/7374">Request #7374</a>).
 [jan] Add TLS support to LDAP drivers (web@marlboro.edu, <a href="http://bugs.horde.org/ticket/7958">Request #7958</a>).
 [jan] Add scope and sizelimit parameters to LDAP authentication driver
       (dom.lalot@gmail.com, <a href="http://bugs.horde.org/ticket/7839">Request #7839</a>).
@@ -491,9 +491,9 @@ v3.3.4-RC1
       when being served by lighttpd due to issues with case insensitive
       file systems.
 [cjh] Add support for SSL connections to MySQL databases (BryanRJ@gmail.com,
-      Request #7972).
+      <a href="http://bugs.horde.org/ticket/7972">Request #7972</a>).
 [cjh] Fix storing of unlocked preferences set by hooks (manuel@mausz.at,
-      Bug #6822).
+      <a href="http://bugs.horde.org/ticket/6822">Bug #6822</a>).
 [jan] Highlight color input fields with the color from the picker.
 [jan] Fix importing vCards that have the charset specified in a MIME part
       (<a href="http://bugs.horde.org/ticket/7816">Bug #7816</a>).
@@ -549,7 +549,7 @@ v3.3.1
 [jan] Fix resuming synchronization session on server farms
       (adrieder@sbox.tugraz.at, <a href="http://bugs.horde.org/ticket/7394">Bug #7394</a>).
 [jan] Fix synchronization of tasks with many items (adrieder@sbox.tugraz.at,
-      Bug #7395).
+      <a href="http://bugs.horde.org/ticket/7395">Bug #7395</a>).
 [mms] Upgrade prototype.js to v1.6.0.3.
 [jwm] Fix regression: SOAP wsdl/disco shouldn't require authorization.
 
@@ -732,7 +732,7 @@ v3.2-RC4
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
       (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
 [cjh] Add a files-based Preferences backend (thomas.jarosch@intra2net.com,
-      Request #6653).
+      <a href="http://bugs.horde.org/ticket/6653">Request #6653</a>).
 [cjh] Correct line-folding of encoded lines in iCalendar data
       (Gunnar Wrobel &lt;p@rdus.de>, <a href="http://bugs.horde.org/ticket/6555">Bug #6555</a>).
 [cjh] Add a configuration option for whether users can share with groups
@@ -873,8 +873,8 @@ v3.2-RC1
       directories.
 [jan] Fix SMTP configuration being set to "Best available authentication"
       (<a href="http://bugs.horde.org/ticket/5679">Bug #5679</a>).
-[jan] Add bind parameters to LDAP account portal block configuration (Request
-      #5705).
+[jan] Add bind parameters to LDAP account portal block configuration (<a href="http://bugs.horde.org/ticket/5705">Request
+      #5705</a>).
 [cjh] Fix login screen enter key behavior in some circumstances (<a href="http://bugs.horde.org/ticket/5696">Bug #5696</a>).
 [mjr] Add a new block for displaying a tag cloud that works across all Horde
       applications implementing a searchTag api.
@@ -897,15 +897,15 @@ v3.2-ALPHA
 
 [cjh] Centralize sounds for audio alarms in Horde.
 [cjh] Include CSRF protection when using Horde_Form Tokens (<a href="http://bugs.horde.org/ticket/4492">Request #4492</a>).
-[cjh] Add first_week_day preference and use it in the calendar widget (Bug
-      #1729).
+[cjh] Add first_week_day preference and use it in the calendar widget (<a href="http://bugs.horde.org/ticket/1729">Bug
+      #1729</a>).
 [cjh] Cache permissions with Horde_Cache (duck@obala.net).
 [jan] Add configuration option for safe IP subnets.
-[cjh] Allow turning off a user's ability to edit share permissions (Request
-      #4054).
+[cjh] Allow turning off a user's ability to edit share permissions (<a href="http://bugs.horde.org/ticket/4054">Request
+      #4054</a>).
 [cjh] Consolidate color pickers used for Labels and in Horde_Form (<a href="http://bugs.horde.org/ticket/5112">Bug #5112</a>).
 [cjh] Log sending of problem report emails (Otto.Stolz@uni-konstanz.de,
-      Request #5461).
+      <a href="http://bugs.horde.org/ticket/5461">Request #5461</a>).
 [cjh] Improve support for dates before 1970 and after 2038 (<a href="http://bugs.horde.org/ticket/3741">Bug #3741</a>).
 [mms] Add option to send MIME messages in a format that may allow broken MUAs
       to handle 8-bit filename data.
@@ -923,14 +923,14 @@ v3.2-ALPHA
 [cjh] Add Scriptaculous and RedBox to Horde.
 [mms] Added sql driver for Horde_Cache::.
 [mms] Prevent tooltips from scrolling off screen (michael.sheldon@credativ.de,
-      Request #3958).
+      <a href="http://bugs.horde.org/ticket/3958">Request #3958</a>).
 [jan] Add portal block to verify EU VAT identification numbers.
 [mms] Preserve URL anchor information when performing login.
 [jan] Add method to fetch public key by email address from key server.
 [jan] Add parameter for a temporary directory to the VC svn driver
       (meyer@mesw.de, <a href="http://bugs.horde.org/ticket/5051">Request #5051</a>).
 [jan] Change VC library to support open_basedir restrictions (meyer@mesw.de,
-      Request #5051).
+      <a href="http://bugs.horde.org/ticket/5051">Request #5051</a>).
 [cjh] Added a query for checking existance of a user to the custom SQL
       Auth driver (<a href="http://bugs.horde.org/ticket/5151">Request #5151</a>).
 [jan] Add button to the setup screen to check for newer versions.
@@ -992,8 +992,8 @@ v3.2-ALPHA
 [jan] Add SMPP driver to Net_SMS package (Ian Eure &lt;ieure@php.net>, PEAR
       Request #5101).
 [jan] Add support for symmetric PGP encryption to Crypt library.
-[jan] Add option to limit file sizes in file and image form fields (Request
-      #2155, vilius@lnk.lt).
+[jan] Add option to limit file sizes in file and image form fields (<a href="http://bugs.horde.org/ticket/2155">Request
+      #2155</a>, vilius@lnk.lt).
 [jan] Add caching for shares.
 [cjh] Add an audio MIME_Viewer so that audio files are clickable and
       handled immediately by the browser.
@@ -1079,8 +1079,8 @@ v3.1.5
 [cjh] Disable the Turkish locale if using PHP 5 (see
       http://bugs.php.net/bug.php?id=35050).
 [jan] Fix selecting the language on the login screen (<a href="http://bugs.horde.org/ticket/5098">Bug #5098</a>).
-[jan] Fix searching for single quotes in email headers (qa@cpanel.net, Bug
-      #4854).
+[jan] Fix searching for single quotes in email headers (qa@cpanel.net, <a href="http://bugs.horde.org/ticket/4854">Bug
+      #4854</a>).
 [jan] Fix portal layouts with more than one horizontally expanded block per
       row.
 
@@ -1116,10 +1116,10 @@ v3.1.4-RC1
 [cjh] Fix creation of mailbox quotas by the Auth_cyrus driver
       (pascal@vmfacility.fr, <a href="http://bugs.horde.org/ticket/4678">Bug #4678</a>).
 [cjh] Add "Save and Finish" to the share edit window (webmgr@muskingum.edu,
-      Request #4307).
+      <a href="http://bugs.horde.org/ticket/4307">Request #4307</a>).
 [cjh] Let mailto: and anchor (#) links through Horde::externalUrl (<a href="http://bugs.horde.org/ticket/3079">Bug #3079</a>).
 [cjh] Add smbclient version of the SMB Auth class (larry@wimble.biz,
-      Request #4338).
+      <a href="http://bugs.horde.org/ticket/4338">Request #4338</a>).
 [cjh] Remove problematic "data descriptor" segment from generated ZIP files
       (reitsma@denison.edu, <a href="http://bugs.horde.org/ticket/4670">Bug #4670</a>).
 [cjh] Strip accesskeys from menu tooltips when only showing icons (<a href="http://bugs.horde.org/ticket/4667">Bug #4667</a>).
@@ -1129,7 +1129,7 @@ v3.1.4-RC1
 [cjh] Fix return format of DataTree_null::getByAttributes()
       (thomas.jarosch@intra2net.com, <a href="http://bugs.horde.org/ticket/4651">Bug #4651</a>).
 [jan] Support departments in vCard's ORG properties (martin@matuska.org,
-      Request #4285).
+      <a href="http://bugs.horde.org/ticket/4285">Request #4285</a>).
 [cjh] Rename Auth_sasl backend to Auth_peclsasl to avoid conflicts with PEAR's
       Auth_SASL (<a href="http://bugs.horde.org/ticket/4547">Bug #4547</a>).
 [cjh] Implement handling of vTimezones in iCalendar data
@@ -1169,7 +1169,7 @@ v3.1.2
 [jan] Fix preference cache (<a href="http://bugs.horde.org/ticket/4079">Bug #4079</a>).
 [jan] Add configuration option to disable GET-based sessions.
 [jan] Fix preferences access for special Kolab users (wrobel@gentoo.org,
-      Bug #4049).
+      <a href="http://bugs.horde.org/ticket/4049">Bug #4049</a>).
 [mms] Fix setting default charset for non-MIME messages (<a href="http://bugs.horde.org/ticket/3804">Bug #3804</a>).
 [jan] Add several methods to manipulate groups and shares to Horde's API.
 [jan] Return serialized PHP values through the REST interface if passing a
@@ -1210,7 +1210,7 @@ v3.1
 [jan] Add option to block Kolab authentication after failed logins
       (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3474">Request #3474</a>).
 [jan] Allow to set height of iframe portal block (tevans@tachometry.com,
-      Request #3504).
+      <a href="http://bugs.horde.org/ticket/3504">Request #3504</a>).
 [cjh] Update ToolTips JavaScript object to allow tooltips on non-&lt;a> elements.
 [mms] Sort an IMAP_Tree object by display name, not full mailbox name.
 [mas] Make sure database portability options are applied in History module.
@@ -1411,7 +1411,7 @@ v3.0.6
 
 [jan] Pass all URL parameters where linking email addresses (<a href="http://bugs.horde.org/ticket/1530">Request #1530</a>).
 [jan] Show Word viewer content with correct charset (sgrondin@csbf.qc.ca,
-      Bug #2737).
+      <a href="http://bugs.horde.org/ticket/2737">Bug #2737</a>).
 
 
 ----------
@@ -1422,7 +1422,7 @@ v3.0.6-RC1
       (cbs@cts.ucla.edu, <a href="http://bugs.horde.org/ticket/2749">Bug #2749</a>, #2789).
 [jan] Fix sidebar menu layout for Opera (<a href="http://bugs.horde.org/ticket/2722">Bug #2722</a>).
 [cjh] Add &lt;pre> to supported help tags (vijay.mahrra@es.easynet.net,
-      Bug #2633).
+      <a href="http://bugs.horde.org/ticket/2633">Bug #2633</a>).
 [cjh] Fix validation on ipaddress Horde_Form fields (<a href="http://bugs.horde.org/ticket/2583">Bug #2583</a>).
 [cjh] Add Auth::getAuthDomain() (<a href="http://bugs.horde.org/ticket/2573">Bug #2573</a>).
 [mjr] Add ability to enable/disable IMSP globally via configuration settings.
@@ -1470,8 +1470,8 @@ v3.0.5-RC1
 [jan] Fix generation of free periods in free/busy code with overlapping events.
 [jan] Don't show Options button in problem reporting page.
 [jan] Add Util::realPath() method.
-[mas] Include version numbers for applications on Admin Setup screen. (Bug
-      #1420)
+[mas] Include version numbers for applications on Admin Setup screen. (<a href="http://bugs.horde.org/ticket/1420">Bug
+      #1420</a>)
 [mas] Change IMAP Auth driver to use imap/notls by default in non-DSN mode to
       match DSN mode.
 [mas] Add tls and self-signed certificate configuration options to IMAP Auth

@@ -3,6 +3,8 @@
 v5.0.10-git
 -----------
 
+[mms] Correctly determine page with first/last unseen messages when using
+      descending sequence sorting (<a href="http://bugs.horde.org/ticket/9882">Bug #9882</a>).
 [mms] Deletion works correctly from popup message view if base window is no
       longer available (<a href="http://bugs.horde.org/ticket/9761">Bug #9761</a>).
 [mms] Fix explicitly applying filters in INBOX in dynamic view (<a href="http://bugs.horde.org/ticket/10291">Bug #10291</a>).
@@ -43,8 +45,8 @@ v5.0.8
 [mms] Fix regression in parsing list reply address (<a href="http://bugs.horde.org/ticket/10258">Bug #10258</a>).
 [jan] Tick sent-mail checkbox off when selecting sent-mail folder in dynamic
       view.
-[jan] Keep key navigation active after clicking into a HTML message (Request
-      #9720).
+[jan] Keep key navigation active after clicking into a HTML message (<a href="http://bugs.horde.org/ticket/9720">Request
+      #9720</a>).
 [mms] Fix additional regression when flagging all messages in a mailbox
       (<a href="http://bugs.horde.org/ticket/10243">Bug #10243</a>).
 [mms] Fix "Don't Show" filtering in traditional mailbox view (<a href="http://bugs.horde.org/ticket/10244">Bug #10244</a>).
@@ -60,8 +62,8 @@ v5.0.7
       traditional view (<a href="http://bugs.horde.org/ticket/10232">Bug #10232</a>).
 [mms] Fix regression when flagging all messages in a mailbox (<a href="http://bugs.horde.org/ticket/10224">Bug #10224</a>).
 [jan] Fix folder links in virtual folders (<a href="http://bugs.horde.org/ticket/10221">Bug #10221</a>).
-[mms] Show translated name for special mailboxes in sent mail lists (Bug
-      #10220).
+[mms] Show translated name for special mailboxes in sent mail lists (<a href="http://bugs.horde.org/ticket/10220">Bug
+      #10220</a>).
 [mms] Fix regression in filtering mailbox in traditional view (<a href="http://bugs.horde.org/ticket/10213">Bug #10213</a>).
 
 
@@ -92,8 +94,8 @@ v5.0.5
 [mms] Fix sending messages with linked attachments (<a href="http://bugs.horde.org/ticket/10125">Bug #10125</a>).
 [mms] Handle response codes/errors returned from POP3 servers.
 [mms] Fix POP3 regressions.
-[mms] Workaround broken suhosin extension to allow search mailboxes (Request
-      #9842).
+[mms] Workaround broken suhosin extension to allow search mailboxes (<a href="http://bugs.horde.org/ticket/9842">Request
+      #9842</a>).
 
 
 ------
@@ -116,7 +118,7 @@ v5.0.4
 [mms] Fix display of subfolders in mobile view (<a href="http://bugs.horde.org/ticket/10043">Bug #10043</a>).
 [mms] Improved determination of available flags in a mailbox.
 [mms] Fix adding to whitelist from dynamic view (rui.carneiro@portugalmail.net,
-      Bug #10036).
+      <a href="http://bugs.horde.org/ticket/10036">Bug #10036</a>).
 
 
 ------
@@ -145,8 +147,8 @@ v5.0.1
 [mms] Fix updating flags/logs on original messages after resuming from draft.
 [mms] Fix flagging messages in search mailboxes in dynamic view.
 [mms] Don't attempt to poll non-IMAP mailboxes (<a href="http://bugs.horde.org/ticket/9896">Bug #9896</a>).
-[mms] Fix deleting attachments from compose message in dynamic view (Bug
-      #9899).
+[mms] Fix deleting attachments from compose message in dynamic view (<a href="http://bugs.horde.org/ticket/9899">Bug
+      #9899</a>).
 [mms] Newmail portal block can now be configured to auto-update.
 [mms] Fix deleteMessages and flagMessages API calls (<a href="http://bugs.horde.org/ticket/9888">Bug #9888</a>).
 [mms] More intelligent polling in dynamic view (<a href="http://bugs.horde.org/ticket/9808">Request #9808</a>).
@@ -297,8 +299,8 @@ v5.0-ALPHA1
 [mms] Add PGP & S/MIME compose support to DIMP.
 [mms] Check for incorrect identity on compose if a single recipient address
       is tied to a different identity than the sending identity.
-[mms] Use CATENATE (RFC 4469), if available, to strip MIME parts (Request
-      #8092).
+[mms] Use CATENATE (RFC 4469), if available, to strip MIME parts (<a href="http://bugs.horde.org/ticket/8092">Request
+      #8092</a>).
 [mms] Add preference to show flags created by other MUAs (<a href="http://bugs.horde.org/ticket/8882">Request #8882</a>).
 [mms] Added HTML signature support (<a href="http://bugs.horde.org/ticket/1406">Request #1406</a>).
 [mms] Simplified date sorting display (<a href="http://bugs.horde.org/ticket/8936">Request #8936</a>).
@@ -345,8 +347,8 @@ v5.0-ALPHA1
 [mms] Add splitbar to resize sidebar in DIMP.
 [mms] Use LIST-EXTENDED IMAP extension (RFC 5258), if available, to get
       subscribed mailbox information.
-[mms] Split ham/spam reporting actions into two separate preferences (Request
-      #8221).
+[mms] Split ham/spam reporting actions into two separate preferences (<a href="http://bugs.horde.org/ticket/8221">Request
+      #8221</a>).
 [mms] When clicking on base reply button, auto-determine the best way to
       reply to a message based on the header information.
 [mms] Add vertical-pane preview layout to DIMP.
@@ -424,7 +426,7 @@ v5.0-ALPHA1
 [mms] Make autocompletion threshold parameters configurable (<a href="http://bugs.horde.org/ticket/7322">Request #7322</a>).
 [mms] Add compose attachment preview to DIMP.
 [mms] Add 'unit' parameter for quota display (Carlos Pires &lt;acmpires@sapo.pt>,
-      Request #7044).
+      <a href="http://bugs.horde.org/ticket/7044">Request #7044</a>).
 [mms] Add support for '$Forwarded' IMAP keyword (<a href="http://bugs.horde.org/ticket/3402">Request #3402</a>).
 [mms] Attachments in a signed message now can be downloaded via the
       download all attachments link (<a href="http://bugs.horde.org/ticket/2939">Bug #2939</a>).
@@ -524,14 +526,14 @@ v4.3.5
 
 [mms] Upgrade prototype.js to v1.6.1.
 [jan] Add example hook for the search_sources preference (dom.lalot@gmail.com,
-      Request #7796).
+      <a href="http://bugs.horde.org/ticket/7796">Request #7796</a>).
 [mms] Fix renaming shared folders contained in empty namespaces (<a href="http://bugs.horde.org/ticket/8468">Bug #8468</a>).
 [mms] Correctly handle NO untagged responses on login (<a href="http://bugs.horde.org/ticket/8478">Bug #8478</a>).
 [mms] Correctly set charset of Bcc header in sent mail (<a href="http://bugs.horde.org/ticket/8362">Bug #8362</a>).
 [mms] Fix spellcheck in text-mode for certain words in non-English locales
       (<a href="http://bugs.horde.org/ticket/8330">Bug #8330</a>).
-[mms] Fix some javascript if using IE 8 (uses IE 7 compatibility mode) (Bug
-      #8345).
+[mms] Fix some javascript if using IE 8 (uses IE 7 compatibility mode) (<a href="http://bugs.horde.org/ticket/8345">Bug
+      #8345</a>).
 [jan] Allow to lock default_encrypt preference.
 [mjr] Add example hook for the add_source preference (<a href="http://bugs.horde.org/ticket/8285">Bug #8285</a>).
 [mms] Fix unqualified domain preference (<a href="http://bugs.horde.org/ticket/8272">Bug #8272</a>).
@@ -557,7 +559,7 @@ v4.3.4
 [jan] Fix rendering of subjects in RTL scripts when using LTR translations
       (vilius@lnk.lt, <a href="http://bugs.horde.org/ticket/3511">Bug #3511</a>).
 [mms] Add hook to allow hiding of IMAP folders (Gunnar Wrobel &lt;p@rdus.de>,
-      Request #7353).
+      <a href="http://bugs.horde.org/ticket/7353">Request #7353</a>).
 [jan] Fix logging of messages forwarded with attachments (<a href="http://bugs.horde.org/ticket/7911">Bug #7911</a>).
 
 
@@ -704,8 +706,8 @@ v4.2-RC4
       and to fix problems when updating JS/CSS files.
 [cjh] Apply fix for http://dev.rubyonrails.org/ticket/11473 to prototype.js
       (<a href="http://bugs.horde.org/ticket/6590">Request #6590</a>).
-[cjh] Make request token lifetime configurable (faurep@agr.gc.ca, Request
-      #6679).
+[cjh] Make request token lifetime configurable (faurep@agr.gc.ca, <a href="http://bugs.horde.org/ticket/6679">Request
+      #6679</a>).
 [mms] If using SMTP, send messages using 8BITMIME (RFC 1652) or BINARYMIME
       (RFC 3030) if appropriate (<a href="http://bugs.horde.org/ticket/6645">Request #6645</a>).
 [cjh] Work around a spellchecking issue with proc_close and --enable-sigchild
@@ -784,7 +786,7 @@ v4.2-RC1
 [cjh] Rename IMP_IMAP_Client::namespace to getNamespace() for PHP 5.3
       compatibility.
 [cjh] Cache PGP public keys for one hour (adrieder@sbox.tugraz.at,
-      Request #5773).
+      <a href="http://bugs.horde.org/ticket/5773">Request #5773</a>).
 [mms] Add mailbox list caching across sessions.
 [cjh] Don't translate "Fwd:" in email subjects (<a href="http://bugs.horde.org/ticket/5674">Request #5674</a>).
 [jan] Add link to strip all attachments from a message.
@@ -831,7 +833,7 @@ v4.2-ALPHA
 [cjh] Add a modal confirmation dialog for emptying a folder (<a href="http://bugs.horde.org/ticket/4812">Request #4812</a>).
 [mms] Add ability for admin to limit size of reply text.
 [mms] Add RSS/Atom feed for mailboxes (Eric Garrido &lt;ekg2002@columbia.edu>,
-      Request #2733).
+      <a href="http://bugs.horde.org/ticket/2733">Request #2733</a>).
 [mms] If tidy is available, use it to clean up outgoing HTML messages.
 [mms] Automatically delete blacklisted messages (<a href="http://bugs.horde.org/ticket/4569">Request #4569</a>).
 [cjh] Implement non-modal newmail popups (<a href="http://bugs.horde.org/ticket/3327">Request #3327</a>).
@@ -845,10 +847,10 @@ v4.2-ALPHA
 [jan] Show percentage of attachment limit usage in compose window
       (Eric Garrido &lt;ekg2002@columbia.edu>, <a href="http://bugs.horde.org/ticket/3434">Request #3434</a>).
 [jan] Add SQL driver for quotas (Tomas Simonaitis &lt;haden@homelan.lt>,
-      Request #4053).
+      <a href="http://bugs.horde.org/ticket/4053">Request #4053</a>).
 [mms] Allow user to view PGP encrypted messages sent by themself (<a href="http://bugs.horde.org/ticket/4332">Bug #4332</a>).
 [mas] Make ACL editor more intuitive (Eric Garrido &lt;ekg2002@columbia.edu>,
-      Request #3808).
+      <a href="http://bugs.horde.org/ticket/3808">Request #3808</a>).
 [mas] Conform to WCAG 1.0 Priority 2/Section 508 accessibility guidelines.
       (<a href="http://bugs.horde.org/ticket/4080">Request #4080</a>)
 [mms] Added preference to allow composition in reply/forward based on
@@ -862,7 +864,7 @@ v4.2-ALPHA
 [jan] Add support for symmetric PGP encryption (Requires Horde 3.2).
 [cjh] Add an onbeforeunload handler so Firefox and IE users can be prompted
       before accidentally closing a compose window (phyre@rogers.com,
-      Request #4271).
+      <a href="http://bugs.horde.org/ticket/4271">Request #4271</a>).
 [jan] Move mail_hdr preference from identities to a regular preference.
 [mms] Remove current mailbox information from session - allows multiple
       simultaneous open IMP windows (<a href="http://bugs.horde.org/ticket/3171">Request #3171</a>).
@@ -871,8 +873,8 @@ v4.2-ALPHA
 [cjh] Show thumbnails of large images instead of linking to them
       (Eric Garrido &lt;ekg2002@columbia.edu>, <a href="http://bugs.horde.org/ticket/3808">Request #3808</a>).
 [mms] Page location in mailbox is remembered for subsequent mailbox visits.
-[mas] Add maintenance task to purge old messages from spam folder (Request
-      #3860).
+[mas] Add maintenance task to purge old messages from spam folder (<a href="http://bugs.horde.org/ticket/3860">Request
+      #3860</a>).
 [mms] Implement mailbox message list caching.
 [mms] Port AJAX spell checking code from DIMP.
 [mms] Port auto-complete contacts AJAX code from DIMP.
@@ -883,8 +885,8 @@ v4.2-ALPHA
 [jan] Add multidomain support for Kolab servers (tokoe@kde.org, <a href="http://bugs.horde.org/ticket/3579">Request #3579</a>).
 [cjh] Add a hook for post-login actions, after the session is established
       but before redirection.
-[mms] Recent search queries can be retrieved on the search page (Request
-      #3337).
+[mms] Recent search queries can be retrieved on the search page (<a href="http://bugs.horde.org/ticket/3337">Request
+      #3337</a>).
 [mms] Convert all templates to Horde_Template::.
 [cjh] Show vTodo parts in the iTip driver (<a href="http://bugs.horde.org/ticket/3344">Request #3344</a>).
 [jan] Add maintenance task to purge old messages from sent-mail folders.
@@ -943,8 +945,8 @@ v4.1.4
 
 [jan] SECURITY: Fix XSS vulnerabilities in the search screen and thread view.
 [jan] Improve displaying of PGP messages (requires Horde 3.1.4 partially).
-[mms] Make sure we pass a read/write IMAP stream to the filters API (Bug
-      #5054).
+[mms] Make sure we pass a read/write IMAP stream to the filters API (<a href="http://bugs.horde.org/ticket/5054">Bug
+      #5054</a>).
 [mms] Do not allow move to trash unless trash folder is defined (<a href="http://bugs.horde.org/ticket/5012">Bug #5012</a>).
 [jan] Fix an encoding issue with the address book popup (<a href="http://bugs.horde.org/ticket/5050">Bug #5050</a>).
 
@@ -953,8 +955,8 @@ v4.1.4
 v4.1.4-RC1
 ----------
 
-[cjh] "Ignore All" spellchecking fixes (technology@pmi-portland.org, Bug
-      #4922).
+[cjh] "Ignore All" spellchecking fixes (technology@pmi-portland.org, <a href="http://bugs.horde.org/ticket/4922">Bug
+      #4922</a>).
 [cjh] Absolute restriction on the width of the contacts window select elements
       (<a href="http://bugs.horde.org/ticket/1985">Request #1985</a>).
 [cjh] Send lowercase mailto: attributes in iCalendar replies (<a href="http://bugs.horde.org/ticket/4872">Bug #4872</a>).
@@ -1084,8 +1086,8 @@ v4.1-RC1
 --------
 
 [mms] Removed 'dotfiles' server parameter.
-[mms] Allow PHP expressions to be executed for user-defined headers (Bug
-      #3093).
+[mms] Allow PHP expressions to be executed for user-defined headers (<a href="http://bugs.horde.org/ticket/3093">Bug
+      #3093</a>).
 [mms] Support 'DelSp' parameter in flowed text messages (requires Horde 3.1).
 [mms] Remove outdated, non-standards request for delivery confirmation.
 [mms] Hide lengthy address lists by default in message view and allow the user
@@ -3075,7 +3077,7 @@ v1.0
 
 [mms] Don't show prefs page unless authenticated to MIMP (<a href="http://bugs.horde.org/ticket/3756">Bug #3756</a>).
 [mms] Fix overriding smtphost/smtpport from servers.php (phyre@rogers.com,
-      Bug #3571).
+      <a href="http://bugs.horde.org/ticket/3571">Bug #3571</a>).
 
 
 --------
