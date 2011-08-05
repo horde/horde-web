@@ -1,0 +1,49 @@
+<div class="document" id="imp-performance-guide">
+<h1 class="title">IMP Performance Guide</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:imp&#64;lists.horde.org">imp&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<p>Tips on performance tuning systems for IMP.  See <a href="#id1"><span class="problematic" id="id2">`horde/docs/PERFORMANCE`_</span></a>
+for general performance tips for Horde.</p>
+<ul>
+<li><p class="first">Consider an IMAP proxy for more persistent connections.  Some IMAP proxies
+are <a class="reference external" href="http://www.imapproxy.org/">up-imapproxy</a> and <a class="reference external" href="http://www.vergenet.net/linux/perdition/">Perdition</a>.</p>
+<p>up-imapproxy is HIGHLY RECOMMENDED - especially versions 1.2.7rc1 and
+greater which contains features used internally by Horde to speed up
+access to the remote server.</p>
+</li>
+<li><p class="first">Some IMAP servers (or IMAP mailbox store formats) perform better than
+others.  Consider switching to a faster format if needed.</p>
+</li>
+<li><p class="first">Follow the IMAP servers' performance hints:</p>
+<ul class="simple">
+<li>Cyrus: <a class="reference external" href="http://www.cyrusimap.org/docs/cyrus-imapd/2.4.2/install-perf.php">http://www.cyrusimap.org/docs/cyrus-imapd/2.4.2/install-perf.php</a></li>
+<li>Cyrus: <a class="reference external" href="http://git.cyrusimap.org/cyrus-imapd/tree/doc/install-perf.html">http://git.cyrusimap.org/cyrus-imapd/tree/doc/install-perf.html</a></li>
+<li>Dovecot: <a class="reference external" href="http://wiki.dovecot.org/PerformanceTuning">http://wiki.dovecot.org/PerformanceTuning</a></li>
+</ul>
+</li>
+<li><p class="first">IMP can use persistent caching on the server side to store information
+about user's messages.  This results in much reduced mail server traffic
+and requires the server to parse the structure of every message only once.
+The tradeoff is your cache backend must be able to handle the potentially
+large amounts of cached data this option will produce. However, cache
+storage is potentially cheap when compared to the performance gained by
+using caching.</p>
+<p>To use this caching, you must have a <tt class="docutils literal">Cache System</tt> configured in Horde's
+<tt class="docutils literal">Administration/Configuration</tt> screen and have the relevant settings
+enabled in IMP's configuration screen
+(<tt class="docutils literal">Administration/Configuration/Webmail/Mailbox</tt>).</p>
+</li>
+</ul>
+<div class="system-messages section">
+<h1>Docutils System Messages</h1>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/jan/horde-git/imp/docs/PERFORMANCE</tt>, line 8); <em><a href="#id2">backlink</a></em></p>
+Unknown target name: &quot;horde/docs/performance&quot;.</div>
+</div>
+</div>
