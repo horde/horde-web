@@ -10,21 +10,34 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
 {
     /**
      *
-     * @var array  The match dictionary returned from the mapper.
+     * @var Horde_Routes_Matcher the match dictionary handler
      */
-    protected $_matchDict;
+    protected $_matcher;
 
     /**
      *
-     * @var Horde_Controller_Mapper
+     * @var Horde_Support_Array  The match dictionary.
      */
-    protected $_mapper;
+    protected $_matchDict;
 
     /**
      *
      * @var Horde_Controller_UrlWriter
      */
     public $urlWriter;
+
+    /**
+     * Constructor.
+     *
+     * @param Horde_Kolab_FreeBusy_Controller_MatchDict $match_dict The match
+     *                                                              dictionar     * @param Horde_Kolab_FreeBusy_Provider             $provider   The data
+     *                                                              provider.
+     */
+    public function __construct(Horde_Routes_Matcher $matcher)
+    {
+        $this->_matcher = $matcher;
+        $this->_provider = $provider;
+    }
 
     /**
      *
@@ -34,17 +47,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
      */
     public function processRequest(Horde_Controller_Request $request, Horde_Controller_Response $response)
     {
-        // Need to rematch since we need a copy of the matchDict.
-        // @TODO: This should be somehow injected into the class on instantiation
-        // @FIXME: Is this something that should be added to a RequestConfiguration
-        // object?
-        $this->_mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
-        $path = $request->getPath();
-        if (($pos = strpos($path, '?')) !== false) {
-            $path = substr($path, 0, $pos);
-        }
-        if (!$path) $path = '/';
-        $this->_matchDict = new Horde_Support_Array($this->_mapper->match($path));
+        $this->_matchDict = $this->_matcher->getMatchDict();
         $this->_setup();
         $this->_processRequest($response);
     }
