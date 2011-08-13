@@ -31,41 +31,38 @@
 <li><a class="reference internal" href="#example-urls" id="id14">12&nbsp;&nbsp;&nbsp;Example URLs</a></li>
 <li><a class="reference internal" href="#php-ini-settings" id="id15">13&nbsp;&nbsp;&nbsp;php.ini settings</a></li>
 <li><a class="reference internal" href="#html-4-compliance" id="id16">14&nbsp;&nbsp;&nbsp;HTML 4 Compliance</a></li>
-<li><a class="reference internal" href="#database-conventions" id="id17">15&nbsp;&nbsp;&nbsp;Database Conventions</a><ul class="auto-toc">
-<li><a class="reference internal" href="#oracle-database-scripts" id="id18">15.1&nbsp;&nbsp;&nbsp;Oracle Database Scripts</a></li>
+<li><a class="reference internal" href="#database-conventions" id="id17">15&nbsp;&nbsp;&nbsp;Database Conventions</a></li>
+<li><a class="reference internal" href="#regular-expression-use" id="id18">16&nbsp;&nbsp;&nbsp;Regular Expression Use</a></li>
+<li><a class="reference internal" href="#parameter-passing" id="id19">17&nbsp;&nbsp;&nbsp;Parameter Passing</a></li>
+<li><a class="reference internal" href="#long-lines" id="id20">18&nbsp;&nbsp;&nbsp;Long Lines</a></li>
+<li><a class="reference internal" href="#line-breaks" id="id21">19&nbsp;&nbsp;&nbsp;Line Breaks</a></li>
+<li><a class="reference internal" href="#private-variables" id="id22">20&nbsp;&nbsp;&nbsp;Private Variables</a></li>
+<li><a class="reference internal" href="#array-definitions" id="id23">21&nbsp;&nbsp;&nbsp;Array Definitions</a></li>
+<li><a class="reference internal" href="#internationalization-i18n" id="id24">22&nbsp;&nbsp;&nbsp;Internationalization (I18n)</a></li>
+<li><a class="reference internal" href="#error-checking" id="id25">23&nbsp;&nbsp;&nbsp;Error checking</a></li>
+<li><a class="reference internal" href="#existence-checking" id="id26">24&nbsp;&nbsp;&nbsp;Existence checking</a></li>
+<li><a class="reference internal" href="#quotes" id="id27">25&nbsp;&nbsp;&nbsp;Quotes</a></li>
+<li><a class="reference internal" href="#define" id="id28">26&nbsp;&nbsp;&nbsp;define()</a></li>
+<li><a class="reference internal" href="#security-considerations" id="id29">27&nbsp;&nbsp;&nbsp;Security Considerations</a><ul class="auto-toc">
+<li><a class="reference internal" href="#php-code-execution" id="id30">27.1&nbsp;&nbsp;&nbsp;PHP Code Execution:</a></li>
+<li><a class="reference internal" href="#command-execution" id="id31">27.2&nbsp;&nbsp;&nbsp;Command Execution:</a></li>
+<li><a class="reference internal" href="#file-disclosure" id="id32">27.3&nbsp;&nbsp;&nbsp;File Disclosure:</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#regular-expression-use" id="id19">16&nbsp;&nbsp;&nbsp;Regular Expression Use</a></li>
-<li><a class="reference internal" href="#parameter-passing" id="id20">17&nbsp;&nbsp;&nbsp;Parameter Passing</a></li>
-<li><a class="reference internal" href="#long-lines" id="id21">18&nbsp;&nbsp;&nbsp;Long Lines</a></li>
-<li><a class="reference internal" href="#line-breaks" id="id22">19&nbsp;&nbsp;&nbsp;Line Breaks</a></li>
-<li><a class="reference internal" href="#private-variables" id="id23">20&nbsp;&nbsp;&nbsp;Private Variables</a></li>
-<li><a class="reference internal" href="#array-definitions" id="id24">21&nbsp;&nbsp;&nbsp;Array Definitions</a></li>
-<li><a class="reference internal" href="#internationalization-i18n" id="id25">22&nbsp;&nbsp;&nbsp;Internationalization (I18n)</a></li>
-<li><a class="reference internal" href="#error-checking" id="id26">23&nbsp;&nbsp;&nbsp;Error checking</a></li>
-<li><a class="reference internal" href="#existence-checking" id="id27">24&nbsp;&nbsp;&nbsp;Existence checking</a></li>
-<li><a class="reference internal" href="#quotes" id="id28">25&nbsp;&nbsp;&nbsp;Quotes</a></li>
-<li><a class="reference internal" href="#define" id="id29">26&nbsp;&nbsp;&nbsp;define()</a></li>
-<li><a class="reference internal" href="#security-considerations" id="id30">27&nbsp;&nbsp;&nbsp;Security Considerations</a><ul class="auto-toc">
-<li><a class="reference internal" href="#php-code-execution" id="id31">27.1&nbsp;&nbsp;&nbsp;PHP Code Execution:</a></li>
-<li><a class="reference internal" href="#command-execution" id="id32">27.2&nbsp;&nbsp;&nbsp;Command Execution:</a></li>
-<li><a class="reference internal" href="#file-disclosure" id="id33">27.3&nbsp;&nbsp;&nbsp;File Disclosure:</a></li>
+<li><a class="reference internal" href="#optimizations" id="id33">28&nbsp;&nbsp;&nbsp;Optimizations</a><ul class="auto-toc">
+<li><a class="reference internal" href="#extension-loaded" id="id34">28.1&nbsp;&nbsp;&nbsp;extension_loaded()</a></li>
+<li><a class="reference internal" href="#concatenate-strings" id="id35">28.2&nbsp;&nbsp;&nbsp;Concatenate strings</a></li>
+<li><a class="reference internal" href="#loops" id="id36">28.3&nbsp;&nbsp;&nbsp;Loops</a></li>
+<li><a class="reference internal" href="#array" id="id37">28.4&nbsp;&nbsp;&nbsp;Array</a></li>
+<li><a class="reference internal" href="#user-defined-functions" id="id38">28.5&nbsp;&nbsp;&nbsp;User defined functions</a></li>
+<li><a class="reference internal" href="#dynamically-created-functions-eval-and-create-function" id="id39">28.6&nbsp;&nbsp;&nbsp;Dynamically created functions (eval and create_function)</a></li>
+<li><a class="reference internal" href="#disk-i-o" id="id40">28.7&nbsp;&nbsp;&nbsp;Disk I/O</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#optimizations" id="id34">28&nbsp;&nbsp;&nbsp;Optimizations</a><ul class="auto-toc">
-<li><a class="reference internal" href="#extension-loaded" id="id35">28.1&nbsp;&nbsp;&nbsp;extension_loaded()</a></li>
-<li><a class="reference internal" href="#concatenate-strings" id="id36">28.2&nbsp;&nbsp;&nbsp;Concatenate strings</a></li>
-<li><a class="reference internal" href="#loops" id="id37">28.3&nbsp;&nbsp;&nbsp;Loops</a></li>
-<li><a class="reference internal" href="#array" id="id38">28.4&nbsp;&nbsp;&nbsp;Array</a></li>
-<li><a class="reference internal" href="#user-defined-functions" id="id39">28.5&nbsp;&nbsp;&nbsp;User defined functions</a></li>
-<li><a class="reference internal" href="#dynamically-created-functions-eval-and-create-function" id="id40">28.6&nbsp;&nbsp;&nbsp;Dynamically created functions (eval and create_function)</a></li>
-<li><a class="reference internal" href="#disk-i-o" id="id41">28.7&nbsp;&nbsp;&nbsp;Disk I/O</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#stdin-stdout-stderr" id="id42">29&nbsp;&nbsp;&nbsp;STDIN/STDOUT/STDERR</a></li>
-<li><a class="reference internal" href="#php-function-issues" id="id43">30&nbsp;&nbsp;&nbsp;PHP Function Issues</a><ul class="auto-toc">
-<li><a class="reference internal" href="#fpassthru" id="id44">30.1&nbsp;&nbsp;&nbsp;fpassthru()</a></li>
-<li><a class="reference internal" href="#stream-get-contents" id="id45">30.2&nbsp;&nbsp;&nbsp;stream_get_contents()</a></li>
+<li><a class="reference internal" href="#stdin-stdout-stderr" id="id41">29&nbsp;&nbsp;&nbsp;STDIN/STDOUT/STDERR</a></li>
+<li><a class="reference internal" href="#php-function-issues" id="id42">30&nbsp;&nbsp;&nbsp;PHP Function Issues</a><ul class="auto-toc">
+<li><a class="reference internal" href="#fpassthru" id="id43">30.1&nbsp;&nbsp;&nbsp;fpassthru()</a></li>
+<li><a class="reference internal" href="#stream-get-contents" id="id44">30.2&nbsp;&nbsp;&nbsp;stream_get_contents()</a></li>
 </ul>
 </li>
 </ul>
@@ -401,45 +398,14 @@ issues.</p>
 tablename_fieldname.</p>
 <p>Other general guidelines: Table names should be plural (users); field names
 should be singular (user_name).</p>
-<p>Try to use portable data types and avoid RDBMS specific SQL scripts as much as
-possible. Portable types are INTEGER, SMALLINT, NUMERIC(4,0) (for TINYINT),
-NUMERIC(p,s), VARCHAR(n), CHAR(n), FLOAT, and REAL. See
-<a class="reference external" href="http://home.fnal.gov/~dbox/SQL_API_Portability.html">http://home.fnal.gov/~dbox/SQL_API_Portability.html</a> and
-<a class="reference external" href="http://articles.techrepublic.com.com/5100-10878_11-1045051.html">http://articles.techrepublic.com.com/5100-10878_11-1045051.html</a> for more
-information.</p>
-<p>Other portability guidlines: Always use the database abstraction layer's
-capabilities for result set pagination ('LIMIT' is not portable). Also, do not
-use the 'AS' keyword for table aliases.</p>
+<p>Use Horde_Db for any SQL schema management and for queries, especially for
+result set pagination ('LIMIT' is not portable). Also, do not use the 'AS'
+keyword for table aliases.</p>
 <p>In SQL queries, keywords should be capitalized.</p>
-<p>In table creation statements, SQL keywords and datatypes should be
-capitalized. Also, 'DEFAULT' constraints should be listed before 'NOT NULL'
-constraints for maximum portability. 'NOT NULL' constraints should not use an
-empty string for the 'DEFAULT' constraint.</p>
 <p>Identifiers should not be longer than 30 characters.</p>
-<div class="section" id="oracle-database-scripts">
-<h2><a class="toc-backref" href="#id18">15.1&nbsp;&nbsp;&nbsp;Oracle Database Scripts</a></h2>
-<p>For maximum portability with several Oracle versions, Oracle-specific database
-scripts are necessary. Coming from MySQL, use the following data types:</p>
-<ul class="simple">
-<li>VARCHAR2 for VARCHAR</li>
-<li>NUMBER(16) for INT(EGER)</li>
-<li>NUMBER(8) for SMALLINT</li>
-<li>NUMBER(1) for boolean flags (TINYINT)</li>
-<li>CLOB or VARCHAR2(4000) for TEXT</li>
-<li>DATE for DATETIME</li>
-</ul>
-<p>See <a class="reference external" href="http://download.oracle.com/docs/html/B10257_01/ch3.htm">http://download.oracle.com/docs/html/B10257_01/ch3.htm</a> for more
-information.</p>
-<p>Identifiers must not be longer than 30 characters. This is easily exceeded
-with some of the index names.</p>
-<p>'DEFAULT' constraints must always preceed 'NOT NULL' constraints. 'NOT NULL'
-constraints must not use an empty string for the 'DEFAULT' constraint.</p>
-<p>Instead of using <cite>ALTER TABLE table CHANGE column column spec...</cite> use <cite>ALTER
-TABLE table MODIFY column spec...</cite>.</p>
-</div>
 </div>
 <div class="section" id="regular-expression-use">
-<h1><a class="toc-backref" href="#id19">16&nbsp;&nbsp;&nbsp;Regular Expression Use</a></h1>
+<h1><a class="toc-backref" href="#id18">16&nbsp;&nbsp;&nbsp;Regular Expression Use</a></h1>
 <p>Always use the <a class="reference external" href="http://www.php.net/manual/en/ref.pcre.php">preg_</a> functions instead of <a class="reference external" href="http://www.php.net/manual/en/ref.regex.php">ereg_</a> (and
 <a class="reference external" href="http://www.php.net/manual/en/function.preg-split.php">preg_split()</a> instead of <a class="reference external" href="http://www.php.net/manual/en/function.split.php">split()</a>); they are included in PHP by default
 and are faster than <a class="reference external" href="http://www.php.net/manual/en/ref.regex.php">ereg_</a>; <a class="reference external" href="http://www.php.net/manual/en/ref.regex.php">ereg_</a> is also deprecated in PHP 5.3+.</p>
@@ -454,7 +420,7 @@ replaced is present, go ahead and do the more memory intensive string
 manipulation.</p>
 </div>
 <div class="section" id="parameter-passing">
-<h1><a class="toc-backref" href="#id20">17&nbsp;&nbsp;&nbsp;Parameter Passing</a></h1>
+<h1><a class="toc-backref" href="#id19">17&nbsp;&nbsp;&nbsp;Parameter Passing</a></h1>
 <p>Parameters should be passed by value wherever semantically possible.
 This practice takes full advantage of reference counting.</p>
 <div class="note">
@@ -470,7 +436,7 @@ This also eases future expansion since new options can be added without
 changing the API.</p>
 </div>
 <div class="section" id="long-lines">
-<h1><a class="toc-backref" href="#id21">18&nbsp;&nbsp;&nbsp;Long Lines</a></h1>
+<h1><a class="toc-backref" href="#id20">18&nbsp;&nbsp;&nbsp;Long Lines</a></h1>
 <p>The optimal line length is 80 characters, including comments. The maximum line
 length is 100 characters unless this severely impacts the clarity of the
 code. When deciding where to wrap, aim for readability, understanding that
@@ -479,7 +445,7 @@ and leave at least 2 spaces at the right margin (in other words, wrap at 78
 characters).</p>
 </div>
 <div class="section" id="line-breaks">
-<h1><a class="toc-backref" href="#id22">19&nbsp;&nbsp;&nbsp;Line Breaks</a></h1>
+<h1><a class="toc-backref" href="#id21">19&nbsp;&nbsp;&nbsp;Line Breaks</a></h1>
 <p>Only use UNIX style of linebreak (<tt class="docutils literal">\n</tt>), not Windows/DOS/Mac style
 (<tt class="docutils literal">\r\n</tt>).</p>
 <p>Using vim, to convert from DOS style type:</p>
@@ -495,13 +461,13 @@ type in the vi command you have to pad it first using the special <tt class="doc
 character.)</p>
 </div>
 <div class="section" id="private-variables">
-<h1><a class="toc-backref" href="#id23">20&nbsp;&nbsp;&nbsp;Private Variables</a></h1>
+<h1><a class="toc-backref" href="#id22">20&nbsp;&nbsp;&nbsp;Private Variables</a></h1>
 <p>Variables used exclusively within a class should begin with a underscore ('_')
 character.  An example class variable definition: <tt class="docutils literal">protected
 $_variablename;</tt></p>
 </div>
 <div class="section" id="array-definitions">
-<h1><a class="toc-backref" href="#id24">21&nbsp;&nbsp;&nbsp;Array Definitions</a></h1>
+<h1><a class="toc-backref" href="#id23">21&nbsp;&nbsp;&nbsp;Array Definitions</a></h1>
 <p>When defining arrays, or nested arrays, use the following format, where
 indentation is noted via the closing parenthesis characters:</p>
 <pre class="literal-block">
@@ -521,7 +487,7 @@ $arrayvar = array('foo1' =&gt; 'bar1');
 </pre>
 </div>
 <div class="section" id="internationalization-i18n">
-<h1><a class="toc-backref" href="#id25">22&nbsp;&nbsp;&nbsp;Internationalization (I18n)</a></h1>
+<h1><a class="toc-backref" href="#id24">22&nbsp;&nbsp;&nbsp;Internationalization (I18n)</a></h1>
 <p>Mark all strings presented to the user as gettext strings by calling the
 gettext shortcut function (<tt class="docutils literal">_()</tt>):</p>
 <pre class="literal-block">
@@ -546,7 +512,7 @@ strings correctly according to the current (or specified) character set but
 use the PHP functions for code/machine processed strings.</p>
 </div>
 <div class="section" id="error-checking">
-<h1><a class="toc-backref" href="#id26">23&nbsp;&nbsp;&nbsp;Error checking</a></h1>
+<h1><a class="toc-backref" href="#id25">23&nbsp;&nbsp;&nbsp;Error checking</a></h1>
 <p>Horde code should throw <tt class="docutils literal">Horde_Exception</tt> objects (or equivalent Exception
 derivatives) to report errors.  The calling code should either explicitly
 catch the exception and handle it or else the Horde-wide exception handler
@@ -568,7 +534,7 @@ should cache results of Horde::callHook() calls for example, if you expect them
 to not exist.</p>
 </div>
 <div class="section" id="existence-checking">
-<h1><a class="toc-backref" href="#id27">24&nbsp;&nbsp;&nbsp;Existence checking</a></h1>
+<h1><a class="toc-backref" href="#id26">24&nbsp;&nbsp;&nbsp;Existence checking</a></h1>
 <p>Often you'll need to check whether or not a variable or property exists.
 There are several cases here:</p>
 <ol class="loweralpha">
@@ -642,7 +608,7 @@ should only be used when necessary. Instead try to use !empty() or
 <a class="reference external" href="http://www.php.net/manual/en/function.isset.php">isset()</a> instead.</p>
 </div>
 <div class="section" id="quotes">
-<h1><a class="toc-backref" href="#id28">25&nbsp;&nbsp;&nbsp;Quotes</a></h1>
+<h1><a class="toc-backref" href="#id27">25&nbsp;&nbsp;&nbsp;Quotes</a></h1>
 <p>You should always use single quote (') characters around strings, except where
 double quote (&quot;) characters are required.  All literal strings should be in
 single quotes.  A comparison of single and double quote usage follows:</p>
@@ -673,7 +639,7 @@ $foo[index] = $foo[&quot;old_index&quot;];
 </pre>
 </div>
 <div class="section" id="define">
-<h1><a class="toc-backref" href="#id29">26&nbsp;&nbsp;&nbsp;define()</a></h1>
+<h1><a class="toc-backref" href="#id28">26&nbsp;&nbsp;&nbsp;define()</a></h1>
 <p><a class="reference external" href="http://www.php.net/manual/en/function.define.php">define()</a> is a somewhat slow function in PHP (as of PHP 4.3.x) so excessive
 use is discouraged.  Every constant created by <tt class="docutils literal">define()</tt> should be prefixed
 with <tt class="docutils literal">HORDE_</tt>, its package name, or the application name.</p>
@@ -681,11 +647,11 @@ with <tt class="docutils literal">HORDE_</tt>, its package name, or the applicat
 keyword.</p>
 </div>
 <div class="section" id="security-considerations">
-<h1><a class="toc-backref" href="#id30">27&nbsp;&nbsp;&nbsp;Security Considerations</a></h1>
+<h1><a class="toc-backref" href="#id29">27&nbsp;&nbsp;&nbsp;Security Considerations</a></h1>
 <p>The following are a non-exhaustive list of features/functions to take
 special care with:</p>
 <div class="section" id="php-code-execution">
-<h2><a class="toc-backref" href="#id31">27.1&nbsp;&nbsp;&nbsp;PHP Code Execution:</a></h2>
+<h2><a class="toc-backref" href="#id30">27.1&nbsp;&nbsp;&nbsp;PHP Code Execution:</a></h2>
 <p>require, include, require_once, include_once - Carefully audit any
 variables used in these functions, and check the source of any
 constants as well.</p>
@@ -695,7 +661,7 @@ it in uncontrolled conditions.</p>
 evaluated as PHP code.</p>
 </div>
 <div class="section" id="command-execution">
-<h2><a class="toc-backref" href="#id32">27.2&nbsp;&nbsp;&nbsp;Command Execution:</a></h2>
+<h2><a class="toc-backref" href="#id31">27.2&nbsp;&nbsp;&nbsp;Command Execution:</a></h2>
 <p>exec - Executes a specified command and returns the last line of output.</p>
 <p>passthru - Executes a specified command and writes the output to STDOUT.</p>
 <p>`` (backticks) - Executes the specified command and returns all the
@@ -705,21 +671,21 @@ output in an array.</p>
 stream to a PHP file descriptor.</p>
 </div>
 <div class="section" id="file-disclosure">
-<h2><a class="toc-backref" href="#id33">27.3&nbsp;&nbsp;&nbsp;File Disclosure:</a></h2>
+<h2><a class="toc-backref" href="#id32">27.3&nbsp;&nbsp;&nbsp;File Disclosure:</a></h2>
 <p>File functions which can be potentially used to open remote or
 unintended files: fopen, readfile, file, file_get_contents.</p>
 </div>
 </div>
 <div class="section" id="optimizations">
-<h1><a class="toc-backref" href="#id34">28&nbsp;&nbsp;&nbsp;Optimizations</a></h1>
+<h1><a class="toc-backref" href="#id33">28&nbsp;&nbsp;&nbsp;Optimizations</a></h1>
 <p>The following optimizations should be used, if possible:</p>
 <div class="section" id="extension-loaded">
-<h2><a class="toc-backref" href="#id35">28.1&nbsp;&nbsp;&nbsp;extension_loaded()</a></h2>
+<h2><a class="toc-backref" href="#id34">28.1&nbsp;&nbsp;&nbsp;extension_loaded()</a></h2>
 <p>This appears to be an expensive PHP call.  Use Horde_Util::extensionExists()
 instead, which will cache the results of the call.</p>
 </div>
 <div class="section" id="concatenate-strings">
-<h2><a class="toc-backref" href="#id36">28.2&nbsp;&nbsp;&nbsp;Concatenate strings</a></h2>
+<h2><a class="toc-backref" href="#id35">28.2&nbsp;&nbsp;&nbsp;Concatenate strings</a></h2>
 <p>Building a string with concatenation (the &quot;.&quot; operator) using
 single-quoted strings and variables is faster than using an
 interpolated string (a string inside double quotes with variables
@@ -727,7 +693,7 @@ inside the string itself).  In addition, concatenation is easier to
 read and audit for logic and security problems.</p>
 </div>
 <div class="section" id="loops">
-<h2><a class="toc-backref" href="#id37">28.3&nbsp;&nbsp;&nbsp;Loops</a></h2>
+<h2><a class="toc-backref" href="#id36">28.3&nbsp;&nbsp;&nbsp;Loops</a></h2>
 <p>Make sure that you do not continue to define the same variable within a
 loop.  Instead, declare the variable a single time before the loop is run.</p>
 <p>Additionally, for large amounts of data, do not use foreach() loops, as PHP
@@ -738,7 +704,7 @@ the values should be provided to the interior of the loop by reference,
 thereby eliminating the need to create a copy of the value.)</p>
 </div>
 <div class="section" id="array">
-<h2><a class="toc-backref" href="#id38">28.4&nbsp;&nbsp;&nbsp;Array</a></h2>
+<h2><a class="toc-backref" href="#id37">28.4&nbsp;&nbsp;&nbsp;Array</a></h2>
 <p>Avoid frequent array accesses.  If you use an array or an array member in a
 loop, assign it to a variable first:</p>
 <pre class="literal-block">
@@ -759,12 +725,12 @@ $unique = array_keys(array_flip($foo));
 key and then call array_keys($foo) to return the unique list.</p>
 </div>
 <div class="section" id="user-defined-functions">
-<h2><a class="toc-backref" href="#id39">28.5&nbsp;&nbsp;&nbsp;User defined functions</a></h2>
+<h2><a class="toc-backref" href="#id38">28.5&nbsp;&nbsp;&nbsp;User defined functions</a></h2>
 <p>User defined functions are more expensive than &quot;regular&quot; functions.  Use them
 only if they improve the code readability more then regular functions.</p>
 </div>
 <div class="section" id="dynamically-created-functions-eval-and-create-function">
-<h2><a class="toc-backref" href="#id40">28.6&nbsp;&nbsp;&nbsp;Dynamically created functions (eval and create_function)</a></h2>
+<h2><a class="toc-backref" href="#id39">28.6&nbsp;&nbsp;&nbsp;Dynamically created functions (eval and create_function)</a></h2>
 <p>Code executed with eval, and functions created with create_function,
 are essentially PHP code that the engine has to parse every time it is
 run. This code is impossible to cache with an opcode cache, and even
@@ -772,7 +738,7 @@ without one is slower than regular PHP code. Because they also have
 security risks, they should be avoided if at all possible.</p>
 </div>
 <div class="section" id="disk-i-o">
-<h2><a class="toc-backref" href="#id41">28.7&nbsp;&nbsp;&nbsp;Disk I/O</a></h2>
+<h2><a class="toc-backref" href="#id40">28.7&nbsp;&nbsp;&nbsp;Disk I/O</a></h2>
 <p>Disk read and write operations are slow.  If possible read and write files in
 large chunks.  According to the PHP documentation, file_get_contents() is
 potentially much faster than using fopen()/fread()/fclose(). BUT the
@@ -781,7 +747,7 @@ file_get_contents() depends on the data size.</p>
 </div>
 </div>
 <div class="section" id="stdin-stdout-stderr">
-<h1><a class="toc-backref" href="#id42">29&nbsp;&nbsp;&nbsp;STDIN/STDOUT/STDERR</a></h1>
+<h1><a class="toc-backref" href="#id41">29&nbsp;&nbsp;&nbsp;STDIN/STDOUT/STDERR</a></h1>
 <p>To access either STDIN, STDOUT, or STDERR, the following code should be used:</p>
 <pre class="literal-block">
 while (!feof([STDIN|STDOUT|STDERR])) {
@@ -791,9 +757,9 @@ while (!feof([STDIN|STDOUT|STDERR])) {
 </pre>
 </div>
 <div class="section" id="php-function-issues">
-<h1><a class="toc-backref" href="#id43">30&nbsp;&nbsp;&nbsp;PHP Function Issues</a></h1>
+<h1><a class="toc-backref" href="#id42">30&nbsp;&nbsp;&nbsp;PHP Function Issues</a></h1>
 <div class="section" id="fpassthru">
-<h2><a class="toc-backref" href="#id44">30.1&nbsp;&nbsp;&nbsp;fpassthru()</a></h2>
+<h2><a class="toc-backref" href="#id43">30.1&nbsp;&nbsp;&nbsp;fpassthru()</a></h2>
 <p>This function can fail depending on the size of the stream. Instead, use
 fread() to get the stream data:</p>
 <pre class="literal-block">
@@ -804,7 +770,7 @@ while (!feof($stream)) {
 </pre>
 </div>
 <div class="section" id="stream-get-contents">
-<h2><a class="toc-backref" href="#id45">30.2&nbsp;&nbsp;&nbsp;stream_get_contents()</a></h2>
+<h2><a class="toc-backref" href="#id44">30.2&nbsp;&nbsp;&nbsp;stream_get_contents()</a></h2>
 <p>This function was broken before PHP 5.2.7; the offset parameter did not
 respect a value of 0 (i.e. rewinding to beginning of stream).</p>
 <p>Use rewind() instead:</p>
