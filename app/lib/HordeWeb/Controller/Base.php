@@ -29,14 +29,11 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
     /**
      * Constructor.
      *
-     * @param Horde_Kolab_FreeBusy_Controller_MatchDict $match_dict The match
-     *                                                              dictionar     * @param Horde_Kolab_FreeBusy_Provider             $provider   The data
-     *                                                              provider.
+     * @param Horde_Routes_Matcher $matcher  The match dictionary.
      */
     public function __construct(Horde_Routes_Matcher $matcher)
     {
         $this->_matcher = $matcher;
-        $this->_provider = $provider;
     }
 
     /**
