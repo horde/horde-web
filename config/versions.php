@@ -31,7 +31,7 @@ $horde_four_apps = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.6)',
+        'ver' => 'H4 (3.0.7)',
         'date' => 'August 17 2011',
         'pear' => true
     ),
@@ -212,7 +212,7 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.6)',
+        'ver' => 'H4 (3.0.7)',
         'date' => 'August 17 2011',
         'pear' => true
     ),
