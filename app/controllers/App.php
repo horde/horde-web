@@ -115,10 +115,12 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
                 $view->latestNews = unserialize($latestnews);
             } else {
                 try {
-                    // array_splice() doesn't work on ArrayAccess objects.
-                    $feed = Horde_Feed::readUri($base_feed_url);
-                    for ($i = 0, $c = min(5, count($feed)); $i < $c; $i++) {
-                        $view->latestNews[] = $feed[$i];
+                    $i = 1;
+                    foreach (Horde_Feed::readUri($base_feed_url) as $entry) {
+                        $view->latestNews[] = $entry;
+                        if (++$i > 5) {
+                            break;
+                        }
                     }
                 } catch (Exception $e) {
                 }
