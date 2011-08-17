@@ -143,38 +143,9 @@ file. You may edit these files if you wish to customize Whups's appearance
 and behavior. With one exception (<tt class="docutils literal">reminders.php</tt>, in case you want to
 automatically sent out reminders about open tickets) the defaults will be
 correct for most sites.</p>
-<p>The <tt class="docutils literal">create_email.txt</tt> and <tt class="docutils literal">notify_email.txt</tt> files define how outgoing
-email notifications about new respectively updated tickets look like. If
-using non-ascii character in these files, they have to saved with UTF-8
-encoding. The following placeholders are available:</p>
-<blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field"><th class="field-name">&#64;&#64;ticket_url&#64;&#64;:</th><td class="field-body">The link to the ticket page.</td>
-</tr>
-<tr class="field"><th class="field-name">&#64;&#64;table&#64;&#64;:</th><td class="field-body">The ticket summary table.</td>
-</tr>
-<tr class="field"><th class="field-name">&#64;&#64;comment&#64;&#64;:</th><td class="field-body">The last user comment if any, including leading
-linebreaks.</td>
-</tr>
-<tr class="field"><th class="field-name">&#64;&#64;dont_reply&#64;&#64;:</th><td class="field-body">The message telling users to not reply, if enabled in
-the configuration, including trailing line breaks.</td>
-</tr>
-<tr class="field"><th class="field-name">&#64;&#64;date&#64;&#64;:</th><td class="field-body">The current date.</td>
-</tr>
-<tr class="field"><th class="field-name">&#64;&#64;full_name&#64;&#64;:</th><td class="field-body">The full name of the notification recipient.</td>
-</tr>
-<tr class="field"><th class="field-name">&#64;&#64;auth_name&#64;&#64;:</th><td class="field-body">The full name of the user that updated the ticket.</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<p>You can also specify queue-specific notification messages by creating
-seperate files with the following naming convention: <tt class="docutils literal">create_email_X.txt</tt>
-will be used for ticket creation emails for queue &quot;X&quot;;
-<tt class="docutils literal">notify_email_Y.txt</tt> will be used for notification emails for queue &quot;Y&quot;.</p>
+<p>The <tt class="docutils literal">create_email.plain.php</tt> and <tt class="docutils literal">notify_email.plain.php</tt> files define
+how outgoing email notifications about new respectively updated tickets look
+like. See the comments in these files for details.</p>
 <p>You must login to Horde as a Horde Administrator to finish the
 configuration of Whups. Use the Horde <tt class="docutils literal">Administration</tt> menu item to get
 to the administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to
