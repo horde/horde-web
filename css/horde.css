@@ -541,7 +541,6 @@ div.footer .section ul a {
     padding-bottom:10px;
 }
 
-
 div.sliderview {
     width:900px;
     height: 320px;
@@ -850,6 +849,13 @@ div.mainareasplit ul.simple {
 .dimmed table.roadmap .cancelled {
     color: #ddd;
     background-color: #d99;
+}
+
+.striped th {
+    font-weight: bold;
+}
+.rowOdd {
+    background-color: #ddd;
 }
 
 /* Docutils */
