@@ -11,6 +11,22 @@ intelligently displays the branch history of a given file. Branches have
 traditionally been a source of confusion when using CVS, and this feature aims
 to make it a bit clearer and easier to use.</p>
 
+<p>Other features include:</p>
+<ul>
+<li><b>Directory-based views</b>, with a summary of the most recent
+activity.</li>
+<li>View <b>full log history</b> on a single file, with the ability to stick to
+a single branch.</li>
+<li>Request arbritrary <b>differences between versions</b> and branches.  These
+can be viewed in a variety of formats, ranging from raw diff output to
+human-readable HTML.</li>
+<li><b>Visual branch viewing</b> for a single file, which graphically
+represents the history of the file with respect to branches from the main trunk
+of development.</li>
+<li><b>Annotation</b> (otherwise known as 'blame') support, which shows which
+authors are responsible for which portions of a file's contents.</li>
+</ul>
+
 <p>Chora is designed from the ground-up with customisability in mind, since
 Version Control Systems are used in a variety of different ways. Because of
 this, all the repository manipulation logic is abstracted away in our
