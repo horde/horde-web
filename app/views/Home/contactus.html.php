@@ -36,7 +36,19 @@
         United States</p>
 
         <h3>Telephone</h3>
-        <p>+1.404.475.4830</p>
+        <table>
+          <tr>
+            <td>USA:</td>
+            <td>&nbsp;+1.404.475.4830</td>
+            <td>&nbsp;(English)</td>
+          </tr>
+          <tr>
+            <td>Germany:</td>
+            <td>&nbsp;+49.521.4469.8995</td>
+            <td>&nbsp;(English, German)</td>
+          </tr>
+        </table>
+        </p>
       </div>
     </div>
      <div class="rightcol" style="background: none;">
