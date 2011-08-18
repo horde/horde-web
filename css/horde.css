@@ -305,6 +305,10 @@ div.hordeauthor h2 a {
 div.hordeauthor h2 a:hover {
     text-decoration: none;
 }
+div.hordeauthor {
+    margin-bottom: 15px;
+}
+
 body div.news {
     height:120px;
     background:#cfcfcf url(../images/rss_news.png) left bottom no-repeat;
