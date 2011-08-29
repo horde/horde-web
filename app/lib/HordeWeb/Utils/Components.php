@@ -109,13 +109,32 @@ class HordeWeb_Utils_Components
         // Cache the component from pear.horde.org for roughly one day
         $life = 86400 + mt_rand(0, 7200);
         if ($c = $this->_cache->get(__CLASS__ . '::comp::' . $component, $life)) {
-            if ($c['version'] == 1) {
+            if ($c['version'] == 2) {
                 return unserialize($c);
             }
         }
-        $c = array('version' => 1);
+        $c = array('version' => 2);
         $c['release'] = $this->_remote->getLatestDetails($component);
+        $c['has_ci'] = $this->_hasCi($component);
         $this->_cache->set(__CLASS__ . '::comp::' . $component, serialize($c));
         return $c;
+    }
+
+    /**
+     * Check if the component has a CI job.
+     *
+     * @param string $component The name of the component.
+     *
+     * @return boolean True if a CI job is defined.
+     */
+    private function _hasCi($component)
+    {
+        $client = new Horde_Http_Client(array('request.timeout' => 15));
+        try {
+            $response = $client->get('http://ci.horde.org/job/' . str_replace('Horde_', '', $component . '/api/json'));
+        } catch (Horde_Http_Exception $e) {
+            return false;
+        }
+        return $response->code != 404;
     }
 }
