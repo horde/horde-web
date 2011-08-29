@@ -11,6 +11,14 @@
           help.</p>
         </div>
 
+        <h3>Libraries</h3>
+        <p>Do you like some of the features our applications provide and would like
+        to get similar functionality in your next PHP application?
+        The Horde Project publishes a huge number of stand alone 
+        <a
+          href="<?php echo $this->urlWriter->urlFor('components') ?>">libraries</a>
+        that you can use in your own PHP development projects.
+
         <h3>Contribute</h3>
         <p>Want to get involved? The Horde Project is open to anyone interested
         in contributing.  <?php echo $this->linkTo( 'See how', array(

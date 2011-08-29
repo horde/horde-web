@@ -6,7 +6,9 @@
       <div class="section">
         <div class="sectionintro">
           <p>The Horde Project is about creating high quality Open Source <a
-          href="<?php echo $this->urlWriter->urlFor('apps') ?>">applications</a>,
+          href="<?php echo $this->urlWriter->urlFor('apps') ?>">applications</a>
+          and <a
+          href="<?php echo $this->urlWriter->urlFor('components') ?>">libraries</a>,
           based on PHP and the Horde Framework. We strive to be the most
           flexible web based groupware solution on the planet.</p>
         </div>
@@ -38,8 +40,10 @@
         <h3>The Code</h3>
 
         <p>The <a href="<?php echo $this->urlWriter->urlFor('development') ?>">
-        development</a> of the framework and the applications is a community
-        process, with contributions both from individual developers and
+        development</a> of the <a
+        href="<?php echo $this->urlWriter->urlFor('components') ?>">framework libraries</a>
+        and <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">applications</a>
+        is a community process, with contributions both from individual developers and
         corporations. The
         <a href="<?php echo $this->urlWriter->urlFor('team') ?>">Core Team</a>
         members are the people who are actively involved with designing and
