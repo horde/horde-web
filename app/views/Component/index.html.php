@@ -51,7 +51,7 @@
           example:</p>
 
           <pre class="brush:bash">pear install horde/horde_date</pre>
-          <?php //echo $this->render('componentsList');?>
+          <?php echo $this->render('componentsList');?>
         </div>
     </div>
     <div class="rightcol" style="background: none;">
