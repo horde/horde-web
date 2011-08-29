@@ -5,8 +5,25 @@
       <?php echo $this->render('compnav') ?>
       <div class="section">
           <div class="sectionintro">
+            <p>
             <?php echo $this->componentDetails['release']->getDescription() ?>
+            </p>
           </div>
+
+          <?php if (!empty($this->componentDetails['has_ci'])): ?>
+          <h3>Status</h3>
+
+          <p>
+            The following indicates the status of the library component
+            within <a href="http://ci.horde.org">the Horde continuous
+            integration server</a> (based on
+            <a href="http://jenkins-ci.org">Jenkins</a>)
+          </p>
+
+          <div style="width: 450px; margin: 0 auto;">
+            <script type="text/javascript" src="http://ci.horde.org/job/<?php echo $this->shortComponentName ?>/jswidgets/health/?skipDescription=true"></script>
+          </div>
+          <?php endif; ?>
       </div>
     </div>
     <div class="rightcol" style="background: none;">
