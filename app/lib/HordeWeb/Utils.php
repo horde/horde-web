@@ -141,6 +141,16 @@ class HordeWeb_Utils
                 }
                 $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), $view->appnameHuman, array('controller' => 'app', 'action' => 'app'));
             break;
+        case 'HordeWeb_Component_Controller':
+            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'))
+                . $separator
+                . $view->linkToUnlessCurrent('Libraries', array('controller' => 'component'));
+
+                if (!empty($view->shortComponentName)) {
+                    $crumb .= $separator;
+                }
+                $crumb .= $view->linkToUnless(empty($view->shortComponentName) || !$view->isCurrentPage(array('controller' => 'component')), $view->shortComponentName, array('controller' => 'component', 'component' => $view->componentName, 'action' => 'component'));
+            break;
         case 'HordeWeb_Community_Controller':
             $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'));
             if (!empty($params)) {
@@ -182,6 +192,11 @@ class HordeWeb_Utils
     {
         require $GLOBALS['fs_base'] . '/config/lists.php';
         return $lists;
+    }
+
+    static public function getComponents()
+    {
+        return $GLOBALS['injector']->getInstance('HordeWeb_Utils_Components');
     }
 
     /**
