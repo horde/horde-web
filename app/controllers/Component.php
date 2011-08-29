@@ -26,17 +26,8 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
         case 'component':
             $this->_component($response);
             break;
-        case 'authors':
-            $this->_authors($response);
-            break;
-        case 'docs':
-            $this->_docs($response);
-            break;
-        case 'examples':
-            $this->_examples($response);
-            break;
-        case 'roadmap':
-            $this->_roadmap($response);
+        case 'download':
+            $this->_download($response);
             break;
         default:
             $this->_notFound($response);
@@ -74,7 +65,6 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
     }
 
     /**
-     *
      * Specific component page
      *
      * @param Horde_Controller_Response $response
@@ -89,8 +79,32 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
             $view->page_title = '404 Not Found';
             $template = '404';
         } else {
-            $view->page_title = $view->shortComponentName . ' - The Horde Project';
+            $view->page_title = $view->shortComponentName . ' library - The Horde Project';
             $template = 'component';
+            $view->componentDetails = HordeWeb_Utils::getComponents()->fetchComponent($view->componentName);
+        }
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render($template));
+    }
+
+    /**
+     * Component download section.
+     *
+     * @param Horde_Controller_Response $response
+     */
+    protected function _download(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+
+        // Do we know about this component?
+        if (!in_array($view->componentName, $view->components)) {
+            $view->page_title = '404 Not Found';
+            $template = '404';
+        } else {
+            $view->page_title = 'Download ' . $view->componentName . ' - The Horde Project';
+            $template = 'download';
             $view->componentDetails = HordeWeb_Utils::getComponents()->fetchComponent($view->componentName);
         }
         $layout->setView($view);
