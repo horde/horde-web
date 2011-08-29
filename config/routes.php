@@ -29,6 +29,9 @@ $mapper->connect($_root . '/apps/:app/docs/:file', array('controller' => 'app', 
 $mapper->connect('app', $_root . '/apps/:app/:action', array('controller' => 'app', 'action' => 'app'));
 $mapper->connect($_root . '/apps/:app/screenshots', array('controller' => 'app', 'action' => 'screenshots'));
 
+/* Components */
+$mapper->connect('components', $_root . '/components', array('controller' => 'component', 'action' => 'index'));
+$mapper->connect('component', $_root . '/components/:component/:action', array('controller' => 'component', 'action' => 'component'));
 
 /* Development */
 $mapper->connect('development', $_root . '/development/:action', array('controller' => 'development', 'action' => 'index'));
