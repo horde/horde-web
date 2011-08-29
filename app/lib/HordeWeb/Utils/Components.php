@@ -97,6 +97,27 @@ class HordeWeb_Utils_Components
     }
 
     /**
+     * List the available component descriptions.
+     *
+     * @return array The list of components from pear.horde.org.
+     */
+    public function listDescriptions()
+    {
+        // Cache the list from pear.horde.org for one day
+        if ($descriptions = $this->_cache->get(__CLASS__ . '::descriptions', 86400)) {
+            return unserialize($descriptions);
+        }
+        $list = $this->listComponents();
+        $descriptions = array();
+        foreach ($list as $component) {
+            $details = $this->fetchComponent($component);
+            $descriptions[$component] = $details['release']->getDescription();
+        }
+        $this->_cache->set(__CLASS__ . '::descriptions', serialize($descriptions));
+        return $descriptions;
+    }
+
+    /**
      * Fetch the component information.
      *
      * @param string $component The name of the component to fetch.
