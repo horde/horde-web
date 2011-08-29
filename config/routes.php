@@ -31,7 +31,8 @@ $mapper->connect($_root . '/apps/:app/screenshots', array('controller' => 'app',
 
 /* Components */
 $mapper->connect('components', $_root . '/components', array('controller' => 'component', 'action' => 'index'));
-$mapper->connect('component', $_root . '/components/:component/:action', array('controller' => 'component', 'action' => 'component'));
+$mapper->connect('component', $_root . '/components/:component', array('controller' => 'component', 'action' => 'component'));
+$mapper->connect('component', $_root . '/components/:component/:action', array('controller' => 'component'));
 
 /* Development */
 $mapper->connect('development', $_root . '/development/:action', array('controller' => 'development', 'action' => 'index'));
