@@ -24,6 +24,7 @@
 <script type="text/javascript" src="<?php if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') echo 'https://ssl'; else echo 'http://www' ?>.google-analytics.com/ga.js"></script>
 <?php endif ?>
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="js/informer.js"></script>
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-22320801-1']);

@@ -17,6 +17,7 @@
   </div>
 <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<script type="text/javascript" src="js/informer.js"></script>
 <?php if (strpos($_SERVER['SERVER_NAME'], 'horde.org') !== false): ?>
 <script type="text/javascript" src="<?php if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') echo 'https://ssl'; else echo 'http://www' ?>.google-analytics.com/ga.js"></script>
 <?php endif ?>

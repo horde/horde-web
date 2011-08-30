@@ -112,7 +112,7 @@
 	var isChrome = testUA(/\bchrome\b/),
 		isSafari = !isChrome && testUA(/safari/);
 
-	var $ = "getElementsByClassName" in $D ?
+	var $ = "getElementsByClassName" in $D && !isIE ?
 		function (class_name, root) {
 			root = root || $D;
 			return root.getElementsByClassName(class_name);
