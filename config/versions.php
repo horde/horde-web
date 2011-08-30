@@ -31,20 +31,20 @@ $horde_four_apps = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.7)',
-        'date' => 'August 17 2011',
+        'ver' => 'H4 (3.0.8)',
+        'date' => 'August 30 2011',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.4)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (2.0.5)',
+        'date' => 'August 30 2011',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.8)',
-        'date' => 'August 17 2011',
+        'ver' => 'H4 (3.0.9)',
+        'date' => 'August 30 2011',
         'pear' => true
     ),
     'nag' => array(
@@ -212,20 +212,20 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.7)',
-        'date' => 'August 17 2011',
+        'ver' => 'H4 (3.0.8)',
+        'date' => 'August 30 2011',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.4)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (2.0.5)',
+        'date' => 'August 30 2011',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.8)',
-        'date' => 'August 17 2011',
+        'ver' => 'H4 (3.0.9)',
+        'date' => 'August 30 2011',
         'pear' => true
     ),
     'nag' => array(
