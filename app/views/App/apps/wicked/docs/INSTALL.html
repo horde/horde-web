@@ -1,15 +1,36 @@
 <div class="document" id="installing-wicked-1-0">
 <h1 class="title">Installing Wicked 1.0</h1>
-
-<p>This document contains instructions for installing the Wicked web-based Wiki
-application on your system.</p>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-wicked" id="id2">2&nbsp;&nbsp;&nbsp;Installing Wicked</a><ul class="auto-toc">
+<li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-release-tarballs" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuring-wicked" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Wicked</a></li>
+<li><a class="reference internal" href="#url-styles" id="id6">4&nbsp;&nbsp;&nbsp;URL Styles</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id7">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+</ul>
+</div>
+<p>This document contains instructions for installing the Wicked Wiki application
+on your system.</p>
 <p>For information on the capabilities and features of Wicked, see the file
 <a class="reference external" href="README">README</a> in the top-level directory of the Wicked distribution.</p>
 <div class="section" id="prerequisites">
-<h1>Prerequisites</h1>
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, Wicked <strong>requires</strong> the following:</p>
 <ol class="arabic">
-<li><p class="first">A working Horde installation</p>
+<li><p class="first">A working Horde installation.</p>
 <p>Wicked runs within the <a class="reference external" href="http://www.horde.org/apps/horde">Horde Application Framework</a>, a set of common tools
 for web applications written in PHP.  You must install Horde before
 installing Wicked.</p>
@@ -27,12 +48,12 @@ Horde prerequisites. Additionally, many of Wicked's optional
 features are configured via the Horde install.</p>
 </div>
 </li>
-<li><p class="first">SQL support in PHP</p>
+<li><p class="first">SQL support in PHP.</p>
 <p>Wicked stores its data in an SQL database. Build PHP with whichever
 SQL driver you require; see the Horde INSTALL file for details.</p>
 </li>
-<li><p class="first">The following PEAR modules:
-(See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PEAR modules)</p>
+<li><p class="first">The following PEAR packages:
+(See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PEAR packages)</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">If you are going to install Wicked the recommended way,
@@ -50,13 +71,13 @@ into the different output formats.</p>
 </ol>
 </div>
 <div class="section" id="installing-wicked">
-<h1>Installing Wicked</h1>
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Wicked</a></h1>
 <p>There are several ways to install Wicked. The recommended way to install Wicked
 is using the PEAR installer. Alternatively it can be installed from
 tarballs. Finally, if you want to run the latest development code, or get the
 latest, not yet released, fixes, you can install Wicked from Git.</p>
 <div class="section" id="installing-with-pear">
-<h2>Installing with PEAR</h2>
+<h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
 environment for Horde and install the Horde Framework.</p>
 <p>When installing Wicked through PEAR now, the installer will automatically
@@ -79,7 +100,7 @@ pear install -a horde/wicked
 </pre>
 </div>
 <div class="section" id="installing-from-release-tarballs">
-<h2>Installing from Release Tarballs</h2>
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></h2>
 <div class="important">
 <p class="first admonition-title">Important</p>
 <p class="last">As of today, there are no tarballs released for Wicked 1
@@ -105,8 +126,8 @@ example, with the Apache web server's default document root of
 <tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
 <pre class="literal-block">
 cd /usr/local/apache/htdocs/horde
-tar zxvf /path/to/wicked-0.1.tar.gz
-mv wicked-0.1 wicked
+tar zxvf /path/to/wicked-h4-1.0.tar.gz
+mv wicked-h4-1.0 wicked
 </pre>
 <p>and would then find Wicked at the URL:</p>
 <pre class="literal-block">
@@ -115,13 +136,13 @@ http://your-server/horde/wicked/
 </div>
 </div>
 <div class="section" id="configuring-wicked">
-<h1>Configuring Wicked</h1>
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Wicked</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring Wicked</p>
-<p>You must login to Horde as a Horde Administrator to finish the configuring
+<p>You must login to Horde as a Horde Administrator to finish the configuration
 of Wicked.  Use the Horde <tt class="docutils literal">Administration</tt> menu item to get to the
-administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to get
-the configuration page.  Select <tt class="docutils literal">Wiki</tt> from the selection list of
+administration page, and then click on the <tt class="docutils literal">Configuration</tt> icon to get the
+configuration page.  Select <tt class="docutils literal">Wiki</tt> from the selection list of
 applications.  Fill in or change any configuration values as needed.  When
 done click on <tt class="docutils literal">Generate Wiki Configuration</tt> to generate the <tt class="docutils literal">conf.php</tt>
 file.  If your web server doesn't have write permissions to the Wicked
@@ -134,15 +155,15 @@ the <tt class="docutils literal">config/</tt> directory can be found in each fil
 appearance and behavior. See the header of the configuration files for
 details and examples. The defaults will be correct for most sites.</p>
 </li>
-<li><p class="first">Creating the database table</p>
+<li><p class="first">Creating the database tables</p>
 <p>Once you finished the configuration in the previous step, you can create all
 database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
 Wicked row of the configuration screen.</p>
 <p>Alternatively you creating the Wicked database tables can be accomplished
-with horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in
-the Horde configuration, just run the following:</p>
+with horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly
+setup in the Horde configuration, just run the following:</p>
 <pre class="literal-block">
-horde/bin/horde-db-migrate wicked
+horde-db-migrate wicked
 </pre>
 </li>
 <li><p class="first">Testing Wicked</p>
@@ -156,15 +177,23 @@ horde/bin/horde-db-migrate wicked
 </ol>
 </div>
 <div class="section" id="url-styles">
-<h1>URL Styles</h1>
-<p>Wicked can use two forms of URL's; mod_rewrite style, or GET style. Your web
-server must have mod_rewrite enabled to use the mod_rewrite style. Apache
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;URL Styles</a></h1>
+<p>Wicked can use two forms of URLs: mod_rewrite style, or GET style. Your web
+server must have URL rewriting enabled to use the mod_rewrite style. Apache
 Servers or Apache Proxy Servers may also need to have AllowEncodedSlashes
-and/or AcceptPathInfo enabled to use the mod_rewrite style. The GET style URL's
+and/or AcceptPathInfo enabled to use the mod_rewrite style. The GET style URLs
 should work without any special configuration.</p>
+<p>Note for users of Lighttpd web server: The rewrite url generation relies on
+rewrite rules being configured on your web server. Since lighttpd does not
+support .htaccess files like Apache, there is also a configuration file for
+lighttpd included that contains the necessary rewrite rules. This file is:</p>
+<pre class="literal-block">
+docs/lighttpd-ansel.conf
+</pre>
+<p>Instructions for using it are included in the file.</p>
 </div>
 <div class="section" id="obtaining-support">
-<h1>Obtaining Support</h1>
+<h1><a class="toc-backref" href="#id7">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Wicked, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
