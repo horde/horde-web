@@ -4,10 +4,10 @@
  */
 require_once dirname(__FILE__) . '/app/lib/base.php';
 
-$request = $GLOBALS['injector']->getInstance('Horde_Controller_Request');
+$request = $injector->getInstance('Horde_Controller_Request');
 $runner = $injector->getInstance('Horde_Controller_Runner');
 
-$match = $GLOBALS['injector']->getInstance('Horde_Routes_Matcher')->getMatchDict();
+$match = $injector->getInstance('Horde_Routes_Matcher')->getMatchDict();
 $config = new Horde_Core_Controller_RequestConfiguration();
 if (empty($match['controller']) || !class_exists('HordeWeb_' . ucfirst($match['controller']) . '_Controller')) {
     $match['controller'] = 'home';
