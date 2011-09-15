@@ -18,6 +18,8 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
      */
     protected function _processRequest(Horde_Controller_Response $response)
     {
+        $view = $this->getView();
+
         switch ($this->_matchDict->action) {
         case 'index':
             $this->_index($response);
@@ -42,7 +44,6 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             return;
         }
 
-        $view = $this->getView();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
