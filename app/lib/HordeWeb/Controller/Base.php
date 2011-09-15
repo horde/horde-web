@@ -73,7 +73,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $this->setView($view);
     }
 
-    protected function _notFound(Horde_Contoller_Response $response)
+    protected function _notFound(Horde_Controller_Response $response)
     {
         $view = $this->getView();
         $view->page_title = 'The Horde Project';
@@ -84,7 +84,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $response->setBody($layout->render('404'));
     }
 
-    protected function _pageGone(Horde_Contoller_Response $response)
+    protected function _pageGone(Horde_Controller_Response $response)
     {
         $view = $this->getView();
         $view->page_title = '410 - Page Gone';
