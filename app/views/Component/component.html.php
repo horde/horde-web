@@ -4,6 +4,8 @@
       <?php echo $this->renderPartial('appbreadcrumb') ?>
       <?php echo $this->render('compnav') ?>
       <div class="section">
+          <h3><?php echo $this->componentDetails['release']->getSummary() ?></h3>
+
           <div class="sectionintro">
             <p>
             <?php echo $this->componentDetails['release']->getDescription() ?>
