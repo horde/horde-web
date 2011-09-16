@@ -862,6 +862,23 @@ div.mainareasplit ul.simple {
     background-color: #ddd;
 }
 
+/* Library pages */
+.healthReportDetails th {
+    font-weight: bold;
+}
+.healthReportDetails th, .healthReportDetails td {
+    padding: 1px;
+}
+.healthReportDetails img {
+    vertical-align: middle;
+}
+.healthReportDetails big {
+    color: #797979;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 117%;
+}
+
 /* Docutils */
 .note, .important, .hint, .warning, .alert {
     background-color: #ffb;
