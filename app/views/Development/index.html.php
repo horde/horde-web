@@ -16,7 +16,7 @@
         to get similar functionality in your next PHP application?
         The Horde Project publishes a huge number of stand alone 
         <a
-          href="<?php echo $this->urlWriter->urlFor('components') ?>">libraries</a>
+          href="<?php echo $this->urlWriter->urlFor('libraries') ?>">libraries</a>
         that you can use in your own PHP development projects.
 
         <h3>Contribute</h3>

@@ -51,12 +51,12 @@
           example:</p>
 
           <pre class="brush:bash">pear install horde/horde_date</pre>
-          <?php echo $this->render('componentsList');?>
+          <?php echo $this->render('librariesList');?>
         </div>
     </div>
     <div class="rightcol" style="background: none;">
       <?php echo $this->render('toc'); ?>
-      <?php echo $this->render('componentsListMenu');?>
+      <?php echo $this->render('librariesListMenu');?>
       <?php echo $this->render('sponsors');?>
     </div>
     <div class="clear"></div>

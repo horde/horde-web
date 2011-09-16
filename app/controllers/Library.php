@@ -1,8 +1,8 @@
 <?php
 /**
- * Component controller class
+ * Library controller class
  *
- * Handles requests to the component pages.
+ * Handles requests to the library pages.
  *
  * Copyright 2011 Horde LLC (http://www.horde.org)
  *
@@ -10,7 +10,7 @@
  * @author Michael J Rubinsky <mrubinsk@horde.org>
  * @author Gunnar Wrobel <wrobel@horde.org>
  */
-class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
+class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
 {
     /**
      *
@@ -23,8 +23,8 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
         case 'index':
             $this->_index($response);
             break;
-        case 'component':
-            $this->_component($response);
+        case 'library':
+            $this->_library($response);
             break;
         case 'download':
             $this->_download($response);
@@ -43,21 +43,21 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
         parent::_setup();
         $view = $this->getView();
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/Component',
-                  $GLOBALS['fs_base'] . '/app/views/Component/components/' . $this->_matchDict->component));
-        $view->componentName = $this->_matchDict->component;
-        $view->shortComponentName = str_replace('Horde_', '', $view->componentName);
-        $view->components = HordeWeb_Utils::getComponents()->listComponents();
+            array($GLOBALS['fs_base'] . '/app/views/Library',
+                  $GLOBALS['fs_base'] . '/app/views/Library/libraries/' . $this->_matchDict->library));
+        $view->libraryName = $this->_matchDict->library;
+        $view->shortLibraryName = str_replace('Horde_', '', $view->libraryName);
+        $view->libraries = HordeWeb_Utils::getLibraries()->listLibraries();
     }
 
     /**
-     * Components list page
+     * Libraries list page
      */
     protected function _index(Horde_Controller_Response $response)
     {
         $view = $this->getView();
         $view->page_title = 'Horde PHP Libraries';
-        $view->componentListController = array('controller' => 'component', 'action' => '');
+        $view->libraryListController = array('controller' => 'library', 'action' => '');
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -65,23 +65,23 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
     }
 
     /**
-     * Specific component page
+     * Specific library page
      *
      * @param Horde_Controller_Response $response
      */
-    protected function _component(Horde_Controller_Response $response)
+    protected function _library(Horde_Controller_Response $response)
     {
         $view = $this->getView();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
 
-        // Do we know about this component?
-        if (!in_array($view->componentName, $view->components)) {
+        // Do we know about this library?
+        if (!in_array($view->libraryName, $view->libraries)) {
             $view->page_title = '404 Not Found';
             $template = '404';
         } else {
-            $view->page_title = $view->shortComponentName . ' library - The Horde Project';
-            $template = 'component';
-            $view->componentDetails = HordeWeb_Utils::getComponents()->fetchComponent($view->componentName);
+            $view->page_title = $view->shortLibraryName . ' library - The Horde Project';
+            $template = 'library';
+            $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
         }
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -89,7 +89,7 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
     }
 
     /**
-     * Component download section.
+     * Library download section.
      *
      * @param Horde_Controller_Response $response
      */
@@ -98,14 +98,14 @@ class HordeWeb_Component_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
 
-        // Do we know about this component?
-        if (!in_array($view->componentName, $view->components)) {
+        // Do we know about this library?
+        if (!in_array($view->libraryName, $view->libraries)) {
             $view->page_title = '404 Not Found';
             $template = '404';
         } else {
-            $view->page_title = 'Download ' . $view->componentName . ' - The Horde Project';
+            $view->page_title = 'Download ' . $view->libraryName . ' - The Horde Project';
             $template = 'download';
-            $view->componentDetails = HordeWeb_Utils::getComponents()->fetchComponent($view->componentName);
+            $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
         }
         $layout->setView($view);
         $layout->setLayoutName('main');

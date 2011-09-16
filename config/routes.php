@@ -29,10 +29,10 @@ $mapper->connect($_root . '/apps/:app/docs/:file', array('controller' => 'app', 
 $mapper->connect('app', $_root . '/apps/:app/:action', array('controller' => 'app', 'action' => 'app'));
 $mapper->connect($_root . '/apps/:app/screenshots', array('controller' => 'app', 'action' => 'screenshots'));
 
-/* Components */
-$mapper->connect('components', $_root . '/components', array('controller' => 'component', 'action' => 'index'));
-$mapper->connect('component', $_root . '/components/:component', array('controller' => 'component', 'action' => 'component'));
-$mapper->connect('component', $_root . '/components/:component/:action', array('controller' => 'component'));
+/* Libraries */
+$mapper->connect('libraries', $_root . '/libraries', array('controller' => 'library', 'action' => 'index'));
+$mapper->connect('library', $_root . '/libraries/:library', array('controller' => 'library', 'action' => 'library'));
+$mapper->connect('library', $_root . '/libraries/:library/:action', array('controller' => 'library'));
 
 /* Development */
 $mapper->connect('development', $_root . '/development/:action', array('controller' => 'development', 'action' => 'index'));

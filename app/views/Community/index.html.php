@@ -8,7 +8,7 @@
           <p>The Horde Project is about creating high quality Open Source <a
           href="<?php echo $this->urlWriter->urlFor('apps') ?>">applications</a>
           and <a
-          href="<?php echo $this->urlWriter->urlFor('components') ?>">libraries</a>,
+          href="<?php echo $this->urlWriter->urlFor('libraries') ?>">libraries</a>,
           based on PHP and the Horde Framework. We strive to be the most
           flexible web based groupware solution on the planet.</p>
         </div>
@@ -41,7 +41,7 @@
 
         <p>The <a href="<?php echo $this->urlWriter->urlFor('development') ?>">
         development</a> of the <a
-        href="<?php echo $this->urlWriter->urlFor('components') ?>">framework libraries</a>
+        href="<?php echo $this->urlWriter->urlFor('libraries') ?>">framework libraries</a>
         and <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">applications</a>
         is a community process, with contributions both from individual developers and
         corporations. The
