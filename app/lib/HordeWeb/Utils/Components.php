@@ -128,16 +128,16 @@ class HordeWeb_Utils_Components
     public function fetchComponent($component)
     {
         // Cache the component from pear.horde.org for roughly one day
+        $version = 2;
         $life = 86400 + mt_rand(0, 7200);
-        if ($c = $this->_cache->get(__CLASS__ . '::comp::' . $component, $life)) {
-            if ($c['version'] == 2) {
-                return unserialize($c);
-            }
+        if ($c = $this->_cache->get(__CLASS__ . '::comp::' . $component . $version, $life)) {
+            return unserialize($c);
         }
-        $c = array('version' => 2);
-        $c['release'] = $this->_remote->getLatestDetails($component);
-        $c['has_ci'] = $this->_hasCi($component);
-        $this->_cache->set(__CLASS__ . '::comp::' . $component, serialize($c));
+
+        $c = array('release' => $this->_remote->getLatestDetails($component),
+                   'has_ci' => $this->_hasCi($component));
+        $this->_cache->set(__CLASS__ . '::comp::' . $component . $version, serialize($c));
+
         return $c;
     }
 
