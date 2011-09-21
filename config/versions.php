@@ -7,32 +7,32 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.8',
-        'date' => 'August 2 2011',
+        'ver' => '4.0.9',
+        'date' => 'August 31 2011',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.2',
-        'date' => 'August 2 2011',
+        'ver' => '4.0.3',
+        'date' => 'September 21 2011',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.2',
-        'date' => 'August 2 2011',
+        'ver' => '4.0.3',
+        'date' => 'September 21 2011',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.10)',
-        'date' => 'August 17 2011',
+        'ver' => 'H4 (5.0.13)',
+        'date' => 'September 21 2011',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.8)',
-        'date' => 'August 30 2011',
+        'ver' => 'H4 (3.0.9)',
+        'date' => 'September 21 2011',
         'pear' => true
     ),
     'ingo' => array(
@@ -43,8 +43,8 @@ $horde_four_apps = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.9)',
-        'date' => 'August 30 2011',
+        'ver' => 'H4 (3.0.10)',
+        'date' => 'September 21 2011',
         'pear' => true
     ),
     'nag' => array(
@@ -176,28 +176,28 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.8',
-        'date' => 'August 2 2011',
+        'ver' => '4.0.9',
+        'date' => 'August 31 2011',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.2',
-        'date' => 'August 2 2011',
+        'ver' => '4.0.3',
+        'date' => 'September 21 2011',
         'dir' => 'horde-groupware',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.2',
-        'date' => 'August 2 2011',
+        'ver' => '4.0.3',
+        'date' => 'September 21 2011',
         'dir' => 'horde-webmail',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.10)',
-        'date' => 'August 17 2011',
+        'ver' => 'H4 (5.0.13)',
+        'date' => 'September 21 2011',
         'pear' => true
     ),
     'dimp' => array(
@@ -212,8 +212,8 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.8)',
-        'date' => 'August 30 2011',
+        'ver' => 'H4 (3.0.9)',
+        'date' => 'September 21 2011',
         'pear' => true
     ),
     'ingo' => array(
@@ -224,8 +224,8 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.9)',
-        'date' => 'August 30 2011',
+        'ver' => 'H4 (3.0.10)',
+        'date' => 'September 21 2011',
         'pear' => true
     ),
     'nag' => array(
@@ -291,8 +291,8 @@ $horde_apps_stable = array(
         'date' => 'March 19 2009'
     ),
     'content' => array(
-        'ver' => 'H4 (1.0)',
-        'date' => 'April 5 2011',
+        'ver' => 'H4 (1.0.2)',
+        'date' => 'August 11 2011',
         'pear' => true,
     ),
     'timeobjects' => array(
