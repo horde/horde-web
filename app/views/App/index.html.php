@@ -157,27 +157,22 @@
           developed for a Horde 4 release. Can't wait? Chora is available for
           Horde 3, or you can use the bleeding edge development code.</p>
 
-          <h3>Whups</h3>
-          <p><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
-          'whups')) ?>">Whups</a>, the Horde ticket tracking system, is still
-          under development for Horde 4. You can see the current code in action
-          on Horde's bug tracker. Can't wait to run it yourself? Consider using
-          the bleeding edge development code from our Git repository, or use
-          Horde 3.</p>
-
  <!--     <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'chora')) ?>">Chora</a></h3>
           <p>Chora is the Horde repository viewer, and it provides an advanced web-based
           view of any CVS, RCS, or Subversion repository. It includes annotation
           support, visual branch viewing capability, and human-readable diffs. It powers
           <a href="http://cvs.horde.org/">http://cvs.horde.org/</a> and hundreds of
           other web cvs interface sites.</p>
+-->
 
-          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'whups')) ?>">Whups</a></h3>
+          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+          => 'whups')) ?>">Whups</a> <?php echo
+          HordeWeb_Utils::downloadIcon($this, 'whups') ?></h3>
           <p>The <b>W</b>eb <b>H</b>orde <b>U</b>ser <b>P</b>roblem
           <b>S</b>olver, besides being a contrived acronym, is a ticket-tracking
           system integrated with the rest of Horde. It
           runs <a href="http://bugs.horde.org/">http://bugs.horde.org/</a>.</p>
--->
+
           <h2><span>&nbsp;</span>Horde Business Tools</h2>
 
           <h3>Hermes</h3>
