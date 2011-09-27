@@ -13,6 +13,6 @@
   <?php if ($this->hasRoadmap): ?>
   <li><a href="<?php echo $this->urlWriter->urlFor('app', array('action' => 'roadmap', 'app' => $this->appname))?>">Roadmap</a></li>
   <?php endif;?>
-  <li><a href="http://git.horde.org/h/chora/horde-git/-/browse/<?php echo $this->appname ?>/">Source Code</a></li>
+  <li><a href="http://git.horde.org/horde-git/-/browse/<?php echo $this->appname ?>/">Source Code</a></li>
 </ul>
 
