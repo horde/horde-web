@@ -13,10 +13,8 @@ $__autoloader->addClassPathMapper($applicationMapper);
 $myMapper = new Horde_Autoloader_ClassPathMapper_Prefix('/^HordeWeb_/', $fs_base . '/app/lib/HordeWeb');
 $__autoloader->addClassPathMapper($myMapper);
 
-
 /* Binders */
 $GLOBALS['injector']->bindFactory('HordeWeb_View', 'HordeWeb_Factory_View', 'create');
 $registry = $GLOBALS['injector']->getInstance('Horde_Registry');
-
-/* Add our config to the injector */
-//`$GLOBALS['injector']->setInstance('site_config', $config);
+$mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
+require_once dirname(__FILE__) . '/../../config/routes.php';

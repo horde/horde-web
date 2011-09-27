@@ -1,4 +1,5 @@
 <ul class="communitynav">
+  <li><?php echo $this->linkTo('Libraries', array('controller' => 'library'))?></li>
   <li><?php echo $this->linkTo('Contribute', array('controller' => 'development', 'action' => 'contribute')) ?></li>
   <li><a href="http://git.horde.org">Browse Source</a></li>
   <li><?php echo $this->linkTo('Documentation', array('controller' => 'development', 'action' => 'documentation'))?></li>

@@ -1,4 +1,4 @@
-<p>Sork is comprised of four Horde modules: </p>
+<p>Sork is comprised of three Horde modules: </p>
 
 <ul>
     <li><?php echo $this->linkTo('Forwards', array('controller' => 'app', 'action' => 'app', 'app' => 'forwards')) ?> to set e-mail forwards.</li>

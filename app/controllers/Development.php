@@ -76,6 +76,9 @@ EOT;
         case 'versions':
             $view->page_title = ucfirst($this->_matchDict->action) . ' - The Horde Project';
             $template = $this->_matchDict->action;
+            if ($this->_matchDict->action == 'modules') {
+                Horde::addScriptFile('stripe.js');
+            }
             break;
 
         default:

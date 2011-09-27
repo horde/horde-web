@@ -115,7 +115,13 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
                 $view->latestNews = unserialize($latestnews);
             } else {
                 try {
-                    $view->latestNews = array_slice(Horde_Feed::readUri($base_feed_url), 0, 5);
+                    $i = 1;
+                    foreach (Horde_Feed::readUri($base_feed_url) as $entry) {
+                        $view->latestNews[] = $entry;
+                        if (++$i > 5) {
+                            break;
+                        }
+                    }
                 } catch (Exception $e) {
                 }
                 $cache->set('hordefeed' . $slug, serialize($view->latestNews));

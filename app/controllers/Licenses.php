@@ -30,6 +30,9 @@ class HordeWeb_Licenses_Controller extends HordeWeb_Controller_Base
         case 'lgpl':
             $view->license = file($base . 'LGPL');
             break;
+        case 'lgpl21':
+            $view->license = file($base . 'LGPL-2.1');
+            break;
         case 'bsd':
             $view->license = file($base . 'COPYRIGHT');
             break;

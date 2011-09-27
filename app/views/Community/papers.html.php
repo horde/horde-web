@@ -170,9 +170,8 @@
         href="http://www.daemonnews.org/">Daemon News</a> outling the
         implemention of IMP in a BSD environment. The article is available
         locally <a
-        href="<?php echo $GLOBALS['host_base'] ?>/papers/daemonnews.php">here</a>
-        (and <a href="daemonnews.html">here</a>, minus the Horde layout).
-        It appeared in the September 1999 issue of Daemon News (<a
+        href="<?php echo $GLOBALS['host_base'] ?>/papers/daemonnews.html">here</a>
+        . It appeared in the September 1999 issue of Daemon News (<a
         href="http://www.daemonnews.org/199909/imp.html">here</a>).</p>
 
         <p>In March, 1999, <a

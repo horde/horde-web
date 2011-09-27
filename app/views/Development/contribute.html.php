@@ -85,7 +85,7 @@
             Open Source project, your contribution will be greatly appreciated
             by the community.</p>
 
-            <strong>Welcome aboard!</strong>
+            <p><strong>Welcome aboard!</strong></p>
       </div>
     </div>
     <div class="rightcol" style="background: none;"><?php echo $this->render('sponsors'); ?></div>

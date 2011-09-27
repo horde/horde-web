@@ -60,11 +60,12 @@
                     <ul>
                       <?php if (empty($this->hordefeed)):?>
                         <li>The Horde newsfeed is temporarily unavailable.</li>
-                      <?php endif; ?> <?php $i = 0; ?> <?php foreach
+                      <?php else: ?> <?php $i = 0; ?> <?php foreach
                       ($this->hordefeed as $entry): if ($i++ >=
                       $this->maxHordeItems) { break; } echo
                       $this->renderPartial('feedListItem', array('locals' =>
-                      array('entry' => $entry))); endforeach; ?>
+                      array('entry' => $entry))); endforeach;
+                      endif;?>
                     </ul>
                   </div>
                   <h2><span>&nbsp;</span>Planet Horde</h2>

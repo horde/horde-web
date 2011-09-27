@@ -18,8 +18,6 @@
         work. This page still has to be updated to reflect the current state of
         modules in Git</b></a>
 
-        <script type="text/javascript" src="<?php echo $base_url
-        ?>/js/stripe.js"></script>
         <table id="ModulesTable" class="striped" cellspacing="0">
         <thead>
          <tr>
