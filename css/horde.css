@@ -825,10 +825,6 @@ table.roadmap .cancelled {
     text-decoration: line-through;
 }
 
-div.mainareasplit ul.simple {
-    list-style-type: none;
-    margin-left: 0;
-}
 .dimmed, .dimmed td, .dimmed h3, div.section .dimmed h3 {
     color: #aaa;
 }
