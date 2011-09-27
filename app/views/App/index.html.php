@@ -212,6 +212,13 @@
           by date or by strip. Features include automatic updating of comics, and various
           methods for obtaining the strips.</p>
  -->
+
+          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+          => 'wicked')) ?>">Wicked</a> <?php echo
+          HordeWeb_Utils::downloadIcon($this, 'wicked') ?></h3>
+          <p>Wicked is a Wiki for the Horde framework supporting several wiki
+          markup dialects. Wicked is also powering the
+          official <a href="http://wiki.horde.org">Horde Wiki</a>.</p>
         </div>
     </div>
     <div class="rightcol" style="background: none;">
