@@ -39,7 +39,7 @@
 
           <h2><span>&nbsp;</span>Horde Application Framework</h2>
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'horde')) ?>"> The Horde Application Framework</a> <?php echo
+          => 'horde')) ?>">The Horde Application Framework</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'horde') ?></h3>
           <p>The Horde Framework is the glue that all Horde applications have in
           common. It is many things, including some coding standards, common
@@ -50,7 +50,7 @@
           <h2><span>&nbsp;</span>Horde Email Platform</h2>
 
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'webmail')) ?>"> Horde Groupware Webmail Edition</a> <?php echo
+          => 'webmail')) ?>">Horde Groupware Webmail Edition</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'webmail') ?></h3>
           <p>Horde Groupware Webmail Edition is a free, enterprise ready,
           browser based communication suite. Users can read, send and organize
@@ -61,7 +61,7 @@
           </p>
 
           <h3 id="imp"><a href="<?php echo $this->urlWriter->urlFor('app',
-          array('app' => 'imp')) ?>"> IMP</a> <?php echo
+          array('app' => 'imp')) ?>">IMP</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'imp') ?></h3>
           <p>IMP provides webmail access to any IMAP or POP3 mailbox, and
           handles internet standard MIME attachments, user defined filters,
@@ -69,7 +69,7 @@
           some respects Horde grew out of it.</p>
 
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'ingo')) ?>"> Ingo</a> <?php echo
+          => 'ingo')) ?>">Ingo</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'ingo') ?></h3>
           <p>Ingo is an email filter rules manager.  It can generate Sieve,
           procmail and IMAP scripts and upload them to or execute them on the
@@ -118,7 +118,7 @@
           a SQL database, as part of a real filesystem, or on an FTP server.</p>
 -->
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'kronolith')) ?>"> Kronolith</a> <?php echo
+          => 'kronolith')) ?>">Kronolith</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'kronolith') ?></h3>
           <p>The Kronolith calendar provides a robust web-based calendar for any
           number of users or groups, with the ability to show any number of
@@ -127,14 +127,14 @@
           group, or any combination thereof.</p>
 
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'mnemo')) ?>"> Mnemo</a> <?php echo
+          => 'mnemo')) ?>">Mnemo</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'mnemo') ?></h3>
           <p>Mnemo is a note manager. It has the same sharing features as
           Kronolith and Nag, allowing workgroups to have a common notepad as
           well as private notes for individuals.</p>
 
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'nag')) ?>"> Nag</a> <?php echo
+          => 'nag')) ?>">Nag</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'nag') ?></h3>
           <p>Nag is a multiuser task list manager. Users can create any number
           of &quot;task lists&quot;, which can be shared with individual users,
@@ -143,7 +143,7 @@
           imported and exported in multiple formats.</p>
 
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-          => 'turba')) ?>"> Turba</a> <?php echo
+          => 'turba')) ?>">Turba</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'turba') ?></h3>
           <p>Turba is the Horde address book / contact management program. It
           provides a generic frontend to searching and managing LDAP, SQL, IMSP,
@@ -153,13 +153,13 @@
 
           <h3>Chora</h3>
           <p><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
-          'chora')) ?>"> Chora</a>, the Horde repository viewer is still being
+          'chora')) ?>">Chora</a>, the Horde repository viewer is still being
           developed for a Horde 4 release. Can't wait? Chora is available for
           Horde 3, or you can use the bleeding edge development code.</p>
 
           <h3>Whups</h3>
           <p><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
-          'whups')) ?>"> Whups</a>, the Horde ticket tracking system, is still
+          'whups')) ?>">Whups</a>, the Horde ticket tracking system, is still
           under development for Horde 4. You can see the current code in action
           on Horde's bug tracker. Can't wait to run it yourself? Consider using
           the bleeding edge development code from our Git repository, or use
@@ -197,7 +197,7 @@
           <h2><span>&nbsp;</span>Horde Web Content/Media Management Tools</h2>
           <h3>Ansel</h3>
           <p><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
-          'ansel')) ?>"> Ansel</a>, the Horde photo management application is
+          'ansel')) ?>">Ansel</a>, the Horde photo management application is
           getting the finishing touches applied to it for a Horde 4
           release. Want to try it out? Consider using the latest development
           code from our Git repository, or use Ansel for Horde 3.</p>
