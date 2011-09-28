@@ -76,16 +76,19 @@
           server (using a timsieved or VFS FTP driver, or the PHP IMAP
           extension, respectively).</p>
 
-<!--      <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'sork')) ?>">Sork</a></h3>
+          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+          => 'sork')) ?>">Sork</a></h3>
           <p>Sork is a collection of four other Horde modules:
-          <a href="forwards/">forwards</a>,
-          <a href="passwd/">passwd</a>,
-          <a href="vacation/">vacation</a>.
-          Together they perform
-          various account management functions such as changing passwords, setting up
-          e-mail forwards, and setting up e-mail vacation notices (auto responder
-          messages).</p>
- -->
+          <a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
+          'forwards')) ?>">Forwards</a>,
+          <a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
+          'passwd')) ?>/">Passwd</a>,
+          <a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
+          'vacation')) ?>/">Vacation</a>.  Together they perform various
+          account management functions such as changing passwords, setting up
+          e-mail forwards, and setting up e-mail vacation notices (auto
+          responder messages).</p>
+
           <h2><span>&nbsp;</span>Horde Groupware Suite</h2>
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
           => 'webmail')) ?>">Horde Groupware Webmail Edition</a> <?php echo
