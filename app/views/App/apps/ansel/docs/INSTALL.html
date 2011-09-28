@@ -50,39 +50,20 @@ PHP. You can alternatively use the <a class="reference internal" href="#imagick"
 </li>
 <li><p class="first">A database:</p>
 <p>Ansel needs a database to store information about images and galleries. Any
-database supported by MDB2 should work; MySQL and PostgreSQL are the most
+database supported by Horde_Db will work; MySQL and PostgreSQL are the most
 tested. If you use MySQL, you need at least version 5.0.</p>
-</li>
-<li><p class="first">The following PEAR packages:
-(See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PEAR packages)</p>
-<div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">If you are going to install Ansel the recommended way,
-i.e. using the PEAR installer, you can skip the remainder of
-this section. Installing Ansel through PEAR will
-automatically download and install all required PEAR modules.</p>
-</div>
-<ol class="loweralpha">
-<li><p class="first">MDB2</p>
-<p>Ansel uses the MDB2 classes for database access.  In addition, you will
-need to ensure you have the proper MDB2_Driver package for your specific
-database backend.</p>
-</li>
-</ol>
 </li>
 <li><p class="first">The following PECL modules:
 (See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PECL modules)</p>
 <ol class="loweralpha">
 <li><p class="first"><span class="target" id="imagick">imagick</span></p>
 <p>The imagick module provides a quicker, more efficient interface to
-ImageMagick's capabilities and is used if Horde finds it available on
-your system.  It provides better results when doing things like
-generating thumbnails with rounded corners and drop shadows. To use the
-imagick module, make sure you still set the path to <tt class="docutils literal">convert</tt> as
-described below. You can alternatively use the <a class="reference internal" href="#gd">GD</a> extension or the
-<a class="reference internal" href="#imagemagick">ImageMagick</a> software, but one of these is <strong>required</strong>. The imagick
-extension <strong>must</strong> be compiled against ImageMagick version 6.2.9 or
-better, though version 6.5.7 or better is recommended though.</p>
+ImageMagick's capabilities. It provides better results when doing things
+like generating thumbnails with rounded corners and drop shadows. You can
+alternatively use the <a class="reference internal" href="#gd">GD</a> extension or the <a class="reference internal" href="#imagemagick">ImageMagick</a> software, but one
+of these is <strong>required</strong>. The imagick extension <strong>must</strong> be compiled
+against ImageMagick version 6.2.9 or better, though version 6.5.7 or
+better is recommended.</p>
 </li>
 <li><p class="first"><span class="target" id="opencv">OpenCV</span></p>
 <p>The php-facedetect module provides the ability to detect human faces in
@@ -107,6 +88,8 @@ need to install this module.</p>
 </li>
 </ol>
 </li>
+</ol>
+<ol class="arabic" start="6">
 <li><p class="first">The <span class="target" id="imagemagick">ImageMagick</span> software.</p>
 <p>If using the <a class="reference external" href="http://www.imagemagick.org/">ImageMagick software</a> you need to set the path to the
 <tt class="docutils literal">convert</tt> utility in Horde's configuration screen
@@ -129,9 +112,9 @@ risk.</p>
 <div class="section" id="installing-ansel">
 <h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Ansel</a></h1>
 <p>There are several ways to install Ansel. The recommended way to install Ansel
-is using the PEAR installer. Alternatively it can be installed from
-tarballs. Finally, if you want to run the latest development code, or get the
-latest, not yet released, fixes, you can install Ansel from Git.</p>
+is using the PEAR installer. Alternatively, if you want to run the latest
+development code, or get the latest, not yet released, fixes, you can install
+Ansel from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
