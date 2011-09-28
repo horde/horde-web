@@ -362,9 +362,15 @@ $horde_apps_dev = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H3 (1.0-RC2)',
-        'date' => 'September 15 2008',
-        'file' => 'whups-h3-1.0-rc2.tar.gz'
+        'ver' => 'H4 (2.0-ALPHA1)',
+        'date' => 'September 27 2011',
+        'pear' => true,
+    ),
+    'wicked' => array(
+        'name' => 'Wicked',
+        'ver' => 'H4 (1.0-ALPHA1)',
+        'date' => 'September 27 2011',
+        'pear' => true,
     ),
     'hermes' => array(
         'name' => 'Hermes',
