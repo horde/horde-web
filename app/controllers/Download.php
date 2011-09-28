@@ -55,16 +55,20 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
 
     protected function _app(Horde_Controller_Response $response)
     {
-        $view = $this->getView();
-        $view->page_title = 'Downloads - The Horde Project';
-        $view->appListController = array('controller' => 'download', 'action' => 'app');
-        $horde_apps_stable = $view->stable;
-        $horde_apps_dev = HordeWeb_Utils::getDevApps();
         $app = $this->_matchDict->app;
         if (empty($app)) {
             exit;
         }
+
+        $view = $this->getView();
+        $view->page_title = 'Downloads - The Horde Project';
+        $view->appListController = array('controller' => 'download', 'action' => 'app');
         $view->appname = $app;
+
+        $horde_apps_stable = $view->stable;
+        $horde_apps_h4     = $view->h4Stable;
+        $horde_apps_dev    = HordeWeb_Utils::getDevApps();
+
         $app_info = $h4app = $h4date = $stableapp = $stabledate = $devapp = $app_list = array();
         if ($app != 'groupware' && $app != 'webmail') {
             $app_list[] = 'horde';
@@ -75,10 +79,18 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
         $app_list[] = $app;
         $app_list = array_unique($app_list);
 
+        foreach ($app_list as $val) {
+            $stabledate[$val] = isset($horde_apps_stable[$val])
+                ? strtotime($horde_apps_stable[$val]['date'])
+                : 0;
+            $h4date[$val] = isset($horde_apps_h4[$val])
+                ? strtotime($horde_apps_h4[$val]['date'])
+                : 0;
+        }
+
         if (isset($horde_apps_stable[$app])) {
             foreach ($app_list as $val) {
                 $stableapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_stable[$val], false, $this);
-                $stabledate[$val] = strtotime($horde_apps_stable[$val]['date']);
             }
             $app_info = $horde_apps_stable[$app];
             $stableapp[] = '<a href="' . htmlspecialchars(HordeWeb_Utils::app_patches_url($val, $horde_apps_stable[$app])) . '">Patches for Current Stable Release</a>';
@@ -86,21 +98,21 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             $stableapp[] = 'No current stable release';
         }
 
-        $h4apps = $view->h4Stable;
-        if (!empty($h4apps[$app])) {
+        if (isset($horde_apps_h4[$app])) {
             foreach ($app_list as $val) {
-                $h4app[] = HordeWeb_Utils::app_download_link($val, $h4apps[$val], false, $this);
-                $h4date[$val] = strtotime($h4apps[$val]['date']);
+                $h4app[] = HordeWeb_Utils::app_download_link($val, $horde_apps_h4[$val], false, $this);
             }
         }
 
-        $devapp = array();
         if (isset($horde_apps_dev[$app]) &&
-            ($stabledate[$app] < strtotime($horde_apps_dev[$val]['date'])) &&
-            ($h4date[$app] < strtotime($horde_apps_dev[$val]['date']))) {
+            $stabledate[$app] < strtotime($horde_apps_dev[$val]['date']) &&
+            $h4date[$app] < strtotime($horde_apps_dev[$val]['date'])) {
             foreach ($app_list as $val) {
-                if ((($val == 'horde') && !isset($horde_apps_dev[$val])) ||
-                    (isset($horde_apps_dev[$val]) && ($stabledate[$val] > strtotime($horde_apps_dev[$val]['date'])))) {
+                if (!isset($horde_apps_dev[$val])) {
+                    $devapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_stable[$val]);
+                } elseif ($h4date[$val] > strtotime($horde_apps_dev[$val]['date'])) {
+                    $devapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_h4[$val]);
+                } elseif ($stabledate[$val] > strtotime($horde_apps_dev[$val]['date'])) {
                     $devapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_stable[$val]);
                 } else {
                     $devapp[] = HordeWeb_Utils::app_download_link($val, $horde_apps_dev[$val]);
