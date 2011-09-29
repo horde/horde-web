@@ -86,18 +86,18 @@ install any dependencies of Gollem too. If you want to install Gollem with all
 optional dependencies, but without the binary PECL packages that need to be
 compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/gollem
+pear install -a -B horde/gollem-alpha
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/gollem
+pear install horde/gollem-alpha
 </pre>
 <p>If you want to install Gollem even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/gollem
+pear install -a horde/gollem-alpha
 </pre>
 </div>
 <div class="section" id="installing-from-release-tarballs">
@@ -150,10 +150,6 @@ generate Gollem configuration directory or file, it will not be able to
 write the file.  In this case, go back to <tt class="docutils literal">Configuration</tt> and choose one
 of the other methods to create the configuration file
 <tt class="docutils literal">gollem/config/conf.php</tt>.</p>
-<p>To configure Gollem, change to the <tt class="docutils literal">config/</tt> directory of the installed
-distribution, and copy the <tt class="docutils literal">backends.php.dist</tt> configuration file to
-<tt class="docutils literal">backends.php</tt> and edit it to your needs. You must be sure to configure an
-appropriate backend in <tt class="docutils literal">backends.php</tt>.</p>
 <p>Documentation on the format and purpose of the other configuration files in
 the <tt class="docutils literal">config/</tt> directory can be found in each file. You may create
 <tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize Gollem's

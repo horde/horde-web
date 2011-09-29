@@ -61,8 +61,8 @@ features are configured via the Horde install.</p>
 <li><p class="first">LDAP support <tt class="docutils literal"><span class="pre">--with-ldap</span></tt> [OPTIONAL]</p>
 <p>LDAP support is required for the kolab, ldap, and smbldap drivers.</p>
 </li>
-<li><p class="first">Mhash support <tt class="docutils literal"><span class="pre">--with-mhash</span></tt> [OPTIONAL]</p>
-<p>Mhash support is necessary for the smbldap driver.  See <a class="reference internal" href="#ldap-implementation-information">LDAP
+<li><p class="first">Hash support [OPTIONAL]</p>
+<p>Hash support is necessary for the smbldap driver.  See <a class="reference internal" href="#ldap-implementation-information">LDAP
 Implementation Information</a> for details.</p>
 </li>
 <li><p class="first">Mcrypt support <tt class="docutils literal"><span class="pre">--with-mcrypt</span></tt> [OPTIONAL]</p>
@@ -118,18 +118,18 @@ install any dependencies of Passwd too. If you want to install Passwd with all
 optional dependencies, but without the binary PECL packages that need to be
 compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/passwd
+pear install -a -B horde/passwd-alpha
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/passwd
+pear install horde/passwd-alpha
 </pre>
 <p>If you want to install Passwd even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/passwd
+pear install -a horde/passwd-alpha
 </pre>
 </div>
 <div class="section" id="installing-from-release-tarballs">
@@ -182,9 +182,6 @@ done click on <tt class="docutils literal">Generate Password Configuration</tt> 
 the Passwd configuration directory or file, it will not be able to write
 the file.  In this case, go back to <tt class="docutils literal">Configuration</tt> and choose one of the
 other methods to create the configuration file <tt class="docutils literal">passwd/config/conf.php</tt>.</p>
-<p>To configure Passwd, change to the <tt class="docutils literal">config/</tt> directory of the installed
-distribution, and copy the <tt class="docutils literal">backends.php.dist</tt> configuration file to
-<tt class="docutils literal">backends.php</tt> and edit it to your needs.</p>
 <p>Documentation on the format and purpose of the other configuration files in
 the <tt class="docutils literal">config/</tt> directory can be found in each file. You may create
 <tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize Passwd's
@@ -198,7 +195,7 @@ the <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INS
 scripts.  If you installed Passwd as described above, the URL to the test
 page would be:</p>
 <pre class="literal-block">
-http://your-server/horde/passwd/test.php
+http://your-server/horde/test.php?app=passwd
 </pre>
 </li>
 </ol>
@@ -250,10 +247,9 @@ are your own risk!</p>
 <li>MD5 encrypted passwords (using base64 encoding - md5-base64)</li>
 <li>SMD5 encrypted passwords</li>
 </ol>
-<p>The smbldap extension require the php mhash and mcrypt extensions.  To
-enable these you must compile php with the <tt class="docutils literal"><span class="pre">--with-mhash[=DIR]</span></tt> and
-<tt class="docutils literal"><span class="pre">--with-mcrypt[=DIR]</span></tt> parameters. <tt class="docutils literal">DIR</tt> is the mhash or mcrypt
-install directory.</p>
+<p>The smbldap extension require the php hash and mcrypt extensions.  To enable
+these you must compile php with <tt class="docutils literal"><span class="pre">--with-mcrypt[=DIR]</span></tt> and <strong>without</strong> the
+<tt class="docutils literal"><span class="pre">--disable-hash</span></tt> parameters. <tt class="docutils literal">DIR</tt> is the mcrypt install directory.</p>
 <p>Crypt cannot handle passwords longer than eight characters (it accepts them
 but truncates them at 8 characters).  If you want to use longer passwords, you
 may use SHA.</p>
