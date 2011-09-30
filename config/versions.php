@@ -360,6 +360,12 @@ $horde_apps_dev = array(
         'date' => 'March 29 2011',
         'pear' => true,
     ),
+    'gollem' => array(
+        'name' => 'Gollem',
+        'ver' => 'H4 (2.0-ALPHA1)',
+        'date' => 'September 30 2011',
+        'pear' => true,
+    ),
     'passwd' => array(
         'name' => 'Passwd',
         'ver' => 'H4 (4.0-ALPHA1)',
