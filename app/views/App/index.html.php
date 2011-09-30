@@ -110,16 +110,14 @@
           Horde Project. Horde Groupware bundles the separately available
           applications Kronolith, Turba, Nag and Mnemo.</p>
 
-          <h3>Gollem</h3>
-          <p>The Horde Team is still working hard at getting Gollem ready for
-          a Horde 4 release. Can't wait? Gollem is available for
-          <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'gollem')) ?>">Horde 3</a>.</p>
+          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+          => 'gollem')) ?>">Gollem</a> <?php echo
+          HordeWeb_Utils::downloadIcon($this, 'gollem') ?></h3>
+          <p>Gollem is a web-based File Manager, providing the ability to fully
+          manage a hierarchical file system stored in a variety of backends
+          such as a SQL database, as part of a real filesystem, or on FTP,
+          Samba or SSH servers.</p>
 
-<!--      <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'gollem')) ?>">Gollem</a></h3>
-          <p>Gollem is a web-based File Manager, providing the ability to
-          fully manage a hierarchical file system stored in a variety of backends such as
-          a SQL database, as part of a real filesystem, or on an FTP server.</p>
--->
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
           => 'kronolith')) ?>">Kronolith</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'kronolith') ?></h3>
