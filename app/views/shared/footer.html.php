@@ -9,6 +9,7 @@
                                     <li><a href="<? echo $this->urlWriter->urlFor('services')?>" title="Services" class="services">Services</a></li>
                                     <li><a href="<?php echo $this->urlWriter->urlFor('apps')?>" title="Applications" class="applications">Applications</a></li>
                                     <li><a href="http://wiki.horde.org" title="Wiki" class="wiki">Wiki</a></li>
+                                    <li><a href="http://demo.horde.org" title="Demo" class="demo">Demo</a></li>
                                     <li><a href="<?php echo $this->urlWriter->urlFor('support')?>" title="Support" class="support">Support</a></li>
                                     <li><a href="<?php echo $this->urlWriter->urlFor('contact')?>" title="Contact Us" class="contactus">Contact Us</a></li>
                                 </ul>

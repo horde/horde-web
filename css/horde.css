@@ -95,7 +95,7 @@ div.top ul {
 }
 div.top ul li {
     float:left;
-    width:92px;
+    width:76px;
     padding-top:3px;
     text-align:center;
 }
@@ -103,7 +103,7 @@ div.top ul li {
 div.top ul li a {
     text-decoration:none;
     line-height:30px;
-    font-size:13px;
+    font-size:12px;
     color:#999;
     text-align:center;
     font-weight:bold;
@@ -113,31 +113,37 @@ div.top ul li a {
 
 div.top ul li a.home {
     background:url(../images/home.gif) no-repeat 0 3px;
-    padding-left:15px;
+    padding-left:12px;
     margin-left:5px;
 }
 
 div.top ul li a.applications {
     background:url(../images/save.gif) no-repeat 0 3px;
-    padding-left:15px;
+    padding-left:12px;
     margin-left:3px;
 }
 
 div.top ul li a.wiki {
     background:url(../images/document.gif) no-repeat 0 3px;
-    padding-left:15px;
-    margin-left:5px;
+    padding-left:12px;
+    margin-left:2px;
+}
+
+div.top ul li a.demo {
+    background:url(../images/document.gif) no-repeat 0 3px;
+    padding-left:12px;
+    margin-left:2px;
 }
 
 div.top ul li a.support {
     background:url(../images/comment.gif) no-repeat 0 3px;
-    padding-left:15px;
-    margin-left:10px;
+    padding-left:12px;
+    margin-left:2px;
 }
 div.top ul li a.contactus {
     background:url(../images/mail_back.gif) no-repeat 0 3px;
-    padding-left:15px;
-    margin-left:15px;
+    padding-left:12px;
+    margin-left:10px;
 }
 
 div.top ul li a:hover, div.top ul li a.active {
