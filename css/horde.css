@@ -259,7 +259,7 @@ div.teaser div.text h2 {
     padding-left:6px;
     border-left:10px solid #556aa1;
 }
-div.mainareasplit h2, div.mainarea h2 {
+div.mainareasplit h2 {
     background:url(../images/ribbon_blue.png) no-repeat 0 0;
     position:relative;
     height:47px;
@@ -268,7 +268,15 @@ div.mainareasplit h2, div.mainarea h2 {
     font-weight:bold;
     line-height:38px;
 }
-
+div.mainarea h2 {
+    background:url(../images/ribbon_blue_full.png) no-repeat 0 0;
+    position:relative;
+    height:47px;
+    color:#fff;
+    letter-spacing:-1px;
+    font-weight:bold;
+    line-height:38px;
+}
 div.mainareasplit h2 span, div.mainarea h2 span {
     background:url(../images/ribbon_left.png) no-repeat 0 0;
     position:absolute;
@@ -277,6 +285,7 @@ div.mainareasplit h2 span, div.mainarea h2 span {
     left:-24px;
     top:-8px;
 }
+
 div.mainareasplit h2 a, div.mainarea h2 a {
     color: #fff;
 }

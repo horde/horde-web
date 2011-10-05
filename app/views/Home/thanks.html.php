@@ -1,6 +1,6 @@
 <div class="content">
   <div class="main">
-    <div class="mainareasplit">
+    <div class="mainarea">
       <h2><span>&nbsp;</span>Thanks!</h2>
       <div class="section">
         <p>The Horde project owes thanks to a number of people who have made
