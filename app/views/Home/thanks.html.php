@@ -7,6 +7,13 @@
         contributions of time, money, and services in order to keep this thing
         running.</p>
 
+        <h3>Sponsors</h3>
+        <p>The Horde project is generously sponsored by these organizations and companies:
+        <ul>
+        <li><a href="http://www.online-artikel.de/" title="Social Media News"><strong>Online Articles</strong></a></li>
+        </ul>
+        </p>
+
         <h3>Servers</h3>
         <p>The Horde.org servers are generously hosted by the following organizations:
         <ul>
@@ -29,9 +36,6 @@
         SyncML client licenses have been generously donated by Synthesis AG</a>
 
       </div>
-    </div>
-     <div class="rightcol" style="background: none;">
-         <?php echo $this->render('sponsors');?>
     </div>
     <div class="clear"></div>
   </div>
