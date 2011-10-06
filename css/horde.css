@@ -94,16 +94,21 @@ div.top ul {
     margin-top:20px;
 }
 div.top ul li {
+    background:url(../images/menu_line.png) no-repeat left top;
     float:left;
-    width:76px;
-    padding-top:3px;
+    height:38px;
+    padding:3px 10px 0 10px;
     text-align:center;
+}
+
+div.top ul li#home {
+    background:none;
 }
 
 div.top ul li a {
     text-decoration:none;
     line-height:30px;
-    font-size:12px;
+    font-size:13px;
     color:#999;
     text-align:center;
     font-weight:bold;
@@ -111,39 +116,36 @@ div.top ul li a {
     text-transform:lowercase;
 }
 
-div.top ul li a.home {
-    background:url(../images/home.gif) no-repeat 0 3px;
-    padding-left:12px;
-    margin-left:5px;
-}
-
-div.top ul li a.applications {
-    background:url(../images/save.gif) no-repeat 0 3px;
-    padding-left:12px;
+div.top ul li a.home,
+div.top ul li a.applications,
+div.top ul li a.wiki,
+div.top ul li a.demo,
+div.top ul li a.support,
+div.top ul li a.contactus {
+    background-repeat:no-repeat;
+    background-position:0 3px;
+    padding-left:15px;
     margin-left:3px;
 }
 
+div.top ul li a.home {
+    background-image:url(../images/home.gif);
+    margin-left:5px;
+}
+div.top ul li a.applications {
+    background-image:url(../images/save.gif);
+}
 div.top ul li a.wiki {
-    background:url(../images/document.gif) no-repeat 0 3px;
-    padding-left:12px;
-    margin-left:2px;
+    background-image:url(../images/document.gif);
 }
-
 div.top ul li a.demo {
-    background:url(../images/monitor.png) no-repeat 0 3px;
-    padding-left:12px;
-    margin-left:2px;
+    background-image:url(../images/monitor.png);
 }
-
 div.top ul li a.support {
-    background:url(../images/comment.gif) no-repeat 0 3px;
-    padding-left:12px;
-    margin-left:2px;
+    background-image:url(../images/comment.gif);
 }
 div.top ul li a.contactus {
-    background:url(../images/mail_back.gif) no-repeat 0 3px;
-    padding-left:12px;
-    margin-left:10px;
+    background-image:url(../images/mail_back.gif);
 }
 
 div.top ul li a:hover, div.top ul li a.active {
