@@ -259,31 +259,18 @@ div.teaser div.text h2 {
     padding-left:6px;
     border-left:10px solid #556aa1;
 }
-div.mainareasplit h2 {
-    background:url(../images/ribbon_blue.png) no-repeat 0 0;
+div.mainareasplit h2, div.mainarea h2 {
+    background:url(../images/ribbon.png) no-repeat 0 0;
     position:relative;
     height:47px;
-    color:#fff;
-    letter-spacing:-1px;
-    font-weight:bold;
-    line-height:38px;
-}
-div.mainarea h2 {
-    background:url(../images/ribbon_blue_full.png) no-repeat 0 0;
-    position:relative;
-    height:47px;
-    color:#fff;
-    letter-spacing:-1px;
-    font-weight:bold;
-    line-height:38px;
-}
-div.mainareasplit h2 span, div.mainarea h2 span {
-    background:url(../images/ribbon_left.png) no-repeat 0 0;
-    position:absolute;
-    width:24px;
-    height:55px;
     left:-24px;
-    top:-8px;
+    width:100%;
+    padding-top:7px;
+    padding-left:24px;
+    color:#fff;
+    letter-spacing:-1px;
+    font-weight:bold;
+    line-height:38px;
 }
 
 div.mainareasplit h2 a, div.mainarea h2 a {
@@ -734,14 +721,18 @@ div.sliderview p {
     margin-left: 20px;
 }
 #b-webi-widget h2 {
-    background: url(http://website.informer.com/w/horde3/wi_ribbon_blue.png) no-repeat 0 0;
+    background: url('../images/wi_ribbon_blue.png') no-repeat 0 0;
+    left: 0;
+    padding-top:0;
+    padding-left:0;
+    /*width: 546px;*/
     height: 35px;
     letter-spacing: -1px;
     line-height: 26px;
     font-size: 14px;
 }
 #b-webi-widget h2 span {
-    background: url(http://website.informer.com/w/horde3/wi_ribbon_left.png) no-repeat 0 0;
+    background: url('../images/wi_ribbon_left.png') no-repeat 0 0;
     height: 43px;
     left: -24px;
     position: absolute;

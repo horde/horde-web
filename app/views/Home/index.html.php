@@ -55,7 +55,7 @@
               <div class="main">
                 <div class="mainareasplit">
                   <?php echo $this->render('informer-home'); ?>
-                  <h2><span>&nbsp;</span>Latest News</h2>
+                  <h2>Latest News</h2>
                   <div class="planethorde">
                     <ul>
                       <?php if (empty($this->hordefeed)):?>
@@ -68,7 +68,7 @@
                       endif;?>
                     </ul>
                   </div>
-                  <h2><span>&nbsp;</span>Planet Horde</h2>
+                  <h2>Planet Horde</h2>
                   <div class="planethorde">
                     <ul>
                       <?php if (empty($this->planet)):?>
