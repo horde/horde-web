@@ -191,19 +191,16 @@
           MacOSX Dashboard widget and an invoice interface.</p>
 -->
           <h2><span>&nbsp;</span>Horde Web Content/Media Management Tools</h2>
-          <h3>Ansel</h3>
-          <p><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
-          'ansel')) ?>">Ansel</a>, the Horde photo management application is
-          getting the finishing touches applied to it for a Horde 4
-          release. Want to try it out? Consider using the latest development
-          code from our Git repository, or use Ansel for Horde 3.</p>
-<!--          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ansel')) ?>">Ansel</a></h3>
-          <p>Ansel is a full featured photo management application integrated with the
-          rest of Horde. Features include multiple gallery styles, geotagging, face
-          detection, full user control over gallery permissions, multiple image upload
-          options and integration points  with a  number of other Horde applications.</p>
+          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+          => 'ansel')) ?>">Ansel</a> <?php echo
+          HordeWeb_Utils::downloadIcon($this, 'ansel') ?></h3>
+          <p>Ansel is a full featured photo management application integrated
+          with the rest of Horde. Features include multiple gallery styles,
+          geotagging, face detection, full user control over gallery
+          permissions, multiple image upload options and integration points
+          with a number of other Horde applications.</p>
 
-          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'klutz')) ?>">Klutz</a></h3>
+<!--          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'klutz')) ?>">Klutz</a></h3>
           <p>Klutz is a comic strip aggregator and viewer. It lets you browse comic strips
           by date or by strip. Features include automatic updating of comics, and various
           methods for obtaining the strips.</p>
