@@ -7,8 +7,8 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.9',
-        'date' => 'August 31 2011',
+        'ver' => '4.0.10',
+        'date' => 'Oktober 11 2011',
         'pear' => true
     ),
     'groupware' => array(
@@ -176,8 +176,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.9',
-        'date' => 'August 31 2011',
+        'ver' => '4.0.10',
+        'date' => 'Oktober 11 2011',
         'pear' => true
     ),
     'groupware' => array(
@@ -362,8 +362,8 @@ $horde_apps_dev = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H4 (2.0-ALPHA1)',
-        'date' => 'September 30 2011',
+        'ver' => 'H4 (2.0-RC1)',
+        'date' => 'Oktober 11 2011',
         'pear' => true,
     ),
     'passwd' => array(
@@ -374,14 +374,14 @@ $horde_apps_dev = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0-ALPHA1)',
-        'date' => 'September 27 2011',
+        'ver' => 'H4 (2.0-RC1)',
+        'date' => 'Oktober 11 2011',
         'pear' => true,
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H4 (1.0-ALPHA1)',
-        'date' => 'September 27 2011',
+        'ver' => 'H4 (1.0-RC1)',
+        'date' => 'Oktober 11 2011',
         'pear' => true,
     ),
     'hermes' => array(
@@ -398,8 +398,8 @@ $horde_apps_dev = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H3 (1.0-RC1)',
-        'date' => 'January 20 2009',
-        'file' => 'ansel-h3-1.0-rc1.tar.gz'
+        'ver' => 'H4 (2.0-ALPHA1)',
+        'date' => 'Oktober 11 2011',
+        'pear' => true,
     ),
 );
