@@ -11,51 +11,55 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#general-instructions" id="id2">1&nbsp;&nbsp;&nbsp;General instructions</a></li>
-<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-12" id="id3">2&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.12</a><ul class="auto-toc">
-<li><a class="reference internal" href="#mime-viewer-options-mime-drivers-php" id="id4">2.1&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></li>
+<li><a class="reference internal" href="#general-instructions" id="id3">1&nbsp;&nbsp;&nbsp;General instructions</a></li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-14" id="id4">2&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.14</a><ul class="auto-toc">
+<li><a class="reference internal" href="#preferences-prefs-php" id="id5">2.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-10" id="id5">3&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.10</a><ul class="auto-toc">
-<li><a class="reference internal" href="#configuration-options-conf-php" id="id6">3.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-12" id="id6">3&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.12</a><ul class="auto-toc">
+<li><a class="reference internal" href="#mime-viewer-options-mime-drivers-php" id="id7">3.1&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-imp-from-4-x-to-5-x" id="id7">4&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.x To 5.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#html-gui-editor" id="id8">4.1&nbsp;&nbsp;&nbsp;HTML GUI editor</a></li>
-<li><a class="reference internal" href="#server-options-backends-php-old-servers-php" id="id9">4.2&nbsp;&nbsp;&nbsp;Server Options (backends.php; OLD servers.php)</a></li>
-<li><a class="reference internal" href="#id1" id="id10">4.3&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
-<li><a class="reference internal" href="#preferences-prefs-php" id="id11">4.4&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
-<li><a class="reference internal" href="#hooks-hooks-php" id="id12">4.5&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></li>
-<li><a class="reference internal" href="#custom-message-headers-old-header-php" id="id13">4.6&nbsp;&nbsp;&nbsp;Custom Message Headers (OLD header.php)</a></li>
-<li><a class="reference internal" href="#custom-message-trailers-old-trailer-txt" id="id14">4.7&nbsp;&nbsp;&nbsp;Custom Message Trailers (OLD trailer.txt)</a></li>
-<li><a class="reference internal" href="#fetchmail" id="id15">4.8&nbsp;&nbsp;&nbsp;Fetchmail</a></li>
-<li><a class="reference internal" href="#flags" id="id16">4.9&nbsp;&nbsp;&nbsp;Flags</a></li>
-<li><a class="reference internal" href="#menu" id="id17">4.10&nbsp;&nbsp;&nbsp;Menu</a></li>
-<li><a class="reference internal" href="#portal" id="id18">4.11&nbsp;&nbsp;&nbsp;Portal</a></li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-10" id="id8">4&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.10</a><ul class="auto-toc">
+<li><a class="reference internal" href="#configuration-options-conf-php" id="id9">4.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-imp-from-4-1-x-to-4-2-x" id="id19">5&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.1.x To 4.2.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#sql-backend" id="id20">5.1&nbsp;&nbsp;&nbsp;SQL Backend</a></li>
-<li><a class="reference internal" href="#unified-imap-quota-driver" id="id21">5.2&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></li>
-<li><a class="reference internal" href="#application-hooks" id="id22">5.3&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
-<li><a class="reference internal" href="#user-defined-mailbox-icons" id="id23">5.4&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></li>
-<li><a class="reference internal" href="#changed-preferences" id="id24">5.5&nbsp;&nbsp;&nbsp;Changed Preferences</a></li>
-<li><a class="reference internal" href="#new-message-list-format-hook" id="id25">5.6&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></li>
-<li><a class="reference internal" href="#spell-checking" id="id26">5.7&nbsp;&nbsp;&nbsp;Spell Checking</a></li>
-<li><a class="reference internal" href="#javascript-html-editor" id="id27">5.8&nbsp;&nbsp;&nbsp;Javascript HTML Editor</a></li>
+<li><a class="reference internal" href="#upgrading-imp-from-4-x-to-5-x" id="id10">5&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.x To 5.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#html-gui-editor" id="id11">5.1&nbsp;&nbsp;&nbsp;HTML GUI editor</a></li>
+<li><a class="reference internal" href="#server-options-backends-php-old-servers-php" id="id12">5.2&nbsp;&nbsp;&nbsp;Server Options (backends.php; OLD servers.php)</a></li>
+<li><a class="reference internal" href="#id1" id="id13">5.3&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
+<li><a class="reference internal" href="#id2" id="id14">5.4&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+<li><a class="reference internal" href="#hooks-hooks-php" id="id15">5.5&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></li>
+<li><a class="reference internal" href="#custom-message-headers-old-header-php" id="id16">5.6&nbsp;&nbsp;&nbsp;Custom Message Headers (OLD header.php)</a></li>
+<li><a class="reference internal" href="#custom-message-trailers-old-trailer-txt" id="id17">5.7&nbsp;&nbsp;&nbsp;Custom Message Trailers (OLD trailer.txt)</a></li>
+<li><a class="reference internal" href="#fetchmail" id="id18">5.8&nbsp;&nbsp;&nbsp;Fetchmail</a></li>
+<li><a class="reference internal" href="#flags" id="id19">5.9&nbsp;&nbsp;&nbsp;Flags</a></li>
+<li><a class="reference internal" href="#menu" id="id20">5.10&nbsp;&nbsp;&nbsp;Menu</a></li>
+<li><a class="reference internal" href="#portal" id="id21">5.11&nbsp;&nbsp;&nbsp;Portal</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-imp-from-4-0-x-to-4-1-x" id="id28">6&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.0.x To 4.1.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#automatic-namespace-detection" id="id29">6.1&nbsp;&nbsp;&nbsp;Automatic Namespace Detection</a></li>
-<li><a class="reference internal" href="#user-defined-headers" id="id30">6.2&nbsp;&nbsp;&nbsp;User-Defined Headers</a></li>
-<li><a class="reference internal" href="#removed-preferences" id="id31">6.3&nbsp;&nbsp;&nbsp;Removed Preferences</a></li>
-<li><a class="reference internal" href="#virtual-folders" id="id32">6.4&nbsp;&nbsp;&nbsp;Virtual Folders</a></li>
+<li><a class="reference internal" href="#upgrading-imp-from-4-1-x-to-4-2-x" id="id22">6&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.1.x To 4.2.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sql-backend" id="id23">6.1&nbsp;&nbsp;&nbsp;SQL Backend</a></li>
+<li><a class="reference internal" href="#unified-imap-quota-driver" id="id24">6.2&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></li>
+<li><a class="reference internal" href="#application-hooks" id="id25">6.3&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
+<li><a class="reference internal" href="#user-defined-mailbox-icons" id="id26">6.4&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></li>
+<li><a class="reference internal" href="#changed-preferences" id="id27">6.5&nbsp;&nbsp;&nbsp;Changed Preferences</a></li>
+<li><a class="reference internal" href="#new-message-list-format-hook" id="id28">6.6&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></li>
+<li><a class="reference internal" href="#spell-checking" id="id29">6.7&nbsp;&nbsp;&nbsp;Spell Checking</a></li>
+<li><a class="reference internal" href="#javascript-html-editor" id="id30">6.8&nbsp;&nbsp;&nbsp;Javascript HTML Editor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-4-0-x-to-4-1-x" id="id31">7&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.0.x To 4.1.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#automatic-namespace-detection" id="id32">7.1&nbsp;&nbsp;&nbsp;Automatic Namespace Detection</a></li>
+<li><a class="reference internal" href="#user-defined-headers" id="id33">7.2&nbsp;&nbsp;&nbsp;User-Defined Headers</a></li>
+<li><a class="reference internal" href="#removed-preferences" id="id34">7.3&nbsp;&nbsp;&nbsp;Removed Preferences</a></li>
+<li><a class="reference internal" href="#virtual-folders" id="id35">7.4&nbsp;&nbsp;&nbsp;Virtual Folders</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="general-instructions">
-<h1><a class="toc-backref" href="#id2">1&nbsp;&nbsp;&nbsp;General instructions</a></h1>
+<h1><a class="toc-backref" href="#id3">1&nbsp;&nbsp;&nbsp;General instructions</a></h1>
 <p>These are instructions to upgrade from earlier IMP versions. Please backup your
 existing data before running any of the steps described below. You can't use
 the updated data with your old IMP version anymore.</p>
@@ -71,43 +75,50 @@ configurations and database schemes. Log in as an administrator, go to
 Administration =&gt; Configuration and update anything that's highlighted as
 outdated.</p>
 </div>
+<div class="section" id="upgrading-imp-from-5-0-x-to-5-0-14">
+<h1><a class="toc-backref" href="#id4">2&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.14</a></h1>
+<div class="section" id="preferences-prefs-php">
+<h2><a class="toc-backref" href="#id5">2.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The 'reply_lang' preference has been added.</p>
+</div>
+</div>
 <div class="section" id="upgrading-imp-from-5-0-x-to-5-0-12">
-<h1><a class="toc-backref" href="#id3">2&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.12</a></h1>
+<h1><a class="toc-backref" href="#id6">3&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.12</a></h1>
 <div class="section" id="mime-viewer-options-mime-drivers-php">
-<h2><a class="toc-backref" href="#id4">2.1&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></h2>
+<h2><a class="toc-backref" href="#id7">3.1&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></h2>
 <p>The 'allthumbs' option has been removed from the HTML driver.  Image thumbnail
 previews are now always shown if an image conversion utility is present on the
 system.</p>
 </div>
 </div>
 <div class="section" id="upgrading-imp-from-5-0-x-to-5-0-10">
-<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.10</a></h1>
+<h1><a class="toc-backref" href="#id8">4&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.10</a></h1>
 <div class="section" id="configuration-options-conf-php">
-<h2><a class="toc-backref" href="#id6">3.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
+<h2><a class="toc-backref" href="#id9">4.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
 <p>The 'allow_resume_all' option has been removed.  Only messages specifically
 marked as drafts can be resumed; however, all messages are given the option
 to &quot;Edit As New&quot;.</p>
 </div>
 </div>
 <div class="section" id="upgrading-imp-from-4-x-to-5-x">
-<h1><a class="toc-backref" href="#id7">4&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.x To 5.x</a></h1>
+<h1><a class="toc-backref" href="#id10">5&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.x To 5.x</a></h1>
 <p>This is a non-exhaustive, quick explanation of what has changed between an IMP
 4.x installation to IMP 5.x.</p>
 <div class="section" id="html-gui-editor">
-<h2><a class="toc-backref" href="#id8">4.1&nbsp;&nbsp;&nbsp;HTML GUI editor</a></h2>
+<h2><a class="toc-backref" href="#id11">5.1&nbsp;&nbsp;&nbsp;HTML GUI editor</a></h2>
 <p>IMP only supports the CKeditor javascript HTML rich text editor.  Xinha is no
 longer supported.</p>
 <p>Button configuration is now stored in the prefs value 'ckeditor_buttons'.</p>
 </div>
 <div class="section" id="server-options-backends-php-old-servers-php">
-<h2><a class="toc-backref" href="#id9">4.2&nbsp;&nbsp;&nbsp;Server Options (backends.php; OLD servers.php)</a></h2>
+<h2><a class="toc-backref" href="#id12">5.2&nbsp;&nbsp;&nbsp;Server Options (backends.php; OLD servers.php)</a></h2>
 <p>The format of servers.php has changed and has been renamed to backends.php.</p>
 <p>The 'realm' option has been removed.  Altering usernames at runtime should
 instead by accomplished by using Horde's 'authusername' and/or IMP's
 'preauthenticate' hooks.</p>
 </div>
 <div class="section" id="id1">
-<h2><a class="toc-backref" href="#id10">4.3&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
+<h2><a class="toc-backref" href="#id13">5.3&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
 <p>Configuration relating to displaying the terms of agreement, GnuPG, OpenSSL,
 spellchecking, and login redirection have been moved to Horde.</p>
 <p>The 'show_preview' option has been removed; enabling previews is now handled
@@ -131,8 +142,8 @@ size_limit
 sort_limit
 </pre>
 </div>
-<div class="section" id="preferences-prefs-php">
-<h2><a class="toc-backref" href="#id11">4.4&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id14">5.4&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
 <p>The 'sending_charset' and 'time_format' preferences have been moved to Horde.</p>
 <p>The following preferences are no longer used and may be safely removed from
 your preference backend:</p>
@@ -164,7 +175,7 @@ vtrash_id
 </pre>
 </div>
 <div class="section" id="hooks-hooks-php">
-<h2><a class="toc-backref" href="#id12">4.5&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
+<h2><a class="toc-backref" href="#id15">5.5&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
 <p>The format of hooks.php has changed.  See horde/docs/UPGRADING for more
 information.</p>
 <p>The 'vinfo' hook has been removed.  Use Horde's 'authusername' and/or IMP's
@@ -175,21 +186,21 @@ handled in the core IMP code.  Attachment icon display is now handled by the
 set flags on messages.</p>
 </div>
 <div class="section" id="custom-message-headers-old-header-php">
-<h2><a class="toc-backref" href="#id13">4.6&nbsp;&nbsp;&nbsp;Custom Message Headers (OLD header.php)</a></h2>
+<h2><a class="toc-backref" href="#id16">5.6&nbsp;&nbsp;&nbsp;Custom Message Headers (OLD header.php)</a></h2>
 <p>The header.php configuration file has been removed.  Setting custom headers
 is now done in the 'pre_sent' hook.</p>
 </div>
 <div class="section" id="custom-message-trailers-old-trailer-txt">
-<h2><a class="toc-backref" href="#id14">4.7&nbsp;&nbsp;&nbsp;Custom Message Trailers (OLD trailer.txt)</a></h2>
+<h2><a class="toc-backref" href="#id17">5.7&nbsp;&nbsp;&nbsp;Custom Message Trailers (OLD trailer.txt)</a></h2>
 <p>The trailer.txt file has been removed.  Setting message trailers is now done
 in the 'trailer' hook.</p>
 </div>
 <div class="section" id="fetchmail">
-<h2><a class="toc-backref" href="#id15">4.8&nbsp;&nbsp;&nbsp;Fetchmail</a></h2>
+<h2><a class="toc-backref" href="#id18">5.8&nbsp;&nbsp;&nbsp;Fetchmail</a></h2>
 <p>All code relating to fetchmail has been removed.</p>
 </div>
 <div class="section" id="flags">
-<h2><a class="toc-backref" href="#id16">4.9&nbsp;&nbsp;&nbsp;Flags</a></h2>
+<h2><a class="toc-backref" href="#id19">5.9&nbsp;&nbsp;&nbsp;Flags</a></h2>
 <p>The list of available IMAP Flags/Keywords is now configurable via the
 'msgflags' preference.</p>
 <p>The Answered, Deleted, and Draft IMAP flags are no longer user settable
@@ -197,22 +208,22 @@ by default - these flags have special meanings and are automatically handled
 by the various message action functions instead.</p>
 </div>
 <div class="section" id="menu">
-<h2><a class="toc-backref" href="#id17">4.10&nbsp;&nbsp;&nbsp;Menu</a></h2>
+<h2><a class="toc-backref" href="#id20">5.10&nbsp;&nbsp;&nbsp;Menu</a></h2>
 <p>The dynamic view (DIMP) no longer supports the 'action' parameter located
 in config/menu.php.</p>
 </div>
 <div class="section" id="portal">
-<h2><a class="toc-backref" href="#id18">4.11&nbsp;&nbsp;&nbsp;Portal</a></h2>
+<h2><a class="toc-backref" href="#id21">5.11&nbsp;&nbsp;&nbsp;Portal</a></h2>
 <p>Portal rendering has been moved to Horde - config/portal.php is no longer
 needed or used.</p>
 </div>
 </div>
 <div class="section" id="upgrading-imp-from-4-1-x-to-4-2-x">
-<h1><a class="toc-backref" href="#id19">5&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.1.x To 4.2.x</a></h1>
+<h1><a class="toc-backref" href="#id22">6&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.1.x To 4.2.x</a></h1>
 <p>This is a non-exhaustive, quick explanation of what has changed between an IMP
 4.1.x installation to IMP 4.2.x.</p>
 <div class="section" id="sql-backend">
-<h2><a class="toc-backref" href="#id20">5.1&nbsp;&nbsp;&nbsp;SQL Backend</a></h2>
+<h2><a class="toc-backref" href="#id23">6.1&nbsp;&nbsp;&nbsp;SQL Backend</a></h2>
 <p>An SQL table has been added that can be used to track sent messages. This is
 necessary to provide users with the &quot;favourite recipients&quot; address book, and
 for message rate throttling.</p>
@@ -222,7 +233,7 @@ mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; sc
 </pre>
 </div>
 <div class="section" id="unified-imap-quota-driver">
-<h2><a class="toc-backref" href="#id21">5.2&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></h2>
+<h2><a class="toc-backref" href="#id24">6.2&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></h2>
 <p>Separate quota drivers for Cyrus and Courier servers are no longer
 necessary. These drivers have been replaced by a generic IMAP driver that
 should also be suitable for other IMAP servers that support the QUOTA
@@ -230,19 +241,19 @@ extension. Update <tt class="docutils literal">config/servers.php</tt> and chang
 setting to 'imap'.</p>
 </div>
 <div class="section" id="application-hooks">
-<h2><a class="toc-backref" href="#id22">5.3&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
+<h2><a class="toc-backref" href="#id25">6.3&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
 <p>All hooks that are specific to IMP have been moved from the
 <tt class="docutils literal">horde/config/hooks.php</tt> file. Move your existing IMP Hooks from there to
 <tt class="docutils literal">imp/config/hooks.php</tt>.</p>
 </div>
 <div class="section" id="user-defined-mailbox-icons">
-<h2><a class="toc-backref" href="#id23">5.4&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></h2>
+<h2><a class="toc-backref" href="#id26">6.4&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></h2>
 <p>The usage of the hook <tt class="docutils literal">_imp_hook_mbox_icons()</tt> has changed.  If you use this
 hook, make sure you change your implementation so it returns the correct
 value.</p>
 </div>
 <div class="section" id="changed-preferences">
-<h2><a class="toc-backref" href="#id24">5.5&nbsp;&nbsp;&nbsp;Changed Preferences</a></h2>
+<h2><a class="toc-backref" href="#id27">6.5&nbsp;&nbsp;&nbsp;Changed Preferences</a></h2>
 <p>The default values for the folder preferences 'sent_mail_folder',
 'drafts_folder', and 'trash_folder' have been changed and localized. Use the
 old values to prohibit the creation of duplicate folders for users that
@@ -258,7 +269,7 @@ preference. Existing user preferences are no longer used and have to be
 re-created by the users.</p>
 </div>
 <div class="section" id="new-message-list-format-hook">
-<h2><a class="toc-backref" href="#id25">5.6&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></h2>
+<h2><a class="toc-backref" href="#id28">6.6&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></h2>
 <p>The new hook <tt class="docutils literal">_imp_hook_msglist_format()</tt> has been added which allows the
 formatting of a message entry in the mailbox message list to be altered
 at the time the list is created.  This hook has made the following
@@ -273,23 +284,23 @@ The sample hook contained in <tt class="docutils literal">config/hooks.php</tt> 
 to replicate the previous behavior.</p>
 </div>
 <div class="section" id="spell-checking">
-<h2><a class="toc-backref" href="#id26">5.7&nbsp;&nbsp;&nbsp;Spell Checking</a></h2>
+<h2><a class="toc-backref" href="#id29">6.7&nbsp;&nbsp;&nbsp;Spell Checking</a></h2>
 <p>The <tt class="docutils literal">pspell</tt> driver is no longer supported since it does not work with
 HTML messages.  If using pspell, you must upgrade to aspell version 0.60+.</p>
 </div>
 <div class="section" id="javascript-html-editor">
-<h2><a class="toc-backref" href="#id27">5.8&nbsp;&nbsp;&nbsp;Javascript HTML Editor</a></h2>
+<h2><a class="toc-backref" href="#id30">6.8&nbsp;&nbsp;&nbsp;Javascript HTML Editor</a></h2>
 <p>Support has been added for FCKeditor as an option for the javascript HTML
 editor available on the compose page.  You must have Horde 3.2 or later
 installed to use this editor.</p>
 </div>
 </div>
 <div class="section" id="upgrading-imp-from-4-0-x-to-4-1-x">
-<h1><a class="toc-backref" href="#id28">6&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.0.x To 4.1.x</a></h1>
+<h1><a class="toc-backref" href="#id31">7&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.0.x To 4.1.x</a></h1>
 <p>This is a non-exhaustive, quick explanation of what has changed between an IMP
 4.0.x installation to IMP 4.1.x.</p>
 <div class="section" id="automatic-namespace-detection">
-<h2><a class="toc-backref" href="#id29">6.1&nbsp;&nbsp;&nbsp;Automatic Namespace Detection</a></h2>
+<h2><a class="toc-backref" href="#id32">7.1&nbsp;&nbsp;&nbsp;Automatic Namespace Detection</a></h2>
 <p>The <tt class="docutils literal">namespace</tt>, <tt class="docutils literal">hierarchies</tt>, <tt class="docutils literal">folders</tt>, <tt class="docutils literal">delimiter</tt>, and
 <tt class="docutils literal">dotfiles</tt> parameters were removed from <tt class="docutils literal">config/servers.php</tt>.  Namespaces
 are now automatically configured pursuant to <a class="reference external" href="http://www.faqs.org/rfcs/rfc2342.html">RFC 2342</a>.</p>
@@ -301,7 +312,7 @@ Information on how to correct your IMAP server configuration can be found at</p>
 <a class="reference external" href="http://wiki.horde.org/ImpUWIMAPNamespaces">http://wiki.horde.org/ImpUWIMAPNamespaces</a></blockquote>
 </div>
 <div class="section" id="user-defined-headers">
-<h2><a class="toc-backref" href="#id30">6.2&nbsp;&nbsp;&nbsp;User-Defined Headers</a></h2>
+<h2><a class="toc-backref" href="#id33">7.2&nbsp;&nbsp;&nbsp;User-Defined Headers</a></h2>
 <p>The <tt class="docutils literal">config/headers.txt</tt> file has been removed and replaced by
 <tt class="docutils literal">config/headers.php</tt>.  Any user-defined headers should be migrated to this
 file.  The new file has the advantage of allowing any valid PHP expression
@@ -309,7 +320,7 @@ to be executed at run-time when generating the headers.  See the top of
 the <tt class="docutils literal">headers.php</tt> file for the new format required.</p>
 </div>
 <div class="section" id="removed-preferences">
-<h2><a class="toc-backref" href="#id31">6.3&nbsp;&nbsp;&nbsp;Removed Preferences</a></h2>
+<h2><a class="toc-backref" href="#id34">7.3&nbsp;&nbsp;&nbsp;Removed Preferences</a></h2>
 <p>The following preferences are no longer used and may be safely removed from
 your <tt class="docutils literal">config/prefs.php</tt> file and your preferences backend:</p>
 <pre class="literal-block">
@@ -318,7 +329,7 @@ your <tt class="docutils literal">config/prefs.php</tt> file and your preference
 </pre>
 </div>
 <div class="section" id="virtual-folders">
-<h2><a class="toc-backref" href="#id32">6.4&nbsp;&nbsp;&nbsp;Virtual Folders</a></h2>
+<h2><a class="toc-backref" href="#id35">7.4&nbsp;&nbsp;&nbsp;Virtual Folders</a></h2>
 <p>The format for saved Virtual Folders has changed.  To convert to the new
 format you must run the script located at
 <tt class="docutils literal">scripts/upgrades/convert_vfolders.php</tt>.</p>
