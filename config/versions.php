@@ -25,8 +25,8 @@ $horde_four_apps = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.13)',
-        'date' => 'September 21 2011',
+        'ver' => 'H4 (5.0.14)',
+        'date' => 'October 18 2011',
         'pear' => true
     ),
     'turba' => array(
@@ -37,8 +37,8 @@ $horde_four_apps = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.5)',
-        'date' => 'August 30 2011',
+        'ver' => 'H4 (2.0.6)',
+        'date' => 'October 18 2011',
         'pear' => true
     ),
     'kronolith' => array(
@@ -49,14 +49,14 @@ $horde_four_apps = array(
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.3)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (3.0.4)',
+        'date' => 'October 18 2011',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.2)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (3.0.3)',
+        'date' => 'October 18 2011',
         'pear' => true
     ),
 );
@@ -196,8 +196,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.13)',
-        'date' => 'September 21 2011',
+        'ver' => 'H4 (5.0.14)',
+        'date' => 'October 18 2011',
         'pear' => true
     ),
     'dimp' => array(
@@ -218,8 +218,8 @@ $horde_apps_stable = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.5)',
-        'date' => 'August 30 2011',
+        'ver' => 'H4 (2.0.6)',
+        'date' => 'October 18 2011',
         'pear' => true
     ),
     'kronolith' => array(
@@ -230,14 +230,14 @@ $horde_apps_stable = array(
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.3)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (3.0.4)',
+        'date' => 'October 18 2011',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.2)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (3.0.3)',
+        'date' => 'October 18 2011',
         'pear' => true,
     ),
     'chora' => array(
@@ -362,8 +362,8 @@ $horde_apps_dev = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H4 (2.0-RC1)',
-        'date' => 'Oktober 11 2011',
+        'ver' => 'H4 (2.0-RC2)',
+        'date' => 'October 18 2011',
         'pear' => true,
     ),
     'passwd' => array(
@@ -374,8 +374,8 @@ $horde_apps_dev = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0-RC1)',
-        'date' => 'Oktober 11 2011',
+        'ver' => 'H4 (2.0-RC2)',
+        'date' => 'October 18 2011',
         'pear' => true,
     ),
     'wicked' => array(
