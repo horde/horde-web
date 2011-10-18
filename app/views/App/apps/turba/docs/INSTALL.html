@@ -155,7 +155,7 @@ then making them readable only to owner and group.  For example, if your
 webserver runs as <tt class="docutils literal">www.www</tt>, do as follows:</p>
 <pre class="literal-block">
 chown root.www config/*
-chmod 0440 config/*
+find config/ -type f -exec chmod 0440 '{}' \;
 </pre>
 </li>
 <li><p class="first">Testing Turba</p>
