@@ -398,8 +398,8 @@ $horde_apps_dev = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H4 (2.0-ALPHA1)',
-        'date' => 'Oktober 11 2011',
+        'ver' => 'H4 (2.0-RC1)',
+        'date' => 'Oktober 19 2011',
         'pear' => true,
     ),
 );
