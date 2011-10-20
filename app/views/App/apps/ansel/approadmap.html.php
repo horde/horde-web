@@ -46,7 +46,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
-  <tr><td>Native PHP 5 code</td><td class="progress">In Progress</td>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td></tr>
   <tr><td>Video Support</td><td class="cancelled">Postponed</td></tr>
   <tr><td>More user-controlled gallery style editing</td><td class="done">Done</td></tr>
   <tr><td>Remote Galleries (Import/Export to Facebook, Flickr, etc...)</td><td class="cancelled">Postponed</td></tr>
