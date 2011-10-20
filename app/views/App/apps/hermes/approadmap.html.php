@@ -25,11 +25,8 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Native PHP 5 code</td><td class="progress">In Progress</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Native PHP 5 code</td><td class="progress">In Progress</td></tr>
   <tr><td>Ajax view</td><td class="progress">In Progress</td></tr>
   <tr><td>Mobile view</td><td class="planned">Planned</td></tr>
 </table>
-
-</div>
-<br />
