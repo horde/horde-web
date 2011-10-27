@@ -59,6 +59,24 @@ $horde_four_apps = array(
         'date' => 'October 18 2011',
         'pear' => true
     ),
+    'gollem' => array(
+        'name' => 'Gollem',
+        'ver' => 'H4 (2.0)',
+        'date' => 'October 28 2011',
+        'pear' => true
+    ),
+    'whups' => array(
+        'name' => 'Whups',
+        'ver' => 'H4 (2.0)',
+        'date' => 'October 28 2011',
+        'pear' => true
+    ),
+    'wicked' => array(
+        'name' => 'Wicked',
+        'ver' => 'H4 (1.0)',
+        'date' => 'Oktober 28 2011',
+        'pear' => true,
+    ),
 );
 
 $horde_three_apps = array(
@@ -247,8 +265,9 @@ $horde_apps_stable = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H3 (1.1.2)',
-        'date' => 'September 28 2010'
+        'ver' => 'H4 (2.0)',
+        'date' => 'October 28 2011',
+        'pear' => true
     ),
     'passwd' => array(
         'name' => 'Passwd',
@@ -272,8 +291,15 @@ $horde_apps_stable = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H3 (1.0.1)',
-        'date' => 'November 6 2009'
+        'ver' => 'H4 (2.0)',
+        'date' => 'October 28 2011',
+        'pear' => true
+    ),
+    'wicked' => array(
+        'name' => 'Wicked',
+        'ver' => 'H4 (1.0)',
+        'date' => 'Oktober 28 2011',
+        'pear' => true,
     ),
     'hermes' => array(
         'name' => 'Hermes',
@@ -398,8 +424,8 @@ $horde_apps_dev = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H4 (2.0-RC1)',
-        'date' => 'Oktober 19 2011',
+        'ver' => 'H4 (2.0-RC2)',
+        'date' => 'Oktober 28 2011',
         'pear' => true,
     ),
 );
