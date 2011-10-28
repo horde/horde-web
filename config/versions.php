@@ -394,8 +394,8 @@ $horde_apps_dev = array(
     ),
     'passwd' => array(
         'name' => 'Passwd',
-        'ver' => 'H4 (4.0-ALPHA1)',
-        'date' => 'September 28 2011',
+        'ver' => 'H4 (4.0-RC1)',
+        'date' => 'October 28 2011',
         'pear' => true,
     ),
     'whups' => array(
