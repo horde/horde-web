@@ -7,8 +7,8 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.10',
-        'date' => 'Oktober 11 2011',
+        'ver' => '4.0.11',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'groupware' => array(
@@ -31,8 +31,8 @@ $horde_four_apps = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.9)',
-        'date' => 'September 21 2011',
+        'ver' => 'H4 (3.0.10)',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'ingo' => array(
@@ -43,14 +43,14 @@ $horde_four_apps = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.10)',
-        'date' => 'September 21 2011',
+        'ver' => 'H4 (3.0.11)',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.4)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (3.0.5)',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'mnemo' => array(
@@ -194,8 +194,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.10',
-        'date' => 'Oktober 11 2011',
+        'ver' => '4.0.11',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'groupware' => array(
@@ -230,8 +230,8 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.9)',
-        'date' => 'September 21 2011',
+        'ver' => 'H4 (3.0.10)',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'ingo' => array(
@@ -242,14 +242,14 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.10)',
-        'date' => 'September 21 2011',
+        'ver' => 'H4 (3.0.11)',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.4)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (3.0.5)',
+        'date' => 'November 2 2011',
         'pear' => true
     ),
     'mnemo' => array(
@@ -271,8 +271,9 @@ $horde_apps_stable = array(
     ),
     'passwd' => array(
         'name' => 'Passwd',
-        'ver' => 'H3 (3.1.3)',
-        'date' => 'April 28 2010'
+        'ver' => 'H4 (4.0)',
+        'date' => 'November 2 2011',
+        'pear' => true,
     ),
     'forwards' => array(
         'name' => 'Forwards',
