@@ -77,6 +77,22 @@ $horde_four_apps = array(
         'date' => 'Oktober 28 2011',
         'pear' => true,
     ),
+    'ansel' => array(
+        'name' => 'Ansel',
+        'ver' => 'H4 (2.0)',
+        'date' => 'November 2 2011',
+        'pear' => true,
+    ),
+    'content' => array(
+        'ver' => 'H4 (1.0.2)',
+        'date' => 'August 11 2011',
+        'pear' => true,
+    ),
+    'timeobjects' => array(
+        'ver' => 'H4 (1.0.2)',
+        'date' => 'August 2 2011',
+        'pear' => true,
+    ),
 );
 
 $horde_three_apps = array(
@@ -309,8 +325,9 @@ $horde_apps_stable = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H3 (1.1.2)',
-        'date' => 'September 28 2010'
+        'ver' => 'H4 (2.0)',
+        'date' => 'November 2 2011',
+        'pear' => true,
     ),
     'klutz' => array(
         'name' => 'Klutz',
