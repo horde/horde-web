@@ -1,0 +1,42 @@
+<div class="document">
+
+
+<p>How to get SyncML working with your P800/P900:
+[[somebody with access to other phones might add instructions
+for these as well. Thanks]]</p>
+<p>Start &quot;Remote Synchronisation&quot; from you phones app launcher:</p>
+<p>1)Select edit/settings and put in the following:</p>
+<p>&quot;Server&quot; tab:
+server address: <a class="reference external" href="http://yourserver.com/horde/rpc.php">http://yourserver.com/horde/rpc.php</a>
+user name: your horde user name
+password: your horde user password</p>
+<p>&quot;Protocol&quot; tab:
+Needs not to be filled in. Unless you have your web-server
+configured to require HTTP Authentification.</p>
+<ol class="arabic simple" start="2">
+<li>Configure sync types:</li>
+</ol>
+<p>Start with Calendar/Tasks:</p>
+<blockquote>
+check &quot;activate&quot;
+name can be anything
+server database: must be &quot;calendar&quot;</blockquote>
+<p>For Jotter the server database name is &quot;notes&quot;.</p>
+<p>However you should start with activating one type only.</p>
+<ol class="arabic simple" start="3">
+<li>Hit Sync, wait and hope.</li>
+</ol>
+<p>Now Synchronoisation should take place. During the first sync
+a set union of the client's and server's data sets are created.
+Further Sync runs should only transfer the changes since last
+time.</p>
+<p>If it's not working:</p>
+<p>make sure the /tmp/sync directory exists and is writeable by your
+webserver (user might be wwwrun). Try to Sync once more and check
+the input/output in this directory.
+Maybe change your php.ini settings so php logs ERROR messages and
+NOTICEs in a file as well. Check this file. Your phone gets
+confused when the XML is cluttered with stuff like</p>
+<p>&quot;PHP Notice:  Undefined index:  body in /blah/blub.php on line 256&quot;</p>
+<p>Consult <a class="reference external" href="mailto:sync&#64;lists.horde.org">sync&#64;lists.horde.org</a> and the syncml.org protocol specification.</p>
+</div>

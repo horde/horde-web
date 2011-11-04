@@ -1,0 +1,331 @@
+<div class="document" id="kolab-storage-structure-and-api">
+<h1 class="title">Kolab_Storage structure and API</h1>
+
+<div class="section" id="introduction">
+<h1>Introduction</h1>
+<p>Kolab_Storage is a PHP library that provides access to the user data
+stored in a Kolab Server backend. The data is usually accessed via
+IMAP which is not cheap. Hence the primary purpose of the library is
+to reduce the IMAP traffic to a minimal amount. This is achieved by
+caching the parsed Kolab groupware data after retrieving it from the
+IMAP account and only updating the cache incrementally whenever
+possible.</p>
+</div>
+<div class="section" id="core-elements">
+<h1>Core Elements</h1>
+<p>The library divides the data access into three conceptual elements:</p>
+<blockquote>
+<ul class="simple">
+<li>The &quot;List&quot;</li>
+<li>The &quot;Folder&quot;</li>
+<li>The &quot;Data&quot;</li>
+</ul>
+</blockquote>
+<ol class="arabic simple">
+<li>Rationale</li>
+</ol>
+<p>First and foremost this structure intends to provide simple Kolab data
+access for the developer using the API. In addition this structure
+does at least to some degree follow structures that one would choose
+when representing the data available in the Kolab server backend in a
+relational database. But it also reflects specific constraints imposed
+by the IMAP protocol.</p>
+<p>The following sections will - among other things
+- try to highlight the reasons for the specific boundaries between the
+different elements.</p>
+<ol class="arabic simple" start="2">
+<li>Querying</li>
+</ol>
+<p>Each of the elements mentioned above is able to handle a defined set
+of data. While handling this information efficiently is important it
+is often even more important to allow quick access (&quot;queries&quot;) into
+the data set. How these queries are made quick is left to the
+implementation but the library strives to clearly separate data
+management and querying the data to allow optimizing both
+independantly.</p>
+<p>Wherever applicable the following sections will also highlight the
+most common queries.</p>
+<ol class="arabic simple" start="3">
+<li>Caching</li>
+</ol>
+<p>It was initially mentioned that caching is a central aspect of the
+library. It is however equally important to point out that caching is
+totally irrelevant to the API itself. The three elements mentioned
+above always provide the same set of functions to the
+consumer. Whether the data access is cached in between or not. This
+design choice allows invisible changes to the actual caching technique
+up to a complete swapping of different caching approaches. There are
+other benefits as well when it comes to logging and time series
+measurements.</p>
+<p>The following sections will - if applicable - indicate what needs to
+be done on the IMAP level in order to synchronize the server backend
+with the cache. This will focus on keeping the IMAP traffic to a
+minimum.</p>
+<div class="section" id="list">
+<h2>&quot;List&quot;</h2>
+<p>The list handler is concerned with the IMAP folder list visible for a
+user. It is handles folder names, types, and ownership. While folders
+typically have many other attributes only this small selection has
+been chosen to be dealt with by the list handler.</p>
+<p>The primary reason for this is the fact that folder names and folder
+types can each be listed using just a single IMAP
+statement. Additional folder attributes often need to be read using an
+IMAP statment <em>per folder</em>. In addition the other attributes are less
+frequently used. Folder attributes not represented by the &quot;List&quot; are
+represented by the &quot;Folder&quot; element.</p>
+<ol class="arabic simple">
+<li>Data</li>
+</ol>
+<p>The managed data consists only of the folder names and the folder type
+annotation ('/shared/vendor/kolab/folder-type'). There are several
+additional information that can be derived from these basic
+attributes:</p>
+<blockquote>
+<ul class="simple">
+<li>Namespace of the folder ('personal', 'other', 'shared')</li>
+<li>Owner of the folder (self, other user, or anonymous)</li>
+<li>Folder type ('event', 'task', 'note', 'contact', 'journal', ...)</li>
+<li>Default setting (e.g. the &quot;default&quot; calendar of a user)</li>
+</ul>
+</blockquote>
+<p>These are however a topic for the queries based on the list.</p>
+<p>For information about namespace/ownership handling you should refer to
+the &quot;Folder Namespace&quot; section within &quot;Other Elements&quot; below.</p>
+<p>Core methods of the list handler:</p>
+<blockquote>
+<dl class="docutils">
+<dt>/**</dt>
+<dd><ul class="first simple">
+<li>Returns the list of folders visible to the current user.</li>
+<li></li>
+<li>&#64;return array The list of folders, represented as strings.</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 111)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>/</p>
+<div class="last system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 111); <em><a href="#id2">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 112)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>public function listFolders();</p>
+<dl class="docutils">
+<dt>/**</dt>
+<dd><ul class="first simple">
+<li>Returns the folder type annotation as associative array.</li>
+<li></li>
+<li>&#64;return array The list folder types with the folder names as key and the</li>
+<li>folder type as values.</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 119)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id3"><span class="problematic" id="id4">*</span></a>/</p>
+<div class="last system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 119); <em><a href="#id4">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 120)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>public function listFolderTypes();</p>
+</blockquote>
+<ol class="arabic simple" start="2">
+<li>Queries</li>
+</ol>
+<p>A number of relevant queries can be based on this relatively small dataset:</p>
+<blockquote>
+<ul class="simple">
+<li>List all folders with their folder type</li>
+<li>List all folders of a specified folder type</li>
+<li>Identify the default folder of a specific folder type</li>
+<li>Identify the default folder of another user (again given a specific folder type)</li>
+</ul>
+</blockquote>
+<p>Core methods of the basic list query:</p>
+<blockquote>
+<dl class="docutils">
+<dt>/**</dt>
+<dd><ul class="first simple">
+<li>Returns the folder types as associative array.</li>
+<li></li>
+<li>&#64;return array The list folder types with the folder names as key and the</li>
+<li>type as values.</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 139)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id5"><span class="problematic" id="id6">*</span></a>/</p>
+<div class="last system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 139); <em><a href="#id6">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 140)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>public function listTypes();</p>
+<dl class="docutils">
+<dt>/**</dt>
+<dd><ul class="first simple">
+<li>List all folders of a specific type.</li>
+<li></li>
+<li>&#64;param string $type The folder type the listing should be limited to.</li>
+<li></li>
+<li>&#64;return array The list of folders.</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 148)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id7"><span class="problematic" id="id8">*</span></a>/</p>
+<div class="last system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 148); <em><a href="#id8">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 149)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>public function listByType($type);</p>
+<dl class="docutils">
+<dt>/**</dt>
+<dd><ul class="first simple">
+<li>Get the default folder for a certain type.</li>
+<li></li>
+<li>&#64;param string $type The type of the share/folder.</li>
+<li></li>
+<li>&#64;return string|boolean The name of the default folder, false if there is no default.</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 157)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id9"><span class="problematic" id="id10">*</span></a>/</p>
+<div class="last system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 157); <em><a href="#id10">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 158)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>public function getDefault($type);</p>
+<dl class="docutils">
+<dt>/**</dt>
+<dd><ul class="first simple">
+<li>Get the default folder for a certain type from a different owner.</li>
+<li></li>
+<li>&#64;param string $owner The folder owner.</li>
+<li>&#64;param string $type  The type of the share/folder.</li>
+<li></li>
+<li>&#64;return string|boolean The name of the default folder, false if there is no default.</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 167)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id11"><span class="problematic" id="id12">*</span></a>/</p>
+<div class="last system-message" id="id11">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 167); <em><a href="#id12">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/1bk16sg8/Horde_Kolab_Storage-1.0.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 168)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>public function getForeignDefault($owner, $type);</p>
+</blockquote>
+<ol class="arabic simple" start="3">
+<li>Synchronization</li>
+</ol>
+<p>In order to synchronize the cache with the server backend two IMAP commands are needed:</p>
+<blockquote>
+A0002 LIST &quot;&quot; &quot;*&quot;
+A0003 GETANNOTATION &quot;*&quot; (&quot;/vendor/kolab/folder-type&quot;) (&quot;value.shared&quot;)</blockquote>
+<p>The second command is not required in case the folder list did not
+change at all. If only one or very few folders changed in the folder
+list it might make sense to call &quot;GETANNOTATION&quot; per folder. This
+could be quicker if the user has access to many folders.</p>
+<ol class="arabic simple" start="4">
+<li>Remarks</li>
+</ol>
+<blockquote>
+<ol class="lowerroman simple">
+<li>The Kolab specific patch to the c-client library that implements
+the &quot;GETANNOTATION&quot; command is unable to deal with the return
+value of a 'GETANNOTATION &quot;*&quot;' call. Thus it is forced to deal
+with the folder type annotation one by one. This introduces
+significant problems when a user has many folders. At the current
+state the PHP IMAP extension cannot be recommend for such
+situations. None of the other supported IMAP drivers have this
+specific problem. They all support a multi-folder response.</li>
+<li>Currently the folder STATUS is also checked on a per-folder
+basis. One might consider doing this for the complete folder list
+as well. This is however not supported by the Kolab server at the
+moment. And the number of folders checked for their status should
+also always be significantly smaller than the complete folder
+list.</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="folder">
+<h2>&quot;Folder&quot;</h2>
+<p>TBD</p>
+</div>
+<div class="section" id="data">
+<h2>&quot;Data&quot;</h2>
+<p>TBD</p>
+</div>
+</div>
+<div class="section" id="other-elements">
+<h1>Other Elements</h1>
+<p>The Kolab_Storage library also provides a number of supporting
+elements that are less visible within the API. Some of them should be
+mentioned though to highlight important features of the library.</p>
+<div class="section" id="driver">
+<h2>Driver</h2>
+<p>Currently there are five backend drivers available. Nearly all of them
+are IMAP based. In theory it would be possible to provide drivers that
+use alternative means to read and write the groupware data. One could
+imagine a file based driver that could be used for test purposes. So
+far the need for such experiments has not arisen though.</p>
+<p>The currently supported drivers:</p>
+<blockquote>
+<ul>
+<li><p class="first">&quot;Cclient&quot;:</p>
+<p>based on the PHP IMAP extension (which uses the c-client library)</p>
+</li>
+<li><p class="first">&quot;Imap&quot;:</p>
+<p>based on the Horde_Imap_Client library (a pure PHP implementation
+for IMAP access)</p>
+</li>
+<li><p class="first">&quot;Rcube&quot;:</p>
+<p>based on the roundcube IMAP library (a pure PHP implementation for
+IMAP access)</p>
+</li>
+<li><p class="first">&quot;Pear&quot;:</p>
+<p>based on the PEAR-Net_IMAP library (a pure PHP implementation for
+IMAP access)</p>
+</li>
+<li><p class="first">&quot;Mock&quot;:</p>
+<p>a mock implementation that handles the data access purely in
+memory. This is being used for testing purposes.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="folder-namespace">
+<h2>Folder Namespace</h2>
+<p>The newer variants of the Kolab_Storage library are capable of using
+the IMAP namespace information provided by servers with the NAMESPACE
+capability.</p>
+<p>Older versions were using hardcoded namespace information and strings
+such as &quot;INBOX&quot;, &quot;user/&quot;, &quot;shared.&quot; were directly used in the
+code. While this works fine for the Kolab server it is hardly portable
+to many other IMAP setups.</p>
+</div>
+</div>
+</div>

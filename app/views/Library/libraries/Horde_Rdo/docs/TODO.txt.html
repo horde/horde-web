@@ -1,0 +1,133 @@
+<div class="document">
+
+
+<ul class="simple">
+<li>Add query logging/profiling (also something like
+<a class="reference external" href="http://blog.talbott.ws/articles/2006/05/17/querytrace-my-first-official-rails-plugin">http://blog.talbott.ws/articles/2006/05/17/querytrace-my-first-official-rails-plugin</a>
+?)</li>
+<li>Remove Horde_Rdo::CUSTOM, allow custom 'query' arrays on all
+relationships as possible, and have a new type (not relationships,
+but mixins? extra_fields? that can be defined by a Query and that
+allows the flexibility of CUSTOM without being smooshed into
+relationships.</li>
+<li>Allow Horde_Rdo_Query objects to be turned into just WHERE (or JOIN)
+clauses</li>
+<li>Allow relationships to be defined by Query objects?</li>
+<li>allow for using php.ini-set database configs for security, or perhaps
+$ENV variables - see Ilia's security presentation. Example php.ini dsn:
+[PDO]
+pdo.dsn.MYDB=&quot;odbc:SAMPLE&quot;</li>
+<li>Ensure that Rdo_Base objects are serializable</li>
+<li>Charset support: support a database charset config parameter, and
+convert field values to the requested client charset.</li>
+<li>Implement named queries
+(<a class="reference external" href="http://www.tonybibbs.com/article.php/PropelDAO">http://www.tonybibbs.com/article.php/PropelDAO</a>)</li>
+<li>Support composite primary keys. Discussion of surragate vs. natural
+primary keys: <a class="reference external" href="http://www.bcarter.com/intsurr1.htm">http://www.bcarter.com/intsurr1.htm</a></li>
+<li>Saving arrays, hashes, and other non-mappable objects in text
+columns ?</li>
+<li>Allow setting $key field explicitly (not just by overriding the
+model)</li>
+<li>Some check for whether or not an object is new (has been saved to
+the backend yet)?</li>
+<li>Freezing: implement $frozen variable for Rdo objects for when the
+object has been deleted, or similar?</li>
+<li>Caching hooks - not required, but allow caching of models, query
+generation, etc. with a passed-in Cache object.</li>
+<li>Work on the basic Horde_Support_Inflector enough that it supports
+standard Horde table naming.</li>
+<li>Use fetchObject (at least in PDO drivers) for performance?</li>
+<li>Eager loading of MANY relationships - see
+<a class="reference external" href="http://darwinweb.net/article/Optimizing_And_Simplifying_Limited_Eager_Loading_In_Activerecord">http://darwinweb.net/article/Optimizing_And_Simplifying_Limited_Eager_Loading_In_Activerecord</a></li>
+<li>Two-query eager loading of a specific relationship (load the main
+object in one query, then all foreign-key objects in a 2nd, and join
+the two.</li>
+<li>Implement eager loading with several relationships to the same table.</li>
+<li>Observer hooks: beforeDelete, afterDelete, beforeUpdate, afterUpdate, beforeCreate, afterCreate</li>
+<li>Support fixtures (YAML?) for testing</li>
+<li>Test suite for Rdo:
+<a class="reference external" href="http://www.ds-o.com/archives/64-Adding-Database-Tests-to-Existing-PHPUnit-Test-Cases.html">http://www.ds-o.com/archives/64-Adding-Database-Tests-to-Existing-PHPUnit-Test-Cases.html</a>
+<a class="reference external" href="http://mikenaberezny.com/archives/79">http://mikenaberezny.com/archives/79</a>
+<a class="reference external" href="http://www.phpunit.de/browser/phpunit/branches/3.2/PHPUnit/Extensions/Database/Operation">http://www.phpunit.de/browser/phpunit/branches/3.2/PHPUnit/Extensions/Database/Operation</a></li>
+</ul>
+<p>Links:
+<a class="reference external" href="http://www.analysisandsolutions.com/code/dates.htm">http://www.analysisandsolutions.com/code/dates.htm</a>
+<a class="reference external" href="http://www.qcodo.com/">http://www.qcodo.com/</a>
+<a class="reference external" href="http://dev.mysql.com/doc/refman/5.0/en/example-maximum-column-group-row.html">http://dev.mysql.com/doc/refman/5.0/en/example-maximum-column-group-row.html</a>
+<a class="reference external" href="http://www.phpdoctrine.com/">http://www.phpdoctrine.com/</a>
+<a class="reference external" href="http://www.artfulsoftware.com/mysqlbook/sampler/mysqled1ch20.html">http://www.artfulsoftware.com/mysqlbook/sampler/mysqled1ch20.html</a>
+<a class="reference external" href="http://www.analysisandsolutions.com/presentations/portability/slides/toc.htm">http://www.analysisandsolutions.com/presentations/portability/slides/toc.htm</a>
+<a class="reference external" href="http://fuzzyblog.com/archives/2006/08/12/sql_calc_found_rows-and-faster-count-alternatives/">http://fuzzyblog.com/archives/2006/08/12/sql_calc_found_rows-and-faster-count-alternatives/</a>
+<a class="reference external" href="http://phplens.com/phpeverywhere/?q=node/view/231">http://phplens.com/phpeverywhere/?q=node/view/231</a>
+<a class="reference external" href="http://pooteeweet.org/blog/688">http://pooteeweet.org/blog/688</a>
+<a class="reference external" href="http://pooteeweet.org/blog/711">http://pooteeweet.org/blog/711</a>
+<a class="reference external" href="http://pooteeweet.org/blog/809">http://pooteeweet.org/blog/809</a>
+<a class="reference external" href="http://schlitt.info/applications/blog/?/archives/528-Object-relation-mapping-in-eZ-Components.html">http://schlitt.info/applications/blog/?/archives/528-Object-relation-mapping-in-eZ-Components.html</a>
+<a class="reference external" href="http://nubyonrails.com/articles/2005/12/27/dump-or-slurp-yaml-reference-data">http://nubyonrails.com/articles/2005/12/27/dump-or-slurp-yaml-reference-data</a>
+<a class="reference external" href="http://db.apache.org/ddlutils/">http://db.apache.org/ddlutils/</a>
+<a class="reference external" href="http://www.thespanner.co.uk/2007/07/23/php-mysql-tips/">http://www.thespanner.co.uk/2007/07/23/php-mysql-tips/</a>
+<a class="reference external" href="http://www.sqlalchemy.org/">http://www.sqlalchemy.org/</a></p>
+<p>things that can be specified on relationships:
+className - only if it can't be inferred from the field name
+foreignKey - also if can't be inferred
+criteria - restrict associations by more than foreign keys
+dependent - if true, associated object is destroyed when main object is
+order - of associated objects?</p>
+<ul class="simple">
+<li>cascading deletes/updates: ?</li>
+<li>Single table inheritance ?</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/jkruzssr/Horde_Rdo-1.1.0/doc/Horde/Rdo/TODO.txt</tt>, line 102)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p>class Company extends Rdo
+class Firm extends Company
+class Client extends Company
+class PriorityClient extends Client</p>
+<dl class="docutils">
+<dt>CREATE TABLE companies (</dt>
+<dd>id int(11) unsigned NOT NULL AUTO_INCREMENT,
+client_of int(11),
+name varchar(255),
+type varchar(100),
+PRIMARY KEY (id)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/jkruzssr/Horde_Rdo-1.1.0/doc/Horde/Rdo/TODO.txt</tt>, line 113)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>);</p>
+<dl class="docutils">
+<dt>CREATE TABLE people (</dt>
+<dd>id int(11) unsigned NOT NULL AUTO_INCREMENT,
+name text,
+company_id text,
+PRIMARY KEY (id)</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/jkruzssr/Horde_Rdo-1.1.0/doc/Horde/Rdo/TODO.txt</tt>, line 120)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>);</p>
+<p>potential field parameters:
+size
+maxsize
+fixedsize
+numeric
+null
+canbenull
+default
+canhavedefault
+unsigned
+canbeunsigned
+realname
+description
+type
+base</p>
+<p>&gt;&gt; Here I disagree. To me the key point of a DBAL compared to just a DBL (database layer) is that it provides almost everything necessary to manually build portable SQL. This means that instead of passing of an array that magically builds my SQL, the user remains in the driver seat and is provided with a rich enough API to build almost everything in the SQL spec (and a bit beyond that) in a portable manner.</p>
+<p>&gt; What you want to say is that a DBAL must additionally provide:
+&gt; a Query Builder, maybe extendable by the driver to provide RDBMS specific options/methods</p>
+<p>no .. not a query builder .. that would imply that you just pass of some data and it magically constructs the entire SQL for you .. that is the job for some OO&lt;-&gt;SQL tool. what I think a DBAL should provide is methods to generate pieces of SQL that are then assembled by the user.</p>
+<p>so for example setLimit() would either return or automatically append to an supplied SQL string. same applies to field abstraction, you still call quote() to get the necessary SQL fragment to embedd in your SQL statement.</p>
+<p>Pierre Minnieur wrote:
+&gt; Must a DBAL then provide OO access to executed statements, prepared statements and results sets, too (like PDO does)?</p>
+<p>absolutely .. a DBAL also needs to cover the reading part. so you need to have a portable way to read data from the database (including data type abstraction, handling of trimming off empty spaces etc).</p>
+</div>
