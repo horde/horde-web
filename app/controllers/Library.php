@@ -29,9 +29,11 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
         case 'download':
             $this->_download($response);
             break;
+        case 'docs':
+            $this->_docs($response);
+            break;
         default:
             $this->_notFound($response);
-
         }
     }
 
@@ -74,14 +76,10 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
 
-        // Do we know about this library?
-        if (!in_array($view->libraryName, $view->libraries)) {
-            $view->page_title = '404 Not Found';
-            $template = '404';
-        } else {
-            $view->page_title = $view->shortLibraryName . ' library - The Horde Project';
+        if ($this->_isKnownLibrary($view)) {
             $template = 'library';
-            $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
+        } else {
+            $template = '404';
         }
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -98,17 +96,56 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
 
-        // Do we know about this library?
-        if (!in_array($view->libraryName, $view->libraries)) {
-            $view->page_title = '404 Not Found';
-            $template = '404';
-        } else {
-            $view->page_title = 'Download ' . $view->libraryName . ' - The Horde Project';
+        if ($this->_isKnownLibrary($view)) {
             $template = 'download';
-            $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
+        } else {
+            $template = '404';
         }
         $layout->setView($view);
         $layout->setLayoutName('main');
         $response->setBody($layout->render($template));
+    }
+
+    /**
+     * Library documentation section.
+     *
+     * @param Horde_Controller_Response $response
+     */
+    protected function _docs(Horde_Controller_Response $response)
+    {
+        $view = $this->getView();
+        $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
+
+        if ($this->_isKnownLibrary($view)) {
+            $template = 'docs';
+            Horde::startBuffer();
+            include $GLOBALS['fs_base'] . '/app/views/Library/libraries/' . $view->libraryName . '/docs/' . ($this->_matchDict->file ? $this->_matchDict->file : 'docs') . '.html';
+            $view->content = Horde::endBuffer();
+        } else {
+            $template = '404';
+        }
+
+        $layout->setView($view);
+        $layout->setLayoutName('main');
+        $response->setBody($layout->render($template));
+    }
+
+    /**
+     * Is the library known?
+     *
+     * @param Horde_View $view The current view.
+     *
+     * @return The name of the template that should be used for display.
+     */
+    private function _isKnownLibrary($view, $default)
+    {
+        if (!in_array($view->libraryName, $view->libraries)) {
+            $view->page_title = '404 Not Found';
+            return false;
+        } else {
+            $view->page_title = $view->shortLibraryName . ' library - The Horde Project';
+            $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
+            return true;
+        }
     }
 }

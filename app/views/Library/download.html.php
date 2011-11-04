@@ -23,13 +23,13 @@
           <h3>Current Stable Release</h3>
           <ul>
             <li>
-              <a href="<?php echo $this->libraryDetails['release']->getDownloadUri(); ?>">
-                <?php echo $this->libraryName ?>-<?php echo $this->libraryDetails['release']->getVersion() ?>
+              <a href="<?php echo $this->libraryDetails->download; ?>">
+                <?php echo $this->libraryName ?>-<?php echo $this->libraryDetails->version ?>
               </a>
             </li>
           </ul>
           <p>
-            [Released: <?php echo (string)$this->libraryDetails['release']->da ?>]
+            [Released: <?php echo (string)$this->libraryDetails->releaseDate ?>]
           </p>
 
           <h3>Obtaining Old Versions</h3>

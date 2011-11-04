@@ -4,15 +4,15 @@
       <?php echo $this->renderPartial('appbreadcrumb') ?>
       <?php echo $this->render('libnav') ?>
       <div class="section">
-          <h3><?php echo $this->libraryDetails['release']->getSummary() ?></h3>
+          <h3><?php echo $this->libraryDetails->summary ?></h3>
 
           <div class="sectionintro">
             <p>
-            <?php echo $this->libraryDetails['release']->getDescription() ?>
+            <?php echo $this->libraryDetails->description ?>
             </p>
           </div>
 
-          <?php if (!empty($this->libraryDetails['has_ci'])): ?>
+          <?php if (!empty($this->libraryDetails->hasCi)): ?>
           <h3>Status</h3>
 
           <p>

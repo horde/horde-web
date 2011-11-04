@@ -31,6 +31,7 @@ $mapper->connect($_root . '/apps/:app/screenshots', array('controller' => 'app',
 
 /* Libraries */
 $mapper->connect('libraries', $_root . '/libraries', array('controller' => 'library', 'action' => 'index'));
+$mapper->connect($_root . '/libraries/:library/docs/:file', array('controller' => 'library', 'action' => 'docs'));
 $mapper->connect('library', $_root . '/libraries/:library', array('controller' => 'library', 'action' => 'library'));
 $mapper->connect('library', $_root . '/libraries/:library/:action', array('controller' => 'library'));
 

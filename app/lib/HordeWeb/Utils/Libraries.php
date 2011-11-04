@@ -35,13 +35,6 @@ class HordeWeb_Utils_Libraries
     private $_cache;
 
     /**
-     * Handler for the remote PEAR server.
-     *
-     * @var Horde_Pear_Remote
-     */
-    private $_remote;
-
-    /**
      * Constructor.
      *
      * @param Horde_Cache $cache The cache.
@@ -49,19 +42,6 @@ class HordeWeb_Utils_Libraries
     public function __construct(Horde_Cache $cache)
     {
         $this->_cache = $cache;
-        $this->_remote = new Horde_Pear_Remote();
-    }
-
-    /**
-     * Override for the default remote handler.
-     *
-     * @param Horde_Pear_Remote $remote The remote handler.
-     *
-     * @return NULL
-     */
-    public function setRemote(Horde_Pear_Remote $remote)
-    {
-        $this->_remote = $remote;
     }
 
     /**
@@ -72,12 +52,17 @@ class HordeWeb_Utils_Libraries
     public function listLibraries()
     {
         // Cache the list from pear.horde.org for one day
-        if ($list = $this->_cache->get(__CLASS__ . '::list', 86400)) {
+        if ($list = $this->_cache->get(__CLASS__ . '::list2', 86400)) {
             return unserialize($list);
         }
-        $list = $this->_remote->listPackages();
+        $components = $this->_getComponents();
+        $list = array();
+        foreach ($components as $component) {
+            $list[] = $component->name;
+        }
         $list = array_filter($list, array($this, '_hideApplications'));
-        $this->_cache->set(__CLASS__ . '::list', serialize($list));
+        sort($list);
+        $this->_cache->set(__CLASS__ . '::list2', serialize($list));
         return $list;
     }
 
@@ -104,16 +89,16 @@ class HordeWeb_Utils_Libraries
     public function listDescriptions()
     {
         // Cache the list from pear.horde.org for one day
-        if ($descriptions = $this->_cache->get(__CLASS__ . '::descriptions', 86400)) {
+        if ($descriptions = $this->_cache->get(__CLASS__ . '::descriptions2', 86400)) {
             return unserialize($descriptions);
         }
-        $list = $this->listLibraries();
+        $components = $this->_getComponents();
         $descriptions = array();
-        foreach ($list as $library) {
-            $details = $this->fetchLibrary($library);
-            $descriptions[$library] = $details['release']->getDescription();
+        foreach ($components as $component) {
+            $descriptions[$component->name] = $component->description;
         }
-        $this->_cache->set(__CLASS__ . '::descriptions', serialize($descriptions));
+        ksort($descriptions);
+        $this->_cache->set(__CLASS__ . '::descriptions2', serialize($descriptions));
         return $descriptions;
     }
 
@@ -127,35 +112,33 @@ class HordeWeb_Utils_Libraries
      */
     public function fetchLibrary($library)
     {
-        // Cache the library from pear.horde.org for roughly one day
-        $version = 2;
-        $life = 86400 + mt_rand(0, 7200);
-        if ($c = $this->_cache->get(__CLASS__ . '::comp::' . $library . $version, $life)) {
-            return unserialize($c);
-        }
-
-        $c = array('release' => $this->_remote->getLatestDetails($library),
-                   'has_ci' => $this->_hasCi($library));
-        $this->_cache->set(__CLASS__ . '::comp::' . $library . $version, serialize($c));
-
-        return $c;
+        return json_decode(
+            file_get_contents(
+                $GLOBALS['fs_base'] . '/config/components.d/' .
+                strtolower($library) . '.json'
+            )
+        );
     }
 
     /**
-     * Check if the library has a CI job.
+     * Return the list of components from the configuration directory.
      *
-     * @param string $library The name of the library.
-     *
-     * @return boolean True if a CI job is defined.
+     * @return array The list of released components.
      */
-    private function _hasCi($library)
+    private function _getComponents()
     {
-        $client = new Horde_Http_Client(array('request.timeout' => 15));
-        try {
-            $response = $client->get('http://ci.horde.org/job/' . str_replace('Horde_', '', $library . '/api/json'));
-        } catch (Horde_Http_Exception $e) {
-            return false;
+        $result = array();
+        $iterator = new IteratorIterator(
+            new DirectoryIterator($GLOBALS['fs_base'] . '/config/components.d')
+        );
+        foreach ($iterator as $file) {
+            if ($file->isFile() &&
+                substr($file->getFilename(), -5) == '.json') {
+                $result[$file->getFilename()] = json_decode(
+                    file_get_contents($file->getPathname())
+                );
+            }
         }
-        return $response->code != 404;
+        return $result;
     }
 }
