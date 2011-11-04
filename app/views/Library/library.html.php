@@ -16,7 +16,7 @@
           <h3>Status</h3>
 
           <p>
-            The following indicates the status of the library library
+            The following indicates the status of the component
             within <a href="http://ci.horde.org">the Horde continuous
             integration server</a> (based on
             <a href="http://jenkins-ci.org">Jenkins</a>)
