@@ -1,0 +1,1 @@
+{"name":"Horde_Oauth","summary":"Horde OAuth client\/server","description":"This package provides an OAuth consumer (http:\/\/oauth.net) and OAuth infrastruture, and in the future will provide an OAuth server.","version":"1.0.0","releaseDate":"2011-04-06 01:16:18","download":"http:\/\/pear.horde.org\/get\/Horde_Oauth-1.0.0.tgz","hasCi":false,"hasDocuments":true}

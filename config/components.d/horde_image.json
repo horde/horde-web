@@ -1,0 +1,1 @@
+{"name":"Horde_Image","summary":"Horde Image API","description":"This package provides an Image utility API, with backends for:\n* GD\n* GIF\n* PNG\n* SVG\n* SWF\n* ImageMagick convert command line tool\n* Imagick Extension","version":"1.0.7","releaseDate":"2011-11-03 09:40:13","download":"http:\/\/pear.horde.org\/get\/Horde_Image-1.0.7.tgz","hasCi":false,"hasDocuments":true}

@@ -1,0 +1,1 @@
+{"name":"Horde_Ldap","summary":"Horde LDAP libraries","description":"This package provides a set of classes for connecting to LDAP servers and working with directory objects.","version":"1.1.3","releaseDate":"2011-08-30 11:37:46","download":"http:\/\/pear.horde.org\/get\/Horde_Ldap-1.1.3.tgz","hasCi":true,"hasDocuments":false}

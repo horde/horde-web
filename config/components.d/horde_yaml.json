@@ -1,0 +1,1 @@
+{"name":"Horde_Yaml","summary":"Horde YAML parsing and dumping routines","description":"This package provides classes for parsing YAML files into PHP arrays, and dumping PHP arrays into YAML encoding.","version":"1.0.0","releaseDate":"2011-04-06 01:24:29","download":"http:\/\/pear.horde.org\/get\/Horde_Yaml-1.0.0.tgz","hasCi":true,"hasDocuments":false}

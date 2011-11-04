@@ -1,0 +1,1 @@
+{"name":"Horde_Kolab_Server","summary":"A package for manipulating the Kolab user database","description":"This package reads\/writes entries in the Kolab user\n database stored in LDAP.","version":"1.0.1","releaseDate":"2011-08-31 12:27:20","download":"http:\/\/pear.horde.org\/get\/Horde_Kolab_Server-1.0.1.tgz","hasCi":false,"hasDocuments":true}
