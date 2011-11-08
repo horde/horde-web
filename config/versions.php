@@ -65,6 +65,12 @@ $horde_four_apps = array(
         'date' => 'October 28 2011',
         'pear' => true
     ),
+    'passwd' => array(
+        'name' => 'Passwd',
+        'ver' => 'H4 (4.0)',
+        'date' => 'November 2 2011',
+        'pear' => true,
+    ),
     'whups' => array(
         'name' => 'Whups',
         'ver' => 'H4 (2.0)',
