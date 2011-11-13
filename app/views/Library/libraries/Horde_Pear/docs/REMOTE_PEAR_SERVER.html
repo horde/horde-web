@@ -1,0 +1,53 @@
+<div class="document">
+
+
+<div class="section" id="introduction">
+<h1>Introduction</h1>
+<p>The Horde_Pear_Remote class provides you with high-level access to the REST interface of a PEAR server.</p>
+<p>The default instance that will be created when providing no arguments to the constructor will allow access to the PEAR server at pear.horde.org. This can be easily modified by specifying an alternate server name as a first argument.</p>
+<p>An optional second argument allows to specify the underlying access helper that converts the REST responses into object instances. Usually it should not be necessary to provide this parameter but there are examples demonstrating how this can be used further below.</p>
+<pre class="literal-block">
+$remote = new Horde_Pear_Remote();
+</pre>
+<div class="section" id="getchannel">
+<h2>getChannel()</h2>
+<p>Returns the channel.xml for the server as string.</p>
+</div>
+<div class="section" id="listpackages">
+<h2>listPackages()</h2>
+<p>This returns an array with the list of package names. Use this to get a quick overview on what is available on the remote server.</p>
+</div>
+<div class="section" id="getlatestrelease">
+<h2>getLatestRelease()</h2>
+<p>For a given package name this will retrieve the latest version that has been released. By default the method only selects stable releases. The optional second parameter allows to modify this behaviour to specifically return the highest release version of the specified stability. If the stability does not matter the argument can be set to NULL to retrieve the highest release version independent of the stability.</p>
+</div>
+<div class="section" id="getlatestdownloaduri">
+<h2>getLatestDownloadUri()</h2>
+<p>This will deliver the download location for the source archive of the latest version that has been released for the specified package.</p>
+<p>The &quot;stability&quot; parameter works in the same way as for the getLatestRelease() method above.</p>
+</div>
+<div class="section" id="getlatestdetails">
+<h2>getLatestDetails()</h2>
+<p>This will deliver detailed information for the latest release of the specified package.</p>
+<p>The &quot;stability&quot; parameter works in the same way as for the getLatestRelease() method above.</p>
+</div>
+<div class="section" id="releaseexists">
+<h2>releaseExists()</h2>
+<p>Checks if a release exists for the specified combination of package name and version number.</p>
+</div>
+<div class="section" id="getdependencies">
+<h2>getDependencies()</h2>
+<p>Returns the dependencies for the specified package version. The return value is an array ...?</p>
+</div>
+<div class="section" id="getpackagexml">
+<h2>getPackageXml()</h2>
+<p>Returns the package.xml file wrapped as Horde_Pear_Package_Xml instance.</p>
+</div>
+</div>
+<div class="section" id="horde-pear-rest-access">
+<h1>Horde_Pear_Rest_Access</h1>
+<p>This class converts the REST responses into Horde_Pear_* objects that
+simplify access to the data provided by the remote PEAR server.</p>
+<p>In most cases you should be able</p>
+</div>
+</div>

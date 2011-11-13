@@ -1,0 +1,15 @@
+<div class="document">
+
+
+<div class="section" id="overview">
+<h1>Overview</h1>
+<p>This component delivers a small subset of the functionality required to deal with the data structures established by the <a class="reference external" href="http://pear.php.net">PEAR project</a>. Currently it allows accessing the REST interface of a remote PEAR server and provides utilities to deal with package.xml files. The most important functionality concerning the packaging manifest is the automatic update of the XML data.</p>
+<p>Further details can be found in the accompanying documents <a class="reference external" href="REMOTE_PEAR_SERVER">REMOTE_PEAR_SERVER</a> and <a class="reference external" href="PACKAGE_XML">PACKAGE_XML</a>.</p>
+</div>
+<div class="section" id="rationale-for-this-component">
+<h1>Rationale for this component</h1>
+<p>This package reimplements some of the code that is being provided on <a class="reference external" href="http://pear.php.net">pear.php.net</a> via various PEAR_* packages.</p>
+<p>Of course it should not be necessary to write new code providing PEAR functionality given the available PEAR_* packages. Unfortunately none of these provide anything near a decent and usable developer API. One could hope for the newer <a class="reference external" href="http://pear2.php.net/">Pyrus</a> code to resolve some of the deeper structural problems the PEAR code has. The currently available code (as of 2011) does not look like a major improvement though.</p>
+<p>The decision to reimplement PEAR code has not been taken lightly: originally the Horde components helper had been using the PEAR code. But the amount of hacks and workarounds required to sustain that basis was too much for a long term solution. As a consequence Horde_Pear was started in order to generate a backend providing the functionality specifically required by the Horde components helper.</p>
+</div>
+</div>
