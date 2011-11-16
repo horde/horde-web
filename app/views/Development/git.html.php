@@ -94,7 +94,7 @@
         <p>If, after you have configured Horde, you wish you can manually run
         the database migrations, you can run these as so:</p>
 
-        <pre class="brush:bash">horde/bin/horde-db_migrate {application_name} [up|down]</pre>
+        <pre class="brush:bash">horde/bin/horde-db-migrate {application_name} [up|down]</pre>
 
         <p>If installing the framework libraries directly via PEAR, you will
         need to define your horde application directory (i.e. the filesystem directory where
