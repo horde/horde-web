@@ -88,16 +88,13 @@
         way to setup full paths is to set the <tt>$app_fileroot</tt> parameter in
         this file.</p>
 
-        <p>Also, in addition to the normal INSTALL procedures you will need to
-        run the database migration scripts. The creation of these tables is now
-        part of the normal INSTALL documents, but if you wish you can manually
-        run these as so:</p>
+        <p>You can now follow the procedures in the normal INSTALL document to
+        complete the configuration and database creation.</p>
 
-        <pre class="brush:bash">horde/bin/db_migrate {application_name}</pre>
+        <p>If, after you have configured Horde, you wish you can manually run
+        the database migrations, you can run these as so:</p>
 
-        <p>All installed applications that contain a migration/ directory will need this
-        to be run. INCLUDING the <em>content</em> application, as this is the system
-        that takes care of tag storage for the applications that use them.</p>
+        <pre class="brush:bash">horde/bin/horde-db_migrate {application_name} [up|down]</pre>
 
         <p>If installing the framework libraries directly via PEAR, you will
         need to define your horde application directory (i.e. the filesystem directory where
