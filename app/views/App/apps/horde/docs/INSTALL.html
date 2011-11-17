@@ -433,10 +433,9 @@ You must install and configure aspell to use Horde's spell-check feature.</p>
 </div>
 <div class="section" id="installing-horde">
 <h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Installing Horde</a></h1>
-<p>There are several ways to install Horde. The recommended way to install Horde
-is using the PEAR installer. Alternatively it can be installed from
-tarballs. Finally, if you want to run the latest development code, or get the
-latest, not yet released, fixes, you can install Horde from Git.</p>
+<p>The <strong>RECOMMENDED</strong> way to install Horde is using the PEAR installer.
+Alternatively, if you want to run the latest development code or get the
+latest not yet released fixes, you can install Horde from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>Before beginning, make sure your PEAR package is up-to-date:</p>
@@ -449,7 +448,7 @@ pear channel-discover pear.horde.org
 </pre>
 <p>Next install a so-called &quot;role&quot; for Horde. This role defines where Horde is
 installed. This should be a directory in your web server's web root, e.g.
-<tt class="docutils literal">/var/www/horde</tt>. Again this has to be done only <strong>once</strong> ever on
+<tt class="docutils literal">/var/horde</tt>. Again this has to be done only <strong>once</strong> ever on
 a single PEAR system:</p>
 <pre class="literal-block">
 pear install horde/horde_role
@@ -477,22 +476,22 @@ pear install -a horde/horde
 independent from the system-wide PEAR installation, this can be done with the
 following commands. The paths are only examples of course:</p>
 <pre class="literal-block">
-mkdir /var/www/horde
-pear config-create /var/www/horde /var/www/horde/pear.conf
-pear -c /var/www/horde/pear.conf install pear
+mkdir /var/horde
+pear config-create /var/horde /var/horde/pear.conf
+pear -c /var/horde/pear.conf install pear
 </pre>
 <p>Then follow the regular installation steps, but use the <tt class="docutils literal">pear</tt> command from
 the PEAR installation you just created, e.g.:</p>
 <pre class="literal-block">
-/var/www/horde/pear/pear -c /var/www/horde/pear.conf channel-discover pear.horde.org
+/var/horde/pear/pear -c /var/horde/pear.conf channel-discover pear.horde.org
 </pre>
-<p>Finally update the .htaccess file in <tt class="docutils literal">/var/www/horde/</tt> or configure your web
+<p>Finally update the .htaccess file in <tt class="docutils literal">/var/horde/</tt> or configure your web
 server in some other way to point PHP's <tt class="docutils literal">include_path</tt> setting to the PEAR
 installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment variable to the web
 root:</p>
 <pre class="literal-block">
-php_value include_path /var/www/horde/pear/php
-SetEnv PHP_PEAR_SYSCONF_DIR /var/www/horde
+php_value include_path /var/horde/pear/php
+SetEnv PHP_PEAR_SYSCONF_DIR /var/horde
 </pre>
 </div>
 <div class="section" id="installing-from-git">
@@ -551,7 +550,7 @@ content:</p>
 $_prefs['prefname']['value'] = 'somedefault';
 $_prefs['prefname']['locked'] = true;
 </pre>
-<p>This works analogous with any other configuration file.</p>
+<p>This works with any configuration file.</p>
 <div class="warning">
 <p class="first admonition-title">Warning</p>
 <p>All configuration files in Horde are PHP scripts that are
@@ -629,8 +628,11 @@ configuration to already exist, and the configured database user to have
 sufficient permissions to create new tables in this database.</p>
 <p>Alternatively you can run the <tt class="docutils literal"><span class="pre">bin/horde-db-migrate</span></tt> script in the Horde
 directory from the command line.</p>
-<p>TODO: Update documentation once horde-db-migrate takes (super-) user credentials
-as command line flags.</p>
+<dl class="docutils">
+<dt>TODO: Update documentation once horde-db-migrate takes (super-) user</dt>
+<dd><p class="first last">credentials as command line flags.</p>
+</dd>
+</dl>
 </li>
 <li><p class="first">Setting up alarm emails</p>
 <p>If you want your users to be able to receive emails from the Horde_Alarm
