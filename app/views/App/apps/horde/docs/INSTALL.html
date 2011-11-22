@@ -474,24 +474,26 @@ pear install -a horde/horde
 </pre>
 <p>If you want to create a separate PEAR installation for installing Horde,
 independent from the system-wide PEAR installation, this can be done with the
-following commands. The paths are only examples of course:</p>
+following commands (in this example, <tt class="docutils literal">/var/www/horde</tt> is used as the
+location of the web-accessible horde directory):</p>
 <pre class="literal-block">
-mkdir /var/horde
-pear config-create /var/horde /var/horde/pear.conf
-pear -c /var/horde/pear.conf install pear
+mkdir /var/www/horde
+pear config-create /var/www/horde /var/www/horde/pear.conf
+pear -c /var/www/horde/pear.conf install pear
 </pre>
 <p>Then follow the regular installation steps, but use the <tt class="docutils literal">pear</tt> command from
 the PEAR installation you just created, e.g.:</p>
 <pre class="literal-block">
-/var/horde/pear/pear -c /var/horde/pear.conf channel-discover pear.horde.org
+/var/www/horde/pear/pear -c /var/www/horde/pear.conf channel-discover \
+    pear.horde.org
 </pre>
-<p>Finally update the .htaccess file in <tt class="docutils literal">/var/horde/</tt> or configure your web
+<p>Finally update the .htaccess file in <tt class="docutils literal">/var/www/horde/</tt> or configure your web
 server in some other way to point PHP's <tt class="docutils literal">include_path</tt> setting to the PEAR
 installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment variable to the web
 root:</p>
 <pre class="literal-block">
-php_value include_path /var/horde/pear/php
-SetEnv PHP_PEAR_SYSCONF_DIR /var/horde
+php_value include_path /var/www/horde/pear/php
+SetEnv PHP_PEAR_SYSCONF_DIR /var/www/horde
 </pre>
 </div>
 <div class="section" id="installing-from-git">
@@ -628,11 +630,6 @@ configuration to already exist, and the configured database user to have
 sufficient permissions to create new tables in this database.</p>
 <p>Alternatively you can run the <tt class="docutils literal"><span class="pre">bin/horde-db-migrate</span></tt> script in the Horde
 directory from the command line.</p>
-<dl class="docutils">
-<dt>TODO: Update documentation once horde-db-migrate takes (super-) user</dt>
-<dd><p class="first last">credentials as command line flags.</p>
-</dd>
-</dl>
 </li>
 <li><p class="first">Setting up alarm emails</p>
 <p>If you want your users to be able to receive emails from the Horde_Alarm

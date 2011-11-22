@@ -14,11 +14,12 @@
 <li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
 <li><a class="reference internal" href="#installing-ingo" id="id2">2&nbsp;&nbsp;&nbsp;Installing Ingo</a><ul class="auto-toc">
 <li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-git" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-ingo" id="id4">3&nbsp;&nbsp;&nbsp;Configuring Ingo</a></li>
-<li><a class="reference internal" href="#known-problems" id="id5">4&nbsp;&nbsp;&nbsp;Known Problems</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id6">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#configuring-ingo" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Ingo</a></li>
+<li><a class="reference internal" href="#known-problems" id="id6">4&nbsp;&nbsp;&nbsp;Known Problems</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id7">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the Ingo Email Filter Rules
@@ -68,10 +69,9 @@ are using Sieve for filtering.</p>
 </div>
 <div class="section" id="installing-ingo">
 <h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Ingo</a></h1>
-<p>There are several ways to install Ingo. The recommended way to install Ingo
-is using the PEAR installer. Alternatively it can be installed from
-tarballs. Finally, if you want to run the latest development code, or get the
-latest, not yet released, fixes, you can install Ingo from Git.</p>
+<p>The <strong>RECOMMENDED</strong> way to install Ingo is using the PEAR installer.
+Alternatively, if you want to run the latest development code or get the
+latest not yet released fixes, you can install Ingo from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
@@ -95,9 +95,16 @@ your PHP configuration:</p>
 pear install -a horde/ingo
 </pre>
 </div>
+<div class="section" id="installing-from-git">
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
+<p>See:</p>
+<pre class="literal-block">
+http://horde.org/source/git.php
+</pre>
+</div>
 </div>
 <div class="section" id="configuring-ingo">
-<h1><a class="toc-backref" href="#id4">3&nbsp;&nbsp;&nbsp;Configuring Ingo</a></h1>
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Ingo</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring Ingo</p>
 <p>You must login to Horde as a Horde Administrator to finish the
@@ -133,14 +140,14 @@ horde/bin/horde-db-migrate ingo
 </ol>
 </div>
 <div class="section" id="known-problems">
-<h1><a class="toc-backref" href="#id5">4&nbsp;&nbsp;&nbsp;Known Problems</a></h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Known Problems</a></h1>
 <p>Some people experienced problems with Ingo's Sieve driver and Cyrus 2.1.12.
 The &quot;addflag/removeflag&quot; Sieve commands can cause message copies sticking in
 Cyrus' message queues producing &quot;virtual memory exhausted&quot; errors.  It was
 reported that upgrading to version 2.1.15 has fixed this problem.</p>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id6">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id7">5&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Ingo, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>

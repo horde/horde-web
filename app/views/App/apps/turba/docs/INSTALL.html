@@ -14,10 +14,11 @@
 <li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
 <li><a class="reference internal" href="#installing-turba" id="id2">2&nbsp;&nbsp;&nbsp;Installing Turba</a><ul class="auto-toc">
 <li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-git" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-turba" id="id4">3&nbsp;&nbsp;&nbsp;Configuring Turba</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id5">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#configuring-turba" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Turba</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the Turba contact manager
@@ -74,10 +75,9 @@ automatically download and install all required PEAR modules.</p>
 </div>
 <div class="section" id="installing-turba">
 <h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Turba</a></h1>
-<p>There are several ways to install Turba. The recommended way to install Turba
-is using the PEAR installer. Alternatively it can be installed from
-tarballs. Finally, if you want to run the latest development code, or get the
-latest, not yet released, fixes, you can install Turba from Git.</p>
+<p>The <strong>RECOMMENDED</strong> way to install Turba is using the PEAR installer.
+Alternatively, if you want to run the latest development code or get the
+latest not yet released fixes, you can install Turba from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
@@ -101,9 +101,16 @@ your PHP configuration:</p>
 pear install -a horde/turba
 </pre>
 </div>
+<div class="section" id="installing-from-git">
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
+<p>See:</p>
+<pre class="literal-block">
+http://horde.org/source/git.php
+</pre>
+</div>
 </div>
 <div class="section" id="configuring-turba">
-<h1><a class="toc-backref" href="#id4">3&nbsp;&nbsp;&nbsp;Configuring Turba</a></h1>
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Turba</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring Turba.</p>
 <p>You must login to Horde as a Horde Administrator to finish the
@@ -131,8 +138,8 @@ manual configuration.</p>
 database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
 Turba row of the configuration screen.</p>
 <p>Alternatively you creating the Turba database tables can be accomplished
-with horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in
-the Horde configuration, just run the following:</p>
+with horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly
+setup in the Horde configuration, just run the following:</p>
 <pre class="literal-block">
 horde/bin/horde-db-migrate turba
 </pre>
@@ -167,7 +174,7 @@ to create new entries.</p>
 </ol>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id5">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Turba, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>

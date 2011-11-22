@@ -14,7 +14,7 @@
 <li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
 <li><a class="reference internal" href="#installing-gollem" id="id2">2&nbsp;&nbsp;&nbsp;Installing Gollem</a><ul class="auto-toc">
 <li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
-<li><a class="reference internal" href="#installing-from-release-tarballs" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></li>
+<li><a class="reference internal" href="#installing-from-git" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#configuring-gollem" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Gollem</a></li>
@@ -73,10 +73,9 @@ pear install HTTP_WebDAV_Server
 </div>
 <div class="section" id="installing-gollem">
 <h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Gollem</a></h1>
-<p>There are several ways to install Gollem. The recommended way to install Gollem
-is using the PEAR installer. Alternatively it can be installed from
-tarballs. Finally, if you want to run the latest development code, or get the
-latest, not yet released, fixes, you can install Gollem from Git.</p>
+<p>The <strong>RECOMMENDED</strong> way to install Gollem is using the PEAR installer.
+Alternatively, if you want to run the latest development code or get the
+latest not yet released fixes, you can install Gollem from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
@@ -100,39 +99,11 @@ your PHP configuration:</p>
 pear install -a horde/gollem
 </pre>
 </div>
-<div class="section" id="installing-from-release-tarballs">
-<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Release Tarballs</a></h2>
-<div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">As of today, there are no tarballs released for Gollem 2
-yet. Please use the <a class="reference internal" href="#installing-with-pear">Installing with PEAR</a> method to install
-Gollem 2.</p>
-</div>
-<p>Gollem can be obtained from the Horde website and FTP server, at</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/apps/gollem">http://www.horde.org/apps/gollem</a></p>
-<p><a class="reference external" href="ftp://ftp.horde.org/gollem/">ftp://ftp.horde.org/gollem/</a></p>
-</blockquote>
-<p>Or use the mirror closest to you:</p>
-<blockquote>
-<a class="reference external" href="http://www.horde.org/mirrors.php">http://www.horde.org/mirrors.php</a></blockquote>
-<p>Gollem is written in PHP, and must be installed in a web-accessible directory.
-The precise location of this directory will differ from system to system.
-Conventionally, Gollem is installed directly underneath Horde in the web
-server's document tree.</p>
-<p>Since Gollem is written in PHP, there is no compilation necessary; simply
-expand the distribution where you want it to reside and rename the root
-directory of the distribution to whatever you wish to appear in the URL.  For
-example, with the Apache web server's default document root of
-<tt class="docutils literal">/usr/local/apache/htdocs</tt>, you would type:</p>
+<div class="section" id="installing-from-git">
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
+<p>See:</p>
 <pre class="literal-block">
-cd /usr/local/apache/htdocs/horde
-tar zxvf /path/to/gollem-1.0.tar.gz
-mv gollem-1.0 gollem
-</pre>
-<p>and would then find Gollem at the URL:</p>
-<pre class="literal-block">
-http://your-server/horde/gollem/
+http://horde.org/source/git.php
 </pre>
 </div>
 </div>

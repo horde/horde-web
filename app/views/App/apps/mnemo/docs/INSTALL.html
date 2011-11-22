@@ -36,10 +36,9 @@ Horde <a class="reference external" href="../../horde/docs/INSTALL">INSTALL</a> 
 </div>
 <div class="section" id="installing-mnemo">
 <h1>Installing Mnemo</h1>
-<p>There are several ways to install Mnemo. The recommended way to install Mnemo
-is using the PEAR installer. Alternatively it can be installed from
-tarballs. Finally, if you want to run the latest development code, or get the
-latest, not yet released, fixes, you can install Mnemo from Git.</p>
+<p>The <strong>RECOMMENDED</strong> way to install Mnemo is using the PEAR installer.
+Alternatively, if you want to run the latest development code or get the
+latest not yet released fixes, you can install Mnemo from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2>Installing with PEAR</h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
@@ -61,6 +60,13 @@ extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
 pear install -a horde/mnemo
+</pre>
+</div>
+<div class="section" id="installing-from-git">
+<h2>Installing from Git</h2>
+<p>See:</p>
+<pre class="literal-block">
+http://horde.org/source/git.php
 </pre>
 </div>
 </div>
@@ -96,8 +102,8 @@ details and examples. The defaults will be correct for most sites.</p>
 database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
 Mnemo row of the configuration screen.</p>
 <p>Alternatively you creating the Mnemo database tables can be accomplished with
-horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in the
-Horde configuration, just run the following:</p>
+horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in
+the Horde configuration, just run the following:</p>
 <pre class="literal-block">
 horde/bin/horde-db-migrate mnemo
 </pre>

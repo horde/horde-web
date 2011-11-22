@@ -14,10 +14,11 @@
 <li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
 <li><a class="reference internal" href="#installing-imp" id="id2">2&nbsp;&nbsp;&nbsp;Installing IMP</a><ul class="auto-toc">
 <li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-git" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-imp" id="id4">3&nbsp;&nbsp;&nbsp;Configuring IMP</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id5">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#configuring-imp" id="id5">3&nbsp;&nbsp;&nbsp;Configuring IMP</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the IMP web-based mail
@@ -170,10 +171,9 @@ allow the user to recover the message when they next login.</p>
 </div>
 <div class="section" id="installing-imp">
 <h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing IMP</a></h1>
-<p>There are several ways to install IMP. The recommended way to install IMP is
-using the PEAR installer. Alternatively it can be installed from
-tarballs. Finally, if you want to run the latest development code, or get the
-latest, not yet released, fixes, you can install IMP from Git.</p>
+<p>The <strong>RECOMMENDED</strong> way to install IMP is using the PEAR installer.
+Alternatively, if you want to run the latest development code or get the
+latest not yet released fixes, you can install IMP from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
@@ -197,9 +197,16 @@ your PHP configuration:</p>
 pear install -a horde/imp
 </pre>
 </div>
+<div class="section" id="installing-from-git">
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
+<p>See:</p>
+<pre class="literal-block">
+http://horde.org/source/git.php
+</pre>
+</div>
 </div>
 <div class="section" id="configuring-imp">
-<h1><a class="toc-backref" href="#id4">3&nbsp;&nbsp;&nbsp;Configuring IMP</a></h1>
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring IMP</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring Horde for IMP [OPTIONAL]</p>
 <p>If you would prefer that your users authenticate directly with IMP, without
@@ -262,8 +269,8 @@ $mime_drivers['html']['inline'] = true;
 database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
 IMP row of the configuration screen.</p>
 <p>Alternatively you creating the IMP database tables can be accomplished with
-horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in the
-Horde configuration, just run the following:</p>
+horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly setup in
+the Horde configuration, just run the following:</p>
 <pre class="literal-block">
 horde/bin/horde-db-migrate imp
 </pre>
@@ -330,7 +337,7 @@ back in, if you are using an SQL or LDAP preferences system).</li>
 </ol>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id5">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with IMP, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
