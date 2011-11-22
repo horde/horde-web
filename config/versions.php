@@ -7,8 +7,8 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.11',
-        'date' => 'November 2 2011',
+        'ver' => '4.0.12',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'groupware' => array(
@@ -25,8 +25,8 @@ $horde_four_apps = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.14)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (5.0.15)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'turba' => array(
@@ -43,14 +43,14 @@ $horde_four_apps = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.11)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (3.0.12)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.5)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (3.0.6)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'mnemo' => array(
@@ -61,8 +61,8 @@ $horde_four_apps = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H4 (2.0)',
-        'date' => 'October 28 2011',
+        'ver' => 'H4 (2.0.1)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'passwd' => array(
@@ -95,8 +95,8 @@ $horde_four_apps = array(
         'pear' => true,
     ),
     'timeobjects' => array(
-        'ver' => 'H4 (1.0.2)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (1.0.3)',
+        'date' => 'November 22 2011',
         'pear' => true,
     ),
 );
@@ -216,8 +216,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.11',
-        'date' => 'November 2 2011',
+        'ver' => '4.0.12',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'groupware' => array(
@@ -236,8 +236,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.14)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (5.0.15)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'dimp' => array(
@@ -264,14 +264,14 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.11)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (3.0.12)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.5)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (3.0.6)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'mnemo' => array(
@@ -287,8 +287,8 @@ $horde_apps_stable = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H4 (2.0)',
-        'date' => 'October 28 2011',
+        'ver' => 'H4 (2.0.1)',
+        'date' => 'November 22 2011',
         'pear' => true
     ),
     'passwd' => array(
@@ -346,8 +346,8 @@ $horde_apps_stable = array(
         'pear' => true,
     ),
     'timeobjects' => array(
-        'ver' => 'H4 (1.0.2)',
-        'date' => 'August 2 2011',
+        'ver' => 'H4 (1.0.3)',
+        'date' => 'November 22 2011',
         'pear' => true,
     ),
 );
