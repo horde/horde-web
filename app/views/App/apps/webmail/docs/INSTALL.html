@@ -325,38 +325,33 @@ on a Web server and is run from a Web browser, it is only an IMAP and POP3
 <em>client</em>, like Outlook, Apple Mail or Thunderbird. You must have access to
 an IMAP or POP3 server(s) on which your users' mail is stored in order to
 use Horde Groupware Webmail Edition.</p>
-<p>IMAP is <em>strongly</em> recommended over POP3. See, e.g.,
+<p>IMAP is <strong>strongly</strong> recommended over POP3. See, e.g.,
 <a class="reference external" href="http://www.imap.org/imap.vs.pop.brief.html">http://www.imap.org/imap.vs.pop.brief.html</a></p>
 <p>Freely available IMAP servers (for *nix systems) that have been verified
-to work with Horde Groupware Webmail Edition include:</p>
+to work best with Horde Groupware Webmail Edition include:</p>
 <ul class="simple">
-<li>Cyrus (<a class="reference external" href="http://asg.web.cmu.edu/cyrus/">http://asg.web.cmu.edu/cyrus/</a>)</li>
-<li>Dovecot (<a class="reference external" href="http://www.dovecot.org/">http://www.dovecot.org/</a>)</li>
-<li>Courier-IMAP (<a class="reference external" href="http://www.inter7.com/courierimap.html">http://www.inter7.com/courierimap.html</a>)</li>
-</ul>
-<p>More available IMAP servers are:</p>
-<ul class="simple">
-<li>UW-IMAP (<a class="reference external" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a>)</li>
 <li>Archiveopteryx (<a class="reference external" href="http://www.archiveopteryx.org/">http://www.archiveopteryx.org/</a>)</li>
+<li>Courier-IMAP (<a class="reference external" href="http://www.inter7.com/courierimap.html">http://www.inter7.com/courierimap.html</a>)</li>
+<li>Cyrus (<a class="reference external" href="http://www.cyrusimap.org/">http://www.cyrusimap.org/</a>)</li>
+<li>Dovecot (<a class="reference external" href="http://www.dovecot.org/">http://www.dovecot.org/</a>)</li>
+<li>UW-IMAP (<a class="reference external" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a>)</li>
 </ul>
 <p>Most of these packages also include POP3 support as well.</p>
-<p>The selected IMAP server MUST support IMAP4rev1 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc3501.html">RFC 3501</a>).
-The selected POP server MUST support POP3 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc1939.html">RFC 1939</a>/STD 53).</p>
+<p>The Horde Project recommends either Cyrus or Dovecot (see
+<a href="#id11"><span class="problematic" id="id12">`docs/PERFORMANCE`_</span></a> for further information).</p>
+<p>The IMAP server MUST support IMAP4rev1 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc3501.html">RFC 3501</a>).
+The POP server MUST support POP3 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc1939.html">RFC 1939</a>/STD 53).</p>
 <div class="note">
 <p class="first admonition-title">Note</p>
 <p class="last">If using a POP server, it MUST support the UIDL capability.
 Caching, on-demand filtering, searching, and sorting will be
-disabled; POP3 support is limited to essentially only viewing
-messages and performing basic mail actions.</p>
+disabled; POP3 support is limited to performing only basic mail
+actions.</p>
 </div>
 </li>
-<li><p class="first">Sendmail or equivalent.</p>
-<p>Horde Groupware Webmail Edition uses sendmail, or a program that implements
-the <tt class="docutils literal">sendmail(8)</tt> API (as included with postfix, qmail, and exim, among
-others). If your system does not already have a full mail transport with a
-sendmail interface, you can configure Horde Groupware Webmail Edition to
-speak directly with a remote SMTP server, but this may incur a performance
-penalty.</p>
+<li><p class="first">Sendmail or SMTP server.</p>
+<p>Horde Groupware Webmail Edition sends mail via either a local sendmail or a
+remote SMTP server.  It is <strong>RECOMMENDED</strong> that SMTP be used.</p>
 </li>
 </ol>
 <p>The following non-PHP prerequisites are <strong>RECOMMENDED</strong>:</p>
@@ -375,9 +370,8 @@ Groupware Webmail Edition's spell-check feature.</p>
 </div>
 <div class="section" id="installing-horde-groupware-webmail-edition">
 <h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Installing Horde Groupware Webmail Edition</a></h1>
-<p>There are several ways to install Horde Groupware Webmail Edition. The
-recommended way to install Horde Groupware Webmail Edition is using the PEAR
-installer. Alternatively it can be installed from tarballs.</p>
+<p>The <strong>RECOMMENDED</strong> way to install Horde Groupware Webmail Edition is using the
+PEAR installer.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First you need to register the Horde PEAR channel server to your local PEAR
@@ -417,8 +411,9 @@ pear install -a horde/webmail
 <h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Installing into separate PEAR</a></h2>
 <p>If you want to create a separate PEAR installation for installing Horde
 Groupware Webmail Edition, independent from the system-wide PEAR installation,
-this can be done with the following commands. The paths are only examples of
-course:</p>
+this can be done with the following commands (in this example,
+<tt class="docutils literal">/var/www/webmail</tt> is used as the location of the web-accessible Horde
+directory):</p>
 <pre class="literal-block">
 mkdir /var/www/webmail
 pear config-create /var/www/webmail /var/www/webmail/pear.conf
@@ -427,7 +422,8 @@ pear -c /var/www/webmail/pear.conf install pear
 <p>Then follow the regular installation steps, but use the <tt class="docutils literal">pear</tt> command from
 the PEAR installation you just created, e.g.:</p>
 <pre class="literal-block">
-/var/www/webmail/pear/pear -c /var/www/webmail/pear.conf channel-discover pear.horde.org
+/var/www/webmail/pear/pear -c /var/www/webmail/pear.conf \
+    channel-discover pear.horde.org
 </pre>
 <p>Finally update the .htaccess file in <tt class="docutils literal">/var/www/webmail/</tt> or configure your
 web server in some other way to point PHP's <tt class="docutils literal">include_path</tt> setting to the
@@ -459,7 +455,9 @@ pear config-get bin_dir
 <p>If you installed into a local PEAR installation, you need to tell PHP and PEAR
 where to find the installation and the script, e.g.:</p>
 <pre class="literal-block">
-PHP_PEAR_SYSCONF_DIR=/var/www/webmail php -d include_path=/var/www/webmail/pear/php /var/www/webmail/pear/webmail-install
+PHP_PEAR_SYSCONF_DIR=/var/www/webmail php \
+    -d include_path=/var/www/webmail/pear/php \
+    /var/www/webmail/pear/webmail-install
 </pre>
 </div>
 </div>
@@ -510,7 +508,7 @@ following content:</p>
 $_prefs['prefname']['value'] = 'somedefault';
 $_prefs['prefname']['locked'] = true;
 </pre>
-<p>This works analogous with any other configuration file.</p>
+<p>This works with any configuration file.</p>
 <div class="warning">
 <p class="first admonition-title">Warning</p>
 <p>All configuration files in Horde Groupware Webmail
@@ -661,5 +659,11 @@ please read</p>
 <a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
 <p>Thanks for using Horde Groupware Webmail Edition!</p>
 <p>The Horde Team</p>
+</div>
+<div class="system-messages section">
+<h1>Docutils System Messages</h1>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/webmail/docs/INSTALL</tt>, line 343); <em><a href="#id12">backlink</a></em></p>
+Unknown target name: &quot;docs/performance&quot;.</div>
 </div>
 </div>

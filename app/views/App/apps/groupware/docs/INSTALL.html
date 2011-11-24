@@ -345,12 +345,9 @@ disabled; POP3 support is limited to essentially only viewing
 messages and performing basic mail actions.</p>
 </div>
 </li>
-<li><p class="first">Sendmail or equivalent.</p>
-<p>Horde Groupware uses sendmail, or a program that implements the
-<tt class="docutils literal">sendmail(8)</tt> API (as included with postfix, qmail, and exim, among
-others). If your system does not already have a full mail transport with a
-sendmail interface, you can configure Horde Groupware to speak directly with
-a remote SMTP server, but this may incur a performance penalty.</p>
+<li><p class="first">Sendmail or SMTP server.</p>
+<p>Horde Groupware Webmail Edition sends mail via either a local sendmail or a
+remote SMTP server.  It is <strong>RECOMMENDED</strong> that SMTP be used.</p>
 </li>
 </ol>
 <p>The following non-PHP prerequisites are <strong>RECOMMENDED</strong>:</p>
@@ -369,9 +366,7 @@ spell-check feature.</p>
 </div>
 <div class="section" id="installing-horde-groupware">
 <h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Installing Horde Groupware</a></h1>
-<p>There are several ways to install Horde Groupware. The recommended way to
-install Horde Groupware is using the PEAR installer. Alternatively it can be
-installed from tarballs.</p>
+<p>The <strong>RECOMMENDED</strong> way to install Horde Groupware is using the PEAR installer.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First you need to register the Horde PEAR channel server to your local PEAR
@@ -411,7 +406,8 @@ pear install -a horde/groupware
 <h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Installing into separate PEAR</a></h2>
 <p>If you want to create a separate PEAR installation for installing Horde
 Groupware, independent from the system-wide PEAR installation, this can be done
-with the following commands. The paths are only examples of course:</p>
+with the following commands (in this example, <tt class="docutils literal">/var/www/groupware</tt> is used as
+the location of the web-accessible Horde directory):</p>
 <pre class="literal-block">
 mkdir /var/www/groupware
 pear config-create /var/www/groupware /var/www/groupware/pear.conf
@@ -420,7 +416,8 @@ pear -c /var/www/groupware/pear.conf install pear
 <p>Then follow the regular installation steps, but use the <tt class="docutils literal">pear</tt> command from
 the PEAR installation you just created, e.g.:</p>
 <pre class="literal-block">
-/var/www/groupware/pear/pear -c /var/www/groupware/pear.conf channel-discover pear.horde.org
+/var/www/groupware/pear/pear -c /var/www/groupware/pear.conf \
+    channel-discover pear.horde.org
 </pre>
 <p>Finally update the .htaccess file in <tt class="docutils literal">/var/www/groupware/</tt> or configure your
 web server in some other way to point PHP's <tt class="docutils literal">include_path</tt> setting to the
@@ -452,7 +449,9 @@ pear config-get bin_dir
 <p>If you installed into a local PEAR installation, you need to tell PHP and PEAR
 where to find the installation and the script, e.g.:</p>
 <pre class="literal-block">
-PHP_PEAR_SYSCONF_DIR=/var/www/groupware php -d include_path=/var/www/groupware/pear/php /var/www/groupware/pear/groupware-install
+PHP_PEAR_SYSCONF_DIR=/var/www/groupware php \
+    -d include_path=/var/www/groupware/pear/php \
+    /var/www/groupware/pear/groupware-install
 </pre>
 </div>
 </div>
@@ -501,7 +500,7 @@ content:</p>
 $_prefs['prefname']['value'] = 'somedefault';
 $_prefs['prefname']['locked'] = true;
 </pre>
-<p>This works analogous with any other configuration file.</p>
+<p>This works with any configuration file.</p>
 <div class="warning">
 <p class="first admonition-title">Warning</p>
 <p>All configuration files in Horde Groupware are PHP scripts that

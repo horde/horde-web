@@ -8,8 +8,30 @@
 <td><a class="first last reference external" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
 </tbody>
 </table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#introduction" id="id1">1&nbsp;&nbsp;&nbsp;Introduction</a></li>
+<li><a class="reference internal" href="#upgrading-a-horde-groupware-4-or-later" id="id2">2&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware 4 or later</a></li>
+<li><a class="reference internal" href="#upgrading-horde-groupware-from-4-0-x-to-4-0-4" id="id3">3&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware from 4.0.x to 4.0.4</a><ul class="auto-toc">
+<li><a class="reference internal" href="#weather-portal-block" id="id4">3.1&nbsp;&nbsp;&nbsp;Weather portal block</a></li>
+<li><a class="reference internal" href="#configuration-changes" id="id5">3.2&nbsp;&nbsp;&nbsp;Configuration changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-a-horde-groupware-1-x" id="id6">4&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware 1.x</a></li>
+<li><a class="reference internal" href="#upgrading-horde-groupware-from-1-0-x-to-1-1-x" id="id7">5&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware from 1.0.x to 1.1.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#memcache-configuration" id="id8">5.1&nbsp;&nbsp;&nbsp;Memcache Configuration</a></li>
+<li><a class="reference internal" href="#application-hooks" id="id9">5.2&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
+<li><a class="reference internal" href="#group-hooks" id="id10">5.3&nbsp;&nbsp;&nbsp;Group Hooks</a></li>
+<li><a class="reference internal" href="#custom-themes" id="id11">5.4&nbsp;&nbsp;&nbsp;Custom Themes</a></li>
+<li><a class="reference internal" href="#static-log-out-links" id="id12">5.5&nbsp;&nbsp;&nbsp;Static Log out Links</a></li>
+<li><a class="reference internal" href="#imsp-driver-and-share-support" id="id13">5.6&nbsp;&nbsp;&nbsp;IMSP Driver and Share Support</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="introduction">
-<h1>Introduction</h1>
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Introduction</a></h1>
 <p>These are instructions to upgrade from earlier Horde Groupware versions.
 Please backup your existing data before running any of the steps described
 below, you need the backups in case anything goes wrong with the upgrade
@@ -19,7 +41,7 @@ with your old Horde Groupware version anymore.</p>
 not covered by the update script.</p>
 </div>
 <div class="section" id="upgrading-a-horde-groupware-4-or-later">
-<h1>Upgrading a Horde Groupware 4 or later</h1>
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware 4 or later</a></h1>
 <p>Upgrading Horde Groupware is as easy as running:</p>
 <pre class="literal-block">
 pear upgrade -a -B horde/groupware
@@ -32,8 +54,29 @@ update configurations and database schemes. Log in as an administrator, go to
 Administration =&gt; Configuration and update anything that's highlighted as
 outdated.</p>
 </div>
+<div class="section" id="upgrading-horde-groupware-from-4-0-x-to-4-0-4">
+<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware from 4.0.x to 4.0.4</a></h1>
+<div class="section" id="weather-portal-block">
+<h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Weather portal block</a></h2>
+<p>The weather.com website has dropped their API to retrieve weather forecasts
+with a very short notice. The weather.com portal block has been removed and
+will be automatically removed from the users' portal configurations too.</p>
+<p>A new portal block for weather forecasts is available, powered by the new
+Horde_Service_Weather library that supports a number of free weather
+services. To provide this block to the end users, install the
+Horde_Service_Weather library from Horde's PEAR server, and configure a weather
+service in Horde Groupware's configuration:</p>
+<pre class="literal-block">
+pear install horde/horde_service_weather-alpha
+</pre>
+</div>
+<div class="section" id="configuration-changes">
+<h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Configuration changes</a></h2>
+<p>The 'nobase64_img' option was added.</p>
+</div>
+</div>
 <div class="section" id="upgrading-a-horde-groupware-1-x">
-<h1>Upgrading a Horde Groupware 1.x</h1>
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware 1.x</a></h1>
 <p>For upgrading from a Horde Groupware version 1.x to 4.0 or later, see the
 section <a class="reference internal" href="#upgrading-a-horde-groupware-4-or-later">Upgrading a Horde Groupware 4 or later</a>.</p>
 <p>The update script will automatically migrate database backends and
@@ -84,19 +127,19 @@ be able to login after you moved Horde Groupware to a different directory.</p>
 </ol>
 </div>
 <div class="section" id="upgrading-horde-groupware-from-1-0-x-to-1-1-x">
-<h1>Upgrading Horde Groupware from 1.0.x to 1.1.x</h1>
+<h1><a class="toc-backref" href="#id7">5&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware from 1.0.x to 1.1.x</a></h1>
 <div class="section" id="memcache-configuration">
-<h2>Memcache Configuration</h2>
+<h2><a class="toc-backref" href="#id8">5.1&nbsp;&nbsp;&nbsp;Memcache Configuration</a></h2>
 <p>All memcache configuration has been moved to the $conf['memcache'] parameter.</p>
 </div>
 <div class="section" id="application-hooks">
-<h2>Application Hooks</h2>
+<h2><a class="toc-backref" href="#id9">5.2&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
 <p>All hooks that are specific to a single application have been moved to that
 application's <tt class="docutils literal">config/hooks.php</tt> file. Split up your existing Hooks from
 <tt class="docutils literal">horde/config/hooks.php</tt> and move them to the correct application.</p>
 </div>
 <div class="section" id="group-hooks">
-<h2>Group Hooks</h2>
+<h2><a class="toc-backref" href="#id10">5.3&nbsp;&nbsp;&nbsp;Group Hooks</a></h2>
 <p>The format for group hook functions has changed from
 _group_hook_groupName($username) to _group_hook($groupName,
 $userName).  So you will need to modify any existing group hook
@@ -105,7 +148,7 @@ functions in config/hooks.php for the new interface.</p>
 config/hooks.php that will call the old style hook functions for you.</p>
 </div>
 <div class="section" id="custom-themes">
-<h2>Custom Themes</h2>
+<h2><a class="toc-backref" href="#id11">5.4&nbsp;&nbsp;&nbsp;Custom Themes</a></h2>
 <p>Themes no longer have <tt class="docutils literal">info.php</tt> files. If you have any custom
 themes that provide their own images, you must add a
 <tt class="docutils literal">themed_graphics</tt> file to the theme's directory (for all
@@ -114,14 +157,14 @@ to use the custom images. The file can be empty or contain whatever
 you wish; it simply needs to exist.</p>
 </div>
 <div class="section" id="static-log-out-links">
-<h2>Static Log out Links</h2>
+<h2><a class="toc-backref" href="#id12">5.5&nbsp;&nbsp;&nbsp;Static Log out Links</a></h2>
 <p>If you have hardcoded a log out link in any custom templates or menu
 items, you must update it to use Horde::getServiceLink(). This is
 because logging out is now protected by a token to avoid CSRF
 exploits.</p>
 </div>
 <div class="section" id="imsp-driver-and-share-support">
-<h2>IMSP Driver and Share Support</h2>
+<h2><a class="toc-backref" href="#id13">5.6&nbsp;&nbsp;&nbsp;IMSP Driver and Share Support</a></h2>
 <p>Share support has been added to the IMSP driver.  This support requires at
 least a Horde 3.2 install.  With this change, any IMSP address books the user
 has rights to will be represented internally as a Horde share.  Permissions
