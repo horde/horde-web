@@ -32,8 +32,11 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
     {
         parent::_setup();
         $view = $this->getView();
+        $view->hasAdditional = file_exists($GLOBALS['fs_base'] . '/app/views/Download/apps/' . $this->_matchDict->app . '/additional.html.php');
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/Download'));
+            array(
+                $GLOBALS['fs_base'] . '/app/views/Download',
+                $GLOBALS['fs_base'] . '/app/views/Download/apps/' . $this->_matchDict->app));
         $view->stable = HordeWeb_Utils::getH3Apps();
         $view->h4Stable = HordeWeb_Utils::getH4Apps();
     }

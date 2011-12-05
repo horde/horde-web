@@ -65,6 +65,7 @@
 
             <p>Old versions can be obtained from our <a href="ftp://ftp.horde.org/pub/">FTP server</a>.</p>
             <?php endif; ?>
+            <?php if ($this->hasAdditional): echo $this->render('additional'); endif; ?>
         </div>
     </div>
     <div class="rightcol" style="background: none;">
