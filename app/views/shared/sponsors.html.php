@@ -3,6 +3,7 @@
     <h2>Featured At</h2>
     <?php echo $this->render('informer'); ?><br />
   <?php endif; ?>
+
   <h2>Sponsors</h2>
   <ul class="ads">
     <li>
@@ -22,19 +23,20 @@
     <li><a href="http://www.hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png"/></a></li>
     <li><a href="http://www.verendus.com"><img src="<?php echo $GLOBALS['host_base'] ?>/images/verendus.jpg"/></a></li>
   </ul>
+
   <h2>Twitter</h2>
-  <?php echo $this->render('informer-twitter'); ?>
   <a href="http://twitter.com/hordeproject" class="twitter-follow-button" data-show-count="false">Follow @hordeproject</a>
   <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-  <br />
+  <?php echo $this->render('informer-twitter'); ?>
+
   <h2>More</h2>
-  <br />
   <iframe src="http://www.facebook.com/plugins/like.php?app_id=132513070157462&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHorde-LLC%2F192707224109487&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
   <g:plusone size="medium" href="http://www.horde.org/"></g:plusone>
   <p>
     <?php echo $this->linkTo('Logos', array('controller' => 'home', 'action' => 'logos'), array('class' => 'logos'));?>
     <?php echo $this->linkTo('Thanks', array('controller' => 'home', 'action' => 'thanks'), array('class' => 'thanks')); ?>
   </p>
+
   <h2>Shops</h2>
   <span style="text-align:center;width:91px;float:left;">European Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopeu')?>">
