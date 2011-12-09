@@ -76,7 +76,7 @@
                       unavailable.</li>  <?php endif; ?> <?php $i = 0; ?>
                       <?php foreach ($this->planet as $entry): if ($i++ >=
                       $this->maxPlanetItems) { break; } echo
-                      $this->renderPartial('feedListItem', array('locals' =>
+                      $this->renderPartial('feedListDetailedItem', array('locals' =>
                       array('entry' => $entry))); endforeach; ?>
                     </ul>
                   </div>

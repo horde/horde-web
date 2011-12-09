@@ -1,0 +1,2 @@
+<li><a href="<?php echo ($entry->link() == '' ? 'http://www.horde.org' : $entry->link()) ?>">
+<?php echo $entry->title() ?></a><div class="description"><?php echo Horde_String::truncate($entry->description(), 160) ?></div></li>

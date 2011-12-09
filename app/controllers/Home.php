@@ -67,7 +67,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $view->page_title = 'The Horde Project';
         $view->maxHordeItems = 5;
-        $view->maxPlanetItems = 5;
+        $view->maxPlanetItems = 10;
         $cache = $GLOBALS['injector']->getInstance('Horde_Cache');
 
         // Get the planet feed.
