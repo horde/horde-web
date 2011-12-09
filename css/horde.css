@@ -415,6 +415,10 @@ div.planethorde ul li p {
     margin:0;
 }
 
+div.planethorde ul li div.description {
+    margin-left: 3px;
+}
+
 div.planethorde ul li p.author {
     font-size:10px;
     color:#9f9f9f;
@@ -757,6 +761,39 @@ div.sliderview p {
 /* for ie 7 */
 *+html #b-webi-widget ul {
     margin-bottom: 5px;
+}
+
+/* Informer Twitter Widget */
+.twtr-doc {
+    margin:10px 0 0;
+}
+.twtr-tweet {
+    float: left;
+    margin: 10px 0 0;
+}
+.twtr-avatar {
+    display: block;
+    float: left;
+    height: 45px;
+    overflow: hidden;
+    width: 45px;
+}
+.twtr-img img {
+    height: 35px;
+    width: 35px;
+}
+.twtr-tweet-text {
+    margin-left: 40px;
+}
+.twtr-tweet-text p {
+    font: 11px Helvetica Neue,Arial,Helvetica,Tahoma;
+    margin: 0 15px 0 0;
+    padding: 0;
+}
+.twtr-tweet-text em a {
+    color: #34537D;
+    display: inline-block;
+    margin-top: 5px;
 }
 
 /* Application pages */
