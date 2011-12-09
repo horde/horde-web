@@ -399,26 +399,18 @@ div.b-webi-more-block, div.b-webi-more,  div.b-webi-hide {
 div.planethorde {
     padding-top:10px;
 }
-
 div.planethorde ul {
     list-style:none;
 }
-
 div.planethorde ul li {
     border-bottom:1px dotted #afafaf;
     padding-bottom:5px;
     margin-bottom:5px;
 }
-
 div.planethorde ul li p {
     padding:0;
     margin:0;
 }
-
-div.planethorde ul li div.description {
-    margin-left: 3px;
-}
-
 div.planethorde ul li p.author {
     font-size:10px;
     color:#9f9f9f;
