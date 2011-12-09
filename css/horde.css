@@ -757,7 +757,7 @@ div.sliderview p {
 
 /* Informer Twitter Widget */
 .twtr-doc {
-    margin:10px 0 0;
+    margin: 10px 0 0;
 }
 .twtr-tweet {
     float: left;
@@ -778,7 +778,7 @@ div.sliderview p {
     margin-left: 40px;
 }
 .twtr-tweet-text p {
-    font: 11px Helvetica Neue,Arial,Helvetica,Tahoma;
+    font-size: 11px;
     margin: 0 15px 0 0;
     padding: 0;
 }
