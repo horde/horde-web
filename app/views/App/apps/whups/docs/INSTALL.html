@@ -121,14 +121,12 @@ will need to set up <tt class="docutils literal"><span class="pre">whups-mail-fi
 appropriate addresses. This script takes a number of arguments; see the
 script for more details. A typical setup might be:</p>
 <pre class="literal-block">
-bugs |/usr/bin/whups-mail-filter --queue-name=Bugs --type-name=Bug --state-name=New --priority-name=Low
+bugs |/usr/bin/whups-mail-filter --queue-name=Bugs
 </pre>
 <p>This will take in mail to the <tt class="docutils literal">bugs</tt> address at your domain, and create
-new tickets in the <tt class="docutils literal">Bugs</tt> queue, with a type of <tt class="docutils literal">Bug</tt>, a state of
-<tt class="docutils literal">New</tt>, and <tt class="docutils literal">Low</tt> priority. Note that this must be a valid combination of
-queue/type/state/priority names in your Whups installation. If an email
-references an existing ticket (ticket numbers are recognized in the subject
-line) it will be updated instead.</p>
+new tickets in the <tt class="docutils literal">Bugs</tt> queue, with the default type, state and priority
+of this queue. If an email references an existing ticket (ticket numbers are
+recognized in the subject line) it will be updated instead.</p>
 <p>If not installing Whups through PEAR of if PEAR's <tt class="docutils literal">bin_dir</tt> configuration
 doesn't point to <tt class="docutils literal">/usr/bin/</tt>, replace <tt class="docutils literal"><span class="pre">/usr/bin/whups-mail-filter</span></tt> with
 the path to the <tt class="docutils literal"><span class="pre">whups-mail-filter</span></tt> script in your Horde installation.</p>
@@ -161,11 +159,10 @@ at least the following:</p>
 <li><p class="first">Creating tickets from email messages</p>
 <p>Whups provides functionality that can be used to create and update tickets
 from email messages. One part of this functionality is the
-<tt class="docutils literal"><span class="pre">whups-mail-filter</span></tt> script. It can either be
-installed inside the mail chain, or run as a standalone script against an
-IMAP or POP3 server. It provides a list of all available command line
-arguments if called with the <tt class="docutils literal"><span class="pre">--help</span></tt> argument: <tt class="docutils literal"><span class="pre">./mail-filter.php</span>
-<span class="pre">--help</span></tt>.</p>
+<tt class="docutils literal"><span class="pre">whups-mail-filter</span></tt> script. It can either be installed inside the mail
+chain, or run as a standalone script against an IMAP or POP3 server. It
+provides a list of all available command line arguments if called with the
+<tt class="docutils literal"><span class="pre">--help</span></tt> argument: <tt class="docutils literal"><span class="pre">whups-mail-filter</span> <span class="pre">--help</span></tt>.</p>
 <p>If you use the arguments starting with <tt class="docutils literal"><span class="pre">--mail</span></tt>, the script will login to
 the provided IMAP or POP3 server and process all messages in the specified
 folder. Any successfully processed messages will be deleted. An error
@@ -178,16 +175,16 @@ scenario would be to pipe all messages to a certain email address through
 this script, e.g. through the forwarding or alias mechanism. An example
 entry in <tt class="docutils literal">/etc/alias</tt> could look like this:</p>
 <pre class="literal-block">
-bugs:&quot;|/usr/bin/whups-mail-filter -q 'Test Queue' -t mytype -p '1. Low' -s Unconfirmed&quot;
+bugs:&quot;|/usr/bin/whups-mail-filter -q 'Test Queue'&quot;
 </pre>
-<p>Even though this example uses &quot;names&quot; for the arguments, it's preferred to
-use IDs, because those doesn't cause any problems with spaces, or non-ascii
-characters.</p>
+<p>Even though this example uses a queue &quot;name&quot; for the argument, it's
+preferred to use IDs, because those doesn't cause any problems with spaces,
+or non-ascii characters.</p>
 <p>The script tries to determine the ticket number from the message, if a
-ticket number hasn't been specified with the <tt class="docutils literal"><span class="pre">--ticket</span></tt>
-argument. Currently it searches for strings looking like &quot;[Bug #1]&quot; in the
-message subject. If a ticket number cannot be determined by any means, or
-if a ticket with that number doesn't exist, a new ticket is created.</p>
+ticket number hasn't been specified with the <tt class="docutils literal"><span class="pre">--ticket</span></tt> argument.
+Currently it searches for strings looking like &quot;[Bug #1]&quot; in the message
+subject. If a ticket number cannot be determined by any means, or if a
+ticket with that number doesn't exist, a new ticket is created.</p>
 <p>The (Horde) user that will be used to create or update the ticket, will
 also be determined by investigating the message. The email address used in
 the <tt class="docutils literal">From:</tt> header of the message will be looked up by searching all
@@ -208,6 +205,12 @@ emails. This setting removes the warning from the generated ticket emails to
 specify the correct email address here for the generated messages. It should
 be the address that you use for the mail pipe, or the IMAP/POP3 account when
 calling <tt class="docutils literal"><span class="pre">whups-mail-filter</span></tt>.</p>
+<p>Any attachments that have been sent with the message will be added to the
+ticket as attachments too. This is done via the virtual file system (VFS) of
+Horde. If you use the local file system as the VFS backend, you need to take
+care of permissions and umasks, i.e. both the user running the
+<tt class="docutils literal"><span class="pre">whups-mail-filter</span></tt> script and the user running the web server need to
+have read-write permissions to the VFS storage directory.</p>
 </li>
 </ol>
 </div>
@@ -234,7 +237,7 @@ For information on reasonable support expectations, please read</p>
 <div class="system-messages section">
 <h1>Docutils System Messages</h1>
 <div class="system-message" id="id7">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/whups/docs/INSTALL</tt>, line 131); <em><a href="#id8">backlink</a></em></p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/whups/docs/INSTALL</tt>, line 129); <em><a href="#id8">backlink</a></em></p>
 Unknown target name: &quot;creating tickets from email messages&quot;.</div>
 </div>
 </div>
