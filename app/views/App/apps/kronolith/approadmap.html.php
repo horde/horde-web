@@ -12,7 +12,7 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Kronolith 4.0</h3>
+<h3>Kronolith 3.1/4.0</h3>
 
 <p><b>Status:</b> In development</p>
 
@@ -22,13 +22,11 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
+  <tr><td>Work week view in dynamic mode</td><td class="done">Done</td></tr>
+  <tr><td>Individual time zones per event</td><td class="done">Done</td></tr>
   <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
   <tr><td>Simpler meeting scheduling</td><td class="planned">Planned</td>
 </table>
-
-<h3>Kronolith 3.1</h3>
-
-<p><b>Status:</b> Not planned</p>
 
 <div class="dimmed">
 
