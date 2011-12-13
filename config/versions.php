@@ -7,26 +7,26 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.12',
-        'date' => 'November 22 2011',
+        'ver' => '4.0.13',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.4',
-        'date' => 'November 23 2011',
+        'ver' => '4.0.5',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.4',
-        'date' => 'November 23 2011',
+        'ver' => '4.0.5',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.15)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (5.0.16)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'turba' => array(
@@ -37,26 +37,26 @@ $horde_four_apps = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.6)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (2.0.7)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.12)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (3.0.13)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.6)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (3.0.7)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.3)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (3.0.4)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'gollem' => array(
@@ -73,14 +73,14 @@ $horde_four_apps = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0)',
-        'date' => 'October 28 2011',
+        'ver' => 'H4 (2.0.1)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H4 (1.0)',
-        'date' => 'Oktober 28 2011',
+        'ver' => 'H4 (1.0.1)',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
     'ansel' => array(
@@ -90,13 +90,13 @@ $horde_four_apps = array(
         'pear' => true,
     ),
     'content' => array(
-        'ver' => 'H4 (1.0.2)',
-        'date' => 'August 11 2011',
+        'ver' => 'H4 (1.0.3)',
+        'date' => 'October 14 2011',
         'pear' => true,
     ),
     'timeobjects' => array(
-        'ver' => 'H4 (1.0.3)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (1.0.5)',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
 );
@@ -216,28 +216,26 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.12',
-        'date' => 'November 22 2011',
+        'ver' => '4.0.13',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.4',
-        'date' => 'November 23 2011',
-        'dir' => 'horde-groupware',
+        'ver' => '4.0.5',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.4',
-        'date' => 'November 23 2011',
-        'dir' => 'horde-webmail',
+        'ver' => '4.0.5',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.15)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (5.0.16)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'dimp' => array(
@@ -258,27 +256,27 @@ $horde_apps_stable = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.6)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (2.0.7)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.12)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (3.0.13)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.6)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (3.0.7)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.3)',
-        'date' => 'October 18 2011',
-        'pear' => true,
+        'ver' => 'H4 (3.0.4)',
+        'date' => 'December 13 2011',
+        'pear' => true
     ),
     'chora' => array(
         'name' => 'Chora',
@@ -314,14 +312,14 @@ $horde_apps_stable = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0)',
-        'date' => 'October 28 2011',
+        'ver' => 'H4 (2.0.1)',
+        'date' => 'December 13 2011',
         'pear' => true
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H4 (1.0)',
-        'date' => 'Oktober 28 2011',
+        'ver' => 'H4 (1.0.1)',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
     'hermes' => array(
@@ -341,13 +339,13 @@ $horde_apps_stable = array(
         'date' => 'March 19 2009'
     ),
     'content' => array(
-        'ver' => 'H4 (1.0.2)',
-        'date' => 'August 11 2011',
+        'ver' => 'H4 (1.0.3)',
+        'date' => 'October 14 2011',
         'pear' => true,
     ),
     'timeobjects' => array(
-        'ver' => 'H4 (1.0.3)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (1.0.5)',
+        'date' => 'December 13 2011',
         'pear' => true,
     ),
 );
