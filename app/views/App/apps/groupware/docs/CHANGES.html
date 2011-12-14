@@ -1,8 +1,136 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v4.0.5-git
+v4.0.6-git
 ----------
 
+
+
+------
+v4.0.5
+------
+
+[jan] Update Dutch translation (Arjen de Korte &lt;build+horde@de-korte.org>,
+      Pieterjan Heyse &lt;pieterjan.heyse@scheppers-wetteren.be>).
+[jan] Update Japanese translation (Hiromi Kimura &lt;hiromi@tac.tsukuba.ac.jp>).
+
+Horde Changes
+-------------
+[jan] Make the lifetime of cached weather information configurable (Arjen de
+      Korte, <a href="http://bugs.horde.org/ticket/10848">Request #10848</a>).
+[mjr] Improve layout of weather block.
+
+Calendar Changes
+----------------
+[jan] Hide disabled calendar sections (<a href="http://bugs.horde.org/ticket/9815">Bug #9815</a>).
+[gwr] Fixed recurrence handling with the Kolab backend.
+[gwr] Fixed naming of the default calendar for the Kolab backend.
+[gwr] Fixed deleting events with the Kolab backend.
+[gwr] Fixed migrations for SQLite as database backend.
+[mjr] Fix keyboard navigation of time entry fields in dynamic view (<a href="http://bugs.horde.org/ticket/10799">Bug
+      #10799</a>).
+[mjr] Fix parsing display_cal variables for internal calendar links on various
+      blocks and embedded imples (<a href="http://bugs.horde.org/ticket/10767">Bug #10767</a>).
+[mjr] Fix adding events directly to a resource's calendar (<a href="http://bugs.horde.org/ticket/10827">Bug #10827</a>).
+[mjr] Fix regression introduced in 3.0.12 that broke checking a Resource's
+      availability in certain cases (<a href="http://bugs.horde.org/ticket/10806">Bug #10806</a>).
+[jan] Don't fail on empty CalDAV calendars (christof@buergi.lugs.ch, <a href="http://bugs.horde.org/ticket/10739">Bug
+      #10739</a>).
+[jan] Check permissions when building application drop down
+      (sberthelot@emisfr.com, <a href="http://bugs.horde.org/ticket/10811">Bug #10811</a>).
+[gwr] Fix saving Kolab events.
+
+Tasks Changes
+-------------
+[jan] Fix setting custom alarm methods (<a href="http://bugs.horde.org/ticket/9543">Bug #9543</a>).
+
+Notes Changes
+-------------
+[jan] Use locale based sorting.
+[jan] Fix remembering the expansion state of the notepads panel (<a href="http://bugs.horde.org/ticket/10797">Bug #10797</a>).
+
+Library Changes
+---------------
+
+ActiveSync
+[mjr] Increase field length for sync_data to support syncing large collections
+      (<a href="http://bugs.horde.org/ticket/10822">Bug #10822</a>).
+[jan] Fix tests to work with PHPUnit 3.6.
+
+Alarm
+[jan] Catch exceptions from Horde_Mime when sending alarm messages (<a href="http://bugs.horde.org/ticket/10388">Bug #10388</a>).
+
+Auth
+[jan] Add Latvian translation (Jānis Eisaks &lt;jancs@dv.lv>).
+
+Core
+[mjr] Allow separate ActiveSync logs per device.
+[jan] Make the lifetime of cached weather information configurable (Arjen de
+      Korte, <a href="http://bugs.horde.org/ticket/10848">Request #10848</a>).
+[gwr] Fixed hiding menu entries that should not be displayed to admin.
+[gwr] Fixed Kolab anonymous bind.
+
+Crypt
+[mms] Provide signature information when decrypting a message, rather than just
+      a boolean result.
+[mms] Fix displaying PGP key expiration information.
+[mms] Allow expiration date to be given to Horde_Crypt_Pgp#generateKey()
+      (<a href="http://bugs.horde.org/ticket/5754">Request #5754</a>).
+
+Data
+[mjr] Allow applications to extend Horde_Data_Base objects.
+
+Date
+[mjr] Fix issue with creating Horde_Date from DateTime object with explicit
+      timezone set.
+[gwr] Fix the parsing of recurrence hash data.
+
+Date_Parser
+[jan] Correctly parse "nacht" in German (<a href="http://bugs.horde.org/ticket/10511">Bug #10511</a>).
+
+Db
+[gwr] Alternative API to support modified dates with SQLite as well.
+[mjr] Add support for mediumtext and longtext field types.
+
+Imap_Client
+[mms] Work around broken headers in IMAP envelope data.
+[mms] Remove Cclient drivers.
+
+Mime
+[mms] Allow Horde_Mime_Part::getRawPartText() to accept stream input.
+[mms] Workaround incoming message data to Horde_Mime_Part::getRawPartText()
+      that contains varying EOL characters (<a href="http://bugs.horde.org/ticket/10809">Bug #10809</a>).
+[mms] Fix detection of MIME boundaries at beginning of string (<a href="http://bugs.horde.org/ticket/10809">Bug #10809</a>).
+[mms] Abstract charset detection code out into
+      Horde_Mime_Headers::sanityCheck().
+[mms] Improved detection of charsets in broken (8-bit) MIME headers.
+[mms] Fix for broken 8BITMIME/BINARYMIME SMTP capability detection
+      (christof@buergi.lugs.ch, <a href="http://bugs.horde.org/ticket/10820">Bug #10820</a>).
+
+Prefs
+[jan] Catch exceptions from storage writing during shutdown.
+[jan] Use binary column type for preference values (<a href="http://bugs.horde.org/ticket/10803">Bug #10803</a>).
+
+Service_Weather
+[mjr] Use longer cache lifetime for non-changing values (<a href="http://bugs.horde.org/ticket/10851">Request #10851</a>).
+[mjr] Export available detailed forecast fields for each driver (<a href="http://bugs.horde.org/ticket/10813">Bug #10813</a>).
+[mjr] Fix returning correct units when requesting the same location twice, but
+      with different units (<a href="http://bugs.horde.org/ticket/10804">Bug #10804</a>).
+[mjr] Fix returning localized text from Wwo driver (<a href="http://bugs.horde.org/ticket/10804">Bug #10804</a>).
+[mjr] Fix obtaining forecast periods individually..
+[mjr] Fix obtaining certain properties from Google driver.
+[mjr] Fix making requests when not using a cache.
+[mjr] Fix path to locale directory.
+[mjr] Fix setting units (<a href="http://bugs.horde.org/ticket/10792">Bug #10792</a>).
+
+Text_Filter
+[mms] Fix unnecessary use of POSIX collating element in Linkurls filter
+      (jr@yaina.de, <a href="http://bugs.horde.org/ticket/10828">Bug #10828</a>).
+
+Token
+[jan] Fix translation (<a href="http://bugs.horde.org/ticket/10831">Bug #10831</a>).
+
+Util
+[mms] Add Horde_String::validUtf8().
 
 
 ------
