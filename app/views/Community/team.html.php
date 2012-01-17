@@ -10,7 +10,8 @@
         echo $this->render('Michael_Slusarz');
         echo $this->render('Michael_Rubinsky');
         echo $this->render('Ben_Klang');
-        echo $this->render('Gunnar_Wrobel');?>
+        echo $this->render('Gunnar_Wrobel');
+        echo $this->render('Ralf_Lang');?>
         <br />
         <h2><span>&nbsp;</span>Retired Developers</h2>
         <?php
