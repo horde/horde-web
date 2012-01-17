@@ -9,10 +9,6 @@
 
         <h3>Sponsors</h3>
         <p>The Horde project is generously sponsored by these organizations and companies:
-        <div>
-        <a href="http://www.online-artikel.de/" title="Social Media News">
-        <img src="<?php echo $GLOBALS['host_base'] ?>/images/online-artikel.de.gif" height="31"/></a>
-        </div>
         </p>
 
         <h3>Servers</h3>
