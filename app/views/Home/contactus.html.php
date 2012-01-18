@@ -39,12 +39,12 @@
         <table>
           <tr>
             <td>USA:</td>
-            <td>&nbsp;+1.404.475.4830</td>
+            <td>&nbsp;<a href="tel:+1.404.475.4830">+1.404.475.4830</a></td>
             <td>&nbsp;(English)</td>
           </tr>
           <tr>
             <td>Germany:</td>
-            <td>&nbsp;+49.521.4469.8995</td>
+            <td>&nbsp;<a href="tel:+49.521.4469.8995">+49.521.4469.8995</a></td>
             <td>&nbsp;(English, German)</td>
           </tr>
         </table>
