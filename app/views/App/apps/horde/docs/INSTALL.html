@@ -414,15 +414,8 @@ pecl install memcache
 extensions, see the PEAR installation section above.</p>
 </li>
 </ol>
-<p>The following non-PHP prerequisites are <strong>RECOMMENDED</strong>, or are <strong>REQUIRED</strong>
-if you use a specific Horde application (as noted in [brackets]):</p>
+<p>The following non-PHP prerequisites are <strong>RECOMMENDED</strong>.</p>
 <ol class="arabic">
-<li><p class="first">Sendmail or equivalent.</p>
-<p>Horde uses sendmail, or a program that implements the <tt class="docutils literal">sendmail(8)</tt> API
-(as included with postfix, qmail, and exim, among others). If your system
-does not already have a full mail transport with a sendmail interface, you
-can configure Horde to speak directly with a remote SMTP server.</p>
-</li>
 <li><p class="first">aspell - Spelling Checker</p>
 <p>Aspell, a comand-line program, is used as Horde's spell-checking engine.
 You must install and configure aspell to use Horde's spell-check feature.</p>
@@ -431,6 +424,20 @@ You must install and configure aspell to use Horde's spell-check feature.</p>
 <blockquote>
 <p><a class="reference external" href="http://aspell.sourceforge.net/">http://aspell.sourceforge.net/</a></p>
 </blockquote>
+</li>
+</ol>
+<p>The following non-PHP prerequisites are optional.</p>
+<ol class="arabic">
+<li><p class="first">Sendmail.</p>
+<p>It is highly <strong>RECOMMENDED</strong> that Horde be configured to use SMTP for
+sending e-mails.</p>
+<p>Alternatively, Horde can use the local sendmail program, or a program that
+implements the <tt class="docutils literal">sendmail(8)</tt> API (as included with postfix, qmail, and
+exim, among others). However, local use of sendmail binaries to send mail
+is discouraged due to authentication/permission issues (since Horde will
+invoke the sendmail binary as the web/PHP user), and because it is not
+possible to reliably auto-configure sendmail since there is no unified
+API across platforms/sendmail variants.</p>
 </li>
 </ol>
 </div>
