@@ -29,7 +29,9 @@
 
         <p>
           Each monthly sponsor will be listed here with a small image and a link to the
-          home page. Please send the necessary details to info@horde.org after subscribing here.
+          home page. Please send the necessary details to
+          <a href="mailto:info@horde.org" class="email">info@horde.org</a>
+          after subscribing here.
         </p>
 
         <p>
