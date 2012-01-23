@@ -4,25 +4,26 @@
     <?php echo $this->render('informer'); ?><br />
   <?php endif; ?>
 
+  <h2>Support us!</h2>
+
+   <div style="text-align:center;height:40px;">
+     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+     <input type="hidden" name="cmd" value="_s-xclick">
+     <input type="hidden" name="hosted_button_id" value="DWV8RS3BHMVC2">
+     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+     </form>
+   </div>
+
   <h2>Sponsors</h2>
   <ul class="ads">
-    <li>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-      <input type="hidden" name="cmd" value="_xclick" />
-      <input type="hidden" name="business" value="llc@horde.org" />
-      <input type="hidden" name="item_name" value="Support the Horde Project" />
-      <input type="hidden" name="item_number" value="1" />
-      <input type="hidden" name="no_shipping" value="1" />
-      <input type="hidden" name="cn" value="Notes" />
-      <input type="hidden" name="currency_code" value="USD" />
-      <input type="hidden" name="tax" value="0" />
-      <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" style="border:0" name="submit" alt="Donate to the Horde Project" />
-      </form>
-    </li>
     <li><a href="http://www.easydns.com/?V=55611cf92a7e0842"><img src="<?php echo $GLOBALS['host_base'] ?>/images/easyDNS.png" /></a></li>
     <li><a href="http://www.hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png"/></a></li>
     <li><a href="http://www.verendus.com"><img src="<?php echo $GLOBALS['host_base'] ?>/images/verendus.jpg"/></a></li>
   </ul>
+  <p>
+    <?php echo $this->linkTo('"Thanks!" to all our other sponsors', array('controller' => 'home', 'action' => 'thanks'), array('class' => 'thanks')); ?>
+  </p>
 
   <h2>Twitter</h2>
   <a href="http://twitter.com/hordeproject" class="twitter-follow-button" data-show-count="false">Follow @hordeproject</a>
@@ -34,7 +35,6 @@
   <g:plusone size="medium" href="http://www.horde.org/"></g:plusone>
   <p>
     <?php echo $this->linkTo('Logos', array('controller' => 'home', 'action' => 'logos'), array('class' => 'logos'));?>
-    <?php echo $this->linkTo('Thanks', array('controller' => 'home', 'action' => 'thanks'), array('class' => 'thanks')); ?>
   </p>
 
   <h2>Shops</h2>
