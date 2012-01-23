@@ -8,8 +8,54 @@
         running.</p>
 
         <h3>Sponsors</h3>
-        <p>The Horde project is generously sponsored by these organizations and companies:
+        <p>
+          The following sponsors donate funds to support general Horde development:
         </p>
+        <p>
+          <a style="display:block; text-decoration:none" href="http://www.pardus.de/" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/pardus_logo.png" height="31"/>
+          </a>
+        </p>
+
+        <h3>New sponsors</h3>
+        <p>
+          If you use Horde - especially in a commercial environment - please consider
+          sponsoring the project with a monthly donation. The money will be used to pay
+          the development of new Horde features wich will be openly available to all 
+          Horde users. These type of donations are extremely valuable to the project as
+          it allows us to continue to work hard on providing millions of users with the
+          best possible webmail and groupware solution we are able to produce.
+        </p>
+
+        <p>
+          Each monthly sponsor will be listed here with a small image and a link to the
+          home page. Please send the necessary details to info@horde.org after subscribing here.
+        </p>
+
+        <p>
+          Thank you for your support!          
+        </p>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="KWS7T5MRPLGL4">
+        <div style="text-align:center;">
+          <input type="hidden" name="on0" value="Sponsorship options">Sponsorship options
+        </div>
+        <div style="text-align:center;">
+          <select name="os0">
+            <option value="Bronze">Bronze : $100.00USD - monthly</option>
+            <option value="Silver">Silver : $250.00USD - monthly</option>
+            <option value="Gold">Gold : $500.00USD - monthly</option>
+            <option value="Platin">Platin : $1,000.00USD - monthly</option>
+          </select>
+        </div>
+        <input type="hidden" name="currency_code" value="USD">
+        <div style="text-align:center;">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_SM.gif" border="0" name="submit" al        t="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </div>
+        </form>
 
         <h3>Servers</h3>
         <p>The Horde.org servers are generously hosted by the following organizations:
