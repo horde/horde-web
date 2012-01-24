@@ -11,11 +11,16 @@
         <p>
           The following sponsors donate funds to support general Horde development:
         </p>
+        <br/>
         <p>
-          <a style="display:block; text-decoration:none" href="http://www.pardus.de/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/pardus_logo.png" height="31"/>
+          <a style="padding:20px;text-decoration:none" href="http://www.psw.net/" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_psw.gif" height="40"/>
+          </a>
+          <a style="padding:20px;text-decoration:none" href="http://www.pardus.de/" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_pardus.png" height="31"/>
           </a>
         </p>
+        <br/>
 
         <h3>New sponsors</h3>
         <p>
