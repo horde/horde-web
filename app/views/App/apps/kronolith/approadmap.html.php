@@ -24,6 +24,8 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Work week view in dynamic mode</td><td class="done">Done</td></tr>
   <tr><td>Individual time zones per event</td><td class="done">Done</td></tr>
+  <tr><td>Resource scheduling in dynamic view</td><td class="done">Done</td></tr>
+  <tr><td>Recurrence series editing in dynamic view</td><td class="done">Done</td></tr>
   <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
   <tr><td>Simpler meeting scheduling</td><td class="planned">Planned</td>
 </table>
