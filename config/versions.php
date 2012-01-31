@@ -43,8 +43,8 @@ $horde_four_apps = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.14)',
-        'date' => 'January 17 2012',
+        'ver' => 'H4 (3.0.15)',
+        'date' => 'January 31 2012',
         'pear' => true
     ),
     'nag' => array(
@@ -55,8 +55,8 @@ $horde_four_apps = array(
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.4)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (3.0.5)',
+        'date' => 'January 31 2012',
         'pear' => true
     ),
     'gollem' => array(
@@ -262,8 +262,8 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.14)',
-        'date' => 'January 17 2012',
+        'ver' => 'H4 (3.0.15)',
+        'date' => 'January 31 2012',
         'pear' => true
     ),
     'nag' => array(
@@ -274,8 +274,8 @@ $horde_apps_stable = array(
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.4)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (3.0.5)',
+        'date' => 'January 31 2012',
         'pear' => true
     ),
     'chora' => array(
