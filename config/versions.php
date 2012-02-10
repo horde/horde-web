@@ -104,31 +104,31 @@ $horde_four_apps = array(
 $horde_three_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '3.3.12',
-        'date' => 'July 26 2011'
+        'ver' => '3.3.13',
+        'date' => 'February 7 2012',
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '1.2.10',
-        'date' => 'July 26 2011',
+        'ver' => '1.2.11',
+        'date' => 'February 10 2012',
         // Define 'dir' if it is not the same as the array key
         'dir' => 'horde-groupware'
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '1.2.10',
-        'date' => 'July 26 2011',
+        'ver' => '1.2.11',
+        'date' => 'February 10 2012',
         'dir' => 'horde-webmail'
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H3 (4.3.10)',
-        'date' => 'July 26 2011'
+        'ver' => 'H3 (4.3.11)',
+        'date' => 'February 10 2012',
     ),
     'dimp' => array(
         'name' => 'DIMP',
-        'ver' => 'H3 (1.1.7)',
-        'date' => 'July 26 2011'
+        'ver' => 'H3 (1.1.8)',
+        'date' => 'February 10 2012',
     ),
     'mimp' => array(
         'name' => 'MIMP',
