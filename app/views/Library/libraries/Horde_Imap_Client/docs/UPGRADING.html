@@ -1,0 +1,286 @@
+<div class="document" id="upgrading-horde-imap-client">
+<h1 class="title">Upgrading Horde_Imap_Client</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#upgrading-to-1-4-0" id="id1">1&nbsp;&nbsp;&nbsp;Upgrading To 1.4.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-3-0" id="id2">2&nbsp;&nbsp;&nbsp;Upgrading To 1.3.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-2-0" id="id3">3&nbsp;&nbsp;&nbsp;Upgrading To 1.2.0</a><ul class="auto-toc">
+<li><a class="reference internal" href="#changed-return-values" id="id4">3.1&nbsp;&nbsp;&nbsp;Changed Return Values</a></li>
+<li><a class="reference internal" href="#deprecated-methods" id="id5">3.2&nbsp;&nbsp;&nbsp;Deprecated Methods</a></li>
+<li><a class="reference internal" href="#deprecated-parameters" id="id6">3.3&nbsp;&nbsp;&nbsp;Deprecated Parameters</a></li>
+<li><a class="reference internal" href="#drivers" id="id7">3.4&nbsp;&nbsp;&nbsp;Drivers</a></li>
+<li><a class="reference internal" href="#method-parameter-changes" id="id8">3.5&nbsp;&nbsp;&nbsp;Method Parameter Changes</a></li>
+<li><a class="reference internal" href="#new-methods" id="id9">3.6&nbsp;&nbsp;&nbsp;New Methods</a></li>
+<li><a class="reference internal" href="#new-objects" id="id10">3.7&nbsp;&nbsp;&nbsp;New Objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-to-1-1-0" id="id11">4&nbsp;&nbsp;&nbsp;Upgrading To 1.1.0</a><ul class="auto-toc">
+<li><a class="reference internal" href="#new-object-properties" id="id12">4.1&nbsp;&nbsp;&nbsp;New Object Properties</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>This lists the API changes between minor releases of the package.</p>
+<div class="section" id="upgrading-to-1-4-0">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Upgrading To 1.4.0</a></h1>
+<p>Several exception codes have been deprecated:</p>
+<blockquote>
+<ul class="simple">
+<li>DRIVER_NOT_FOUND</li>
+<li>CATENATE_BADURL</li>
+<li>BADSEARCH</li>
+</ul>
+</blockquote>
+<p>These are coding errors, not run-time errors, so SPL Exceptions are thrown
+instead of Horde_Imap_Client_Exceptions with these codes.</p>
+<p>These exception codes have also been deprecated:</p>
+<blockquote>
+<ul class="simple">
+<li>NOSUPPORTIMAPEXT</li>
+<li>POP3_NOTSUPPORTED</li>
+</ul>
+</blockquote>
+<p>Instead, a Horde_Imap_Client_Exception_NoSupportExtension will be thrown. This
+class is an extension of Horde_Imap_Client_Exception, so current try/catch
+statements will automatically catch these exceptions.</p>
+<p>Horde_Imap_Client_Exception messages are now translated.  Additionally, debug
+information from the server MAY be available in the 'details' property of the
+Exception object rather than being added to the error message.</p>
+</div>
+<div class="section" id="upgrading-to-1-3-0">
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Upgrading To 1.3.0</a></h1>
+<p>The Cclient drivers have been removed; they are instead mapped to the
+appropriate Socket drivers.  No code needs to be changed for now as this will
+happen automatically.  However, the 'Cclient' and 'Cclient_Pop3' driver names
+are deprecated and will be removed in 2.0.0.</p>
+</div>
+<div class="section" id="upgrading-to-1-2-0">
+<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Upgrading To 1.2.0</a></h1>
+<p>There has been a major change in the way mailbox names are handled in this
+version.  Due to ambiguities with auto-detecting UTF-8 vs. UTF7-IMAP, all
+mailbox method parameters and return values are now Horde_Imap_Client_Mailbox
+objects.  These objects, when cast to a string, will return the UTF-8 version
+of the mailbox.</p>
+<p>All other non-mailbox strings that previously could be passed in as either
+UTF7-IMAP or UTF-8 are now REQUIRED to be passed in as UTF-8.</p>
+<p>Auto-detection will still work, but is deprecated, will be removed in 2.0.0,
+and is not guaranteed to produce proper results for all mailbox names.</p>
+<div class="section" id="changed-return-values">
+<h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Changed Return Values</a></h2>
+<p>The following return values have changed:</p>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Base#currentMailbox()</p>
+<p>If the 'utf8' parameter is true, a Horde_Imap_Client_Mailbox object
+will be returned (an equivalent string representation to the previous
+behavior of returning a UTF-8 string).</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getNamespaces()</p>
+<p>The return array keys and the 'name' parameter are returned in UTF7-IMAP
+(the documentation was previously unclear as to the charset of these
+items).</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#listMailboxes()</p>
+<p>If both the 'flat' and 'utf8' parameters are true, the array values will
+be Horde_Imap_Client_Mailbox objects, instead of a string (an equivalent
+string representation to the previous behavior of returning a UTF-8
+string).</p>
+<p>If the 'flat' parameter is false and the 'utf8' parameter is true, the
+'mailbox' array key will be a Horde_Imap_Client_Mailbox object instead of
+a string (an equivalent string representation to the previous behavior of
+returning a UTF-8 string).</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#statusMultiple()</p>
+<p>The return array keys are returned in UTF7-IMAP (the documentation was
+previously unclear as to the charset of these keys).</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="deprecated-methods">
+<h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Deprecated Methods</a></h2>
+<p>The following methods are deprecated and will be removed in 2.0.0:</p>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Cache::singleton()</p>
+<p>Use Horde_Imap_Client_Cache::factory() instead.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#parseCommandArray()</p>
+<p>Use Horde_Imap_Client_Utils#parseCommandArray() instead.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="deprecated-parameters">
+<h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Deprecated Parameters</a></h2>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/259f7753/Horde_Imap_Client-1.4.4/doc/Horde/Imap/Client/UPGRADING</tt>, line 112)</p>
+<p>Title underline too short.</p>
+<pre class="literal-block">
+Deprecated Parameters
+------------------
+</pre>
+</div>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Base#currentMailbox()</p>
+<p>The 'utf8' parameter has been deprecated. The 'mailbox' return value will
+exclusively return a Horde_Imap_Client_Mailbox object in 2.0.0.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="drivers">
+<h2><a class="toc-backref" href="#id7">3.4&nbsp;&nbsp;&nbsp;Drivers</a></h2>
+<p>The unmaintained Mock driver has been removed.</p>
+</div>
+<div class="section" id="method-parameter-changes">
+<h2><a class="toc-backref" href="#id8">3.5&nbsp;&nbsp;&nbsp;Method Parameter Changes</a></h2>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Base#append()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#copy()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#createMailbox()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#deleteMailbox()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#expunge()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#fetch()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#fetchFromSectionString()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getACL()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getCacheId()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getMetadata()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getMyACLRights()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getQuota()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getQuotaRoot()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#listACLRights()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#openMailbox()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#renameMailbox()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#search()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#setACL()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#setMetadata()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#setQuota()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#status()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#statusMultiple()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#store()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#subscribeMailbox()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#thread()</p>
+<p>These methods now require the mailbox parameter(s) to be passed in as
+either a Horde_Imap_Client_Mailbox object (RECOMMENDED) or a UTF-8
+string. Passing in a UTF7-IMAP string is DEPRECATED and will be removed
+in 2.0.0. (The limitation of allowing UTF7-IMAP strings to be continued
+to be passed in for now is that auto-detection remains necessary. Passing
+in UTF-8 strings will thus break for certain mailbox names - the only
+way to guarantee proper mailbox handling for 1.2.0+ is to pass in Mailbox
+objects.)</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getMetadata()</p>
+<p>The $entries parameter now requires the entries to be passed in as
+UTF-8 strings ONLY (UTF7-IMAP no longer allowed). Auto-detection will be
+removed in 2.0.0. To ensure proper mailbox handling in 1.2.0+, you can pass
+the entries as Horde_Imap_Client_Mailbox objects.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#getNamespaces()</p>
+<p>The $additional parameter now requires the namespaces to be passed in as
+UTF-8 strings ONLY (UTF7-IMAP no longer allowed). Auto-detection will be
+removed in 2.0.0. To ensure proper mailbox handling in 1.2.0+, you can pass
+the namespace names as Horde_Imap_Client_Mailbox objects.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#listMailboxes()</p>
+<p>The $pattern parameter now requires the patterns to be passed in as
+UTF-8 strings ONLY (UTF7-IMAP no longer allowed). Auto-detection will be
+removed in 2.0.0. To ensure proper mailbox handling in 1.2.0+, you can pass
+the patterns as Horde_Imap_Client_Mailbox objects.</p>
+<p>The 'utf8' parameter has been removed.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#listACLRights()</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Base#setACL()</p>
+<p>The $identifier parameter now requires the identifiers to be passed in as
+UTF-8 strings ONLY (UTF7-IMAP no longer allowed). Auto-detection will be
+removed in 1.3. To ensure proper mailbox handling in 1.2.0+, you can pass
+the identifiers as Horde_Imap_Client_Mailbox objects.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Cache#__construct()</p>
+<p>A new required parameter 'baseob' has been added. This replaces the
+'hostspec', 'port', and 'username' parameters, which are deprecated and
+will be removed in 2.0.0.</p>
+<p>The 'debug' parameter is now a boolean indicating whether debugging is
+desired; debug output is now controlled via the Base object passed in
+through 'baseob'. The old usage - passing in a resource - is IMMEDIATELY
+deprecated and will be ignored.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Utf7imap::Utf8ToUtf7Imap()</p>
+<p>Added the $force parameter.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="new-methods">
+<h2><a class="toc-backref" href="#id9">3.6&nbsp;&nbsp;&nbsp;New Methods</a></h2>
+<blockquote>
+<ul class="simple">
+<li>Horde_Imap_Client_Base#getIdsOb()</li>
+<li>Horde_Imap_Client_Base#writeDebug()</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="new-objects">
+<h2><a class="toc-backref" href="#id10">3.7&nbsp;&nbsp;&nbsp;New Objects</a></h2>
+<blockquote>
+<ul class="simple">
+<li>Horde_Imap_Client_Ids</li>
+<li>Horde_Imap_Client_Ids_Pop3</li>
+<li>Horde_Imap_Client_Mailbox</li>
+<li>Horde_Imap_Client_Utils_Pop3</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="upgrading-to-1-1-0">
+<h1><a class="toc-backref" href="#id11">4&nbsp;&nbsp;&nbsp;Upgrading To 1.1.0</a></h1>
+<div class="section" id="new-object-properties">
+<h2><a class="toc-backref" href="#id12">4.1&nbsp;&nbsp;&nbsp;New Object Properties</a></h2>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Data_Envelope</p>
+<p>Added properties to obtain MIME decoded envelope information. New
+properties: 'bcc_decoded', 'cc_decoded', 'from_decoded',
+'reply_to_decoded', 'sender_decoded', 'subject_decoded', 'to_decoded'</p>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>

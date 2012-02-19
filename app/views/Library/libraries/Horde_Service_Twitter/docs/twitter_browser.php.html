@@ -1,0 +1,141 @@
+<div class="document">
+
+
+<p>&lt;?php
+/**</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 3)</p>
+Unexpected indentation.</div>
+<blockquote>
+<ul class="simple">
+<li>Callback page for Twitter integration.</li>
+<li></li>
+<li>Copyright 2009-2011 Horde LLC (<a class="reference external" href="http://www.horde.org">http://www.horde.org</a>)</li>
+<li></li>
+<li>&#64;author   Jan Schneider &lt;<a class="reference external" href="mailto:jan&#64;horde.org">jan&#64;horde.org</a>&gt;</li>
+<li>&#64;author   Michael J. Rubinsky &lt;<a class="reference external" href="mailto:mrubinsk&#64;horde.org">mrubinsk&#64;horde.org</a>&gt;</li>
+<li>&#64;license  <a class="reference external" href="http://www.horde.org/licenses/bsd">http://www.horde.org/licenses/bsd</a> BSD</li>
+<li>&#64;category Horde</li>
+<li>&#64;package  Service_Twitter</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 12)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>/</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 12); <em><a href="#id2">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+</blockquote>
+<p>require_once dirname(__FILE__) . '/../lib/base.php';</p>
+<p>/* Keys - these are obtained when registering for the service <em>/
+$consumer_key = '*******</em>';
+$consumer_secret = '<strong>*****</strong>';</p>
+<p>/* Used to obtain an unprivileged request token <a href="#id3"><span class="problematic" id="id4">*</span></a>/
+$token_url = '<a class="reference external" href="http://twitter.com/oauth/request_token">http://twitter.com/oauth/request_token</a>';</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 20); <em><a href="#id4">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<p>/* Used for allowing the user to allow/deny access to the application <a href="#id5"><span class="problematic" id="id6">*</span></a>/
+// (User is redirected to this URL if needed).
+$auth_url = '<a class="reference external" href="http://twitter.com/oauth/authorize">http://twitter.com/oauth/authorize</a>';</p>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 23); <em><a href="#id6">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<p>// Used to obtain an access token after user authorizes the application
+$accessToken_url = '<a class="reference external" href="http://twitter.com/oauth/access_token">http://twitter.com/oauth/access_token</a>';</p>
+<p>/* Parameters required for the Horde_Oauth_Consumer <a href="#id7"><span class="problematic" id="id8">*</span></a>/
+$params = array('key' =&gt; $consumer_key,</p>
+<div class="system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 30); <em><a href="#id8">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 32)</p>
+Unexpected indentation.</div>
+<blockquote>
+'secret' =&gt; $consumer_secret,
+'requestTokenUrl' =&gt; $token_url,
+'authorizeTokenUrl' =&gt; $auth_url,
+'accessTokenUrl' =&gt; $accessToken_url,
+'signatureMethod' =&gt; new Horde_Oauth_SignatureMethod_HmacSha1());</blockquote>
+<p>/* Create the Consumer <a href="#id9"><span class="problematic" id="id10">*</span></a>/
+$oauth = new Horde_Oauth_Consumer($params);</p>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 38); <em><a href="#id10">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<p>/* Create the Twitter client <a href="#id11"><span class="problematic" id="id12">*</span></a>/
+$twitter = new Horde_Service_Twitter(array('oauth' =&gt; $oauth,</p>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 41); <em><a href="#id12">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 43)</p>
+Unexpected indentation.</div>
+<blockquote>
+'request' =&gt; new Horde_Controller_Request_Http()));</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 44)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<p>/* At this point we would check for an existing, valid authorization token <a href="#id13"><span class="problematic" id="id14">*</span></a>/
+// $auth_token should be a Horde_Oauth_Token object
+// $auth_token = getTokenFromStorage();</p>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 44); <em><a href="#id14">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<p>// Do we have a good auth token? Keep in mind this is example code, and in a true
+// callback page we probably wouldn't be doing anything if we already have a token,
+// but for testing purposes....
+if (!empty($auth_token)) {</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 52)</p>
+Unexpected indentation.</div>
+<blockquote>
+<p>/* Have a token, tell the Twitter client about it <a href="#id15"><span class="problematic" id="id16">*</span></a>/
+$twitter-&gt;auth-&gt;setToken($auth_token);</p>
+<div class="system-message" id="id15">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 52); <em><a href="#id16">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<p>// Do something cool....
+// $twitter-&gt;statuses-&gt;update('Testing Horde/Twitter integration');</p>
+</blockquote>
+<dl class="docutils">
+<dt>} elseif (!empty($_SESSION['twitter_request_secret'])) {</dt>
+<dd><p class="first">/* No existing auth token, maybe we are in the process of getting it? <a href="#id17"><span class="problematic" id="id18">*</span></a>/
+$a_token = $twitter-&gt;auth-&gt;getAccessToken(new Horde_Controller_Request_Http(),</p>
+<div class="system-message" id="id17">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 59); <em><a href="#id18">backlink</a></em></p>
+Inline emphasis start-string without end-string.</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 61)</p>
+Unexpected indentation.</div>
+<blockquote>
+$_SESSION['twitter_request_secret']);</blockquote>
+<p>// Clear the request secret from the session now that we're done with it,
+// again, using _SESSION for simplicity for this example
+$_SESSION['twitter_request_secret'] = '';</p>
+<dl class="docutils">
+<dt>if ($a_token === false || empty($a_token)) {</dt>
+<dd>// We had a request secret, but something went wrong. maybe navigated
+// back here between requests?
+echo 'error';
+die;</dd>
+<dt>} else {</dt>
+<dd>// We have a good token, save it to DB etc....
+var_dump($a_token);
+die;</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 76)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p class="last">}</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/17gvhxpm/Horde_Service_Twitter-1.1.3/doc/Horde/Service/Twitter/twitter_browser.php</tt>, line 77)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p>}</p>
+<p>// No auth token, not in the process of getting one...ask user to verify
+$results = $twitter-&gt;auth-&gt;getRequestToken();
+$_SESSION['twitter_request_secret'] = $results-&gt;secret;</p>
+<p>// Redirect to auth url
+Horde::externalUrl($twitter-&gt;auth-&gt;getUserAuthorizationUrl($results), false)-&gt;redirect();</p>
+</div>
