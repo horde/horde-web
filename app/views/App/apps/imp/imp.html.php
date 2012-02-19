@@ -33,10 +33,43 @@
  <a href="ftp://ftp.cac.washington.edu/imap/mime-examples/">"MIME Torture Test"</a> that the University of Washington makes available.
 </p>
 
-<p>
- Feel free to view (or add) documentation on IMP on the
- <a href="http://wiki.horde.org/ImpModule">IMP Wiki Page</a>.
-</p>
+ <h3>Core features</h3>
+ <p>
+   <ul>
+     <li>Mobile smartphone view</li>
+     <li>HTML message composition with a cross-browser WYSIWIG editor</li>
+     <li>HTML signature</li>
+     <li>Passes "MIME Torture Test" and "E-Mail Acid Test"</li>
+     <li>High performance</li>
+     <li>Perfect IMAP support</li>
+     <li>Flexible message search</li>
+     <li>Address autocompletion</li>
+     <li>Spell checking</li>
+     <li>Sending of attachments via download link</li>
+     <li>Thread view</li>
+     <li>Message previews in mailbox view</li>
+     <li>Desktop like user interface and navigation (also via keyboard)</li>
+     <li>IMAP folder support</li>
+     <li>Management of shared IMAP folders</li>
+     <li>Folder subscriptions</li>
+     <li>Various identities</li>
+     <li>Alias and "tied to" addresses in user identities</li>
+     <li>Integration with e-mail filter</li>
+     <li>Integration with adressbook</li>
+     <li>Integration calendar</li>
+     <li>S/MIME and PGP based encryption as well as signatures</li>
+     <li>Mailbox quotas</li>
+     <li>Ability to forward multiple messages at once</li>
+     <li>Download of attachments as ZIP archive</li>
+     <li>Stripping of attachments from messages</li>
+     <li>Preview of attachments in compose view</li>
+     <li>Priority settings for composed messages</li>
+     <li>Message flags</li>
+     <li>Graphical emoticons and country flags in message view</li>
+     <li>Available in many languages</li>
+     <li>Full charset support in folders, mailbox, message and compose views</li>
+   </ul>
+ </p>
 
  <h3>Related Resources</h3>
  <p>
