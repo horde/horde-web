@@ -90,11 +90,13 @@ $horde_four_apps = array(
         'pear' => true,
     ),
     'content' => array(
+        'name' => 'Content',
         'ver' => 'H4 (1.0.3)',
         'date' => 'October 14 2011',
         'pear' => true,
     ),
     'timeobjects' => array(
+        'name' => 'Timeobjects',
         'ver' => 'H4 (1.0.5)',
         'date' => 'December 13 2011',
         'pear' => true,
@@ -339,11 +341,13 @@ $horde_apps_stable = array(
         'date' => 'March 19 2009'
     ),
     'content' => array(
+        'name' => 'Content',
         'ver' => 'H4 (1.0.3)',
         'date' => 'October 14 2011',
         'pear' => true,
     ),
     'timeobjects' => array(
+        'name' => 'Timeobjects',
         'ver' => 'H4 (1.0.5)',
         'date' => 'December 13 2011',
         'pear' => true,
