@@ -21,7 +21,14 @@
             <p>Can't find your favorite application listed for Horde 4? Not all
             of our applications have been ported to Horde 4 yet. Please check
             our <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-            => 'h3'))?>">Horde 3 Apps</a> page.</p>
+            => 'h3')) ?>">Horde 3 Apps</a> page.</p>
+
+            <p>Are you confused about all the different application versions
+            and do you want to know which versions are compatible with each
+            other?  Take a look at our <a href="<?php echo
+            $this->urlWriter->urlFor('development', array('action' =>
+            'versions')) ?>">version list</a>.</p>
+
             <p>Still didn't find what you were looking for?
             <a href="<?php echo $this->urlWriter->urlFor('services'); ?>">Horde
             developers and consultants</a> are available to develop custom
