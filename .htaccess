@@ -15,6 +15,7 @@ Redirect permanent /faq http://wiki.horde.org/FAQ
 Redirect permanent /irc.php /community/support
 Redirect permanent /licenses/asl.php /licenses/apache
 Redirect permanent /licenses/bsdl.php /licenses/bsd
+Redirect permanent /licenses/bsd.php /licenses/bsd
 Redirect permanent /licenses/gpl.php /licenses/gpl
 Redirect permanent /licenses/lgpl.php /licenses/lgpl
 Redirect permanent /localization.php /community/localization
