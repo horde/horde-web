@@ -1,5 +1,16 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
+                    <div class="slide-cebit sliderview">
+                        <h2>Horde at CeBIT.</h2>
+                        <p>The Horde Project will present the latest of Horde
+                        software on this year's CeBIT in Hannover, Germany.</p>
+                        <p>CeBIT is the digital industry's biggest, most
+                        international event. The Horde Project will have a
+                        booth in the <strong>Forum Open Source</strong>. Meet
+                        us in <strong>Hall 2, Booth E56</strong>!</p>
+                    </div>
+
+                    <!--
                     <div class="slide-horde4 sliderview">
                         <h2>Horde Groupware 4 has landed.</h2>
                         <p>The Horde team and community have spent more than
@@ -16,6 +27,7 @@
                         added to the most flexible web groupware solution
                         available.</p>
                     </div>
+                    -->
 
                     <div class="slide-everywhere sliderview" style="display:none">
                         <h2>Horde Everywhere.</h2>
