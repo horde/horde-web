@@ -3,11 +3,24 @@
                     <div class="slide-cebit sliderview">
                         <h2>Horde at CeBIT.</h2>
                         <p>The Horde Project will present the latest of Horde
-                        software on this year's CeBIT in Hannover, Germany.</p>
-                        <p>CeBIT is the digital industry's biggest, most
-                        international event. The Horde Project will have a
-                        booth in the <strong>Forum Open Source</strong>. Meet
-                        us in <strong>Hall 2, Booth E56</strong>!</p>
+                        software on this year's
+                        <a href="http://www.cebit.de">CeBIT</a> in Hannover,
+                        Germany. CeBIT is the digital industry's biggest,
+                        most international event. Meet us from
+                        <strong>6th to 10th March</strong> in <strong>Hall 2,
+                        Stand E62</strong> within the area of the
+                        <strong>Open Source Forum</strong>.</br>
+                        During the the trade fair we will have two Horde
+                        related talks. One about the Horde deployment model
+                        in the
+                        <a href="http://www.linux-magazine.com/Events/CeBIT-Open-Source-Forum-2012/">
+                          Open Source Forum
+                        </a>
+                        at <strong>10 am on Tuesday</strong>
+                        right before the keynote from Jon "maddog" Hall.
+                        The second one about Horde mobile support at
+                        <strong>14 pm on Saturday</strong>
+                        within the Univention area (Hall 2, Stand D48).</br>
                     </div>
 
                     <!--
