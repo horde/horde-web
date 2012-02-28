@@ -18,9 +18,13 @@
                         </a>
                         at <strong>10 am on Tuesday</strong>
                         right before the keynote from Jon "maddog" Hall.
-                        The second one about Horde mobile support at
+                        The second one aboutHorde mobile support at
                         <strong>14 pm on Saturday</strong>
-                        within the Univention area (Hall 2, Stand D48).</br>
+                        within the
+                        <a href="http://www.univention.de/univention/termine/cebit-2012/open-source-buehne/">
+                          Univention area
+                        </a>
+                        (Hall 2, Stand D48).</br>
                     </div>
 
                     <!--
