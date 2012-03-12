@@ -1,33 +1,5 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
-                    <div class="slide-cebit sliderview">
-                        <h2>Horde at CeBIT.</h2>
-                        <p>The Horde Project will present the latest of Horde
-                        software on this year's
-                        <a href="http://www.cebit.de">CeBIT</a> in Hannover,
-                        Germany. CeBIT is the digital industry's biggest,
-                        most international event. Meet us from
-                        <strong>6th to 10th March</strong> in <strong>Hall 2,
-                        Stand E62</strong> within the area of the
-                        <strong>Open Source Forum</strong>.</br>
-                        During the the trade fair we will have two Horde
-                        related talks. One about the Horde deployment model
-                        in the
-                        <a href="http://www.linux-magazine.com/Events/CeBIT-Open-Source-Forum-2012/">
-                          Open Source Forum
-                        </a>
-                        at <strong>10 am on Tuesday</strong>
-                        right before the keynote from Jon "maddog" Hall.
-                        The second one about Horde mobile support at
-                        <strong>14 pm on Saturday</strong>
-                        within the
-                        <a href="http://www.univention.de/univention/termine/cebit-2012/open-source-buehne/">
-                          Univention area
-                        </a>
-                        (Hall 2, Stand D48).</br>
-                    </div>
-
-                    <!--
                     <div class="slide-horde4 sliderview">
                         <h2>Horde Groupware 4 has landed.</h2>
                         <p>The Horde team and community have spent more than
@@ -44,7 +16,6 @@
                         added to the most flexible web groupware solution
                         available.</p>
                     </div>
-                    -->
 
                     <div class="slide-everywhere sliderview" style="display:none">
                         <h2>Horde Everywhere.</h2>
