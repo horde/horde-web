@@ -10,6 +10,19 @@
         chronological order.</p>
 
         <p><a
+        href="<?php echo $GLOBALS['host_base'] ?>/papers/20120306_Deployment.pdf">
+        Deployment and security of complex Open Source applications</a> and
+        <a
+        href="<?php echo $GLOBALS['host_base'] ?>/papers/20120310_Mobile.pdf">
+        Mobile Horde</a> were presented at <a
+        href="http://www.cebit.de">CeBIT 2012</a> by <a
+        href="<?php echo $this->urlWriter->urlFor('team', array('anchor' => 'gunnar')) ?>">
+        Gunnar</a> in German. The presentations are available as a PDF and on Slideshare (<a
+        href="http://www.slideshare.net/wrobel/deployment-und-sicherheit-komplexer-opensource-webanwendungen">"Deployment"</a> and 
+        <a
+        href="http://www.slideshare.net/wrobel/20120310-mobile">"Mobile"</a>).</p>
+
+        <p><a
         href="<?php echo $GLOBALS['host_base'] ?>/papers/20110512_LinuxTag_horde4.pdf">
         The Horde 4 PHP framework</a> was presented at <a
         href="http://www.linuxtag.org/2011/">LinuxTag 2011</a> by <a
