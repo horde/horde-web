@@ -200,10 +200,13 @@
 
         <pre class="brush:bash">
         [alias]
-            get = !git fetch &amp;&amp;
-                ( git rebase -v origin/master || ( git stash &amp;&amp;
-                    ( git rebase -v origin/master || echo "WARNING: Run 'git stash pop' manually!" ) &amp;&amp;
-                git stash pop ) )
+            get = !BRANCH=$(git branch -vv | grep ^\\* | sed -r 's/^.+\\[([^]:]+).+$/\\1/') &&
+                git fetch &&
+                ( git rebase -v $BRANCH ||
+                    ( git stash &&
+                        ( git rebase -v $BRANCH ||
+                          echo "WARNING: Run 'git stash apply' manually!" ) &&
+                      git stash pop ) )
         </pre>
 
         <p>For more information on rebasing, and the commands needed if
