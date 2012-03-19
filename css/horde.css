@@ -301,6 +301,13 @@ div.section h3 {
     font-size: 117%;
     border-bottom: 2px dotted #afafaf;
     margin: 15px 0 7px 0;
+    left: 0;
+    padding-left: 0;
+}
+div.section div.document h2 {
+    font-size: 100%;
+    letter-spacing: 0;
+    margin-left: 15px;
 }
 
 div.hordeauthor h2 a {
