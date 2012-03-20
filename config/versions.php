@@ -7,8 +7,8 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.13',
-        'date' => 'December 13 2011',
+        'ver' => '4.0.14',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'groupware' => array(
@@ -25,14 +25,14 @@ $horde_four_apps = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.18)',
-        'date' => 'January 17 2012',
+        'ver' => 'H4 (5.0.19)',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.11)',
-        'date' => 'January 17 2012',
+        'ver' => 'H4 (3.0.12)',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'ingo' => array(
@@ -67,14 +67,14 @@ $horde_four_apps = array(
     ),
     'passwd' => array(
         'name' => 'Passwd',
-        'ver' => 'H4 (4.0)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (4.0.1)',
+        'date' => 'February 28 2012',
         'pear' => true,
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0.1)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (2.0.2)',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'wicked' => array(
@@ -85,14 +85,14 @@ $horde_four_apps = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H4 (2.0)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (2.0.1)',
+        'date' => 'February 28 2012',
         'pear' => true,
     ),
     'content' => array(
         'name' => 'Content',
         'ver' => 'H4 (1.0.3)',
-        'date' => 'October 14 2011',
+        'date' => 'February 23 2012',
         'pear' => true,
     ),
     'timeobjects' => array(
@@ -218,8 +218,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.13',
-        'date' => 'December 13 2011',
+        'ver' => '4.0.14',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'groupware' => array(
@@ -236,8 +236,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.17)',
-        'date' => 'December 21 2011',
+        'ver' => 'H4 (5.0.19)',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'dimp' => array(
@@ -252,8 +252,8 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.11)',
-        'date' => 'January 17 2012',
+        'ver' => 'H4 (3.0.12)',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'ingo' => array(
@@ -293,8 +293,8 @@ $horde_apps_stable = array(
     ),
     'passwd' => array(
         'name' => 'Passwd',
-        'ver' => 'H4 (4.0)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (4.0.1)',
+        'date' => 'February 28 2012',
         'pear' => true,
     ),
     'forwards' => array(
@@ -314,8 +314,8 @@ $horde_apps_stable = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0.1)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (2.0.2)',
+        'date' => 'February 28 2012',
         'pear' => true
     ),
     'wicked' => array(
@@ -331,8 +331,8 @@ $horde_apps_stable = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H4 (2.0)',
-        'date' => 'November 2 2011',
+        'ver' => 'H4 (2.0.1)',
+        'date' => 'February 28 2012',
         'pear' => true,
     ),
     'klutz' => array(
@@ -343,7 +343,7 @@ $horde_apps_stable = array(
     'content' => array(
         'name' => 'Content',
         'ver' => 'H4 (1.0.3)',
-        'date' => 'October 14 2011',
+        'date' => 'February 23 2012',
         'pear' => true,
     ),
     'timeobjects' => array(
