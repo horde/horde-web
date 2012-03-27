@@ -14,22 +14,9 @@ at least some of the following changes:
 
 <h3>Horde 5.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> No major changes planned</p>
 
-<p><b>Planned release timeframe:</b> April, 2012</p>
-
-<p><b>Features currently planned for the next release:</b></p>
-
-<table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Tableless form renderer</td><td class="planned">Planned</td></tr>
-  <tr><td>Complete configuration with web interface</td><td class="planned">Planned</td>
-  <tr><td>Dynamic resortable portal screen</td><td class="planned">Planned</td></tr>
-</table>
-
-<h3>Horde 4.1</h3>
-
-<p><b>Status:</b> Not planned</p>
+<p><b>Planned release timeframe:</b> April 2012</p>
 
 <div class="dimmed">
 

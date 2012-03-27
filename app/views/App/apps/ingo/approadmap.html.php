@@ -12,11 +12,11 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Ingo 3.0</h3>
+<h3>Ingo 4.0</h3>
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> April, 2012</p>
+<p><b>Planned release timeframe:</b> Open</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
@@ -27,6 +27,12 @@ at least some of the following changes:
   <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td>
   <tr><td>Composite driver to manage different backends for different services</td><td class="planned">Planned</td>
 </table>
+
+<h3>Ingo 3.0</h3>
+
+<p><b>Status:</b> No major changes planned</p>
+
+<p><b>Planned release timeframe:</b> April 2012</p>
 
 <div class="dimmed">
 

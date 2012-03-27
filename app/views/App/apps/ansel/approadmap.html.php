@@ -12,9 +12,12 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Ansel 2.1/3.0</h3>
+<h3>Ansel 4.0</h3>
+
 <p><b>Status:</b> Planning </p>
-<p><b>Planned release timeframe:</b> Late 2011</p>
+
+<p><b>Planned release timeframe:</b> Open</p>
+
 <p><b>Features currently planned:</b></p>
 <table cellspacing="0" class="roadmap">
 <tr><th>Feature</th><th>Status</th></tr>
@@ -23,7 +26,14 @@ at least some of the following changes:
 <tr><td>Video Support</td><td class="planned">Planned</td></tr>
 </table>
 
+<h3>Ansel 3.0</h3>
+
+<p><b>Status:</b> No major changes planned</p>
+
+<p><b>Planned release timeframe:</b> April 2012</p>
+
 <div class="dimmed">
+
 <h3>Ansel 2.0</h3>
 
 <p><b>Status:</b> Released</p>
@@ -41,14 +51,6 @@ at least some of the following changes:
   <tr><td>Improved EXIF/IPTC metadata support</td><td class="done">Done</td></tr>
   <tr><td>Support for multipage TIFF files</td><td class="done">Done</td></tr>
 </table>
-
-</div>
-
-<h3>Ansel 1.2</h3>
-
-<p><b>Status:</b> Not planned</p>
-
-<div class="dimmed">
 
 <h3>Ansel 1.1</h3>
 

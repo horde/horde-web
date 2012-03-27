@@ -12,9 +12,17 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>Whups 3.0</h3>
+
+<p><b>Status:</b> No major changes planned</p>
+
+<p><b>Planned release timeframe:</b> April 2012</p>
+
+<div class="dimmed">
+
 <h3>Whups 2.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> Late 2011</p>
 
@@ -22,7 +30,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>Native PHP 5 code</td><td class="progress">In Progress</td>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td>
 </table>
 
 </div>

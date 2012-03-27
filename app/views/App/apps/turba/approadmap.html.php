@@ -12,9 +12,18 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Turba 3.1</h3>
+<h3>Turba 4.0</h3>
 
-<p><b>Status:</b> Not planned</p>
+<p><b>Status:</b> Planned</p>
+
+<p><b>Planned release timeframe:</b> April 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>CardDAV support</td><td class="planned">Planned</td>
+</table>
 
 <div class="dimmed">
 

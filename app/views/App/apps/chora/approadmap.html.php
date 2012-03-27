@@ -12,15 +12,11 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Chora 2.2</h3>
-
-<p><b>Status:</b> Not planned</p>
-
 <h3>Chora 3.0</h3>
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> 2011</p>
+<p><b>Planned release timeframe:</b> 2012</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
