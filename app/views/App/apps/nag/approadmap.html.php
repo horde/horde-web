@@ -37,8 +37,8 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
+  <tr><td>Recurring tasks</td><td class="done">Done</td>
   <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
-  <tr><td>Recurring tasks</td><td class="progress">In progress</td>
 </table>
 
 <div class="dimmed">
