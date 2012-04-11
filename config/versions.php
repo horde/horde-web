@@ -13,26 +13,26 @@ $horde_four_apps = array(
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.6',
-        'date' => 'January 17 2012',
+        'ver' => '4.0.7',
+        'date' => 'April 11 2012',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.6',
-        'date' => 'January 17 2012',
+        'ver' => '4.0.7',
+        'date' => 'April 11 2012',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.19)',
-        'date' => 'February 28 2012',
+        'ver' => 'H4 (5.0.20)',
+        'date' => 'April 11 2012',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.12)',
-        'date' => 'February 28 2012',
+        'ver' => 'H4 (3.0.13)',
+        'date' => 'April 11 2012',
         'pear' => true
     ),
     'ingo' => array(
@@ -61,8 +61,8 @@ $horde_four_apps = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H4 (2.0.1)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (2.0.2)',
+        'date' => 'April 11 2012',
         'pear' => true
     ),
     'passwd' => array(
@@ -224,20 +224,20 @@ $horde_apps_stable = array(
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.6',
-        'date' => 'January 17 2012',
+        'ver' => '4.0.7',
+        'date' => 'April 11 2012',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.6',
-        'date' => 'January 17 2012',
+        'ver' => '4.0.7',
+        'date' => 'April 11 2012',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.19)',
-        'date' => 'February 28 2012',
+        'ver' => 'H4 (5.0.20)',
+        'date' => 'April 11 2012',
         'pear' => true
     ),
     'dimp' => array(
@@ -252,8 +252,8 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.12)',
-        'date' => 'February 28 2012',
+        'ver' => 'H4 (3.0.13)',
+        'date' => 'April 11 2012',
         'pear' => true
     ),
     'ingo' => array(
@@ -287,8 +287,8 @@ $horde_apps_stable = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H4 (2.0.1)',
-        'date' => 'November 22 2011',
+        'ver' => 'H4 (2.0.2)',
+        'date' => 'April 11 2012',
         'pear' => true
     ),
     'passwd' => array(
