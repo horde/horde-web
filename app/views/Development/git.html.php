@@ -205,7 +205,7 @@
                 ( git rebase -v $BRANCH ||
                     ( git stash &&
                         ( git rebase -v $BRANCH ||
-                          echo "WARNING: Run 'git stash apply' manually!" ) &&
+                          echo "WARNING: Run 'git stash pop' manually!" ) &&
                       git stash pop ) )
         </pre>
 
