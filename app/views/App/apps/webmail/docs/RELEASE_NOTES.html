@@ -1,6 +1,6 @@
 <h3>Release notes for the latest release</h3><pre>
 The Horde Team is pleased to announce the final release of the Horde Groupware
-Webmail Edition version 4.0.6.
+Webmail Edition version 4.0.7.
 
 Horde Groupware Webmail Edition is a free, enterprise ready, browser based
 communication suite. Users can read, send and organize email messages with
@@ -14,18 +14,29 @@ http://www.horde.org/apps/webmail/docs/UPGRADING
 For detailed installation and configuration instructions, please see
 http://www.horde.org/apps/webmail/docs/INSTALL
 
-The major changes compared to the Horde Groupware Webmail Edition version 4.0.5
+The major changes compared to the Horde Groupware Webmail Edition version 4.0.6
 are:
 
 General changes:
+    * Added override for broken Sendmail implementations.
+    * Improved ActiveSync policy configuration.
+    * Updated Brazilian Portuguese, Finnish, German, Hungarian, and Spanish
+      translations.
     * Small bugfixes and improvements.
 
 Mail changes:
-    * Fixed XSS vulnerabilities.
-
-Calendar changes:
-    * Display event time in dynamic view if requested.
+    * Added preference to hide deleted messages while using a trash folder.
+    * Improved drag performance.
+    * Fixed regressions and improved compatibility in S/MIME and PGP support.
 
 Address book changes:
-    * Improved vCard compatibility.
-    * Updated Japanese translation.</pre>
+    * Improved LDAP performance.
+    * Improved navigation when editing group entries.
+    * Fixed phone number synchronization with newer Funambol clients.
+
+Calendar changes:
+    * Improved attendee auto-completion.
+    * Fixed migration script.
+
+Notes changes:
+    * Added missing method required for sychronization.</pre>
