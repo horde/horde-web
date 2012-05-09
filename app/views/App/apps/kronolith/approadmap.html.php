@@ -12,6 +12,19 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>Kronolith 4.1</h3>
+
+<p><b>Status:</b> Planned</p>
+
+<p><b>Planned release timeframe:</b> October 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
+</table>
+
 <h3>Kronolith 4.0</h3>
 
 <p><b>Status:</b> In development</p>
@@ -26,8 +39,6 @@ at least some of the following changes:
   <tr><td>Individual time zones per event</td><td class="done">Done</td></tr>
   <tr><td>Resource scheduling in dynamic view</td><td class="done">Done</td></tr>
   <tr><td>Recurrence series editing in dynamic view</td><td class="done">Done</td></tr>
-  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
-  <tr><td>Simpler meeting scheduling</td><td class="planned">Planned</td>
 </table>
 
 <div class="dimmed">

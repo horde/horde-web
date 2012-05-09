@@ -12,6 +12,19 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>IMP 6.1</h3>
+
+<p><b>Status:</b> Planned</p>
+
+<p><b>Planned release timeframe:</b> October 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="progress">In Progress</td>
+</table>
+
 <h3>IMP 6.0</h3>
 
 <p><b>Status:</b> In development</p>
@@ -23,7 +36,6 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Composing and message management in smartphone view</a></td><td class="done">Done</td>
-  <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="progress">In Progress</td>
 </table>
 
 <div class="dimmed">

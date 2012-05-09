@@ -27,6 +27,19 @@ at least some of the following changes:
   <tr><td>Task dependencies</td><td class="planned">Planned</td>
 </table>
 
+<h3>Nag 4.1</h3>
+
+<p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> October 2012</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
+</table>
+
 <h3>Nag 4.0</h3>
 
 <p><b>Status:</b> In development</p>
@@ -38,7 +51,6 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Recurring tasks</td><td class="done">Done</td>
-  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
 </table>
 
 <div class="dimmed">
