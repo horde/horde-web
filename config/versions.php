@@ -43,8 +43,8 @@ $horde_four_apps = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.16)',
-        'date' => 'March 20 2012',
+        'ver' => 'H4 (3.0.17)',
+        'date' => 'May 14 2012',
         'pear' => true
     ),
     'nag' => array(
@@ -264,8 +264,8 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.16)',
-        'date' => 'March 20 2012',
+        'ver' => 'H4 (3.0.17)',
+        'date' => 'May 14 2012',
         'pear' => true
     ),
     'nag' => array(
