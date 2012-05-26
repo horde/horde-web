@@ -9,6 +9,13 @@
         written about Horde and Horde components, listed roughly in reverse
         chronological order.</p>
 
+        <p><a href="<?php echo $GLOBALS['host_base']
+        ?>/papers/MergingHordeJQM.pdf">Merging Horde Groupware with jQuery
+        Mobile</a> was presented
+        at <a href="http://www.linuxtag.org/2012/">LinuxTag 2012</a>
+        by <a href="<?php echo $this->urlWriter->urlFor('team', array('anchor'
+        => 'jan')) ?>">Jan.</p>
+
         <p><a
         href="<?php echo $GLOBALS['host_base'] ?>/papers/20120306_Deployment.pdf">
         Deployment and security of complex Open Source applications</a> and
