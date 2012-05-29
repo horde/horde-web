@@ -7,20 +7,20 @@
 $horde_four_apps = array(
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.14',
-        'date' => 'February 28 2012',
+        'ver' => '4.0.15',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.7',
-        'date' => 'April 11 2012',
+        'ver' => '4.0.8',
+        'date' => 'May 29 2012',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.7',
-        'date' => 'April 11 2012',
+        'ver' => '4.0.8',
+        'date' => 'May 29 2012',
         'pear' => true,
     ),
     'imp' => array(
@@ -31,14 +31,14 @@ $horde_four_apps = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.13)',
-        'date' => 'April 11 2012',
+        'ver' => 'H4 (3.0.14)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.7)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (2.0.8)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'kronolith' => array(
@@ -49,14 +49,14 @@ $horde_four_apps = array(
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.7)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (3.0.8)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.5)',
-        'date' => 'January 31 2012',
+        'ver' => 'H4 (3.0.6)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'gollem' => array(
@@ -97,8 +97,8 @@ $horde_four_apps = array(
     ),
     'timeobjects' => array(
         'name' => 'Timeobjects',
-        'ver' => 'H4 (1.0.5)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (1.0.7)',
+        'date' => 'May 29 2012',
         'pear' => true,
     ),
 );
@@ -218,20 +218,20 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.14',
-        'date' => 'February 28 2012',
+        'ver' => '4.0.15',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '4.0.7',
-        'date' => 'April 11 2012',
+        'ver' => '4.0.8',
+        'date' => 'May 29 2012',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0.7',
-        'date' => 'April 11 2012',
+        'ver' => '4.0.8',
+        'date' => 'May 29 2012',
         'pear' => true,
     ),
     'imp' => array(
@@ -252,14 +252,14 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.13)',
-        'date' => 'April 11 2012',
+        'ver' => 'H4 (3.0.14)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.7)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (2.0.8)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'kronolith' => array(
@@ -270,14 +270,14 @@ $horde_apps_stable = array(
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.7)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (3.0.8)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.5)',
-        'date' => 'January 31 2012',
+        'ver' => 'H4 (3.0.6)',
+        'date' => 'May 29 2012',
         'pear' => true
     ),
     'chora' => array(
@@ -348,8 +348,8 @@ $horde_apps_stable = array(
     ),
     'timeobjects' => array(
         'name' => 'Timeobjects',
-        'ver' => 'H4 (1.0.5)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (1.0.7)',
+        'date' => 'May 29 2012',
         'pear' => true,
     ),
 );
