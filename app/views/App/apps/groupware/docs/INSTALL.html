@@ -152,10 +152,8 @@ handling certain charsets.</p>
 in Horde Groupware:</p>
 <ol class="loweralpha">
 <li><p class="first">File Upload Support</p>
-<p>File upload support is <strong>required</strong> to allow attachments in mail
-composition and to allow various importing features to work (e.g.
-importing PGP or S/MIME keys, importing mbox files). To enable file
-upload support:</p>
+<p>File upload support is <strong>required</strong> to allow various importing features
+to work. To enable file upload support:</p>
 <blockquote>
 <blockquote>
 <ol class="arabic">
@@ -243,7 +241,7 @@ Horde configuration for more details.</p>
 <p>The OpenSSL PHP extension is used by Horde Groupware to provide S/MIME
 support.  Without the extension, all S/MIME options will be disabled.</p>
 <p>Additionally, the OpenSSL PHP extension is REQUIRED if using TLS or SSL
-to connect to the IMAP/POP3 server.</p>
+to connect to a server.</p>
 <p>See <a class="reference external" href="http://www.php.net/openssl">http://www.php.net/openssl</a> for information on compiling OpenSSL
 into PHP.</p>
 </li>
@@ -278,6 +276,7 @@ fewer MIME types than the PECL extension will.</p>
 <pre class="literal-block">
 pecl install fileinfo
 </pre>
+<p>As of PHP 5.3.0, this module is automatically enabled by default.</p>
 </li>
 </ol>
 <p>These PECL modules are <strong>RECOMMENDED</strong> to be installed if you need
@@ -314,41 +313,6 @@ pecl install memcache
 </li>
 </ol>
 </li>
-<li><p class="first">At least one IMAP or POP3 server.</p>
-<p>While Horde Groupware is an application that is installed on a Web server
-and is run from a Web browser, it is only an IMAP and POP3 <em>client</em>, like
-Outlook, Apple Mail or Thunderbird. You must have access to an IMAP or POP3
-server(s) on which your users' mail is stored in order to use Horde
-Groupware.</p>
-<p>IMAP is <em>strongly</em> recommended over POP3. See, e.g.,
-<a class="reference external" href="http://www.imap.org/imap.vs.pop.brief.html">http://www.imap.org/imap.vs.pop.brief.html</a></p>
-<p>Freely available IMAP servers (for *nix systems) that have been verified
-to work with Horde Groupware include:</p>
-<ul class="simple">
-<li>Cyrus (<a class="reference external" href="http://asg.web.cmu.edu/cyrus/">http://asg.web.cmu.edu/cyrus/</a>)</li>
-<li>Dovecot (<a class="reference external" href="http://www.dovecot.org/">http://www.dovecot.org/</a>)</li>
-<li>Courier-IMAP (<a class="reference external" href="http://www.inter7.com/courierimap.html">http://www.inter7.com/courierimap.html</a>)</li>
-</ul>
-<p>More available IMAP servers are:</p>
-<ul class="simple">
-<li>UW-IMAP (<a class="reference external" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a>)</li>
-<li>Archiveopteryx (<a class="reference external" href="http://www.archiveopteryx.org/">http://www.archiveopteryx.org/</a>)</li>
-</ul>
-<p>Most of these packages also include POP3 support as well.</p>
-<p>The selected IMAP server MUST support IMAP4rev1 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc3501.html">RFC 3501</a>).
-The selected POP server MUST support POP3 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc1939.html">RFC 1939</a>/STD 53).</p>
-<div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">If using a POP server, it MUST support the UIDL capability.
-Caching, on-demand filtering, searching, and sorting will be
-disabled; POP3 support is limited to essentially only viewing
-messages and performing basic mail actions.</p>
-</div>
-</li>
-<li><p class="first">Sendmail or SMTP server.</p>
-<p>Horde Groupware Webmail Edition sends mail via either a local sendmail or a
-remote SMTP server.  It is <strong>RECOMMENDED</strong> that SMTP be used.</p>
-</li>
 </ol>
 <p>The following non-PHP prerequisites are <strong>RECOMMENDED</strong>:</p>
 <ol class="arabic">
@@ -361,6 +325,10 @@ spell-check feature.</p>
 <blockquote>
 <p><a class="reference external" href="http://aspell.sourceforge.net/">http://aspell.sourceforge.net/</a></p>
 </blockquote>
+</li>
+<li><p class="first">Sendmail or SMTP server.</p>
+<p>Horde Groupware sends mail via either a local sendmail or a remote SMTP
+server.  It is <strong>RECOMMENDED</strong> that SMTP be used.</p>
 </li>
 </ol>
 </div>
@@ -573,20 +541,20 @@ find config/ -type f -exec chmod 0440 '{}' \;
 </li>
 <li><p class="first">User Passwords</p>
 <p>There are two channels by which, unless steps are taken to avoid it,
-Horde Groupware encourages users to pass their IMAP and POP3 passwords
-around the Internet unencrypted.</p>
+Horde Groupware encourages users to pass their passwords around the
+Internet unencrypted.</p>
 <p>The first channel is between their browser and the Web server. We
 strongly recommend using an SSL-capable Web server to give users the
 option of encrypting communications between their browser and the Web
 server on which Horde Groupware is running; some sites may wish to
 disable non-SSL access entirely.</p>
-<p>The second channel is between the Web server and their IMAP or POP3
-server. The simplest way to avoid this is to have the mail server running
-on the same system as the Web server, and configuring Horde Groupware to
-connect to the IMAP or POP3 server on <tt class="docutils literal">localhost</tt> instead of on the
-Internet hostname. This is the default setup. In cases where that is not
-possible, we recommend using IMAP-SSL or POP3-SSL to ensure that users'
-passwords remain safe after they have entrusted them to Horde Groupware.</p>
+<p>The second channel is between the Web server and authentication
+backend. The simplest way to avoid this is to have the authentication
+source running on the same system as the Web server, and configuring
+Horde Groupware to connect to the backend on <tt class="docutils literal">localhost</tt> instead of on
+the Internet hostname. In cases where that is not possible, we recommend
+using SSL or some other encryption layer to ensure that users' passwords
+remain safe after they have entrusted them to Horde Groupware.</p>
 </li>
 </ol>
 <ol class="loweralpha" start="2">
