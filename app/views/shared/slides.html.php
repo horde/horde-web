@@ -1,16 +1,5 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
-                    <div class="slide-linuxtag sliderview">
-                        <h2>Horde at LinuxTag.</h2>
-                        <p>The Horde Project is presenting Horde 5 with a booth
-                        and two talks on <a href="http://www.linuxtag.org/2012/">LinuxTag</a>,
-                        Berlin, from May 23rd to 26th. Meet us at hall 7.2a,
-                        booth 106. Make sure to reserve some time on Saturday the 26th to listen to
-                        <a href="http://www.linuxtag.org/2012/de/program/program/vortragsliste.html?talkid=469">Gunnar's</a> and
-                        <a href="http://www.linuxtag.org/2012/de/program/program/vortragsliste.html?talkid=471">Jan's</a>
-                        talks on mobile Horde, at 14pm and 14.45pm respectively.</p>
-                    </div>
-
                     <div class="slide-horde4 sliderview">
                         <h2>Horde Groupware 4 has landed.</h2>
                         <p>The Horde team and community have spent more than
