@@ -1,4 +1,11 @@
-
+<h3>IMP 6 Dynamic View (Alpha Version)</h3>
+<table>
+ <tr>
+  <td align="center">
+   <?php echo HordeWeb_Utils::sslink('imp', '6/imp6_1', true) ?><br />
+   IMP 6.0
+  </td>
+</table>
 
 <h3>IMP 5 Standard (IMP) Message View [MIME Torture Test 2]</h3>
 <table>
