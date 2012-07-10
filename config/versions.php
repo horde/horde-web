@@ -442,6 +442,12 @@ $horde_apps_dev = array(
         'date' => 'September 11 2008',
         'file' => 'hermes-h3-1.0-rc2.tar.gz'
     ),
+    'sesha' => array(
+        'name' => 'Sesha',
+        'ver' => 'H5 (1.0.0alpha1)',
+        'date' => 'July 10 2012',
+        'pear' => true,
+    ),
     'klutz' => array(
         'name' => 'Klutz',
         'ver' => 'H3 (1.0-RC1)',
