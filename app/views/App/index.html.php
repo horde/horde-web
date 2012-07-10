@@ -197,6 +197,13 @@
           objects). It comes with a stop watch, search and reporting capabilities, a
           MacOSX Dashboard widget and an invoice interface.</p>
 -->
+          <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+          => 'sesha')) ?>">Sesha</a> <?php echo
+          HordeWeb_Utils::downloadIcon($this, 'sesha') ?></h3>
+          <p>Sesha is the Horde Inventory Manager. It is an application
+          designed to track a multitude of items. It can organize stockable
+          items into multiple categories, each with unique properties.</p>
+
           <h2><span>&nbsp;</span>Horde Web Content/Media Management Tools</h2>
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
           => 'ansel')) ?>">Ansel</a> <?php echo
