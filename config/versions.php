@@ -25,20 +25,20 @@ $horde_four_apps = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.21)',
-        'date' => 'May 9 2012',
+        'ver' => 'H4 (5.0.23)',
+        'date' => 'July 21 2012',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.14)',
-        'date' => 'May 29 2012',
+        'ver' => 'H4 (3.0.15)',
+        'date' => 'July 21 2012',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.8)',
-        'date' => 'May 29 2012',
+        'ver' => 'H4 (2.0.9)',
+        'date' => 'June 26 2012',
         'pear' => true
     ),
     'kronolith' => array(
@@ -236,8 +236,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.21)',
-        'date' => 'May 9 2012',
+        'ver' => 'H4 (5.0.23)',
+        'date' => 'July 21 2012',
         'pear' => true
     ),
     'dimp' => array(
@@ -252,14 +252,14 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.14)',
-        'date' => 'May 29 2012',
+        'ver' => 'H4 (3.0.15)',
+        'date' => 'July 21 2012',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.8)',
-        'date' => 'May 29 2012',
+        'ver' => 'H4 (2.0.9)',
+        'date' => 'June 26 2012',
         'pear' => true
     ),
     'kronolith' => array(
@@ -371,8 +371,8 @@ $horde_apps_dev = array(
     ),
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.0.0beta1',
-        'date' => 'July 19 2012',
+        'ver' => '5.0.0beta3',
+        'date' => 'July 22 2012',
         'pear' => true,
     ),
     'imp' => array(
