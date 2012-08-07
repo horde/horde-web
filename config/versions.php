@@ -371,14 +371,14 @@ $horde_apps_dev = array(
     ),
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.0.0beta3',
-        'date' => 'July 22 2012',
+        'ver' => '5.0.0beta4',
+        'date' => 'August 7 2012',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.0.0beta1)',
-        'date' => 'July 19 2012',
+        'ver' => 'H5 (6.0.0beta2)',
+        'date' => 'August 7 2012',
         'pear' => true,
     ),
     'turba' => array(
