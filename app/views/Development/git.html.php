@@ -89,6 +89,11 @@
         easiest way to setup full paths is to set the <tt>$app_fileroot</tt>
         parameter in this file.</p>
 
+        <p>Note that unlike a PEAR install, the Autoloader_Cache will be enabled
+        by default. If you attempt to use Horde or load the test.php page before
+        all PEAR dependencies are installed, you will have to purge the
+        Autoloader_Cache.</p>
+
         <p>You can now follow the procedures in the normal INSTALL document to
         complete the configuration and database creation.</p>
 
