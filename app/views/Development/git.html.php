@@ -112,7 +112,7 @@
         <pre class="brush:bash">
         cd /path/to/framework
         pear install Role/package.xml
-        pear run-scripts horde/Role
+        pear run-scripts horde/Horde_Role
         </pre>
 
         <h3 id="patch">Creating Patches</h3>
