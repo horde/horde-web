@@ -1,5 +1,5 @@
-<div class="document" id="installing-turba-3-0">
-<h1 class="title">Installing Turba 3.0</h1>
+<div class="document" id="installing-turba-4-0">
+<h1 class="title">Installing Turba 4.0</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -35,7 +35,7 @@ for web applications written in PHP.  You must install Horde before
 installing Turba.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">Turba 3.0 requires version 4.0+ of the Horde Framework -
+<p class="last">Turba 4.0 requires version 5.0+ of the Horde Framework -
 earlier versions of Horde will <strong>not</strong> work.</p>
 </div>
 <div class="important">
@@ -87,26 +87,23 @@ install any dependencies of Turba too. If you want to install Turba with all
 optional dependencies, but without the binary PECL packages that need to be
 compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/turba
+pear install -a -B horde/turba-beta
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/turba
+pear install horde/turba-beta
 </pre>
 <p>If you want to install Turba even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/turba
+pear install -a horde/turba-beta
 </pre>
 </div>
 <div class="section" id="installing-from-git">
 <h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
-<p>See:</p>
-<pre class="literal-block">
-http://horde.org/source/git.php
-</pre>
+<p>See <a class="reference external" href="http://www.horde.org/source/git.php">http://www.horde.org/source/git.php</a></p>
 </div>
 </div>
 <div class="section" id="configuring-turba">

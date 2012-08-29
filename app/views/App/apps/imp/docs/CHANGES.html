@@ -1,8 +1,177 @@
 <h3>Changes by Release</h3><pre>
+----------
+v6.0.0-git
+----------
+
+
+
 -----------
-v5.0.23-git
+v6.0.0beta3
 -----------
 
+[mms] Allow certain iCalendar events to be configured to automatically update
+      the local user's calendar (<a href="http://bugs.horde.org/ticket/11376">Request #11376</a>).
+[mms] Remember message selections when changing mailboxes in dynamic view.
+[mms] Add ability to edit list of safe addresses used with the
+      image_replacement preference.
+[mms] Add attachment download links to smartmobile view (<a href="http://bugs.horde.org/ticket/11379">Request #11379</a>).
+[mms] Indicate deleted messages with strikethrough in smartmobile mailbox
+      listing (<a href="http://bugs.horde.org/ticket/11362">Request #11362</a>).
+[mms] Show polled children in smartmobile folder list when parent mailbox is
+      not polled (<a href="http://bugs.horde.org/ticket/11238">Bug #11238</a>).
+[mms] More complete handling of linked data in subject header across views
+      (<a href="http://bugs.horde.org/ticket/11372">Bug #11372</a>).
+[mms] Add Top link to smartmobile mailbox page.
+[mms] Fixes to the iTip Request handler (<a href="http://bugs.horde.org/ticket/11264">Bug #11264</a>).
+[mms] Fix searching in smartmobile view (<a href="http://bugs.horde.org/ticket/11365">Bug #11365</a>).
+[mms] Tweak smartmobile mailbox page to use mobile-style list clicking
+      (<a href="http://bugs.horde.org/ticket/11364">Request #11364</a>).
+[mms] Fix regression in updating dynamic folder list when deleting parent
+      mailboxes that contain children (<a href="http://bugs.horde.org/ticket/11296">Bug #11296</a>).
+[mms] Fix regression preventing compose messages from being sent in the
+      smartmobile view (<a href="http://bugs.horde.org/ticket/11342">Bug #11342</a>).
+[jan] Allow to reset flag colors and to specify as HTML colors.
+[mjr] The mailboxList API call now returns delimiter and attribute information.
+[jan] Fix polling for new mail from other applications.
+
+
+-----------
+v6.0.0beta2
+-----------
+
+[jan] Highlight quota level in dynamic mode.
+[mms] Add keyboard shortcuts to dynamic compose page (Michael Wing
+      &lt;marsfurrycreature@gmail.com>).
+[mms] Fix sidebar element wrapping.
+[mms] Fix regression preventing contacts popup window from working (<a href="http://bugs.horde.org/ticket/11324">Bug
+      #11324</a>).
+[mms] Fix regression in select all checkbox on traditional mailbox page (<a href="http://bugs.horde.org/ticket/11317">Bug
+      #11317</a>).
+[mms] Fix regression in altering sort direction in dynamic mailbox view (<a href="http://bugs.horde.org/ticket/11300">Bug
+      #11300</a>).
+[mms] Hide empty MIME parts when displaying inline.
+[mms] Fix expanding all mailboxes in dynamic view (<a href="http://bugs.horde.org/ticket/11289">Bug #11289</a>).
+[mms] Fix handling of identity tie-to addresses when searching for matching
+      identities.
+[mms] Fix recursive mailbox delete in dynamic view (<a href="http://bugs.horde.org/ticket/11288">Bug #11288</a>).
+
+
+-----------
+v6.0.0beta1
+-----------
+
+[mms] Fix regression in sorting of special mailboxes (<a href="http://bugs.horde.org/ticket/11241">Bug #11241</a>).
+[mms] Fix mailbox sorting in traditional view (<a href="http://bugs.horde.org/ticket/11278">Bug #11278</a>).
+[mms] Fix regression in IMAP cache query script preventing stats in all mailbox
+      reports (<a href="http://bugs.horde.org/ticket/11265">Bug #11265</a>).
+[mms] Fix regression in creating submailboxes in dynamic view.
+[jan] Fix displaying messages in a popup (<a href="http://bugs.horde.org/ticket/11251">Bug #11251</a>).
+[jan] Fix automatic selection of the default identity if other identities
+      contain the same address(es).
+[jan] Fix editing mailbox ACLs (<a href="http://bugs.horde.org/ticket/11247">Bug #11247</a>).
+[jan] Fix using admin users and passwords for quota or mailbox management.
+
+
+------------
+v6.0.0alpha1
+------------
+
+[mms] Fix browser-based AJAX autocompletion (<a href="http://bugs.horde.org/ticket/11233">Bug #11233</a>).
+[mms] Only show Inbox, special mailboxes, and polled mailboxes by default in
+      smartmobile view.
+[mms] Add 'reply_strip_sig' preference (<a href="http://bugs.horde.org/ticket/11056">Request #11056</a>).
+[mms] Move attachment strip icon to MIME part tree display.
+[mms] Convert dynamic view to Horde_View.
+[mms] Convert minimal view to Horde_View.
+[mms] Honor initial_page preference in smartmobile view (<a href="http://bugs.horde.org/ticket/11165">Request #11165</a>).
+[mms] Lock mailbox sort to descending date when using minimal view.
+[mms] Pre-fetch unseen messages in polled mailboxes in dynamic view.
+[mms] Allow Edit As New to be used as the default forward action (<a href="http://bugs.horde.org/ticket/11135">Request
+      #11135</a>).
+[mms] Improved handling of messages with multiple From addresses in mailbox
+      views.
+[mms] Replying to a multipart/related message in HTML mode now correctly
+      attaches data from the original message.
+[mms] Allow deletion of all subfolders at once in dynamic view.
+[mms] Provide details of when search results were last refreshed.
+[mms] Dynamically update unseen message counts in folder list in smartmobile
+      view.
+[mms] Add mailbox caching to the smartmobile view.
+[mms] Cache last seen message in smartmobile view.
+[mms] Viewing a mailbox in smartmobile mode no longer resets the sortpref
+      preference.
+[mms] Allow all SMTP configuration parameters to be overridden in the backends
+      configuration file (<a href="http://bugs.horde.org/ticket/11051">Request #11051</a>).
+[mms] Block images in HTML messages that appear to be sent from you by default,
+      to prevent spammers form easily circumventing the block.
+[mms] Add 'Edit As New' to Forward button dropdown menu in dynamic view.
+[mms] Allow identifying addresses to always display images for without
+      requiring to add them to the addressbook.
+[mms] Disable text selection in dynamic view for everything but
+      compose/message bodies.
+[mms] Rewritten vCal/iCal attachment viewer/handler.
+[mms] S/MIME certificate import from message data no longer requires popup
+      window.
+[mms] PGP key import from message attachment no longer requires popup window.
+[mms] Improve PGP key import screen.
+[mms] Truncate large address lists (50+) by default in dynamic message views.
+[mms] Moved AJAX core features to Horde_Core package.
+[jan] Add reporting as spam/innocent to smartphone view.
+[mms] Workaround overquota error when deleting messages and using Trash
+      mailbox.
+[jan] Add basic search to smartphone view.
+[jan] Add resume and "edit as new" to smartphone view.
+[mms] Hide deleted now works with threaded mailboxes.
+[mms] Threaded sorts now work in all search mailboxes (<a href="http://bugs.horde.org/ticket/9700">Request #9700</a>).
+[mms] Improved threading performance.
+[mms] Improved date searching to search by range.
+[mms] Added 'mbox_sort' hook.
+[mms] Make mailbox columns the same order in traditional view as in dynamic
+      view.
+[jan] Add mailbox paging to smartphone view.
+[jan] Add copy and move to smartphone view.
+[jan] Add deleting messages to smartphone view.
+[jan] Add reply, forward and redirect to smartphone view.
+[jan] Add compose functionality to smartphone view.
+[mms] Accurately track changes to virtual folders in dynamic folder tree (<a href="http://bugs.horde.org/ticket/10886">Bug
+      #10886</a>).
+[mms] Traditional mode now requires javascript on the browser.
+[mms] Added 'mbox_special' hook (rsalmon@mbpgroup.com, <a href="http://bugs.horde.org/ticket/10801">Request #10801</a>).
+[mms] Converted stationery to the Templates special mailbox (<a href="http://bugs.horde.org/ticket/9296">Request #9296</a>).
+[mms] Hide inactive buttons in dynamic view instead of dimming them.
+[mms] Added config option to limit size of messages with linked attachments
+      (<a href="http://bugs.horde.org/ticket/6247">Request #6247</a>).
+[mms] Allow expiration date to be provided when creating personal PGP key
+      (<a href="http://bugs.horde.org/ticket/5754">Request #5754</a>).
+[mms] Always use Horde default for sending charset unless reply_charset
+      preference is active.
+[mms] Add ability to view all message parts in dynamic view (<a href="http://bugs.horde.org/ticket/9827">Request #9827</a>).
+[mms] Remove signature from compose UI; signature is now added automatically
+      when sending (<a href="http://bugs.horde.org/ticket/10487">Request #10487</a>).
+[mms] Fix accessing mailboxes containing ampersands (<a href="http://bugs.horde.org/ticket/10093">Bug #10093</a>).
+[mms] Size of sidebar now saved in dynamic view.
+[mms] Browser-specific UI elements in dynamic view now saved in browser storage
+      (Ticket #10723).
+
+
+-----------
+v5.0.24-git
+-----------
+
+[mms] Fix sending MDN notifications in traditional view (<a href="http://bugs.horde.org/ticket/11311">Bug #11311</a>).
+[mms] Fix changing sort order in dynamic search mailboxes (<a href="http://bugs.horde.org/ticket/11108">Bug #11108</a>).
+[mms] Fix regression in creating top-level mailbox in traditional view (<a href="http://bugs.horde.org/ticket/11326">Bug
+      #11326</a>).
+[mms] Fix spam reporting in minimal view.
+
+
+-------
+v5.0.23
+-------
+
+[mjr] Only ask for the count of matching contacts when determining to use
+      browser vs ajax autocompletion.
+[jan] Fix closing the compose window after redirecting (<a href="http://bugs.horde.org/ticket/11259">Bug #11259</a>).
 [jan] Display correct values in permission-denied error messages (<a href="http://bugs.horde.org/ticket/11253">Bug #11253</a>).
 
 
@@ -269,7 +438,6 @@ v5.0.10
 [mms] Remove 'allow_resume_all' configuration option (<a href="http://bugs.horde.org/ticket/10206">Request #10206</a>).
 [mms] Add personal contacts search filter.
 [mms] Add ability to search all mailboxes (<a href="http://bugs.horde.org/ticket/10204">Request #10204</a>).
-
 
 ------
 v5.0.9

@@ -1,5 +1,5 @@
-<div class="document" id="installing-imp-5-0">
-<h1 class="title">Installing IMP 5.0</h1>
+<div class="document" id="installing-imp-6-0">
+<h1 class="title">Installing IMP 6.0</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -35,7 +35,7 @@ for web applications written in PHP. You must install Horde before
 installing IMP.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">IMP 5.0 requires version 4.0+ of the Horde Framework -
+<p class="last">IMP 6.0 requires version 5.0+ of the Horde Framework -
 earlier versions of Horde will not work.</p>
 </div>
 <div class="important">
@@ -186,25 +186,23 @@ any dependencies of IMP too. If you want to install IMP with all optional
 dependencies, but without the binary PECL packages that need to be compiled,
 specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/imp
+pear install -a -B horde/imp-beta
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/imp
+pear install horde/imp-beta
 </pre>
 <p>If you want to install IMP even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/imp
+pear install -a horde/imp-beta
 </pre>
 </div>
 <div class="section" id="installing-from-git">
 <h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
-<p>See:</p>
-<blockquote>
-<a class="reference external" href="http://horde.org/source/git.php">http://horde.org/source/git.php</a></blockquote>
+<p>See <a class="reference external" href="http://www.horde.org/source/git.php">http://www.horde.org/source/git.php</a></p>
 </div>
 </div>
 <div class="section" id="configuring-imp">
@@ -330,7 +328,7 @@ back in, if you are using an SQL or LDAP preferences system).</li>
 <li>Reading mail.</li>
 <li>Deleting mail.</li>
 <li>Flagging mail (if using IMAP).</li>
-<li>Changing folders (if using IMAP).</li>
+<li>Changing mailboxes (if using IMAP).</li>
 </ul>
 </li>
 <li><p class="first">Tuning IMP (Performance)</p>

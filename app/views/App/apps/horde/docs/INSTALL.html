@@ -1,5 +1,5 @@
-<div class="document" id="installing-horde-framework-4-0">
-<h1 class="title">Installing Horde Framework 4.0</h1>
+<div class="document" id="installing-horde-framework-5-0">
+<h1 class="title">Installing Horde Framework 5.0</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -80,7 +80,7 @@ pear run-scripts horde/horde_role
 </li>
 <li><p class="first">Install Horde:</p>
 <pre class="literal-block">
-pear install -a -B horde/horde
+pear install -a -B horde/horde-beta
 </pre>
 </li>
 <li><p class="first">Configure Horde:</p>
@@ -130,7 +130,7 @@ which we recommend.  These servers are available from:</p>
 </ul>
 </blockquote>
 </li>
-<li><p class="first">PHP 5.2.0 or above.</p>
+<li><p class="first">PHP 5.3.0 or above.</p>
 <p>PHP is the interpreted language in which Horde is written.</p>
 <p>It may be possible to install PHP using the package manager for your
 operating system. Alternatively, you can obtain PHP sources at</p>
@@ -259,6 +259,19 @@ or <strong>RECOMMEND</strong> other options to be built into PHP
 also. Please check <tt class="docutils literal">docs/INSTALL</tt> for all applications you
 wish to use to see if other PHP options are needed.</p>
 </div>
+<ol class="loweralpha" start="6">
+<li><p class="first">fileinfo</p>
+<p>Allows Horde modules to guess the MIME type of files by analyzing
+their contents.</p>
+<p>This module is automatically enabled by default.</p>
+</li>
+<li><p class="first">intl</p>
+<p>The intl module is required to handle display of Internationalized
+Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
+<p>This module can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option when
+compiling PHP.</p>
+</li>
+</ol>
 </li>
 <li><p class="first">PEAR Modules</p>
 <p>PEAR is short for &quot;PHP Extension and Application Repository&quot;.  The goal of
@@ -363,25 +376,6 @@ extension=fileinfo.dll
 <p>After that, restart your webserver.</p>
 <p>These PECL modules are <strong>RECOMMENDED</strong> to be installed:</p>
 <ol class="loweralpha">
-<li><p class="first">fileinfo</p>
-<p>Allows Horde modules to guess the MIME type of files by analyzing
-their contents.</p>
-<p>To install, enter the following at the command prompt:</p>
-<pre class="literal-block">
-pecl install fileinfo
-</pre>
-<p>As of PHP 5.3.0, this module is automatically enabled by default.</p>
-</li>
-<li><p class="first">intl</p>
-<p>The intl module is required to handle display of Internationalized
-Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
-<p>To install, enter the following at the command prompt:</p>
-<pre class="literal-block">
-pecl install intl
-</pre>
-<p>Alternatively, this module is shipped with PHP 5.3.0+ and can be
-enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option when compiling PHP.</p>
-</li>
 <li><p class="first">imagick</p>
 <p>The imagick module can be used by Horde's image library to provide all
 kind of image manipulations.</p>
@@ -467,18 +461,18 @@ install any dependencies of Horde too.  If you want to install Horde with all
 optional dependencies, but without the binary PECL packages that have to be
 compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/horde
+pear install -a -B horde/horde-beta
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/horde
+pear install horde/horde-beta
 </pre>
 <p>If you want to install Horde even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/horde
+pear install -a horde/horde-beta
 </pre>
 </div>
 <div class="section" id="installing-into-separate-pear">
@@ -515,10 +509,7 @@ SetEnv PHP_PEAR_SYSCONF_DIR /var/www/horde
 </div>
 <div class="section" id="installing-from-git">
 <h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
-<p>See:</p>
-<pre class="literal-block">
-http://horde.org/source/git.php
-</pre>
+<p>See <a class="reference external" href="http://www.horde.org/development/git">http://www.horde.org/development/git</a></p>
 </div>
 </div>
 <div class="section" id="configuring-horde">

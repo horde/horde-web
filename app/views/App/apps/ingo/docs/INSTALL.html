@@ -1,5 +1,5 @@
-<div class="document" id="installing-ingo-2-0">
-<h1 class="title">Installing Ingo 2.0</h1>
+<div class="document" id="installing-ingo-3-0">
+<h1 class="title">Installing Ingo 3.0</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -36,7 +36,7 @@ for web applications written in PHP.  You must install Horde before
 installing Ingo.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">Ingo 2.0 requires version 4.0+ of the Horde Framework -
+<p class="last">Ingo 3.0 requires version 5.0+ of the Horde Framework -
 earlier versions of Horde will <strong>not</strong> work.</p>
 </div>
 <div class="important">
@@ -81,26 +81,23 @@ any dependencies of Ingo too. If you want to install Ingo with all optional
 dependencies, but without the binary PECL packages that need to be compiled,
 specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/ingo
+pear install -a -B horde/ingo-beta
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/ingo
+pear install horde/ingo-beta
 </pre>
 <p>If you want to install Ingo even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/ingo
+pear install -a horde/ingo-beta
 </pre>
 </div>
 <div class="section" id="installing-from-git">
 <h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
-<p>See:</p>
-<pre class="literal-block">
-http://horde.org/source/git.php
-</pre>
+<p>See <a class="reference external" href="http://www.horde.org/source/git.php">http://www.horde.org/source/git.php</a></p>
 </div>
 </div>
 <div class="section" id="configuring-ingo">
