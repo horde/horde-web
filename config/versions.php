@@ -79,8 +79,8 @@ $horde_four_apps = array(
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H4 (1.0.1)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (1.0.2)',
+        'date' => 'September 6 2012',
         'pear' => true,
     ),
     'ansel' => array(
@@ -320,8 +320,8 @@ $horde_apps_stable = array(
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H4 (1.0.1)',
-        'date' => 'December 13 2011',
+        'ver' => 'H4 (1.0.2)',
+        'date' => 'September 6 2012',
         'pear' => true,
     ),
     'hermes' => array(
