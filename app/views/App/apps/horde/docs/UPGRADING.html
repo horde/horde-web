@@ -99,6 +99,10 @@ update anything that's highlighted as outdated.</p>
 <h2><a class="toc-backref" href="#id7">2.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
 <p>The $conf['session']['max_time'] option was added. The default is no maximum
 session time, the same behavior as in Horde 4.</p>
+<p>The $conf['cachejsparams']['url_version_param'] option was added. This option
+is only used if no javascript caching is selected (a configuration that is NOT
+recommended for production servers). The default is to add version information
+to javascript server URLs, which is altered behavior from Horde 4.</p>
 </div>
 <div class="section" id="hooks-hooks-php">
 <h2><a class="toc-backref" href="#id8">2.2&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
@@ -117,14 +121,6 @@ hook).</p>
 </div>
 <div class="section" id="activesync-eas-integration">
 <h2><a class="toc-backref" href="#id10">2.4&nbsp;&nbsp;&nbsp;ActiveSync (EAS) Integration</a></h2>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/UPGRADING</tt>, line 67)</p>
-<p>Title underline too short.</p>
-<pre class="literal-block">
-ActiveSync (EAS) Integration
-----------------------
-</pre>
-</div>
 <p>Email support has been added, along with support for the EAS 12.0 and 12.1
 protocol versions. New configuration options have been added to support this.
 You MUST update Horde's ActiveSync configuration.</p>
