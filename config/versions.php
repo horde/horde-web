@@ -331,8 +331,8 @@ $horde_apps_stable = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H4 (2.0.1)',
-        'date' => 'February 28 2012',
+        'ver' => 'H4 (2.0.2)',
+        'date' => 'September 24 2012',
         'pear' => true,
     ),
     'klutz' => array(
