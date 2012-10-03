@@ -43,8 +43,8 @@ features are configured via the Horde install.</p>
 <ol class="loweralpha">
 <li><p class="first"><span class="target" id="gd">GD</span> support <tt class="docutils literal"><span class="pre">--with-gd</span></tt></p>
 <p>The GD extension provides functionality for image manipulation in
-PHP. You can alternatively use the <a class="reference internal" href="#imagick">imagick</a> extension or the
-<a class="reference internal" href="#imagemagick">ImageMagick</a> software, but one of these is <strong>required</strong>.</p>
+PHP. You can alternatively use the <a href="#id7"><span class="problematic" id="id8">imagick_</span></a> extension or the
+<a href="#id9"><span class="problematic" id="id10">ImageMagick_</span></a> software, but one of these is <strong>required</strong>.</p>
 </li>
 </ol>
 </li>
@@ -56,51 +56,47 @@ tested. If you use MySQL, you need at least version 5.0.</p>
 <li><p class="first">The following PECL modules:
 (See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PECL modules)</p>
 <ol class="loweralpha">
-<li><p class="first"><span class="target" id="imagick">imagick</span></p>
+<li><p class="first">imagick</p>
 <p>The imagick module provides a quicker, more efficient interface to
 ImageMagick's capabilities. It provides better results when doing things
 like generating thumbnails with rounded corners and drop shadows. You can
-alternatively use the <a class="reference internal" href="#gd">GD</a> extension or the <a class="reference internal" href="#imagemagick">ImageMagick</a> software, but one
+alternatively use the <a class="reference internal" href="#gd">GD</a> extension or the <a href="#id11"><span class="problematic" id="id12">ImageMagick_</span></a> software, but one
 of these is <strong>required</strong>. The imagick extension <strong>must</strong> be compiled
 against ImageMagick version 6.2.9 or better, though version 6.5.7 or
 better is recommended.</p>
 </li>
-<li><p class="first"><span class="target" id="opencv">OpenCV</span></p>
-<p>The <a href="#id7"><span class="problematic" id="id8">`php-facedetect module`_</span></a> provides the ability to detect human faces in
+<li><p class="first">OpenCV</p>
+<p>The <a class="reference external" href="http://www.xarg.org/project/php-facedetect/">php-facedetect module</a> provides the ability to detect human faces in
 images. If you would like to be able to have Ansel automatically detect
-faces in your images, you will need to install both the <a href="#id9"><span class="problematic" id="id10">`OpenCV library`_</span></a>
+faces in your images, you will need to install both the <a class="reference external" href="http://sourceforge.net/projects/opencvlibrary/">OpenCV library</a>
 as well as the phpfacedetect extension. You will still be able to manually
 select faces from your images if you do not have this extension installed.</p>
-<!-- _ `OpenCV library`: http://sourceforge.net/projects/opencvlibrary/ -->
-<!-- _ `php-facedetect module`: http://www.xarg.org/project/php-facedetect/ -->
 </li>
-<li><p class="first"><span class="target" id="libpuzzle">libpuzzle</span></p>
-<p>The <a href="#id11"><span class="problematic" id="id12">`libpuzzle library`_</span></a> provides the ability to determine similarities
+<li><p class="first">libpuzzle</p>
+<p>The <a class="reference external" href="http://libpuzzle.pureftpd.org/project/libpuzzle">libpuzzle library</a> provides the ability to determine similarities
 between images based on the image content. If you would like Ansel to be
 able to provide recognition of similar images and similar faces, you will
 need to install this module.</p>
-<!-- _ `libpuzzle library`: http://libpuzzle.pureftpd.org/project/libpuzzle -->
 </li>
 </ol>
 </li>
-<li><p class="first">The <span class="target" id="imagemagick">ImageMagick</span> software.</p>
+<li><p class="first">The ImageMagick software.</p>
 <p>If using the <a class="reference external" href="http://www.imagemagick.org/">ImageMagick software</a> you need to set the path to the
 <tt class="docutils literal">convert</tt> utility in Horde's configuration screen
 (<tt class="docutils literal">Administration/Configuration/Horde/Image Manipulation</tt>). You can
-alternatively use the <a class="reference internal" href="#gd">GD</a> extension or the <a class="reference internal" href="#imagick">imagick</a> extension, but one of
+alternatively use the <a class="reference internal" href="#gd">GD</a> extension or the <a href="#id13"><span class="problematic" id="id14">imagick_</span></a> extension, but one of
 these is <strong>required</strong>. If using ImageMagick software, version 6.5.7 or better
 is recommended. Earlier versions <em>may</em> work, but some effects may produce
 errors. The absolute minimum version that will work at all with Ansel is
 6.2.9.</p>
 </li>
-<li><p class="first"><span class="target" id="agora">Agora</span>, the Horde forums application.</p>
-<p><a class="reference internal" href="#agora">Agora</a> provides the ability for comments to be added to photos via the
+<li><p class="first">Agora, the Horde forums application.</p>
+<p><a class="reference external" href="http://www.horde.org/apps/agora">Agora</a> provides the ability for comments to be added to photos via the
 forums API. If you want your users to be able to comment on photos, an
-application that provides the forums API is <strong>required</strong>.  <a class="reference internal" href="#agora">Agora</a> is
-currently the only such Horde application, but please be aware that currently
-<a class="reference internal" href="#agora">Agora</a> is not officially released in a stable version, so use at your own
-risk.</p>
-<!-- _ 'Horde Agora': http://www.horde.org/apps/agora -->
+application that provides the forums API is <strong>required</strong>.  <a class="reference external" href="http://www.horde.org/apps/agora">Agora</a> is
+currently the only such Horde application, but please be aware that
+currently <a class="reference external" href="http://www.horde.org/apps/agora">Agora</a> is not officially released in a stable version, so use at
+your own risk.</p>
 </li>
 </ol>
 </div>
@@ -217,13 +213,16 @@ For information on reasonable support expectations, please read</p>
 <div class="system-messages section">
 <h1>Docutils System Messages</h1>
 <div class="system-message" id="id7">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 65); <em><a href="#id8">backlink</a></em></p>
-Unknown target name: &quot;php-facedetect module&quot;.</div>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 40); <em><a href="#id8">backlink</a></em></p>
+Unknown target name: &quot;imagick&quot;.</div>
 <div class="system-message" id="id9">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 65); <em><a href="#id10">backlink</a></em></p>
-Unknown target name: &quot;opencv library&quot;.</div>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 40); <em><a href="#id10">backlink</a></em></p>
+Unknown target name: &quot;imagemagick&quot;.</div>
 <div class="system-message" id="id11">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 76); <em><a href="#id12">backlink</a></em></p>
-Unknown target name: &quot;libpuzzle library&quot;.</div>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 55); <em><a href="#id12">backlink</a></em></p>
+Unknown target name: &quot;imagemagick&quot;.</div>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 85); <em><a href="#id14">backlink</a></em></p>
+Unknown target name: &quot;imagick&quot;.</div>
 </div>
 </div>
