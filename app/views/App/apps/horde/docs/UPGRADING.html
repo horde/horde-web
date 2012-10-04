@@ -99,10 +99,14 @@ update anything that's highlighted as outdated.</p>
 <h2><a class="toc-backref" href="#id7">2.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
 <p>The $conf['session']['max_time'] option was added. The default is no maximum
 session time, the same behavior as in Horde 4.</p>
+<p>The $conf['cachecssparams']['url_version_param'] option was added. This option
+is only used if no CSScaching is selected (a configuration that is NOT
+recommended for production servers). The new default is to add version
+information to CSS server URLs, which is altered behavior from Horde 4.</p>
 <p>The $conf['cachejsparams']['url_version_param'] option was added. This option
 is only used if no javascript caching is selected (a configuration that is NOT
-recommended for production servers). The default is to add version information
-to javascript server URLs, which is altered behavior from Horde 4.</p>
+recommended for production servers). The new default is to add version
+information to javascript server URLs, which is altered behavior from Horde 4.</p>
 </div>
 <div class="section" id="hooks-hooks-php">
 <h2><a class="toc-backref" href="#id8">2.2&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
