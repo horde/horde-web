@@ -16,13 +16,14 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> May 2012</p>
+<p><b>Planned release timeframe:</b> October 30th, 2012</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>New user interface design</td><td class="progress">In Progress</td></tr>
+  <tr><td>New user interface design</td><td class="done">Done</td></tr>
+  <tr><td>ActiveSync e-mail synchronization</a></td><td class="done">Done</td>
 </table>
 
 <div class="dimmed">

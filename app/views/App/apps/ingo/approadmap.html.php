@@ -32,7 +32,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> No major changes planned</p>
 
-<p><b>Planned release timeframe:</b> May 2012</p>
+<p><b>Planned release timeframe:</b> October 30th, 2012</p>
 
 <div class="dimmed">
 

@@ -23,7 +23,6 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Merge into <?php echo $this->linkTo('Kronolith', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith')) ?></td><td class="planned">Planned</td></tr>
-  <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="planned">Planned</td></tr>
   <tr><td>Task dependencies</td><td class="planned">Planned</td>
 </table>
 
@@ -31,26 +30,28 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> October 2012</p>
+<p><b>Planned release timeframe:</b> April 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
+  <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="planned">Planned</td></tr>
 </table>
 
 <h3>Nag 4.0</h3>
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> May 2012</p>
+<p><b>Planned release timeframe:</b> October 30th, 2012</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Recurring tasks</td><td class="done">Done</td>
+  <tr><td>Smart lists</td><td class="done">Done</td>
 </table>
 
 <div class="dimmed">

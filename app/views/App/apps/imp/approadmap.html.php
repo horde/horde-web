@@ -16,7 +16,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> Planned</p>
 
-<p><b>Planned release timeframe:</b> October 2012</p>
+<p><b>Planned release timeframe:</b> April 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
@@ -29,7 +29,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> May 2012</p>
+<p><b>Planned release timeframe:</b> October 30th, 2012</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
