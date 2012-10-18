@@ -118,6 +118,9 @@ UTF-8 charset, not UTF7-IMAP.</p>
 <p>The $conf['compose']['link_attach_size_limit'] option was added.</p>
 <p>The $conf['print']['add_printedby'] option was removed and replaced by the
 'add_printedby' preference.</p>
+<p>The $conf['user']['select_sentmail_folder'] option was removed. To prevent
+changing the sentmail mailbox, the 'sent_mail_folder' preference should be
+locked instead.</p>
 <p>The following configuration options were removed:</p>
 <pre class="literal-block">
 $conf['dimp']['viewport']['buffer_pages']
