@@ -375,8 +375,8 @@ $horde_apps_dev = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.0.0RC1)',
-        'date' => 'October 26 2012',
+        'ver' => 'H5 (6.0.0RC2)',
+        'date' => 'October 29 2012',
         'pear' => true,
     ),
     'turba' => array(
