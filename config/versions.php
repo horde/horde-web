@@ -357,16 +357,14 @@ $horde_apps_stable = array(
 $horde_apps_dev = array(
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '1.2.3-RC1',
-        'date' => 'April 18 2009',
-        'dir' => 'horde-groupware',
-        // Define file if it is not "app-latest.tar.gz"
-        'file' => 'horde-groupware-1.2.3-rc1.tar.gz'
+        'ver' => '5.0.0RC1',
+        'date' => 'October 29 2012',
+        'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '4.0-RC2',
-        'date' => 'June 1 2011',
+        'ver' => '5.0.0RC1',
+        'date' => 'October 29 2012',
         'pear' => true,
     ),
     'horde' => array(
