@@ -32,7 +32,13 @@ class HordeWeb_Utils
      */
     static public function getH4Apps()
     {
-        require $GLOBALS['fs_base'] .'/config/versions.php';
+        require $GLOBALS['fs_base'] . '/config/versions.php';
+        $horde_four_apps = array();
+        foreach ($horde_apps_stable as $app => $info) {
+            if (!empty($info['pear'])) {
+                $horde_four_apps[$app] = $info;
+            }
+        }
         return $horde_four_apps;
     }
 
@@ -43,13 +49,13 @@ class HordeWeb_Utils
      */
     static public function getH3Apps()
     {
-        require $GLOBALS['fs_base'] .'/config/versions.php';
+        require $GLOBALS['fs_base'] . '/config/versions.php';
         return $horde_three_apps;
     }
 
     static public function getDevApps()
     {
-        require $GLOBALS['fs_base'] .'/config/versions.php';
+        require $GLOBALS['fs_base'] . '/config/versions.php';
         return $horde_apps_dev;
     }
 
