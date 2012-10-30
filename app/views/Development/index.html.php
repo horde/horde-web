@@ -34,35 +34,6 @@
         older <a href="http://cvs.horde.org">CVS</a> code trees directly
         online.</p>
 
-        <a name="snapshots"></a>
-        <h3>Snapshots</h3>
-        <p>Nightly <a href="http://snaps.horde.org/">Snapshots</a> (tarballs of
-        development code) are now provided for Git master (Horde 4 code) and
-        most recent FRAMEWORK_3 branches (Horde 3 code) for
-        all <a href="<?php echo $this->urlWriter->urlFor('development',
-        array('action' => 'modules')) ?>">applications in the Horde
-        repository</a>.  We keep approximately 7 days worth of snapshots,
-        organized by date.</p>
-
-        <p>The Git master snapshot of a module will almost always be stable
-        code. This code base will make up the next stable release of the
-        code. All modules have a master snapshot, even if there has not yet
-        been a release of the module.</p>
-
-        <!--
-        <p>The Git develop snapshot of a module will always be development
-        code, and may be unstable.  All modules have a develop snapshot, even
-        if there has not yet been a release of the module.</p>
-        -->
-
-        <p>The CVS FRAMEWORK_3 snapshot of a module is the release base for the
-        old versions of a module, and only exists for modules which have been
-        released for Horde 3.</p>
-
-        <p>Snapshots are provided primarily for people who want to run
-        development code but do not have access to (or familiarity with) either
-        Git and/or CVS.</p>
-
         <h3>Versions</h3>
         <p>Being a mature project, there are quite a few older versions of our
         software. Horde 4 is the most recent version of the Application

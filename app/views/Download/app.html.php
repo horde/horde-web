@@ -46,17 +46,13 @@
 
             <h3>Obtaining Current Development Snapshots</h3>
 
-            <p>The current development version of
-            <?php echo htmlspecialchars($this->app_info['name'])?> is available via
-            <a href="<?php echo $this->urlWriter->urlFor('development')
-            ?>#snapshots">nightly snapshots</a> and
+            <p>The current development version of <?php echo
+            htmlspecialchars($this->app_info['name'])?> is available via
             <a href="<?php echo $this->urlWriter->urlFor('development',
             array('action' => 'git')) ?>">Git</a>.<br />
 
             The old development version of <?php echo
             htmlspecialchars($this->app_info['name']) ?> is available via
-            <a href="<?php echo $this->urlWriter->urlFor('development')
-            ?>#snapshots">nightly snapshots</a> and
             <a href="<?php echo $this->urlWriter->urlFor('development',
             array('action' => 'cvs')) ?>">CVS</a>.</p>
 
