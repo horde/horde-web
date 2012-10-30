@@ -25,13 +25,13 @@ at least some of the following changes:
   <tr><td>CardDAV support</td><td class="planned">Planned</td>
 </table>
 
+<div class="dimmed">
+
 <h3>Turba 4.0</h3>
 
-<p><b>Status:</b> No major changes planned</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> October 30th, 2012</p>
-
-<div class="dimmed">
 
 <h3>Turba 3.0</h3>
 

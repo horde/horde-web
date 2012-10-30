@@ -12,9 +12,11 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<div class="dimmed">
+
 <h3>Horde 5.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> October 30th, 2012</p>
 
@@ -25,8 +27,6 @@ at least some of the following changes:
   <tr><td>New user interface design</td><td class="done">Done</td></tr>
   <tr><td>ActiveSync e-mail synchronization</a></td><td class="done">Done</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Horde 4.0</h3>
 

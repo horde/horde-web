@@ -40,9 +40,11 @@ at least some of the following changes:
   <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="planned">Planned</td></tr>
 </table>
 
+<div class="dimmed">
+
 <h3>Nag 4.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> October 30th, 2012</p>
 
@@ -53,8 +55,6 @@ at least some of the following changes:
   <tr><td>Recurring tasks</td><td class="done">Done</td>
   <tr><td>Smart lists</td><td class="done">Done</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Nag 3.0</h3>
 

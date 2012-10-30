@@ -28,13 +28,13 @@ at least some of the following changes:
   <tr><td>Composite driver to manage different backends for different services</td><td class="planned">Planned</td>
 </table>
 
+<div class="dimmed">
+
 <h3>Ingo 3.0</h3>
 
-<p><b>Status:</b> No major changes planned</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> October 30th, 2012</p>
-
-<div class="dimmed">
 
 <h3>Ingo 2.0</h3>
 

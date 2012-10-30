@@ -25,9 +25,11 @@ at least some of the following changes:
   <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="progress">In Progress</td>
 </table>
 
+<div class="dimmed">
+
 <h3>IMP 6.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> October 30th, 2012</p>
 
@@ -37,8 +39,6 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Composing and message management in smartphone view</a></td><td class="done">Done</td>
 </table>
-
-<div class="dimmed">
 
 <h3>IMP 5.0</h3>
 

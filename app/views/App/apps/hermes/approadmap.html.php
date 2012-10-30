@@ -14,7 +14,7 @@ at least some of the following changes:
 
 <h3>Hermes 2.0</h3>
 
-<p><b>Status:</b> Early stages</p>
+<p><b>Status:</b> In development</p>
 
 <p><b>Planned release timeframe:</b> Late 2012</p>
 
