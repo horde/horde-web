@@ -76,7 +76,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     {
         $view = $this->getView();
         $view->page_title = ($this->_matchDict['app'] == 'h3' ?
-            'Horde 3' : 'Horde 4') . ' Applications - The Horde Project';
+            'Horde 3' : 'Horde') . ' Applications - The Horde Project';
         $view->stable = $this->_matchDict['app'] == 'h3' ?
              HordeWeb_Utils::getH3Apps() : HordeWeb_Utils::getH4Apps();
         $view->appListController = array('controller' => 'app', 'action' => 'app');

@@ -67,8 +67,8 @@
 
         <p>Horde modules should run on any platform that can run PHP
         (including as a cgi), assuming any required support modules
-        (IMAP, for instance) are present. The latest version of Horde, Horde 4
-        requires the use of PHP 5.2 or above.</p>
+        (IMAP, for instance) are present. The latest version of Horde, Horde 5
+        requires the use of PHP 5.3 or above.</p>
       </div>
     </div>
      <div class="rightcol" style="background: none;">

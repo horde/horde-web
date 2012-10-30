@@ -13,6 +13,18 @@
           versions which work with them.</p>
         </div>
 
+        <h3>Horde 5.x</h3>
+
+        <ul>
+        <li>IMP H5 (6.x)</li>
+        <li>Turba H5 (4.x)</li>
+        <li>Ingo H5 (3.x)</li>
+        <li>Kronolith H5 (4.x)</li>
+        <li>Nag H5 (4.x)</li>
+        <li>Mnemo H5 (4.x)</li>
+        <li>Sesha H5 (1.x)</li>
+        </ul>
+
         <h3>Horde 4.x</h3>
 
         <ul>
@@ -22,6 +34,11 @@
         <li>Kronolith H4 (3.x)</li>
         <li>Nag H4 (3.x)</li>
         <li>Mnemo H4 (3.x)</li>
+        <li>Gollem H4 (2.x)</li>
+        <li>Passwd H4 (4.x)</li>
+        <li>Ansel H4 (2.x)</li>
+        <li>Whups H4 (2.x)</li>
+        <li>Wicked H4 (1.x)</li>
         </ul>
 
         <h3>Horde 3.x</h3>

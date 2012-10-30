@@ -36,7 +36,7 @@
 
         <h3>Versions</h3>
         <p>Being a mature project, there are quite a few older versions of our
-        software. Horde 4 is the most recent version of the Application
+        software. Horde 5 is the most recent version of the Application
         Framework and all new development is to be done against this.</p>
         <p>See how the different <?php echo $this->linkTo('versions', array(
         'controller' => 'development', 'action' => 'versions'))?> of the

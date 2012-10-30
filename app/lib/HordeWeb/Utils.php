@@ -43,7 +43,7 @@ class HordeWeb_Utils
     }
 
     /**
-     * Get list of Horde 4 released applications.
+     * Get list of Horde 3 released applications.
      *
      * @return array
      */

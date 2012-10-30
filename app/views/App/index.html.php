@@ -5,9 +5,10 @@
         <?php echo $this->render('communitynav') ?>
         <div class="section">
           <div class="sectionintro">
-            <p>This is a list of the major released <strong>Horde 4</strong>
-            applications developed by the horde team. There is a more complete
-            list of everything available from our source repository
+            <p>This is a list of the major released <strong>Horde 4 and
+            5</strong> applications developed by the Horde team. There is a
+            more complete list of everything available from our source
+            repository
             <a href="<?php echo $this->urlWriter->urlFor('development') ?>">
             in the development section</a> of the site.</p>
 
@@ -18,10 +19,11 @@
             welcome to add to the list, provided they have at least some code
             or the beginnings of a specification.</p>
 
-            <p>Can't find your favorite application listed for Horde 4? Not all
-            of our applications have been ported to Horde 4 yet. Please check
-            our <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
-            => 'h3')) ?>">Horde 3 Apps</a> page.</p>
+            <p>Can't find your favorite application listed for Horde 4 or 5?
+            Not all of our applications have been ported to Horde 4 or later
+            yet. Please check our <a href="<?php echo
+            $this->urlWriter->urlFor('app', array('app' => 'h3')) ?>">Horde 3
+            Apps</a> page.</p>
 
             <p>Are you confused about all the different application versions
             and do you want to know which versions are compatible with each
@@ -36,8 +38,8 @@
           </div>
 
           <h3>Obtaining Packages</h3>
-          <p>Horde 4 and all Horde 4 applications now utilize a PEAR based
-          installation method. You can install all Horde 4 applications and
+          <p>Horde and all Horde applications now utilize a PEAR based
+          installation method. You can install all Horde applications and
           libraries by following the directions in the <a href="<?php echo
           $this->urlWriter->urlFor(array('controller' => 'app', 'app' =>
           'horde', 'action' => 'docs', 'file' => 'INSTALL'))
@@ -162,7 +164,7 @@
           <h3>Chora</h3>
           <p><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
           'chora')) ?>">Chora</a>, the Horde repository viewer is still being
-          developed for a Horde 4 release. Can't wait? Chora is available for
+          developed for a Horde 5 release. Can't wait? Chora is available for
           Horde 3, or you can use the bleeding edge development code.</p>
 
  <!--     <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'chora')) ?>">Chora</a></h3>
@@ -186,7 +188,7 @@
           <h3>Hermes</h3>
           <p>The Horde Team is hard at work preparing
           <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'hermes')) ?>">
-          Hermes</a>, the Horde time-tracking application, for a Horde 4
+          Hermes</a>, the Horde time-tracking application, for a Horde 5
           release. New features and a new dynamic view are in the works. Can't
           wait? Try our bleeding edge development code, or use Hermes for Horde
           3.</p>
