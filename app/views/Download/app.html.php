@@ -3,25 +3,25 @@
     <div class="mainareasplit">
         <h2><span>&nbsp;</span>Download <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => $this->appname)) ?>"><?php echo $this->app_info['name'] ?></a></h2>
         <div class="section">
-            <h3>Current Horde 4 Stable Release</h3>
+            <h3>Current Horde Stable Release</h3>
             <?php if ($this->h4app): ?>
             <ul>
             <?php foreach ($this->h4app as $val): ?>
                 <li><?php echo $val ?></li>
             <?php endforeach; ?>
             </ul>
-            <p>Horde 4 and all Horde 4 applications now utilize a PEAR based
-            installation method. You can install all Horde 4 applications and
+            <p>Horde and all Horde applications now utilize a PEAR based
+            installation method. You can install all Horde applications and
             libraries by following the directions in the <a href="<?php echo
             $this->urlWriter->urlFor('app', array('app' => $this->appname,
             'action' => 'docs')) ?>/INSTALL">documentation</a>.  You may
             also download the PEAR tarball from
             our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
             <?php else: ?>
-            <p>No stable Horde 4 release at this time.</p>
+            <p>No stable Horde release at this time.</p>
             <?php endif;?>
 
-            <h3>Current Horde 3 Stable Release</h3>
+            <h3>Deprecated Horde 3 Stable Release</h3>
             <ul>
             <?php foreach ($this->stableapp as $val): ?>
                 <li><?php echo $val ?></li>
@@ -36,7 +36,7 @@
             <?php endforeach; ?>
             </ul>
 
-            <p>Horde 4 and all Horde 4 applications now utilize a PEAR based
+            <p>Horde and all Horde applications now utilize a PEAR based
             installation method. To upgrade to a development release, you need
             to attach the release's stability state to the application name,
             e.g.:</p>
@@ -46,14 +46,14 @@
 
             <h3>Obtaining Current Development Snapshots</h3>
 
-            <p>The Horde 4 development version of
+            <p>The current development version of
             <?php echo htmlspecialchars($this->app_info['name'])?> is available via
             <a href="<?php echo $this->urlWriter->urlFor('development')
             ?>#snapshots">nightly snapshots</a> and
             <a href="<?php echo $this->urlWriter->urlFor('development',
             array('action' => 'git')) ?>">Git</a>.<br />
 
-            The Horde 3 development version of <?php echo
+            The old development version of <?php echo
             htmlspecialchars($this->app_info['name']) ?> is available via
             <a href="<?php echo $this->urlWriter->urlFor('development')
             ?>#snapshots">nightly snapshots</a> and
