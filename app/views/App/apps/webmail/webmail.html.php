@@ -1,6 +1,6 @@
 <div class="sectionintro">
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail', 'action' => 'screenshots')) ?>">
-<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/portal_1_1-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
+<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/webmail/5/portal-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
 </a>
 <p>
  Horde Groupware Webmail Edition is a free, enterprise ready, browser based
@@ -41,7 +41,7 @@ Groupware Webmail Edition and the <strong>calendar, contacts, tasks, and notes
 
 <p>Additional features of Horde Groupware Webmail Edition are:</p>
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail', 'action' => 'screenshots')) ?>">
-<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/webmail/imp_1_1-thumb.jpg" align="right" hspace="13" alt="Webmail" border="0">
+<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/imp/6/imp6_1-thumb.jpg" align="right" hspace="13" alt="Webmail" border="0">
 </a>
 
 <ul>

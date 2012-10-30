@@ -1,6 +1,6 @@
 
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
- <img src="<?php echo $GLOBALS['host_base'] ?>/images/screenshots/groupware/portal_1_1-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
+ <img src="<?php echo $GLOBALS['host_base'] ?>/images/screenshots/groupware/5/portal-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
  </a>
 <div class="sectionintro"><p>
  Horde Groupware is a free, enterprise ready, browser based collaboration
@@ -67,11 +67,10 @@ suite including webmail support.</p>
 
 <p>Calendar:</p>
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
- <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/kronolith_1_1-thumb.jpg" align="right" hspace="13" alt="Calendar" border="0">
+ <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/week-thumb.jpg" align="right" hspace="13" alt="Calendar" border="0">
 </a>
 <ul>
- <li>Day, <a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/kronolith_1_1.png">
- week</a>, work week, month and year views</li>
+ <li><a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/day.png">Day</a>, <a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/week.png">week</a>, work week, <a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/month.png">month</a> and <a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/year.png">year</a> views</li>
  <li>Recurring and all-day events</li>
  <li>Alarms with email notifications</li>
  <li>Simple and advanced search forms</li>
@@ -88,7 +87,7 @@ suite including webmail support.</p>
 
 <p>Contacts:</p>
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
-<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/turba_1_1-thumb.jpg" align="right" hspace="13" alt="Contacts" border="0"></a>
+<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/1/turba_1_1-thumb.jpg" align="right" hspace="13" alt="Contacts" border="0"></a>
 <ul>
  <li>Distribution lists/email groups, also across address books</li>
  <li>Simple and advanced search forms</li>
@@ -101,7 +100,7 @@ suite including webmail support.</p>
 
 <p>Tasks:</p>
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
-<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/nag_1_1-thumb.jpg" align="right" hspace="13" alt="Tasks" border="0"></a>
+<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/nag/4/list-thumb.jpg" align="right" hspace="13" alt="Tasks" border="0"></a>
 <ul>
  <li>Priorities and due dates</li>
  <li>Searchable descriptions</li>
@@ -115,7 +114,7 @@ suite including webmail support.</p>
 
 <p>Notes:</p>
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
-<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/groupware/mnemo_1_1-thumb.jpg" align="right" hspace="13" alt="Notes" border="0"></a>
+<img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/mnemo/4/list-thumb.jpg" align="right" hspace="13" alt="Notes" border="0"></a>
 <ul>
  <li>Fulltext search</li>
  <li>Character counter</li>

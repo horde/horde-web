@@ -1,9 +1,13 @@
-<h3>IMP 6 Dynamic View (Alpha Version)</h3>
+<h3>IMP 6 Dynamic View</h3>
 <table>
  <tr>
   <td align="center">
    <?php echo HordeWeb_Utils::sslink('imp', '6/imp6_1', true) ?><br />
-   IMP 6.0
+   IMP 6.0 Main View
+  </td>
+  <td align="center">
+   <?php echo HordeWeb_Utils::sslink('imp', '6/imp6_2', true) ?><br />
+   IMP 6.0 Compose Window
   </td>
 </table>
 
