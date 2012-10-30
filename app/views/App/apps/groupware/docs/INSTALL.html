@@ -63,7 +63,7 @@ pear run-scripts horde/horde_role
 </li>
 <li><p class="first">Install Horde Groupware:</p>
 <pre class="literal-block">
-pear install -a -B horde/groupware
+pear install -a -B horde/groupware-beta
 </pre>
 </li>
 <li><p class="first">Run installation script:</p>
@@ -245,6 +245,17 @@ to connect to a server.</p>
 <p>See <a class="reference external" href="http://www.php.net/openssl">http://www.php.net/openssl</a> for information on compiling OpenSSL
 into PHP.</p>
 </li>
+<li><p class="first">fileinfo</p>
+<p>Allows Horde modules to guess the MIME type of files by analyzing
+their contents.</p>
+<p>This module is automatically enabled by default.</p>
+</li>
+<li><p class="first">intl</p>
+<p>The intl module is required to handle display of Internationalized
+Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
+<p>This module can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option when
+compiling PHP.</p>
+</li>
 </ol>
 </blockquote>
 <ol class="arabic" start="4">
@@ -264,28 +275,9 @@ extension=fileinfo.so
 extension=fileinfo.dll
 </pre>
 <p>After that, restart your webserver.</p>
-<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed:</p>
-<ol class="loweralpha">
-<li><p class="first">fileinfo</p>
-<p>Allows Horde Groupware modules to guess the MIME type of files by
-analyzing their contents.</p>
-<p>If not enabled, Horde Groupware will use its own PHP code to perform MIME
-magic lookups. However, this lookup is slower, less accurate, and detects
-fewer MIME types than the PECL extension will.</p>
-<p>To install, enter the following at the command prompt:</p>
-<pre class="literal-block">
-pecl install fileinfo
-</pre>
-<p>As of PHP 5.3.0, this module is automatically enabled by default.</p>
-</li>
-</ol>
 <p>These PECL modules are <strong>RECOMMENDED</strong> to be installed if you need
 advanced functionality:</p>
 <ol class="loweralpha">
-<li><p class="first">idn</p>
-<p>idn is required in order to handle Internationalized Domain Names
-(see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>).</p>
-</li>
 <li><p class="first">imagick</p>
 <p>The imagick module can be used by Horde's image library to provide all
 kind of image manipulations.</p>
@@ -356,18 +348,18 @@ install Horde Groupware with all optional dependencies, but without the binary
 PECL packages that have to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt>
 flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/groupware
+pear install -a -B horde/groupware-beta
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/groupware
+pear install horde/groupware-beta
 </pre>
 <p>If you want to install Horde Groupware even with all binary dependencies, you
 need to remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install
 PHP extensions through PECL that might need further configuration or activation
 in your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/groupware
+pear install -a horde/groupware-beta
 </pre>
 </div>
 <div class="section" id="installing-into-separate-pear">

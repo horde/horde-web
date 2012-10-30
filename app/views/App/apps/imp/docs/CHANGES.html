@@ -3,6 +3,19 @@
 v6.0.0-git
 ----------
 
+[mms] Fix regression in adding an attachment in minimal view.
+
+
+---------
+v6.0.0RC2
+---------
+
+[jan] Update Polish translation (Krzysztof Kozera &lt;krzysztof113@o2.pl>).
+[mms] Fix regression causing large amounts of whitespace padding to be added to
+      compose text in basic view.
+[mms] Fix regression in sending messages in basic/minimal mode if no attachment
+      is added (<a href="http://bugs.horde.org/ticket/11582">Bug #11582</a>).
+[jan] Fix key navigation in message view of basic mode.
 
 
 ---------
@@ -195,8 +208,10 @@ v6.0.0alpha1
 v5.0.24-git
 -----------
 
-[mms] Catch failure to add attachments because PHP's maximum allowed POST size
-      was exceeded.
+[mms] SECURITY: Fix obscure XSS issue if uploading a file in dynamic view from
+      the browser's local filesystem that has a filename that contains HTML.
+[mms] Catch failure to add attachments in dynamic view because PHP's maximum
+      allowed POST size was exceeded.
 [jan] Fix search link from portal if using dynamic view (<a href="http://bugs.horde.org/ticket/11314">Bug #11314</a>).
 [mms] Fix regression in using Virtual Trash (<a href="http://bugs.horde.org/ticket/11478">Bug #11478</a>;
       tonyb@go-concepts.com).
