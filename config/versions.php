@@ -119,8 +119,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '4.0.15',
-        'date' => 'May 29 2012',
+        'ver' => '5.0.0',
+        'date' => 'October 30 2012',
         'pear' => true
     ),
     'groupware' => array(
@@ -137,8 +137,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H4 (5.0.23)',
-        'date' => 'July 21 2012',
+        'ver' => 'H5 (6.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true
     ),
     'dimp' => array(
@@ -153,32 +153,32 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H4 (3.0.15)',
-        'date' => 'July 21 2012',
+        'ver' => 'H5 (4.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H4 (2.0.9)',
-        'date' => 'June 26 2012',
+        'ver' => 'H5 (3.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H4 (3.0.17)',
-        'date' => 'May 14 2012',
+        'ver' => 'H5 (4.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H4 (3.0.8)',
-        'date' => 'May 29 2012',
+        'ver' => 'H5 (4.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H4 (3.0.6)',
-        'date' => 'May 29 2012',
+        'ver' => 'H5 (4.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true
     ),
     'chora' => array(
@@ -243,14 +243,14 @@ $horde_apps_stable = array(
     ),
     'content' => array(
         'name' => 'Content',
-        'ver' => 'H4 (1.0.3)',
-        'date' => 'February 23 2012',
+        'ver' => 'H5 (2.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true,
     ),
     'timeobjects' => array(
         'name' => 'Timeobjects',
-        'ver' => 'H4 (1.0.7)',
-        'date' => 'May 29 2012',
+        'ver' => 'H5 (2.0.0)',
+        'date' => 'October 30 2012',
         'pear' => true,
     ),
 );
