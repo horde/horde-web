@@ -1,20 +1,19 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
                     <div class="slide-horde4 sliderview">
-                        <h2>Horde Groupware 4 has landed.</h2>
-                        <p>The Horde team and community have spent more than
-                        two years on developing the next generation
-                        of <a href="<?php echo $this->urlWriter->urlFor('app',
-                        array('app' => 'groupware')) ?>">Horde Groupware</a>
+                        <h2>Horde Groupware 5 re-freshed.</h2>
+                        <p>For the most recent release of <a href="<?php echo
+                        $this->urlWriter->urlFor('app', array('app' =>
+                        'groupware')) ?>">Horde Groupware</a>
                         and <a href="<?php echo $this->urlWriter->urlFor('app',
                         array('app' => 'webmail')) ?>">Horde Groupware Webmail
-                        Edition</a>. A lot of work has been put into
-                        modernizing the code libraries and the complete
-                        application stack. New interfaces for modern browsers
-                        and smartphones have been added. Existing functionality
-                        has been improved further and new features have been
-                        added to the most flexible web groupware solution
-                        available.</p>
+                        Edition</a>, the Horde team and community have focused
+                        on improving the interface and usability of this widely
+                        deployed collaboration and communication system. A
+                        fresh design on top of the most flexible web groupware
+                        solution available, and further improved support for
+                        mobile devices make this the best Horde Groupware
+                        ever.</p>
                     </div>
 
                     <div class="slide-everywhere sliderview" style="display:none">
@@ -36,9 +35,10 @@
                         communication suite. Users can send, read and organize
                         email messages and manage and share calendars,
                         contacts, tasks and notes with users both inside and
-                        beyond their own network. Horde Groupware Webmail
-                        Edition bundles the separately available applications
-                        IMP, Ingo, Kronolith, Turba, Nag and Mnemo.</p>
+                        beyond their own network. It features different
+                        interfaces for different devices, and synchronization
+                        out of the box. Always get the best out of your desktop
+                        browser, smartphone, tablet or mobile device!</p>
                     </div>
 
                     <div class="slide-oss sliderview" style="display:none">
