@@ -63,7 +63,7 @@ pear run-scripts horde/horde_role
 </li>
 <li><p class="first">Install Horde Groupware:</p>
 <pre class="literal-block">
-pear install -a -B horde/groupware-beta
+pear install -a -B horde/groupware
 </pre>
 </li>
 <li><p class="first">Run installation script:</p>
@@ -348,18 +348,18 @@ install Horde Groupware with all optional dependencies, but without the binary
 PECL packages that have to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt>
 flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/groupware-beta
+pear install -a -B horde/groupware
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/groupware-beta
+pear install horde/groupware
 </pre>
 <p>If you want to install Horde Groupware even with all binary dependencies, you
 need to remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install
 PHP extensions through PECL that might need further configuration or activation
 in your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/groupware-beta
+pear install -a horde/groupware
 </pre>
 </div>
 <div class="section" id="installing-into-separate-pear">
