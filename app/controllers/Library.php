@@ -21,12 +21,14 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
     {
         switch ($this->_matchDict->action) {
         case 'index':
+            $this->_addSyntaxhighlighter();
             $this->_index($response);
             break;
         case 'library':
             $this->_library($response);
             break;
         case 'download':
+            $this->_addSyntaxhighlighter();
             $this->_download($response);
             break;
         case 'docs':
