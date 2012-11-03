@@ -3,6 +3,11 @@
 v6.0.1-git
 ----------
 
+[mms] Correctly remove unseen information from folder tree in dynamic mailbox
+      view when mailbox is marked as not polled for new mail.
+[mms] Fix expanding folder list in dynamic view when opening a mailbox and
+      folder expansion is not saved in the prefs (<a href="http://bugs.horde.org/ticket/11609">Bug #11609</a>).
+[mms] Fix displaying HTML signature preference on identities preference page.
 [mms] Fix dynamic view loading in IE8 (<a href="http://bugs.horde.org/ticket/11614">Bug #11614</a>).
 [mms] Optimize permission checking when creating a mailbox if no limit exists
       for a user.
@@ -227,6 +232,8 @@ v6.0.0alpha1
 v5.0.24-git
 -----------
 
+[mms] Don't attempt to use non-IMAP mailbox names in IMAP server commands (<a href="http://bugs.horde.org/ticket/11623">Bug
+      #11623</a>).
 [mms] SECURITY: Fix obscure XSS issue if uploading a file in dynamic view from
       the browser's local filesystem that has a filename that contains HTML.
 [mms] Catch failure to add attachments in dynamic view because PHP's maximum
