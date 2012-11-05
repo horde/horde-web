@@ -23,16 +23,19 @@ $lists = array(
                                           with our applications in an
                                           international environment, this is
                                           the right place.',
+                            'marc'    => 'horde-i18n',
                             'gmane'   => 'internationalization',
                             'traffic' => 'low'),
      ),
     'Application Lists' => array(
-        'ansel'    => array('gmane'   => 'ansel',
+        'ansel'    => array('marc'    => 'ansel',
+                            'gmane'   => 'ansel',
                             'traffic' => 'low'),
         'chora'    => array('marc'    => 'chora',
                             'gmane'   => 'chora',
                             'traffic' => 'low'),
-        'gollem'   => array('gmane'   => 'gollem',
+        'gollem'   => array('marc'    => 'gollem',
+                            'gmane'   => 'gollem',
                             'traffic' => 'low'),
         'imp'      => array('desc' => 'List for IMP, the Horde email client, as well as the mobile version MIMP and the AJAX version DIMP.',
                             'marc'    => 'imp',
@@ -45,9 +48,11 @@ $lists = array(
         'kronolith' => array('marc'    => 'kronolith',
                              'gmane'   => 'kronolith',
                              'traffic' => 'low'),
-        'nag'      => array('gmane'   => 'nag',
+        'nag'      => array('marc'    => 'nag',
+                            'gmane'   => 'nag',
                             'traffic' => 'low'),
-        'sork'     => array('gmane'   => 'sork',
+        'sork'     => array('marc'    => 'sork',
+                            'gmane'   => 'sork',
                             'traffic' => 'low'),
         'turba'    => array('marc'    => 'turba',
                             'gmane'   => 'turba',
@@ -72,10 +77,12 @@ $lists = array(
                                           email every time someone commits a
                                           change to any of the Horde Git
                                           repositories.',
+                            'marc'    => 'horde-commits',
                             'traffic' => 'high'),
         'sync'     => array('desc'    => 'For general discussion and
                                           development of Horde syncing
                                           solutions, mainly the SyncML effort.',
+                            'marc'    => 'horde-sync',
                             'gmane'   => 'sync',
                             'traffic' => 'low'),
         'bugs'     => array('desc'    => 'An archive of all submissions/changes
