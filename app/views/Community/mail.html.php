@@ -79,7 +79,7 @@ for some further information.</p>
       <?php echo $list_val['traffic'] ?>
     </td><td>
       <?php if (!empty($list_val['marc'])): ?>
-        [<a href="http://marc.theaimsgroup.com/?l=<?php echo $list_val['marc'] ?>&amp;r=1&amp;w=2">MARC</a>]
+        [<a href="http://marc.info/?l=<?php echo $list_val['marc'] ?>&amp;r=1&amp;w=2">MARC</a>]
       <?php endif; ?>
     </td><td>
       <?php if (!empty($list_val['gmane'])): ?>
