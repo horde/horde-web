@@ -576,22 +576,37 @@ find config/ -type f -exec chmod 0440 '{}' \;
 </pre>
 </li>
 <li><p class="first">User Passwords</p>
-<p>There are two channels by which, unless steps are taken to avoid it,
-Horde Groupware Webmail Edition encourages users to pass their IMAP and
-POP3 passwords around the Internet unencrypted.</p>
-<p>The first channel is between their browser and the Web server. We
-strongly recommend using an SSL-capable Web server to give users the
-option of encrypting communications between their browser and the Web
-server on which Horde Groupware Webmail Edition is running; some sites
-may wish to disable non-SSL access entirely.</p>
+<p>Unless steps are taken to avoid it, there are two channels by which Horde
+Groupware Webmail Edition can cause users to pass their IMAP/POP3
+passwords across the network unencrypted.</p>
+<p>The first channel is between the browser and the Web server.  We strongly
+recommend using an SSL-capable Web server to give users the option of
+encrypting communications between their browser and the Web server on
+which Horde Groupware Webmail Edition is running. Some sites may wish to
+disable non-SSL access entirely.</p>
 <p>The second channel is between the Web server and their IMAP or POP3
-server. The simplest way to avoid this is to have the mail server
+server.  The simplest way to avoid this is to have the mail server
 running on the same system as the Web server, and configuring Horde
 Groupware Webmail Edition to connect to the IMAP or POP3 server on
-<tt class="docutils literal">localhost</tt> instead of on the Internet hostname. This is the default
-setup. In cases where that is not possible, we recommend using IMAP-SSL
-or POP3-SSL to ensure that users' passwords remain safe after they have
-entrusted them to Horde Groupware Webmail Edition.</p>
+<tt class="docutils literal">localhost</tt> instead of on the Internet hostname. In cases where that is
+not possible, it is highly recommended that the mail server be located on
+a private, secure network. Alternatively, the mail server can be accessed
+via TLS to ensure that users' passwords remain safe after they have
+entrusted them to Horde Groupware Webmail Edition (this is the default
+configuration).</p>
+<p>Other security steps you can take to increase security include:</p>
+<ul class="simple">
+<li>Use session cookies instead of URL based sessions.</li>
+<li>Set your php <tt class="docutils literal">session.entropy_length</tt> to a larger value (e.g. 16) and
+<tt class="docutils literal">session.entropy_file</tt> to a random source (e.g. <tt class="docutils literal">/dev/urandom</tt>)</li>
+<li>If your database, mail server, and web server are on the same host
+machine, then:<ul>
+<li>Use unix socket database access and disable TCP database access.</li>
+<li>Use <tt class="docutils literal">localhost</tt> for all TCP/IP connections to avoid the network, or
+run all services on a local, private network.</li>
+</ul>
+</li>
+</ul>
 </li>
 </ol>
 <ol class="loweralpha" start="2">
