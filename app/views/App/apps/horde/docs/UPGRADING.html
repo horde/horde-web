@@ -133,7 +133,11 @@ hook).</p>
 </div>
 <div class="section" id="preferences-prefs-php">
 <h2><a class="toc-backref" href="#id12">3.3&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
-<p>The 'sending_charset' preference now defaults to 'UTF-8'.</p>
+<p>The 'sending_charset' preference now defaults to 'UTF-8'. Any previous saved
+value will be deleted when upgrading to 5.0 - if you want to send in a
+charset other than UTF-8 (NOT RECOMMENDED), you will need to explicitly set
+this value again (in either <tt class="docutils literal">config/prefs.local.php</tt> or you preferences
+storage backend).</p>
 <p>The 'menu_view' and 'show_sidebar' preferences have been removed.</p>
 </div>
 <div class="section" id="activesync-eas-integration">
