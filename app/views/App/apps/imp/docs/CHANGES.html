@@ -1,8 +1,21 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v6.0.1-git
+v6.0.2-git
 ----------
 
+[mms] Save sent-mail when composing in the smartmobile view (<a href="http://bugs.horde.org/ticket/11670">Bug #11670</a>).
+[mms] Don't try to save sent-mail to a non-existent sent-mail mailbox.
+[mms] Fix displaying encrypted message in dynamic preview when correct
+      passphrase is entered (<a href="http://bugs.horde.org/ticket/11661">Bug #11661</a>).
+[mms] Purge IMAP cache data when upgrading from IMP 5.
+
+
+------
+v6.0.1
+------
+
+[mms] Fix shift-clicking in dynamic mailbox view when navigating to other
+      mailboxes (<a href="http://bugs.horde.org/ticket/11520">Bug #11520</a>).
 [mms] Disallow pasting non-text elements into the HTML editor (<a href="http://bugs.horde.org/ticket/11650">Bug #11650</a>).
 [jan] Update Slovak translation (Jozef Sudolský &lt;jozef.sudolsky@elbia.sk>).
 [mms] If persistent IMAP caching is disabled, use an in-memory cache for the
@@ -239,10 +252,10 @@ v6.0.0alpha1
 v5.0.24-git
 -----------
 
-[mms] Don't attempt to use non-IMAP mailbox names in IMAP server commands (<a href="http://bugs.horde.org/ticket/11623">Bug
-      #11623</a>).
 [mms] SECURITY: Fix obscure XSS issue if uploading a file in dynamic view from
       the browser's local filesystem that has a filename that contains HTML.
+[mms] Don't attempt to use non-IMAP mailbox names in IMAP server commands (<a href="http://bugs.horde.org/ticket/11623">Bug
+      #11623</a>).
 [mms] Catch failure to add attachments in dynamic view because PHP's maximum
       allowed POST size was exceeded.
 [jan] Fix search link from portal if using dynamic view (<a href="http://bugs.horde.org/ticket/11314">Bug #11314</a>).
