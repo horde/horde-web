@@ -640,7 +640,7 @@ and you must have the PHP CLI installed (a CGI binary is not supported -
 # Horde Alarms
 */5 * * * * /usr/bin/horde-alarms
 </pre>
-<p>If not installing Horde through PEAR of if PEAR's <tt class="docutils literal">bin_dir</tt> configuration
+<p>If not installing Horde through PEAR or if PEAR's <tt class="docutils literal">bin_dir</tt> configuration
 doesn't point to <tt class="docutils literal">/usr/bin/</tt>, replace <tt class="docutils literal"><span class="pre">/usr/bin/horde-alarms</span></tt> with the
 path to the <tt class="docutils literal"><span class="pre">horde-alarms</span></tt> script in your Horde installation.</p>
 </li>
@@ -739,9 +739,10 @@ directory (see the <tt class="docutils literal">General</tt> tab in the Horde co
 reasons, some of these files may not be removed when the user's session
 ends. To reclaim this disk space, it may be necessary to periodically delete
 these old temporary files.</p>
-<p>An example cron-based solution can be found at <tt class="docutils literal"><span class="pre">scripts/temp-cleanup.cron</span></tt>.
-Another possible solution is to use Red Hat's <tt class="docutils literal">tmpwatch</tt> utility or anything
-similar to remove old files (see <a class="reference external" href="http://www.redhat.com/">http://www.redhat.com/</a>).</p>
+<p>An example cron-based solution can be found at
+<tt class="docutils literal"><span class="pre">horde/scripts/temp-cleanup.cron</span></tt> in PEAR's <tt class="docutils literal">data_dir</tt> directory.  Another
+possible solution is to use utilities like <tt class="docutils literal">tmpwatch</tt>, <tt class="docutils literal">tmpreaper</tt> or
+anything similar to remove old files.</p>
 <p>Stale sessions are automatically pruned by PHP according to the
 <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-probability">session.gc_probability</a>, <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-divisor">session.gc_divisor</a>, and
 <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime">session.gc_maxlifetime</a> settings located in <tt class="docutils literal">php.ini</tt>. However, the
