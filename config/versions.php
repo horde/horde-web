@@ -119,8 +119,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.0.1',
-        'date' => 'November 7 2012',
+        'ver' => '5.0.2',
+        'date' => 'November 14 2012',
         'pear' => true
     ),
     'groupware' => array(
@@ -312,8 +312,8 @@ $horde_apps_dev = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H4 (2.0-RC2)',
-        'date' => 'October 18 2011',
+        'ver' => 'H5 (3.0.0beta1)',
+        'date' => 'November 14 2012',
         'pear' => true,
     ),
     'passwd' => array(
@@ -356,6 +356,12 @@ $horde_apps_dev = array(
         'name' => 'Ansel',
         'ver' => 'H4 (2.0-RC2)',
         'date' => 'Oktober 28 2011',
+        'pear' => true,
+    ),
+    'trean' => array(
+        'name' => 'Trean',
+        'ver' => 'H5 (1.0.0beta1)',
+        'date' => 'November 14 2012',
         'pear' => true,
     ),
 );
