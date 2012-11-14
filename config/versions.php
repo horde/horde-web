@@ -119,26 +119,26 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.0.0',
-        'date' => 'October 30 2012',
+        'ver' => '5.0.1',
+        'date' => 'November 7 2012',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.0.0',
-        'date' => 'October 30 2012',
+        'ver' => '5.0.1',
+        'date' => 'November 7 2012',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.0.0',
-        'date' => 'October 30 2012',
+        'ver' => '5.0.1',
+        'date' => 'November 7 2012',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (6.0.1)',
+        'date' => 'November 7 2012',
         'pear' => true
     ),
     'dimp' => array(
@@ -159,14 +159,14 @@ $horde_apps_stable = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H5 (3.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (3.0.1)',
+        'date' => 'November 7 2012',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (4.0.1)',
+        'date' => 'November 7 2012',
         'pear' => true
     ),
     'nag' => array(
