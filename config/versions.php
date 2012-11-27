@@ -125,20 +125,20 @@ $horde_apps_stable = array(
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.0.1',
-        'date' => 'November 7 2012',
+        'ver' => '5.0.2',
+        'date' => 'November 27 2012',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.0.1',
-        'date' => 'November 7 2012',
+        'ver' => '5.0.2',
+        'date' => 'November 27 2012',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.0.1)',
-        'date' => 'November 7 2012',
+        'ver' => 'H5 (6.0.2)',
+        'date' => 'November 27 2012',
         'pear' => true
     ),
     'dimp' => array(
@@ -153,8 +153,8 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H5 (4.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (4.0.1)',
+        'date' => 'November 27 2012',
         'pear' => true
     ),
     'ingo' => array(
@@ -165,20 +165,20 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.0.1)',
-        'date' => 'November 7 2012',
+        'ver' => 'H5 (4.0.2)',
+        'date' => 'November 27 2012',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H5 (4.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (4.0.1)',
+        'date' => 'November 27 2012',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H5 (4.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (4.0.1)',
+        'date' => 'November 27 2012',
         'pear' => true
     ),
     'chora' => array(
@@ -312,8 +312,8 @@ $horde_apps_dev = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H5 (3.0.0beta1)',
-        'date' => 'November 14 2012',
+        'ver' => 'H5 (3.0.0RC1)',
+        'date' => 'November 27 2012',
         'pear' => true,
     ),
     'passwd' => array(
@@ -360,8 +360,8 @@ $horde_apps_dev = array(
     ),
     'trean' => array(
         'name' => 'Trean',
-        'ver' => 'H5 (1.0.0beta1)',
-        'date' => 'November 14 2012',
+        'ver' => 'H5 (1.0.0beta2)',
+        'date' => 'November 27 2012',
         'pear' => true,
     ),
 );
