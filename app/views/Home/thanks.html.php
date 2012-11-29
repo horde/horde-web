@@ -19,6 +19,9 @@
           <a style="padding:20px;text-decoration:none" href="http://www.pardus.de/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_pardus.png" height="31"/>
           </a>
+          <a style="padding:20px;text-decoration:none" href="http://www.canadianwebhosting.com/" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_cwh.png" height="40"/>
+          </a>
         </p>
         <br/>
 
