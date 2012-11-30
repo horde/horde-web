@@ -16,12 +16,11 @@
 </p></div>
 
 <p>
- It can be extended with any of the released
- <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">Horde
- applications</a> or the
- <a href="<?php echo $this->urlWriter->urlFor('development', array('action' => 'modules')) ?>">
- Horde modules</a> that are still in development, like a bookmark manager, or a
- file manager</a>.
+ It can be extended with any of the released <a href="<?php echo
+ $this->urlWriter->urlFor('apps') ?>">Horde applications</a> or
+ the <a href="<?php echo $this->urlWriter->urlFor('development', array('action'
+ => 'modules')) ?>">Horde modules</a> that are still in development, like a
+ bookmark manager, or a file manager</a>.
 </p>
 
 <!--

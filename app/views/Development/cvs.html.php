@@ -25,11 +25,15 @@
           href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">here</a>, and
           there are many HOWTOs available on the web.</p>
           </div>
+
           <h3><span>&nbsp;</span>The CVS Repository</h3>
-          <p>All of the code in our repository is split into a set of modules.
-          However, sometimes there are multiple branches available of a module.
-          A CVS branch is a mechanism for keeping multiple versions of a module;
-          for instance, a stable branch and a development branch.</p>
+
+          <p>All of the code in our repository is split into a set
+          of <a href="<?php echo $this->urlWriter->urlFor('development',
+          array('action' => 'cvsmodules')) ?>">modules</a>.  However, sometimes
+          there are multiple branches available of a module.  A CVS branch is a
+          mechanism for keeping multiple versions of a module; for instance, a
+          stable branch and a development branch.</p>
 
           <p>Our branches and release engineering can seem a little convoluted
           at first, but follows some pretty simple rules. When you check

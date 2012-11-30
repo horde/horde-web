@@ -32,10 +32,12 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
         case 'documentation':
         case 'licenses':
         case 'modules':
+        case 'cvsmodules':
         case 'versions':
             $view->page_title = ucfirst($this->_matchDict->action) . ' - The Horde Project';
             $template = $this->_matchDict->action;
-            if ($this->_matchDict->action == 'modules') {
+            if ($this->_matchDict->action == 'modules' ||
+                $this->_matchDict->action == 'cvsmodules') {
                 Horde::addScriptFile('stripe.js');
             }
             break;
@@ -59,12 +61,21 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
             array($GLOBALS['fs_base'] . '/app/views/Development'));
     }
 
-    public function cvs_and_ver($module)
+    public function git_and_ver($module)
     {
         $horde_apps_stable = HordeWeb_Utils::getStableApps();
         $horde_apps_dev = HordeWeb_Utils::getDevApps();
-        return '<td><a href="http://cvs.horde.org/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
+        return '<td><a href="http://git.horde.org/horde-git/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
             . '</td><td>' . (isset($horde_apps_stable[$module]) ? htmlspecialchars($horde_apps_stable[$module]['ver']) : (isset($horde_apps_dev[$module]) ? htmlspecialchars($horde_apps_dev[$module]['ver']) : '&nbsp;'))
+            . '</td>';
+    }
+
+    public function cvs_and_ver($module)
+    {
+        $horde_apps_stable = HordeWeb_Utils::getH3Apps();
+        $horde_apps_dev = HordeWeb_Utils::getDevApps();
+        return '<td><a href="http://git.horde.org/horde/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
+            . '</td><td>' . (isset($horde_apps_stable[$module]) ? htmlspecialchars($horde_apps_stable[$module]['ver']) : (isset($horde_apps_dev[$module]) && substr($horde_apps_dev[$module], 0, 2) == 'H3' ? htmlspecialchars($horde_apps_dev[$module]['ver']) : '&nbsp;'))
             . '</td>';
     }
 }
