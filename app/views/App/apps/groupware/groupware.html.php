@@ -1,57 +1,64 @@
-
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware', 'action' => 'screenshots'))?>">
  <img src="<?php echo $GLOBALS['host_base'] ?>/images/screenshots/groupware/5/portal-thumb.jpg" align="right" hspace="13" vspace="13" alt="Portal Screen" border="0" />
- </a>
+</a>
 <div class="sectionintro"><p>
- Horde Groupware is a free, enterprise ready, browser based collaboration
- suite. Users can manage and share calendars, contacts, tasks and notes with
- the standards compliant <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">
- components</a> from the Horde Project. Horde Groupware bundles the separately
- available applications
+ Horde Groupware is a free, enterprise ready,
+ browser based collaboration suite. Users can manage and share calendars,
+ contacts, tasks and notes with the standards compliant <a href="<?php echo
+ $this->urlWriter->urlFor('apps') ?>"> components</a> from the Horde
+ Project. Horde Groupware bundles the separately available applications
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'kronolith')) ?>">
- Kronolith</a>, <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'turba')) ?>">
- Turba</a>, <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'nag')) ?>">
- Nag</a> and
+ Kronolith</a>, <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+ => 'turba')) ?>"> Turba</a>, <a href="<?php echo
+ $this->urlWriter->urlFor('app', array('app' => 'nag')) ?>"> Nag</a> and
  <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'mnemo')) ?>">
  Mnemo</a>.
-</p>
-</div>
+</p></div>
+
 <p>
  It can be extended with any of the released
  <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">Horde
  applications</a> or the
  <a href="<?php echo $this->urlWriter->urlFor('development', array('action' => 'modules')) ?>">
- Horde modules</a> that are still in development, like a bookmark manager,
- or a forum</a>.
+ Horde modules</a> that are still in development, like a bookmark manager, or a
+ forum</a>.
 </p>
 
-<p>A flyer for Horde Groupware summarizes the features and requirements is
-available as a <a href="<?php echo $GLOBALS['host_base']?>/papers/groupware.pdf">
-PDF file for download</a>
-(<a href="<?php echo $GLOBALS['host_base'] ?>/papers/groupware-cmyk.pdf">
-CMYK version</a>).</p>
+<p>
+ A flyer for Horde Groupware summarizes the features and requirements is
+ available as a <a href="<?php echo
+ $GLOBALS['host_base']?>/papers/groupware.pdf"> PDF file for download</a>
+ (<a href="<?php echo $GLOBALS['host_base'] ?>/papers/groupware-cmyk.pdf"> CMYK
+ version</a>).
+</p>
 
-<p>Please see the
-<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail'))?>">
-Horde Groupware Webmail Edition</a> page if you are looking for a groupware
-suite including webmail support.</p>
+<p>
+ Please see the
+ <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail'))?>">
+ Horde Groupware Webmail Edition</a> page if you are looking for a groupware
+ suite including webmail support.
+</p>
 
-<p>Features of Horde Groupware include but are not limited to:</p>
+<p>
+ Features of Horde Groupware include but are not limited to:
+</p>
 
 <ul>
  <li>Public and shared resources (calendars, address books, tasklists and
  notepads)</li>
  <li>Unlimited resources per user</li>
- <li>Translated into <a href="<?php echo $this->urlWriter->urlFor('localization')?>">
- 41 languages</a> including right-to-left scripts and unicode support</li>
+ <li>Translated into <a href="<?php echo
+ $this->urlWriter->urlFor('localization')?>"> 41 languages</a> including
+ right-to-left scripts and unicode support</li>
  <li>Global categories (tags)</li>
  <li>Customizable portal screen including applets for weather, quotes,
  etc.</li>
  <li>25 different interface themes</li>
  <li>Online help system</li>
  <li>Import and export of groupware data from other applications</li>
- <li><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'synch')) ?>">
- Synchronization</a> with PDAs, mobile phones, groupware clients</li>
+ <li><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
+ 'synch')) ?>"> Synchronization</a> with PDAs, mobile phones, groupware
+ clients</li>
  <li>Integrated user management, group support and permissions system</li>
  <li>User preferences with global default values</li>
  <li>Strong integration, e.g. address book lookups in meeting planning, task
@@ -70,7 +77,14 @@ suite including webmail support.</p>
  <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/week-thumb.jpg" align="right" hspace="13" alt="Calendar" border="0">
 </a>
 <ul>
- <li><a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/day.png">Day</a>, <a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/week.png">week</a>, work week, <a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/month.png">month</a> and <a href="<?php echo $GLOBALS['host_base']?>/images/screenshots/kronolith/4/year.png">year</a> views</li>
+ <li><a href="<?php echo
+ $GLOBALS['host_base']?>/images/screenshots/kronolith/4/day.png">Day</a>, <a href="<?php echo
+ $GLOBALS['host_base']?>/images/screenshots/kronolith/4/week.png">week</a>,
+ work week, <a href="<?php echo
+ $GLOBALS['host_base']?>/images/screenshots/kronolith/4/month.png">month</a>
+ and <a href="<?php echo
+ $GLOBALS['host_base']?>/images/screenshots/kronolith/4/year.png">year</a>
+ views</li>
  <li>Recurring and all-day events</li>
  <li>Alarms with email notifications</li>
  <li>Simple and advanced search forms</li>
