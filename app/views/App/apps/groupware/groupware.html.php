@@ -21,9 +21,10 @@
  applications</a> or the
  <a href="<?php echo $this->urlWriter->urlFor('development', array('action' => 'modules')) ?>">
  Horde modules</a> that are still in development, like a bookmark manager, or a
- forum</a>.
+ file manager</a>.
 </p>
 
+<!--
 <p>
  A flyer for Horde Groupware summarizes the features and requirements is
  available as a <a href="<?php echo
@@ -31,6 +32,7 @@
  (<a href="<?php echo $GLOBALS['host_base'] ?>/papers/groupware-cmyk.pdf"> CMYK
  version</a>).
 </p>
+-->
 
 <p>
  Please see the
@@ -44,21 +46,19 @@
 </p>
 
 <ul>
+ <li>Dynamic, basic and mobile interfaces</li>
  <li>Public and shared resources (calendars, address books, tasklists and
  notepads)</li>
  <li>Unlimited resources per user</li>
  <li>Translated into <a href="<?php echo
  $this->urlWriter->urlFor('localization')?>"> 41 languages</a> including
- right-to-left scripts and unicode support</li>
- <li>Global categories (tags)</li>
+ right-to-left scripts and full unicode support</li>
+ <li>Global tagging sytem</li>
  <li>Customizable portal screen including applets for weather, quotes,
  etc.</li>
- <li>25 different interface themes</li>
  <li>Online help system</li>
  <li>Import and export of groupware data from other applications</li>
- <li><a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
- 'synch')) ?>"> Synchronization</a> with PDAs, mobile phones, groupware
- clients</li>
+ <li>Synchronization with PDAs, mobile phones, groupware clients</li>
  <li>Integrated user management, group support and permissions system</li>
  <li>User preferences with global default values</li>
  <li>Strong integration, e.g. address book lookups in meeting planning, task
@@ -68,8 +68,7 @@
  <li>Abstract database support, e.g. for <a
  href="http://www.mysql.com">MySQL</a>, <a
  href="http://www.postgresql.org">PostgreSQL</a>, <a
- href="http://www.oracle.com/database/">Oracle</a>, <a
- href="http://www.microsoft.com/sql/">Microsoft SQL-Server</a></li>
+ href="http://www.sqlite.org/">SQLite</a></li>
 </ul>
 
 <p>Calendar:</p>
@@ -93,8 +92,8 @@
  <li>Free/busy information exchange with other calendar applications</li>
  <li>Subscription of remote calendars</li>
  <li>Integration into external clients like <a
- href="http://www.apple.com/macosx/features/ical/">Apple iCal</a>, <a
- href="http://www.mozilla.org/projects/calendar/">Mozilla Sunbird</a>, <a
+ href="http://www.apple.com/osx/apps/#calendar">Apple Calendar</a>, <a
+ href="http://www.mozilla.org/projects/calendar/">Mozilla Lightning/Sunbird</a>, <a
  href="http://office.microsoft.com/outlook/">Microsoft Outlook</a></li>
  <li>iCalendar and iTip support</li>
 </ul>
@@ -117,6 +116,7 @@
 <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/nag/4/list-thumb.jpg" align="right" hspace="13" alt="Tasks" border="0"></a>
 <ul>
  <li>Priorities and due dates</li>
+ <li>Sub-tasks</li>
  <li>Searchable descriptions</li>
  <li>Email notification about changed tasks</li>
  <li>Integration into external clients like <a
@@ -132,4 +132,5 @@
 <ul>
  <li>Fulltext search</li>
  <li>Character counter</li>
+ <li>Encrypted notes</li>
 </ul>

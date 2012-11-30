@@ -23,11 +23,11 @@
 <p>
  It can be extended with any of the released <a href="<?php echo
  $this->urlWriter->urlFor('apps') ?>">Horde applications</a> or the
- applications that are still in <a href="<?php echo
- $this->urlWriter->urlFor('development') ?>">development</a>, like a bookmark
- manager or a forum.
+ applications that are still in development, like a bookmark manager or a file
+ manager.
 </p>
 
+<!--
 <p>
  A flyer for Horde Groupware Webmail Edition which summarizes the features and
  requirements is available as a <a href="<?php echo
@@ -35,6 +35,7 @@
  (<a href="<?php echo $GLOBALS['host_base']?>/papers/groupware-cmyk.pdf">CMYK
  version</a>).
 </p>
+-->
 
 <p>
  Please see the <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
@@ -53,6 +54,7 @@
 
 <ul>
  <li>IMAP and POP3 webmail client</li>
+ <li>3-pane and 3-column-layouts</li>
  <li>Message filtering</li>
  <li>Message searching</li>
  <li>HTML message composition with WYSIWIG editor</li>
@@ -63,11 +65,7 @@
  <li>Keyboard navigation</li>
  <li>Full character set support for folders names and email messages</li>
  <li>Conversation view of all messages in a thread</li>
- <li>Folder tree in left menu pane</li>
- <li>Message previews in mailbox view</li>
  <li>Downloading of message attachments in a ZIP file</li>
- <li style="text-decoration:line-through">Fetching of messages from external
- email accounts</li>
  <li>Flexible, individual alias addresses</li>
  <li>IMAP folder subscriptions</li>
  <li>Shared IMAP folders</li>
