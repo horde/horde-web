@@ -8,38 +8,45 @@
  manage and share calendars, contacts, tasks and notes with the standards
  compliant <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">
  components</a> from the Horde Project. Horde Groupware Webmail Edition bundles
- the separately available applications
- <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'imp')) ?>">IMP</a>,
- <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'ingo')) ?>">Ingo</a>,
- <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'kronolith')) ?>">Kronolith</a>,
- <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'turba')) ?>">Turba</a>,
- <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'nag')) ?>">Nag</a>
- and <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'mnemo')) ?>">Mnemo</a>.
+ the separately available applications <a href="<?php echo
+ $this->urlWriter->urlFor('app', array('app' => 'imp'))
+ ?>">IMP</a>, <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+ => 'ingo')) ?>">Ingo</a>, <a href="<?php echo $this->urlWriter->urlFor('app',
+ array('app' => 'kronolith')) ?>">Kronolith</a>, <a href="<?php echo
+ $this->urlWriter->urlFor('app', array('app' => 'turba'))
+ ?>">Turba</a>, <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+ => 'nag')) ?>">Nag</a> and <a href="<?php echo $this->urlWriter->urlFor('app',
+ array('app' => 'mnemo')) ?>">Mnemo</a>.
 </p>
 </div>
 <div class="section">
 <p>
- It can be extended with any of the released
- <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">Horde applications</a>
- or the applications that are still in
- <a href="<?php echo $this->urlWriter->urlFor('development') ?>">development</a>,
- like a bookmark manager or a forum.
+ It can be extended with any of the released <a href="<?php echo
+ $this->urlWriter->urlFor('apps') ?>">Horde applications</a> or the
+ applications that are still in <a href="<?php echo
+ $this->urlWriter->urlFor('development') ?>">development</a>, like a bookmark
+ manager or a forum.
 </p>
 
-<p>A flyer for Horde Groupware Webmail Edition which summarizes the features
-and requirements is available as a
-<a href="<?php echo $GLOBALS['host_base']?>/papers/groupware.pdf">PDF file
-for download</a>
-(<a href="<?php echo $GLOBALS['host_base']?>/papers/groupware-cmyk.pdf">CMYK
-version</a>).</p>
+<p>
+ A flyer for Horde Groupware Webmail Edition which summarizes the features and
+ requirements is available as a <a href="<?php echo
+ $GLOBALS['host_base']?>/papers/groupware.pdf">PDF file for download</a>
+ (<a href="<?php echo $GLOBALS['host_base']?>/papers/groupware-cmyk.pdf">CMYK
+ version</a>).
+</p>
 
-<p>Please see the
-<a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'groupware')) ?>">
-Horde Groupware</a> page for <strong>general features</strong> of the the Horde
-Groupware Webmail Edition and the <strong>calendar, contacts, tasks, and notes
-</strong> components.</p>
+<p>
+ Please see the <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
+ => 'groupware')) ?>"> Horde Groupware</a> page for <strong>general
+ features</strong> of the the Horde Groupware Webmail Edition and
+ the <strong>calendar, contacts, tasks, and notes</strong> components.
+</p>
 
-<p>Additional features of Horde Groupware Webmail Edition are:</p>
+<p>
+ Additional features of Horde Groupware Webmail Edition are:
+</p>
+
 <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'webmail', 'action' => 'screenshots')) ?>">
 <img src="<?php echo $GLOBALS['host_base']?>/images/screenshots/imp/6/imp6_1-thumb.jpg" align="right" hspace="13" alt="Webmail" border="0">
 </a>
@@ -59,7 +66,8 @@ Groupware Webmail Edition and the <strong>calendar, contacts, tasks, and notes
  <li>Folder tree in left menu pane</li>
  <li>Message previews in mailbox view</li>
  <li>Downloading of message attachments in a ZIP file</li>
- <li style="text-decoration:line-through">Fetching of messages from external email accounts</li>
+ <li style="text-decoration:line-through">Fetching of messages from external
+ email accounts</li>
  <li>Flexible, individual alias addresses</li>
  <li>IMAP folder subscriptions</li>
  <li>Shared IMAP folders</li>
