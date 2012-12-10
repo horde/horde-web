@@ -342,8 +342,8 @@ $horde_apps_dev = array(
     ),
     'sesha' => array(
         'name' => 'Sesha',
-        'ver' => 'H5 (1.0.0beta1)',
-        'date' => 'August 08 2012',
+        'ver' => 'H5 (1.0.0RC2)',
+        'date' => 'December 10 2012',
         'pear' => true,
     ),
     'klutz' => array(
