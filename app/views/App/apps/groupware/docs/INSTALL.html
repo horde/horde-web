@@ -385,14 +385,15 @@ the PEAR installation you just created, e.g.:</p>
 /var/www/groupware/pear/pear -c /var/www/groupware/pear.conf \
     channel-discover pear.horde.org
 </pre>
-<p>Finally update the .htaccess file in <tt class="docutils literal">/var/www/groupware/</tt> or configure your
-web server in some other way to point PHP's <tt class="docutils literal">include_path</tt> setting to the
-PEAR installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment variable to the
-web root:</p>
+<p>Finally configure your web server in some way to point PHP's <tt class="docutils literal">include_path</tt>
+setting to the PEAR installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment
+variable to the web root:</p>
 <pre class="literal-block">
 php_value include_path /var/www/groupware/pear/php
 SetEnv PHP_PEAR_SYSCONF_DIR /var/www/groupware
 </pre>
+<p>It is recommended to not use the .htaccess file in <tt class="docutils literal">/var/www/groupware/</tt> to
+set these values because it will be overwritten with every further update.</p>
 </div>
 <div class="section" id="finishing-installation">
 <h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Finishing installation</a></h2>
@@ -636,13 +637,13 @@ volunteers.  For information on reasonable support expectations, please read</p>
 <div class="system-messages section">
 <h1>Docutils System Messages</h1>
 <div class="system-message" id="id11">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 604); <em><a href="#id12">backlink</a></em></p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 606); <em><a href="#id12">backlink</a></em></p>
 Unknown target name: &quot;session.gc_probability&quot;.</div>
 <div class="system-message" id="id13">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 604); <em><a href="#id14">backlink</a></em></p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 606); <em><a href="#id14">backlink</a></em></p>
 Unknown target name: &quot;session.gc_divisor&quot;.</div>
 <div class="system-message" id="id15">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 604); <em><a href="#id16">backlink</a></em></p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 606); <em><a href="#id16">backlink</a></em></p>
 Unknown target name: &quot;session.gc_maxlifetime&quot;.</div>
 </div>
 </div>
