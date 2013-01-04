@@ -756,6 +756,10 @@ $unique = array_keys(array_flip($foo));
 </pre>
 <p>Even better, if possible rework the algorithm to store the unique data in the
 key and then call array_keys($foo) to return the unique list.</p>
+<p>Avoid array_push(), the [] operator is much faster:</p>
+<pre class="literal-block">
+$array[] = 'element';
+</pre>
 </div>
 <div class="section" id="user-defined-functions">
 <h2><a class="toc-backref" href="#id41">29.5&nbsp;&nbsp;&nbsp;User defined functions</a></h2>
