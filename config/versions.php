@@ -119,26 +119,26 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.0.2',
-        'date' => 'November 14 2012',
+        'ver' => '5.0.3',
+        'date' => 'January 10 2013',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.0.2',
-        'date' => 'November 27 2012',
+        'ver' => '5.0.3',
+        'date' => 'January 10 2013',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.0.2',
-        'date' => 'November 27 2012',
+        'ver' => '5.0.3',
+        'date' => 'January 10 2013',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.0.2)',
-        'date' => 'November 27 2012',
+        'ver' => 'H5 (6.0.3)',
+        'date' => 'January 10 2013',
         'pear' => true
     ),
     'dimp' => array(
@@ -153,32 +153,32 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H5 (4.0.1)',
-        'date' => 'November 27 2012',
+        'ver' => 'H5 (4.0.2)',
+        'date' => 'January 10 2013',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H5 (3.0.1)',
-        'date' => 'November 7 2012',
+        'ver' => 'H5 (3.0.2)',
+        'date' => 'January 10 2013',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.0.2)',
-        'date' => 'November 27 2012',
+        'ver' => 'H5 (4.0.3)',
+        'date' => 'January 10 2013',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H5 (4.0.1)',
-        'date' => 'November 27 2012',
+        'ver' => 'H5 (4.0.2)',
+        'date' => 'January 10 2013',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H5 (4.0.1)',
-        'date' => 'November 27 2012',
+        'ver' => 'H5 (4.0.2)',
+        'date' => 'January 10 2013',
         'pear' => true
     ),
     'chora' => array(
@@ -243,14 +243,14 @@ $horde_apps_stable = array(
     ),
     'content' => array(
         'name' => 'Content',
-        'ver' => 'H5 (2.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (2.0.1)',
+        'date' => 'November 15 2012',
         'pear' => true,
     ),
     'timeobjects' => array(
         'name' => 'Timeobjects',
-        'ver' => 'H5 (2.0.0)',
-        'date' => 'October 30 2012',
+        'ver' => 'H5 (2.0.2)',
+        'date' => 'January 10 2013',
         'pear' => true,
     ),
 );
@@ -342,8 +342,8 @@ $horde_apps_dev = array(
     ),
     'sesha' => array(
         'name' => 'Sesha',
-        'ver' => 'H5 (1.0.0RC2)',
-        'date' => 'December 10 2012',
+        'ver' => 'H5 (1.0.0RC3)',
+        'date' => 'January 10 2013',
         'pear' => true,
     ),
     'klutz' => array(
@@ -360,8 +360,8 @@ $horde_apps_dev = array(
     ),
     'trean' => array(
         'name' => 'Trean',
-        'ver' => 'H5 (1.0.0beta2)',
-        'date' => 'November 27 2012',
+        'ver' => 'H5 (1.0.0RC1)',
+        'date' => 'January 10 2013',
         'pear' => true,
     ),
 );
