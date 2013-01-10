@@ -312,8 +312,8 @@ $horde_apps_dev = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H5 (3.0.0RC1)',
-        'date' => 'November 27 2012',
+        'ver' => 'H5 (3.0.0RC2)',
+        'date' => 'January 10 2013',
         'pear' => true,
     ),
     'passwd' => array(
