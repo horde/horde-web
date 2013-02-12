@@ -12,9 +12,24 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>Gollem 3.1</h3>
+
+<p><b>Status:</b> Planned</p>
+
+<p><b>Planned release timeframe:</b> April 2013</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Reactivate WebDAV access</td><td class="planned">Planned</td>
+</table>
+
+<div class="dimmed">
+
 <h3>Gollem 3.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> Late 2012</p>
 
@@ -23,5 +38,7 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>File sharing</td><td class="done">Done</td></tr>
-  <tr><td>Reactivate WebDAV access</td><td class="planned">Planned</td>
+  <tr><td>Reactivate WebDAV access</td><td class="cancelled">Postponed</td>
 </table>
+
+</div>

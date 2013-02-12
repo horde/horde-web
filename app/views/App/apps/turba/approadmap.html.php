@@ -14,7 +14,7 @@ at least some of the following changes:
 
 <h3>Turba 4.1</h3>
 
-<p><b>Status:</b> Planned</p>
+<p><b>Status:</b> In development</p>
 
 <p><b>Planned release timeframe:</b> April 2013</p>
 
@@ -22,7 +22,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>CardDAV support</td><td class="planned">Planned</td>
+  <tr><td>CardDAV support</td><td class="progress">In progress</td>
 </table>
 
 <div class="dimmed">

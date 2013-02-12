@@ -12,11 +12,11 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Ingo 4.0</h3>
+<h3>Ingo 4.1</h3>
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> Open</p>
+<p><b>Planned release timeframe:</b> April 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
@@ -25,7 +25,7 @@ at least some of the following changes:
   <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td>
   <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td>
   <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td>
-  <tr><td>Composite driver to manage different backends for different services</td><td class="planned">Planned</td>
+  <tr><td>Composite driver to manage different backends for different services</td><td class="progress">In Progress</td>
 </table>
 
 <div class="dimmed">

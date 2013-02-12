@@ -14,7 +14,7 @@ at least some of the following changes:
 
 <h3>Kronolith 4.1</h3>
 
-<p><b>Status:</b> Planned</p>
+<p><b>Status:</b> In development</p>
 
 <p><b>Planned release timeframe:</b> April 2013</p>
 
