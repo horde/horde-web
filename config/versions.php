@@ -189,7 +189,7 @@ $horde_apps_stable = array(
     'gollem' => array(
         'name' => 'Gollem',
         'ver' => 'H5 (3.0.0)',
-        'date' => 'January 10 2013',
+        'date' => 'February 12 2013',
         'pear' => true
     ),
     'passwd' => array(
@@ -240,6 +240,12 @@ $horde_apps_stable = array(
         'name' => 'Klutz',
         'ver' => 'H3 (1.0)',
         'date' => 'March 19 2009'
+    ),
+    'trean' => array(
+        'name' => 'Trean',
+        'ver' => 'H5 (1.0.0)',
+        'date' => 'February 12 2013',
+        'pear' => true,
     ),
     'content' => array(
         'name' => 'Content',
