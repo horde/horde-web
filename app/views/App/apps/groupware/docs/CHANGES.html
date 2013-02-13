@@ -1,8 +1,150 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v5.0.4-git
+v5.0.5-git
 ----------
 
+
+
+------
+v5.0.4
+------
+
+[jan] Update French translation (Paul De Vlieger
+      &lt;paul.de_vlieger@moniut.univ-bpclermont.fr>).
+[jan] Update Slovak translation (Jozef Sudolský &lt;jozef.sudolsky@elbia.sk>).
+
+Address Book Changes
+--------------------
+[jan] Fix emptying shared address books.
+[jan] Fix importing of LDIF data (<a href="http://bugs.horde.org/ticket/11972">Bug #11972</a>).
+
+Calendar Changes
+----------------
+[jan] Update alarms, resources, and tags when deleting Kolab events (<a href="http://bugs.horde.org/ticket/11988">Bug
+      #11988</a>).
+[jan] Fix some issues with workweek views if first day of week is Sunday (<a href="http://bugs.horde.org/ticket/11973">Bug
+      #11973</a>).
+[jan] Fix adding holiday calendars if not using English locale (<a href="http://bugs.horde.org/ticket/11961">Bug #11961</a>).
+[jan] More robust date parsing during event importing (<a href="http://bugs.horde.org/ticket/11916">Bug #11916</a>).
+[jan] Always export year numbers with four digits to CSV (<a href="http://bugs.horde.org/ticket/11917">Request #11917</a>).
+[jan] Fix JavaScript error if Nag is not installed.
+
+Notes Changes
+-------------
+[jan] Fix exporting bodies of encrypted notes (<a href="http://bugs.horde.org/ticket/11960">Bug #11960</a>).
+
+Tagging Changes
+---------------
+[mjr] Fix logic that could possibly lead to incorrect content types being
+      applied to objects (<a href="http://bugs.horde.org/ticket/12016">Bug #12016</a>).
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Fix handling of deleting or moving messages from the client that no
+      longer exist on the server (<a href="http://bugs.horde.org/ticket/12013">Bug #12013</a>).
+[mjr] Fix setting flags on messages marked for deletion (<a href="http://bugs.horde.org/ticket/12007">Bug #12007</a>).
+[mjr] Fix existence checking, again.
+[mjr] Fix behavior when attempting to fetch attachment of a vanished message.
+[mjr] Fix multiple accounts on a single client (<a href="http://bugs.horde.org/ticket/11963">Bug #11963</a>).
+[mjr] Fix setting PINGable collections on non-empty PING requests.
+[mjr] Fix handling missing state when processing COMMANDS.
+[mjr] Fix loading state for FOLDERSYNC requests for certain clients.
+
+Auth
+[jan] Fix argument reading in Samba drivers (<a href="http://bugs.horde.org/ticket/11926">Bug #11926</a>).
+[mms] Remove call-time pass-by-reference, which was causing PAM authentication
+      driver to fail in PHP 5.4+ (<a href="http://bugs.horde.org/ticket/10965">Bug #10965</a>).
+
+Core
+[mms] Upgrade jQuery Mobile to v1.2/jQuery Core to v1.8.2.
+[mjr] Fix bug in OpenLayers that caused Prototype's Event object to be
+      overwritten (<a href="http://bugs.horde.org/ticket/12019">Bug #12019</a>).
+[jan] Fix notifications while authenticating transparently.
+[mms] Add a configurable delay to the jQuery Mobile autocomplete plugin.
+[mjr] Fix handling of moving or deleting messages that have been removed from
+      the server (<a href="http://bugs.horde.org/ticket/12013">Bug #12013</a>).
+[mms] Be sure tasks are passed to any derivative of the HordeCore AJAX response
+      handler.
+[mms] Fix spellchecking on HTML data (<a href="http://bugs.horde.org/ticket/11986">Bug #11986</a>).
+[jan] Fix fatal error in signup and password reset forms (<a href="http://bugs.horde.org/ticket/11952">Bug #11952</a>).
+
+Date
+[jan] Fix error: DateTime::__construct(): Failed to parse time string
+      (-001-11-01).
+[jan] Catch DateTime exception in Horde_Date_Utils:daysInMonth() (<a href="http://bugs.horde.org/ticket/11916">Bug #11916</a>).
+
+Editor
+[mms] Update CKEditor to v3.6.6.
+[mms] Move ckeditor javascript files into a separate ckeditor directory
+      (<a href="http://bugs.horde.org/ticket/11950">Request #11950</a>).
+
+Icalendar
+[jan] Don't set METHOD property unconditionally (<a href="http://bugs.horde.org/ticket/10741">Bug #10741</a>).
+[jan] Convert test suite to PHPUnit.
+
+Image
+[mjr] Fix image watermarking for Imagick and ImageMagick drivers.
+
+Imap_Client
+[mms] Fix regression in parsing LISTRIGHTS results (<a href="http://bugs.horde.org/ticket/11994">Bug #11994</a>).
+[mms] Workaround QRESYNC errata that allows FETCH FLAGS results to be returned
+      without UID information.
+[mms] More robust handling of split FETCH responses.
+[mms] Some IMAP servers require a mailbox to be unselected before it can be
+      renamed.
+[mms] Ignore fetch data returned from an UID FETCH command if it doesn't
+      include UID information (<a href="http://bugs.horde.org/ticket/11946">Bug #11946</a>).
+[mms] Add exists option to Horde_Imap_Client_Base#fetch().
+
+Itip
+[jan] Don't depend on an IMP identity object.
+
+Ldap
+[jan] Replace preg_replace() /e modifier.
+
+Mime
+[mms] Fix regression in outputting Content-Disposition 'size' parameter if no
+      other Content-Disposition parameter is present.
+[mms] Never return decimal values from Horde_Mime_Part#getSize().
+[mms] Added parsing limit for deeply nested MIME parts.
+
+Pdf
+[jan] Fix getFormatHeight() and getFormatWidth() in landscape mode.
+
+Prefs
+[jan] Add Horde_Prefs_Identity#getFromAddress().
+[jan] Fix LDAP driver and use Horde_Ldap (Heinz Schweiger
+      &lt;heinz@htl-steyr.ac.at>, <a href="http://bugs.horde.org/ticket/11697">Request #11697</a>).
+[mms] Horde_Prefs_Identity#getDefaultFromAddress() now returns a
+      Horde_Mail_Rfc822_Address object.
+
+Support
+[mms] Fix detection of sys_getloadavg() on Windows (<a href="http://bugs.horde.org/ticket/11972">Bug #11972</a>).
+
+Test
+[jan] Add test/ directory to include_path to allow autoloading of test classes.
+
+Text_Filter
+[mms] Html2text filter now has improved handling of extra whitespace.
+[mms] Fix XSS filter removing control characters that cause certain charsets
+      (ISO-2022-JP) to break (<a href="http://bugs.horde.org/ticket/12015">Bug #12015</a>).
+
+Timezone
+[jan] Add license file.
+
+Url
+[mms] Add Horde_Url_Data class.
+
+Util
+[mms] Added 'charset' and 'metacharset' parameters to returnHtml().
+[mms] Added Horde_Domhtml#getCharset() to get best-guess charset of current
+      encoding within the DOM object.
+[mms] Fix inserting HEAD into HTML document with Horde_Domhtml#getHead() if it
+      doesn't already exist in the document.
+
+View
+[jan] Fix generating form tags.
 
 
 ------
