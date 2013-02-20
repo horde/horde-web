@@ -4,50 +4,136 @@
 <div class="section" id="introduction">
 <h1>Introduction</h1>
 <p>The Horde_Pear_Remote class provides you with high-level access to the REST interface of a PEAR server.</p>
-<p>The default instance that will be created when providing no arguments to the constructor will allow access to the PEAR server at pear.horde.org. This can be easily modified by specifying an alternate server name as a first argument.</p>
-<p>An optional second argument allows to specify the underlying access helper that converts the REST responses into object instances. Usually it should not be necessary to provide this parameter but there are examples demonstrating how this can be used further below.</p>
+<p>Creating an instance of this class without providing any arguments to the constructor will allow to access the PEAR server at <a class="reference external" href="http://pear.horde.org">pear.horde.org</a>.</p>
 <pre class="literal-block">
-$remote = new Horde_Pear_Remote();
+$pear = new Horde_Pear_Remote();
+print(join(&quot;\n&quot;, $pear-&gt;listPackages()));
+
+Horde_ActiveSync
+Horde_Alarm
+Horde_Argv
+Horde_Auth
+Horde_Autoloader
+...
 </pre>
+<p>This can be easily modified by specifying an alternate server name as a first argument:</p>
+<pre class="literal-block">
+$pear = new Horde_Pear_Remote('pear.phpunit.de');
+print(join(&quot;\n&quot;, $pear-&gt;listPackages()));
+
+DbUnit
+File_Iterator
+Object_Freezer
+PHPUnit
+...
+</pre>
+</div>
+<div class="section" id="api-overview">
+<h1>API overview</h1>
+<p>The following provides a generic overview of the API provided by Horde_Pear_Remote. A detailed version based on the information extracted from the code can be found <a class="reference external" href="http://dev.horde.org/api/framework/Pear/">here</a>.</p>
 <div class="section" id="getchannel">
 <h2>getChannel()</h2>
 <p>Returns the channel.xml for the server as string.</p>
+<pre class="literal-block">
+print($pear-&gt;getChannel());
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;channel version=&quot;1.0&quot; xmlns=&quot;http://pear.php.net/channel-1.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://pear.php.net/channel-1.0 http://pear.php.net/dtd/channel-1.0.xsd&quot;&gt;
+    &lt;name&gt;pear.horde.org&lt;/name&gt;
+    &lt;summary&gt;Horde PEAR server&lt;/summary&gt;
+    &lt;suggestedalias&gt;horde&lt;/suggestedalias&gt;
+    &lt;servers&gt;
+        &lt;primary&gt;
+            &lt;rest&gt;
+                &lt;baseurl type=&quot;REST1.0&quot;&gt;http://pear.horde.org/rest/&lt;/baseurl&gt;
+                &lt;baseurl type=&quot;REST1.1&quot;&gt;http://pear.horde.org/rest/&lt;/baseurl&gt;
+                &lt;baseurl type=&quot;REST1.2&quot;&gt;http://pear.horde.org/rest/&lt;/baseurl&gt;
+                &lt;baseurl type=&quot;REST1.3&quot;&gt;http://pear.horde.org/rest/&lt;/baseurl&gt;
+            &lt;/rest&gt;
+        &lt;/primary&gt;
+    &lt;/servers&gt;
+&lt;/channel&gt;
+</pre>
 </div>
 <div class="section" id="listpackages">
 <h2>listPackages()</h2>
 <p>This returns an array with the list of package names. Use this to get a quick overview on what is available on the remote server.</p>
+<pre class="literal-block">
+print(join(&quot;\n&quot;, $pear-&gt;listPackages()));
+
+Horde_ActiveSync
+Horde_Alarm
+Horde_Argv
+Horde_Auth
+Horde_Autoloader
+...
+</pre>
 </div>
 <div class="section" id="getlatestrelease">
 <h2>getLatestRelease()</h2>
 <p>For a given package name this will retrieve the latest version that has been released. By default the method only selects stable releases. The optional second parameter allows to modify this behaviour to specifically return the highest release version of the specified stability. If the stability does not matter the argument can be set to NULL to retrieve the highest release version independent of the stability.</p>
+<pre class="literal-block">
+print($pear-&gt;getLatestRelease('Horde_Core'));
+
+1.7.0
+</pre>
 </div>
 <div class="section" id="getlatestdownloaduri">
 <h2>getLatestDownloadUri()</h2>
 <p>This will deliver the download location for the source archive of the latest version that has been released for the specified package.</p>
 <p>The &quot;stability&quot; parameter works in the same way as for the getLatestRelease() method above.</p>
+<pre class="literal-block">
+print($pear-&gt;getLatestDownloadUri('Horde_Core'));
+
+http://pear.horde.org/get/Horde_Core-1.7.0.tgz
+</pre>
 </div>
 <div class="section" id="getlatestdetails">
 <h2>getLatestDetails()</h2>
 <p>This will deliver detailed information for the latest release of the specified package.</p>
 <p>The &quot;stability&quot; parameter works in the same way as for the getLatestRelease() method above.</p>
+<pre class="literal-block">
+print_r($pear-&gt;getLatestDetails('Horde_Core'));
+
+Horde_Pear_Rest_Release Object
+(
+    [_element:protected] =&gt; DOMElement Object
+        (
+        )
+
+    [_serialized:protected] =&gt;
+    [_parentElement:protected] =&gt;
+    [_children:protected] =&gt;
+    [_appended:protected] =&gt; 1
+)
+</pre>
 </div>
 <div class="section" id="releaseexists">
 <h2>releaseExists()</h2>
 <p>Checks if a release exists for the specified combination of package name and version number.</p>
+<pre class="literal-block">
+print($pear-&gt;releaseExists('Horde_Core', '1.7.0'));
+
+1
+</pre>
 </div>
 <div class="section" id="getdependencies">
 <h2>getDependencies()</h2>
 <p>Returns the dependencies for the specified package version. The return value is an array ...?</p>
+<pre class="literal-block">
+print(count($pear-&gt;getDependencies('Horde_Exception', '1.0.0')));
+
+4
+</pre>
 </div>
 <div class="section" id="getpackagexml">
 <h2>getPackageXml()</h2>
 <p>Returns the package.xml file wrapped as Horde_Pear_Package_Xml instance.</p>
+<pre class="literal-block">
+print($pear-&gt;getPackageXml('Horde_Exception', '1.0.0')-&gt;getName());
+
+Horde_Exception
+</pre>
 </div>
-</div>
-<div class="section" id="horde-pear-rest-access">
-<h1>Horde_Pear_Rest_Access</h1>
-<p>This class converts the REST responses into Horde_Pear_* objects that
-simplify access to the data provided by the remote PEAR server.</p>
-<p>In most cases you should be able</p>
 </div>
 </div>

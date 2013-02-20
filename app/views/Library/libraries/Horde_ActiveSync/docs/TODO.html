@@ -1,0 +1,19 @@
+<div class="document" id="todo">
+<h1 class="title">TODO</h1>
+
+<ul class="simple">
+<li>After kronolith gets support for different organizer/owner fields, must
+properly set the organizer for meeting responses. Currently, the event
+created from a meeting response does not contain the organizer of the original
+event. So when the event is sync'd back to the device, it allows the user
+to cancel the event and send updates to all attendees. Also, it will then be
+possible to automatically add responses to the kronolith event from the
+incoming activesync response message.</li>
+<li>Implement better loop resolution. Need to remove the offending messages from
+the change cache.</li>
+<li>Implement &lt;SOFTDELETE&gt; command. This removes items from the device that fall
+outside of the client's advertised timespan. This should only run once per
+day .. probably on the first connection of the day, or perhaps a randomized
+connection to lessen the chance of every user having this run at once.</li>
+</ul>
+</div>

@@ -41,39 +41,21 @@ changed data back to the server.  The server can then update its map.</p>
 <p>Each SyncML Packet consists of one SyncMLHdr Element an one SyncMLBody Element.</p>
 <p>The header contains authorisation and session information.
 A typical header sent from the server might look like this:</p>
-<dl class="docutils">
-<dt>&lt;SyncHdr&gt;</dt>
-<dd><p class="first">&lt;VerDTD&gt;1.0&lt;/VerDTD&gt;
-&lt;VerProto&gt;SyncML/1.0&lt;/VerProto&gt;
-&lt;SessionID&gt;424242424242&lt;/SessionID&gt;
-&lt;MsgID&gt;2&lt;/MsgID&gt;
-&lt;Target&gt;</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.syncml_primer.txt</tt>, line 74)</p>
-Unexpected indentation.</div>
-<blockquote>
-&lt;LocURI&gt;111111-00-222222-4&lt;/LocURI&gt;</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.syncml_primer.txt</tt>, line 75)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<p>&lt;/Target&gt;
-&lt;Source&gt;</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.syncml_primer.txt</tt>, line 77)</p>
-Unexpected indentation.</div>
-<blockquote>
-&lt;LocURI&gt;http://mysyncmlserver.com/horde/rpc.php&lt;/LocURI&gt;</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.syncml_primer.txt</tt>, line 78)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<p class="last">&lt;/Source&gt;
-&lt;RespURI&gt;http://mysyncmlserver.com/horde/rpc.php&lt;/RespURI&gt;</p>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.syncml_primer.txt</tt>, line 80)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>&lt;/SyncHdr&gt;</p>
+<pre class="literal-block">
+&lt;SyncHdr&gt;
+  &lt;VerDTD&gt;1.0&lt;/VerDTD&gt;
+  &lt;VerProto&gt;SyncML/1.0&lt;/VerProto&gt;
+  &lt;SessionID&gt;424242424242&lt;/SessionID&gt;
+  &lt;MsgID&gt;2&lt;/MsgID&gt;
+  &lt;Target&gt;
+   &lt;LocURI&gt;111111-00-222222-4&lt;/LocURI&gt;
+  &lt;/Target&gt;
+  &lt;Source&gt;
+    &lt;LocURI&gt;http://mysyncmlserver.com/horde/rpc.php&lt;/LocURI&gt;
+  &lt;/Source&gt;
+  &lt;RespURI&gt;http://mysyncmlserver.com/horde/rpc.php&lt;/RespURI&gt;
+&lt;/SyncHdr&gt;
+</pre>
 <p>The SyncBody contains the following elements (called &quot;commands&quot;) as specified
 in the DTD:</p>
 <p>(Alert | Atomic | Copy | Exec | Get | Map | Put | Results | Search | Sequence
@@ -100,20 +82,17 @@ side. (For exception see the spec.)</p>
 <p>The Status includes a CmdID (like any command).  It has a MsgRef and CmdRef to
 identify the command it responds to: MsgRef identifies the packet (given in
 the Header) and CmdRef the CmdId of the original command. There's also a &lt;cmd&gt;
-Element to specify the type</p>
-<dl class="docutils">
-<dt>&lt;Status&gt;</dt>
-<dd>&lt;CmdID&gt;3&lt;/CmdID&gt;
-&lt;MsgRef&gt;1&lt;/MsgRef&gt;
-&lt;CmdRef&gt;2&lt;/CmdRef&gt;
-&lt;Cmd&gt;Put&lt;/Cmd&gt;
-&lt;SourceRef&gt;./devinf10&lt;/SourceRef&gt;
-&lt;Data&gt;200&lt;/Data&gt; &lt;!--Statuscode for OK--&gt;</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.syncml_primer.txt</tt>, line 130)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>&lt;/Status&gt;</p>
+Element to specify the type:</p>
+<pre class="literal-block">
+&lt;Status&gt;
+  &lt;CmdID&gt;3&lt;/CmdID&gt;
+  &lt;MsgRef&gt;1&lt;/MsgRef&gt;
+  &lt;CmdRef&gt;2&lt;/CmdRef&gt;
+  &lt;Cmd&gt;Put&lt;/Cmd&gt;
+  &lt;SourceRef&gt;./devinf10&lt;/SourceRef&gt;
+  &lt;Data&gt;200&lt;/Data&gt; &lt;!--Statuscode for OK--&gt;
+&lt;/Status&gt;
+</pre>
 <p>Sync</p>
 <p>Alert</p>
 <p>Sync and Alert is where the action takes place. Unfortunately the primer is

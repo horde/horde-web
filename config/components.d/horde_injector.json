@@ -1,1 +1,1 @@
-{"name":"Horde_Injector","summary":"Horde dependency injection container","description":"A depedency injection container for Horde.","version":"1.0.0","releaseDate":"2011-04-06 01:12:31","download":"http:\/\/pear.horde.org\/get\/Horde_Injector-1.0.0.tgz","hasCi":true,"hasDocuments":true}
+{"name":"Horde_Injector","summary":"Horde dependency injection container","description":"A depedency injection container for Horde.","version":"2.0.1","releaseDate":"2012-11-19 14:59:15","download":"http:\/\/pear.horde.org\/get\/Horde_Injector-2.0.1.tgz","hasCi":false,"hasDocuments":true}

@@ -1,0 +1,132 @@
+<div class="document" id="upgrading-horde-service-facebook">
+<h1 class="title">Upgrading Horde_Service_Facebook</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#upgrading-to-2-0-0" id="id1">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0.0</a></li>
+</ul>
+</div>
+<p>This lists the API changes between releases of the package.</p>
+<div class="section" id="upgrading-to-2-0-0">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0.0</a></h1>
+<p>Batch processing has been removed until it can be ported to the Graph API.</p>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Service_Facebook</p>
+<ul>
+<li><p class="first">callUploadMethod()</p>
+<p>This method has been removed. You should use the upload method of the
+request object directly.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Service_Facebook_Events</p>
+<ul>
+<li><p class="first">get()</p>
+<p>This method now takes a parameter array in place of numerous default
+parameters.</p>
+</li>
+<li><p class="first">getMembers()</p>
+<p>This method now returns an array of objects representing all invited users
+in place of separate arrays for each rsvp_status type.</p>
+</li>
+<li><p class="first">create()</p>
+<p>This method now requires a $uid parameter.</p>
+</li>
+<li><p class="first">edit()</p>
+<p>This method has been removed since Facebook no longer allows editng user
+events via the API.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Service_Facebook_Notes</p>
+<ul>
+<li><p class="first">delete()</p>
+<p>This method no longer takes a $uid argument.</p>
+</li>
+<li><p class="first">edit()</p>
+<p>This method has been removed.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Service_Facebook_Notifications</p>
+<ul>
+<li><p class="first">send(), sendEmail()</p>
+<p>These methods have been removed since they are no longer supported by
+Facebook. The get() method is still supported, but is not yet available
+in the Graph API so it is left untouched.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Service_Facebook_Photos</p>
+<ul>
+<li><p class="first">upload()</p>
+<p>This method now takes a parameter array in place of multiple, optional
+parameters.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Service_Facebook_Streams</p>
+<ul>
+<li><p class="first">get()</p>
+<p>This method has been removed and replaced by both getWall() and getStream().</p>
+</li>
+<li><p class="first">getComments()</p>
+<p>This method has been removed. Comments are now returned in getWall() and
+getStream() calls.</p>
+</li>
+<li><p class="first">publish()</p>
+<p>This method has been removed. You should use e.g., post() instead.</p>
+</li>
+<li><p class="first">remove()</p>
+<p>This method was renamed to delete() to match the GraphAPI method name.</p>
+</li>
+<li><p class="first">addComment(), removeComment(), addLike(), removeLike()</p>
+<p>The $uid parameter has been removed since it is no longer possible to
+post as another user from the GraphAPI.</p>
+</li>
+<li><p class="first">getFilters()</p>
+<p>The $uid paramter is now required.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Service_Facebook_Users</p>
+<ul>
+<li><p class="first">hasAppPermission()</p>
+<p>This method has been removed. Use the new getAppPermissions() instead.
+This returns an array of all application permissions.</p>
+</li>
+<li><p class="first">isAppUser()</p>
+<p>This method has been removed. Use the new getAppPermissions() method
+instead.</p>
+</li>
+<li><p class="first">getStandardInfo()</p>
+<p>This method has been removed.</p>
+</li>
+<li><p class="first">getInfo()</p>
+<p>This method now only request user info for a single user at a time.</p>
+</li>
+<li><p class="first">isVerified()</p>
+<p>This method has been removed. Use getInfo() instead.</p>
+</li>
+<li><p class="first">setStatus()</p>
+<p>This method was removed. Use the Horde_Service_Facebook_Streams::post
+method instead.</p>
+</li>
+<li><p class="first">getStatus()</p>
+<p>This method was removed.</p>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>

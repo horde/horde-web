@@ -92,49 +92,22 @@ attributes:</p>
 <p>For information about namespace/ownership handling you should refer to
 the &quot;Folder Namespace&quot; section within &quot;Other Elements&quot; below.</p>
 <p>Core methods of the list handler:</p>
-<blockquote>
-<dl class="docutils">
-<dt>/**</dt>
-<dd><ul class="first simple">
-<li>Returns the list of folders visible to the current user.</li>
-<li></li>
-<li>&#64;return array The list of folders, represented as strings.</li>
-</ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 111)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>/</p>
-<div class="last system-message" id="id1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 111); <em><a href="#id2">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 112)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>public function listFolders();</p>
-<dl class="docutils">
-<dt>/**</dt>
-<dd><ul class="first simple">
-<li>Returns the folder type annotation as associative array.</li>
-<li></li>
-<li>&#64;return array The list folder types with the folder names as key and the</li>
-<li>folder type as values.</li>
-</ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 119)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<p><a href="#id3"><span class="problematic" id="id4">*</span></a>/</p>
-<div class="last system-message" id="id3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 119); <em><a href="#id4">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 120)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>public function listFolderTypes();</p>
-</blockquote>
+<pre class="literal-block">
+/**
+ * Returns the list of folders visible to the current user.
+ *
+ * &#64;return array The list of folders, represented as strings.
+ */
+public function listFolders();
+
+/**
+ * Returns the folder type annotation as associative array.
+ *
+ * &#64;return array The list folder types with the folder names as key and the
+ *               folder type as values.
+ */
+public function listFolderTypes();
+</pre>
 <ol class="arabic simple" start="2">
 <li>Queries</li>
 </ol>
@@ -148,103 +121,51 @@ Definition list ends without a blank line; unexpected unindent.</div>
 </ul>
 </blockquote>
 <p>Core methods of the basic list query:</p>
-<blockquote>
-<dl class="docutils">
-<dt>/**</dt>
-<dd><ul class="first simple">
-<li>Returns the folder types as associative array.</li>
-<li></li>
-<li>&#64;return array The list folder types with the folder names as key and the</li>
-<li>type as values.</li>
-</ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 139)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<p><a href="#id5"><span class="problematic" id="id6">*</span></a>/</p>
-<div class="last system-message" id="id5">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 139); <em><a href="#id6">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 140)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>public function listTypes();</p>
-<dl class="docutils">
-<dt>/**</dt>
-<dd><ul class="first simple">
-<li>List all folders of a specific type.</li>
-<li></li>
-<li>&#64;param string $type The folder type the listing should be limited to.</li>
-<li></li>
-<li>&#64;return array The list of folders.</li>
-</ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 148)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<p><a href="#id7"><span class="problematic" id="id8">*</span></a>/</p>
-<div class="last system-message" id="id7">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 148); <em><a href="#id8">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 149)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>public function listByType($type);</p>
-<dl class="docutils">
-<dt>/**</dt>
-<dd><ul class="first simple">
-<li>Get the default folder for a certain type.</li>
-<li></li>
-<li>&#64;param string $type The type of the share/folder.</li>
-<li></li>
-<li>&#64;return string|boolean The name of the default folder, false if there is no default.</li>
-</ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 157)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<p><a href="#id9"><span class="problematic" id="id10">*</span></a>/</p>
-<div class="last system-message" id="id9">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 157); <em><a href="#id10">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 158)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>public function getDefault($type);</p>
-<dl class="docutils">
-<dt>/**</dt>
-<dd><ul class="first simple">
-<li>Get the default folder for a certain type from a different owner.</li>
-<li></li>
-<li>&#64;param string $owner The folder owner.</li>
-<li>&#64;param string $type  The type of the share/folder.</li>
-<li></li>
-<li>&#64;return string|boolean The name of the default folder, false if there is no default.</li>
-</ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 167)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<p><a href="#id11"><span class="problematic" id="id12">*</span></a>/</p>
-<div class="last system-message" id="id11">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 167); <em><a href="#id12">backlink</a></em></p>
-Inline emphasis start-string without end-string.</div>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/1fahs965/Horde_Kolab_Storage-1.1.0/doc/Horde/Kolab/Storage/API.txt</tt>, line 168)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>public function getForeignDefault($owner, $type);</p>
-</blockquote>
+<pre class="literal-block">
+/**
+ * Returns the folder types as associative array.
+ *
+ * &#64;return array The list folder types with the folder names as key and the
+ *               type as values.
+ */
+public function listTypes();
+
+/**
+ * List all folders of a specific type.
+ *
+ * &#64;param string $type The folder type the listing should be limited to.
+ *
+ * &#64;return array The list of folders.
+ */
+public function listByType($type);
+
+/**
+ * Get the default folder for a certain type.
+ *
+ * &#64;param string $type The type of the share/folder.
+ *
+ * &#64;return string|boolean The name of the default folder, false if there is no default.
+ */
+public function getDefault($type);
+
+/**
+ * Get the default folder for a certain type from a different owner.
+ *
+ * &#64;param string $owner The folder owner.
+ * &#64;param string $type  The type of the share/folder.
+ *
+ * &#64;return string|boolean The name of the default folder, false if there is no default.
+ */
+public function getForeignDefault($owner, $type);
+</pre>
 <ol class="arabic simple" start="3">
 <li>Synchronization</li>
 </ol>
 <p>In order to synchronize the cache with the server backend two IMAP commands are needed:</p>
-<blockquote>
+<pre class="literal-block">
 A0002 LIST &quot;&quot; &quot;*&quot;
-A0003 GETANNOTATION &quot;*&quot; (&quot;/vendor/kolab/folder-type&quot;) (&quot;value.shared&quot;)</blockquote>
+A0003 GETANNOTATION &quot;*&quot; (&quot;/vendor/kolab/folder-type&quot;) (&quot;value.shared&quot;)
+</pre>
 <p>The second command is not required in case the folder list did not
 change at all. If only one or very few folders changed in the folder
 list it might make sense to call &quot;GETANNOTATION&quot; per folder. This

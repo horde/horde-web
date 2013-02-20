@@ -1,0 +1,36 @@
+<div class="document" id="upgrading-horde-vfs">
+<h1 class="title">Upgrading Horde_Vfs</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#upgrading-to-2-0" id="id1">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0</a></li>
+</ul>
+</div>
+<p>This lists the API changes between releases of the package.</p>
+<div class="section" id="upgrading-to-2-0">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Vfs_Browser, Horde_Vfs_ListItem, Horde_Vfs_Object</p>
+<p>These classes have been removed.</p>
+</li>
+<li><p class="first">Horde_Vfs_Base#getFolderSize()</p>
+<p>The $name argument has been removed, specify the full path with the first
+argument instead.</p>
+</li>
+<li><p class="first">Horde_Vfs_Base#listFolders()</p>
+<p>The method has been removed. Use listFolder() with the $dironly argument
+instead.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>

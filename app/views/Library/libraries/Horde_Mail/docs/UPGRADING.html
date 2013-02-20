@@ -1,0 +1,144 @@
+<div class="document" id="upgrading-horde-mail">
+<h1 class="title">Upgrading Horde_Mail</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#upgrading-to-2-0" id="id2">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-2" id="id3">2&nbsp;&nbsp;&nbsp;Upgrading To 1.2</a><ul class="auto-toc">
+<li><a class="reference internal" href="#method-api-additions" id="id4">2.1&nbsp;&nbsp;&nbsp;Method API additions</a></li>
+<li><a class="reference internal" href="#new-methods" id="id5">2.2&nbsp;&nbsp;&nbsp;New Methods</a></li>
+<li><a class="reference internal" href="#new-objects" id="id6">2.3&nbsp;&nbsp;&nbsp;New Objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-to-1-1" id="id7">3&nbsp;&nbsp;&nbsp;Upgrading To 1.1</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id1" id="id8">3.1&nbsp;&nbsp;&nbsp;New Objects</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>This lists the API changes between releases of the package.</p>
+<div class="section" id="upgrading-to-2-0">
+<h1><a class="toc-backref" href="#id2">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Mail</p>
+<p>This class has been removed (no more Horde_Mail#factory()). Directly
+instantiate a transport driver instead.</p>
+</li>
+<li><p class="first">Horde_Mail_Rfc822</p>
+<p>The 'num_groups' property has been removed.
+The validateMailbox() method has been removed.
+parseAddressList() now returns a Horde_Mail_Rfc822_List object.
+The 'group' parameter to parseAddressList() has been added.
+The 'nest_groups' parameter to parseAddressList() has been removed.
+parseAddressList() does not validate by default.</p>
+</li>
+<li><p class="first">Horde_Mail_Rfc822_Address</p>
+<p>The object can no longer be accessed as an array.
+Removed the 'adl', 'route', and 'personal_decoded' properties.
+The 'personal' property now always returns the MIME decoded personal part.
+The 'host' property now always returns the IDN decoded host.
+The 'encode' and 'idn' parameters to writeAddress() have changed behavior.
+Added the 'host_idn' and 'valid' properties.
+Renamed the 'full_address' property to 'bare_address'.</p>
+</li>
+<li><p class="first">Horde_Mail_Rfc822_Group</p>
+<p>The object can no longer be accessed as an array.
+Removed the 'groupname_decoded' property.
+The 'groupname' property now always returns the MIME decoded groupname.
+The 'encode' and 'idn' parameters to writeAddress() have changed behavior.
+Added the 'valid' property.</p>
+</li>
+<li><p class="first">Horde_Mail_Rfc822_Object</p>
+<p>Added a match() method.
+Passing boolean true to writeAddress() now defaults to full encoding of
+the address.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-1-2">
+<h1><a class="toc-backref" href="#id3">2&nbsp;&nbsp;&nbsp;Upgrading To 1.2</a></h1>
+<div class="section" id="method-api-additions">
+<h2><a class="toc-backref" href="#id4">2.1&nbsp;&nbsp;&nbsp;Method API additions</a></h2>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Mail_Rfc822#parseAddressList()</p>
+<p>The first argument can now be a Horde_Mail_Rfc822_Object or an array of
+address strings and/or Horde_Mail_Rfc822_Objects.</p>
+</li>
+<li><p class="first">Horde_Mail_Rfc822_Address#__construct()</p>
+<p>The constructor now takes 1 optional argument: address.</p>
+</li>
+<li><p class="first">Horde_Mail_Rfc822_Group#__construct()</p>
+<p>The constructor now takes 2 optional arguments: groupname and group
+addresses.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="new-methods">
+<h2><a class="toc-backref" href="#id5">2.2&nbsp;&nbsp;&nbsp;New Methods</a></h2>
+<blockquote>
+<ul class="simple">
+<li>Horde_Mail_Rfc822#encode()</li>
+<li>Horde_Mail_Rfc822#trimAddress()</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="new-objects">
+<h2><a class="toc-backref" href="#id6">2.3&nbsp;&nbsp;&nbsp;New Objects</a></h2>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Mail_Rfc822_Object</p>
+<p>Horde_Mail_Rfc822_Address and Horde_Mail_Rfc822_Group now extend this
+class.  Allows for easier determination if an object contains <a class="reference external" href="http://www.faqs.org/rfcs/rfc822.html">RFC 822</a>
+element information.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="upgrading-to-1-1">
+<h1><a class="toc-backref" href="#id7">3&nbsp;&nbsp;&nbsp;Upgrading To 1.1</a></h1>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id8">3.1&nbsp;&nbsp;&nbsp;New Objects</a></h2>
+<p>Horde_Mail_Rfc822::parseAddressList() now returns an array of
+Horde_Mail_Rfc822_Address objects (and Horde_Mail_Rfc822_Group objects, if
+nest_groups is true).</p>
+<p>These objects are backward compatible with the former array representation.
+They also include additional functionality.</p>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Mail_Rfc822_Address</p>
+<p>Anything other than accessing these properties is a new feature available
+only since 1.1.0:</p>
+<ul class="simple">
+<li>adl</li>
+<li>comment</li>
+<li>host</li>
+<li>mailbox</li>
+<li>personal</li>
+</ul>
+</li>
+<li><p class="first">Horde_Mail_Rfc822_Group</p>
+<p>Anything other than accessing these properties is a new feature available
+only since 1.1.0:</p>
+<ul class="simple">
+<li>addresses</li>
+<li>groupname</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>

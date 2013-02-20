@@ -1,0 +1,39 @@
+<div class="document" id="horde-db-test-suite">
+<h1 class="title">Horde/Db Test Suite</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Last update:</th><td class="field-body">2009-01-04</td>
+</tr>
+<tr><th class="docinfo-name">Authors:</th>
+<td>Chuck Hagenbuch</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#defining-adapters" id="id1">1&nbsp;&nbsp;&nbsp;Defining adapters</a></li>
+</ul>
+</div>
+<div class="section" id="defining-adapters">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Defining adapters</a></h1>
+<p>As long as PHP has the PDO SQLite driver (which is enabled by default), the
+SQLite tests will always be run. This is possible using the sqlite:memory
+database; no file access or permissions are required.</p>
+<p>For the other adapters, the Horde_Db test suite looks for environment variables
+named DB_ADAPTER_$driverName_TEST_CONFIG. For the MySQLi driver, that would be
+DB_ADAPTER_MYSQLI_TEST_CONFIG. For the PDO PostgreSQL driver, that would be
+DB_ADAPTER_PDO_PGSQL_TEST_CONFIG, and so on. The value of the environment variable is
+a JSON string with the configuration array for the adapter. Here is an example
+for setting up a test DSN for the MySQL test database on localhost, connecting
+as the user horde_db with no password:</p>
+<p>{&quot;username&quot;:&quot;horde_db&quot;,&quot;dbname&quot;:&quot;test&quot;,&quot;host&quot;:&quot;localhost&quot;}</p>
+<p>When running the test suite, any adapter for which a DSN is not found, or for
+which connecting to the defined DSN fails, a single instance of
+Horde_Db_Adapter_MissingTest will be included in the test suite run, with
+details on why the adapter was skipped.</p>
+</div>
+</div>

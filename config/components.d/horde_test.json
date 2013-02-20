@@ -1,1 +1,1 @@
-{"name":"Horde_Test","summary":"Horde testing base classes","description":"Horde-specific PHPUnit base classes.","version":"1.3.0","releaseDate":"2011-12-13 12:05:17","download":"http:\/\/pear.horde.org\/get\/Horde_Test-1.3.0.tgz","hasCi":false,"hasDocuments":false}
+{"name":"Horde_Test","summary":"Horde testing base classes","description":"Horde-specific PHPUnit base classes.","version":"2.2.0","releaseDate":"2013-02-11 22:42:31","download":"http:\/\/pear.horde.org\/get\/Horde_Test-2.2.0.tgz","hasCi":false,"hasDocuments":true}

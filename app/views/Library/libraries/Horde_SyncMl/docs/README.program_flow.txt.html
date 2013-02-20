@@ -45,35 +45,17 @@ output contains reference to an output var and looks like this:</p>
 <p>$this-&gt;output-&gt;startElement(...);</p>
 <p>After the XML parser is istalled, it is fired and the execution takes place
 in the element handler functions.</p>
-<p>A syncml message (input as well as output) has this structure:
-&lt;SyncML&gt;</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.program_flow.txt</tt>, line 65)</p>
-Unexpected indentation.</div>
-<blockquote>
-<dl class="docutils">
-<dt>&lt;SyncHdr&gt;</dt>
-<dd>...stuff...</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.program_flow.txt</tt>, line 67)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>&lt;/SyncHdr&gt;
-&lt;SyncBody&gt;</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.program_flow.txt</tt>, line 69)</p>
-Unexpected indentation.</div>
-<blockquote>
-...stuff...</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.program_flow.txt</tt>, line 70)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<p>&lt;/SyncBody&gt;</p>
-</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.program_flow.txt</tt>, line 71)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<p>&lt;SyncML&gt;</p>
+<p>A syncml message (input as well as output) has this structure:</p>
+<pre class="literal-block">
+&lt;SyncML&gt;
+  &lt;SyncHdr&gt;
+    ...stuff...
+  &lt;/SyncHdr&gt;
+  &lt;SyncBody&gt;
+    ...stuff...
+  &lt;/SyncBody&gt;
+&lt;SyncML&gt;
+</pre>
 <p>the content handler in Horde_RPC_syncml delegate the work for header and
 body to the two sub-content handlers SyncML_SyncMLHdr and
 SyncML_SyncMLBody which reside in framework/SyncML/SyncML.php.
@@ -104,21 +86,4 @@ from the client have been processed. This is done in TwoWaySync.php.
 Some care has to be taken to avoid that the changes that are received
 from the client are considered &quot;new changes&quot; and echoed back to the
 client. That would result in severe data duplication meltdown.</p>
-<p>Files in SymcML:</p>
-<dl class="docutils">
-<dt>./SyncML.php:</dt>
-<dd><p class="first">definition of SyncML_ContentHandler, parent for Header- and Body-Handler
-SyncML_SyncMLHdr</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.program_flow.txt</tt>, line 115)</p>
-Unexpected indentation.</div>
-<blockquote>
-getStateFromSession() initialize session
-outputSyncHdr() write the Sync Header</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/2jfvh5d8/Horde_SyncMl-1.0.8/doc/Horde/SyncMl/README.program_flow.txt</tt>, line 117)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<p class="last">SyncML_SyncMLBody</p>
-</dd>
-</dl>
 </div>

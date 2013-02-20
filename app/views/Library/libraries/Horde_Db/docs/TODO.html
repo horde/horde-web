@@ -1,0 +1,45 @@
+<div class="document">
+
+
+<div class="section" id="migrations">
+<h1>Migrations</h1>
+<ul class="simple">
+<li>timestamp-based migrations like rails 2.1:
+<a class="reference external" href="http://guides.rubyonrails.org/migrations.html">http://guides.rubyonrails.org/migrations.html</a></li>
+<li>replace backend-specific structuredump with a PHP/JSON dump of schema and
+data, including a corresponding importer. A simple YAML/JSON structure that
+represents the PHP objects (TableDefinition, ColumnDefinition, IndexDefinition
+- or alternately writes them out programmatically like a migration script)
+would make it easiest to reconstruct identical tables between multiple
+machines and multiple database types, and a simple JSON encoding of data (a
+single header row, followed by one JSON array per database row per line) would
+take care of most special characters and serialization issues, and allow for
+fast line-by-line reading.</li>
+<li>add convenience methods of calling $t-&gt;string('foo'), instead of
+$t-&gt;column('string', 'foo'), inside migration scripts. Will need to introspect
+the nativeDatabaseTypes() list from the connection for this.</li>
+</ul>
+</div>
+<div class="section" id="dates">
+<h1>Dates</h1>
+<ul class="simple">
+<li>Handle Horde_Date objects in both input/output from Horde_Db.</li>
+<li>what to do about '0000-00-00' with PostgreSQL?</li>
+<li><a class="reference external" href="http://dev.mysql.com/doc/refman/5.1/en/time-zone-support.html">http://dev.mysql.com/doc/refman/5.1/en/time-zone-support.html</a></li>
+<li>integer sizing for mysql like the postgres backend does it?</li>
+<li>port updates in schema_definitions.rb and schema_statements.rb</li>
+<li>allow adding multiple indexes (and columns) at once, in an aggregate
+operation. at the abstract level this will just execute the changes one at a
+time; for databases like mysql that can run multiple changes at once, it will,
+achieving much better efficiency.</li>
+<li>rdo: add the ability to load a table once, then use it repeatedly in a
+relationship (or to have it be a static array), instead of joining.</li>
+<li>composite primary key support: what does <a class="reference external" href="http://compositekeys.rubyforge.org/">http://compositekeys.rubyforge.org/</a>
+have that we don't?</li>
+<li>port disable_referential_integrity?</li>
+<li>port query_cache.rb</li>
+<li>Support mysqlnd statistics:
+<a class="reference external" href="http://developers.sun.com/databases/articles/mysql_php4.html#7">http://developers.sun.com/databases/articles/mysql_php4.html#7</a></li>
+</ul>
+</div>
+</div>

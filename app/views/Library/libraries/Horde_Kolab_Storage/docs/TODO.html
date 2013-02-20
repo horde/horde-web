@@ -3,48 +3,46 @@
 
 <blockquote>
 <ul class="simple">
-<li>Handle attachments / VFS</li>
-<li>Fix the triggering decorator</li>
-<li>Consider quick triggering (<a class="reference external" href="https://bugzilla.kolabsys.com/show_bug.cgi?id=127">https://bugzilla.kolabsys.com/show_bug.cgi?id=127</a>)</li>
-<li>Change synchronization machinery so that it does not only
-synchronize one data type but all data types in a folder. While at
-the same time optimizing single data retrieval.</li>
-<li>The UID stamp must originate from the data cache, not the exact
-previous stamp as we cannot be certain the previous sync was
-complete.</li>
-<li>Allow queued/step-wise sync</li>
-<li>Fix the renaming folder hierarchies with the list cache.</li>
-<li>Handle TLS/SSL accross all drivers (see also the Storage factory in Core).</li>
-<li>Use IMAP Condstore</li>
-<li>Use IMAP CATENATE</li>
-<li>Do not hide the prefix of the shared namespace?</li>
-<li>allow cli config file overriden by cli params</li>
-<li>Error handling (exception catching/throwing)</li>
-<li>Multi-Host support</li>
-<li>Decide on private share annotation data.</li>
-<li>Support remapping the &quot;anonymous&quot; user</li>
-<li>Support creating &quot;system&quot; folders in the shared namespace</li>
-<li>The cache decorators are no decorators but alternative implementations.</li>
-<li>Support multiple-formats when writing the objects.</li>
-<li>Support a descriptive text of the groupware object in the primary MIME part.</li>
-<li>Verify if deleting a complete folder can fully adhere to the Kolab
-spec without too much hassle (alternative: The consumer of the API
-has to use the methods in correct order)</li>
-<li>Support servers without annotation support</li>
-<li>Do not overwrite the previous XML part (should only be modified)</li>
-<li>Split the &quot;Driver&quot; part into a separate package.</li>
-<li>Common folder listing UI: <a class="reference external" href="http://wiki.kolab.org/UI-Concepts/Folder-Listing">http://wiki.kolab.org/UI-Concepts/Folder-Listing</a></li>
-<li>Check <a class="reference external" href="http://evolution-kolab.git.sourceforge.net/git/gitweb.cgi?p=evolution-kolab/evolution-kolab;a=blob;f=src/libekolab/kolab-mail-synchronizer.c;h=3eea832b3bb82b29f5f391f1b71dd0fa8cb8d2c0;hb=4d49c76e1d2f89ee6c6676b0aabeada9ce076eed">http://evolution-kolab.git.sourceforge.net/git/gitweb.cgi?p=evolution-kolab/evolution-kolab;a=blob;f=src/libekolab/kolab-mail-synchronizer.c;h=3eea832b3bb82b29f5f391f1b71dd0fa8cb8d2c0;hb=4d49c76e1d2f89ee6c6676b0aabeada9ce076eed</a></li>
-<li>Check <a class="reference external" href="http://sourceforge.net/apps/mediawiki/evolution-kolab/index.php?title=Conversion_Issues">http://sourceforge.net/apps/mediawiki/evolution-kolab/index.php?title=Conversion_Issues</a></li>
-<li>Allow to lazy load permissions in
+<li>[LIST/DATA] Fix the triggering decorator</li>
+<li>[LIST/DATA] Consider quick triggering (<a class="reference external" href="https://bugzilla.kolabsys.com/show_bug.cgi?id=127">https://bugzilla.kolabsys.com/show_bug.cgi?id=127</a>)</li>
+<li>[LIST/DATA] Support servers without annotation support</li>
+<li>[LIST] Common folder listing UI:
+<a class="reference external" href="http://wiki.kolab.org/UI-Concepts/Folder-Listing">http://wiki.kolab.org/UI-Concepts/Folder-Listing</a></li>
+<li>[LIST] Fix renaming of folder hierarchies with the list cache.</li>
+<li>[LIST] Allow to lazy load permissions in
 Horde_Perms_Permission_Kolab_Storage so that only myRights() gets
 called if required and getAcl() called when required</li>
-<li>Allow to size restrict loading objects and attachments to avoid
+<li>[LIST] Decide on private share annotation data.</li>
+<li>[DATA] Handle attachments / VFS</li>
+<li>[DATA] Change synchronization machinery so that it does not only
+synchronize one data type but all data types in a folder. While at
+the same time optimizing single data retrieval.</li>
+<li>[DATA] The UID stamp must originate from the data cache, not the exact
+previous stamp as we cannot be certain the previous sync was
+complete.</li>
+<li>[DATA] Allow queued/step-wise sync</li>
+<li>[DATA] Use IMAP Condstore</li>
+<li>[DATA] Use IMAP CATENATE</li>
+<li>[DATA] Support multiple-formats when writing the objects.</li>
+<li>[DATA] Support a descriptive text of the groupware object in the primary MIME part.</li>
+<li>[DATA] Verify if deleting a complete folder can fully adhere to the Kolab
+spec without too much hassle (alternative: The consumer of the API
+has to use the methods in correct order)</li>
+<li>[DATA] Allow to size restrict loading objects and attachments to avoid
 memory issues</li>
-<li>Allow indication of broken objects in the frontend (it is irritating if
+<li>[DATA] Allow indication of broken objects in the frontend (it is irritating if
 the object is in the backend but is missing from the frontend). Would
 help if the maximal amount of information gets displayed to the user
 to get the issue fixed.</li>
+<li>[DRIVER] Split the &quot;Driver&quot; part into a separate package.</li>
+<li>[DRIVER] Handle TLS/SSL accross all drivers (see also the Storage factory in Core).</li>
+<li>allow cli config file overriden by cli params</li>
+<li>Error handling (exception catching/throwing)</li>
+<li>Multi-Host support</li>
+<li>Support remapping the &quot;anonymous&quot; user</li>
+<li>Support creating &quot;system&quot; folders in the shared namespace</li>
+<li>Check <a class="reference external" href="http://evolution-kolab.git.sourceforge.net/git/gitweb.cgi?p=evolution-kolab/evolution-kolab;a=blob;f=src/libekolab/kolab-mail-synchronizer.c;h=3eea832b3bb82b29f5f391f1b71dd0fa8cb8d2c0;hb=4d49c76e1d2f89ee6c6676b0aabeada9ce076eed">http://evolution-kolab.git.sourceforge.net/git/gitweb.cgi?p=evolution-kolab/evolution-kolab;a=blob;f=src/libekolab/kolab-mail-synchronizer.c;h=3eea832b3bb82b29f5f391f1b71dd0fa8cb8d2c0;hb=4d49c76e1d2f89ee6c6676b0aabeada9ce076eed</a></li>
+<li>Check <a class="reference external" href="http://sourceforge.net/apps/mediawiki/evolution-kolab/index.php?title=Conversion_Issues">http://sourceforge.net/apps/mediawiki/evolution-kolab/index.php?title=Conversion_Issues</a></li>
 </ul>
 </blockquote>
 </div>

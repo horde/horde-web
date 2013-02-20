@@ -1,0 +1,78 @@
+<div class="document" id="upgrading-horde-mime">
+<h1 class="title">Upgrading Horde_Mime</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#upgrading-to-2-0" id="id1">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0</a></li>
+</ul>
+</div>
+<p>This lists the API changes between releases of the package.</p>
+<div class="section" id="upgrading-to-2-0">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Upgrading to 2.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Mime</p>
+<ul>
+<li><p class="first">decode()</p>
+<p>Removed the second parameter ($to_charset). Output is now in UTF-8.</p>
+</li>
+<li><p class="first">decodeAddrString()</p>
+<p>This method has been removed.
+Equivalent functionality can now be found in the Horde_Mail package
+(version 2.0.0+).</p>
+</li>
+<li><p class="first">decodeParam()</p>
+<p>Removed the third parameter ($charset). Output is now in UTF-8.</p>
+</li>
+<li><p class="first">encode()</p>
+<p>The first parameter ($text) now requires a UTF-8 string.
+The second parameter ($charset) is now optional and indicates the
+charset to MIME encode to.</p>
+</li>
+<li><p class="first">encodeAddress()</p>
+<p>This method has been removed.
+Equivalent functionality can now be found in the Horde_Mail package
+(version 2.0.0+).</p>
+</li>
+<li><p class="first">encodeParam()</p>
+<p>The third parameter ($charset) has been removed and moved to the options.
+By default, the string is encoded in UTF-8.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Mime_Address</p>
+<p>This class has been removed. Equivalent functionality can now be found
+in the Horde_Mail package (version 2.0.0+).</p>
+</li>
+<li><p class="first">Horde_Mime_Headers</p>
+<ul>
+<li><p class="first">addHeader()</p>
+<p>Removed the 'charset' and 'decode' parameters.
+Added the 'sanity_check' parameter.</p>
+</li>
+<li><p class="first">getOb()</p>
+<p>Now returns null if the header does not exist.</p>
+</li>
+<li><p class="first">replaceHeader()</p>
+<p>Removed the 'charset' and 'decode' parameters.
+Added the 'sanity_check' parameter.</p>
+</li>
+<li><p class="first">setValue()</p>
+</li>
+<li><p class="first">sanityCheck()</p>
+<p>These methods have been removed.</p>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>

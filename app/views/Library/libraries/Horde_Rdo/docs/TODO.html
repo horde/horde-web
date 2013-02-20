@@ -77,36 +77,27 @@ order - of associated objects?</p>
 <li>cascading deletes/updates: ?</li>
 <li>Single table inheritance ?</li>
 </ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/3lg0jp90/Horde_Rdo-1.1.0/doc/Horde/Rdo/TODO.txt</tt>, line 102)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<p>class Company extends Rdo
+<pre class="literal-block">
+class Company extends Rdo
 class Firm extends Company
 class Client extends Company
-class PriorityClient extends Client</p>
-<dl class="docutils">
-<dt>CREATE TABLE companies (</dt>
-<dd>id int(11) unsigned NOT NULL AUTO_INCREMENT,
-client_of int(11),
-name varchar(255),
-type varchar(100),
-PRIMARY KEY (id)</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/3lg0jp90/Horde_Rdo-1.1.0/doc/Horde/Rdo/TODO.txt</tt>, line 113)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>);</p>
-<dl class="docutils">
-<dt>CREATE TABLE people (</dt>
-<dd>id int(11) unsigned NOT NULL AUTO_INCREMENT,
-name text,
-company_id text,
-PRIMARY KEY (id)</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/3lg0jp90/Horde_Rdo-1.1.0/doc/Horde/Rdo/TODO.txt</tt>, line 120)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>);</p>
+class PriorityClient extends Client
+
+CREATE TABLE companies (
+  id int(11) unsigned NOT NULL AUTO_INCREMENT,
+  client_of int(11),
+  name varchar(255),
+  type varchar(100),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE people (
+  id int(11) unsigned NOT NULL AUTO_INCREMENT,
+  name text,
+  company_id text,
+  PRIMARY KEY (id)
+);
+</pre>
 <p>potential field parameters:
 size
 maxsize

@@ -11,27 +11,456 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#upgrading-to-1-4-0" id="id1">1&nbsp;&nbsp;&nbsp;Upgrading To 1.4.0</a></li>
-<li><a class="reference internal" href="#upgrading-to-1-3-0" id="id2">2&nbsp;&nbsp;&nbsp;Upgrading To 1.3.0</a></li>
-<li><a class="reference internal" href="#upgrading-to-1-2-0" id="id3">3&nbsp;&nbsp;&nbsp;Upgrading To 1.2.0</a><ul class="auto-toc">
-<li><a class="reference internal" href="#changed-return-values" id="id4">3.1&nbsp;&nbsp;&nbsp;Changed Return Values</a></li>
-<li><a class="reference internal" href="#deprecated-methods" id="id5">3.2&nbsp;&nbsp;&nbsp;Deprecated Methods</a></li>
-<li><a class="reference internal" href="#deprecated-parameters" id="id6">3.3&nbsp;&nbsp;&nbsp;Deprecated Parameters</a></li>
-<li><a class="reference internal" href="#drivers" id="id7">3.4&nbsp;&nbsp;&nbsp;Drivers</a></li>
-<li><a class="reference internal" href="#method-parameter-changes" id="id8">3.5&nbsp;&nbsp;&nbsp;Method Parameter Changes</a></li>
-<li><a class="reference internal" href="#new-methods" id="id9">3.6&nbsp;&nbsp;&nbsp;New Methods</a></li>
-<li><a class="reference internal" href="#new-objects" id="id10">3.7&nbsp;&nbsp;&nbsp;New Objects</a></li>
+<li><a class="reference internal" href="#upgrading-to-2-6-0" id="id2">1&nbsp;&nbsp;&nbsp;Upgrading to 2.6.0</a></li>
+<li><a class="reference internal" href="#id1" id="id3">2&nbsp;&nbsp;&nbsp;Upgrading to 2.6.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-2-5-0" id="id4">3&nbsp;&nbsp;&nbsp;Upgrading to 2.5.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-2-4-0" id="id5">4&nbsp;&nbsp;&nbsp;Upgrading to 2.4.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-2-3-0" id="id6">5&nbsp;&nbsp;&nbsp;Upgrading to 2.3.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-2-2-0" id="id7">6&nbsp;&nbsp;&nbsp;Upgrading to 2.2.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-2-1-0" id="id8">7&nbsp;&nbsp;&nbsp;Upgrading to 2.1.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-2-0-0" id="id9">8&nbsp;&nbsp;&nbsp;Upgrading to 2.0.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-5-0" id="id10">9&nbsp;&nbsp;&nbsp;Upgrading To 1.5.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-4-0" id="id11">10&nbsp;&nbsp;&nbsp;Upgrading To 1.4.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-3-0" id="id12">11&nbsp;&nbsp;&nbsp;Upgrading To 1.3.0</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-2-0" id="id13">12&nbsp;&nbsp;&nbsp;Upgrading To 1.2.0</a><ul class="auto-toc">
+<li><a class="reference internal" href="#changed-return-values" id="id14">12.1&nbsp;&nbsp;&nbsp;Changed Return Values</a></li>
+<li><a class="reference internal" href="#deprecated-methods" id="id15">12.2&nbsp;&nbsp;&nbsp;Deprecated Methods</a></li>
+<li><a class="reference internal" href="#deprecated-parameters" id="id16">12.3&nbsp;&nbsp;&nbsp;Deprecated Parameters</a></li>
+<li><a class="reference internal" href="#drivers" id="id17">12.4&nbsp;&nbsp;&nbsp;Drivers</a></li>
+<li><a class="reference internal" href="#method-parameter-changes" id="id18">12.5&nbsp;&nbsp;&nbsp;Method Parameter Changes</a></li>
+<li><a class="reference internal" href="#new-methods" id="id19">12.6&nbsp;&nbsp;&nbsp;New Methods</a></li>
+<li><a class="reference internal" href="#new-objects" id="id20">12.7&nbsp;&nbsp;&nbsp;New Objects</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-to-1-1-0" id="id11">4&nbsp;&nbsp;&nbsp;Upgrading To 1.1.0</a><ul class="auto-toc">
-<li><a class="reference internal" href="#new-object-properties" id="id12">4.1&nbsp;&nbsp;&nbsp;New Object Properties</a></li>
+<li><a class="reference internal" href="#upgrading-to-1-1-0" id="id21">13&nbsp;&nbsp;&nbsp;Upgrading To 1.1.0</a><ul class="auto-toc">
+<li><a class="reference internal" href="#new-object-properties" id="id22">13.1&nbsp;&nbsp;&nbsp;New Object Properties</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>This lists the API changes between minor releases of the package.</p>
+<p>This lists the API changes between releases of the package.</p>
+<div class="section" id="upgrading-to-2-6-0">
+<h1><a class="toc-backref" href="#id2">1&nbsp;&nbsp;&nbsp;Upgrading to 2.6.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Ids</p>
+<p>The split() method was added.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id3">2&nbsp;&nbsp;&nbsp;Upgrading to 2.6.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Fetch_Results</p>
+<p>The clear() method was added.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-2-5-0">
+<h1><a class="toc-backref" href="#id4">3&nbsp;&nbsp;&nbsp;Upgrading to 2.5.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Base</p>
+<p>The 'exists' option was added to fetch().</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-2-4-0">
+<h1><a class="toc-backref" href="#id5">4&nbsp;&nbsp;&nbsp;Upgrading to 2.4.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Base</p>
+<p>The following 'sort' criteria have been added to search():</p>
+<blockquote>
+<ul class="simple">
+<li>SORT_DISPLAYFROM_FALLBACK</li>
+<li>SORT_DISPLAYTO_FALLBACK</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-2-3-0">
+<h1><a class="toc-backref" href="#id6">5&nbsp;&nbsp;&nbsp;Upgrading to 2.3.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_String</p>
+<p>The following methods have been added:</p>
+<blockquote>
+<ul class="simple">
+<li>getStream()</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-2-2-0">
+<h1><a class="toc-backref" href="#id7">6&nbsp;&nbsp;&nbsp;Upgrading to 2.2.0</a></h1>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Base</p>
+<p>The following methods have been added:</p>
+<blockquote>
+<ul class="simple">
+<li>getSyncToken()</li>
+<li>sync()</li>
+</ul>
+</blockquote>
+<p>The following methods have been marked as deprecated and will be removed
+in 3.0:</p>
+<blockquote>
+<ul class="simple">
+<li>getCacheId()</li>
+<li>parseCacheId()</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-2-1-0">
+<h1><a class="toc-backref" href="#id8">7&nbsp;&nbsp;&nbsp;Upgrading to 2.1.0</a></h1>
+<p>The Horde_Imap_Client_Ids_Map class has been added.</p>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client_Cache</p>
+<p>The following config options have changed:</p>
+<blockquote>
+<ul>
+<li><p class="first">debug</p>
+<p>Now requires a Horde_Imap_Client_Base_Debug object. The previous
+'true' value will be ignored.</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-2-0-0">
+<h1><a class="toc-backref" href="#id9">8&nbsp;&nbsp;&nbsp;Upgrading to 2.0.0</a></h1>
+<p>The cclient drivers have been removed.</p>
+<p>Exception logging has been removed; the calling code is now responsible for
+logging any errors.</p>
+<blockquote>
+<ul>
+<li><p class="first">Horde_Imap_Client</p>
+<ul>
+<li><p class="first">factory()</p>
+<p>The factory method has been removed. The client driver should instead
+be directly instantiated.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Imap_Client_Base</p>
+<p>The following config options have been removed:</p>
+<blockquote>
+<ul class="simple">
+<li>statuscache</li>
+</ul>
+</blockquote>
+<p>The following properties have changed:</p>
+<blockquote>
+<ul>
+<li><p class="first">$cache</p>
+<p>This public member variable has been removed. Obtain the cache object
+by calling getCache() instead.</p>
+</li>
+<li><p class="first">$utils</p>
+<p>This public member variable has been removed.</p>
+</li>
+</ul>
+</blockquote>
+<p>The following methods have changed:</p>
+<blockquote>
+<ul>
+<li><p class="first">append()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">copy()</p>
+<p>The $source and $dest parameters can no longer be UTF7-IMAP strings.</p>
+</li>
+<li><p class="first">createMailbox()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">currentMailbox()</p>
+<p>The 'mailbox' portion of the return value is always returned as a
+Horde_Imap_Client_Mailbox object.
+The $options parameter has been removed.</p>
+</li>
+<li><p class="first">deleteACL()</p>
+<p>This method has been added.</p>
+</li>
+<li><p class="first">deleteMailbox()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">expunge()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">fetch()</p>
+<p>The 'fetch_res' option has been removed.
+The 'vanished' option has been removed - use the vanished() method
+instead.
+The $mailbox parameter can no longer be a UTF7-IMAP string.
+Results are now returned as a Horde_Imap_Client_Fetch_Results object.</p>
+</li>
+<li><p class="first">fetchCacheIgnore()</p>
+<p>This method has been removed. Use getParam()/setParam() to change
+parameter values instead.</p>
+</li>
+<li><p class="first">fetchFromSectionString()</p>
+<p>This method has been removed.</p>
+</li>
+<li><p class="first">getNamespaces()</p>
+<p>The array keys, 'name' key, and 'translation' key in the return array
+return UTF-8 strings (not UTF7-IMAP).</p>
+</li>
+<li><p class="first">getACL()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">getCacheId()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">getMetadata()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">getMyACLRights()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">getQuota()</p>
+<p>The $root parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">getQuotaRoot()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">listACLRights()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">listMailboxes()</p>
+<p>The return array keys are in UTF-8 (not UTF7-IMAP).
+The 'mailbox' return value is returned as a Horde_Imap_Client_Mailbox
+object.
+The 'utf8' parameter has been removed.
+The 'pattern' parameter now handles Horde_Imap_Client_Mailbox objects
+differently than string patterns.</p>
+</li>
+<li><p class="first">openMailbox()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">parseCommandArray()</p>
+<p>This method has been removed.</p>
+</li>
+<li><p class="first">renameMailbox()</p>
+<p>The $old and $new parameters can no longer be UTF7-IMAP strings.</p>
+</li>
+<li><p class="first">search()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.
+The following constants for use with 'results' have been deprecated
+(use SEARCH_RESULTS_* constants instead):</p>
+<blockquote>
+<ul class="simple">
+<li>SORT_RESULTS_COUNT</li>
+<li>SORT_RESULTS_MATCH</li>
+<li>SORT_RESULTS_MAX</li>
+<li>SORT_RESULTS_MIN</li>
+<li>SORT_RESULTS_SAVE</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">setACL()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+<p>The $options['remove'] parameter has been replaced by a more flexible
+$options['action'] parameter. To delete all ACLs for an identifier use
+the new deleteACL() method.</p>
+</li>
+<li><p class="first">setQuota()</p>
+<p>The $root parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">status()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.
+The STATUS_LASTMODSEQ and STATUS_LASTMODSEQUIDS return options have
+been removed.</p>
+</li>
+<li><p class="first">statusMultiple()</p>
+<p>The return array keys are in UTF-8 (not UTF7-IMAP).
+The $mailboxes parameter can no longer contain UTF7-IMAP strings.</p>
+</li>
+<li><p class="first">store()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">subscribeMailbox()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+<li><p class="first">thread()</p>
+<p>The $mailbox parameter can no longer be a UTF7-IMAP string.</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Horde_Imap_Client_Cache</p>
+<p>Removed the singleton() method.
+The 'hostspec', 'port', and 'username' parameters to the constructor have
+been removed.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Data_Envelope</p>
+<p>Address entries are now returned as a Horde_Mail_Rfc822_List object.</p>
+<dl class="docutils">
+<dt>The following properties have been removed:</dt>
+<dd><ul class="first last simple">
+<li>bcc_decoded</li>
+<li>bcc_group</li>
+<li>cc_decoded</li>
+<li>cc_group</li>
+<li>from_decoded</li>
+<li>reply_to_decoded</li>
+<li>sender_decoded</li>
+<li>subject_decoded</li>
+<li>to_decoded</li>
+<li>to_group</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Horde_Imap_Client_Data_Thread</p>
+<ul>
+<li><p class="first">Constructor</p>
+<p>The format of the first parameter ($data) has changed.</p>
+</li>
+<li><p class="first">getRawData()</p>
+<p>This method has been removed.</p>
+</li>
+<li><p class="first">getThread()</p>
+<p>This method now returns a list of objects. This is now the way that
+individual indices of a thread are accessed.</p>
+</li>
+<li><p class="first">getThreadBase()</p>
+<p>This method has been removed (see getThread() for replacement).</p>
+</li>
+<li><p class="first">getThreadIndent()</p>
+<p>This method has been removed (see getThread() for replacement).</p>
+</li>
+<li><p class="first">getType()</p>
+<p>This method has been added.</p>
+</li>
+<li><p class="first">lastInLevel()</p>
+<p>This method has been removed (see getThread() for replacement).</p>
+</li>
+<li><p class="first">messageList()</p>
+<p>This method now returns the list of IDs in a Horde_Imap_Client_Ids
+object.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Imap_Client_Exception</p>
+<dl class="docutils">
+<dt>These constants have been removed:</dt>
+<dd><ul class="first last simple">
+<li>DRIVER_NOT_FOUND</li>
+<li>POP3_NOT_SUPPORTED</li>
+<li>NOSUPPORTIMAPEXT</li>
+<li>CATENATE_BADURL</li>
+<li>BADSEARCH</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Horde_Imap_Client_Exception_NoSupportExtension</p>
+<p>The $extension property has been added.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Mailbox</p>
+<p>get() no longer supports the null argument to the $utf7imap parameter.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Search_Query</p>
+<p>The $queries argument to andSearch() and orSearch() can be a base query
+in addition to an array of queries.</p>
+<p>The second argument to charset() has been changed to a boolean indicating
+whether the current text queries should be converted to the new charset
+provided.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Sort</p>
+<p>This class has been removed. Mailbox sorting can now be accomplished with
+the Horde_Imap_Client_Mailbox_List class.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Utf7imap</p>
+<p>The default argument for the $force parameter to Utf8ToUtf7Imap() has
+changed to boolean true.</p>
+</li>
+<li><p class="first">Horde_Imap_Client_Utils</p>
+<p>This class has been removed. Information on the previous methods (and
+their replacements, if any) can be found below.</p>
+<ul>
+<li><p class="first">createUrl()</p>
+<p>This method has been removed. URL creation can now be accomplished with
+the Horde_Imap_Client_Url object.</p>
+</li>
+<li><p class="first">escape()</p>
+<p>This method has been removed. String escaping can now be accomplished
+via the Horde_Imap_Client_Data_Format_* objects.</p>
+</li>
+<li><p class="first">fromSequenceString()</p>
+<p>This method has been removed. Sequence string parsing is now natively
+supported within the Horde_Imap_Client_Ids object.</p>
+</li>
+<li><p class="first">getBaseSubject()</p>
+<p>This method has been removed. Bsae subject determination is now handled
+by the Horde_Imap_Client_Utils_BaseSubject class.</p>
+</li>
+<li><p class="first">parseCommandArray()</p>
+<p>This method has been removed.</p>
+</li>
+<li><p class="first">parseUrl()</p>
+<p>This method has been removed. URL parsing can now be accomplished with
+the Horde_Imap_Client_Url object.</p>
+</li>
+<li><p class="first">removeBareNewlines()</p>
+<p>This method has been removed.</p>
+</li>
+<li><p class="first">stripNonAtomChars()</p>
+<p>This method has been removed. The same functionality can now be
+accomplished by using the stripNonAtomCharacters() method of the
+Horde_Imap_Client_Data_Format_Atom object.</p>
+</li>
+<li><p class="first">toSequenceString()</p>
+<p>This method has been removed. Sequence string generation is now natively
+supported within the Horde_Imap_Client_Ids object.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Horde_Imap_Client_Utils_Pop3</p>
+<p>This class has been removed.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="upgrading-to-1-5-0">
+<h1><a class="toc-backref" href="#id10">9&nbsp;&nbsp;&nbsp;Upgrading To 1.5.0</a></h1>
+<p>The following properties have been added to the Horde_Imap_Client_Data_Envelope
+object:</p>
+<blockquote>
+<ul class="simple">
+<li>bcc_group</li>
+<li>cc_group</li>
+<li>to_group</li>
+</ul>
+</blockquote>
+<p>Address properties (array return values) returned from
+Horde_Imap_Client_Data_Envelope are now Horde_Mail_Rfc822_Address objects.
+These objects behave identical to the arrays that were returned previously.</p>
+<p>The following methods have been added:</p>
+<blockquote>
+<ul class="simple">
+<li>Horde_Imap_Client_Base#setParam()</li>
+</ul>
+</blockquote>
+</div>
 <div class="section" id="upgrading-to-1-4-0">
-<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Upgrading To 1.4.0</a></h1>
+<h1><a class="toc-backref" href="#id11">10&nbsp;&nbsp;&nbsp;Upgrading To 1.4.0</a></h1>
 <p>Several exception codes have been deprecated:</p>
 <blockquote>
 <ul class="simple">
@@ -57,14 +486,14 @@ information from the server MAY be available in the 'details' property of the
 Exception object rather than being added to the error message.</p>
 </div>
 <div class="section" id="upgrading-to-1-3-0">
-<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Upgrading To 1.3.0</a></h1>
+<h1><a class="toc-backref" href="#id12">11&nbsp;&nbsp;&nbsp;Upgrading To 1.3.0</a></h1>
 <p>The Cclient drivers have been removed; they are instead mapped to the
 appropriate Socket drivers.  No code needs to be changed for now as this will
 happen automatically.  However, the 'Cclient' and 'Cclient_Pop3' driver names
 are deprecated and will be removed in 2.0.0.</p>
 </div>
 <div class="section" id="upgrading-to-1-2-0">
-<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Upgrading To 1.2.0</a></h1>
+<h1><a class="toc-backref" href="#id13">12&nbsp;&nbsp;&nbsp;Upgrading To 1.2.0</a></h1>
 <p>There has been a major change in the way mailbox names are handled in this
 version.  Due to ambiguities with auto-detecting UTF-8 vs. UTF7-IMAP, all
 mailbox method parameters and return values are now Horde_Imap_Client_Mailbox
@@ -75,7 +504,7 @@ UTF7-IMAP or UTF-8 are now REQUIRED to be passed in as UTF-8.</p>
 <p>Auto-detection will still work, but is deprecated, will be removed in 2.0.0,
 and is not guaranteed to produce proper results for all mailbox names.</p>
 <div class="section" id="changed-return-values">
-<h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Changed Return Values</a></h2>
+<h2><a class="toc-backref" href="#id14">12.1&nbsp;&nbsp;&nbsp;Changed Return Values</a></h2>
 <p>The following return values have changed:</p>
 <blockquote>
 <ul>
@@ -107,7 +536,7 @@ previously unclear as to the charset of these keys).</p>
 </blockquote>
 </div>
 <div class="section" id="deprecated-methods">
-<h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Deprecated Methods</a></h2>
+<h2><a class="toc-backref" href="#id15">12.2&nbsp;&nbsp;&nbsp;Deprecated Methods</a></h2>
 <p>The following methods are deprecated and will be removed in 2.0.0:</p>
 <blockquote>
 <ul>
@@ -121,15 +550,7 @@ previously unclear as to the charset of these keys).</p>
 </blockquote>
 </div>
 <div class="section" id="deprecated-parameters">
-<h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Deprecated Parameters</a></h2>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/var/folders/pn/pnQ3DrPoEfGsZalwagA5EU+++TM/-Tmp-/259f7753/Horde_Imap_Client-1.4.4/doc/Horde/Imap/Client/UPGRADING</tt>, line 112)</p>
-<p>Title underline too short.</p>
-<pre class="literal-block">
-Deprecated Parameters
-------------------
-</pre>
-</div>
+<h2><a class="toc-backref" href="#id16">12.3&nbsp;&nbsp;&nbsp;Deprecated Parameters</a></h2>
 <blockquote>
 <ul>
 <li><p class="first">Horde_Imap_Client_Base#currentMailbox()</p>
@@ -140,11 +561,11 @@ exclusively return a Horde_Imap_Client_Mailbox object in 2.0.0.</p>
 </blockquote>
 </div>
 <div class="section" id="drivers">
-<h2><a class="toc-backref" href="#id7">3.4&nbsp;&nbsp;&nbsp;Drivers</a></h2>
+<h2><a class="toc-backref" href="#id17">12.4&nbsp;&nbsp;&nbsp;Drivers</a></h2>
 <p>The unmaintained Mock driver has been removed.</p>
 </div>
 <div class="section" id="method-parameter-changes">
-<h2><a class="toc-backref" href="#id8">3.5&nbsp;&nbsp;&nbsp;Method Parameter Changes</a></h2>
+<h2><a class="toc-backref" href="#id18">12.5&nbsp;&nbsp;&nbsp;Method Parameter Changes</a></h2>
 <blockquote>
 <ul>
 <li><p class="first">Horde_Imap_Client_Base#append()</p>
@@ -248,7 +669,7 @@ deprecated and will be ignored.</p>
 </blockquote>
 </div>
 <div class="section" id="new-methods">
-<h2><a class="toc-backref" href="#id9">3.6&nbsp;&nbsp;&nbsp;New Methods</a></h2>
+<h2><a class="toc-backref" href="#id19">12.6&nbsp;&nbsp;&nbsp;New Methods</a></h2>
 <blockquote>
 <ul class="simple">
 <li>Horde_Imap_Client_Base#getIdsOb()</li>
@@ -257,7 +678,7 @@ deprecated and will be ignored.</p>
 </blockquote>
 </div>
 <div class="section" id="new-objects">
-<h2><a class="toc-backref" href="#id10">3.7&nbsp;&nbsp;&nbsp;New Objects</a></h2>
+<h2><a class="toc-backref" href="#id20">12.7&nbsp;&nbsp;&nbsp;New Objects</a></h2>
 <blockquote>
 <ul class="simple">
 <li>Horde_Imap_Client_Ids</li>
@@ -269,9 +690,9 @@ deprecated and will be ignored.</p>
 </div>
 </div>
 <div class="section" id="upgrading-to-1-1-0">
-<h1><a class="toc-backref" href="#id11">4&nbsp;&nbsp;&nbsp;Upgrading To 1.1.0</a></h1>
+<h1><a class="toc-backref" href="#id21">13&nbsp;&nbsp;&nbsp;Upgrading To 1.1.0</a></h1>
 <div class="section" id="new-object-properties">
-<h2><a class="toc-backref" href="#id12">4.1&nbsp;&nbsp;&nbsp;New Object Properties</a></h2>
+<h2><a class="toc-backref" href="#id22">13.1&nbsp;&nbsp;&nbsp;New Object Properties</a></h2>
 <blockquote>
 <ul>
 <li><p class="first">Horde_Imap_Client_Data_Envelope</p>

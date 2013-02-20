@@ -4,8 +4,8 @@
 <p>Command line interfaces can often be composed of different modules responsible for distinct actions. Horde_Cli_Modular allows each such module to influence the overall command line interface.</p>
 <div class="section" id="introduction">
 <h1>Introduction</h1>
-<p>The command line of the tool <strong>pear</strong> is a good example of the kind of interface Horde_Cli_Modular supports: There are a number of global options available but each command supported by <strong>pear</strong> may have its own subset of options. <strong>-c</strong> identifies the <strong>pear</strong> configuration file as a global options. In contrast the <strong>--register-only</strong> option is an option specific to the <strong>install</strong> command <strong>pear</strong> provides.</p>
-<p>Obviously not all command line interfaces match this scheme and hence Horde_Cli_Modular shouldn't be considered to be a generic utility for all CLI tools. But for all CLI helpers that have such a structure the library should provide a decent skeleton that allows to quickly start adding modules.</p>
+<p>The command line of the tool <strong>pear</strong> is a good example of the kind of interface Horde_Cli_Modular supports: There are a number of global options available but each command supported by <strong>pear</strong> may have its own subset of options. <strong>-c</strong> identifies the <strong>pear</strong> configuration file as a global option. In contrast the <strong>--register-only</strong> option is specific to the <strong>install</strong> command provided by <strong>pear</strong>.</p>
+<p>Obviously not all command line interfaces match this scheme. Hence Horde_Cli_Modular shouldn't be considered to be a generic utility for all CLI tools. But for all CLI helpers that have such a structure the library should provide a decent skeleton that allows to quickly start adding modules.</p>
 </div>
 <div class="section" id="structure">
 <h1>Structure</h1>
@@ -32,22 +32,22 @@ line interface.</td>
 </div>
 <div class="section" id="id1">
 <h1>Horde_Cli_Modular</h1>
-<p>This class is entry point for constructing a modular command line interface. The class provides methods to combine and access the different modules.</p>
+<p>The Horde_Cli_Modular class is the entry point for constructing a modular command line interface. The class provides methods to combine and access the different modules.</p>
 <div class="section" id="setup">
 <h2>Setup</h2>
-<p>This class generates the basic setup and you will only have to provide a few basic parameters to setup the system. This introduction will only focus on the central settings and you will need to lookup the API documentation for further details.</p>
+<p>This class generates the basic setup and you will only have to provide a few basic parameters to setup the system. This introduction will focus on the central settings and you will need to lookup the API documentation for further details.</p>
 <p>The following demonstrates how you could construct the Horde_Cli_Modular instance:</p>
 <pre class="literal-block">
 $modular = new Horde_Cli_Modular(
   array(
     'parser' =&gt; array('usage' =&gt; '[options] MODULE'),
-    'modules' =&gt; array('directory' =&gt; dirname(__FILE__) . '/Module'),
+    'modules' =&gt; array('directory' =&gt; __DIR__ . '/Module'),
     'provider' =&gt; array('prefix' =&gt; 'Horde_Something_Module_')
   )
 );
 </pre>
-<p>The <strong>parser</strong> parameter preparse the command line argument parser (usually Horde_Argv. The snippet above only provides the <strong>usage</strong> setting that will be displayed as the condensed usage instruction when the user requests the help for the command.</p>
-<p>The <strong>modules</strong> part defines the <strong>directory</strong> that contains the various modules that form the command line interface.</p>
+<p>The <strong>parser</strong> parameter preparse the command line argument parser (usually Horde_Argv). The snippet above only provides the <strong>usage</strong> setting that will be displayed as the condensed usage instruction when the user requests the help for the CLI script.</p>
+<p>The <strong>modules</strong> part defines the <strong>directory</strong> that contains the various modules which are part of the command line interface.</p>
 <p>And finally the <strong>provider</strong> setting indicates the common <strong>prefix</strong> that the module classes will have.</p>
 <p>The file structure for the hypothetical Horde_Something package would look like this in order to match the setup presented above:</p>
 <pre class="literal-block">
@@ -94,7 +94,7 @@ interface Horde_Cli_Modular_Module
     public function getOptionGroupOptions();
 }
 </pre>
-<p>There are two function that allow to influence the global setup of the command line parser: getUsage() and getBaseOptions(). The first one returns a string that will be added to the generic usage description displayed when the user requests the help screen. The second one returns an array of Horde_Argv_Option instances that each define an option valid for all modules.</p>
+<p>There are two functions that allow to influence the global setup of the command line parser: getUsage() and getBaseOptions(). The first one returns a string that will be added to the generic usage description displayed when the user requests the help screen. The second one returns an array of Horde_Argv_Option instances that each define an option valid for all modules.</p>
 <p>If the module defines its own option group (that will be displayed as a separate section in the help text for the command) hasOptionGroup() needs to return <strong>true</strong>.</p>
 <p>An option group needs a title (returned as a string by getOptionGroupTitle()) and a descriptions (returned as a string by getOptionGroupDescription()). And finally an option group needs a list of options valid for the specific module defining the option group. The corresponding list is returned as an array of Horde_Argv_Option instances by the method getOptionGroupOptions().</p>
 </div>

@@ -1,1 +1,1 @@
-{"name":"Horde_Http","summary":"Horde HTTP libraries","description":"This package provides a set of classes for making HTTP requests.","version":"1.1.0","releaseDate":"2011-11-02 11:00:55","download":"http:\/\/pear.horde.org\/get\/Horde_Http-1.1.0.tgz","hasCi":true,"hasDocuments":false}
+{"name":"Horde_Http","summary":"Horde HTTP libraries","description":"An API for making HTTP requests.","version":"2.0.1","releaseDate":"2012-11-19 14:55:12","download":"http:\/\/pear.horde.org\/get\/Horde_Http-2.0.1.tgz","hasCi":false,"hasDocuments":false}
