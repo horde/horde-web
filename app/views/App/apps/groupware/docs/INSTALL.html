@@ -28,7 +28,7 @@
 <p>This document contains instructions for installing Horde Groupware on your
 system.</p>
 <p>For information on the capabilities and features of Horde Groupware, see the
-file <a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Horde Groupware distribution.</p>
+file <a class="reference external" href="README">README</a> in the top-level directory of the Horde Groupware distribution.</p>
 <div class="section" id="quick-install">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Quick Install</a></h1>
 <p>These are very terse instructions how to install Horde Groupware and its
@@ -580,7 +580,7 @@ Handler</tt> tab in the Horde setup.</p>
 </li>
 </ol>
 <p>For more information about securing your webserver, PHP and Horde Groupware,
-see the <a class="reference external" href="?f=SECURITY.html">docs/SECURITY</a> file.</p>
+see the <a class="reference external" href="../../horde/docs/SECURITY">docs/SECURITY</a> file.</p>
 </li>
 </ol>
 </div>
@@ -596,8 +596,8 @@ these old temporary files.</p>
 possible solution is to use utilities like <tt class="docutils literal">tmpwatch</tt>, <tt class="docutils literal">tmpreaper</tt> or
 anything similar to remove old files.</p>
 <p>Stale sessions are automatically pruned by PHP according to the
-<a href="#id11"><span class="problematic" id="id12">`session.gc_probability`_</span></a>, <a href="#id13"><span class="problematic" id="id14">`session.gc_divisor`_</span></a>, and
-<a href="#id15"><span class="problematic" id="id16">`session.gc_maxlifetime`_</span></a> settings located in <tt class="docutils literal">php.ini</tt>. However, the
+<a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-probability">session.gc_probability</a>, <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-divisor">session.gc_divisor</a>, and
+<a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime">session.gc_maxlifetime</a> settings located in <tt class="docutils literal">php.ini</tt>. However, the
 default settings are very aggressive: the garbage collection routine runs on
 average 1% of the time a page is loaded. For most installations, a lower
 garbage collection rate is recommended (setting session.gc_divisor to 10,000
@@ -609,7 +609,7 @@ or higher is much more reasonable).</p>
 translations of text displayed by applications; the translations are found in
 the po/ directory.  If a translation is not yet available for your locale (and
 you wish to create one), or if you're having trouble using a provided
-translation, please see the <a class="reference external" href="?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+translation, please see the <a class="reference external" href="../../horde/docs/TRANSLATIONS">docs/TRANSLATIONS</a> file for instructions.</p>
 </div>
 <div class="section" id="obtaining-support">
 <h1><a class="toc-backref" href="#id10">7&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
@@ -633,17 +633,5 @@ volunteers.  For information on reasonable support expectations, please read</p>
 <a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
 <p>Thanks for using Horde Groupware!</p>
 <p>The Horde Team</p>
-</div>
-<div class="system-messages section">
-<h1>Docutils System Messages</h1>
-<div class="system-message" id="id11">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 606); <em><a href="#id12">backlink</a></em></p>
-Unknown target name: &quot;session.gc_probability&quot;.</div>
-<div class="system-message" id="id13">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 606); <em><a href="#id14">backlink</a></em></p>
-Unknown target name: &quot;session.gc_divisor&quot;.</div>
-<div class="system-message" id="id15">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/bundles/groupware/docs/INSTALL</tt>, line 606); <em><a href="#id16">backlink</a></em></p>
-Unknown target name: &quot;session.gc_maxlifetime&quot;.</div>
 </div>
 </div>
