@@ -277,6 +277,14 @@ Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/r
 <p>This module can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option when
 compiling PHP.</p>
 </li>
+<li><p class="first">_curl <tt class="docutils literal"><span class="pre">--with-curl</span></tt></p>
+<p>The curl module, if installed, will be used instead of PHP's fopen() when
+retrieving data from external HTTP servers (remote calendars, web APIs,
+etc.). This is much more reliable and flexible, so it's recommended to
+either enable it or install the <a href="#id13"><span class="problematic" id="id14">http_</span></a> extension.</p>
+<p>This module can be enabled by adding the <tt class="docutils literal"><span class="pre">--with-curl</span></tt> option when
+compiling PHP.</p>
+</li>
 </ol>
 </li>
 <li><p class="first">PEAR Modules</p>
@@ -395,6 +403,16 @@ pecl install lzf
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pecl install memcache
+</pre>
+</li>
+<li><p class="first">_http</p>
+<p>The http module, if installed, will be used instead of PHP's fopen() when
+retrieving data from external HTTP servers (remote calendars, web APIs,
+etc.). This is much more reliable and flexible, so it recommended to
+either install this or enable the <a href="#id15"><span class="problematic" id="id16">curl_</span></a> module.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install http
 </pre>
 </li>
 </ol>
@@ -785,5 +803,14 @@ For information on reasonable support expectations, please read</p>
 <a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
 <p>Thanks for using Horde!</p>
 <p>The Horde Team</p>
+</div>
+<div class="system-messages section">
+<h1>Docutils System Messages</h1>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/INSTALL</tt>, line 278); <em><a href="#id14">backlink</a></em></p>
+Unknown target name: &quot;http&quot;.</div>
+<div class="system-message" id="id15">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/INSTALL</tt>, line 415); <em><a href="#id16">backlink</a></em></p>
+Unknown target name: &quot;curl&quot;.</div>
 </div>
 </div>
