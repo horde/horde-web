@@ -28,6 +28,7 @@ $mapper->connect('apps', $_root . '/apps', array('controller' => 'app', 'action'
 $mapper->connect($_root . '/apps/:app/docs/:file', array('controller' => 'app', 'action' => 'docs'));
 $mapper->connect('app', $_root . '/apps/:app/:action', array('controller' => 'app', 'action' => 'app'));
 $mapper->connect($_root . '/apps/:app/screenshots', array('controller' => 'app', 'action' => 'screenshots'));
+$mapper->connect($_root . '/apps/:app/screenshots_old', array('controller' => 'app', 'action' => 'screenshots_old'));
 
 /* Libraries */
 $mapper->connect('libraries', $_root . '/libraries', array('controller' => 'library', 'action' => 'index'));
