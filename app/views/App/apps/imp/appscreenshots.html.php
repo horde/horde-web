@@ -38,4 +38,6 @@
   </td>
 </table>
 
-<a href="<?php echo $this->urlWriter->urlFor('app', array('action' => 'screenshots_old', 'app' => 'imp'))?>">Screenshots from older versions</a>
+<p>
+ <strong><a href="<?php echo $this->urlWriter->urlFor('app', array('action' => 'screenshots_old', 'app' => 'imp'))?>">Screenshots from older versions</a></strong>
+</p>
