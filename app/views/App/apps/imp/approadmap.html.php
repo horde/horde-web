@@ -72,44 +72,4 @@ at least some of the following changes:
 and Ryan Finnie's updated MIME torture test. These tests can be found at
 <a href="ftp://ftp.horde.org/pub/imp/test/">ftp://ftp.horde.org/pub/imp/test/</a>.</p>
 
-<h3>IMP 4.3</h3>
-
-<p><b>Status:</b> Released</p>
-
-<p><b>Released:</b> September 2008</p>
-
-<p><b>Features currently planned for the next release:</b></p>
-
-<table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Faster and more stable folder list creation</td><td class="done">Done</td></tr>
-  <tr><td>PDF thumbnails</td><td class="done">Done</td></tr>
-  <tr><td>Performance improvements</td><td class="done">Done</td></tr>
-</table>
-
-<h3>IMP 4.2</h3>
-
-<p><b>Status:</b> Released</p>
-
-<p><b>Released:</b> Mid-2008</p>
-
-<p><b>Features currently planned for the next release:</b></p>
-
-<table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Mailbox and message caching</td><td class="done">Done</td></tr>
-  <tr><td>Multilingual spell checking</td><td class="done">Done</td></tr>
-  <tr><td>Dynamic spell checking</td><td class="done">Done</td></tr>
-  <tr><td>Auto-complete address lookup</td><td class="done">Done</td></tr>
-  <tr><td>Symmetric (password only) PGP encryption</td><td class="done">Done</td></tr>
-  <tr><td>Per-folder sort preferences</td><td class="done">Done</td></tr>
-  <tr><td>Remembering recent search queries</td><td class="done">Done</td></tr>
-  <tr><td>Allow opening of several browser windows/tabs</td><td class="done">Done</td></tr>
-  <tr><td>Logging and retrieving of most frequent recipients</td><td class="done">Done</td></tr>
-  <tr><td>Display folder sizes</td><td class="done">Done</td></tr>
-  <tr><td>Thumbnails of large attached images</td><td class="done">Done</td></tr>
-  <tr><td>Maintenance task to purge old spam messages and sent mail</td><td class="done">Done</td></tr>
-  <tr><td>Permissions to restrict maximum number of recipients per message and time.</td><td class="done">Done</td></tr>
-</table>
-
 </div>
