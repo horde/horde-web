@@ -327,7 +327,7 @@
         developers.  For example, a large change that might not yet be ready
         for primetime, but could benefit for some eyeballs, might be useful to
         share on a branch rather than the master repo. To create a branch on
-        the master Horde repository, and have your existing tpic branch track
+        the master Horde repository, and have your existing topic branch track
         the remove branch, use the following command:</p>
 
         <pre class="brush:bash">git push -u origin [localbranch]</pre>
