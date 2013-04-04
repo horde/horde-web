@@ -12,6 +12,19 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>Horde 5.1</h3>
+
+<p><b>Status:</b> In Development</p>
+
+<p><b>Planned release timeframe:</b> April 2013</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>ActiveSync support for EAS 14.0 and 14.1 (Outlook sync, notes sync, GAL photos)</a></td><td class="done">Done</td>
+</table>
+
 <div class="dimmed">
 
 <h3>Horde 5.0</h3>
