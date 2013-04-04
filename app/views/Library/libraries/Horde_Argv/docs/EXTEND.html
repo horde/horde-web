@@ -3,12 +3,8 @@
 <h2 class="subtitle" id="extending-horde-argv">Extending Horde_Argv</h2>
 
 <p>Since the two major controlling factors in how <em>Horde_Argv</em> interprets command-line options are the action and type of each option, the most likely direction of extension is to add new actions and new types.</p>
-<blockquote>
-Adding new types</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/EXTEND</tt>, line 12)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+<div class="section" id="adding-new-types">
+<h1>Adding new types</h1>
 <p>To add new types, you need to define your own subclass of the <tt class="docutils literal">Horde_Argv_Option class</tt>. This class has a couple of properties that define <em>Horde_Argv</em>'s types: <tt class="docutils literal">$TYPES</tt> and <tt class="docutils literal">$TYPE_CHECKER</tt>.</p>
 <p><tt class="docutils literal">$TYPES</tt> is a tuple of type names; in your subclass, simply define a new tuple <tt class="docutils literal">$TYPES</tt> that builds on the standard one.</p>
 <p><tt class="docutils literal">$TYPE_CHECKER</tt> is a dictionary mapping type names to type-checking functions. A type-checking function has the following signature:</p>
@@ -54,13 +50,10 @@ $option_list = array(
     )
 );
 parser = new Horde_Argv_Parser(array('optionList' =&gt; $option_list));
-
-Adding new actions
 </pre>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/EXTEND</tt>, line 74)</p>
-Literal block ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="adding-new-actions">
+<h1>Adding new actions</h1>
 <p>Adding new actions is a bit trickier, because you have to understand that <em>Horde_Argv</em> has a couple of classifications for actions:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -126,30 +119,28 @@ class MyOption extends Horde_Argv_Option
 }
 </pre>
 <p>Features of note:</p>
-<ul class="simple">
-<li><tt class="docutils literal">extend</tt> both expects a value on the command-line and stores that value somewhere, so it goes in both <tt class="docutils literal">$STORE_ACTIONS</tt> and <tt class="docutils literal">$TYPED_ACTIONS</tt></li>
-<li><tt class="docutils literal"><span class="pre">MyOption::takeAction()</span></tt> implements just this one new action, and passes control back to <tt class="docutils literal"><span class="pre">Horde_Argv_Option::takeAction()</span></tt> for the standard <em>Horde_Argv</em> actions</li>
-<li><tt class="docutils literal">$values</tt> is an instance of the <tt class="docutils literal">Horde_Argv_Values</tt> class, which provides the very useful <tt class="docutils literal">ensureValue()</tt> method. <tt class="docutils literal">ensureValue()</tt> is essentially a getter with a safety valve; it is called as
-<tt class="docutils literal"><span class="pre">$values-&gt;ensureValue($attr,</span> $value)</tt>
-If the <tt class="docutils literal">$attr</tt> property of <tt class="docutils literal">$values</tt> doesn't exist or is <tt class="docutils literal">null</tt>, then <tt class="docutils literal">ensureValue()</tt> first sets it to <tt class="docutils literal">$value</tt>, and then returns <tt class="docutils literal">$value</tt>. This is very handy for actions like <tt class="docutils literal">extend</tt>, <tt class="docutils literal">append</tt>, and <tt class="docutils literal">count</tt>, all of which accumulate data in a variable and expect that variable to be of a certain type (an array for the first two, an integer for the latter). Using <tt class="docutils literal">ensureValue()</tt> means that scripts using your action don't have to worry about setting a default value for the option destinations in question; they can just leave the default as <tt class="docutils literal">null</tt> and <tt class="docutils literal">ensureValue()</tt> will take care of getting it right when it's needed.</li>
+<ul>
+<li><p class="first"><tt class="docutils literal">extend</tt> both expects a value on the command-line and stores that value somewhere, so it goes in both <tt class="docutils literal">$STORE_ACTIONS</tt> and <tt class="docutils literal">$TYPED_ACTIONS</tt></p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">MyOption::takeAction()</span></tt> implements just this one new action, and passes control back to <tt class="docutils literal"><span class="pre">Horde_Argv_Option::takeAction()</span></tt> for the standard <em>Horde_Argv</em> actions</p>
+</li>
+<li><p class="first"><tt class="docutils literal">$values</tt> is an instance of the <tt class="docutils literal">Horde_Argv_Values</tt> class, which provides the very useful <tt class="docutils literal">ensureValue()</tt> method. <tt class="docutils literal">ensureValue()</tt> is essentially a getter with a safety valve; it is called as</p>
+<p><tt class="docutils literal"><span class="pre">$values-&gt;ensureValue($attr,</span> $value)</tt>
+If the <tt class="docutils literal">$attr</tt> property of <tt class="docutils literal">$values</tt> doesn't exist or is <tt class="docutils literal">null</tt>, then <tt class="docutils literal">ensureValue()</tt> first sets it to <tt class="docutils literal">$value</tt>, and then returns <tt class="docutils literal">$value</tt>. This is very handy for actions like <tt class="docutils literal">extend</tt>, <tt class="docutils literal">append</tt>, and <tt class="docutils literal">count</tt>, all of which accumulate data in a variable and expect that variable to be of a certain type (an array for the first two, an integer for the latter). Using <tt class="docutils literal">ensureValue()</tt> means that scripts using your action don't have to worry about setting a default value for the option destinations in question; they can just leave the default as <tt class="docutils literal">null</tt> and <tt class="docutils literal">ensureValue()</tt> will take care of getting it right when it's needed.</p>
+</li>
 </ul>
-<blockquote>
-Other reasons to extend Horde_Argv</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/EXTEND</tt>, line 142)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="other-reasons-to-extend-horde-argv">
+<h1>Other reasons to extend Horde_Argv</h1>
 <p>Adding new types and new actions are the big, obvious reasons why you might want to extend <em>Horde_Argv</em>. I can think of at least two other areas to play with.</p>
 <p>First, the simple one: <tt class="docutils literal">Horde_Argv_Parser</tt> tries to be helpful by calling <tt class="docutils literal">exit()</tt> when appropriate, i.e. when there's an error on the command line or when the user requests help. In the former case, the traditional course of letting the script crash with a traceback is unacceptable; it will make users think there's a bug in your script when they make a command-line error. In the latter case, there's generally not much point in carrying on after printing a help message.</p>
 <p>If this behaviour bothers you, it shouldn't be too hard to &quot;fix&quot; it. You'll have to</p>
 <ol class="arabic simple">
 <li>subclass <tt class="docutils literal">Horde_Argv_Parser</tt> and override <tt class="docutils literal">parserError()</tt></li>
+<li>subclass <tt class="docutils literal">Horde_Argv_Option</tt> and override <tt class="docutils literal">takeAction()</tt> -- you'll need to provide your own handling of the <tt class="docutils literal">help</tt> action that doesn't call <tt class="docutils literal">exit()</tt></li>
 </ol>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/EXTEND</tt>, line 151)</p>
-Enumerated list ends without a blank line; unexpected unindent.</div>
-<p>2. subclass <tt class="docutils literal">Horde_Argv_Option</tt> and override <tt class="docutils literal">takeAction()</tt> -- you'll need to provide your own handling of the <tt class="docutils literal">help</tt> action that doesn't call <tt class="docutils literal">exit()</tt>
-The second, much more complex, possibility is to override the command-line syntax implemented by <em>Horde_Argv</em>. In this case, you'd leave the whole machinery of option actions and types alone, but rewrite the code that processes <tt class="docutils literal">argv</tt>. You'll need to subclass <tt class="docutils literal">Horde_Argv_Parser</tt> in any case; depending on how radical a rewrite you want, you'll probably need to override one or all of <tt class="docutils literal">parseArgs()</tt>, <tt class="docutils literal">_processLongOpt()</tt>, and <tt class="docutils literal">_processShortOpts()</tt>.</p>
+<p>The second, much more complex, possibility is to override the command-line syntax implemented by <em>Horde_Argv</em>. In this case, you'd leave the whole machinery of option actions and types alone, but rewrite the code that processes <tt class="docutils literal">argv</tt>. You'll need to subclass <tt class="docutils literal">Horde_Argv_Parser</tt> in any case; depending on how radical a rewrite you want, you'll probably need to override one or all of <tt class="docutils literal">parseArgs()</tt>, <tt class="docutils literal">_processLongOpt()</tt>, and <tt class="docutils literal">_processShortOpts()</tt>.</p>
 <p>Both of these are left as an exercise for the reader. I have not tried to implement either myself, since I'm quite happy with <em>Horde_Argv</em>'s default behaviour (naturally).</p>
 <p>Happy hacking, and don't forget: Use the Source, Luke.</p>
+</div>
 </div>

@@ -8,15 +8,8 @@
 <li>define the option itself using the callback action</li>
 <li>write the callback; this is a function (or method) that takes at least four arguments, as described below</li>
 </ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 15)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<blockquote>
-Defining a callback option</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 16)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+<div class="section" id="defining-a-callback-option">
+<h1>Defining a callback option</h1>
 <p>As always, the easiest way to define a callback option is by using the <tt class="docutils literal">addOption()</tt> method of your <tt class="docutils literal">Horde_Argv_Parser</tt> object. The only option attribute you must specify is callback, the function to call:</p>
 <pre class="literal-block">
 $parser-&gt;addOption('-c', array('action' =&gt; 'callback', 'callback' =&gt; 'my_callback'));
@@ -32,32 +25,26 @@ function my_callback($option, $opt, $value, $parser)
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name"><tt class="docutils literal">type</tt>:</th><td class="field-body"><p class="first">has its usual meaning: as with the <tt class="docutils literal">store</tt> or <tt class="docutils literal">append</tt>
+<tr class="field"><th class="field-name"><tt class="docutils literal">type</tt>:</th><td class="field-body">has its usual meaning: as with the <tt class="docutils literal">store</tt> or <tt class="docutils literal">append</tt>
 actions, it instructs <em>Horde_Argv</em> to consume one argument and convert it to
 <tt class="docutils literal">type</tt>. Rather than storing the converted value(s) anywhere, though,
-<em>Horde_Argv</em> passes it to your callback function.</p>
-</td>
+<em>Horde_Argv</em> passes it to your callback function.</td>
 </tr>
-<tr class="field"><th class="field-name"><tt class="docutils literal">nargs</tt>:</th><td class="field-body"><p class="first">also has its usual meaning: if it is supplied and &gt; 1,
+<tr class="field"><th class="field-name"><tt class="docutils literal">nargs</tt>:</th><td class="field-body">also has its usual meaning: if it is supplied and &gt; 1,
 <em>Horde_Argv</em> will consume <tt class="docutils literal">nargs</tt> arguments, each of which must be convertible
-to <tt class="docutils literal">type</tt>. It then passes an array of converted values to your callback.</p>
-</td>
+to <tt class="docutils literal">type</tt>. It then passes an array of converted values to your callback.</td>
 </tr>
-<tr class="field"><th class="field-name"><tt class="docutils literal">callback_args</tt>:</th><td class="field-body"><p class="first">an array of extra positional arguments to pass to the
-callback</p>
-</td>
+<tr class="field"><th class="field-name"><tt class="docutils literal">callback_args</tt>:</th><td class="field-body">an array of extra positional arguments to pass to the
+callback</td>
 </tr>
 <tr class="field"><th class="field-name" colspan="2"><tt class="docutils literal">callback_kwargs</tt>:</th></tr>
-<tr class="field"><td>&nbsp;</td><td class="field-body"><p class="first">a hash of extra keyword arguments to pass to the callback</p>
-<p class="last">How callbacks are called</p>
-</td>
+<tr class="field"><td>&nbsp;</td><td class="field-body">a hash of extra keyword arguments to pass to the callback</td>
 </tr>
 </tbody>
 </table>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 48)</p>
-Field list ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="how-callbacks-are-called">
+<h1>How callbacks are called</h1>
 <p>All callbacks are called as follows:</p>
 <pre class="literal-block">
 func(Horde_Argv_Option $option,
@@ -104,27 +91,19 @@ instance attributes:</p>
 <tt class="docutils literal">callback_args</tt> option attribute.</p>
 </td>
 </tr>
-<tr class="field"><th class="field-name"><tt class="docutils literal">$kwargs</tt>:</th><td class="field-body"><dl class="first docutils">
-<dt>is a dictionary of arbitrary keyword arguments supplied via</dt>
-<dd><p class="first last"><tt class="docutils literal">callback_kwargs</tt>.</p>
-</dd>
-</dl>
-<p class="last">Error handling</p>
+<tr class="field"><th class="field-name"><tt class="docutils literal">$kwargs</tt>:</th><td class="field-body"><p class="first last">is a dictionary of arbitrary keyword arguments supplied via
+<tt class="docutils literal">callback_kwargs</tt>.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 87)</p>
-Field list ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="error-handling">
+<h1>Error handling</h1>
 <p>The callback function should throw <tt class="docutils literal">Horde_Argv_OptionValueException</tt> if there are any problems with the option or its argument(s). <em>Horde_Argv</em> catches this and terminates the program, printing the error message you supply to stderr. Your message should be clear, concise, accurate, and mention the option at fault. Otherwise, the user will have a hard time figuring out what he did wrong.</p>
-<blockquote>
-Examples part 1: no arguments</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 92)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="examples-part-1-no-arguments">
+<h1>Examples part 1: no arguments</h1>
 <p>Here's an example of a callback option that takes no arguments, and simply records that the option was seen:</p>
 <pre class="literal-block">
 function record_foo_seen($option, $opt, $value, $parser)
@@ -192,12 +171,9 @@ $parser-&gt;addOption(
 );
 </pre>
 <p>(The definition of <tt class="docutils literal">is_moon_full()</tt> is left as an exercise for the reader.)</p>
-<blockquote>
-Examples part 2: fixed arguments</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 171)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="examples-part-2-fixed-arguments">
+<h1>Examples part 2: fixed arguments</h1>
 <p>Things get slightly more interesting when you define callback options that take a fixed number of arguments. Specifying that a callback option takes arguments is similar to defining a <tt class="docutils literal">store</tt> or <tt class="docutils literal">append</tt> option: if you define <tt class="docutils literal">type</tt>, then the option takes one argument that must be convertible to that type; if you further define <tt class="docutils literal">nargs</tt>, then the option takes <tt class="docutils literal">nargs</tt> arguments.</p>
 <p>Here's an example that just emulates the standard <tt class="docutils literal">store</tt> action:</p>
 <pre class="literal-block">
@@ -213,21 +189,15 @@ $parser-&gt;addOption(
 );
 </pre>
 <p>Note that <em>Horde_Argv</em> takes care of consuming 3 arguments and converting them to integers for you; all you have to do is store them. (Or whatever: obviously you don't need a callback for this example. Use your imagination!)</p>
-<blockquote>
-Examples part 3: variable arguments</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 193)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="examples-part-3-variable-arguments">
+<h1>Examples part 3: variable arguments</h1>
 <p>Things get hairy when you want an option to take a variable number of arguments. For this case, you must write a callback, as <em>Horde_Argv</em> doesn't provide any built-in capabilities for it. And you have to deal with certain intricacies of conventional Unix command-line parsing that <em>Horde_Argv</em> normally handles for you. In particular, callbacks have to worry about bare &quot;--&quot; and &quot;-&quot; arguments; the convention is:</p>
 <ul class="simple">
 <li>bare &quot;--&quot;, if not the argument to some option, causes command-line processing to halt and the &quot;--&quot; itself is lost</li>
 <li>bare &quot;-&quot; similarly causes command-line processing to halt, but the &quot;-&quot; itself is kept</li>
 <li>either &quot;--&quot; or &quot;-&quot; can be option arguments</li>
 </ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/CALLBACKS</tt>, line 200)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
 <p>If you want an option that takes a variable number of arguments, there are several subtle, tricky issues to worry about. The exact implementation you choose will be based on which trade-offs you're willing to make for your application (which is why <em>Horde_Argv</em> doesn't support this sort of thing directly).</p>
 <p>Nevertheless, here's a stab at a callback for an option with variable arguments:</p>
 <pre class="literal-block">
@@ -262,4 +232,5 @@ $parser-&gt;addOption(
 );
 </pre>
 <p>The main weakness with this particular implementation is that negative numbers in the arguments following &quot;-c&quot; will be interpreted as further options, rather than as arguments to &quot;-c&quot;. Fixing this is left as an exercise for the reader.</p>
+</div>
 </div>

@@ -4,18 +4,22 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#advanced-usage" id="id1">1&nbsp;&nbsp;&nbsp;Advanced Usage</a></li>
+<li><a class="reference internal" href="#advanced-usage" id="id1">1&nbsp;&nbsp;&nbsp;Advanced Usage</a><ul class="auto-toc">
+<li><a class="reference internal" href="#creating-and-populating-the-parser" id="id2">1.1&nbsp;&nbsp;&nbsp;Creating and populating the parser</a></li>
+<li><a class="reference internal" href="#defining-options" id="id3">1.2&nbsp;&nbsp;&nbsp;Defining options</a></li>
+<li><a class="reference internal" href="#option-actions" id="id4">1.3&nbsp;&nbsp;&nbsp;Option actions</a></li>
+<li><a class="reference internal" href="#option-types" id="id5">1.4&nbsp;&nbsp;&nbsp;Option types</a></li>
+<li><a class="reference internal" href="#querying-and-manipulating-your-option-parser" id="id6">1.5&nbsp;&nbsp;&nbsp;Querying and manipulating your option parser</a></li>
+<li><a class="reference internal" href="#conflicts-between-options" id="id7">1.6&nbsp;&nbsp;&nbsp;Conflicts between options</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="advanced-usage">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Advanced Usage</a></h1>
 <p>This is reference documentation. If you haven't read the <a class="reference external" href="BasicUsage">Basic Usage</a> tutorial document yet, do so now.</p>
-<blockquote>
-Creating and populating the parser</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/ADVANCED</tt>, line 17)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+<div class="section" id="creating-and-populating-the-parser">
+<h2><a class="toc-backref" href="#id2">1.1&nbsp;&nbsp;&nbsp;Creating and populating the parser</a></h2>
 <p>There are several ways to populate the parser with options. One way is to pass a list of <tt class="docutils literal"><span class="pre">Horde_Argv_Option``s</span> to the ``Horde_Argv_Parser</tt> constructor:</p>
 <pre class="literal-block">
 $parser = new Horde_Argv_Parser(array('optionList' =&gt; array(
@@ -58,15 +62,9 @@ $parser-&gt;addOption(
 <li>pass it an <tt class="docutils literal">Horde_Argv_Option</tt> instance</li>
 <li>pass it any combination of positional and keyword arguments that are acceptable to <tt class="docutils literal">new Horde_Argv_Option()</tt> (ie., to the <tt class="docutils literal">Horde_Argv_Option</tt> constructor), and it will create the <tt class="docutils literal">Horde_Argv_Option</tt> instance for you (shown above)</li>
 </ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/ADVANCED</tt>, line 67)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
-<blockquote>
-Defining options</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/ADVANCED</tt>, line 68)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="defining-options">
+<h2><a class="toc-backref" href="#id3">1.2&nbsp;&nbsp;&nbsp;Defining options</a></h2>
 <p>Each <tt class="docutils literal">Horde_Argv_Option</tt> instance represents a set of synonymous command-line options, ie. options that have the same meaning and effect, but different spellings. You can specify any number of short or long option strings, but you must specify at least one option string.</p>
 <p>To define an option with only a short option string:</p>
 <pre class="literal-block">
@@ -127,16 +125,13 @@ new Horde_Argv_Option('-f', '--file', array('action' =&gt; 'store', 'type' =&gt;
 $options-&gt;filename = 'foo';
 </pre>
 <p>Clearly, the <tt class="docutils literal">type</tt> and <tt class="docutils literal">dest</tt> arguments are almost as important as <tt class="docutils literal">action</tt>. <tt class="docutils literal">action</tt> is the only attribute that is meaningful for all options, though, so it is the most important.</p>
-<blockquote>
-Option actions</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/ADVANCED</tt>, line 138)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="option-actions">
+<h2><a class="toc-backref" href="#id4">1.3&nbsp;&nbsp;&nbsp;Option actions</a></h2>
 <p>The various option actions all have slightly different requirements and effects. Most actions have several relevant option attributes which you may specify to guide <em>Horde_Argv</em>'s behaviour; a few have required attributes, which you must specify for any option using that action.</p>
 <ul>
-<li><p class="first"><tt class="docutils literal">store</tt> [relevant: <tt class="docutils literal">type</tt>, <tt class="docutils literal">dest</tt>, <tt class="docutils literal">nargs</tt>, <tt class="docutils literal">choices</tt>]
-The option must be followed by an argument, which is converted to a value according to <tt class="docutils literal">type</tt> and stored in <tt class="docutils literal">dest</tt>. If <tt class="docutils literal">nargs</tt> &gt; 1, multiple arguments will be consumed from the command line; all will be converted according to <tt class="docutils literal">type</tt> and stored to <tt class="docutils literal">dest</tt> as an array. See the &quot;Option types&quot; section below.</p>
+<li><p class="first"><tt class="docutils literal">store</tt> [relevant: <tt class="docutils literal">type</tt>, <tt class="docutils literal">dest</tt>, <tt class="docutils literal">nargs</tt>, <tt class="docutils literal">choices</tt>]</p>
+<p>The option must be followed by an argument, which is converted to a value according to <tt class="docutils literal">type</tt> and stored in <tt class="docutils literal">dest</tt>. If <tt class="docutils literal">nargs</tt> &gt; 1, multiple arguments will be consumed from the command line; all will be converted according to <tt class="docutils literal">type</tt> and stored to <tt class="docutils literal">dest</tt> as an array. See the &quot;Option types&quot; section below.</p>
 <p>If <tt class="docutils literal">choices</tt> is supplied (an array of strings), the <tt class="docutils literal">type</tt> defaults to <tt class="docutils literal">choice</tt>.</p>
 <p>If <tt class="docutils literal">type</tt> is not supplied, it defaults to <tt class="docutils literal">string</tt>.</p>
 <p>If <tt class="docutils literal">dest</tt> is not supplied, <em>Horde_Argv</em> derives a destination from the first long option strings (e.g., &quot;--foo-bar&quot; implies &quot;foo_bar&quot;). If there are no long option strings, <em>Horde_Argv</em> derives a destination from the first short option string (e.g., &quot;-f&quot; implies &quot;f&quot;).</p>
@@ -159,8 +154,8 @@ $options-&gt;point = array(1.0, -3.5, 4.0);
 $options-&gt;f = 'bar.txt';
 </pre>
 <ul>
-<li><p class="first"><tt class="docutils literal">store_const</tt> [required: <tt class="docutils literal">const</tt>; relevant: <tt class="docutils literal">dest</tt>]
-The value <tt class="docutils literal">const</tt> is stored in <tt class="docutils literal">dest</tt>.</p>
+<li><p class="first"><tt class="docutils literal">store_const</tt> [required: <tt class="docutils literal">const</tt>; relevant: <tt class="docutils literal">dest</tt>]</p>
+<p>The value <tt class="docutils literal">const</tt> is stored in <tt class="docutils literal">dest</tt>.</p>
 <p>Example:</p>
 </li>
 </ul>
@@ -175,11 +170,11 @@ $parser-&gt;addOption('--noisy', array('action' =&gt; 'store_const', 'const' =&g
 $options-&gt;verbose = 2;
 </pre>
 <ul>
-<li><p class="first"><tt class="docutils literal">store_true</tt> [relevant: <tt class="docutils literal">dest</tt>]
-A special case of <tt class="docutils literal">store_const</tt> that stores a <tt class="docutils literal">TRUE</tt> value to <tt class="docutils literal">dest</tt>.</p>
+<li><p class="first"><tt class="docutils literal">store_true</tt> [relevant: <tt class="docutils literal">dest</tt>]</p>
+<p>A special case of <tt class="docutils literal">store_const</tt> that stores a <tt class="docutils literal">TRUE</tt> value to <tt class="docutils literal">dest</tt>.</p>
 </li>
-<li><p class="first"><tt class="docutils literal">store_false</tt> [relevant: <tt class="docutils literal">dest</tt>]
-Like <tt class="docutils literal">store_true</tt>, but stores a <tt class="docutils literal">FALSE</tt> value.</p>
+<li><p class="first"><tt class="docutils literal">store_false</tt> [relevant: <tt class="docutils literal">dest</tt>]</p>
+<p>Like <tt class="docutils literal">store_true</tt>, but stores a <tt class="docutils literal">FALSE</tt> value.</p>
 <p>Example:</p>
 </li>
 </ul>
@@ -188,8 +183,8 @@ $parser-&gt;addOption(null, '--clobber', array('action' =&gt; 'store_true', 'des
 $parser-&gt;addOption(null, '--no-clobber', array('action' =&gt; 'store_false', 'dest' =&gt; 'clobber'));
 </pre>
 <ul>
-<li><p class="first"><tt class="docutils literal">append</tt> [relevant: <tt class="docutils literal">type</tt>, <tt class="docutils literal">dest</tt>, <tt class="docutils literal">nargs</tt>, <tt class="docutils literal">choices</tt>]
-The option must be followed by an argument, which is appended to the array in <tt class="docutils literal">dest</tt>. If no default value for <tt class="docutils literal">dest</tt> is supplied, an empty array is automatically created when <em>Horde_Argv</em> first encounters this option on the command-line. If <tt class="docutils literal">nargs</tt> &gt; 1, multiple arguments are consumed, and an array of length <tt class="docutils literal">nargs</tt> is appended to <tt class="docutils literal">dest</tt>.</p>
+<li><p class="first"><tt class="docutils literal">append</tt> [relevant: <tt class="docutils literal">type</tt>, <tt class="docutils literal">dest</tt>, <tt class="docutils literal">nargs</tt>, <tt class="docutils literal">choices</tt>]</p>
+<p>The option must be followed by an argument, which is appended to the array in <tt class="docutils literal">dest</tt>. If no default value for <tt class="docutils literal">dest</tt> is supplied, an empty array is automatically created when <em>Horde_Argv</em> first encounters this option on the command-line. If <tt class="docutils literal">nargs</tt> &gt; 1, multiple arguments are consumed, and an array of length <tt class="docutils literal">nargs</tt> is appended to <tt class="docutils literal">dest</tt>.</p>
 <p>The defaults for <tt class="docutils literal">type</tt> and <tt class="docutils literal">dest</tt> are the same as for the <tt class="docutils literal">store</tt> action.</p>
 <p>Example:</p>
 </li>
@@ -209,8 +204,8 @@ $options-&gt;tracks[] = intval('3');
 $options-&gt;tracks[] = intval('4');
 </pre>
 <ul>
-<li><p class="first"><tt class="docutils literal">count</tt> [relevant: <tt class="docutils literal">dest</tt>]
-Increment the integer stored at <tt class="docutils literal">dest</tt>. <tt class="docutils literal">dest</tt> is set to zero before being incremented the first time (unless you supply a default value).</p>
+<li><p class="first"><tt class="docutils literal">count</tt> [relevant: <tt class="docutils literal">dest</tt>]</p>
+<p>Increment the integer stored at <tt class="docutils literal">dest</tt>. <tt class="docutils literal">dest</tt> is set to zero before being incremented the first time (unless you supply a default value).</p>
 <p>Example:</p>
 </li>
 </ul>
@@ -228,9 +223,10 @@ $options-&gt;verbosity += 1;
 <pre class="literal-block">
 $options-&gt;verbosity += 1;
 </pre>
-<ul class="simple">
-<li><tt class="docutils literal">callback</tt> [required: <tt class="docutils literal">callback</tt>; relevant: <tt class="docutils literal">type</tt>, <tt class="docutils literal">nargs</tt>, <tt class="docutils literal">callback_args</tt>, <tt class="docutils literal">callback_kwargs</tt>]
-Call the function specified by <tt class="docutils literal">callback</tt>. The signature of this function should be</li>
+<ul>
+<li><p class="first"><tt class="docutils literal">callback</tt> [required: <tt class="docutils literal">callback</tt>; relevant: <tt class="docutils literal">type</tt>, <tt class="docutils literal">nargs</tt>, <tt class="docutils literal">callback_args</tt>, <tt class="docutils literal">callback_kwargs</tt>]</p>
+<p>Call the function specified by <tt class="docutils literal">callback</tt>. The signature of this function should be</p>
+</li>
 </ul>
 <pre class="literal-block">
 func(Horde_Argv_Option $option,
@@ -243,8 +239,8 @@ func(Horde_Argv_Option $option,
  See Option Callbacks for more detail.
 </pre>
 <ul>
-<li><p class="first"><tt class="docutils literal">help</tt> [relevant: none]
-Prints a complete help message for all the options in the current option parser. The help message is constructed from the <tt class="docutils literal">usage</tt> string passed to <tt class="docutils literal">Horde_Argv_Parser</tt>'s constructor and the <tt class="docutils literal">help</tt> string passed to every option.</p>
+<li><p class="first"><tt class="docutils literal">help</tt> [relevant: none]</p>
+<p>Prints a complete help message for all the options in the current option parser. The help message is constructed from the <tt class="docutils literal">usage</tt> string passed to <tt class="docutils literal">Horde_Argv_Parser</tt>'s constructor and the <tt class="docutils literal">help</tt> string passed to every option.</p>
 <p>If no help string is supplied for an option, it will still be listed in the help message. To omit an option entirely, use the special value <tt class="docutils literal"><span class="pre">Horde_Argv_Option::SUPPRESS_HELP</span></tt>.</p>
 <p>Example:</p>
 </li>
@@ -274,62 +270,49 @@ options:
 
  After printing the help message, *Horde_Argv* terminates your process with ``exit(0)``.
 </pre>
-<ul class="simple">
-<li><tt class="docutils literal">version</tt> [relevant: none]
-Prints the version number supplied to the <tt class="docutils literal">Horde_Argv_Parser</tt> to stdout and exits. The version number is actually formatted and printed by the <tt class="docutils literal">printVersion()</tt> method of <tt class="docutils literal">Horde_Argv_Parser</tt>. Generally only relevant if the version argument is supplied to the <tt class="docutils literal">Horde_Argv_Parser</tt> constructor.</li>
+<ul>
+<li><p class="first"><tt class="docutils literal">version</tt> [relevant: none]</p>
+<p>Prints the version number supplied to the <tt class="docutils literal">Horde_Argv_Parser</tt> to stdout and exits. The version number is actually formatted and printed by the <tt class="docutils literal">printVersion()</tt> method of <tt class="docutils literal">Horde_Argv_Parser</tt>. Generally only relevant if the version argument is supplied to the <tt class="docutils literal">Horde_Argv_Parser</tt> constructor.</p>
+</li>
 </ul>
-<blockquote>
-Option types</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/ADVANCED</tt>, line 298)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="option-types">
+<h2><a class="toc-backref" href="#id5">1.4&nbsp;&nbsp;&nbsp;Option types</a></h2>
 <p><em>Horde_Argv</em> has six built-in option types: <tt class="docutils literal">string</tt>, <tt class="docutils literal">int</tt>, <tt class="docutils literal">long</tt>, <tt class="docutils literal">choice</tt>, <tt class="docutils literal">float</tt> and <tt class="docutils literal">complex</tt>. If you need to add new option types, see <a class="reference external" href="ExtendingHorde_Argv">Extending Horde_Argv</a>.</p>
 <p>Arguments to string options are not checked or converted in any way: the text on the command line is stored in the destination (or passed to the callback) as-is.</p>
 <p>Integer arguments are passed to <tt class="docutils literal">intval()</tt> to convert them to PHP integers. If <tt class="docutils literal">intval()</tt> fails, so will <em>Horde_Argv</em>, although with a more useful error message. (Internally, <em>Horde_Argv</em> throws <tt class="docutils literal">Horde_Argv_OptionValueException</tt> from <tt class="docutils literal">Horde_Argv_Option#checkBuiltin()</tt>; <tt class="docutils literal">Horde_Argv_Parser</tt> catches this exception higher up and terminates your program with a useful error message.)</p>
 <p>Likewise, float arguments are passed to <tt class="docutils literal">floatval()</tt> for conversion, long arguments also to <tt class="docutils literal">intval()</tt>, and complex arguments are not handled yet. Apart from that, they are handled identically to integer arguments.</p>
 <p><tt class="docutils literal">choice</tt> options are a subtype of <tt class="docutils literal">string</tt> options. The <tt class="docutils literal">choices</tt> option attribute (an array of strings) defines the set of allowed option arguments. <tt class="docutils literal">Horde_Argv_Option#checkChoice()</tt> compares user-supplied option arguments against this master list and throws <tt class="docutils literal">Horde_Argv_OptionValueException</tt> if an invalid string is given.</p>
-<blockquote>
-Querying and manipulating your option parser</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/ADVANCED</tt>, line 313)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="querying-and-manipulating-your-option-parser">
+<h2><a class="toc-backref" href="#id6">1.5&nbsp;&nbsp;&nbsp;Querying and manipulating your option parser</a></h2>
 <p>Sometimes, it's useful to poke around your option parser and see what's there. <tt class="docutils literal">Horde_Argv_Parser</tt> provides a couple of methods to help you out:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field"><th class="field-name" colspan="2"><tt class="docutils literal">boolean hasOption(string $opt_str)</tt>:</th></tr>
-<tr class="field"><td>&nbsp;</td><td class="field-body"><p class="first">Given an option string such as
+<tr class="field"><td>&nbsp;</td><td class="field-body">Given an option string such as
 &quot;-q&quot; or &quot;--verbose&quot;, returns <tt class="docutils literal">true</tt> if the <tt class="docutils literal">Horde_Argv_Parser</tt> has an option
-with that option string.</p>
-</td>
+with that option string.</td>
 </tr>
 <tr class="field"><th class="field-name" colspan="2"><tt class="docutils literal">Horde_Argv_Option getOption(string $opt_str)</tt>:</th></tr>
-<tr class="field"><td>&nbsp;</td><td class="field-body"><p class="first">Returns the
+<tr class="field"><td>&nbsp;</td><td class="field-body">Returns the
 <tt class="docutils literal">Horde_Argv_Option</tt> instance that implements the supplied option string, or
-<tt class="docutils literal">null</tt> if no options implement it.</p>
-</td>
+<tt class="docutils literal">null</tt> if no options implement it.</td>
 </tr>
 <tr class="field"><th class="field-name" colspan="2"><tt class="docutils literal">removeOption(string $opt_str)</tt>:</th></tr>
-<tr class="field"><td>&nbsp;</td><td class="field-body"><dl class="first docutils">
-<dt>If the <tt class="docutils literal">Horde_Argv_Parser</tt></dt>
-<dd><p class="first last">has an option corresponding to <tt class="docutils literal">$opt_str</tt>, that option is removed. If that
+<tr class="field"><td>&nbsp;</td><td class="field-body">If the <tt class="docutils literal">Horde_Argv_Parser</tt>
+has an option corresponding to <tt class="docutils literal">$opt_str</tt>, that option is removed. If that
 option provided any other option strings, all of those option strings become
 invalid. If <tt class="docutils literal">$opt_str</tt> does not occur in any option belonging to this
-<tt class="docutils literal">Horde_Argv_Parser</tt>, throws <tt class="docutils literal">InvalidArgumentException</tt>.</p>
-</dd>
-</dl>
-<p class="last">Conflicts between options</p>
-</td>
+<tt class="docutils literal">Horde_Argv_Parser</tt>, throws <tt class="docutils literal">InvalidArgumentException</tt>.</td>
 </tr>
 </tbody>
 </table>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/ADVANCED</tt>, line 330)</p>
-Field list ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="conflicts-between-options">
+<h2><a class="toc-backref" href="#id7">1.6&nbsp;&nbsp;&nbsp;Conflicts between options</a></h2>
 <p>If you're not careful, it's easy to define conflicting options:</p>
 <pre class="literal-block">
 $parser-&gt;addOption('-n', '--dry-run', ...);
@@ -386,5 +369,6 @@ options:
   -n, --noisy   be noisy
   --dry-run     new dry-run option
 </pre>
+</div>
 </div>
 </div>

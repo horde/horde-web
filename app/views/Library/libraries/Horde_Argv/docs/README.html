@@ -4,7 +4,20 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#basic-usage" id="id1">1&nbsp;&nbsp;&nbsp;Basic Usage</a></li>
+<li><a class="reference internal" href="#basic-usage" id="id1">1&nbsp;&nbsp;&nbsp;Basic Usage</a><ul class="auto-toc">
+<li><a class="reference internal" href="#option-actions" id="id2">1.1&nbsp;&nbsp;&nbsp;Option actions</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-store-action" id="id3">1.1.1&nbsp;&nbsp;&nbsp;The store action</a></li>
+<li><a class="reference internal" href="#handling-flag-boolean-options" id="id4">1.1.2&nbsp;&nbsp;&nbsp;Handling flag (boolean) options</a></li>
+<li><a class="reference internal" href="#other-actions" id="id5">1.1.3&nbsp;&nbsp;&nbsp;Other actions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#default-values" id="id6">1.2&nbsp;&nbsp;&nbsp;Default values</a></li>
+<li><a class="reference internal" href="#generating-help" id="id7">1.3&nbsp;&nbsp;&nbsp;Generating help</a></li>
+<li><a class="reference internal" href="#print-a-version-number" id="id8">1.4&nbsp;&nbsp;&nbsp;Print a version number</a></li>
+<li><a class="reference internal" href="#error-handling" id="id9">1.5&nbsp;&nbsp;&nbsp;Error-handling</a></li>
+<li><a class="reference internal" href="#putting-it-all-together" id="id10">1.6&nbsp;&nbsp;&nbsp;Putting it all together</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <p><em>Horde_Argv</em> is a library for parsing command line arguments with various actions, providing help, grouping options, and more. It is ported from Python's Optik (<a class="reference external" href="http://optik.sourceforge.net/">http://optik.sourceforge.net/</a>).</p>
@@ -39,24 +52,13 @@ list($values, $args) = $parser-&gt;parseArgs();
 <li>$values is a <tt class="docutils literal">Horde_Argv_Values</tt> object containing values for all of your options -- e.g. if &quot;--file&quot; takes a single string argument, then $values-&gt;file (or $values['file']) will be the filename supplied by the user, or NULL if the user did not supply that option.</li>
 <li>$args is the list of arguments left over after parsing options.</li>
 </ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 56)</p>
-Bullet list ends without a blank line; unexpected unindent.</div>
 <p>This tutorial document only covers the four most important option attributes: &quot;action&quot;, &quot;type&quot;, &quot;dest&quot; (destination), and &quot;help&quot;. Of these, &quot;action&quot; is the most fundamental.</p>
-<blockquote>
-Option actions</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 59)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+<div class="section" id="option-actions">
+<h2><a class="toc-backref" href="#id2">1.1&nbsp;&nbsp;&nbsp;Option actions</a></h2>
 <p>Actions tell <em>Horde_Argv</em> what to do when it encounters an option on the command line. There is a fixed set of actions hard-coded into <em>Horde_Argv</em>; adding new actions is an advanced topic covered in <a class="reference external" href="ExtendingHorde_Argv">Extending Horde_Argv</a>. Most actions tell <em>Horde_Argv</em> to store a value in some variable -- for example, take a string from the command line and store it in an attribute of options.</p>
 <p>If you don't specify an option action, <em>Horde_Argv</em> defaults to &quot;store&quot;.</p>
-<blockquote>
-The store action</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 68)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+<div class="section" id="the-store-action">
+<h3><a class="toc-backref" href="#id3">1.1.1&nbsp;&nbsp;&nbsp;The store action</a></h3>
 <p>The most common option action is store, which tells <em>Horde_Argv</em> to take the next argument (or the remainder of the current argument), ensure that it is of the correct type, and store it to your chosen destination.</p>
 <p>For example:</p>
 <pre class="literal-block">
@@ -89,12 +91,9 @@ $parser-&gt;addOption('-f', '--file', array('dest' =&gt; 'filename'))
 </pre>
 <p>If you don't supply a destination, <em>Horde_Argv</em> figures out a sensible default from the option strings: if the first long option string is &quot;--foo-bar&quot;, then the default destination is &quot;foo_bar&quot;. If there are no long option strings, <em>Horde_Argv</em> looks at the first short option: the default destination for &quot;-f&quot; is &quot;f&quot;.</p>
 <p>Adding types is covered in &quot;Extending <em>Horde_Argv</em>&quot;.</p>
-<blockquote>
-Handling flag (boolean) options</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 120)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="handling-flag-boolean-options">
+<h3><a class="toc-backref" href="#id4">1.1.2&nbsp;&nbsp;&nbsp;Handling flag (boolean) options</a></h3>
 <p>Flag options -- set a variable to TRUE or FALSE when a particular option is seen -- are quite common. <em>Horde_Argv</em> supports them with two separate actions, &quot;store_true&quot; and &quot;store_false&quot;. For example, you might have a verbose flag that is turned on with &quot;-v&quot; and off with &quot;-q&quot;:</p>
 <pre class="literal-block">
 $parser-&gt;addOption('-v', array('action' =&gt; 'store_true', 'dest' =&gt; 'verbose'));
@@ -102,12 +101,9 @@ $parser-&gt;addOption('-q', array('action' =&gt; 'store_false', 'dest' =&gt; 've
 </pre>
 <p>Here we have two different options with the same destination, which is perfectly OK. (It just means you have to be a bit careful when setting default values -- see Default values, below.)</p>
 <p>When <em>Horde_Argv</em> sees &quot;-v&quot; on the command line, it sets the verbose attribute of the special &quot;option values&quot; object to a TRUE value; when it sees &quot;-q&quot;, it sets verbose to a FALSE value.</p>
-<blockquote>
-Other actions</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 134)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="other-actions">
+<h3><a class="toc-backref" href="#id5">1.1.3&nbsp;&nbsp;&nbsp;Other actions</a></h3>
 <p>Some other actions supported by <em>Horde_Argv</em> are:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -124,12 +120,10 @@ Block quote ends without a blank line; unexpected unindent.</div>
 </tbody>
 </table>
 <p>These are covered in the <a class="reference external" href="AdvancedUsage">Advanced Usage</a> and <a class="reference external" href="OptionCallbacks">Option Callbacks</a> documents.</p>
-<blockquote>
-Default values</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 149)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="default-values">
+<h2><a class="toc-backref" href="#id6">1.2&nbsp;&nbsp;&nbsp;Default values</a></h2>
 <p>All of the above examples involve setting some variable (the &quot;destination&quot;) when certain command-line options are seen. What happens if those options are never seen? Since we didn't supply any defaults, they are all set to NULL. Usually, this is just fine, but sometimes you want more control. To address that need, <em>Horde_Argv</em> lets you supply a default value for each destination, which is assigned before the command-line is parsed.</p>
 <p>First, consider the verbose/quiet example. If we want <em>Horde_Argv</em> to set verbose to TRUE unless &quot;-q&quot; is seen, then we can do this:</p>
 <pre class="literal-block">
@@ -155,12 +149,9 @@ $parser-&gt;addOption(...);
 list($values, $args) = $parser-&gt;parseArgs();
 </pre>
 <p>As before, the last value specified for a given option destination is the one that counts. For clarity, try to use one method or the other of setting default values, not both.</p>
-<blockquote>
-Generating help</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 189)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="generating-help">
+<h2><a class="toc-backref" href="#id7">1.3&nbsp;&nbsp;&nbsp;Generating help</a></h2>
 <p>There is one more feature that you will use in every script: <em>Horde_Argv</em>'s ability to generate help messages. All you have to do is supply a help value for each option. Let's create a new parser and populate it with user-friendly (documented) options:</p>
 <pre class="literal-block">
 $usage = 'usage: %prog [options] arg1 arg2';
@@ -199,24 +190,24 @@ options:
                        [default], 'expert'
 </pre>
 <p>There's a lot going on here to help <em>Horde_Argv</em> generate the best possible help message:</p>
-<ul class="simple">
-<li>the script defines its own usage message:
-<tt class="docutils literal">$usage = 'usage: %prog [options] arg1 arg2';</tt>
+<ul>
+<li><p class="first">the script defines its own usage message:</p>
+<p><tt class="docutils literal">$usage = 'usage: %prog [options] arg1 arg2';</tt>
 <em>Horde_Argv</em> expands &quot;%prog&quot; in the usage string to the name of the current script, i.e. basename($_SERVER['argv'][0]). The expanded string is then printed before the detailed option help.
-If you don't supply a usage string, <em>Horde_Argv</em> uses a bland but sensible default: &quot;usage: %prog [options]&quot;, which is fine if your script doesn't take any positional arguments.</li>
-<li>every option defines a help string, and doesn't worry about line-wrapping -- <em>Horde_Argv</em> takes care of wrapping lines and making the help output look good.</li>
-<li>options that take a value indicate this fact in their automatically-generated help message, e.g. for the &quot;mode&quot; option:
-<tt class="docutils literal"><span class="pre">-mMODE,</span> <span class="pre">--mode=MODE</span></tt>
+If you don't supply a usage string, <em>Horde_Argv</em> uses a bland but sensible default: &quot;usage: %prog [options]&quot;, which is fine if your script doesn't take any positional arguments.</p>
+</li>
+<li><p class="first">every option defines a help string, and doesn't worry about line-wrapping -- <em>Horde_Argv</em> takes care of wrapping lines and making the help output look good.</p>
+</li>
+<li><p class="first">options that take a value indicate this fact in their automatically-generated help message, e.g. for the &quot;mode&quot; option:</p>
+<p><tt class="docutils literal"><span class="pre">-mMODE,</span> <span class="pre">--mode=MODE</span></tt>
 Here, &quot;MODE&quot; is called the meta-variable: it stands for the argument that the user is expected to supply to -m/--mode. By default, <em>Horde_Argv</em> converts the destination variable name to uppercase and uses that for the meta-variable. Sometimes, that's not what you want -- for example, the --filename option explicitly sets $metavar = &quot;FILE&quot;, resulting in this automatically-generated option description:
 <tt class="docutils literal"><span class="pre">-fFILE,</span> <span class="pre">--filename=FILE</span></tt>
-This is important for more than just saving space, though: the manually written help text uses the meta-variable &quot;FILE&quot;, to clue the user in that there's a connection between the formal syntax &quot;-fFILE&quot; and the informal semantic description &quot;write output to FILE&quot;. This is a simple but effective way to make your help text a lot clearer and more useful for end users.</li>
+This is important for more than just saving space, though: the manually written help text uses the meta-variable &quot;FILE&quot;, to clue the user in that there's a connection between the formal syntax &quot;-fFILE&quot; and the informal semantic description &quot;write output to FILE&quot;. This is a simple but effective way to make your help text a lot clearer and more useful for end users.</p>
+</li>
 </ul>
-<blockquote>
-Print a version number</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 247)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="print-a-version-number">
+<h2><a class="toc-backref" href="#id8">1.4&nbsp;&nbsp;&nbsp;Print a version number</a></h2>
 <p>Similar to the brief usage string, <em>Horde_Argv</em> can also print a version string for your program. You have to supply the string, as the version argument to <tt class="docutils literal">Horde_Argv_Parser</tt>:</p>
 <pre class="literal-block">
 $parser = new Horde_Argv_Parser(array('usage' =&gt; '%prog [-f] [-q]', 'version' =&gt; '%prog 1.0'));
@@ -226,21 +217,15 @@ $parser = new Horde_Argv_Parser(array('usage' =&gt; '%prog [-f] [-q]', 'version'
 <pre class="literal-block">
 $ /usr/bin/foo --version
 foo 1.0
-
-Error-handling
 </pre>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 265)</p>
-Literal block ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="error-handling">
+<h2><a class="toc-backref" href="#id9">1.5&nbsp;&nbsp;&nbsp;Error-handling</a></h2>
 <p>The one thing you need to know for basic usage is how <em>Horde_Argv</em> behaves when it encounters an error on the command-line -- e.g. &quot;-n4x&quot; where the &quot;-n&quot; option takes an integer. <em>Horde_Argv</em> prints your usage message to stderr, followed by a useful and human-readable error message. Then it terminates with a non-zero exit status by calling <tt class="docutils literal">exit()</tt>.</p>
 <p>If you don't like this, subclass <tt class="docutils literal">Horde_Argv_Parser</tt> and override the <tt class="docutils literal">parserError()</tt> method. See Extending <em>Horde_Argv</em>.</p>
-<blockquote>
-Putting it all together</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/tmp/ko5wrbv0/Horde_Argv-2.0.5dev201302201646/doc/Horde/Argv/README</tt>, line 272)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<hr class="docutils" />
+</div>
+<div class="section" id="putting-it-all-together">
+<h2><a class="toc-backref" href="#id10">1.6&nbsp;&nbsp;&nbsp;Putting it all together</a></h2>
 <p>Here's what a <em>Horde_Argv</em>-based scripts usually look like:</p>
 <pre class="literal-block">
 require_once 'Horde/Autoloader/Default.php';
@@ -275,5 +260,6 @@ if ($values-&gt;verbose) {
 
 [... go to work ...]
 </pre>
+</div>
 </div>
 </div>
