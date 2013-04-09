@@ -267,22 +267,22 @@ wish to use to see if other PHP options are needed.</p>
 </div>
 <ol class="loweralpha" start="6">
 <li><p class="first">fileinfo</p>
-<p>Allows Horde modules to guess the MIME type of files by analyzing
+<p>Allows Horde applications to guess the MIME type of files by analyzing
 their contents.</p>
-<p>This module is automatically enabled by default.</p>
+<p>This extension is automatically enabled by default.</p>
 </li>
 <li><p class="first">intl</p>
-<p>The intl module is required to handle display of Internationalized
+<p>The intl extension is required to handle display of Internationalized
 Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
-<p>This module can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option when
-compiling PHP.</p>
+<p>This extension can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option
+when compiling PHP.</p>
 </li>
 <li><p class="first">_curl <tt class="docutils literal"><span class="pre">--with-curl</span></tt></p>
-<p>The curl module, if installed, will be used instead of PHP's fopen() when
-retrieving data from external HTTP servers (remote calendars, web APIs,
-etc.). This is much more reliable and flexible, so it's recommended to
-either enable it or install the <a href="#id13"><span class="problematic" id="id14">http_</span></a> extension.</p>
-<p>This module can be enabled by adding the <tt class="docutils literal"><span class="pre">--with-curl</span></tt> option when
+<p>The curl extension, if installed, will be used instead of PHP's fopen()
+when retrieving data from external HTTP servers (remote calendars, web
+APIs, etc.). This is much more reliable and flexible, so it is
+recommended to either enable it or install the <a href="#id13"><span class="problematic" id="id14">http_</span></a> extension.</p>
+<p>This extension can be enabled by adding the <tt class="docutils literal"><span class="pre">--with-curl</span></tt> option when
 compiling PHP.</p>
 </li>
 </ol>
@@ -317,9 +317,10 @@ saving <tt class="docutils literal">php.ini</tt>.</p>
 <p class="last">If you are going to install Horde the recommended way,
 i.e. using the PEAR installer, you can skip the remainder of
 this section. Installing Horde through PEAR will
-automatically download and install all required PEAR modules.</p>
+automatically download and install all required PEAR
+packages.</p>
 </div>
-<p>These PEAR modules are <strong>RECOMMENDED</strong> to be installed:</p>
+<p>These PEAR packages are <strong>RECOMMENDED</strong> to be installed:</p>
 <ol class="loweralpha">
 <li><p class="first">Net_DNS2</p>
 <p>If installed, it will be used instead of the built-in PHP function
@@ -351,12 +352,12 @@ To install, enter the following at the command prompt:</p>
 pear install File_Fstab
 </pre>
 </blockquote>
-<p>This method of installing PEAR modules requires that you have a PHP version
+<p>This method of installing PEAR packages requires that you have a PHP version
 that has been compiled as a static binary.  All versions of PHP build both
 both a SAPI module (Apache, CGI, etc.) and a command-line (CLI) binary.
 Check if you have a php binary in <tt class="docutils literal">/usr/local/bin</tt> (<tt class="docutils literal">/usr/bin</tt> if you
 installed from an operating system package) before recompiling.</p>
-<p>For more detailed directions on installing PEAR modules, see the PEAR
+<p>For more detailed directions on installing PEAR packages, see the PEAR
 documentation at <a class="reference external" href="http://pear.php.net/manual/">http://pear.php.net/manual/</a></p>
 </li>
 <li><p class="first">PECL Modules</p>
@@ -378,11 +379,11 @@ extension=fileinfo.so
 extension=fileinfo.dll
 </pre>
 <p>After that, restart your webserver.</p>
-<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed:</p>
+<p>These PECL packages are <strong>RECOMMENDED</strong> to be installed:</p>
 <ol class="loweralpha">
 <li><p class="first">imagick</p>
-<p>The imagick module can be used by Horde's image library to provide all
-kind of image manipulations.</p>
+<p>The imagick extension can be used by Horde's image library to provide
+image manipulations.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pecl install imagick
@@ -390,12 +391,13 @@ pecl install imagick
 <p>The imagick extension <strong>must</strong> be compiled against ImageMagick version
 6.2.9 or better, though version 6.5.7 or better is recommended.</p>
 </li>
-<li><p class="first">lzf</p>
-<p>If the lzf module is available, Horde can perform real-time compression
-on certain data, resulting in reduced storage load on the server.</p>
+<li><p class="first">horde_lz4</p>
+<p>If the horde_lz4 extension is available, Horde can perform real-time
+compression on data, resulting in reduced storage load on the server for
+things like cache storage and session data. It is highly recommended.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
-pecl install lzf
+pecl install horde_lz4
 </pre>
 </li>
 <li><p class="first">memcache</p>
@@ -406,10 +408,10 @@ pecl install memcache
 </pre>
 </li>
 <li><p class="first">_http</p>
-<p>The http module, if installed, will be used instead of PHP's fopen() when
-retrieving data from external HTTP servers (remote calendars, web APIs,
-etc.). This is much more reliable and flexible, so it recommended to
-either install this or enable the <a href="#id15"><span class="problematic" id="id16">curl_</span></a> module.</p>
+<p>The http extension, if installed, will be used instead of PHP's fopen()
+when retrieving data from external HTTP servers (remote calendars, web
+APIs, etc.). This is much more reliable and flexible, so it recommended
+to either install this or enable the <a href="#id15"><span class="problematic" id="id16">curl_</span></a> extension.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pecl install http
@@ -681,7 +683,7 @@ http://your-server/horde/test.php
 set the 'testdisable' configuration option to false. After testing is
 completed, the testdisable option should be reset to true.</p>
 <p>Check that your PHP and PEAR versions are acceptably recent, that all
-required module capabilities are present, and that <tt class="docutils literal">magic_quotes_runtime</tt>
+required capabilities are present, and that <tt class="docutils literal">magic_quotes_runtime</tt>
 is set to <tt class="docutils literal">Off</tt>. Then note the <tt class="docutils literal">Session counter: 1</tt> line under <tt class="docutils literal">PHP
 Sessions</tt>, and reload the page. The session counter should increment.</p>
 <p>If you get a warning like <tt class="docutils literal">Failed opening '/path/to/test.php' for
@@ -810,7 +812,7 @@ For information on reasonable support expectations, please read</p>
 <p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/INSTALL</tt>, line 278); <em><a href="#id14">backlink</a></em></p>
 Unknown target name: &quot;http&quot;.</div>
 <div class="system-message" id="id15">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/INSTALL</tt>, line 415); <em><a href="#id16">backlink</a></em></p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/INSTALL</tt>, line 417); <em><a href="#id16">backlink</a></em></p>
 Unknown target name: &quot;curl&quot;.</div>
 </div>
 </div>

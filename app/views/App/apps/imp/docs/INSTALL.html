@@ -120,18 +120,6 @@ mail filter management throughout the Horde suite.</p>
 <p>Ingo provides the mail filtering interfaces to IMP.</p>
 <p>You must use the 2.x branch of Ingo with IMP 6.</p>
 </li>
-<li><p class="first">A web server with PATH_INFO support.</p>
-<p>IMP requires the PATH_INFO environment variable for several features. Every
-modern web server supports this, but you might have to enable this feature
-in the web server configuration. e.g. Apache servers require:</p>
-<pre class="literal-block">
-AcceptPathInfo On
-</pre>
-<p>Lighttpd servers require:</p>
-<pre class="literal-block">
-&quot;broken-scriptfilename&quot; =&gt; &quot;enable&quot;
-</pre>
-</li>
 <li><p class="first">A configured VFS backend.</p>
 <p>During composition of messages, it is possible that the PHP session may
 timeout. If VFS is enabled in Horde, IMP can store the draft message and
