@@ -116,6 +116,8 @@ extension, has been disabled by default in IMP 6.1. To restore the old
 behavior (NOT RECOMMENDED), see the 'sort_force' option in
 <tt class="docutils literal">config/backends.local.php</tt>.</p>
 <p>The 'debug' option has been added to the SMTP configuration.</p>
+<p>IMAP/POP caching can now be done using a database backend (see documentation
+for the 'cache' parameter).</p>
 </div>
 <div class="section" id="configuration-options-conf-php">
 <h2><a class="toc-backref" href="#id18">2.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
@@ -188,6 +190,8 @@ signature
 <div class="section" id="mime-viewer-options-mime-drivers-php">
 <h2><a class="toc-backref" href="#id20">2.4&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></h2>
 <p>Thumbnails can now be disabled for images and PDF attachments.</p>
+<p>Thumbnails are now automatically generated for video attachments if the ffmpeg
+binary is present on your system.  This is enabled by default.</p>
 </div>
 <div class="section" id="permissions">
 <h2><a class="toc-backref" href="#id21">2.5&nbsp;&nbsp;&nbsp;Permissions</a></h2>
