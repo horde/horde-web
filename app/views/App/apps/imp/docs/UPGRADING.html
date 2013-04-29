@@ -116,8 +116,16 @@ extension, has been disabled by default in IMP 6.1. To restore the old
 behavior (NOT RECOMMENDED), see the 'sort_force' option in
 <tt class="docutils literal">config/backends.local.php</tt>.</p>
 <p>The 'debug' option has been added to the SMTP configuration.</p>
-<p>IMAP/POP caching can now be done using a database backend (see documentation
+<p>IMAP/POP caching can now be done using database backends (see documentation
 for the 'cache' parameter).</p>
+<p>The following quota drivers have been removed:</p>
+<pre class="literal-block">
+Command
+Maildir
+Mdaemon
+Mercury32
+Sql
+</pre>
 </div>
 <div class="section" id="configuration-options-conf-php">
 <h2><a class="toc-backref" href="#id18">2.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
