@@ -16,7 +16,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> No major changes planned</p>
 
-<p><b>Planned release timeframe:</b> Late 2012</p>
+<p><b>Planned release timeframe:</b> May 2013</p>
 
 <div class="dimmed">
 

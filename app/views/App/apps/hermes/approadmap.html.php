@@ -16,7 +16,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> Late 2012</p>
+<p><b>Planned release timeframe:</b> May 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
@@ -24,5 +24,5 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Native PHP 5 code</td><td class="done">Done</td></tr>
   <tr><td>Ajax view</td><td class="progress">In Progress</td></tr>
-  <tr><td>Mobile view</td><td class="planned">Planned</td></tr>
+  <tr><td>Mobile view</td><td class="cancelled">Postponed</td></tr>
 </table>

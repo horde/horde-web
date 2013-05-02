@@ -16,7 +16,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> Late 2012</p>
+<p><b>Planned release timeframe:</b> Open</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 

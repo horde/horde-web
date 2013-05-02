@@ -29,7 +29,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> April 2013</p>
+<p><b>Planned release timeframe:</b> May 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
@@ -37,10 +37,10 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Add file manager</td><td class="progress">In progress</td></tr>
   <tr><td>Add bookmark manager</td><td class="progress">In progress</td></tr>
-  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
-  <tr><td>CardDAV support</td><td class="progress">In progress</td>
-  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td>
-  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td>
-  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td>
-  <tr><td>Composite filter driver to manage different backends for different services</td><td class="progress">In Progress</td>
+  <tr><td>CalDAV server capabilities</td><td class="done">Done</td></tr>
+  <tr><td>CardDAV support</td><td class="done">Done</td>
+  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="progress">In progress</td>
+  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="cancelled">Postponed</td>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="progress">In progress</td>
+  <tr><td>Composite filter driver to manage different backends for different services</td><td class="done">Done</td>
 </table>

@@ -16,15 +16,15 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> April 2013</p>
+<p><b>Planned release timeframe:</b> May 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="progress">In progress</td>
-  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td>
-  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td>
+  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="cancelled">Postponed</td>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="progress">In progress</td>
   <tr><td>Composite driver to manage different backends for different services</td><td class="done">Done</td>
 </table>
 

@@ -16,13 +16,13 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> April 2013</p>
+<p><b>Planned release timeframe:</b> May 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
+  <tr><td>CalDAV server capabilities</td><td class="done">Done</td></tr>
 </table>
 
 <div class="dimmed">
