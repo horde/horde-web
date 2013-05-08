@@ -1,5 +1,5 @@
-<div class="document" id="installing-horde-framework-5-0">
-<h1 class="title">Installing Horde Framework 5.0</h1>
+<div class="document" id="installing-horde-framework-5">
+<h1 class="title">Installing Horde Framework 5</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -80,7 +80,7 @@ pear run-scripts horde/horde_role
 </li>
 <li><p class="first">Install Horde:</p>
 <pre class="literal-block">
-pear install -a -B horde/horde
+pear install -a -B horde/horde-beta
 </pre>
 </li>
 <li><p class="first">Configure Horde:</p>
@@ -477,18 +477,18 @@ install any dependencies of Horde too.  If you want to install Horde with all
 optional dependencies, but without the binary PECL packages that have to be
 compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/horde
+pear install -a -B horde/horde-beta
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/horde
+pear install horde/horde-beta
 </pre>
 <p>If you want to install Horde even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/horde
+pear install -a horde/horde-beta
 </pre>
 </div>
 <div class="section" id="installing-into-separate-pear">

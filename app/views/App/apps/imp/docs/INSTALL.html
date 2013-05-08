@@ -1,5 +1,5 @@
-<div class="document" id="installing-imp-6">
-<h1 class="title">Installing IMP 6</h1>
+<div class="document" id="installing-imp-h5">
+<h1 class="title">Installing IMP H5</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -34,7 +34,7 @@ for web applications written in PHP. You must install Horde before
 installing IMP.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">IMP 6 requires version 5.0+ of the Horde Framework -
+<p class="last">IMP H5 requires version 5.0+ of the Horde Framework -
 earlier versions of Horde will not work.</p>
 </div>
 <div class="important">
@@ -107,7 +107,6 @@ contact management throughout the Horde suite.</p>
 </blockquote>
 <p>Turba provides the local address book and an LDAP directory search function
 to IMP.</p>
-<p>You must use the 3.x branch of Turba with IMP 6.</p>
 </li>
 <li><p class="first">Ingo, the Horde mail filters manager.</p>
 <p>Ingo is the Horde mail filters management application, designed to be
@@ -118,7 +117,6 @@ mail filter management throughout the Horde suite.</p>
 <p><a class="reference external" href="http://www.horde.org/apps/ingo">http://www.horde.org/apps/ingo</a></p>
 </blockquote>
 <p>Ingo provides the mail filtering interfaces to IMP.</p>
-<p>You must use the 2.x branch of Ingo with IMP 6.</p>
 </li>
 <li><p class="first">A configured VFS backend.</p>
 <p>During composition of messages, it is possible that the PHP session may
@@ -156,18 +154,18 @@ any dependencies of IMP too. If you want to install IMP with all optional
 dependencies, but without the binary PECL packages that need to be compiled,
 specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/imp
+pear install -a -B horde/imp-beta
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/imp
+pear install horde/imp-beta
 </pre>
 <p>If you want to install IMP even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/imp
+pear install -a horde/imp-beta
 </pre>
 </div>
 <div class="section" id="installing-from-git">

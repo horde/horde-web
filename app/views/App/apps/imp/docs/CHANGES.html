@@ -3,6 +3,12 @@
 v6.1.0-git
 ----------
 
+
+
+-----------
+v6.1.0beta1
+-----------
+
 [mms] Add ability to create new flag directly from dynamic mailbox screen.
 [mms] Implement 'refresh_time' preference in smartmobile view.
 [mms] Add taphold message action menu to smartmobile mailbox page.
@@ -51,7 +57,6 @@ v6.1.0-git
 [mms] Linked attachments are no longer a user-configurable action.
 [mms] Spam/innocent reporting on the smartmobile message page now uses a popup
       instead of a modal dialog.
-[mms] Re-add alerts log to dynamic mailbox view.
 [mms] Rewritten/improved linked attachment code.
 [mms] Add discard draft option to compose page allowing the user to cancel
       composition and permanently delete the original draft (<a href="http://bugs.horde.org/ticket/12017">Request #12017</a>).
@@ -83,40 +88,6 @@ v6.1.0-git
 [mms] Collapse multiple mailbox export options in dynamic mailbox view to
       single action.
 [mms] Importing a PGP personal key now only requires the private key.
-
-
-------
-v6.0.5
-------
-
-[mms] SECURITY: Fix XSS vulnerability on smartmobile message page (João Machado
-      &lt;geral@jpaulo.eu>).
-[mms] Correctly update viewport selected status if mailbox is switched during a
-      delete action (<a href="http://bugs.horde.org/ticket/12230">Bug #12230</a>).
-[jan] Fix empty label for spellcheck button.
-[mms] Fix signature verification for PGP combined signed & encrypted messages
-      (<a href="http://bugs.horde.org/ticket/12142">Bug #12142</a>).
-[mms] Don't display empty mailbox action for mailboxes when Virtual Trash is
-      active (<a href="http://bugs.horde.org/ticket/12162">Bug #12162</a>).
-[mms] Fix renaming mailboxes in dynamic view.
-[mms] Switching from HTML to text in dynamic compose view must be a synchronous
-      operation, or else HTML tags may appear in compose window.
-[mms] Fix ability to switch to non-default date sorting algorithm in dynamic
-      view (<a href="http://bugs.horde.org/ticket/12139">Bug #12139</a>).
-[mms] Fix printing quoted text when viewing a list message.
-[mms] Use Horde_Css_Parser package, which is compatible with CSS3 declarations,
-      instead of the unmaintained Horde_Text_Filter_Csstidy code.
-[mms] Fix verifying signed & encrypted PGP messages (<a href="http://bugs.horde.org/ticket/12100">Bug #12100</a>).
-[mms] Update virtual folder name in folder tree when editing the label (<a href="http://bugs.horde.org/ticket/12079">Bug
-      #12079</a>).
-[mms] Fix links to virtual folders on search preferences page.
-[mms] Fix edit links for virtual folders in dynamic view (<a href="http://bugs.horde.org/ticket/12072">Bug #12072</a>).
-[mms] Fix regression in displaying user-defined virtual folders in folder
-      listings.
-[mms] Correctly generate self URLs if a URL parameter is altered by the current
-      message action (<a href="http://bugs.horde.org/ticket/12058">Bug #12058</a>).
-[mms] Fix possible issue creating folder tree if multiple special mailboxes
-      appeared in the same branch (<a href="http://bugs.horde.org/ticket/12050">Bug #12050</a>).
 
 
 ------
