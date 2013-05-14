@@ -276,20 +276,20 @@ $horde_apps_dev = array(
     ),
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.1.0beta1',
-        'date' => 'May 7 2013',
+        'ver' => '5.1.0beta3',
+        'date' => 'May 14 2013',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.1.0beta1)',
-        'date' => 'May 7 2013',
+        'ver' => 'H5 (6.1.0beta2)',
+        'date' => 'May 14 2013',
         'pear' => true,
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H5 (4.1.0beta1)',
-        'date' => 'May 7 2013',
+        'ver' => 'H5 (4.1.0beta2)',
+        'date' => 'May 14 2013',
         'pear' => true,
     ),
     'ingo' => array(
@@ -300,20 +300,20 @@ $horde_apps_dev = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.1.0beta1)',
-        'date' => 'May 7 2013',
+        'ver' => 'H5 (4.1.0beta2)',
+        'date' => 'May 14 2013',
         'pear' => true,
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H5 (4.1.0beta1)',
-        'date' => 'May 7 2013',
+        'ver' => 'H5 (4.1.0beta2)',
+        'date' => 'May 14 2013',
         'pear' => true,
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H5 (4.1.0beta1)',
-        'date' => 'May 7 2013',
+        'ver' => 'H5 (4.1.0beta2)',
+        'date' => 'May 14 2013',
         'pear' => true,
     ),
     'gollem' => array(
