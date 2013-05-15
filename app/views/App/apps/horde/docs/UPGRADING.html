@@ -109,6 +109,11 @@ update anything that's highlighted as outdated.</p>
 <p>It is now possible to configure Horde-wide settings for a NoSQL database
 backend. Addtionally, several Horde packages now allow a NoSQL backend driver
 to be used.</p>
+<p>The Memcache configuration options have been deprecated and have been replaced
+by the generic Horde_HashTable package (which supports both Memcache and Redis
+servers). Although the previous memcache configuration will continue to work
+in Horde 5.x, it is recommended to upgrade to the new 'hashtable'
+configuration setup.</p>
 <p>The following options were removed:</p>
 <pre class="literal-block">
 $conf['cache']['compress']
