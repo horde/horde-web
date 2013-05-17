@@ -36,7 +36,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             $this->_docs($response);
             break;
         case 'screenshots':
-            $this->_screenshots($response);
+        case 'screenshots_old':
+            $this->_screenshots($response, $this->_matchDict->action);
             break;
         case 'roadmap':
             $this->_roadmap($response);
@@ -167,7 +168,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $response->setBody($layout->render('docs'));
     }
 
-    protected function _screenshots(Horde_Controller_Response $response)
+    protected function _screenshots(Horde_Controller_Response $response, $type)
     {
         $GLOBALS['injector']->getInstance('Horde_Script_Files')->prototypejs = false;
         Horde::addScriptFile($GLOBALS['host_base'] . '/js/jquery-1.4.4.min.js', 'horde', array('external' => true));
@@ -187,7 +188,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
-        $response->setBody($layout->render('screenshots'));
+        $response->setBody($layout->render($type));
     }
 
 }
