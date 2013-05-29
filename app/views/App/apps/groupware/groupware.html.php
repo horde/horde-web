@@ -108,6 +108,7 @@
  <li>Address book pager (rolodex)</li>
  <li>Customizable contact fields</li>
  <li>Integration of existing address books</li>
+ <li>Integration into external clients through CardDAV</li>
 </ul>
 
 <p>Tasks:</p>
