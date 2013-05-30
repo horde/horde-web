@@ -126,13 +126,13 @@ $horde_apps_stable = array(
     'groupware' => array(
         'name' => 'Horde Groupware',
         'ver' => '5.0.5',
-        'date' => 'May 29 2013',
+        'date' => 'May 30 2013',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
         'ver' => '5.0.5',
-        'date' => 'May 29 2013',
+        'date' => 'May 30 2013',
         'pear' => true,
     ),
     'imp' => array(
@@ -264,14 +264,14 @@ $horde_apps_stable = array(
 $horde_apps_dev = array(
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.0.0RC1',
-        'date' => 'October 29 2012',
+        'ver' => '5.1.0RC1',
+        'date' => 'May 30 2013',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.0.0RC1',
-        'date' => 'October 29 2012',
+        'ver' => '5.1.0RC1',
+        'date' => 'May 30 2013',
         'pear' => true,
     ),
     'horde' => array(
