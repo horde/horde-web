@@ -5,18 +5,21 @@
 <p>
  Horde Groupware Webmail Edition is a free, enterprise ready, browser based
  communication suite. Users can read, send and organize email messages and
- manage and share calendars, contacts, tasks and notes with the standards
- compliant <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">
- components</a> from the Horde Project. Horde Groupware Webmail Edition bundles
- the separately available applications <a href="<?php echo
+ manage and share calendars, contacts, tasks, notes, files, and bookmarks with
+ the standards compliant <a href="<?php echo $this->urlWriter->urlFor('apps')
+ ?>"> components</a> from the Horde Project. Horde Groupware Webmail Edition
+ bundles the separately available applications <a href="<?php echo
  $this->urlWriter->urlFor('app', array('app' => 'imp'))
  ?>">IMP</a>, <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
  => 'ingo')) ?>">Ingo</a>, <a href="<?php echo $this->urlWriter->urlFor('app',
  array('app' => 'kronolith')) ?>">Kronolith</a>, <a href="<?php echo
  $this->urlWriter->urlFor('app', array('app' => 'turba'))
  ?>">Turba</a>, <a href="<?php echo $this->urlWriter->urlFor('app', array('app'
- => 'nag')) ?>">Nag</a> and <a href="<?php echo $this->urlWriter->urlFor('app',
- array('app' => 'mnemo')) ?>">Mnemo</a>.
+ => 'nag')) ?>">Nag</a>, <a href="<?php echo $this->urlWriter->urlFor('app',
+ array('app' => 'mnemo')) ?>">Mnemo</a>, <a href="<?php echo
+ $this->urlWriter->urlFor('app', array('app' => 'gollem')) ?>">Gollem</a>,
+ and <a href="<?php echo $this->urlWriter->urlFor('app', array('app' =>
+ 'trean')) ?>">Trean</a>.
 </p>
 </div>
 <div class="section">
