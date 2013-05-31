@@ -521,6 +521,12 @@ example run:</p>
 php -l mime_drivers.local.php
 </pre>
 </div>
+<p>The default configuration stores files uploaded through the file manager in
+the SQL database. This is the most compatible configuration but doesn't
+scale well, may hit some database server limits, and may only work for very
+small installations. You should configure a different backend as soon as
+possible. See <tt class="docutils literal">gollem/config/backends.php</tt> and
+<tt class="docutils literal"><span class="pre">gollem/config/backends.d/10-webmail.php</span></tt> for details.</p>
 </li>
 <li><p class="first">Setting up alarm emails</p>
 <p>If you want your users to be able to receive emails from the Horde_Alarm
