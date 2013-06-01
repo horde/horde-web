@@ -11,16 +11,6 @@
 <p>Tips on performance tuning systems for IMP.  See <a class="reference external" href="../../horde/docs/PERFORMANCE">horde/docs/PERFORMANCE</a>
 for general performance tips for Horde.</p>
 <ul>
-<li><p class="first">Consider an IMAP proxy to allow persistent connections.</p>
-<p><a class="reference external" href="http://www.imapproxy.org/">imapproxy</a> is HIGHLY RECOMMENDED - especially versions 1.2.7rc1 and
-greater which contains features used internally by Horde to speed up
-access to the remote server.</p>
-<p>NOTE: if your installation connects to multiple imapproxy instances, you
-MUST configure your IMP installation to persistently connect to a single
-backend over the course of a session. If this is not possible, you must
-remove support for imapproxy's advanced features by adding 'XIMAPPROXY'
-to the 'capability_ignore' parameter in your local configuration.</p>
-</li>
 <li><p class="first">Use an IMAP server that supports CONDSTORE (<a class="reference external" href="http://www.faqs.org/rfcs/rfc4551.html">RFC 4551</a>) and/or QRESYNC (<a class="reference external" href="http://www.faqs.org/rfcs/rfc5162.html">RFC
 5162</a>).</p>
 <p>These extensions are required to properly cache data and to properly keep
@@ -58,6 +48,16 @@ using caching.</p>
 <tt class="docutils literal">Administration/Configuration</tt> screen and have the relevant settings
 enabled in IMP's configuration screen
 (<tt class="docutils literal">Administration/Configuration/Mail/Mailbox</tt>).</p>
+</li>
+<li><p class="first">Consider an IMAP proxy to allow persistent connections.</p>
+<p><a class="reference external" href="http://www.imapproxy.org/">imapproxy</a> has been verified to work with IMP. Versions 1.2.7rc1 and greater
+contains features used internally by Horde to speed up access to the remote
+server.</p>
+<p>NOTE: if your installation connects to multiple imapproxy instances, you
+MUST configure your IMP installation to persistently connect to a single
+backend over the course of a session. If this is not possible, you must
+remove support for imapproxy's advanced features by adding 'XIMAPPROXY'
+to the 'capability_ignore' parameter in your local configuration.</p>
 </li>
 <li><p class="first">Configure Horde to use a VFS filesystem-based backend. Presently, the SQL
 VFS backend uses ~5 times the amount of memory as a filesystem-based
