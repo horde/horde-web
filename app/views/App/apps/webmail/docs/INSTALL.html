@@ -45,6 +45,7 @@ cd php-x.x.x/
             --with-gd --with-png-dir=/usr --with-jpeg-dir=/usr \
             [--with-mysql|--with-pgsql|--with-oci8]
             [--with-tidy]
+            [--with-ftp]
 make
 make install
 </pre>
@@ -256,11 +257,13 @@ into PHP.</p>
 their contents.</p>
 <p>This module is automatically enabled by default.</p>
 </li>
-<li><p class="first">intl</p>
+<li><p class="first">intl <tt class="docutils literal"><span class="pre">--enable-intl</span></tt></p>
 <p>The intl module is required to handle display of Internationalized
 Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
-<p>This module can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option when
-compiling PHP.</p>
+</li>
+<li><p class="first">FTP support <tt class="docutils literal"><span class="pre">--with-ftp</span></tt></p>
+<p>If using the FTP VFS driver for the file manager, the FTP PHP module is
+<strong>required</strong>.</p>
 </li>
 </ol>
 </blockquote>
@@ -357,6 +360,15 @@ Groupware Webmail Edition's spell-check feature.</p>
 <blockquote>
 <p><a class="reference external" href="http://aspell.sourceforge.net/">http://aspell.sourceforge.net/</a></p>
 </blockquote>
+</li>
+<li><p class="first">FTP server.</p>
+<p>If using a FTP backend for the file manager, you <strong>must</strong> have at least one
+FTP server.</p>
+</li>
+<li><p class="first">ElasticSearch server.</p>
+<p>An <a class="reference external" href="http://www.elasticsearch.org/">ElasticSearch</a> server or cluster running on localhost can be used to
+provide indexing of bookmarks data and quick searching of the indexed
+content.</p>
 </li>
 </ol>
 </div>
