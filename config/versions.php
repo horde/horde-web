@@ -119,26 +119,26 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.0.5',
-        'date' => 'May 29 2013',
+        'ver' => '5.1.0',
+        'date' => 'June 4 2013',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.0.5',
-        'date' => 'May 30 2013',
+        'ver' => '5.1.0',
+        'date' => 'June 4 2013',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.0.5',
-        'date' => 'May 30 2013',
+        'ver' => '5.1.0',
+        'date' => 'June 4 2013',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.0.5)',
-        'date' => 'May 29 2013',
+        'ver' => 'H5 (6.1.0)',
+        'date' => 'June 4 2013',
         'pear' => true
     ),
     'dimp' => array(
@@ -153,32 +153,32 @@ $horde_apps_stable = array(
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H5 (4.0.4)',
-        'date' => 'May 29 2013',
+        'ver' => 'H5 (4.1.0)',
+        'date' => 'June 4 2013',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H5 (3.0.4)',
-        'date' => 'May 29 2013',
+        'ver' => 'H5 (3.1.0)',
+        'date' => 'June 4 2013',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.0.5)',
-        'date' => 'May 29 2013',
+        'ver' => 'H5 (4.1.0)',
+        'date' => 'June 4 2013',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H5 (4.0.3)',
-        'date' => 'May 29 2013',
+        'ver' => 'H5 (4.1.0)',
+        'date' => 'June 4 2013',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H5 (4.0.3)',
-        'date' => 'February 12 2013',
+        'ver' => 'H5 (4.1.0)',
+        'date' => 'June 4 2013',
         'pear' => true
     ),
     'chora' => array(
@@ -194,8 +194,8 @@ $horde_apps_stable = array(
     ),
     'passwd' => array(
         'name' => 'Passwd',
-        'ver' => 'H4 (4.0.1)',
-        'date' => 'February 28 2012',
+        'ver' => 'H5 (5.0.0)',
+        'date' => 'June 4 2013',
         'pear' => true,
     ),
     'forwards' => array(
