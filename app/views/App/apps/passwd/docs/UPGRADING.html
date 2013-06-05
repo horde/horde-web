@@ -44,6 +44,13 @@ Configuration and update anything that's highlighted as outdated.</p>
 </div>
 <div class="section" id="upgrading-to-passwd-5-0">
 <h1><a class="toc-backref" href="#id3">2&nbsp;&nbsp;&nbsp;Upgrading to Passwd 5.0</a></h1>
+<p>NOTE: If changing a password that is currently being used to authenticate to
+Horde, you CANNOT continue to use Horde after changing the authentication
+password. Instead, you MUST configure backends.local.php to logout of Horde
+after a successful password change (see the logout parameter in
+<tt class="docutils literal">config/backends.php</tt>). The old authentication credentials may be cached in
+various Horde applications, and there is no way to clear this cache unless the
+session is destroyed.</p>
 <div class="section" id="backend-configuration-backends-php">
 <h2><a class="toc-backref" href="#id4">2.1&nbsp;&nbsp;&nbsp;Backend Configuration (backends.php)</a></h2>
 <p>The following options have been added:</p>
