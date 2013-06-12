@@ -137,8 +137,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.1.0)',
-        'date' => 'June 4 2013',
+        'ver' => 'H5 (6.1.1)',
+        'date' => 'June 12 2013',
         'pear' => true
     ),
     'dimp' => array(
@@ -159,8 +159,8 @@ $horde_apps_stable = array(
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H5 (3.1.0)',
-        'date' => 'June 4 2013',
+        'ver' => 'H5 (3.1.1)',
+        'date' => 'June 12 2013',
         'pear' => true
     ),
     'kronolith' => array(
@@ -188,8 +188,8 @@ $horde_apps_stable = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H5 (3.0.0)',
-        'date' => 'February 12 2013',
+        'ver' => 'H5 (3.0.1)',
+        'date' => 'June 12 2013',
         'pear' => true
     ),
     'passwd' => array(
@@ -243,8 +243,8 @@ $horde_apps_stable = array(
     ),
     'trean' => array(
         'name' => 'Trean',
-        'ver' => 'H5 (1.0.1)',
-        'date' => 'May 7 2013',
+        'ver' => 'H5 (1.0.2)',
+        'date' => 'June 12 2013',
         'pear' => true,
     ),
     'content' => array(
@@ -336,8 +336,8 @@ $horde_apps_dev = array(
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H4 (1.0-RC1)',
-        'date' => 'Oktober 11 2011',
+        'ver' => 'H5 (2.0.0beta1)',
+        'date' => 'June 11 2013',
         'pear' => true,
     ),
     'hermes' => array(
