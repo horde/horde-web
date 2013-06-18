@@ -51,11 +51,6 @@
             <a href="<?php echo $this->urlWriter->urlFor('development',
             array('action' => 'git')) ?>">Git</a>.<br />
 
-            The old development version of <?php echo
-            htmlspecialchars($this->app_info['name']) ?> is available via
-            <a href="<?php echo $this->urlWriter->urlFor('development',
-            array('action' => 'cvs')) ?>">CVS</a>.</p>
-
             <?php if (count($this->app_info) > 1): ?>
             <h3>Obtaining Old Versions</h3>
 
