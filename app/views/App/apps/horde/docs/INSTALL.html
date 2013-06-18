@@ -281,7 +281,7 @@ when compiling PHP.</p>
 <p>The curl extension, if installed, will be used instead of PHP's fopen()
 when retrieving data from external HTTP servers (remote calendars, web
 APIs, etc.). This is much more reliable and flexible, so it is
-recommended to either enable it or install the <a href="#id13"><span class="problematic" id="id14">http_</span></a> extension.</p>
+recommended to either enable it or install the <a class="reference external" href="http://php.net/http">http</a> extension.</p>
 <p>This extension can be enabled by adding the <tt class="docutils literal"><span class="pre">--with-curl</span></tt> option when
 compiling PHP.</p>
 </li>
@@ -411,7 +411,7 @@ pecl install memcache
 <p>The http extension, if installed, will be used instead of PHP's fopen()
 when retrieving data from external HTTP servers (remote calendars, web
 APIs, etc.). This is much more reliable and flexible, so it recommended
-to either install this or enable the <a href="#id15"><span class="problematic" id="id16">curl_</span></a> extension.</p>
+to either install this or enable the <a class="reference external" href="http://php.net/curl">curl</a> extension.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pecl install http
@@ -457,8 +457,9 @@ latest not yet released fixes, you can install Horde from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>Before beginning, make sure your PEAR package is up-to-date:</p>
-<blockquote>
-pear upgrade PEAR</blockquote>
+<pre class="literal-block">
+pear upgrade PEAR
+</pre>
 <p>Next, you need to register the Horde PEAR channel server to your local PEAR
 system. This has to be done only <strong>once</strong> ever on a single PEAR system:</p>
 <pre class="literal-block">
@@ -805,14 +806,5 @@ For information on reasonable support expectations, please read</p>
 <a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
 <p>Thanks for using Horde!</p>
 <p>The Horde Team</p>
-</div>
-<div class="system-messages section">
-<h1>Docutils System Messages</h1>
-<div class="system-message" id="id13">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/INSTALL</tt>, line 278); <em><a href="#id14">backlink</a></em></p>
-Unknown target name: &quot;http&quot;.</div>
-<div class="system-message" id="id15">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/horde/docs/INSTALL</tt>, line 417); <em><a href="#id16">backlink</a></em></p>
-Unknown target name: &quot;curl&quot;.</div>
 </div>
 </div>
