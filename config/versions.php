@@ -119,8 +119,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.1.0',
-        'date' => 'June 4 2013',
+        'ver' => '5.1.1',
+        'date' => 'June 18 2013',
         'pear' => true
     ),
     'groupware' => array(
@@ -137,8 +137,8 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.1.1)',
-        'date' => 'June 12 2013',
+        'ver' => 'H5 (6.1.2)',
+        'date' => 'June 18 2013',
         'pear' => true
     ),
     'dimp' => array(
@@ -165,8 +165,8 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.1.0)',
-        'date' => 'June 4 2013',
+        'ver' => 'H5 (4.1.1)',
+        'date' => 'June 18 2013',
         'pear' => true
     ),
     'nag' => array(
