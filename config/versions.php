@@ -330,8 +330,8 @@ $horde_apps_dev = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0-RC2)',
-        'date' => 'October 18 2011',
+        'ver' => 'H4 (3.0.0beta1)',
+        'date' => 'June 19 2013',
         'pear' => true,
     ),
     'wicked' => array(
