@@ -255,8 +255,8 @@ $horde_apps_stable = array(
     ),
     'timeobjects' => array(
         'name' => 'Timeobjects',
-        'ver' => 'H5 (2.0.3)',
-        'date' => 'February 11 2013',
+        'ver' => 'H5 (2.0.4)',
+        'date' => 'June 19 2013',
         'pear' => true,
     ),
 );
