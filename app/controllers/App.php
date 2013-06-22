@@ -170,11 +170,15 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
 
     protected function _screenshots(Horde_Controller_Response $response, $type)
     {
+        $page_output = $GLOBALS['injector']->getInstance('Horde_PageOutput');
         $GLOBALS['injector']->getInstance('Horde_Script_Files')->prototypejs = false;
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile($GLOBALS['host_base'] . '/js/jquery-1.4.4.min.js', 'horde', array('external' => true));
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile($GLOBALS['host_base'] . '/js/jquery.lightbox-0.5.min.js', 'horde', array('external' => true));
-        $css = $GLOBALS['injector']->getInstance('Horde_Themes_Css');
-        $css->addStylesheet($GLOBALS['fs_base'] . '/css/jquery.lightbox-0.5.css', $GLOBALS['host_base'] . '/css/jquery.lightbox-0.5.css');
+        $script = new Horde_Script_File_External($GLOBALS['host_base'] . '/js/jquery-1.4.4.min.js');
+        $page_output->addScriptFile($script);
+        $script = new Horde_Script_File_External($GLOBALS['host_base'] . '/js/jquery.lightbox-0.5.min.js');
+        $page_output->addScriptFile($script);
+
+        $css = new Horde_Themes_Element('jquery.lightbox-0.5.css', array('data' => array('fs' => $GLOBALS['fs_base'] . '/css/jquery.lightbox-0.5.css', 'uri' => $GLOBALS['host_base'] . '/css/jquery.lightbox-0.5.css')));
+        $page_output->addStylesheet($css->fs, $css->uri);
 
         $js = '$(function() { $("a.lightbox").lightBox(
             {"imageBtnPrev": "' . $GLOBALS['host_base'] . '/images/lightbox-btn-prev.gif",
@@ -182,7 +186,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
              "imageLoading": "' . $GLOBALS['host_base'] . '/images/lightbox-ico-loading.gif",
              "imageBtnClose": "' . $GLOBALS['host_base'] . '/images/lightbox-btn-close.gif",
              "imageBlank": "' . $GLOBALS['host_base'] . '/images/lightbox-blank.gif"});})';
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addInlineScript($js);
+        $page_output->addInlineScript($js);
         $view = $this->getView();
         $view->page_title = 'Screenshots - ' . $view->appnameHuman . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
