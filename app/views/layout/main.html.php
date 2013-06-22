@@ -30,6 +30,5 @@ var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-22320801-1']);
 _gaq.push(['_trackPageview']);
 </script>
-<script type="text/javascript" src="<?php echo $GLOBALS['host_base'] ?>/js/toc.js"></script>
 </body>
 </html>
