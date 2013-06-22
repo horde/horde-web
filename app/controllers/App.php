@@ -171,8 +171,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _screenshots(Horde_Controller_Response $response, $type)
     {
         $GLOBALS['injector']->getInstance('Horde_Script_Files')->prototypejs = false;
-        Horde::addScriptFile($GLOBALS['host_base'] . '/js/jquery-1.4.4.min.js', 'horde', array('external' => true));
-        Horde::addScriptFile($GLOBALS['host_base'] . '/js/jquery.lightbox-0.5.min.js', 'horde', array('external' => true));
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile($GLOBALS['host_base'] . '/js/jquery-1.4.4.min.js', 'horde', array('external' => true));
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile($GLOBALS['host_base'] . '/js/jquery.lightbox-0.5.min.js', 'horde', array('external' => true));
         $css = $GLOBALS['injector']->getInstance('Horde_Themes_Css');
         $css->addStylesheet($GLOBALS['fs_base'] . '/css/jquery.lightbox-0.5.css', $GLOBALS['host_base'] . '/css/jquery.lightbox-0.5.css');
 
@@ -182,7 +182,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
              "imageLoading": "' . $GLOBALS['host_base'] . '/images/lightbox-ico-loading.gif",
              "imageBtnClose": "' . $GLOBALS['host_base'] . '/images/lightbox-btn-close.gif",
              "imageBlank": "' . $GLOBALS['host_base'] . '/images/lightbox-blank.gif"});})';
-        Horde::addInlineScript($js);
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addInlineScript($js);
         $view = $this->getView();
         $view->page_title = 'Screenshots - ' . $view->appnameHuman . ' - The Horde Project';
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');

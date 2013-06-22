@@ -97,8 +97,8 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
 
     protected function _addSyntaxhighlighter()
     {
-        Horde::addScriptFile('syntaxhighlighter/scripts/shCore.js', 'horde');
-        Horde::addScriptFile('syntaxhighlighter/scripts/shAutoloader.js', 'horde');
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile('syntaxhighlighter/scripts/shCore.js', 'horde');
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile('syntaxhighlighter/scripts/shAutoloader.js', 'horde');
         $path = $GLOBALS['registry']->get('jsuri', 'horde') . '/syntaxhighlighter/scripts/';
         $brushes = <<<EOT
             SyntaxHighlighter.autoloader(
@@ -128,7 +128,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
               'xml xhtml xslt html    {$path}shBrushXml.js'
             );
 EOT;
-        Horde::addInlineScript(array(
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addInlineScript(array(
             $brushes,
             'SyntaxHighlighter.defaults[\'toolbar\'] = false',
             'SyntaxHighlighter.all()'
@@ -136,9 +136,10 @@ EOT;
 
         $sh_js_fs = $GLOBALS['registry']->get('jsfs', 'horde') . '/syntaxhighlighter/styles/';
         $sh_js_uri = Horde::url($GLOBALS['registry']->get('jsuri', 'horde'), false, -1) . '/syntaxhighlighter/styles/';
-        $css = $GLOBALS['injector']->getInstance('Horde_Themes_Css');
-        $css->addStylesheet($sh_js_fs . 'shCoreEclipse.css', $sh_js_uri . 'shCoreEclipse.css');
-        $css->addStylesheet($sh_js_fs . 'shThemeEclipse.css', $sh_js_uri . 'shThemeEclipse.css');
+        $css = new Horde_Themes_Element('shCoreEclipse.css', array('data' => array('fs' => $sh_js_fs . 'shCoreEclipse.css', 'uri' => $sh_js_uri . 'shCoreEclipse.css')));
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addStylesheet($css->fs, $css->uri);
+        $css = new Horde_Themes_Element('shThemeEclipse.css', array('data' => array('fs' => $sh_js_fs . 'shThemeEclipse.css', 'uri' => $sh_js_uri . 'shThemeEclipse.css')));
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addStylesheet($css->fs, $css->uri);
     }
 
 }

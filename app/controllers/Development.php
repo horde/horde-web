@@ -38,7 +38,7 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
             $template = $this->_matchDict->action;
             if ($this->_matchDict->action == 'modules' ||
                 $this->_matchDict->action == 'cvsmodules') {
-                Horde::addScriptFile('stripe.js');
+                $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile('stripe.js');
             }
             break;
 
