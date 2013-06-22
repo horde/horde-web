@@ -57,7 +57,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
     {
         global $site_name;
 
-        $GLOBALS['injector']->getInstance('Horde_Script_Files')->prototypejs = false;
+        $GLOBALS['injector']->getInstance('Horde_Script_File')->prototypejs = false;
         $script = new Horde_Script_File_External($GLOBALS['host_base'] . '/js/jquery-1.4.4.min.js');
         $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile($script);
 
