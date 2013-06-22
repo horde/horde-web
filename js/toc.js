@@ -1,46 +1,45 @@
-document.observe('dom:loaded', function() {
-    var toc = $('toc'), ul, inner, h2, h3
+$(document).ready(function() {
+    var toc = $('#toc'), ul, inner, h2, h3
 
     if (!toc) {
         return;
     }
 
-    $$('.content .section h2', '.content .section h3').each(function(header) {
+    $('.content .section h2, .content .section h3').each(function(index) {
+        var header = $(this);
         if (!ul) {
-            ul = new Element('UL', { className: 'sidebar' });
+            ul = $('<ul class="sidebar">');
         }
 
-        text = header.textContent || header.innerText;
-        anchor = header.readAttribute('id') ||
+        var text = header.text();
+        anchor = header.attr('id') ||
             text.replace(/(\s|[^\w-])+/g, '-').toLowerCase();
 
-        switch (header.tagName) {
+        switch (header.context.nodeName) {
         case 'H3':
             if (!h2) {
                 return;
             }
             if (!inner) {
-                inner = new Element('UL');
-                h2.insert(inner);
+                inner = $('<ul>');
+                h2.append(inner);
             }
-            h3 = new Element('LI');
-            inner.insert(
-                h3.insert(
-                    new Element('A', { href: '#' + anchor }).insert(text)));
+            h3 = $('<li>');
+            inner.append(
+                h3.append(
+                    $('<a href="#' + anchor + '">').append(text)));
             break;
 
         case 'H2':
             inner = null;
-            h2 = new Element('LI');
-            ul.insert(
-                h2.insert(
-                    new Element('A', { href: '#' + anchor }).insert(text)));
+            h2 = $('<li>');
+            ul.append(
+                h2.append(
+                    $('<a href="#' + anchor + '">').append(text)));
             break;
         }
-
-        header.writeAttribute('id', anchor);
+        header.attr('id', anchor);
     });
-
-    toc.insert(ul);
+    toc.append(ul);
     toc.show();
 });
