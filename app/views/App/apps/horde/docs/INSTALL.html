@@ -1,5 +1,5 @@
-<div class="document" id="installing-horde-framework-5">
-<h1 class="title">Installing Horde Framework 5</h1>
+<div class="document" id="installing-horde-framework-4-0">
+<h1 class="title">Installing Horde Framework 4.0</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -130,19 +130,13 @@ which we recommend.  These servers are available from:</p>
 </ul>
 </blockquote>
 </li>
-<li><p class="first">PHP 5.3.0 or above.</p>
+<li><p class="first">PHP 5.2.0 or above.</p>
 <p>PHP is the interpreted language in which Horde is written.</p>
-<p>You can obtain PHP sources at:</p>
-<pre class="literal-block">
-http://www.php.net/
-</pre>
-<div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">While it may be possible to install PHP using the package manager
-for your operating system, it is highly recommended to install PHP from
-source, since distribution packages often do not contain the most recent
-bug and security patches.</p>
-</div>
+<p>It may be possible to install PHP using the package manager for your
+operating system. Alternatively, you can obtain PHP sources at</p>
+<blockquote>
+<p><a class="reference external" href="http://www.php.net/">http://www.php.net/</a></p>
+</blockquote>
 <p>Follow the instructions in the PHP package to build PHP for your system. If
 you use Apache, be sure to build PHP as a library with one of the following
 options:</p>
@@ -265,27 +259,6 @@ or <strong>RECOMMEND</strong> other options to be built into PHP
 also. Please check <tt class="docutils literal">docs/INSTALL</tt> for all applications you
 wish to use to see if other PHP options are needed.</p>
 </div>
-<ol class="loweralpha" start="6">
-<li><p class="first">fileinfo</p>
-<p>Allows Horde applications to guess the MIME type of files by analyzing
-their contents.</p>
-<p>This extension is automatically enabled by default.</p>
-</li>
-<li><p class="first">intl</p>
-<p>The intl extension is required to handle display of Internationalized
-Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
-<p>This extension can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option
-when compiling PHP.</p>
-</li>
-<li><p class="first">_curl <tt class="docutils literal"><span class="pre">--with-curl</span></tt></p>
-<p>The curl extension, if installed, will be used instead of PHP's fopen()
-when retrieving data from external HTTP servers (remote calendars, web
-APIs, etc.). This is much more reliable and flexible, so it is
-recommended to either enable it or install the <a class="reference external" href="http://php.net/http">http</a> extension.</p>
-<p>This extension can be enabled by adding the <tt class="docutils literal"><span class="pre">--with-curl</span></tt> option when
-compiling PHP.</p>
-</li>
-</ol>
 </li>
 <li><p class="first">PEAR Modules</p>
 <p>PEAR is short for &quot;PHP Extension and Application Repository&quot;.  The goal of
@@ -317,10 +290,19 @@ saving <tt class="docutils literal">php.ini</tt>.</p>
 <p class="last">If you are going to install Horde the recommended way,
 i.e. using the PEAR installer, you can skip the remainder of
 this section. Installing Horde through PEAR will
-automatically download and install all required PEAR
-packages.</p>
+automatically download and install all required PEAR modules.</p>
 </div>
-<p>These PEAR packages are <strong>RECOMMENDED</strong> to be installed:</p>
+<p>These PEAR modules are <strong>REQUIRED</strong> to be installed for complete Horde
+functionality:</p>
+<ol class="loweralpha">
+<li><p class="first">Crypt_Blowfish (&gt;= 1.0.1)</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pear install Crypt_Blowfish
+</pre>
+</li>
+</ol>
+<p>These PEAR modules are <strong>RECOMMENDED</strong> to be installed:</p>
 <ol class="loweralpha">
 <li><p class="first">Net_DNS2</p>
 <p>If installed, it will be used instead of the built-in PHP function
@@ -352,12 +334,12 @@ To install, enter the following at the command prompt:</p>
 pear install File_Fstab
 </pre>
 </blockquote>
-<p>This method of installing PEAR packages requires that you have a PHP version
+<p>This method of installing PEAR modules requires that you have a PHP version
 that has been compiled as a static binary.  All versions of PHP build both
 both a SAPI module (Apache, CGI, etc.) and a command-line (CLI) binary.
 Check if you have a php binary in <tt class="docutils literal">/usr/local/bin</tt> (<tt class="docutils literal">/usr/bin</tt> if you
 installed from an operating system package) before recompiling.</p>
-<p>For more detailed directions on installing PEAR packages, see the PEAR
+<p>For more detailed directions on installing PEAR modules, see the PEAR
 documentation at <a class="reference external" href="http://pear.php.net/manual/">http://pear.php.net/manual/</a></p>
 </li>
 <li><p class="first">PECL Modules</p>
@@ -379,11 +361,30 @@ extension=fileinfo.so
 extension=fileinfo.dll
 </pre>
 <p>After that, restart your webserver.</p>
-<p>These PECL packages are <strong>RECOMMENDED</strong> to be installed:</p>
+<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed:</p>
 <ol class="loweralpha">
+<li><p class="first">fileinfo</p>
+<p>Allows Horde modules to guess the MIME type of files by analyzing
+their contents.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install fileinfo
+</pre>
+<p>As of PHP 5.3.0, this module is automatically enabled by default.</p>
+</li>
+<li><p class="first">intl</p>
+<p>The intl module is required to handle display of Internationalized
+Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
+<p>To install, enter the following at the command prompt:</p>
+<pre class="literal-block">
+pecl install intl
+</pre>
+<p>Alternatively, this module is shipped with PHP 5.3.0+ and can be
+enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option when compiling PHP.</p>
+</li>
 <li><p class="first">imagick</p>
-<p>The imagick extension can be used by Horde's image library to provide
-image manipulations.</p>
+<p>The imagick module can be used by Horde's image library to provide all
+kind of image manipulations.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pecl install imagick
@@ -391,13 +392,12 @@ pecl install imagick
 <p>The imagick extension <strong>must</strong> be compiled against ImageMagick version
 6.2.9 or better, though version 6.5.7 or better is recommended.</p>
 </li>
-<li><p class="first">horde_lz4</p>
-<p>If the horde_lz4 extension is available, Horde can perform real-time
-compression on data, resulting in reduced storage load on the server for
-things like cache storage and session data. It is highly recommended.</p>
+<li><p class="first">lzf</p>
+<p>If the lzf module is available, Horde can compress cached data within
+the current session, thus reducing the size of the current session.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
-pecl install horde_lz4
+pecl install lzf
 </pre>
 </li>
 <li><p class="first">memcache</p>
@@ -405,16 +405,6 @@ pecl install horde_lz4
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pecl install memcache
-</pre>
-</li>
-<li><p class="first">_http</p>
-<p>The http extension, if installed, will be used instead of PHP's fopen()
-when retrieving data from external HTTP servers (remote calendars, web
-APIs, etc.). This is much more reliable and flexible, so it recommended
-to either install this or enable the <a class="reference external" href="http://php.net/curl">curl</a> extension.</p>
-<p>To install, enter the following at the command prompt:</p>
-<pre class="literal-block">
-pecl install http
 </pre>
 </li>
 </ol>
@@ -457,9 +447,8 @@ latest not yet released fixes, you can install Horde from Git.</p>
 <div class="section" id="installing-with-pear">
 <h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>Before beginning, make sure your PEAR package is up-to-date:</p>
-<pre class="literal-block">
-pear upgrade PEAR
-</pre>
+<blockquote>
+pear upgrade PEAR</blockquote>
 <p>Next, you need to register the Horde PEAR channel server to your local PEAR
 system. This has to be done only <strong>once</strong> ever on a single PEAR system:</p>
 <pre class="literal-block">
@@ -515,19 +504,21 @@ the PEAR installation you just created, e.g.:</p>
 /var/www/horde/pear/pear -c /var/www/horde/pear.conf channel-discover \
     pear.horde.org
 </pre>
-<p>Finally configure your web server in some way to point PHP's <tt class="docutils literal">include_path</tt>
-setting to the PEAR installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment
-variable to the web root:</p>
+<p>Finally update the .htaccess file in <tt class="docutils literal">/var/www/horde/</tt> or configure your web
+server in some other way to point PHP's <tt class="docutils literal">include_path</tt> setting to the PEAR
+installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment variable to the web
+root:</p>
 <pre class="literal-block">
 php_value include_path /var/www/horde/pear/php
 SetEnv PHP_PEAR_SYSCONF_DIR /var/www/horde
 </pre>
-<p>It is recommended to not use the .htaccess file in <tt class="docutils literal">/var/www/horde/</tt> to set
-these values because it will be overwritten with every further update.</p>
 </div>
 <div class="section" id="installing-from-git">
 <h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
-<p>See <a class="reference external" href="http://www.horde.org/development/git">http://www.horde.org/development/git</a></p>
+<p>See:</p>
+<pre class="literal-block">
+http://horde.org/source/git.php
+</pre>
 </div>
 </div>
 <div class="section" id="configuring-horde">
@@ -668,7 +659,7 @@ and you must have the PHP CLI installed (a CGI binary is not supported -
 # Horde Alarms
 */5 * * * * /usr/bin/horde-alarms
 </pre>
-<p>If not installing Horde through PEAR or if PEAR's <tt class="docutils literal">bin_dir</tt> configuration
+<p>If not installing Horde through PEAR of if PEAR's <tt class="docutils literal">bin_dir</tt> configuration
 doesn't point to <tt class="docutils literal">/usr/bin/</tt>, replace <tt class="docutils literal"><span class="pre">/usr/bin/horde-alarms</span></tt> with the
 path to the <tt class="docutils literal"><span class="pre">horde-alarms</span></tt> script in your Horde installation.</p>
 </li>
@@ -684,7 +675,7 @@ http://your-server/horde/test.php
 set the 'testdisable' configuration option to false. After testing is
 completed, the testdisable option should be reset to true.</p>
 <p>Check that your PHP and PEAR versions are acceptably recent, that all
-required capabilities are present, and that <tt class="docutils literal">magic_quotes_runtime</tt>
+required module capabilities are present, and that <tt class="docutils literal">magic_quotes_runtime</tt>
 is set to <tt class="docutils literal">Off</tt>. Then note the <tt class="docutils literal">Session counter: 1</tt> line under <tt class="docutils literal">PHP
 Sessions</tt>, and reload the page. The session counter should increment.</p>
 <p>If you get a warning like <tt class="docutils literal">Failed opening '/path/to/test.php' for
@@ -767,10 +758,9 @@ directory (see the <tt class="docutils literal">General</tt> tab in the Horde co
 reasons, some of these files may not be removed when the user's session
 ends. To reclaim this disk space, it may be necessary to periodically delete
 these old temporary files.</p>
-<p>An example cron-based solution can be found at
-<tt class="docutils literal"><span class="pre">horde/scripts/temp-cleanup.cron</span></tt> in PEAR's <tt class="docutils literal">data_dir</tt> directory.  Another
-possible solution is to use utilities like <tt class="docutils literal">tmpwatch</tt>, <tt class="docutils literal">tmpreaper</tt> or
-anything similar to remove old files.</p>
+<p>An example cron-based solution can be found at <tt class="docutils literal"><span class="pre">scripts/temp-cleanup.cron</span></tt>.
+Another possible solution is to use Red Hat's <tt class="docutils literal">tmpwatch</tt> utility or anything
+similar to remove old files (see <a class="reference external" href="http://www.redhat.com/">http://www.redhat.com/</a>).</p>
 <p>Stale sessions are automatically pruned by PHP according to the
 <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-probability">session.gc_probability</a>, <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-divisor">session.gc_divisor</a>, and
 <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime">session.gc_maxlifetime</a> settings located in <tt class="docutils literal">php.ini</tt>. However, the
@@ -785,7 +775,7 @@ or higher is much more reasonable).</p>
 translations of text displayed by applications; the translations are found in
 the po/ directory.  If a translation is not yet available for your locale (and
 you wish to create one), or if you're having trouble using a provided
-translation, please see the docs/<a class="reference internal" href="#translations">TRANSLATIONS</a> file for instructions.</p>
+translation, please see the <a class="reference external" href="TRANSLATIONS">horde/docs/TRANSLATIONS</a> file for instructions.</p>
 </div>
 <div class="section" id="obtaining-support">
 <h1><a class="toc-backref" href="#id12">9&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
