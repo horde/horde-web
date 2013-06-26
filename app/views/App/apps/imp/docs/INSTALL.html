@@ -1,5 +1,5 @@
-<div class="document" id="installing-imp-5-0">
-<h1 class="title">Installing IMP 5.0</h1>
+<div class="document" id="installing-imp-h5">
+<h1 class="title">Installing IMP H5</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -23,8 +23,7 @@
 </div>
 <p>This document contains instructions for installing the IMP web-based mail
 client on your system.</p>
-<p>For information on the capabilities and features of IMP, see the file
-<a class="reference external" href="README">docs/README</a>.</p>
+<p>For information on the capabilities and features of IMP, see the file <a class="reference external" href="README">README</a>.</p>
 <div class="section" id="prerequisites">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, IMP <strong>requires</strong> the following:</p>
@@ -35,7 +34,7 @@ for web applications written in PHP. You must install Horde before
 installing IMP.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">IMP 5.0 requires version 4.0+ of the Horde Framework -
+<p class="last">IMP H5 requires version 5.0+ of the Horde Framework -
 earlier versions of Horde will not work.</p>
 </div>
 <div class="important">
@@ -73,26 +72,21 @@ Apple Mail, or Thunderbird. You must have access to an IMAP or POP3
 server(s) on which your users' mail is stored in order to use IMP.</p>
 <p>IMAP is <strong>strongly</strong> recommended over POP3.  See, e.g.,
 <a class="reference external" href="http://staff.washington.edu/gray/papers/imap.vs.pop.brief.html">http://staff.washington.edu/gray/papers/imap.vs.pop.brief.html</a></p>
-<p>Freely available IMAP servers (for *nix systems) that have been verified
-to work best with IMP include:</p>
+<p>The Horde Project recommends either Cyrus or Dovecot (see
+<a class="reference external" href="PERFORMANCE">docs/PERFORMANCE</a> for further information). Both are freely available
+IMAP servers (for *nix systems) that have been verified to work best with
+IMP both feature and performance wise:</p>
 <ul class="simple">
-<li>Archiveopteryx (<a class="reference external" href="http://www.archiveopteryx.org/">http://www.archiveopteryx.org/</a>)</li>
-<li>Courier-IMAP (<a class="reference external" href="http://www.inter7.com/courierimap.html">http://www.inter7.com/courierimap.html</a>)</li>
 <li>Cyrus (<a class="reference external" href="http://www.cyrusimap.org/">http://www.cyrusimap.org/</a>)</li>
 <li>Dovecot (<a class="reference external" href="http://www.dovecot.org/">http://www.dovecot.org/</a>)</li>
-<li>UW-IMAP (<a class="reference external" href="ftp://ftp.cac.washington.edu/imap/">ftp://ftp.cac.washington.edu/imap/</a>)</li>
 </ul>
-<p>Most of these packages also include POP3 support as well.</p>
-<p>The Horde Project recommends either Cyrus or Dovecot (see
-<a class="reference external" href="PERFORMANCE">docs/PERFORMANCE</a> for further information).</p>
 <p>The IMAP server MUST support IMAP4rev1 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc3501.html">RFC 3501</a>).
 The POP server MUST support POP3 (<a class="reference external" href="http://www.faqs.org/rfcs/rfc1939.html">RFC 1939</a>/STD 53).</p>
 <div class="note">
 <p class="first admonition-title">Note</p>
 <p class="last">If using a POP server, it MUST support the UIDL capability.
-Caching, on-demand filtering, searching, and sorting will be
-disabled; POP3 support is limited to performing only basic mail
-actions.</p>
+POP3 support is limited to performing only basic mail actions;
+on-demand filtering, searching, and sorting will be disabled.</p>
 </div>
 </li>
 <li><p class="first">Sendmail or SMTP server.</p>
@@ -113,7 +107,6 @@ contact management throughout the Horde suite.</p>
 </blockquote>
 <p>Turba provides the local address book and an LDAP directory search function
 to IMP.</p>
-<p>You must use the 3.x branch of Turba with IMP 5.x.</p>
 </li>
 <li><p class="first">Ingo, the Horde mail filters manager.</p>
 <p>Ingo is the Horde mail filters management application, designed to be
@@ -124,19 +117,6 @@ mail filter management throughout the Horde suite.</p>
 <p><a class="reference external" href="http://www.horde.org/apps/ingo">http://www.horde.org/apps/ingo</a></p>
 </blockquote>
 <p>Ingo provides the mail filtering interfaces to IMP.</p>
-<p>You must use the 2.x branch of Ingo with IMP 5.x.</p>
-</li>
-<li><p class="first">A web server with PATH_INFO support.</p>
-<p>IMP requires the PATH_INFO environment variable for several features. Every
-modern web server supports this, but you might have to enable this feature
-in the web server configuration. e.g. Apache servers require:</p>
-<pre class="literal-block">
-AcceptPathInfo On
-</pre>
-<p>Lighttpd servers require:</p>
-<pre class="literal-block">
-&quot;broken-scriptfilename&quot; =&gt; &quot;enable&quot;
-</pre>
 </li>
 <li><p class="first">A configured VFS backend.</p>
 <p>During composition of messages, it is possible that the PHP session may
@@ -157,18 +137,6 @@ management throughout the Horde suite.</p>
 </blockquote>
 <p>Nag allows a user to create new tasks from individual email messages.</p>
 <p>You must use the 3.x branch of Nag with IMP 5.x.</p>
-</li>
-<li><p class="first">Gollem, the Horde file manager.</p>
-<p>Gollem is the Horde file management application, designed to be integrated
-with other Horde applications to provide a unified interface to access VFS
-filesystems throughout the Horde suite.</p>
-<p>Gollem is available from:</p>
-<blockquote>
-<p><a class="reference external" href="http://www.horde.org/apps/gollem">http://www.horde.org/apps/gollem</a></p>
-</blockquote>
-<p>Gollem allows a user to attach files from various VFS filesystems to
-outgoing messages in IMP.</p>
-<p>You must use the 2.x branch of Gollem with IMP 5.x.</p>
 </li>
 </ol>
 </div>
@@ -202,9 +170,7 @@ pear install -a horde/imp
 </div>
 <div class="section" id="installing-from-git">
 <h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
-<p>See:</p>
-<blockquote>
-<a class="reference external" href="http://horde.org/source/git.php">http://horde.org/source/git.php</a></blockquote>
+<p>See <a class="reference external" href="http://www.horde.org/source/git.php">http://www.horde.org/source/git.php</a></p>
 </div>
 </div>
 <div class="section" id="configuring-imp">
@@ -253,7 +219,6 @@ the <tt class="docutils literal">config/</tt> directory can be found in each fil
 <tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize IMP's
 appearance and behavior. See the header of the configuration files for
 details and examples. The defaults will be correct for most sites.</p>
-<p>IMP Configuration Pointers</p>
 <ul>
 <li><p class="first">By default, IMP is configured to NOT display text/html message parts
 inline.  This is done for various security reasons.  If you would like to
@@ -281,33 +246,31 @@ horde/bin/horde-db-migrate imp
 <p>Before you can secure IMP, you need a secure Horde installation.  Please
 read the file in <a class="reference external" href="../../horde/docs/SECURITY">horde/docs/SECURITY</a> for Horde security information
 before proceeding.</p>
-<p>There are two channels by which, unless steps are taken to avoid it, IMP
-encourages users to pass their IMAP and POP3 passwords around the Internet
+<p>Unless steps are taken to avoid it, there are two channels by which IMP can
+cause users to pass their IMAP/POP3 passwords across the network
 unencrypted.</p>
-<p>The first channel is between their browser and the Web server.  We strongly
+<p>The first channel is between the browser and the Web server.  We strongly
 recommend using an SSL-capable Web server to give users the option of
 encrypting communications between their browser and the Web server on which
-IMP is running; some sites may wish to disable non-SSL access entirely.</p>
+IMP is running. Some sites may wish to disable non-SSL access entirely.</p>
 <p>The second channel is between the Web server and their IMAP or POP3 server.
 The simplest way to avoid this is to have the mail server running on the
 same system as the Web server, and configuring IMP to connect to the IMAP
-or POP3 server on <tt class="docutils literal">localhost</tt> instead of on the Internet hostname.  In
+or POP3 server on <tt class="docutils literal">localhost</tt> instead of on the Internet hostname. In
 cases where that is not possible, it is highly recommended that the mail
 server be located on a private, secure network. Alternatively, the mail
-server can be accessed via TLS (or via the deprecated SSL-specific ports)
-to ensure that users' passwords remain safe after they have entrusted them
-to IMP.</p>
+server can be accessed via TLS to ensure that users' passwords remain safe
+after they have entrusted them to IMP (this is the default configuration).</p>
 <p>Other security steps you can take to increase security include:</p>
 <ul class="simple">
 <li>Use session cookies instead of URL based sessions.</li>
 <li>Set your php <tt class="docutils literal">session.entropy_length</tt> to a larger value (e.g. 16) and
 <tt class="docutils literal">session.entropy_file</tt> to a random source (e.g. <tt class="docutils literal">/dev/urandom</tt>)</li>
-<li>Enable and use the php mycrypt extension.</li>
 <li>If your database, mail server, and web server are on the same host
 machine, then:<ul>
-<li>Use unix socket database access and disable tcp database access.</li>
-<li>Use <tt class="docutils literal">localhost</tt> for all TCP/IP connections to avoid the network.</li>
-<li>Use the command-line sendmail for sending mail if possible.</li>
+<li>Use unix socket database access and disable TCP database access.</li>
+<li>Use <tt class="docutils literal">localhost</tt> for all TCP/IP connections to avoid the network, or
+run all services on a local, private network.</li>
 </ul>
 </li>
 </ul>
@@ -319,8 +282,7 @@ browser to ensure that all necessary prerequisites have been met.  See the
 script.</p>
 <p>The test script will also allow you to test your connection to the mail
 server and provide some auto-detected configuration parameters that can
-then be inserted into the server configuration located in
-<tt class="docutils literal">imp/config/backends.local.php</tt>.</p>
+be used to configure the mail server in <tt class="docutils literal">imp/config/backends.local.php</tt>.</p>
 <p>Next, use IMP to login to a known working IMAP or POP3 server.  Test at
 least the following:</p>
 <ul class="simple">
@@ -330,7 +292,7 @@ back in, if you are using an SQL or LDAP preferences system).</li>
 <li>Reading mail.</li>
 <li>Deleting mail.</li>
 <li>Flagging mail (if using IMAP).</li>
-<li>Changing folders (if using IMAP).</li>
+<li>Changing mailboxes (if using IMAP).</li>
 </ul>
 </li>
 <li><p class="first">Tuning IMP (Performance)</p>

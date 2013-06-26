@@ -28,7 +28,7 @@
 <p>This document contains instructions for installing Horde Groupware on your
 system.</p>
 <p>For information on the capabilities and features of Horde Groupware, see the
-file <a class="reference external" href="?f=README.html">README</a> in the top-level directory of the Horde Groupware distribution.</p>
+file <a class="reference external" href="README">README</a> in the top-level directory of the Horde Groupware distribution.</p>
 <div class="section" id="quick-install">
 <h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Quick Install</a></h1>
 <p>These are very terse instructions how to install Horde Groupware and its
@@ -44,6 +44,7 @@ cd php-x.x.x/
             --with-gd --with-png-dir=/usr --with-jpeg-dir=/usr \
             [--with-mysql|--with-pgsql|--with-oci8]
             [--with-tidy]
+            [--with-ftp]
 make
 make install
 </pre>
@@ -104,7 +105,7 @@ AcceptPathInfo On
 &quot;broken-scriptfilename&quot; =&gt; &quot;enable&quot;
 </pre>
 </li>
-<li><p class="first">PHP 5.2.0 or above.</p>
+<li><p class="first">PHP 5.3.0 or above.</p>
 <p>PHP is the interpreted language in which Horde Groupware is written.</p>
 <div class="note">
 <p class="first admonition-title">Note</p>
@@ -245,6 +246,19 @@ to connect to a server.</p>
 <p>See <a class="reference external" href="http://www.php.net/openssl">http://www.php.net/openssl</a> for information on compiling OpenSSL
 into PHP.</p>
 </li>
+<li><p class="first">fileinfo</p>
+<p>Allows Horde modules to guess the MIME type of files by analyzing
+their contents.</p>
+<p>This module is automatically enabled by default.</p>
+</li>
+<li><p class="first">intl <tt class="docutils literal"><span class="pre">--enable-intl</span></tt></p>
+<p>The intl module is required to handle display of Internationalized
+Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>), e.g in e-mail addresses.</p>
+</li>
+<li><p class="first">FTP support <tt class="docutils literal"><span class="pre">--with-ftp</span></tt></p>
+<p>If using the FTP VFS driver for the file manager, the FTP PHP module is
+<strong>required</strong>.</p>
+</li>
 </ol>
 </blockquote>
 <ol class="arabic" start="4">
@@ -264,28 +278,9 @@ extension=fileinfo.so
 extension=fileinfo.dll
 </pre>
 <p>After that, restart your webserver.</p>
-<p>These PECL modules are <strong>RECOMMENDED</strong> to be installed:</p>
-<ol class="loweralpha">
-<li><p class="first">fileinfo</p>
-<p>Allows Horde Groupware modules to guess the MIME type of files by
-analyzing their contents.</p>
-<p>If not enabled, Horde Groupware will use its own PHP code to perform MIME
-magic lookups. However, this lookup is slower, less accurate, and detects
-fewer MIME types than the PECL extension will.</p>
-<p>To install, enter the following at the command prompt:</p>
-<pre class="literal-block">
-pecl install fileinfo
-</pre>
-<p>As of PHP 5.3.0, this module is automatically enabled by default.</p>
-</li>
-</ol>
 <p>These PECL modules are <strong>RECOMMENDED</strong> to be installed if you need
 advanced functionality:</p>
 <ol class="loweralpha">
-<li><p class="first">idn</p>
-<p>idn is required in order to handle Internationalized Domain Names
-(see <a class="reference external" href="http://www.faqs.org/rfcs/rfc3490.html">RFC 3490</a>).</p>
-</li>
 <li><p class="first">imagick</p>
 <p>The imagick module can be used by Horde's image library to provide all
 kind of image manipulations.</p>
@@ -329,6 +324,15 @@ spell-check feature.</p>
 <li><p class="first">Sendmail or SMTP server.</p>
 <p>Horde Groupware sends mail via either a local sendmail or a remote SMTP
 server.  It is <strong>RECOMMENDED</strong> that SMTP be used.</p>
+</li>
+<li><p class="first">FTP server.</p>
+<p>If using a FTP backend for the file manager, you <strong>must</strong> have at least one
+FTP server.</p>
+</li>
+<li><p class="first">ElasticSearch server.</p>
+<p>An <a class="reference external" href="http://www.elasticsearch.org/">ElasticSearch</a> server or cluster running on localhost can be used to
+provide indexing of bookmarks data and quick searching of the indexed
+content.</p>
 </li>
 </ol>
 </div>
@@ -393,14 +397,15 @@ the PEAR installation you just created, e.g.:</p>
 /var/www/groupware/pear/pear -c /var/www/groupware/pear.conf \
     channel-discover pear.horde.org
 </pre>
-<p>Finally update the .htaccess file in <tt class="docutils literal">/var/www/groupware/</tt> or configure your
-web server in some other way to point PHP's <tt class="docutils literal">include_path</tt> setting to the
-PEAR installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment variable to the
-web root:</p>
+<p>Finally configure your web server in some way to point PHP's <tt class="docutils literal">include_path</tt>
+setting to the PEAR installation and the <tt class="docutils literal">PHP_PEAR_SYSCONF_DIR</tt> environment
+variable to the web root:</p>
 <pre class="literal-block">
 php_value include_path /var/www/groupware/pear/php
 SetEnv PHP_PEAR_SYSCONF_DIR /var/www/groupware
 </pre>
+<p>It is recommended to not use the .htaccess file in <tt class="docutils literal">/var/www/groupware/</tt> to
+set these values because it will be overwritten with every further update.</p>
 </div>
 <div class="section" id="finishing-installation">
 <h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Finishing installation</a></h2>
@@ -486,6 +491,12 @@ you want to test mime_drivers.local.php for example run:</p>
 php -l mime_drivers.local.php
 </pre>
 </div>
+<p>The default configuration stores files uploaded through the file manager in
+the SQL database. This is the most compatible configuration but doesn't
+scale well, may hit some database server limits, and may only work for very
+small installations. You should configure a different backend as soon as
+possible. See <tt class="docutils literal">gollem/config/backends.php</tt> and
+<tt class="docutils literal"><span class="pre">gollem/config/backends.d/10-groupware.php</span></tt> for details.</p>
 </li>
 <li><p class="first">Setting up alarm emails</p>
 <p>If you want your users to be able to receive emails from the Horde_Alarm
@@ -498,7 +509,7 @@ and you must have the PHP CLI installed (a CGI binary is not supported -
 # Horde Alarms
 */5 * * * * /usr/bin/horde-alarms
 </pre>
-<p>If not installing Horde Groupware through PEAR of if PEAR's <tt class="docutils literal">bin_dir</tt>
+<p>If not installing Horde Groupware through PEAR or if PEAR's <tt class="docutils literal">bin_dir</tt>
 configuration doesn't point to <tt class="docutils literal">/usr/bin/</tt>, replace
 <tt class="docutils literal"><span class="pre">/usr/bin/horde-alarms</span></tt> with the path to the <tt class="docutils literal"><span class="pre">horde-alarms</span></tt> script in
 your Horde installation.</p>
@@ -540,21 +551,36 @@ find config/ -type f -exec chmod 0440 '{}' \;
 </pre>
 </li>
 <li><p class="first">User Passwords</p>
-<p>There are two channels by which, unless steps are taken to avoid it,
-Horde Groupware encourages users to pass their passwords around the
-Internet unencrypted.</p>
-<p>The first channel is between their browser and the Web server. We
-strongly recommend using an SSL-capable Web server to give users the
-option of encrypting communications between their browser and the Web
-server on which Horde Groupware is running; some sites may wish to
-disable non-SSL access entirely.</p>
-<p>The second channel is between the Web server and authentication
-backend. The simplest way to avoid this is to have the authentication
+<p>Unless steps are taken to avoid it, there are two channels by which Horde
+Groupware can cause users to pass their IMAP/POP3 passwords across the
+network unencrypted.</p>
+<p>The first channel is between the browser and the Web server.  We strongly
+recommend using an SSL-capable Web server to give users the option of
+encrypting communications between their browser and the Web server on
+which Horde Groupware is running. Some sites may wish to disable non-SSL
+access entirely.</p>
+<p>The second channel is between the Web server and their authentication
+backend.  The simplest way to avoid this is to have the authentication
 source running on the same system as the Web server, and configuring
 Horde Groupware to connect to the backend on <tt class="docutils literal">localhost</tt> instead of on
-the Internet hostname. In cases where that is not possible, we recommend
-using SSL or some other encryption layer to ensure that users' passwords
-remain safe after they have entrusted them to Horde Groupware.</p>
+the Internet hostname. In cases where that is not possible, it is highly
+recommended that the backend be located on a private, secure network.
+Alternatively, the backend may be accessed via TLS to ensure that users'
+passwords remain safe after they have entrusted them to Horde Groupware
+(this is the default configuration).</p>
+<p>Other security steps you can take to increase security include:</p>
+<ul class="simple">
+<li>Use session cookies instead of URL based sessions.</li>
+<li>Set your php <tt class="docutils literal">session.entropy_length</tt> to a larger value (e.g. 16) and
+<tt class="docutils literal">session.entropy_file</tt> to a random source (e.g. <tt class="docutils literal">/dev/urandom</tt>)</li>
+<li>If your database, mail server, and web server are on the same host
+machine, then:<ul>
+<li>Use unix socket database access and disable TCP database access.</li>
+<li>Use <tt class="docutils literal">localhost</tt> for all TCP/IP connections to avoid the network, or
+run all services on a local, private network.</li>
+</ul>
+</li>
+</ul>
 </li>
 </ol>
 <ol class="loweralpha" start="2">
@@ -572,7 +598,7 @@ Handler</tt> tab in the Horde setup.</p>
 </li>
 </ol>
 <p>For more information about securing your webserver, PHP and Horde Groupware,
-see the <a class="reference external" href="?f=SECURITY.html">docs/SECURITY</a> file.</p>
+see the <a class="reference external" href="../../horde/docs/SECURITY">docs/SECURITY</a> file.</p>
 </li>
 </ol>
 </div>
@@ -583,9 +609,17 @@ temporary directory (see the <tt class="docutils literal">General</tt> tab in th
 reasons, some of these files may not be removed when the user's session
 ends. To reclaim this disk space, it may be necessary to periodically delete
 these old temporary files.</p>
-<p>An example cron-based solution can be found at <tt class="docutils literal"><span class="pre">scripts/temp-cleanup.cron</span></tt>.
-Another possible solution is to use Red Hat's <tt class="docutils literal">tmpwatch</tt> utility or anything
-similar to remove old files (see <a class="reference external" href="http://www.redhat.com/">http://www.redhat.com/</a>).</p>
+<p>An example cron-based solution can be found at
+<tt class="docutils literal"><span class="pre">horde/scripts/temp-cleanup.cron</span></tt> in PEAR's <tt class="docutils literal">data_dir</tt> directory.  Another
+possible solution is to use utilities like <tt class="docutils literal">tmpwatch</tt>, <tt class="docutils literal">tmpreaper</tt> or
+anything similar to remove old files.</p>
+<p>Stale sessions are automatically pruned by PHP according to the
+<a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-probability">session.gc_probability</a>, <a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-divisor">session.gc_divisor</a>, and
+<a class="reference external" href="http://www.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime">session.gc_maxlifetime</a> settings located in <tt class="docutils literal">php.ini</tt>. However, the
+default settings are very aggressive: the garbage collection routine runs on
+average 1% of the time a page is loaded. For most installations, a lower
+garbage collection rate is recommended (setting session.gc_divisor to 10,000
+or higher is much more reasonable).</p>
 </div>
 <div class="section" id="translations">
 <h1><a class="toc-backref" href="#id9">6&nbsp;&nbsp;&nbsp;Translations</a></h1>
@@ -593,7 +627,7 @@ similar to remove old files (see <a class="reference external" href="http://www.
 translations of text displayed by applications; the translations are found in
 the po/ directory.  If a translation is not yet available for your locale (and
 you wish to create one), or if you're having trouble using a provided
-translation, please see the <a class="reference external" href="?f=TRANSLATIONS.html">horde/docs/TRANSLATIONS</a> file for instructions.</p>
+translation, please see the <a class="reference external" href="../../horde/docs/TRANSLATIONS">docs/TRANSLATIONS</a> file for instructions.</p>
 </div>
 <div class="section" id="obtaining-support">
 <h1><a class="toc-backref" href="#id10">7&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
