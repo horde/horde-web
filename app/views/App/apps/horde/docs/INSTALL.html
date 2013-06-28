@@ -166,6 +166,9 @@ at</p>
 <p><a class="reference external" href="http://www.gnu.org/software/gettext/gettext.html">http://www.gnu.org/software/gettext/gettext.html</a></p>
 </blockquote>
 <p>See also note below on configuring <a class="reference internal" href="#translations">Translations</a>.</p>
+<p>All Horde translations are stored in UTF-8, so your underlying system
+MUST support UTF-8 for all locales that you wish to provide translation
+support for.</p>
 </li>
 <li><p class="first">XML and DOM support.</p>
 <p>XML and DOM support are enabled in PHP 5 by default. You only have to
@@ -230,9 +233,9 @@ client libraries to access the server must be available locally.</p>
 will be configurable via Horde's web interface - the default values
 stored in each applications <tt class="docutils literal">config/prefs.php</tt> file will be used.</p>
 </li>
-<li><p class="first">UTF-8 support (mbstring and iconv extensions) <tt class="docutils literal"><span class="pre">--enable-mbstring</span></tt></p>
+<li><p class="first">Multibyte character support (mbstring and iconv extensions) <tt class="docutils literal"><span class="pre">--enable-mbstring</span></tt></p>
 <p>If these extensions are enabled, Horde can better support multibyte
-character sets like UTF-8.</p>
+character sets.</p>
 <p>For iconv support you should use the GNU libiconv library, which is more
 stable and supports more charsets, compared to other iconv
 implementations, like Solaris', for example.</p>
