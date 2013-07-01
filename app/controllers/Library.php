@@ -139,7 +139,7 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
      *
      * @return The name of the template that should be used for display.
      */
-    private function _isKnownLibrary($view, $default)
+    private function _isKnownLibrary($view)
     {
         if (!in_array($view->libraryName, $view->libraries)) {
             $view->page_title = '404 Not Found';
