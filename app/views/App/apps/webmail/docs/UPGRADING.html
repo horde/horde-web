@@ -11,42 +11,68 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#introduction" id="id1">1&nbsp;&nbsp;&nbsp;Introduction</a></li>
-<li><a class="reference internal" href="#upgrading-a-horde-groupware-webmail-edition-4-or-later" id="id2">2&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 4 or later</a></li>
-<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-4-0-x-to-4-0-4" id="id3">3&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.4</a><ul class="auto-toc">
-<li><a class="reference internal" href="#weather-portal-block" id="id4">3.1&nbsp;&nbsp;&nbsp;Weather portal block</a></li>
-<li><a class="reference internal" href="#configuration-changes" id="id5">3.2&nbsp;&nbsp;&nbsp;Configuration changes</a></li>
-<li><a class="reference internal" href="#preferences-imp-config-prefs-php" id="id6">3.3&nbsp;&nbsp;&nbsp;Preferences (imp/config/prefs.php)</a></li>
+<li><a class="reference internal" href="#introduction" id="id4">1&nbsp;&nbsp;&nbsp;Introduction</a></li>
+<li><a class="reference internal" href="#upgrading-a-horde-groupware-webmail-edition-4-or-later" id="id5">2&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 4 or later</a></li>
+<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-4-x-to-5-x" id="id6">3&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.x to 5.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#configuration-options-config-conf-php" id="id7">3.1&nbsp;&nbsp;&nbsp;Configuration Options (config/conf.php)</a></li>
+<li><a class="reference internal" href="#hooks-config-hooks-php" id="id8">3.2&nbsp;&nbsp;&nbsp;Hooks (config/hooks.php)</a></li>
+<li><a class="reference internal" href="#preferences-config-prefs-php" id="id9">3.3&nbsp;&nbsp;&nbsp;Preferences (config/prefs.php)</a></li>
+<li><a class="reference internal" href="#activesync-eas-integration" id="id10">3.4&nbsp;&nbsp;&nbsp;ActiveSync (EAS) Integration</a></li>
+<li><a class="reference internal" href="#mail-module" id="id11">3.5&nbsp;&nbsp;&nbsp;Mail Module</a><ul class="auto-toc">
+<li><a class="reference internal" href="#server-options-imp-config-backends-php" id="id12">3.5.1&nbsp;&nbsp;&nbsp;Server Options (imp/config/backends.php)</a></li>
+<li><a class="reference internal" href="#configuration-options-imp-config-conf-php" id="id13">3.5.2&nbsp;&nbsp;&nbsp;Configuration Options (imp/config/conf.php)</a></li>
+<li><a class="reference internal" href="#mime-viewer-options-imp-config-mime-drivers-php" id="id14">3.5.3&nbsp;&nbsp;&nbsp;MIME Viewer Options (imp/config/mime_drivers.php)</a></li>
+<li><a class="reference internal" href="#hooks-imp-config-hooks-php" id="id15">3.5.4&nbsp;&nbsp;&nbsp;Hooks (imp/config/hooks.php)</a></li>
+<li><a class="reference internal" href="#preferences-imp-config-prefs-php" id="id16">3.5.5&nbsp;&nbsp;&nbsp;Preferences (imp/config/prefs.php)</a></li>
+<li><a class="reference internal" href="#api-changes" id="id17">3.5.6&nbsp;&nbsp;&nbsp;API Changes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-4-0-x-to-4-0-3" id="id7">4&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.3</a><ul class="auto-toc">
-<li><a class="reference internal" href="#configuration-options" id="id8">4.1&nbsp;&nbsp;&nbsp;Configuration Options</a></li>
-<li><a class="reference internal" href="#mime-viewer-options-imp-config-mime-drivers-php" id="id9">4.2&nbsp;&nbsp;&nbsp;MIME Viewer Options (imp/config/mime_drivers.php)</a></li>
+<li><a class="reference internal" href="#filters-module" id="id18">3.6&nbsp;&nbsp;&nbsp;Filters Module</a><ul class="auto-toc">
+<li><a class="reference internal" href="#backend-configuration-ingo-config-backends-php" id="id19">3.6.1&nbsp;&nbsp;&nbsp;Backend Configuration (ingo/config/backends.php)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-a-horde-groupware-webmail-edition-1-x" id="id10">5&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 1.x</a></li>
-<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-1-1-x-to-1-1-1-1" id="id11">6&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.1.x to 1.1.1.1</a><ul class="auto-toc">
-<li><a class="reference internal" href="#favourite-recpients-address-book" id="id12">6.1&nbsp;&nbsp;&nbsp;Favourite Recpients Address Book</a></li>
+<li><a class="reference internal" href="#address-book-module" id="id20">3.7&nbsp;&nbsp;&nbsp;Address Book Module</a><ul class="auto-toc">
+<li><a class="reference internal" href="#attribute-changes" id="id21">3.7.1&nbsp;&nbsp;&nbsp;Attribute Changes</a></li>
+<li><a class="reference internal" href="#preference-changes" id="id22">3.7.2&nbsp;&nbsp;&nbsp;Preference Changes</a></li>
+<li><a class="reference internal" href="#id1" id="id23">3.7.3&nbsp;&nbsp;&nbsp;API Changes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-1-0-x-to-1-1-x" id="id13">7&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.0.x to 1.1.x</a><ul class="auto-toc">
-<li><a class="reference internal" href="#memcache-configuration" id="id14">7.1&nbsp;&nbsp;&nbsp;Memcache Configuration</a></li>
-<li><a class="reference internal" href="#application-hooks" id="id15">7.2&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
-<li><a class="reference internal" href="#group-hooks" id="id16">7.3&nbsp;&nbsp;&nbsp;Group Hooks</a></li>
-<li><a class="reference internal" href="#custom-themes" id="id17">7.4&nbsp;&nbsp;&nbsp;Custom Themes</a></li>
-<li><a class="reference internal" href="#static-log-out-links" id="id18">7.5&nbsp;&nbsp;&nbsp;Static Log out Links</a></li>
-<li><a class="reference internal" href="#unified-imap-quota-driver" id="id19">7.6&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></li>
-<li><a class="reference internal" href="#user-defined-mailbox-icons" id="id20">7.7&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></li>
-<li><a class="reference internal" href="#new-message-list-format-hook" id="id21">7.8&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></li>
-<li><a class="reference internal" href="#spell-checking" id="id22">7.9&nbsp;&nbsp;&nbsp;Spell Checking</a></li>
-<li><a class="reference internal" href="#filters-sql-backend" id="id23">7.10&nbsp;&nbsp;&nbsp;Filters SQL Backend</a></li>
-<li><a class="reference internal" href="#imsp-driver-and-share-support" id="id24">7.11&nbsp;&nbsp;&nbsp;IMSP Driver and Share Support</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-4-0-x-to-4-0-4" id="id24">4&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.4</a><ul class="auto-toc">
+<li><a class="reference internal" href="#weather-portal-block" id="id25">4.1&nbsp;&nbsp;&nbsp;Weather portal block</a></li>
+<li><a class="reference internal" href="#configuration-changes" id="id26">4.2&nbsp;&nbsp;&nbsp;Configuration changes</a></li>
+<li><a class="reference internal" href="#id2" id="id27">4.3&nbsp;&nbsp;&nbsp;Preferences (imp/config/prefs.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-4-0-x-to-4-0-3" id="id28">5&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.3</a><ul class="auto-toc">
+<li><a class="reference internal" href="#configuration-options" id="id29">5.1&nbsp;&nbsp;&nbsp;Configuration Options</a></li>
+<li><a class="reference internal" href="#id3" id="id30">5.2&nbsp;&nbsp;&nbsp;MIME Viewer Options (imp/config/mime_drivers.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-a-horde-groupware-webmail-edition-1-x" id="id31">6&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 1.x</a></li>
+<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-1-1-x-to-1-1-1-1" id="id32">7&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.1.x to 1.1.1.1</a><ul class="auto-toc">
+<li><a class="reference internal" href="#favourite-recpients-address-book" id="id33">7.1&nbsp;&nbsp;&nbsp;Favourite Recpients Address Book</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-horde-groupware-webmail-edition-from-1-0-x-to-1-1-x" id="id34">8&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.0.x to 1.1.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#memcache-configuration" id="id35">8.1&nbsp;&nbsp;&nbsp;Memcache Configuration</a></li>
+<li><a class="reference internal" href="#application-hooks" id="id36">8.2&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
+<li><a class="reference internal" href="#group-hooks" id="id37">8.3&nbsp;&nbsp;&nbsp;Group Hooks</a></li>
+<li><a class="reference internal" href="#custom-themes" id="id38">8.4&nbsp;&nbsp;&nbsp;Custom Themes</a></li>
+<li><a class="reference internal" href="#static-log-out-links" id="id39">8.5&nbsp;&nbsp;&nbsp;Static Log out Links</a></li>
+<li><a class="reference internal" href="#unified-imap-quota-driver" id="id40">8.6&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></li>
+<li><a class="reference internal" href="#user-defined-mailbox-icons" id="id41">8.7&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></li>
+<li><a class="reference internal" href="#new-message-list-format-hook" id="id42">8.8&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></li>
+<li><a class="reference internal" href="#spell-checking" id="id43">8.9&nbsp;&nbsp;&nbsp;Spell Checking</a></li>
+<li><a class="reference internal" href="#filters-sql-backend" id="id44">8.10&nbsp;&nbsp;&nbsp;Filters SQL Backend</a></li>
+<li><a class="reference internal" href="#imsp-driver-and-share-support" id="id45">8.11&nbsp;&nbsp;&nbsp;IMSP Driver and Share Support</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Introduction</a></h1>
+<h1><a class="toc-backref" href="#id4">1&nbsp;&nbsp;&nbsp;Introduction</a></h1>
 <p>These are instructions to upgrade from earlier Horde Groupware Webmail Edition
 versions.  Please backup your existing data before running any of the steps
 described below, you need the backups in case anything goes wrong with the
@@ -56,7 +82,7 @@ updated data with your old Horde Groupware Webmail Edition version anymore.</p>
 not covered by the update script.</p>
 </div>
 <div class="section" id="upgrading-a-horde-groupware-webmail-edition-4-or-later">
-<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 4 or later</a></h1>
+<h1><a class="toc-backref" href="#id5">2&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 4 or later</a></h1>
 <p>Upgrading Horde Groupware Webmail Edition is as easy as running:</p>
 <pre class="literal-block">
 pear upgrade -a -B horde/webmail
@@ -70,10 +96,204 @@ installer.</p>
 as an administrator, go to Administration =&gt; Configuration and update
 anything that's highlighted as outdated.</p>
 </div>
+<div class="section" id="upgrading-horde-groupware-webmail-edition-from-4-x-to-5-x">
+<h1><a class="toc-backref" href="#id6">3&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.x to 5.x</a></h1>
+<div class="section" id="configuration-options-config-conf-php">
+<h2><a class="toc-backref" href="#id7">3.1&nbsp;&nbsp;&nbsp;Configuration Options (config/conf.php)</a></h2>
+<p>The $conf['session']['max_time'] option was added. The default is no maximum
+session time, the same behavior as in Horde Groupware Webmail Edition 4.</p>
+<p>The $conf['cachecssparams']['url_version_param'] option was added. This option
+is only used if no CSScaching is selected (a configuration that is NOT
+recommended for production servers). The new default is to add version
+information to CSS server URLs, which is altered behavior from Horde Groupware
+Webmail Edition 4.</p>
+<p>The $conf['cachejsparams']['url_version_param'] option was added. This option
+is only used if no javascript caching is selected (a configuration that is NOT
+recommended for production servers). The new default is to add version
+information to javascript server URLs, which is altered behavior from Horde
+Groupware Webmail Edition 4.</p>
+</div>
+<div class="section" id="hooks-config-hooks-php">
+<h2><a class="toc-backref" href="#id8">3.2&nbsp;&nbsp;&nbsp;Hooks (config/hooks.php)</a></h2>
+<p>The 'appauthenticated' hook has been added.</p>
+<p>The behavior of the 'pushapp' hook has changed - it is now called a maximum of
+one time per page access for an application.</p>
+<p>The 'appinitialized' hook was removed (replaced by the 'appauthenticated'
+hook).</p>
+<p>The 'pushapp_post' hook was removed.</p>
+<p>See <tt class="docutils literal">config/hooks.php.dist</tt> for further details.</p>
+</div>
+<div class="section" id="preferences-config-prefs-php">
+<h2><a class="toc-backref" href="#id9">3.3&nbsp;&nbsp;&nbsp;Preferences (config/prefs.php)</a></h2>
+<p>The 'sending_charset' preference now defaults to 'UTF-8'.</p>
+<p>The 'menu_view' and 'show_sidebar' preferences have been removed.</p>
+</div>
+<div class="section" id="activesync-eas-integration">
+<h2><a class="toc-backref" href="#id10">3.4&nbsp;&nbsp;&nbsp;ActiveSync (EAS) Integration</a></h2>
+<p>Email support has been added, along with support for the EAS 12.0 and 12.1
+protocol versions. New configuration options have been added to support this.
+You MUST update Horde Groupware Webmail Edition's ActiveSync configuration.</p>
+<p>The Custom logging option has been changed to ALWAYS be a path to a directory,
+and not a specific filename.</p>
+<p>The security policy settings have been moved out of the global configuration and
+into the permissions system for greater per user control over policies.</p>
+<p>New database migrations have been added, you MUST run these migrations for
+ActiveSync to work.</p>
+</div>
+<div class="section" id="mail-module">
+<h2><a class="toc-backref" href="#id11">3.5&nbsp;&nbsp;&nbsp;Mail Module</a></h2>
+<p>The basic view now requires javascript support on the browser. If not
+available, the user will automatically be redirected to the minimal view.</p>
+<div class="section" id="server-options-imp-config-backends-php">
+<h3><a class="toc-backref" href="#id12">3.5.1&nbsp;&nbsp;&nbsp;Server Options (imp/config/backends.php)</a></h3>
+<p>The 'namespace' option now requires the namespaces to be in the UTF-8 charset,
+not UTF7-IMAP.</p>
+<p>The 'smtphost' and 'smtpport' options have been removed. They have been
+replaced by the 'smtp' option, which allows ALL available SMTP configuration
+options to be overriden.</p>
+<p>The 'admin' option has been changed: optional configuration parameters should
+live within the base 'admin' array rather than a 'params' array within the
+base.</p>
+</div>
+<div class="section" id="configuration-options-imp-config-conf-php">
+<h3><a class="toc-backref" href="#id13">3.5.2&nbsp;&nbsp;&nbsp;Configuration Options (imp/config/conf.php)</a></h3>
+<p>The $conf['fixed_folders'] option now requires the mailboxes to be in the
+UTF-8 charset, not UTF7-IMAP.</p>
+<p>The $conf['compose']['link_attach_size_limit'] option was added.</p>
+<p>The $conf['print']['add_printedby'] option was removed and replaced by the
+'add_printedby' preference.</p>
+<p>The $conf['user']['select_sentmail_folder'] option was removed. To prevent
+changing the sentmail mailbox, the 'sent_mail_folder' preference should be
+locked instead.</p>
+<p>The following configuration options were removed:</p>
+<pre class="literal-block">
+$conf['dimp']['viewport']['buffer_pages']
+$conf['dimp']['viewport']['viewport_wait']
+</pre>
+</div>
+<div class="section" id="mime-viewer-options-imp-config-mime-drivers-php">
+<h3><a class="toc-backref" href="#id14">3.5.3&nbsp;&nbsp;&nbsp;MIME Viewer Options (imp/config/mime_drivers.php)</a></h3>
+<p>The 'safe_addrs' option has been removed from the Images driver config.
+To set the default list of e-mail addresses that should be considered &quot;safe&quot;,
+the 'image_replacement_addrs' preference can now be used.</p>
+</div>
+<div class="section" id="hooks-imp-config-hooks-php">
+<h3><a class="toc-backref" href="#id15">3.5.4&nbsp;&nbsp;&nbsp;Hooks (imp/config/hooks.php)</a></h3>
+<p>The 'mbox_sort' and 'mbox_special' hooks have been added.</p>
+<p>The 'dimp_addressformatting' hook has been removed.</p>
+<p>The $action parameter for reporting not spam message to the 'spam_email' and
+'post_spam' hooks has been changed from 'ham' to 'innocent'.</p>
+</div>
+<div class="section" id="preferences-imp-config-prefs-php">
+<h3><a class="toc-backref" href="#id16">3.5.5&nbsp;&nbsp;&nbsp;Preferences (imp/config/prefs.php)</a></h3>
+<p>The default values for these preferences have been changed:</p>
+<pre class="literal-block">
+drafts_folder
+sent_mail_folder
+spam_folder
+trash_folder
+</pre>
+<p>The following preferences are no longer used and may be safely removed from
+your preference backend (only after all users have logged in - these
+preferences MAY be used to automatically upgrade to new preferences when
+a user logs into Horde Groupware Webmail Edition 5 for the first time):</p>
+<pre class="literal-block">
+dimp_qsearch_field
+dimp_show_preview
+dimp_splitbar
+dimp_splitbar_vert
+dimp_toggle_headers
+dynamic_view
+image_addrbook
+move_ham_after_report
+sig_first
+stationery
+</pre>
+<p>The 'cursor_compose' preference removed the 'sig' option. Existing preferences
+will automatically be converted to 'bottom'.</p>
+<p>The 'save_attachments' preference removed the 'prompt_yes' and 'prompt_no'
+options. Existing preferences will automatically be converted.</p>
+<p>The 'add_printedby', 'image_replacement_addrs', 'reply_charset', and
+'reply_strip_sig' preferences were added.</p>
+<p>The 'forward_default' preference now contains the 'editasnew' option.</p>
+</div>
+<div class="section" id="api-changes">
+<h3><a class="toc-backref" href="#id17">3.5.6&nbsp;&nbsp;&nbsp;API Changes</a></h3>
+<blockquote>
+<ul>
+<li><p class="first">copyMessages</p>
+<p>The $mailbox and $target parameters are now required to be UTF-8 strings.</p>
+</li>
+<li><p class="first">createFolder</p>
+<p>This call has been removed (replaced with 'createMailbox').</p>
+</li>
+<li><p class="first">deleteMessages</p>
+<p>The $mailbox parameter is now required to be a UTF-8 string.</p>
+</li>
+<li><p class="first">flagMessages</p>
+<p>The $mailbox parameter is now required to be a UTF-8 string.</p>
+</li>
+<li><p class="first">folderlist</p>
+<p>This call has been removed (replaced with 'mailboxList').</p>
+</li>
+<li><p class="first">moveMessages</p>
+<p>The $mailbox and $target parameters are now required to be UTF-8 strings.</p>
+</li>
+<li><p class="first">searchMailbox</p>
+<p>The $mailbox parameter is now required to be a UTF-8 string.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="filters-module">
+<h2><a class="toc-backref" href="#id18">3.6&nbsp;&nbsp;&nbsp;Filters Module</a></h2>
+<div class="section" id="backend-configuration-ingo-config-backends-php">
+<h3><a class="toc-backref" href="#id19">3.6.1&nbsp;&nbsp;&nbsp;Backend Configuration (ingo/config/backends.php)</a></h3>
+<p>The 'hordeauth' parameter and the 'password' and 'username' parameters have
+been removed. By default, the transport backend will use Horde Groupware
+Webmail Edition authentication credentials to access. To set a different
+username and/or password, you should use the 'transport_auth' hook.</p>
+</div>
+</div>
+<div class="section" id="address-book-module">
+<h2><a class="toc-backref" href="#id20">3.7&nbsp;&nbsp;&nbsp;Address Book Module</a></h2>
+<div class="section" id="attribute-changes">
+<h3><a class="toc-backref" href="#id21">3.7.1&nbsp;&nbsp;&nbsp;Attribute Changes</a></h3>
+<blockquote>
+<ul class="simple">
+<li>The &quot;gender&quot; attribute sets values of (literally) &quot;male&quot; or &quot;female&quot; now,
+and no longer 0 or 1.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="preference-changes">
+<h3><a class="toc-backref" href="#id22">3.7.2&nbsp;&nbsp;&nbsp;Preference Changes</a></h3>
+<blockquote>
+<ul class="simple">
+<li>The &quot;addressbooks&quot; preference has been removed.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id23">3.7.3&nbsp;&nbsp;&nbsp;API Changes</a></h3>
+<blockquote>
+<ul>
+<li><p class="first">search</p>
+<p>The $sources, $fields, $matchBegin, $forceSource and $returnFields
+parameters have been removed and replaced by the $opts parameter.</p>
+<p>Added a 'rfc822Return' option to return a Horde_Mail_Rfc822_List object
+instead of the search results array (which remains the default).</p>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
 <div class="section" id="upgrading-horde-groupware-webmail-edition-from-4-0-x-to-4-0-4">
-<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.4</a></h1>
+<h1><a class="toc-backref" href="#id24">4&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.4</a></h1>
 <div class="section" id="weather-portal-block">
-<h2><a class="toc-backref" href="#id4">3.1&nbsp;&nbsp;&nbsp;Weather portal block</a></h2>
+<h2><a class="toc-backref" href="#id25">4.1&nbsp;&nbsp;&nbsp;Weather portal block</a></h2>
 <p>The weather.com website has dropped their API to retrieve weather forecasts
 with a very short notice. The weather.com portal block has been removed and
 will be automatically removed from the users' portal configurations too.</p>
@@ -87,32 +307,32 @@ pear install horde/horde_service_weather-alpha
 </pre>
 </div>
 <div class="section" id="configuration-changes">
-<h2><a class="toc-backref" href="#id5">3.2&nbsp;&nbsp;&nbsp;Configuration changes</a></h2>
+<h2><a class="toc-backref" href="#id26">4.2&nbsp;&nbsp;&nbsp;Configuration changes</a></h2>
 <p>The 'nobase64_img' option was added.</p>
 </div>
-<div class="section" id="preferences-imp-config-prefs-php">
-<h2><a class="toc-backref" href="#id6">3.3&nbsp;&nbsp;&nbsp;Preferences (imp/config/prefs.php)</a></h2>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id27">4.3&nbsp;&nbsp;&nbsp;Preferences (imp/config/prefs.php)</a></h2>
 <p>The 'delete_mark_seen' preference has been added to the Mail module.</p>
 <p>The 'reply_lang' preference has been added to the Mail module.</p>
 </div>
 </div>
 <div class="section" id="upgrading-horde-groupware-webmail-edition-from-4-0-x-to-4-0-3">
-<h1><a class="toc-backref" href="#id7">4&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.3</a></h1>
+<h1><a class="toc-backref" href="#id28">5&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 4.0.x to 4.0.3</a></h1>
 <div class="section" id="configuration-options">
-<h2><a class="toc-backref" href="#id8">4.1&nbsp;&nbsp;&nbsp;Configuration Options</a></h2>
+<h2><a class="toc-backref" href="#id29">5.1&nbsp;&nbsp;&nbsp;Configuration Options</a></h2>
 <p>The 'allow_resume_all' option has been removed from the Mail module.  Only
 messages specifically marked as drafts can be resumed; however, all messages
 are given the option to &quot;Edit As New&quot;.</p>
 </div>
-<div class="section" id="mime-viewer-options-imp-config-mime-drivers-php">
-<h2><a class="toc-backref" href="#id9">4.2&nbsp;&nbsp;&nbsp;MIME Viewer Options (imp/config/mime_drivers.php)</a></h2>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id30">5.2&nbsp;&nbsp;&nbsp;MIME Viewer Options (imp/config/mime_drivers.php)</a></h2>
 <p>The 'allthumbs' option has been removed from the Mail module's HTML driver.
 Image thumbnail previews are now always shown if an image conversion utility is
 present on the system.</p>
 </div>
 </div>
 <div class="section" id="upgrading-a-horde-groupware-webmail-edition-1-x">
-<h1><a class="toc-backref" href="#id10">5&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 1.x</a></h1>
+<h1><a class="toc-backref" href="#id31">6&nbsp;&nbsp;&nbsp;Upgrading a Horde Groupware Webmail Edition 1.x</a></h1>
 <p>For upgrading from a Horde Groupware Webmail Edition version 1.x to
 4.0 or later, see the section <a class="reference internal" href="#upgrading-a-horde-groupware-webmail-edition-4-or-later">Upgrading a Horde Groupware Webmail
 Edition 4 or later</a>.</p>
@@ -165,9 +385,9 @@ different directory.</p>
 </ol>
 </div>
 <div class="section" id="upgrading-horde-groupware-webmail-edition-from-1-1-x-to-1-1-1-1">
-<h1><a class="toc-backref" href="#id11">6&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.1.x to 1.1.1.1</a></h1>
+<h1><a class="toc-backref" href="#id32">7&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.1.x to 1.1.1.1</a></h1>
 <div class="section" id="favourite-recpients-address-book">
-<h2><a class="toc-backref" href="#id12">6.1&nbsp;&nbsp;&nbsp;Favourite Recpients Address Book</a></h2>
+<h2><a class="toc-backref" href="#id33">7.1&nbsp;&nbsp;&nbsp;Favourite Recpients Address Book</a></h2>
 <p>An address book which lists the users' most favourite recipients had been
 added in version 1.1 already but has only been activated with this
 version. But for the address book to properly work, you also have to enable
@@ -178,19 +398,19 @@ sent mail tracking in the configuration.</p>
 </div>
 </div>
 <div class="section" id="upgrading-horde-groupware-webmail-edition-from-1-0-x-to-1-1-x">
-<h1><a class="toc-backref" href="#id13">7&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.0.x to 1.1.x</a></h1>
+<h1><a class="toc-backref" href="#id34">8&nbsp;&nbsp;&nbsp;Upgrading Horde Groupware Webmail Edition from 1.0.x to 1.1.x</a></h1>
 <div class="section" id="memcache-configuration">
-<h2><a class="toc-backref" href="#id14">7.1&nbsp;&nbsp;&nbsp;Memcache Configuration</a></h2>
+<h2><a class="toc-backref" href="#id35">8.1&nbsp;&nbsp;&nbsp;Memcache Configuration</a></h2>
 <p>All memcache configuration has been moved to the $conf['memcache'] parameter.</p>
 </div>
 <div class="section" id="application-hooks">
-<h2><a class="toc-backref" href="#id15">7.2&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
+<h2><a class="toc-backref" href="#id36">8.2&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
 <p>All hooks that are specific to a single application have been moved to that
 application's <tt class="docutils literal">config/hooks.php</tt> file. Split up your existing Hooks from
 <tt class="docutils literal">horde/config/hooks.php</tt> and move them to the correct application.</p>
 </div>
 <div class="section" id="group-hooks">
-<h2><a class="toc-backref" href="#id16">7.3&nbsp;&nbsp;&nbsp;Group Hooks</a></h2>
+<h2><a class="toc-backref" href="#id37">8.3&nbsp;&nbsp;&nbsp;Group Hooks</a></h2>
 <p>The format for group hook functions has changed from
 _group_hook_groupName($username) to _group_hook($groupName,
 $userName).  So you will need to modify any existing group hook
@@ -199,7 +419,7 @@ functions in config/hooks.php for the new interface.</p>
 config/hooks.php that will call the old style hook functions for you.</p>
 </div>
 <div class="section" id="custom-themes">
-<h2><a class="toc-backref" href="#id17">7.4&nbsp;&nbsp;&nbsp;Custom Themes</a></h2>
+<h2><a class="toc-backref" href="#id38">8.4&nbsp;&nbsp;&nbsp;Custom Themes</a></h2>
 <p>Themes no longer have <tt class="docutils literal">info.php</tt> files. If you have any custom
 themes that provide their own images, you must add a
 <tt class="docutils literal">themed_graphics</tt> file to the theme's directory (for all
@@ -208,14 +428,14 @@ to use the custom images. The file can be empty or contain whatever
 you wish; it simply needs to exist.</p>
 </div>
 <div class="section" id="static-log-out-links">
-<h2><a class="toc-backref" href="#id18">7.5&nbsp;&nbsp;&nbsp;Static Log out Links</a></h2>
+<h2><a class="toc-backref" href="#id39">8.5&nbsp;&nbsp;&nbsp;Static Log out Links</a></h2>
 <p>If you have hardcoded a log out link in any custom templates or menu
 items, you must update it to use Horde::getServiceLink(). This is
 because logging out is now protected by a token to avoid CSRF
 exploits.</p>
 </div>
 <div class="section" id="unified-imap-quota-driver">
-<h2><a class="toc-backref" href="#id19">7.6&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></h2>
+<h2><a class="toc-backref" href="#id40">8.6&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></h2>
 <p>Separate quota drivers for Cyrus and Courier servers are no longer
 necessary. These drivers have been replaced by a generic IMAP driver that
 should also be suitable for other IMAP servers that support the QUOTA
@@ -223,13 +443,13 @@ extension. Update <tt class="docutils literal">config/servers.php</tt> and chang
 setting to 'imap'.</p>
 </div>
 <div class="section" id="user-defined-mailbox-icons">
-<h2><a class="toc-backref" href="#id20">7.7&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></h2>
+<h2><a class="toc-backref" href="#id41">8.7&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></h2>
 <p>The usage of the hook <tt class="docutils literal">_imp_hook_mbox_icons()</tt> has changed.  If you use this
 hook, make sure you change your implementation so it returns the correct
 value.</p>
 </div>
 <div class="section" id="new-message-list-format-hook">
-<h2><a class="toc-backref" href="#id21">7.8&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></h2>
+<h2><a class="toc-backref" href="#id42">8.8&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></h2>
 <p>The new hook <tt class="docutils literal">_imp_hook_msglist_format()</tt> has been added which allows the
 formatting of a message entry in the mailbox message list to be altered
 at the time the list is created.  This hook has made the following
@@ -244,12 +464,12 @@ The sample hook contained in <tt class="docutils literal">config/hooks.php</tt> 
 to replicate the previous behavior.</p>
 </div>
 <div class="section" id="spell-checking">
-<h2><a class="toc-backref" href="#id22">7.9&nbsp;&nbsp;&nbsp;Spell Checking</a></h2>
+<h2><a class="toc-backref" href="#id43">8.9&nbsp;&nbsp;&nbsp;Spell Checking</a></h2>
 <p>The <tt class="docutils literal">pspell</tt> driver is no longer supported since it does not work with
 HTML messages.  If using pspell, you must upgrade to aspell version 0.60+.</p>
 </div>
 <div class="section" id="filters-sql-backend">
-<h2><a class="toc-backref" href="#id23">7.10&nbsp;&nbsp;&nbsp;Filters SQL Backend</a></h2>
+<h2><a class="toc-backref" href="#id44">8.10&nbsp;&nbsp;&nbsp;Filters SQL Backend</a></h2>
 <p>An SQL table has been added than can optionally be used as a storage backend
 for the filter rules. Using this backend no longer limits the number and size
 of rules.</p>
@@ -268,7 +488,7 @@ mysql --user=root --password=&lt;MySQL-root-password&gt; --skip-column-names --b
 </pre>
 </div>
 <div class="section" id="imsp-driver-and-share-support">
-<h2><a class="toc-backref" href="#id24">7.11&nbsp;&nbsp;&nbsp;IMSP Driver and Share Support</a></h2>
+<h2><a class="toc-backref" href="#id45">8.11&nbsp;&nbsp;&nbsp;IMSP Driver and Share Support</a></h2>
 <p>Share support has been added to the IMSP driver.  This support requires at
 least a Horde 3.2 install.  With this change, any IMSP address books the user
 has rights to will be represented internally as a Horde share.  Permissions

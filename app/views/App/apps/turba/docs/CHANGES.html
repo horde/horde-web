@@ -1,13 +1,162 @@
 <h3>Changes by Release</h3><pre>
+----------
+v4.1.1-git
+----------
+
+[jan] Set generic 'phone' attribute when importing from vCard (<a href="http://bugs.horde.org/ticket/12329">Bug #12329</a>).
+[mjr] Add API methods for using history modification sequences.
+
+
+------
+v4.1.0
+------
+
+[jan] Fix searching in LDAP address books (<a href="http://bugs.horde.org/ticket/12297">Bug #12297</a>).
+
+
+---------
+v4.1.0RC1
+---------
+
+[mms] Back button in smartmobile view for group member returns to group entry,
+      not browse list.
+[mms] Fix resetting smartmobile entry page when viewing more than 1 contact.
+
+
 -----------
-v3.0.17-git
+v4.1.0beta2
 -----------
 
+[mjr] Update the default SQL schema.
+[jan] Fix incorrect dependencies.
 
 
--------
-v3.0.16
--------
+-----------
+v4.1.0beta1
+-----------
+
+[jan] Add CardDAV server support.
+[mjr] Update the default SQL source schema (<a href="http://bugs.horde.org/ticket/11993">Request #11993</a>).
+[mms] Add links to group members on smartmobile entry page.
+[mms] Add group icon to group contacts in smartmobile browse view.
+[jan] Allow to search all search fields at once in basic searching.
+
+
+------
+v4.0.4
+------
+
+[mms] SECURITY: Fix XSS vulnerability on smartmobile contacts details page
+      (João Machado &lt;geral@jpaulo.eu>).
+[jan] Fix importing certain phone fields from vCard (<a href="http://bugs.horde.org/ticket/12178">Bug #12178</a>).
+[mjr] Fix issues with importing contacts via ActiveSync when no default_dir
+      pref is set (Thomas Jarosch &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12188">Bug #12188</a>)
+[mjr] Fix ActiveSync global address book searches when using LDAP as backend
+      (<a href="http://bugs.horde.org/ticket/12089">Bug #12089</a>).
+
+
+------
+v4.0.3
+------
+
+[jan] Update French translation (Paul De Vlieger
+      &lt;paul.de_vlieger@moniut.univ-bpclermont.fr>).
+[jan] Fix emptying shared address books.
+[jan] Fix importing of LDIF data (<a href="http://bugs.horde.org/ticket/11972">Bug #11972</a>).
+
+
+------
+v4.0.2
+------
+
+[mjr] Avoid sending broken datetime values to ActiveSync.
+[jan] Update Basque translation (Ibon Igartua &lt;ibon.igartua@ehu.es>).
+[jan] Update French translation (Laurent Foucher
+      &lt;laurent.foucher@iut-tlse3.fr>).
+[jan] Mark Kolab folder as default when changing default address book
+      preference.
+
+
+------
+v4.0.1
+------
+
+[jan] Add free-text country attributes and use them in default Kolab backend
+      (<a href="http://bugs.horde.org/ticket/11692">Request #11692</a>).
+[gwr] Fix handling empty dates in the Kolab driver (<a href="http://bugs.horde.org/ticket/11691">Bug #11691</a>).
+[jan] Use encoded UIDs as IDs in Kolab driver.
+[jan] Fix searching shares for duplicates.
+[mjr] Fix calling decode_attribute hook when exporting to ActiveSync
+      (kd@tu-cottbus.de, <a href="http://bugs.horde.org/ticket/11678">Bug #11678</a>).
+[jan] Update Slovak translation (Jozef Sudolský &lt;jozef.sudolsky@elbia.sk>).
+
+
+------
+v4.0.0
+------
+
+[jan] Update Polish translation (Krzysztof Kozera &lt;krzysztof113@o2.pl>).
+[jan] Update Dutch translation (Arjen de Korte &lt;arjen+horde@de-korte.org>).
+
+
+---------
+v4.0.0RC1
+---------
+
+[jan] Allow searching for 'emails' attributes (<a href="http://bugs.horde.org/ticket/11185">Bug #11185</a>).
+[jan] Fix LIKE matching of attributes in Kolab driver.
+[mms] Convert turba minisearch block to the Horde AJAX framework.
+[jan] Support 'emails' attribute in smartphone view (<a href="http://bugs.horde.org/ticket/11544">Bug #11544</a>).
+[jan] Attach share owner to all address book titles (<a href="http://bugs.horde.org/ticket/11528">Bug #11528</a>).
+[jan] Fix exporting from browse view (<a href="http://bugs.horde.org/ticket/11526">Bug #11526</a>).
+[jan] Return to the same page after running actions from the browse view.
+
+
+-----------
+v4.0.0beta3
+-----------
+
+[jan] Support importing contacts via API if using 'emails' attributes (<a href="http://bugs.horde.org/ticket/8358">Bug
+      #8358</a>).
+[jan] Support 'emails' attribute with ActiveSync.
+[jan] Fix marking contacts as deleted in the history if deleting shared address
+      books (<a href="http://bugs.horde.org/ticket/11480">Bug #11480</a>).
+[jan] Set gender field values literally to 'male' or 'female'.
+[jan] Drop preference which address books to display.
+[gwr] Mark the initial default share as such with the Kolab backend.
+[gwr] Always mark the initial share as default addressbook.
+[mms] Initial implementation of smartmobile view.
+
+
+-----------
+v4.0.0beta2
+-----------
+
+[jan] Use Horde 5 action bar.
+
+
+-----------
+v4.0.0beta1
+-----------
+
+[jan] Add configuration example for Kolab/IMAP address books.
+[jan] Update icon set.
+[jan] Fix searching multiple names via the API.
+[jan] Fix searching and listing clients via the API.
+
+
+------------
+v4.0.0alpha1
+------------
+
+[mms] Import API call now throws an ObjectExists exception when a duplicate is
+      found.
+[jan] Add parameters to specify field size of phone and email fields.
+
+
+-----------
+v3.0.15-git
+-----------
 
 [jan] Fix sorting of columns in preferences (<a href="http://bugs.horde.org/ticket/10795">Bug #10795</a>).
 [jan] Remove user's address books when removing users, independent from address
@@ -15,12 +164,6 @@ v3.0.16
 [mms] Fix infinite loop if array was passed to delete API call.
 [mms] Fix descending sorting of result lists.
 [mms] Return to same page when deleting contact from browse view.
-
-
--------
-v3.0.15
--------
-
 [mjr] Add ability to return count of objects matching search in place of full
       result set.
 [jan] Update Turkish translation (İstanbul Technical University).
