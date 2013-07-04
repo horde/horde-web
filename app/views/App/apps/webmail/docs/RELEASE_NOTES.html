@@ -1,6 +1,6 @@
 <h3>Release notes for the latest release</h3><pre>
 The Horde Team is pleased to announce the final release of the Horde Groupware
-Webmail Edition version 5.1.0.
+Webmail Edition version 4.0.9.
 
 Horde Groupware Webmail Edition is a free, enterprise ready, browser based
 communication suite. Users can read, send and organize email messages with
@@ -14,40 +14,34 @@ http://www.horde.org/apps/webmail/docs/UPGRADING
 For detailed installation and configuration instructions, please see
 http://www.horde.org/apps/webmail/docs/INSTALL
 
-The major changes compared to the Horde Groupware Webmail Edition 5.0 versions
+The major changes compared to the Horde Groupware Webmail Edition version 4.0.8
 are:
 
 General changes:
-    * Added file manager.
-    * Added bookmark manager.
-    * Support for NoSQL backends.
-    * Checking all installed packages for updates.
-    * Many further improvements.
+    * Updated French, Swedish, and Turkish translations.
+    * Further bugfixes and improvements.
 
 Mail changes:
-    * Added message thread view to dynamic mailbox preview.
-    * Support drag & drop of attachments, linking attachments, attaching PGP
-      public keys, and attaching vCards in dynamic view.
-    * Allow drag & drop, uploading, and pasting of images into the HTML editor.
-    * Display Virtual Folders in smartphone view.
-    * Added attachment uploading and saving compose drafts to smartphone view.
-    * Added taphold message action menu to smartmobile mailbox page.
-    * Allow HTML trailers for messages.
-    * Allow to set special mailboxes, spam reporting, and permissions per
-      backend.
-    * Added support for NoSQL caching and logging backends.
+    * Fixed obscure XSS issue when uploading attachments.
+    * Only display basic image attachments in the browser to avoid XSS
+      vulnerabilities triggered by opening malicious SVG attachments.
+    * Better description of error in some permission denied error messages.
+    * Compose window now closes properly after message redirection.
+    * More efficient determination of when to use Ajax auto-completion.
+    * Re-added option to report messages as spam/ham through redirection.
 
-Filter changes:
-    * Composite script and transport backends.
-    * Added vacation driver for ISPConfig and custom SQL queries.
+Filters changes:
+    * Don't allow to save rules without conditions.
+    * Fixed reindexing of existing rules when deleting a rule.
+    * Fixed IMAP filtering.
+    * Further fixed folder names in Procmail rules if using Maildir.
 
-Address book Changes:
-    * Added CardDAV server support.
-    * Updated SQL schema.
-    * Allow to search all search fields at once.
+Address Book changes:
+    * Remove all of user's address books when removing users.
+    * Added ability to return only the number of contacts that match a search.
 
-Calendar and Tasks changes:
-    * Added CalDAV server support.
+Calendar changes:
+    * Fixed XSS issue in portal blocks.
 
 Notes changes:
-    * Added ActiveSync synchronization of notes.</pre>
+    * Fixed deleting too many notepads if deleting a user.</pre>
