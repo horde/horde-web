@@ -11,14 +11,14 @@
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="auto-toc simple">
-<li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
-<li><a class="reference internal" href="#installing-whups" id="id2">2&nbsp;&nbsp;&nbsp;Installing Whups</a><ul class="auto-toc">
-<li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
-<li><a class="reference internal" href="#installing-from-git" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
+<li><a class="reference internal" href="#prerequisites" id="id3">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-whups" id="id4">2&nbsp;&nbsp;&nbsp;Installing Whups</a><ul class="auto-toc">
+<li><a class="reference internal" href="#installing-with-pear" id="id5">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-git" id="id6">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-whups" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Whups</a></li>
-<li><a class="reference internal" href="#obtaining-support" id="id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+<li><a class="reference internal" href="#configuring-whups" id="id7">3&nbsp;&nbsp;&nbsp;Configuring Whups</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id8">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
 </ul>
 </div>
 <p>This document contains instructions for installing the Whups web-based
@@ -26,7 +26,7 @@ ticket-tracking application on your system.</p>
 <p>For information on the capabilities and features of Whups, see the file
 <a class="reference external" href="README">README</a> in the top-level directory of the Whups distribution.</p>
 <div class="section" id="prerequisites">
-<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
+<h1><a class="toc-backref" href="#id3">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
 <p>To function properly, Whups <strong>requires</strong> the following:</p>
 <ol class="arabic">
 <li><p class="first">A working Horde installation.</p>
@@ -58,12 +58,12 @@ driver you require; see the`horde/docs/INSTALL`_ file for details.</p>
 </ol>
 </div>
 <div class="section" id="installing-whups">
-<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Whups</a></h1>
+<h1><a class="toc-backref" href="#id4">2&nbsp;&nbsp;&nbsp;Installing Whups</a></h1>
 <p>The <strong>RECOMMENDED</strong> way to install Whups is using the PEAR installer.
 Alternatively, if you want to run the latest development code or get the
 latest not yet released fixes, you can install Whups from Git.</p>
 <div class="section" id="installing-with-pear">
-<h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
+<h2><a class="toc-backref" href="#id5">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
 <p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
 environment for Horde and install the Horde Framework.</p>
 <p>When installing Whups through PEAR now, the installer will automatically
@@ -86,12 +86,12 @@ pear install -a horde/whups
 </pre>
 </div>
 <div class="section" id="installing-from-git">
-<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
+<h2><a class="toc-backref" href="#id6">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
 <p>See <a class="reference external" href="http://www.horde.org/source/git.php">http://www.horde.org/source/git.php</a></p>
 </div>
 </div>
 <div class="section" id="configuring-whups">
-<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Whups</a></h1>
+<h1><a class="toc-backref" href="#id7">3&nbsp;&nbsp;&nbsp;Configuring Whups</a></h1>
 <ol class="arabic">
 <li><p class="first">Configuring Whups</p>
 <p>You must login to Horde as a Horde Administrator to finish the
@@ -118,11 +118,19 @@ will need to set up <tt class="docutils literal"><span class="pre">whups-mail-fi
 appropriate addresses. This script takes a number of arguments; see the
 script for more details. A typical setup might be:</p>
 <pre class="literal-block">
-bugs |/usr/bin/whups-mail-filter --queue-name=Bugs
+bugs |/usr/bin/whups-mail-filter --queue-id=1
 </pre>
+<p>For Postfix:</p>
+<blockquote>
+<p>bugs: <a href="#id1"><span class="problematic" id="id2">|</span></a>&quot;/usr/bin/whups-mail-filter --queue-id=1&quot;</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/horde/checkout/horde.git/whups/docs/INSTALL</tt>, line 120); <em><a href="#id2">backlink</a></em></p>
+<p>Inline substitution_reference start-string without end-string.</p>
+</div>
+</blockquote>
 <p>This will take in mail to the <tt class="docutils literal">bugs</tt> address at your domain, and create
-new tickets in the <tt class="docutils literal">Bugs</tt> queue, with the default type, state and priority
-of this queue. If an email references an existing ticket (ticket numbers are
+new tickets in the queue 1, with the default type, state and priority of
+this queue. If an email references an existing ticket (ticket numbers are
 recognized in the subject line) it will be updated instead.</p>
 <p>If not installing Whups through PEAR of if PEAR's <tt class="docutils literal">bin_dir</tt> configuration
 doesn't point to <tt class="docutils literal">/usr/bin/</tt>, replace <tt class="docutils literal"><span class="pre">/usr/bin/whups-mail-filter</span></tt> with
@@ -212,7 +220,7 @@ have read-write permissions to the VFS storage directory.</p>
 </ol>
 </div>
 <div class="section" id="obtaining-support">
-<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<h1><a class="toc-backref" href="#id8">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
 <p>If you encounter problems with Whups, help is available!</p>
 <p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
 <blockquote>
