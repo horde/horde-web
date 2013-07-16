@@ -8,66 +8,56 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.1.1',
-        'date' => 'June 18 2013',
+        'ver' => '5.1.2',
+        'date' => 'July 16 2013',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.1.0',
-        'date' => 'June 4 2013',
+        'ver' => '5.1.1',
+        'date' => 'July 17 2013',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.1.0',
-        'date' => 'June 4 2013',
+        'ver' => '5.1.1',
+        'date' => 'July 17 2013',
         'pear' => true,
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.1.2)',
-        'date' => 'June 18 2013',
+        'ver' => 'H5 (6.1.3)',
+        'date' => 'July 16 2013',
         'pear' => true
-    ),
-    'dimp' => array(
-        'name' => 'DIMP',
-        'ver' => 'H3 (1.1.6)',
-        'date' => 'October 25 2010'
-    ),
-    'mimp' => array(
-        'name' => 'MIMP',
-        'ver' => 'H3 (1.1.3)',
-        'date' => 'December 15 2009'
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H5 (4.1.0)',
-        'date' => 'June 4 2013',
+        'ver' => 'H5 (4.1.1)',
+        'date' => 'July 16 2013',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H5 (3.1.1)',
-        'date' => 'June 12 2013',
+        'ver' => 'H5 (3.1.2)',
+        'date' => 'July 16 2013',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.1.1)',
-        'date' => 'June 18 2013',
+        'ver' => 'H5 (4.1.2)',
+        'date' => 'July 16 2013',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H5 (4.1.0)',
-        'date' => 'June 4 2013',
+        'ver' => 'H5 (4.1.1)',
+        'date' => 'July 16 2013',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H5 (4.1.0)',
-        'date' => 'June 4 2013',
+        'ver' => 'H5 (4.1.1)',
+        'date' => 'July 16 2013',
         'pear' => true
     ),
     'chora' => array(
@@ -86,21 +76,6 @@ $horde_apps_stable = array(
         'ver' => 'H5 (5.0.0)',
         'date' => 'June 4 2013',
         'pear' => true,
-    ),
-    'forwards' => array(
-        'name' => 'Forwards',
-        'ver' => 'H3 (3.2.1)',
-        'date' => 'April 28 2010'
-    ),
-    'vacation' => array(
-        'name' => 'Vacation',
-        'ver' => 'H3 (3.2.1)',
-        'date' => 'April 28 2010'
-    ),
-    'jeta' => array(
-        'name' => 'Jeta',
-        'ver' => 'H3 (1.0)',
-        'date' => 'January 28 2007'
     ),
     'whups' => array(
         'name' => 'Whups',
@@ -125,21 +100,16 @@ $horde_apps_stable = array(
         'date' => 'September 24 2012',
         'pear' => true,
     ),
-    'klutz' => array(
-        'name' => 'Klutz',
-        'ver' => 'H3 (1.0)',
-        'date' => 'March 19 2009'
-    ),
     'trean' => array(
         'name' => 'Trean',
-        'ver' => 'H5 (1.0.2)',
-        'date' => 'June 12 2013',
+        'ver' => 'H5 (1.0.3)',
+        'date' => 'July 16 2013',
         'pear' => true,
     ),
     'content' => array(
         'name' => 'Content',
-        'ver' => 'H5 (2.0.2)',
-        'date' => 'February 11 2013',
+        'ver' => 'H5 (2.0.3)',
+        'date' => 'July 16 2013',
         'pear' => true,
     ),
     'timeobjects' => array(
@@ -147,6 +117,36 @@ $horde_apps_stable = array(
         'ver' => 'H5 (2.0.4)',
         'date' => 'June 19 2013',
         'pear' => true,
+    ),
+    'dimp' => array(
+        'name' => 'DIMP',
+        'ver' => 'H3 (1.1.6)',
+        'date' => 'October 25 2010'
+    ),
+    'mimp' => array(
+        'name' => 'MIMP',
+        'ver' => 'H3 (1.1.3)',
+        'date' => 'December 15 2009'
+    ),
+    'forwards' => array(
+        'name' => 'Forwards',
+        'ver' => 'H3 (3.2.1)',
+        'date' => 'April 28 2010'
+    ),
+    'vacation' => array(
+        'name' => 'Vacation',
+        'ver' => 'H3 (3.2.1)',
+        'date' => 'April 28 2010'
+    ),
+    'jeta' => array(
+        'name' => 'Jeta',
+        'ver' => 'H3 (1.0)',
+        'date' => 'January 28 2007'
+    ),
+    'klutz' => array(
+        'name' => 'Klutz',
+        'ver' => 'H3 (1.0)',
+        'date' => 'March 19 2009'
     ),
 );
 
@@ -219,14 +219,14 @@ $horde_apps_dev = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (3.0.0beta1)',
-        'date' => 'June 19 2013',
+        'ver' => 'H4 (3.0.0RC1)',
+        'date' => 'July 17 2013',
         'pear' => true,
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H5 (2.0.0beta1)',
-        'date' => 'June 11 2013',
+        'ver' => 'H5 (2.0.0RC1)',
+        'date' => 'July 17 2013',
         'pear' => true,
     ),
     'hermes' => array(
@@ -249,8 +249,8 @@ $horde_apps_dev = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H5 (3.0.0beta1)',
-        'date' => 'June 18 2013',
+        'ver' => 'H5 (3.0.0RC1)',
+        'date' => 'July 17 2013',
         'pear' => true,
     ),
     'trean' => array(
