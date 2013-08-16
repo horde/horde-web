@@ -60,20 +60,22 @@
         <h3>Making Development Repos Web-Accessible</h3>
 
         <p>Make sure you have cloned the <tt>horde</tt> repo. Once initialized,
-        creating a web-accessible development installation can be done simply by
-        running the <tt>install_dev</tt> PHP script located at
-        <tt>horde-git/framework/bin</tt>. To properly run this script, a local
-        copy of install_dev.conf must be created on your system, with the
-        variables inside that file edited as necessary to apply to your system.
-        </p>
+        creating a web-accessible development installation can be done simply
+        by running the <tt>install_dev</tt> PHP script located at
+        <tt>horde-git/framework/bin</tt>. To properly run this script, the
+        <tt>Horde_Role</tt> package must be installed and a local copy of
+        install_dev.conf must be created on your system, with the variables
+        inside that file edited as necessary to apply to your system.</p>
 
         <p>For example:</p>
 
         <pre class="brush:bash">
+        pear channel-discover pear.horde.org
+        pear install horde/horde_role
         cd /path/to/horde-git/framework/bin
         cp install_dev.conf.dist install_dev.conf
         vi install_dev.conf (replace vi with your favorite editing tool)
-        php ./install_dev
+        ./install_dev
         </pre>
 
         <p>Running that script will symlink the entire horde package into the
@@ -89,29 +91,30 @@
         easiest way to setup full paths is to set the <tt>$app_fileroot</tt>
         parameter in this file.</p>
 
-        <p>Note that unlike a PEAR install, the Autoloader_Cache will be enabled
-        by default. If you attempt to use Horde or load the test.php page before
-        all PEAR dependencies are installed, you will have to purge the
-        Autoloader_Cache.</p>
+        <p>Note that unlike a PEAR install, the <tt>Autoloader_Cache</tt>
+        package will be enabled by default. If you attempt to use Horde or load
+        the test.php page before all PEAR dependencies are installed, you will
+        have to purge the autoloader cache.</p>
 
-        <p>You can now follow the procedures in the normal INSTALL document to
-        complete the configuration and database creation.</p>
+        <p>You can now follow the procedures in the normal <?php echo
+        $this->linkTo('INSTALL', array('controller' => 'app', 'action' =>
+        'docs/INSTALL', 'app' => 'horde'))?> document to complete the
+        configuration and database creation.</p>
 
         <p>If, after you have configured Horde, you wish you can manually run
-        the database migrations, you can run these as so:</p>
+        the database migrations, you can run these from the checkout directory
+        as so:</p>
 
-        <pre class="brush:bash">horde/bin/horde-db-migrate {application_name} [up|down]</pre>
+        <pre class="brush:bash">./horde/bin/horde-db-migrate [application_name [up|down]]</pre>
 
-        <p>If installing the framework libraries directly via PEAR, you will
-        need to define your horde application directory (i.e. the filesystem
-        directory where the Horde application is installed and accessible to a
-        browser) in your PEAR config.  This can only be done if the horde/Role
-        package has previously been installed on your system.  This can done
-        via:</p>
+        <p>If installing the framework libraries directly via PEAR, i.e. not
+        with with <tt>install_dev</tt>, you will need to define your horde
+        application directory (i.e. the filesystem directory where the Horde
+        application is installed and accessible to a browser) in your PEAR
+        config.  This can be done with the horde/Role package previously
+        installed on your system via:</p>
 
         <pre class="brush:bash">
-        cd /path/to/framework
-        pear install Role/package.xml
         pear run-scripts horde/Horde_Role
         </pre>
 
