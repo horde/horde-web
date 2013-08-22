@@ -96,8 +96,8 @@ $horde_apps_stable = array(
     ),
     'ansel' => array(
         'name' => 'Ansel',
-        'ver' => 'H4 (2.0.2)',
-        'date' => 'September 24 2012',
+        'ver' => 'H5 (3.0.0)',
+        'date' => 'September 22 2013',
         'pear' => true,
     ),
     'trean' => array(
@@ -219,14 +219,14 @@ $horde_apps_dev = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (3.0.0RC1)',
-        'date' => 'July 17 2013',
+        'ver' => 'H5 (3.0.0RC2)',
+        'date' => 'September 22 2013',
         'pear' => true,
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H5 (2.0.0RC1)',
-        'date' => 'July 17 2013',
+        'ver' => 'H5 (2.0.0RC2)',
+        'date' => 'September 22 2013',
         'pear' => true,
     ),
     'hermes' => array(
