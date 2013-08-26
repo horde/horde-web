@@ -12,13 +12,26 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>IMP 6.2</h3>
+
+<p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> TBD</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+ <tr><th>Feature</th><th>Status</th>
+ <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="planned">Funded/In Progress</td>
+</table>
+
+<div class="dimmed">
+
 <h3>IMP 6.1</h3>
 
 <p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> June 4th, 2013</p>
-
-<div class="dimmed">
 
 <h3>IMP 6.0</h3>
 
