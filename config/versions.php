@@ -8,8 +8,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.1.2',
-        'date' => 'July 16 2013',
+        'ver' => '5.1.4',
+        'date' => 'September 03 2013',
         'pear' => true
     ),
     'groupware' => array(
@@ -26,14 +26,14 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.1.3)',
-        'date' => 'July 16 2013',
+        'ver' => 'H5 (6.1.4)',
+        'date' => 'August 27 2013',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H5 (4.1.1)',
-        'date' => 'July 16 2013',
+        'ver' => 'H5 (4.1.2)',
+        'date' => 'August 27 2013',
         'pear' => true
     ),
     'ingo' => array(
@@ -44,14 +44,14 @@ $horde_apps_stable = array(
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.1.2)',
-        'date' => 'July 16 2013',
+        'ver' => 'H5 (4.1.3)',
+        'date' => 'August 27 2013',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H5 (4.1.1)',
-        'date' => 'July 16 2013',
+        'ver' => 'H5 (4.1.2)',
+        'date' => 'August 27 2013',
         'pear' => true
     ),
     'mnemo' => array(
@@ -73,8 +73,8 @@ $horde_apps_stable = array(
     ),
     'passwd' => array(
         'name' => 'Passwd',
-        'ver' => 'H5 (5.0.0)',
-        'date' => 'June 4 2013',
+        'ver' => 'H5 (5.0.1)',
+        'date' => 'August 27 2013',
         'pear' => true,
     ),
     'whups' => array(
@@ -118,6 +118,8 @@ $horde_apps_stable = array(
         'date' => 'June 19 2013',
         'pear' => true,
     ),
+
+    // Unsupported applications.
     'dimp' => array(
         'name' => 'DIMP',
         'ver' => 'H3 (1.1.6)',
