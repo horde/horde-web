@@ -3,6 +3,279 @@
 v5.1.2-git
 ----------
 
+[jan] Fix fatal errors if DAV support is disabled (<a href="http://bugs.horde.org/ticket/12481">Bug #12481</a>).
+
+Horde Changes
+-------------
+[jan] Fix fatal error on ActiveSync preferences page (<a href="http://bugs.horde.org/ticket/12631">Bug #12631</a>).
+[mjr] Fix issue displaying ActiveSync pref page when it contains a wiped
+      device entry.
+[mms] Allow non-authenticated AJAX actions to be defined.
+[mms] Improved session administration UI (<a href="http://bugs.horde.org/ticket/12515">Request #12515</a>).
+[jan] Make "Others" and cogwheel menu entry available on iOS (<a href="http://bugs.horde.org/ticket/11937">Bug #11937</a>).
+
+Address Book Changes
+--------------------
+[mjr] Fix deleting multiple contacts via the API (<a href="http://bugs.horde.org/ticket/12554">Bug #12554</a>).
+[mjr] Fix issue generating contact hashes from EAS contacts that could prevent
+      duplicate contact detection from working when certain properties have
+      empty values (<a href="http://bugs.horde.org/ticket/12506">Bug #12506</a>).
+
+Calendar Changes
+----------------
+[jan] Fix inconsistent handling of all-day events (<a href="http://bugs.horde.org/ticket/12627">Bug #12627</a>).
+[mjr] Fix infinite loop for Kolab driver when event has recurrence (<a href="http://bugs.horde.org/ticket/12160">Bug #12160</a>,
+      Thomas Jarosch &lt;thomas.jarosch@intra2net.com>).
+[jan] Fix synchronization of shared events in Kolab driver (Thomas Jarosch
+      &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12585">Bug #12585</a>).
+[jan] Link to CalDAV help text from calendar dialog.
+[mjr] Fix requesting changes by modification sequence (<a href="http://bugs.horde.org/ticket/12508">Bug #12508</a>, Thomas
+      Jarosch &lt;thomas.jarosch@intra2net.com>).
+[mjr] Fix subscribing to internal calendars via subscription URL (<a href="http://bugs.horde.org/ticket/12495">Bug #12495</a>).
+
+Tasks Changes
+-------------
+[jan] Fix highlighting task type tabs in list view.
+[mjr] Fix requesting changes by modification sequence (<a href="http://bugs.horde.org/ticket/12507">Bug #12507</a>, Thomas
+      Jarosch &lt;thomas.jarosch@intra2net.com>).
+
+File Manager Changes
+--------------------
+[jan] Fix saving columns preference if only one backend exists (<a href="http://bugs.horde.org/ticket/12003">Bug #12003</a>).
+
+Timeobject Changes
+------------------
+[jan] Fix timeobjects not showing up in the administration (<a href="http://bugs.horde.org/ticket/12365">Bug #12365</a>).
+[jan] Add Spanish translation (Manuel P. Ayala &lt;mayala@unex.es>).
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Allow authentication to still be attempted without an available password,
+      allowing for the use of setups using client certificates.
+[mjr] Fix Wbxml output of SEARCH_TOTAL and SEARCH_RANGE values in SEARCH
+      responses (<a href="http://bugs.horde.org/ticket/12624">Bug #12624</a>).
+[mjr] Allow reducing the amount of tag content that is logged to the Wbxml log.
+[mjr] Fix broken wbxml in certain cases due to incorrect handling of encoding
+      empty array values (<a href="http://bugs.horde.org/ticket/12595">Bug #12595</a>).
+[mjr] Detect IMAP message deletions on non-CONDSTORE servers during PING
+      requests (<a href="http://bugs.horde.org/ticket/12597">Request #12597</a>, Thomas Jarosch &lt;thomas.jarosch@intra2net.com>).
+[mjr] Do not initiate a looping SYNC if there were any incoming changes, this
+      prevents an unnecessary backend ping for each collection.
+[mjr] Fix issue that could cause message deletions on the server to not be
+      trasmitted to the client if the message falls outside of the FILTER
+      window and the IMAP server does not support CONDSTORE.
+[mjr] Don't filter out messages flagged as DELETED during initial sync request.
+[mjr] Fix issue that could cause corrupt email attachment downloads on certain
+      webservers due to PHP flushing the output buffer (<a href="http://bugs.horde.org/ticket/12486">Bug #12486</a>).
+[mjr] Output X-MS-RP header to advertise to clients that a more recent EAS
+      version is supported on the server.
+[mjr] Fix issue that could lead to email being duplicated on client due to
+      incorrect Collection Type being detected for unsolicited SMS data (<a href="http://bugs.horde.org/ticket/12544">Bug
+      #12544</a>).
+[mjr] Fix decoding EAS Timezone blobs on Big Endian systems.
+[mjr] Fix race condition where changes may not be sent to the client due to a
+      combination of a long running MOREAVAILABLE sync and server side changes.
+[mjr] Do not ask the IMAP server to fetch flags if we don't have an empty imap
+      search result (<a href="http://bugs.horde.org/ticket/12551">Bug #12551</a>).
+[mjr] Fix typos that could cause some sync actions to fail (<a href="http://bugs.horde.org/ticket/12548">Bug #12548</a> and
+      #12523, Thomas Jarosch &lt;thomas.jarosch@intra2net.com>).
+[mjr] Ensure proper failure codes are returned when a client addition fails to
+      be added to the backend during a PARTIAL sync.
+[mjr] Fix obtaining the timestamp of the last successful sync when backend uses
+      modification sequences (<a href="http://bugs.horde.org/ticket/12529">Bug #12529</a>).
+[mjr] Fix broken Email sync due to clients that send unsolicited SMS data (<a href="http://bugs.horde.org/ticket/12544">Bug
+      #12544</a>).
+[mjr] Fix returning incorrect syncstamp when adding, editing, or deleting
+      messages and backend uses modification sequences (<a href="http://bugs.horde.org/ticket/12523">Bug #12523</a>).
+[mjr] Fix bug that could cause a sync loop if history data is removed or a
+      collection is empty and therefore has no history data (<a href="http://bugs.horde.org/ticket/12531">Bug #12531</a>).
+[mjr] Fix filtering out changes due to incoming client email requests in
+      certain cases.
+[mjr] Send empty POOMMAIL_CATEGORIES tag as Exchange does.
+[mjr] Fix sending deletion commands to clients when an item is created on one
+      EAS client, but deleted on another EAS client.
+
+Auth
+[mjr] Add X509 authentication driver.
+
+Autoloader_Cache
+[mms] Improved error handling/logging when system temporary directory is not
+      accessible.
+[mms] Don't cache missing class paths.
+[mms] Purging the autoloader cache no longer requires knowledge of the various
+      SERVER_NAME settings used on a given system.
+
+Browser
+[mms] Detect stock N900 browser as mobile browser (<a href="http://bugs.horde.org/ticket/12613">Request #12613</a>; Thomas
+      Jarosch &lt;thomas.jarosch@intra2net.com>).
+
+Css_Parser
+[jan] Fix certain sizes reduced by factor ten (<a href="http://bugs.horde.org/ticket/12462">Bug #12462</a>).
+
+Core
+[mjr] Always honor activesync_replyposition pref (<a href="http://bugs.horde.org/ticket/12636">Bug #12636</a>, Thomas Jarosch
+      &lt;thomas.jarosch@intra2net.com>).
+[rla] Add support for external links in topbar (<a href="http://bugs.horde.org/ticket/11977">Request #11977</a>).
+[mms] Fix active session counting from CLI script (<a href="http://bugs.horde.org/ticket/12628">Bug #12628</a>).
+[mms] Fix regression in authenticating to an application when a session is
+      active.
+[mms] Update session data stored with secret key if session ID changed and we
+      are using non-cookie based sessions.
+[mms] Horde_Session now handles resetting the secret key on login.
+[mms] Add Horde_Session::ENCRYPT flag for session data.
+[mms] The Horde_Mail factory now uses Horde_Smtp as the underlying SMTP driver
+      instead of Net_SMTP.
+[mms] Don't redirect to current page's URL when logging out with a custom
+      message (<a href="http://bugs.horde.org/ticket/12538">Bug #12538</a>).
+[mjr] Ensure modseq values are always integers which prevents sync loops when
+      no history data is available (<a href="http://bugs.horde.org/ticket/12531">Bug #12531</a>).
+[mms] Ensure Registry exists in error handler before attempting to access it
+      (<a href="http://bugs.horde.org/ticket/12540">Bug #12540</a>).
+[jan] Remove text overlaying menu icon (<a href="http://bugs.horde.org/ticket/12496">Bug #12496</a>).
+[mms] Log unexpected authentication errors at a NOTICE level instead of EMERG.
+[mms] SessionHandler should not use HashTable wrapper, as it explicitly can't
+      be serialized.
+
+Crypt
+[jan] Fix detecting bad PGP signatures on some systems with non-English locales
+      (<a href="http://bugs.horde.org/ticket/10273">Bug #10273</a>).
+
+Dav
+[jan] Fix installation path for translations.
+
+Db
+[jan] Fix schema version table names when using horde-db-migrate-component.
+
+Exception
+[jan] Update Ukrainian translation.
+
+HashTable
+[mms] Add read-only property indicating whether driver supports locking.
+
+History
+[mjr] Add method to get the most recent history entry for any given id (Thomas
+      Jarosch &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12558">Request #12558</a>).
+[mjr] Further fixes for database migration issues, very index name and
+      existence before removing (<a href="http://bugs.horde.org/ticket/12498">Bug #12498</a>).
+[mjr] Correctly remove unused index, readd erroneously removed indexes.
+[mms] Fix usage of removeIndex().
+[mms] Fix migrations nos. 4 & 5.
+[mjr] Add index for better modseq query performance in sql driver (<a href="http://bugs.horde.org/ticket/12476">Bug #12476</a>).
+[mjr] Fix expiring the log cache when logging a new entry.
+
+Http
+[jan] Provide more useful messages when throwing exceptions.
+
+Imap_Client
+[mms] Added the 'statuscache' property to Horde_Imap_Client_Base (<a href="http://bugs.horde.org/ticket/12589">Request
+      #12589</a>).
+[mms] The 'xoauth2_token' parameter now accepts a
+      Horde_Imap_Client_Base_Password object.
+[mms] Deprecated the 'encryptKey' parameter and instead support passing a
+      Horde_Imap_Client_Base_Password object into the 'password' parameter.
+[mms] Added the Horde_Imap_Client::STATUS_FORCE_REFRESH flag.
+[mms] Fix regression in setting CAPABILITY for IMAP servers that don't
+      automatically send this information after login.
+[mms] Fix regression in POP3 SASL PLAIN authentication command.
+[mms] Fix regression in mapping message sequence numbers to UIDs when doing an
+      'all' activity in POP3.
+[mms] Added support for the Google XOAUTH2 authentication mechanism for the
+      IMAP Socket driver.
+[mms] Fix regression in retrieving CAPABILITY information after we login.
+[mms] Fix regression in caching for POP3 servers.
+[mms] Cache any data returned from POP3 capability sniffing.
+[mms] Add remote POP3 server test.
+[mms] Fix sniffing capabilities for POP3 servers that don't support the CAPA
+      command.
+[mms] Fix returning list of expunged UIDs when expunging all messages in a
+      mailbox that doesn't support CONDSTORE (<a href="http://bugs.horde.org/ticket/12559">Bug #12559</a>).
+[mms] Translate mailbox names from UTF7-IMAP -> UTF-8 in return from
+      Horde_Imap_Client_Base#getMetadata() (<a href="http://bugs.horde.org/ticket/12541">Bug #12541</a>).
+[mms] Added the Horde_Imap_Client::STATUS_RECENT_TOTAL return option to
+      Horde_Imap_Client_Base#status().
+[mms] More graceful handling of servers that return broken FETCH information
+      (<a href="http://bugs.horde.org/ticket/12441">Request #12441</a>).
+
+Kolab_Format
+[jan] Fix saving all day events when the end date is on the next day (Thomas
+      Jarosch &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12627">Bug #12627</a>).
+
+Kolab_Storage
+[jan] Catch errors in Kolab_Storage_Driver_Imap#fetchComplete() (Thomas Jarosch
+      &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12584">Bug #12584</a>).
+[jan] Retrieve status changes during running requests (Thomas Jarosch
+      &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12589">Bug #12589</a>).
+
+Mail
+[mms] Workaround broken Net_SMTP handling regarding the end of message data
+      (<a href="http://bugs.horde.org/ticket/12614">Bug #12614</a>).
+[mms] Added the Horde_Mail_Transport_Smtphorde driver.
+[mms] Added the 'bare_addresses_idn' property to Horde_Mail_Rfc822_List.
+[mms] Added the 'bare_address_idn' property to Horde_Mail_Rfc822_Address.
+
+Memcache
+[jan] Fixed connection to Memcache servers.
+[mms] Immediately throw exception when no servers can be connected to.
+[mms] No need to serialize logging object twice.
+
+Mime
+[mms] Remove stream filters before returning stream to calling code.
+[mms] Support Horde_Mail_Transport_Smtphorde when sending messages.
+[mms] Net_SMTP does not support sending via BINARYMIME.
+[mms] Fix parsing broken multipart messages (<a href="http://bugs.horde.org/ticket/12536">Bug #12536</a>).
+[mms] Use the correct EOL string when transfer encoding content (<a href="http://bugs.horde.org/ticket/12452">Bug #12452</a>).
+
+Perms
+[jan] Fix unserialization notices in SQL driver.
+
+Queue
+[jan] Don't set default value for TEXT column.
+[rla] Add Db backend for Queues.
+[cjh] Add Horde_Queue_Runner#runTask().
+[cjh] Allow RequestShutdown runner to handle tasks that spawn other tasks.
+
+Service_Facebook
+[jan] Try to parse error message from json-formated error response.
+
+SessionHandler
+[mms] Fix session ID tracking for the Hashtable driver.
+[mms] Fix rare race condition when creating file-based session data for the
+      first time (Thomas Jarosch &lt;thomas.jarosch@intra2net.com; Bug #12557).
+[mms] More robust way of checking for locking in a HashTable instance.
+
+Smtp
+[mms] Transparently handle required TLS connection when no security was
+      configured.
+[mms] Change default security to use TLS, if available.
+[mms] Fix storing password object in the Horde_Smtp object.
+[mms] Deprecated the 'password_encrypt' parameter and instead support passing a
+      Horde_Smtp_Password object into the 'password' parameter.
+[mms] Fix DIGEST-MD5 authentication method.
+[mms] Added support for the Google XOAuth2 authentication mechanism.
+[jan] Fix detecting if connection to SMTP server fails.
+[mms] Initial release.
+
+Stream
+[mms] Add Horde_Stream#getEOL().
+
+Support
+[mms] Horde_Support_Stub now handles array-like accesses.
+
+Test
+[jan] Define missing Horde_Test_Stub_Registry property.
+
+Url
+[mms] Use strpos() instead of preg_match() for simple string searches (Thomas
+      Jarosch &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12603">Request #12603</a>).
+
+View
+[jan] Allow collections with arbitrary keys when rendering partials.
+
+Extensions
+----------
+horde_lz4
+[mms] Update LZ4 source to r99.
 
 
 ------
