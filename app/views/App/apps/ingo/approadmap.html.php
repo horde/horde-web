@@ -12,9 +12,26 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Ingo 4.1</h3>
+<h3>Ingo 4.2</h3>
 
 <p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> None</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td>
+  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td>
+</table>
+
+<div class="dimmed">
+
+<h3>Ingo 4.1</h3>
+
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> June 4th, 2013</p>
 
@@ -22,13 +39,11 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="progress">In progress</td>
+  <tr><td>Merge Vacation drivers (customsql)</td><td class="done">Done</td>
   <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="cancelled">Postponed</td>
-  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="progress">In progress</td>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="cancelled">Postponed</td>
   <tr><td>Composite driver to manage different backends for different services</td><td class="done">Done</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Ingo 3.0</h3>
 

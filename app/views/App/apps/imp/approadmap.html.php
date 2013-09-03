@@ -16,13 +16,14 @@ at least some of the following changes:
 
 <p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> TBD</p>
+<p><b>Planned release timeframe:</b> December 2013</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
  <tr><th>Feature</th><th>Status</th>
- <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="planned">Funded/In Progress</td>
+ <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="progress">Funded/In Progress</td></tr>
+ <tr><td>Signature display in compose window</td><td class="planned">Planned</td></tr>
 </table>
 
 <div class="dimmed">
@@ -32,6 +33,11 @@ at least some of the following changes:
 <p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> June 4th, 2013</p>
+
+<table cellspacing="0" class="roadmap">
+ <tr><th>Feature</th><th>Status</th>
+ <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="cancelled">Postponed</td></tr>
+</table>
 
 <h3>IMP 6.0</h3>
 

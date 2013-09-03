@@ -16,13 +16,13 @@ at least some of the following changes:
 
 <p><b>Status:</b> Planned</p>
 
-<p><b>Planned release timeframe:</b> May 2013</p>
+<p><b>Planned release timeframe:</b> Open</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>Reactivate WebDAV access</td><td class="done">Done</td>
+  <tr><td><a href="http://bugs.horde.org/ticket/12397">Reactivate WebDAV access</a></td><td class="planned">Planned</td>
 </table>
 
 <div class="dimmed">

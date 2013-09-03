@@ -12,9 +12,25 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>Turba 4.2</h3>
+
+<p><b>Status:</b> In Development</p>
+
+<p><b>Planned release timeframe:</b> December 2013</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Tag support</td><td class="done">Done</td>
+  <tr><td>Distribution lists and photos for Kolab</td><td class="planned">Planned</td>
+</table>
+
+<div class="dimmed">
+
 <h3>Turba 4.1</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> June 4th, 2013</p>
 
@@ -24,8 +40,6 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th>
   <tr><td>CardDAV support</td><td class="done">Done</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Turba 4.0</h3>
 

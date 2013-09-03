@@ -24,11 +24,27 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Merge into <?php echo $this->linkTo('Kronolith', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith')) ?></td><td class="planned">Planned</td></tr>
   <tr><td>Task dependencies</td><td class="planned">Planned</td>
+  <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="planned">Planned</td></tr>
 </table>
+
+<h3>Nag 4.2</h3>
+
+<p><b>Status:</b> In Development</p>
+
+<p><b>Planned release timeframe:</b> December 2013</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Add missing form elements to dynamic resp. basic view</td><td class="planned">Planned</td>
+</table>
+
+<div class="dimmed">
 
 <h3>Nag 4.1</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> June 4th, 2013</p>
 
@@ -39,8 +55,6 @@ at least some of the following changes:
   <tr><td>CalDAV server capabilities</td><td class="done">Done</td></tr>
   <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="cancelled">Postponed</td></tr>
 </table>
-
-<div class="dimmed">
 
 <h3>Nag 4.0</h3>
 

@@ -14,7 +14,7 @@ at least some of the following changes:
 
 <h3>Ansel 4.0</h3>
 
-<p><b>Status:</b> Planning </p>
+<p><b>Status:</b> Planned </p>
 
 <p><b>Planned release timeframe:</b> Open</p>
 
@@ -26,13 +26,18 @@ at least some of the following changes:
 <tr><td>Video Support</td><td class="planned">Planned</td></tr>
 </table>
 
+<div class="dimmed">
+
 <h3>Ansel 3.0</h3>
 
-<p><b>Status:</b> No major changes planned</p>
+<p><b>Status:</b> Released</p>
 
-<p><b>Planned release timeframe:</b> May 2013</p>
+<p><b>Planned release timeframe:</b> June 2013</p>
 
-<div class="dimmed">
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Compatible with Horde 5</td><td class="done">Done</td>
+</table>
 
 <h3>Ansel 2.0</h3>
 

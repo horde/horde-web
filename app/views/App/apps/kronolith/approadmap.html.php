@@ -12,9 +12,19 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
+<h3>Kronolith 4.2</h3>
+
+<p><b>Status:</b> In Development</p>
+
+<p><b>Planned release timeframe:</b> December 2013</p>
+
+<p><b>No major features currently planned for the next release.</b></p>
+
+<div class="dimmed">
+
 <h3>Kronolith 4.1</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> June 4th, 2013</p>
 
@@ -24,8 +34,6 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th>
   <tr><td>CalDAV server capabilities</td><td class="done">Done</td></tr>
 </table>
-
-<div class="dimmed">
 
 <h3>Kronolith 4.0</h3>
 
