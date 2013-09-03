@@ -9,19 +9,19 @@ $horde_apps_stable = array(
     'horde' => array(
         'name' => 'Horde',
         'ver' => '5.1.4',
-        'date' => 'September 03 2013',
+        'date' => 'September 3 2013',
         'pear' => true
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.1.1',
-        'date' => 'July 17 2013',
+        'ver' => '5.1.2',
+        'date' => 'September 3 2013',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.1.1',
-        'date' => 'July 17 2013',
+        'ver' => '5.1.2',
+        'date' => 'September 3 2013',
         'pear' => true,
     ),
     'imp' => array(
@@ -85,8 +85,8 @@ $horde_apps_stable = array(
     ),
     'wicked' => array(
         'name' => 'Wicked',
-        'ver' => 'H4 (1.0.2)',
-        'date' => 'September 6 2012',
+        'ver' => 'H5 (2.0.0)',
+        'date' => 'September 3 2013',
         'pear' => true,
     ),
     'hermes' => array(
