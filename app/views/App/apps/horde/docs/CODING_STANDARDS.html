@@ -1,5 +1,5 @@
-<div class="document" id="horde-coding-standards">
-<h1 class="title">Horde Coding Standards</h1>
+<div class="document" id="horde-4-coding-standards">
+<h1 class="title">Horde 4 Coding Standards</h1>
 <table class="docinfo" frame="void" rules="none">
 <col class="docinfo-name" />
 <col class="docinfo-content" />
@@ -67,6 +67,7 @@
 <li><a class="reference internal" href="#stdin-stdout-stderr" id="id44">30&nbsp;&nbsp;&nbsp;STDIN/STDOUT/STDERR</a></li>
 <li><a class="reference internal" href="#php-function-issues" id="id45">31&nbsp;&nbsp;&nbsp;PHP Function Issues</a><ul class="auto-toc">
 <li><a class="reference internal" href="#fpassthru" id="id46">31.1&nbsp;&nbsp;&nbsp;fpassthru()</a></li>
+<li><a class="reference internal" href="#stream-get-contents" id="id47">31.2&nbsp;&nbsp;&nbsp;stream_get_contents()</a></li>
 </ul>
 </li>
 </ul>
@@ -270,16 +271,16 @@ comment block as the header:</p>
  * The Horde_Foo class provides an API for various foo
  * techniques that can be used by Horde applications.
  *
- * Copyright 2009-2013 Horde LLC (http://www.horde.org/)
+ * Copyright 2009-2012 Horde LLC (http://www.horde.org/)
  *
- * See the enclosed file COPYING for license information (LGPL-2). If you
- * did not receive this file, see http://www.horde.org/licenses/lgpl.
+ * See the enclosed file COPYING for license information (LGPL). If you
+ * did not receive this file, see http://www.horde.org/licenses/lgpl21.
  *
  * &#64;author   Original Author &lt;author&#64;example.com&gt;
  * &#64;author   Your Name &lt;you&#64;example.com&gt;
  * &#64;category Horde
  * &#64;package  Package
- * &#64;license  http://www.horde.org/licenses/lgpl LGPL-2
+ * &#64;license  http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * &#64;since    Horde 4.0.1 [only if needed]
  */
 </pre>
@@ -289,7 +290,7 @@ comment block as the header:</p>
  * The App_Bar class contains all functions related to handling
  * bars in App.
  *
- * Copyright 2009-2013 Horde LLC (http://www.horde.org/)
+ * Copyright 2009-2012 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file COPYING for license information (GPL). If you
  * did not receive this file, see http://www.horde.org/licenses/gpl.
@@ -690,7 +691,8 @@ variables used in these functions, and check the source of any
 constants as well.</p>
 <p>eval and create_function - Obvious danger if user input is supplied to
 it in uncontrolled conditions.</p>
-<p>preg_replace - The /e modifier is deprecated and must no longer be used.</p>
+<p>preg_replace - The /e modifier causes the replacement string to be
+evaluated as PHP code.</p>
 </div>
 <div class="section" id="command-execution">
 <h2><a class="toc-backref" href="#id34">28.2&nbsp;&nbsp;&nbsp;Command Execution:</a></h2>
@@ -755,15 +757,11 @@ $unique = array_keys(array_flip($foo));
 </pre>
 <p>Even better, if possible rework the algorithm to store the unique data in the
 key and then call array_keys($foo) to return the unique list.</p>
-<p>Avoid array_push(), the [] operator is much faster:</p>
-<pre class="literal-block">
-$array[] = 'element';
-</pre>
 </div>
 <div class="section" id="user-defined-functions">
 <h2><a class="toc-backref" href="#id41">29.5&nbsp;&nbsp;&nbsp;User defined functions</a></h2>
 <p>User defined functions are more expensive than &quot;regular&quot; functions.  Use them
-only if they improve the code readability more than regular functions.</p>
+only if they improve the code readability more then regular functions.</p>
 </div>
 <div class="section" id="dynamically-created-functions-eval-and-create-function">
 <h2><a class="toc-backref" href="#id42">29.6&nbsp;&nbsp;&nbsp;Dynamically created functions (eval and create_function)</a></h2>
@@ -803,6 +801,17 @@ fread() to get the stream data:</p>
 while (!feof($stream)) {
     echo fread($stream, 8192);
 }
+</pre>
+</div>
+<div class="section" id="stream-get-contents">
+<h2><a class="toc-backref" href="#id47">31.2&nbsp;&nbsp;&nbsp;stream_get_contents()</a></h2>
+<p>This function was broken before PHP 5.2.7; the offset parameter did not
+respect a value of 0 (i.e. rewinding to beginning of stream).</p>
+<p>Use rewind() instead:</p>
+<pre class="literal-block">
+// NO: $foo = stream_get_contents($stream, -1, 0);
+rewind($stream);
+$foo = stream_get_contents($stream);
 </pre>
 </div>
 </div>
