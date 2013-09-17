@@ -1,5 +1,5 @@
-<div class="document" id="installing-ansel-2-0">
-<h1 class="title">Installing Ansel 2.0</h1>
+<div class="document" id="installing-ansel-h5">
+<h1 class="title">Installing Ansel H5</h1>
 
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
@@ -27,7 +27,7 @@ for web applications written in PHP.  You must install Horde before
 installing Ansel.</p>
 <div class="important">
 <p class="first admonition-title">Important</p>
-<p class="last">Ansel 2.0 requires version 4.0+ of the Horde Framework -
+<p class="last">Ansel H5 requires version 5.0+ of the Horde Framework -
 earlier versions of Horde will <strong>not</strong> work.</p>
 </div>
 <div class="important">
@@ -65,21 +65,18 @@ of these is <strong>required</strong>. The imagick extension <strong>must</stron
 against ImageMagick version 6.2.9 or better, though version 6.5.7 or
 better is recommended.</p>
 </li>
-<li><p class="first"><span class="target" id="opencv">OpenCV</span></p>
-<p>The <a href="#id7"><span class="problematic" id="id8">`php-facedetect module`_</span></a> provides the ability to detect human faces in
+<li><p class="first">OpenCV</p>
+<p>The <a class="reference external" href="http://www.xarg.org/project/php-facedetect/">php-facedetect module</a> provides the ability to detect human faces in
 images. If you would like to be able to have Ansel automatically detect
-faces in your images, you will need to install both the <a href="#id9"><span class="problematic" id="id10">`OpenCV library`_</span></a>
+faces in your images, you will need to install both the <a class="reference external" href="http://sourceforge.net/projects/opencvlibrary/">OpenCV library</a>
 as well as the phpfacedetect extension. You will still be able to manually
 select faces from your images if you do not have this extension installed.</p>
-<!-- _ `OpenCV library`: http://sourceforge.net/projects/opencvlibrary/ -->
-<!-- _ `php-facedetect module`: http://www.xarg.org/project/php-facedetect/ -->
 </li>
-<li><p class="first"><span class="target" id="libpuzzle">libpuzzle</span></p>
-<p>The <a href="#id11"><span class="problematic" id="id12">`libpuzzle library`_</span></a> provides the ability to determine similarities
+<li><p class="first">libpuzzle</p>
+<p>The <a class="reference external" href="http://libpuzzle.pureftpd.org/project/libpuzzle">libpuzzle library</a> provides the ability to determine similarities
 between images based on the image content. If you would like Ansel to be
 able to provide recognition of similar images and similar faces, you will
 need to install this module.</p>
-<!-- _ `libpuzzle library`: http://libpuzzle.pureftpd.org/project/libpuzzle -->
 </li>
 </ol>
 </li>
@@ -93,14 +90,13 @@ is recommended. Earlier versions <em>may</em> work, but some effects may produce
 errors. The absolute minimum version that will work at all with Ansel is
 6.2.9.</p>
 </li>
-<li><p class="first"><span class="target" id="agora">Agora</span>, the Horde forums application.</p>
-<p><a class="reference internal" href="#agora">Agora</a> provides the ability for comments to be added to photos via the
+<li><p class="first">Agora, the Horde forums application.</p>
+<p><a class="reference external" href="http://www.horde.org/apps/agora">Agora</a> provides the ability for comments to be added to photos via the
 forums API. If you want your users to be able to comment on photos, an
-application that provides the forums API is <strong>required</strong>.  <a class="reference internal" href="#agora">Agora</a> is
-currently the only such Horde application, but please be aware that currently
-<a class="reference internal" href="#agora">Agora</a> is not officially released in a stable version, so use at your own
-risk.</p>
-<!-- _ 'Horde Agora': http://www.horde.org/apps/agora -->
+application that provides the forums API is <strong>required</strong>.  <a class="reference external" href="http://www.horde.org/apps/agora">Agora</a> is
+currently the only such Horde application, but please be aware that
+currently <a class="reference external" href="http://www.horde.org/apps/agora">Agora</a> is not officially released in a stable version, so use at
+your own risk.</p>
 </li>
 </ol>
 </div>
@@ -118,26 +114,23 @@ install any dependencies of Ansel too. If you want to install Ansel with all
 optional dependencies, but without the binary PECL packages that need to be
 compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
 <pre class="literal-block">
-pear install -a -B horde/ansel-alpha
+pear install -a -B horde/ansel
 </pre>
 <p>By default, only the required dependencies will be installed:</p>
 <pre class="literal-block">
-pear install horde/ansel-alpha
+pear install horde/ansel
 </pre>
 <p>If you want to install Ansel even with all binary dependencies, you need to
 remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
 extensions through PECL that might need further configuration or activation in
 your PHP configuration:</p>
 <pre class="literal-block">
-pear install -a horde/ansel-alpha
+pear install -a horde/ansel
 </pre>
 </div>
 <div class="section" id="installing-from-git">
 <h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
-<p>See:</p>
-<pre class="literal-block">
-http://horde.org/source/git.php
-</pre>
+<p>See <a class="reference external" href="http://www.horde.org/source/git.php">http://www.horde.org/source/git.php</a></p>
 </div>
 </div>
 <div class="section" id="configuring-ansel">
@@ -216,17 +209,5 @@ For information on reasonable support expectations, please read</p>
 <a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
 <p>Thanks for using Ansel!</p>
 <p>The Ansel team</p>
-</div>
-<div class="system-messages section">
-<h1>Docutils System Messages</h1>
-<div class="system-message" id="id7">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 65); <em><a href="#id8">backlink</a></em></p>
-Unknown target name: &quot;php-facedetect module&quot;.</div>
-<div class="system-message" id="id9">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 65); <em><a href="#id10">backlink</a></em></p>
-Unknown target name: &quot;opencv library&quot;.</div>
-<div class="system-message" id="id11">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/horde/checkout/horde.git/ansel/docs/INSTALL</tt>, line 76); <em><a href="#id12">backlink</a></em></p>
-Unknown target name: &quot;libpuzzle library&quot;.</div>
 </div>
 </div>

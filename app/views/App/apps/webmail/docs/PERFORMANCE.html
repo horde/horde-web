@@ -116,18 +116,17 @@ the web server host.</p>
 </li>
 <li><p class="first">Enable Apache keepalives.</p>
 </li>
-<li><p class="first">You can configure Horde Groupware Webmail Edition to serve all images, style
-sheets and/or static javascript files from a different server. This could be
-a very lightweight server without PHP (and other CGI modules) builtin. If
-using SSL to serve all pages, the images/js server will also have to serve
-SSL content or else browsers will complain about non-secure content in a
-secure page. Good lightweight servers that support SSL include <a class="reference external" href="http://www.lighttpd.net/">lighttpd</a> and
-<a class="reference external" href="http://hiawatha.leisink.org/">Hiawatha</a>. If using a Horde Groupware Webmail Edition installation that
-doesn't use SSL (or only uses SSL for logins), good choices for servers
-include <a class="reference external" href="http://www.acme.com/software/thttpd/">thttpd</a> or <a class="reference external" href="http://www.boa.org/">Boa</a>. You need to set the <tt class="docutils literal">themesuri</tt> and/or <tt class="docutils literal">jsuri</tt>
-parameters in <tt class="docutils literal">config/registry.php</tt> for all applications and copy all
-<tt class="docutils literal">themes</tt> and/or <tt class="docutils literal">js</tt> directories in the same directory layout to the
-other server.</p>
+<li><p class="first">You can configure Horde to serve all images, style sheets and/or static
+javascript files from a different server. This could be a very lightweight
+server without PHP (and other CGI modules) builtin. If using SSL to serve
+all pages, the images/js server will also have to serve SSL content or else
+browsers will complain about non-secure content in a secure page. Since this
+server does not need to handle dynamic content, it would be wise to use a
+high-performance server with low memory and/or system resource requirements
+(this <a class="reference external" href="http://www.ibm.com/developerworks/web/library/wa-ltwebserv/">IBM Article</a> can provide further information). You need to set
+the <tt class="docutils literal">themesuri</tt> and/or <tt class="docutils literal">jsuri</tt> parameters in <tt class="docutils literal">config/registry.php</tt> for
+all applications and copy all <tt class="docutils literal">themes</tt> and/or <tt class="docutils literal">js</tt> directories in the
+same directory layout to the other server.</p>
 </li>
 <li><p class="first">Your webserver should use Expires headers to make sure static content can
 be cached on the user's browser.  For example, to make lighttpd set an
@@ -175,12 +174,20 @@ switching to a faster format if needed.</li>
 <p><a class="reference external" href="http://www.imapproxy.org/">imapproxy</a> is HIGHLY RECOMMENDED - especially versions 1.2.7rc1 and greater
 which contains features used internally by Horde Groupware Webmail Edition to
 speed up access to the remote server.</p>
+<p>NOTE: if your installation connects to multiple imapproxy instances, you MUST
+configure your Horde Groupware Webmail Edition installation to persistently
+connect to a single backend over the course of a session. If this is not
+possible, you must remove support for imapproxy's advanced features by adding
+'XIMAPPROXY' to the 'capability_ignore' parameter in your local
+configuration.</p>
 </li>
 <li><p class="first">Use an IMAP server that supports CONDSTORE (<a class="reference external" href="http://www.faqs.org/rfcs/rfc4551.html">RFC 4551</a>) and/or QRESYNC (<a class="reference external" href="http://www.faqs.org/rfcs/rfc5162.html">RFC
 5162</a>).</p>
-<p>These extensions are required to properly cache data and to properly keep
-the dynamic display synchronized. It is impossible to do otherwise, and the
-UI experience will be limited without these extensions.</p>
+<p>These extensions are required to properly cache data and to properly keep the
+dynamic display synchronized. It is impossible to do otherwise, and the UI
+experience will be limited without these extensions. Additionally, if these
+IMAP extensions are available, Horde Groupware Webmail Edition is able to
+cache servers which signficantly saves on client/server IMAP interactions.</p>
 <p>Technical information can be found here:</p>
 <p><a class="reference external" href="http://lists.horde.org/archives/imp/Week-of-Mon-20110523/052285.html">http://lists.horde.org/archives/imp/Week-of-Mon-20110523/052285.html</a></p>
 </li>
@@ -189,7 +196,7 @@ either <a class="reference external" href="http://www.cyrusimap.org/">Cyrus</a> 
 advanced IMAP protocols, and use server-side caching to speed performance.</p>
 </li>
 <li><p class="first">Consider switching to a faster mailbox storage format if needed. This may
-also entail switching the underlying filesystem.</p>
+also require switching the underlying filesystem.</p>
 <p>Further information can be found here:</p>
 <p><a class="reference external" href="http://wiki2.dovecot.org/MailboxFormat">http://wiki2.dovecot.org/MailboxFormat</a></p>
 </li>
@@ -230,8 +237,19 @@ set-variable = query_cache_size=128M
 <div class="section" id="autoloading">
 <h2><a class="toc-backref" href="#id8">Autoloading</a></h2>
 <ul>
-<li><p class="first">An easy way to improve the performance of the Horde Autoloader library, is to
-install the Autoloader Cache extension:</p>
+<li><p class="first">Horde Groupware Webmail Edition automatically loads PHP source files on
+demand which relies on the PHP autoloading feature introduced with PHP 5 and
+the Horde Autoloader library.  Both allow to limit the set of source code
+files pulled into the system to the minimal amount required to answer the
+current request. This saves memory and time but at the same time the
+Autoloader library has to map each class name to the path of the
+corresponding PHP file that holds the class definition. This procedure is
+expensive and can slow the system down.  Fortunately the mapping is fixed
+unless files are added or removed which usually only happens during an
+upgrade.</p>
+<p>Thus Autoloading is amenable to caching and an easy way to improve the
+performance of the Horde Autoloader library, is to install the Autoloader
+Cache extension:</p>
 <pre class="literal-block">
 pear install horde/horde_autoloader_cache
 </pre>
@@ -253,11 +271,10 @@ the cache file from the temporary directory.</p>
 <div class="section" id="vfs">
 <h2><a class="toc-backref" href="#id9">VFS</a></h2>
 <ul class="simple">
-<li>Try to avoid using a SQL backend for VFS. Many databases require binary data
-to be heavily escaped, resulting in storage sizes that are many times greater
-than the actual size of the data, so users attaching larger files to outgoing
-mail messages may cause PHP out-of-memory errors to occur. File system VFS
-will normally provide much improved performance.</li>
+<li>Configure Horde Groupware Webmail Edition to use a VFS filesystem-based
+backend. Presently, the SQL VFS backend uses ~5 times the amount of memory as
+a filesystem-based backend, so users attaching larger files to outgoing mail
+messages may cause PHP out-of-memory errors to occur.</li>
 </ul>
 </div>
 </div>
@@ -280,6 +297,7 @@ message only once.  The tradeoff is your cache backend must be able to handle
 the potentially large amounts of cached data this option will
 produce. However, cache storage is potentially cheap when compared to the
 performance gained by using caching.</p>
+<p>If CONDSTORE/QRESYNC is available on the server, IMAP flags can be cached.</p>
 <p>To use this caching, you must have a <tt class="docutils literal">Cache System</tt> configured in Horde
 Groupware Webmail Edition's <tt class="docutils literal">Administration/Configuration</tt> screen and have
 the relevant settings enabled in the Mail module's configuration screen

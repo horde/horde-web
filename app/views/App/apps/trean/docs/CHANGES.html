@@ -1,8 +1,61 @@
 <h3>Changes by Release</h3><pre>
-----
-v0.1
-----
+----------
+v1.0.4-git
+----------
 
+
+
+------
+v1.0.3
+------
+
+[mjr] Fix some minor issues with crawling bookmarks.
+[mjr] Show recently used tags on-demand (<a href="http://bugs.horde.org/ticket/11712">Bug #11712</a>).
+
+------
+v1.0.2
+------
+
+[jan] Fix fatal errors in portal blocks (<a href="http://bugs.horde.org/ticket/12303">Bug #12303</a>).
+
+
+------
+v1.0.1
+------
+
+[jan] Make Horde_Queue a mandatory dependency.
+
+
+------
+v1.0.0
+------
+
+[cjh] Strip utm_ parameters from incoming bookmarks, and provide a script to
+      strip them from already-saved bookmarks (<a href="http://bugs.horde.org/ticket/10751">Request #10751</a>).
+[cjh] Implement listTagInfo and searchTags API calls for Trean (<a href="http://bugs.horde.org/ticket/11816">Bug #11816</a>).
+[cjh] Fix fetching, saving, and display of favicons.
+
+
+-----------
+v1.0.0beta2
+-----------
+
+[cjh] Add a list of tags to the sidebar.
+[cjh] Crawl all bookmarks when they are saved or edited for fulltext searching
+      if elasticsearch is available.
+[cjh] Turn search off by default (<a href="http://bugs.horde.org/ticket/11701">Bug #11701</a>).
+[jan] Allow to set custom SQL parameters.
+[jan] Move search box to top menu.
+
+
+-----------
+v1.0.0beta1
+-----------
+
+[jan] Merge tag browser into bookmark listing.
+[mjr] Add tagging support.
+[cjh] Remove folders.
+[cjh] Remove star ratings.
 [jan] Provide default configuration files instead of .dist versions.
 [jan] Enable output compression (horde@albasoft.com, <a href="http://bugs.horde.org/ticket/8649">Bug #8649</a>).
 [cjh] Check folder name as well as id for the pre-selected folder
@@ -43,7 +96,7 @@ v0.1
       screens.
 [ben] Include standard editing controls in the search results screen.
 [ben] Show bookmark's parent category in the search results screen.
-[ben] cron script to check for broken links and retrieve favicons.
+[ben] Add cron script to check for broken links and retrieve favicons.
 [ben] Add Horde_Share support.
 [cjh] Fix links to click-tracking script when user has cookies disabled
       (<a href="http://bugs.horde.org/ticket/1675">Bug #1675</a>).
