@@ -22,7 +22,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
  <tr><th>Feature</th><th>Status</th>
- <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="progress">Funded/In Progress</td></tr>
+ <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="done">Done</td></tr>
  <tr><td>Signature display in compose window</td><td class="planned">Planned</td></tr>
 </table>
 
