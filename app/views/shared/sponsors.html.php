@@ -32,8 +32,6 @@
 
   <h2>More</h2>
   <iframe src="http://www.facebook.com/plugins/like.php?app_id=132513070157462&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHorde-LLC%2F192707224109487&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
-  <g:plusone size="medium" href="http://www.horde.org/"></g:plusone>
-  <a href="https://plus.google.com/105569801098474752113?prsrc=3" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:24px;height:24px;"/></a>
   <p>
     <?php echo $this->linkTo('Logos', array('controller' => 'home', 'action' => 'logos'), array('class' => 'logos'));?>
   </p>

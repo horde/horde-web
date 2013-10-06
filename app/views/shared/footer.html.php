@@ -17,7 +17,6 @@
     <div class="follow-us">
       <h3>Follow us</h3>
       <ul>
-        <li><a href="http://bit.ly/iggr7v" class="newsletter">Newsletter</a></li>
         <li><a href="http://www.twitter.com/hordeproject" class="twitter">Twitter</a></li>
         <li><a href="http://www.facebook.com/hordeproject" class="facebook">Facebook</a></li>
         <li><a href="http://github.com/horde" class="github">GitHub</a></li>
