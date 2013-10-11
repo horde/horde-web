@@ -3,12 +3,16 @@
 v6.1.5-git
 ----------
 
+[mms] SECURITY: Fix XSS in message and search screens resulting from a
+      user-defined flag label (João Machado &lt;geral@jpaulo.eu>).
+[mms] Improved UI for dropping attachments on dynamic compose screen.
+[mms] Fix manually loading all addresses in a header.
+[mms] Fix regression where reloading dynamic view would not load the previously
+      selected message.
 [mms] Fixed regression in enforcing max_recipients and max_timelimit
       permissions (<a href="http://bugs.horde.org/ticket/12674">Bug #12674</a>).
 [mms] Correctly enforce file size attachment limits on the first attachment
       (<a href="http://bugs.horde.org/ticket/12663">Bug #12663</a>).
-[mms] SECURITY: Fix XSS when flagging a message in dynamic view with a
-      user-defined flag (João Machado &lt;geral@jpaulo.eu>).
 [mms] Don't attempt to get quota information from non-IMAP mailboxes (<a href="http://bugs.horde.org/ticket/12608">Bug
       #12608</a>).
 [jan] Don't attach address book behavior if contacts API is unavailable.
