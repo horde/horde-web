@@ -280,11 +280,11 @@ Domain Names (see <a class="reference external" href="http://www.faqs.org/rfcs/r
 <p>This extension can be enabled by adding the <tt class="docutils literal"><span class="pre">--enable-intl</span></tt> option
 when compiling PHP.</p>
 </li>
-<li><p class="first">_curl <tt class="docutils literal"><span class="pre">--with-curl</span></tt></p>
-<p>The curl extension, if installed, will be used instead of PHP's fopen()
-when retrieving data from external HTTP servers (remote calendars, web
-APIs, etc.). This is much more reliable and flexible, so it is
-recommended to either enable it or install the <a class="reference external" href="http://php.net/http">http</a> extension.</p>
+<li><p class="first"><span class="target" id="curl">curl</span> <tt class="docutils literal"><span class="pre">--with-curl</span></tt></p>
+<p>The <a class="reference external" href="http://php.net/curl">curl extension</a>, if installed, will be used instead of PHP's
+fopen() when retrieving data from external HTTP servers (remote
+calendars, web APIs, etc.). This is much more reliable and flexible, so
+it is recommended to either enable it or install the <a class="reference internal" href="#http">http</a> extension.</p>
 <p>This extension can be enabled by adding the <tt class="docutils literal"><span class="pre">--with-curl</span></tt> option when
 compiling PHP.</p>
 </li>
@@ -410,11 +410,11 @@ pecl install horde_lz4
 pecl install memcache
 </pre>
 </li>
-<li><p class="first">_http</p>
-<p>The http extension, if installed, will be used instead of PHP's fopen()
-when retrieving data from external HTTP servers (remote calendars, web
-APIs, etc.). This is much more reliable and flexible, so it recommended
-to either install this or enable the <a class="reference external" href="http://php.net/curl">curl</a> extension.</p>
+<li><p class="first"><span class="target" id="http">http</span></p>
+<p>The <a class="reference external" href="http://php.net/http">http extension</a>, if installed, will be used instead of PHP's
+fopen() when retrieving data from external HTTP servers (remote
+calendars, web APIs, etc.). This is much more reliable and flexible, so
+it recommended to either install this or enable the <a class="reference internal" href="#curl">curl</a> extension.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pecl install http
