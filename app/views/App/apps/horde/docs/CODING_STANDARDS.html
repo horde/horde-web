@@ -69,6 +69,10 @@
 <li><a class="reference internal" href="#fpassthru" id="id46">31.1&nbsp;&nbsp;&nbsp;fpassthru()</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#hashing-algorithm" id="id47">32&nbsp;&nbsp;&nbsp;Hashing Algorithm</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sha-1" id="id48">32.1&nbsp;&nbsp;&nbsp;SHA-1</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="indenting-whitespace">
@@ -804,6 +808,20 @@ while (!feof($stream)) {
     echo fread($stream, 8192);
 }
 </pre>
+</div>
+</div>
+<div class="section" id="hashing-algorithm">
+<h1><a class="toc-backref" href="#id47">32&nbsp;&nbsp;&nbsp;Hashing Algorithm</a></h1>
+<div class="section" id="sha-1">
+<h2><a class="toc-backref" href="#id48">32.1&nbsp;&nbsp;&nbsp;SHA-1</a></h2>
+<p>SHA-1 is the recommended algorithm to use for non-cryptographic hashing
+actions:</p>
+<pre class="literal-block">
+$hash = hash('sha1', $string);
+</pre>
+<p>MD5 should NOT be used, as it has known collision issues. (NOTE: SHA-1 hashes
+are 160-bit vs. MD5 hashes which are 128-bit; care needs to be taken if
+switching between methods regarding storage side of the hash string).</p>
 </div>
 </div>
 </div>
