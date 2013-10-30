@@ -1,8 +1,250 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v5.1.3-git
+v5.1.4-git
 ----------
 
+
+
+------
+v5.1.3
+------
+
+Horde Changes
+-------------
+[jan] SECURITY: Protect against CSRF attacks on share permissions form (<a href="http://bugs.horde.org/ticket/12804">Bug
+      #12804</a>).
+[jan] SECURITY: Fix XSS vulnerabilities in top and left menu (<a href="http://bugs.horde.org/ticket/12803">Bug #12803</a>).
+[jan] Don't show admin alarm form if alarms are disabled.
+[mms] Add horde-remove-user-data command-line script.
+[mms] Add additional syntax checking for the configuration files in the test
+      script.
+[mms] Only update topbar if the underlying tree data has changed.
+
+Address Book Changes
+--------------------
+[jan] SECURITY: Fix XSS vulnerabilities when deleting address books.
+[jan] Fix exporting selected contacts (<a href="http://bugs.horde.org/ticket/12759">Bug #12759</a>).
+[mms] Improved UI when viewing search results from Advanced Search.
+[mms] Remove features from UI when VFS is not available or disabled.
+[mjr] Fix filtering Facebook driver results (<a href="http://bugs.horde.org/ticket/12739">Bug #12739</a>).
+[jan] Gracefully deal with columns removed from the backend.
+
+Calendar Changes
+----------------
+[jan] SECURITY: Protect against CSRF attacks on share permissions form (<a href="http://bugs.horde.org/ticket/12804">Bug
+      #12804</a>).
+[jan] SECURITY: Fix XSS vulnerabilities when deleting calendars and resources.
+[jan] Fix edge case that allowed to enter start time after end time (<a href="http://bugs.horde.org/ticket/12752">Bug
+      #12752</a>).
+[mjr] Expire fb cache when fb_cals preference changes (<a href="http://bugs.horde.org/ticket/12714">Bug #12714</a>).
+[jan] Fix setting DTEND in iCalendar data if event has a timezone (<a href="http://bugs.horde.org/ticket/12693">Bug #12693</a>).
+[mjr] Fix importing new ActiveSync events created on the client with
+      recurrence.
+[mjr] Fix some issues with recurring event exceptions due to improper timezone
+      handling (<a href="http://bugs.horde.org/ticket/12630">Bug #12630</a>).
+
+Tasks Changes
+-------------
+[jan] SECURITY: Fix XSS vulnerabilities when deleting task lists.
+[jan] Fix updating alarm if completing a task recurrence.
+[jan] Fix editing tasks via CalDAV (<a href="http://bugs.horde.org/ticket/12745">Bug #12745</a>).
+
+Notes Changes
+-------------
+[jan] SECURITY: Fix XSS vulnerabilities when deleting notepads.
+[mjr] Fix removing a list of UIDs via the API (<a href="http://bugs.horde.org/ticket/12790">Bug #12790</a>,
+      thomas.jarosch@intra2net.com)
+[mjr] Fix exporting memos as v-note (horde@albasoft.com, <a href="http://bugs.horde.org/ticket/12622">Bug #12622</a>).
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Improve performance related to conflict detection and change mirroring
+      protection.
+[mjr] Return proper status codes when OOF is unavailable (<a href="http://bugs.horde.org/ticket/12757">Bug #12757</a>).
+[mjr] Fix fatal crash when conflict is detected (Thomas Jarosch
+      &lt;thomas.jarosch@intra2net.com>, <a href="http://bugs.horde.org/ticket/12755">Bug #12755</a>)
+[mjr] Fix returning contact image in GAL search for those clients that support
+      it.
+[mjr] Fix GAL searching for clients that depend on SEARCH_RANGE values.
+[mjr] Fix some authentication issues when certain clients issue broken
+      AutoDiscover requests.
+[mjr] Fix some minor issues with Autodiscover requests caught by unit testing.
+[mjr] Remove dependency on unreleased Horde_Stream code.
+[mjr] Work around for PHP bug 65776, preventing segfaults with certain emails.
+[mjr] Remove loop counter code that was incorrectly growing sync_cache data
+      (<a href="http://bugs.horde.org/ticket/12707">Bug #12707</a>).
+[mjr] Ignore incoming SMS delete command. Prevents breaking sync on clients
+      that send SMS data, even though we do not return it as an available
+      collection.
+[mjr] Prevent sending invalid UTF-8 data in the Subject header, which could
+      break sync in some clients.
+[mjr] Support for SOFTDELETE.
+[mjr] Fix possible infinite loop when a requested message is not found on the
+      serer during a SYNC request.
+
+Alarm
+[mjr] Fix initializing Alarms when using PDO_Oci or PDO_PostgreSQL.
+
+Auth
+[mms] Password strength testing is now case-insensitive
+      (delrio@mie.utoronto.ca, <a href="http://bugs.horde.org/ticket/12708">Request #12708</a>).
+
+Cache
+[mms] Fix key expiration for APC, Eaccelerator, and Xcache (<a href="http://bugs.horde.org/ticket/12735">Bug #12735</a>).
+[mms] Add Horde_Cache_Storage_Memoryoverlay driver.
+
+Core
+[mms] Fix prototype.js issue in IE 9 regarding array iteration in a parent
+      window.
+[mjr] Ensure Bcc is removed from headers when sent via ActiveSync (<a href="http://bugs.horde.org/ticket/12771">Bug #12771</a>).
+[mjr] Fix calculating calendars to use for SOFTDELETE commands in certain
+      configurations (<a href="http://bugs.horde.org/ticket/12765">Bug #12765</a>).
+[mms] Upgrade jQuery Mobile to v1.3.2/jQuery Core to v1.9.1.
+[mms] Add Horde_Core_Ui_FlagImage#getFlagImageObByHost.
+[mms] Add base64img property to Horde_Themes_Image.
+[mjr] Do not assume that the filter API is available (<a href="http://bugs.horde.org/ticket/12757">Bug #12757</a>).
+[mms] Add ability to load javascript via a HordeCore AJAX response (<a href="http://bugs.horde.org/ticket/10971">Request
+      #10971</a>).
+[mms] Add ability to expire CSS cache based on file modification time.
+[mms] Allow disabling VFS via the configuration interface.
+[mjr] Send back dummy mail folders when the Mail API is not available (<a href="http://bugs.horde.org/ticket/12738">Bug
+      #12738</a>).
+[mms] Upgrade prototype.js to most recent git version
+      (e3d5200cef3236b257ddcfb1eb3eabc5c586bedd).
+[mms] Cache permission results within a PHP access.
+[mms] Don't initialize unnecessary prefs object when creating the topbar.
+[mjr] Support ActiveSync SOFTDELETE.
+[mms] Respect 'nobase64_img' configuration when generating image tags (João
+      Machado &lt;geral@jpaulo.eu>).
+[mjr] Support for X509 certificate authentication in ActiveSync requests.
+[mjr] Fix calculating policy value for SD card encryption and device encryption
+      policies.
+
+Css_Parser
+[mms] Merge from upstream - handle keywords/dimensions case-insensitively.
+[mms] Performance optimizations in the parser.
+
+Date
+[jan] Correct dates with very large days-of-month more efficiently (<a href="http://bugs.horde.org/ticket/12615">Bug #12615</a>).
+[jan] Don't limit the argument to Horde_Date_Utils::isLeapYear() to 4 digits.
+
+Form
+[mms] Remove duplicate constructor.
+
+History
+[mjr] Only query History when we have a range of modSeq values to query
+      (arjen+horde@de-korte.org, <a href="http://bugs.horde.org/ticket/12660">Bug #12660</a>).
+
+Imap_Client
+[mms] Explicitly reject XOAUTH2 as a authentication mechanism if it is not
+      configured in the client (<a href="http://bugs.horde.org/ticket/12756">Bug #12756</a>).
+[mms] Sort UID list before sending in QRESYNC parameter.
+[mms] Ensure that INBOX always appears in subscribed mailbox list when using a
+      server that supports LIST-EXTENDED.
+[mms] Fix regression where INBOX may not be recognized as subscribed, if the
+      server doesn't list it in the subscribed list.
+[mms] Handle case-insensitive INBOX return from the server.
+[mms] Use strict RFC-compliant workaround for servers that don't support the
+      UNSELECT IMAP extension.
+[mms] Ensure Horde_Imap_Client_Base#search() always returns the 'count' value
+      (<a href="http://bugs.horde.org/ticket/12682">Bug #12682</a>).
+[jan] Fix incorrect usage of Horde_Db API in cache backend.
+[mms] Workaround servers that don't advertise UIDL until after authentication.
+[mms] Fix parsing continuation requests sent in SASL AUTH command (RFC 5034).
+[mms] By default, use TLS if available and necessary to login to server.
+[mms] Fix adding status information to listMailboxes() return when LIST-STATUS
+      is not available.
+
+Ldap
+[jan] Fix modifying entries with modify().
+[jan] Try starting TLS without querying the rootDSE (<a href="http://bugs.horde.org/ticket/12157">Bug #12157</a>).
+
+ListHeaders
+[mms] Add Horde_ListHeaders#headers().
+
+Log
+[jan] Add a CLI formatter and handler.
+
+Mail
+[mms] Discard personal information when it is identical to e-mail address.
+
+Mime
+[mms] Fix regression that broke quoted-printable encoding.
+[mjr] Work around broken PHP behavior that could cause a segfault when encoding
+      certain strings as quoted-printable.
+
+Mongo
+[mjr] Prevent data loss due to forced selection of incorrect database.
+
+Prefs
+[mms] Fix iteration of Horde_Prefs_Scope object.
+
+Rpc
+[mjr] Correctly catch HTTP client exceptions.
+
+Service_Facebook
+[mjr] Correctly catch HTTP client exceptions.
+
+Smtp
+[mms] Fix handling EOLs split on a stream bucket boundary (<a href="http://bugs.horde.org/ticket/12763">Bug #12763</a>).
+[mms] Fix escaping periods that begin a line of DATA input.
+[mms] Explicitly reject XOAUTH2 as a authentication mechanism if it is not
+      configured in the client.
+[jan] Fix reading translations in PEAR-installed package.
+[mms] Fix parsing SMTP error message on servers that support
+      ENHANCEDSTATUSCODES (<a href="http://bugs.horde.org/ticket/12666">Bug #12666</a>).
+[mms] Fix aborting a pipelined DATA command if only a subset of recipients were
+      rejected (<a href="http://bugs.horde.org/ticket/12659">Bug #12659</a>).
+[mms] Don't auto-detect TLS availability again once we have done initial
+      detection.
+
+Socket_Client
+[mms] Initial release.
+
+SpellChecker
+[mms] Fix spellchecking within the ALT HTML tag (<a href="http://bugs.horde.org/ticket/12610">Bug #12610</a>).
+
+Stream
+[mms] Add Horde_Stream#substring().
+[mms] Fix getString() in certain use cases.
+[mms] Horde_Stream#getToChar() now supports multiple characters in search
+      string.
+[mms] Horde_Stream#search() now supports multiple characters in search string.
+[mms] Add ability to get UTF-8 character length of stream from
+      Horde_Stream#length().
+[mms] Add length argument to peek().
+[mms] Add Horde_Stream#close().
+[mms] Add support for parsing UTF-8 characters in stream via
+      Horde_Stream#getChar().
+[mms] Add Horde_Stream#eof().
+[mms] Add Horde_Stream#end().
+[mms] Add Horde_Stream#seek().
+[mms] Add Horde_Stream#rewind().
+[mms] Add Horde_Stream#pos().
+[mms] Add Horde_Stream#__destruct().
+
+Stream_Filter
+[mms] Fix EOL filter when multi-character EOL is split between incoming buckets
+      (<a href="http://bugs.horde.org/ticket/2673">Bug #2673</a>).
+
+Test
+[mms] Fix autoloading from a PHP-defined namespace.
+
+Text_Filter
+[mms] Fix issue from upstream jsmin.c that was breaking parsing of a keyword
+      immediately followed by a regexp (<a href="http://bugs.horde.org/ticket/12787">Bug #12787</a>).
+[mms] Merge upstream updates to JsMin filter.
+
+Timezone
+[jan] Fix broken offsets during first zone rules.
+[jan] Make BYMONTHDAY property as short as possible.
+[jan] Fix missing time of day in DTSTART and UNTIL properties.
+[jan] Don't create transitions that overlap.
+[jan] Use orginally requested time zone instead of alias in TZID.
+
+Vfs
+[jan] Bump minimum version of SSH2 extension to 0.12.
 
 
 ------
