@@ -23,7 +23,7 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Tag support</td><td class="done">Done</td>
-  <tr><td>Distribution lists and photos for Kolab</td><td class="planned">Planned</td>
+  <tr><td>Distribution lists and photos for Kolab</td><td class="progress">In Development</td>
 </table>
 
 <div class="dimmed">
