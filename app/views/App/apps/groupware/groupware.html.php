@@ -96,7 +96,7 @@
  href="http://www.apple.com/osx/apps/#calendar">Apple Calendar</a>, <a
  href="http://www.mozilla.org/projects/calendar/">Mozilla Lightning/Sunbird</a>, <a
  href="http://office.microsoft.com/outlook/">Microsoft Outlook</a></li>
- <li>iCalendar and iTip support</li>
+ <li>CalDAV, iCalendar and iTip support</li>
 </ul>
 
 <p>Contacts:</p>
@@ -125,7 +125,7 @@
  href="http://www.apple.com/macosx/features/ical/">Apple iCal</a>, <a
  href="http://www.mozilla.org/projects/calendar/">Mozilla Sunbird</a>, <a
  href="http://office.microsoft.com/outlook/">Microsoft Outlook</a></li>
- <li>vTodo support</li>
+ <li>CalDAV and vTodo support</li>
 </ul>
 
 <p>Notes:</p>
