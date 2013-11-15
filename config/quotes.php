@@ -77,4 +77,8 @@ $quotes = array(
         'quote' => '"Die Installation ist mehr als einfach und auch die Administration ist selbsterklärend. Das neue Horde ist wirklich ein Wow-Effekt und perfekt für einen Zugriff per VPN und aus dem Heimnetzwerk. Meiner Meinung nach kann man nun auf die Google-Apps in Android verzichten."',
         'author' => 'Seraphyn Blog'
     ),
+    array(
+        'quote' => '"Ich ziemlich entzückt von der Horde Groupware. Endlich habe ich einen Ersatz für Google Calendar!"',
+        'author' => 'Helge Eichelberg @hael_ge'
+    ),
 );
