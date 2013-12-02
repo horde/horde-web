@@ -126,7 +126,7 @@
         <tr>
          <?php echo $this->controller->git_and_ver('trean') ?>
          <td>Bookmarks manager</td>
-         <td>Beta</td>
+         <td><strong>Production</strong></td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('turba') ?>
