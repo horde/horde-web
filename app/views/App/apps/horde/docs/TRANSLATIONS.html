@@ -364,7 +364,7 @@ several languages, you have to</p>
 <blockquote>
 <ol class="arabic simple">
 <li>specify your texts as gettext arguments, in English, e.g. by using the
-_() or r() function.</li>
+_() function or Horde_Translation methods.</li>
 <li>edit the translation files for the required national languages,</li>
 <li>compile those translation files.</li>
 </ol>
@@ -406,12 +406,12 @@ horde-translation make --module imp --no-compendium
 <div class="section" id="raw-gettext-strings">
 <h3><a class="toc-backref" href="#id16">2.1.6&nbsp;&nbsp;&nbsp;&quot;Raw&quot; gettext strings</a></h3>
 <p>Horde provides a non-standard way to define a translatable string without
-having that string translated in the code.  By using the r() method, the
-string will be marked as a translatable string and extracted by the Horde
-translation script, but the string will not be altered in the PHP code.
+having that string translated in the code.  By using the Horde_Translation::r()
+method, the string will be marked as a translatable string and extracted by the
+Horde translation script, but the string will not be altered in the PHP code.
 Example:</p>
 <pre class="literal-block">
-$str = r(&quot;Foo&quot;);
+$str = Horde_Translation::r(&quot;Foo&quot;);
 echo $str; // Output: Foo
 echo _($str); // Output: [Translation of 'Foo']
 </pre>
