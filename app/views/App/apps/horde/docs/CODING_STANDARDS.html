@@ -387,12 +387,20 @@ after all other output.</p>
 <p>All images must have an <tt class="docutils literal">alt</tt> attribute:</p>
 <pre class="literal-block">
 &lt;img src=&quot;example.gif&quot; alt=&quot;&lt;?php echo _(&quot;Example&quot;) ?&gt;&quot; /&gt;
-&lt;?php echo Horde::img('example.gif', _(&quot;Example&quot;)) ?&gt;
+&lt;?php
+    echo Horde_Themes_Image::tag('example.gif', array(
+        'alt' =&gt; _(&quot;Example&quot;)
+    ));
+?&gt;
 </pre>
 <p>Input fields of type &quot;image&quot; do not allow the border attribute and may render
 with a border on some browsers.  Use the following instead:</p>
 <pre class="literal-block">
-&lt;a href=&quot;&quot; onclick=&quot;document.formname.submit(); return false;&quot;&gt;&lt;?php echo Horde::img(&quot;example.gif&quot;, _(&quot;Example&quot;)) ?&gt;&lt;/a&gt;
+&lt;a href=&quot;&quot; onclick=&quot;document.formname.submit(); return false;&quot;&gt;&lt;?php
+    echo Horde_Themes_Image::tag(&quot;example.gif&quot;, array(
+        'alt' =&gt; _(&quot;Example&quot;)
+    ));
+?&gt;&lt;/a&gt;
 </pre>
 </div>
 <div class="section" id="database-conventions">
