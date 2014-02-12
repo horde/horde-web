@@ -411,7 +411,11 @@ method, the string will be marked as a translatable string and extracted by the
 Horde translation script, but the string will not be altered in the PHP code.
 Example:</p>
 <pre class="literal-block">
-$str = Horde_Translation::r(&quot;Foo&quot;);
+// For a Horde package named Horde_Foo::
+$str = Horde_Translation_Foo::r(&quot;Foo&quot;);
+// -OR- For a Horde application::
+$str = Horde_Translation_Core::r(&quot;Foo&quot;);
+
 echo $str; // Output: Foo
 echo _($str); // Output: [Translation of 'Foo']
 </pre>
