@@ -121,6 +121,8 @@ of traditional HTTP Basic authentication for ActiveSync. Refer to the
 ActiveSync configuration section for more details.</p>
 <p>A new NoSQL driver is now available for storing ActiveSync device state. Refer
 to the ActiveSync configuration section for more details.</p>
+<p>The History driver can now be explicitly defined in the configuration (and a
+new NoSQL driver has been added).</p>
 <p>The following options were added:</p>
 <pre class="literal-block">
 $conf['activesync']['logging']['level']
@@ -129,6 +131,8 @@ $conf['activesync']['auth']['params']
 $conf['activesync']['storage']
 $conf['activesync']['params']['driverconfig']
 $conf['cachecssparams']['filemtime']
+$conf['history']['driver']
+$conf['history']['params']['driverconfig']
 </pre>
 <p>The available options for the following options were changed:</p>
 <pre class="literal-block">
