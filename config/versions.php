@@ -14,14 +14,14 @@ $horde_apps_stable = array(
     ),
     'groupware' => array(
         'name' => 'Horde Groupware',
-        'ver' => '5.1.2',
-        'date' => 'September 3 2013',
+        'ver' => '5.1.4',
+        'date' => 'March 10 2014',
         'pear' => true,
     ),
     'webmail' => array(
         'name' => 'Horde Groupware Webmail Edition',
-        'ver' => '5.1.2',
-        'date' => 'September 3 2013',
+        'ver' => '5.1.4',
+        'date' => 'March 10 2014',
         'pear' => true,
     ),
     'imp' => array(
