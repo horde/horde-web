@@ -8,8 +8,8 @@ $horde_apps_stable = array(
     // Define 'dir' if it is not the same as the array key
     'horde' => array(
         'name' => 'Horde',
-        'ver' => '5.1.4',
-        'date' => 'September 3 2013',
+        'ver' => '5.1.6',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'groupware' => array(
@@ -26,38 +26,38 @@ $horde_apps_stable = array(
     ),
     'imp' => array(
         'name' => 'IMP',
-        'ver' => 'H5 (6.1.4)',
-        'date' => 'August 27 2013',
+        'ver' => 'H5 (6.1.7)',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'turba' => array(
         'name' => 'Turba',
-        'ver' => 'H5 (4.1.2)',
-        'date' => 'August 27 2013',
+        'ver' => 'H5 (4.1.4)',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
-        'ver' => 'H5 (3.1.2)',
-        'date' => 'July 16 2013',
+        'ver' => 'H5 (3.1.4)',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
-        'ver' => 'H5 (4.1.3)',
-        'date' => 'August 27 2013',
+        'ver' => 'H5 (4.1.5)',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
-        'ver' => 'H5 (4.1.2)',
-        'date' => 'August 27 2013',
+        'ver' => 'H5 (4.1.4)',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
-        'ver' => 'H5 (4.1.1)',
-        'date' => 'July 16 2013',
+        'ver' => 'H5 (4.1.3)',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'chora' => array(
@@ -67,8 +67,8 @@ $horde_apps_stable = array(
     ),
     'gollem' => array(
         'name' => 'Gollem',
-        'ver' => 'H5 (3.0.1)',
-        'date' => 'June 12 2013',
+        'ver' => 'H5 (3.0.2)',
+        'date' => 'March 7 2014',
         'pear' => true
     ),
     'passwd' => array(
