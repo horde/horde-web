@@ -33,31 +33,31 @@ $horde_apps_stable = array(
     'turba' => array(
         'name' => 'Turba',
         'ver' => 'H5 (4.1.4)',
-        'date' => 'March 7 2014',
+        'date' => 'March 10 2014',
         'pear' => true
     ),
     'ingo' => array(
         'name' => 'Ingo',
         'ver' => 'H5 (3.1.4)',
-        'date' => 'March 7 2014',
+        'date' => 'March 10 2014',
         'pear' => true
     ),
     'kronolith' => array(
         'name' => 'Kronolith',
         'ver' => 'H5 (4.1.5)',
-        'date' => 'March 7 2014',
+        'date' => 'March 10 2014',
         'pear' => true
     ),
     'nag' => array(
         'name' => 'Nag',
         'ver' => 'H5 (4.1.4)',
-        'date' => 'March 7 2014',
+        'date' => 'March 10 2014',
         'pear' => true
     ),
     'mnemo' => array(
         'name' => 'Mnemo',
         'ver' => 'H5 (4.1.3)',
-        'date' => 'March 7 2014',
+        'date' => 'March 10 2014',
         'pear' => true
     ),
     'chora' => array(
@@ -68,7 +68,7 @@ $horde_apps_stable = array(
     'gollem' => array(
         'name' => 'Gollem',
         'ver' => 'H5 (3.0.2)',
-        'date' => 'March 7 2014',
+        'date' => 'March 10 2014',
         'pear' => true
     ),
     'passwd' => array(
@@ -79,8 +79,8 @@ $horde_apps_stable = array(
     ),
     'whups' => array(
         'name' => 'Whups',
-        'ver' => 'H4 (2.0.2)',
-        'date' => 'February 28 2012',
+        'ver' => 'H5 (3.0.0)',
+        'date' => 'March 10 2014',
         'pear' => true
     ),
     'wicked' => array(
