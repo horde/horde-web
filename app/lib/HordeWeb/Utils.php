@@ -16,13 +16,25 @@ class HordeWeb_Utils
     }
 
     /**
-     * @TODO eventually use a db and some command line tools
+     * Returns a PDO handle on the versions database.
+     *
+     * @return PDO
+     */
+    static public function getVersionDb()
+    {
+        return new PDO('sqlite:' . $GLOBALS['fs_base'] . '/config/versions.sqlite');
+    }
+
+    /**
+     * Get list of released stable applications.
+     *
      * @return array
      */
     static public function getStableApps()
     {
-        require $GLOBALS['fs_base'] . '/config/versions.php';
-        return $horde_apps_stable;
+        $stmt = self::getVersionDb()
+            ->prepare('SELECT * FROM versions WHERE state = ?');
+        return $stmt->execute(array('stable'))->fetchAll();
     }
 
     /**
@@ -32,14 +44,9 @@ class HordeWeb_Utils
      */
     static public function getH4Apps()
     {
-        require $GLOBALS['fs_base'] . '/config/versions.php';
-        $horde_four_apps = array();
-        foreach ($horde_apps_stable as $app => $info) {
-            if (!empty($info['pear'])) {
-                $horde_four_apps[$app] = $info;
-            }
-        }
-        return $horde_four_apps;
+        $stmt = self::getVersionDb()
+            ->prepare('SELECT * FROM versions WHERE pear = ?');
+        return $stmt->execute(array(true))->fetchAll();
     }
 
     /**
@@ -49,14 +56,16 @@ class HordeWeb_Utils
      */
     static public function getH3Apps()
     {
-        require $GLOBALS['fs_base'] . '/config/versions.php';
-        return $horde_three_apps;
+        $stmt = self::getVersionDb()
+            ->prepare('SELECT * FROM versions WHERE state = ?');
+        return $stmt->execute(array('three'))->fetchAll();
     }
 
     static public function getDevApps()
     {
-        require $GLOBALS['fs_base'] . '/config/versions.php';
-        return $horde_apps_dev;
+        $stmt = self::getVersionDb()
+            ->prepare('SELECT * FROM versions WHERE state = ?');
+        return $stmt->execute(array('dev'))->fetchAll();
     }
 
     static public function downloadIcon($view, $app)
