@@ -95,7 +95,6 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
                 $stableapp[] = HordeWeb_Utils::app_download_link($val, HordeWeb_Utils::getStableApps($val), false, $this);
             }
             $app_info = $stable;
-            $stableapp[] = '<a href="' . htmlspecialchars(HordeWeb_Utils::app_patches_url($val, $stable)) . '">Patches for Current Stable Release</a>';
         } else {
             $stableapp[] = 'No current stable release';
         }
