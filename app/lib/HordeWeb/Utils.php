@@ -28,53 +28,104 @@ class HordeWeb_Utils
     /**
      * Get list of released stable applications.
      *
+     * @param string $app  Only return information for this application.
+     *
      * @return array
      */
-    static public function getStableApps()
+    static public function getStableApps($app = null)
     {
-        $stmt = self::getVersionDb()
-            ->prepare('SELECT * FROM versions WHERE state = ?');
+        $query = 'SELECT * FROM versions WHERE state = ?';
+        $values = array('stable');
+        if ($app) {
+            $query .= ' AND application = ?';
+            $values[] = $app;
+        }
 
-        if ($stmt->execute(array('stable'))) {
-            return $stmt->fetchAll();
+        $stmt = self::getVersionDb()
+            ->prepare($query);
+
+        if ($stmt->execute($values)) {
+            return $app
+                ? $stmt->fetch(PDO::FETCH_ASSOC)
+                : $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 
     /**
      * Get list of Horde 4 released applications.
      *
+     * @param string $app  Only return information for this application.
+     *
      * @return array
      */
-    static public function getH4Apps()
+    static public function getH4Apps($app = null)
     {
-        $stmt = self::getVersionDb()
-            ->prepare('SELECT * FROM versions WHERE pear = ?');
+        $query = 'SELECT * FROM versions WHERE pear = ?';
+        $values = array(true);
+        if ($app) {
+            $query .= ' AND application = ?';
+            $values[] = $app;
+        }
 
-        if ($stmt->execute(array(true))) {
-            return $stmt->fetchAll();
+        $stmt = self::getVersionDb()
+            ->prepare($query);
+
+        if ($stmt->execute($values)) {
+            return $app
+                ? $stmt->fetch(PDO::FETCH_ASSOC)
+                : $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 
     /**
      * Get list of Horde 3 released applications.
      *
+     * @param string $app  Only return information for this application.
+     *
      * @return array
      */
-    static public function getH3Apps()
+    static public function getH3Apps($app = null)
     {
+        $query = 'SELECT * FROM versions WHERE state = ?';
+        $values = array('three');
+        if ($app) {
+            $query .= ' AND application = ?';
+            $values[] = $app;
+        }
+
         $stmt = self::getVersionDb()
-            ->prepare('SELECT * FROM versions WHERE state = ?');
-        if ($stmt->execute(array('three'))) {
-            return $stmt->fetchAll();
+            ->prepare($query);
+
+        if ($stmt->execute($values)) {
+            return $app
+                ? $stmt->fetch(PDO::FETCH_ASSOC)
+                : $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 
-    static public function getDevApps()
+    /**
+     * Get list of applications in development.
+     *
+     * @param string $app  Only return information for this application.
+     *
+     * @return array
+     */
+    static public function getDevApps($app = null)
     {
+        $query = 'SELECT * FROM versions WHERE state = ?';
+        $values = array('dev');
+        if ($app) {
+            $query .= ' AND application = ?';
+            $values[] = $app;
+        }
+
         $stmt = self::getVersionDb()
-            ->prepare('SELECT * FROM versions WHERE state = ?');
-        if ($stmt->execute(array('dev'))) {
-            return $stmt->fetchAll();
+            ->prepare($query);
+
+        if ($stmt->execute($values)) {
+            return $app
+                ? $stmt->fetch(PDO::FETCH_ASSOC)
+                : $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 

@@ -63,19 +63,19 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
 
     public function git_and_ver($module)
     {
-        $horde_apps_stable = HordeWeb_Utils::getStableApps();
-        $horde_apps_dev = HordeWeb_Utils::getDevApps();
+        $stable = HordeWeb_Utils::getStableApps($module);
+        $dev = HordeWeb_Utils::getDevApps($module);
         return '<td><a href="http://git.horde.org/horde-git/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
-            . '</td><td>' . (isset($horde_apps_stable[$module]) ? htmlspecialchars($horde_apps_stable[$module]['ver']) : (isset($horde_apps_dev[$module]) ? htmlspecialchars($horde_apps_dev[$module]['ver']) : '&nbsp;'))
+            . '</td><td>' . ($stable ? htmlspecialchars($stable['ver']) : ($dev ? htmlspecialchars($dev['ver']) : '&nbsp;'))
             . '</td>';
     }
 
     public function cvs_and_ver($module)
     {
-        $horde_apps_stable = HordeWeb_Utils::getH3Apps();
-        $horde_apps_dev = HordeWeb_Utils::getDevApps();
+        $stable = HordeWeb_Utils::getH3Apps($module);
+        $dev = HordeWeb_Utils::getDevApps($module);
         return '<td><a href="http://git.horde.org/horde/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
-            . '</td><td>' . (isset($horde_apps_stable[$module]) ? htmlspecialchars($horde_apps_stable[$module]['ver']) : (isset($horde_apps_dev[$module]) && substr($horde_apps_dev[$module]['ver'], 0, 2) == 'H3' ? htmlspecialchars($horde_apps_dev[$module]['ver']) : '&nbsp;'))
+            . '</td><td>' . ($stable ? htmlspecialchars($stable['ver']) : ($dev && substr($dev['ver'], 0, 2) == 'H3' ? htmlspecialchars($dev['ver']) : '&nbsp;'))
             . '</td>';
     }
 }
