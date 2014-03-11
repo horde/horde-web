@@ -72,7 +72,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
         $horde_apps_h4     = $view->h4Stable;
         $horde_apps_dev    = HordeWeb_Utils::getDevApps();
 
-        $app_info = $h4app = $h4date = $stableapp = $stabledate = $devapp = $app_list = array();
+        $app_info = $h3app = $h4date = $stableapp = $stabledate = $devapp = $app_list = array();
         if ($app != 'groupware' && $app != 'webmail') {
             $app_list[] = 'horde';
         }
@@ -100,11 +100,12 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             $stableapp[] = 'No current stable release';
         }
 
-        $h4 = HordeWeb_Utils::getH4Apps($app);
-        if ($h4) {
+        $h3 = HordeWeb_Utils::getH3Apps($app);
+        if ($h3) {
             foreach ($app_list as $val) {
-                $h4app[] = HordeWeb_Utils::app_download_link($val, HordeWeb_Utils::getH4Apps($val), false, $this);
+                $h3app[] = HordeWeb_Utils::app_download_link($val, HordeWeb_Utils::getH3Apps($val), false, $this);
             }
+            $h3app[] = '<a href="' . htmlspecialchars(HordeWeb_Utils::app_patches_url($val, $h3)) . '">Patches for Deprecated Horde 3 Stable Release</a>';
         }
 
         $dev = HordeWeb_Utils::getDevApps($app);
@@ -132,7 +133,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             $app_info['name'] = ucfirst($app);
         }
 
-        $view->h4app = $h4app;
+        $view->h3app = $h3app;
         $view->stableapp = $stableapp;
         $view->stabledate = $stabledate;
         $view->devapp = $devapp;

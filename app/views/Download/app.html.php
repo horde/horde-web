@@ -4,9 +4,9 @@
         <h2><span>&nbsp;</span>Download <a href="<?php echo $this->urlWriter->urlFor('app', array('app' => $this->appname)) ?>"><?php echo $this->app_info['name'] ?></a></h2>
         <div class="section">
             <h3>Current Horde Stable Release</h3>
-            <?php if ($this->h4app): ?>
+            <?php if ($this->stableapp): ?>
             <ul>
-            <?php foreach ($this->h4app as $val): ?>
+            <?php foreach ($this->stableapp as $val): ?>
                 <li><?php echo $val ?></li>
             <?php endforeach; ?>
             </ul>
@@ -23,7 +23,7 @@
 
             <h3>Deprecated Horde 3 Stable Release</h3>
             <ul>
-            <?php foreach ($this->stableapp as $val): ?>
+            <?php foreach ($this->h3app as $val): ?>
                 <li><?php echo $val ?></li>
             <?php endforeach; ?>
             </ul>
