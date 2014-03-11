@@ -34,7 +34,10 @@ class HordeWeb_Utils
     {
         $stmt = self::getVersionDb()
             ->prepare('SELECT * FROM versions WHERE state = ?');
-        return $stmt->execute(array('stable'))->fetchAll();
+
+        if ($stmt->execute(array('stable'))) {
+            return $stmt->fetchAll();
+        }
     }
 
     /**
@@ -46,7 +49,10 @@ class HordeWeb_Utils
     {
         $stmt = self::getVersionDb()
             ->prepare('SELECT * FROM versions WHERE pear = ?');
-        return $stmt->execute(array(true))->fetchAll();
+
+        if ($stmt->execute(array(true))) {
+            $stmt->fetchAll();
+        }
     }
 
     /**
@@ -58,14 +64,18 @@ class HordeWeb_Utils
     {
         $stmt = self::getVersionDb()
             ->prepare('SELECT * FROM versions WHERE state = ?');
-        return $stmt->execute(array('three'))->fetchAll();
+        if ($stmt->execute(array('three'))) {
+            $stmt->fetchAll();
+        }
     }
 
     static public function getDevApps()
     {
         $stmt = self::getVersionDb()
             ->prepare('SELECT * FROM versions WHERE state = ?');
-        return $stmt->execute(array('dev'))->fetchAll();
+        if ($stmt->execute(array('dev'))) {
+            $stmt->fetchAll();
+        }
     }
 
     static public function downloadIcon($view, $app)
