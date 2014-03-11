@@ -11,7 +11,7 @@ echo '<?xml version="1.0"?>';
  <stable>
 <?php foreach ($horde_apps_stable as $info): ?>
   <application name="<?php echo $info['application'] ?>">
-    <version><?php echo $info['ver'] ?></version>
+    <version><?php echo $info['version'] ?></version>
     <url><?php echo htmlspecialchars(HordeWeb_Utils::app_download_url($info['application'], $info)) ?></url>
   </application>
 <?php endforeach; ?>
