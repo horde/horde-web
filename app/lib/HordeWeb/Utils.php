@@ -51,7 +51,7 @@ class HordeWeb_Utils
             ->prepare('SELECT * FROM versions WHERE pear = ?');
 
         if ($stmt->execute(array(true))) {
-            $stmt->fetchAll();
+            return $stmt->fetchAll();
         }
     }
 
@@ -65,7 +65,7 @@ class HordeWeb_Utils
         $stmt = self::getVersionDb()
             ->prepare('SELECT * FROM versions WHERE state = ?');
         if ($stmt->execute(array('three'))) {
-            $stmt->fetchAll();
+            return $stmt->fetchAll();
         }
     }
 
@@ -74,7 +74,7 @@ class HordeWeb_Utils
         $stmt = self::getVersionDb()
             ->prepare('SELECT * FROM versions WHERE state = ?');
         if ($stmt->execute(array('dev'))) {
-            $stmt->fetchAll();
+            return $stmt->fetchAll();
         }
     }
 
