@@ -136,7 +136,7 @@ class HordeWeb_Utils
 
     static public function app_download_link($key, $elt, $graphic = false, $controller = null)
     {
-        $text = $elt['name'] . ' ' . $elt['ver'];
+        $text = $elt['name'] . ' ' . $elt['version'];
         if ($graphic) {
             $text = '<img class="download" src="' . $GLOBALS['host_base'] . '/images/download.gif" alt="' . $text . '" />';
         }
