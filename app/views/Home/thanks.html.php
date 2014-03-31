@@ -22,6 +22,9 @@
           <a style="padding:20px;text-decoration:none" href="http://www.qr-code-generator.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_qrcode.png" height="40"/>
           </a>
+          <a style="padding:20px;text-decoration:none" href="http://www.aoe.com/" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_aoe.jpg" height="40"/>
+          </a>
         </p>
         <br/>
 
