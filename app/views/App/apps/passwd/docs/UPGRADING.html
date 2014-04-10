@@ -39,9 +39,22 @@
 <pre class="literal-block">
 pear upgrade -a -B horde/passwd
 </pre>
-<p>If you want to upgrade from a Passwd version prior to 4.0, please
-follow the instructions in <a class="reference external" href="INSTALL">INSTALL</a> to install the most recent Passwd
-version using the PEAR installer.</p>
+<p>If you want to upgrade Passwd with all binary dependencies, you need to remove
+the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP extensions
+through PECL that might need further configuration or activation in your PHP
+configuration:</p>
+<pre class="literal-block">
+pear upgrade -a horde/passwd
+</pre>
+<p>If you want to upgrade to an alpha or beta version of Passwd, you need to tell
+the PEAR installer to prefer non-stable package versions. Please note that this
+might also install pre-release 3rd-party PEAR packages:</p>
+<pre class="literal-block">
+pear -d preferred_state=alpha upgrade -a horde/passwd
+</pre>
+<p>If you want to upgrade from a Passwd version prior to 4.0, please follow the
+instructions in <a class="reference external" href="INSTALL">INSTALL</a> to install the most recent Passwd version using the
+PEAR installer.</p>
 <p>After updating to a newer Passwd version, you <strong>always</strong> need to update
 configurations. Log in as an administrator, go to Administration =&gt;
 Configuration and update anything that's highlighted as outdated.</p>

@@ -100,9 +100,22 @@ is as easy as running:</p>
 <pre class="literal-block">
 pear upgrade -a -B -c horde
 </pre>
-<p>If you want to upgrade from a Horde version prior to 4.0, please
-follow the instructions in <a class="reference external" href="INSTALL">INSTALL</a> to install the most recent Horde
-version using the PEAR installer.</p>
+<p>If you want to upgrade Horde with all binary dependencies, you need to remove
+the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP extensions
+through PECL that might need further configuration or activation in your PHP
+configuration:</p>
+<pre class="literal-block">
+pear upgrade -a -c horde
+</pre>
+<p>If you want to upgrade to an alpha or beta version of Horde, you need to tell
+the PEAR installer to prefer non-stable package versions. Please note that this
+might also install pre-release 3rd-party PEAR packages:</p>
+<pre class="literal-block">
+pear -d preferred_state=alpha upgrade -a -c horde
+</pre>
+<p>If you want to upgrade from a Horde version prior to 4.0, please follow the
+instructions in <a class="reference external" href="INSTALL">INSTALL</a> to install the most recent Horde version using the
+PEAR installer.</p>
 <p>After updating to a newer Horde version, or a newer version of <strong>any</strong> Horde
 application, you <strong>always</strong> need to update configurations and database
 schemes. Log in as an administrator, go to Administration =&gt; Configuration and
