@@ -146,6 +146,7 @@ caching backends.</p>
 <h2><a class="toc-backref" href="#id26">2.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
 <p>The following options have been added:</p>
 <pre class="literal-block">
+$conf['compose']['htmlsig_img_size']
 $conf['compose']['link_attach_size_hard']
 $conf['contactsimage']['backends']
 $conf['maillog']['driver']
@@ -156,6 +157,9 @@ $conf['compose']['ac_threshold']
 $conf['compose']['convert_to_related']
 $conf['maillog']['use_maillog']
 </pre>
+<p>The default value for the following options have been changed:</p>
+<blockquote>
+$conf['pgp']['keylength']</blockquote>
 </div>
 <div class="section" id="hooks-hooks-php">
 <h2><a class="toc-backref" href="#id27">2.3&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
