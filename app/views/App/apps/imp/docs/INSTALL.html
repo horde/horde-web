@@ -235,7 +235,8 @@ details and examples. The defaults will be correct for most sites.</p>
 <li><p class="first">By default, IMP is configured to NOT display text/html message parts
 inline.  This is done for various security reasons.  If you would like to
 see text/html parts inline, you must create a
-<tt class="docutils literal">imp/config/mime_drivers.local.php</tt> file with the following content:</p>
+<tt class="docutils literal">imp/config/mime_drivers.local.php</tt> file (or add to the existing
+mime_drivers.local.php file) with the following content:</p>
 <pre class="literal-block">
 &lt;?php
 $mime_drivers['html']['inline'] = true;
