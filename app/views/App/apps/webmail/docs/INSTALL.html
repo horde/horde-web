@@ -506,14 +506,13 @@ create an alias of the <tt class="docutils literal"><span class="pre">/Microsoft
 </ol>
 </li>
 <li><p class="first">Configuring Horde Groupware Webmail Edition</p>
-<p>Documentation on the format and purpose of the configuration files
-in the <tt class="docutils literal">config/</tt> directory can be found in each file. The
-defaults will be correct for most sites. If you wish to customize
-Horde Groupware Webmail Edition's appearance and behavior, create
-&quot;local&quot; files for the configuration file you want to change. For
-example if you want to change the default value and lock a
-preference, create a <tt class="docutils literal">config/prefs.local.php</tt> file with the
-following content:</p>
+<p>Documentation on the format and purpose of the configuration files in the
+<tt class="docutils literal">config/</tt> directory can be found in each file. The defaults will be
+correct for most sites. If you wish to customize Horde Groupware Webmail
+Edition's appearance and behavior, create &quot;local&quot; files for the
+configuration file you want to change. For example if you want to change the
+default value and lock a preference, create a <tt class="docutils literal">config/prefs.local.php</tt>
+file with the following content:</p>
 <pre class="literal-block">
 &lt;?php
 $_prefs['prefname']['value'] = 'somedefault';
@@ -522,23 +521,35 @@ $_prefs['prefname']['locked'] = true;
 <p>This works with any configuration file.</p>
 <div class="warning">
 <p class="first admonition-title">Warning</p>
-<p>All configuration files in Horde Groupware Webmail
-Edition are PHP scripts that are executed by the web
-server. If you make an error in one of these files,
-Horde might stop working. Thus it is always a good
-idea to test the configuration files after you edited
-them. If you want to test mime_drivers.local.php for
+<p>All configuration files in Horde Groupware Webmail Edition are
+PHP scripts that are executed by the web server. If you make an
+error in one of these files, Horde might stop working. Thus it
+is always a good idea to test the configuration files after you
+edited them. If you want to test mime_drivers.local.php for
 example run:</p>
 <pre class="last literal-block">
 php -l mime_drivers.local.php
 </pre>
 </div>
-<p>The default configuration stores files uploaded through the file manager in
-the SQL database. This is the most compatible configuration but doesn't
-scale well, may hit some database server limits, and may only work for very
-small installations. You should configure a different backend as soon as
-possible. See <tt class="docutils literal">gollem/config/backends.php</tt> and
+<ul>
+<li><p class="first">By default, Horde Groupware Webmail Edition is configured to NOT display
+text/html message parts inline.  This is done for various security
+reasons.  If you would like to see text/html parts inline, you must create
+a <tt class="docutils literal">imp/config/mime_drivers.local.php</tt> file (or add to the existing
+mime_drivers.local.php file) with the following content:</p>
+<pre class="literal-block">
+&lt;?php
+$mime_drivers['html']['inline'] = true;
+</pre>
+</li>
+<li><p class="first">The default configuration stores files uploaded through the file manager
+in the SQL database. This is the most compatible configuration but doesn't
+scale well, may hit some database server limits, and may only work for
+very small installations. You should configure a different backend as soon
+as possible. See <tt class="docutils literal">gollem/config/backends.php</tt> and
 <tt class="docutils literal"><span class="pre">gollem/config/backends.d/10-webmail.php</span></tt> for details.</p>
+</li>
+</ul>
 </li>
 <li><p class="first">Setting up alarm emails</p>
 <p>If you want your users to be able to receive emails from the Horde_Alarm
