@@ -81,9 +81,8 @@
           => 'ingo')) ?>">Ingo</a> <?php echo
           HordeWeb_Utils::downloadIcon($this, 'ingo') ?></h3>
           <p>Ingo is an email filter rules manager.  It can generate Sieve,
-          procmail and IMAP scripts and upload them to or execute them on the
-          server (using a timsieved or VFS FTP driver, or the PHP IMAP
-          extension, respectively).</p>
+          procmail, maildrop, and IMAP scripts and upload them to or execute
+          them on the server.</p>
 
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
           => 'sork')) ?>">Sork</a></h3>
