@@ -9,7 +9,8 @@
 
         <h3>Sponsors</h3>
         <p>
-          The following sponsors donate funds to support general Horde development:
+          The following sponsors donate funds to support general Horde
+          development:
         </p>
         <br/>
         <p>
@@ -30,17 +31,18 @@
 
         <h3>New sponsors</h3>
         <p>
-          If you use Horde - especially in a commercial environment - please consider
-          sponsoring the project with a monthly donation. The money will be used to pay
-          the development of new Horde features wich will be openly available to all 
-          Horde users. These type of donations are extremely valuable to the project as
-          it allows us to continue to work hard on providing millions of users with the
-          best possible webmail and groupware solution we are able to produce.
+          If you use Horde - especially in a commercial environment - please
+          consider sponsoring the project with a monthly donation. The money
+          will be used to pay the development of new Horde features wich will
+          be openly available to all Horde users. These type of donations are
+          extremely valuable to the project as it allows us to continue to work
+          hard on providing millions of users with the best possible webmail
+          and groupware solution we are able to produce.
         </p>
 
         <p>
-          Each monthly sponsor will be listed here with a small image and a link to the
-          home page. Please send the necessary details to
+          Each monthly sponsor will be listed here with a small image and a
+          link to the home page. Please send the necessary details to
           <a href="mailto:info@horde.org" class="email">info@horde.org</a>
           after subscribing here.
         </p>
@@ -65,26 +67,28 @@
         </div>
         <input type="hidden" name="currency_code" value="USD">
         <div style="text-align:center;">
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_SM.gif" border="0" name="submit" al        t="PayPal - The safer, easier way to pay online!">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </div>
         </form>
 
         <h3>Servers</h3>
-        <p>The Horde.org servers are generously hosted by the following organizations:
+        <p>The Horde.org servers are generously hosted by the following
+        organizations:
         <ul>
-        <li><a href="http://www.hub.org/?ri=765">Hub.org Networking Services</a>:
-        Mailing lists, Anonymous CVS, Horde website</li>
-        <li><a href="http://www.verendus.com/">Verendus</a>:
-        Developer CVS, Wiki, Bug Tracking System</li>
-        <li><a href="http://www.easyDNS.com/">easyDNS</a> is generously hosting the DNS
-        service for horde.org, freeing us from the horror that is dealing with
-        Internic.</li>
+          <li><a href="http://www.hub.org/?ri=765">Hub.org Networking
+            Services</a>: Mailing lists, Anonymous CVS, Horde website</li>
+          <li><a href="http://www.verendus.com/">Verendus</a>:
+            Developer CVS, Wiki, Bug Tracking System</li>
+          <li><a href="http://www.easyDNS.com/">easyDNS</a> is generously
+            hosting the DNS service for horde.org, freeing us from the horror
+            that is dealing with Internic.</li>
         </ul>
         </p>
 
         <h3>Logo</h3>
-        <p>The <a href="logos/">Horde logos</a> were designed by Colin Viebrock.</p>
+        <p>The <a href="logos/">Horde logos</a> were designed by Colin
+        Viebrock.</p>
 
         <h3>Licenses</h3>
         <a style="display:block; text-decoration:none" href="http://www.synthesis.ch/" target="_blank">
