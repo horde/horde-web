@@ -21,9 +21,9 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Tag support</td><td class="done">Done</td>
-  <tr><td>Distribution lists and photos for Kolab</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Tag support</td><td class="done">Done</td></tr>
+  <tr><td>Distribution lists and photos for Kolab</td><td class="done">Done</td></tr>
 </table>
 
 <div class="dimmed">
@@ -37,8 +37,8 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>CardDAV support</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>CardDAV support</td><td class="done">Done</td></tr>
 </table>
 
 <h3>Turba 4.0</h3>
@@ -56,8 +56,8 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Native PHP 5 code</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td></tr>
 </table>
 
 <h3>Turba 2.3</h3>
@@ -69,7 +69,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Photo support</td><td class="done">Done</td></tr>
   <tr><td>Improved import/export</td><td class="done">Done</td></tr>
 </table>
@@ -83,7 +83,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Virtual address books for saved searches</td><td class="done">Done</td></tr>
   <tr><td>Address book with most frequent mail recipients</td><td class="done">Done</td></tr>
   <tr><td>Sort by multiple criteria</td><td class="done">Done</td></tr>
