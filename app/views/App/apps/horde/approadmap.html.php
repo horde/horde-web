@@ -16,13 +16,13 @@ at least some of the following changes:
 
 <p><b>Status:</b> In Development</p>
 
-<p><b>Planned release timeframe:</b> December 2013</p>
+<p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Small ActiveSync feature additions</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Small ActiveSync feature additions</td><td class="done">Done</td></tr>
 </table>
 
 <div class="dimmed">
@@ -36,8 +36,8 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>ActiveSync support for EAS 14.0 and 14.1 (Outlook sync, notes sync, GAL photos)</a></td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>ActiveSync support for EAS 14.0 and 14.1 (Outlook sync, notes sync, GAL photos)</a></td><td class="done">Done</td></tr>
 </table>
 
 <h3>Horde 5.0</h3>
@@ -49,9 +49,9 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>New user interface design</td><td class="done">Done</td></tr>
-  <tr><td>ActiveSync e-mail synchronization</a></td><td class="done">Done</td>
+  <tr><td>ActiveSync e-mail synchronization</a></td><td class="done">Done</td></tr>
 </table>
 
 <h3>Horde 4.0</h3>
@@ -63,14 +63,14 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Installable, extendable, upgradable through PEAR installer</td><td class="done">Done</td></tr>
   <tr><td>Multiple WYSIWYG editors</td><td class="done">Done</td></tr>
   <tr><td>Tableless form renderer</td><td class="cancelled">Postponed</td></tr>
-  <tr><td>Native PHP 5 code</td><td class="done">Done</td>
-  <tr><td>MIME code refactoring</td><td class="done">Done</td>
-  <tr><td>IMAP code refactoring</td><td class="done">Done</td>
-  <tr><td>Complete configuration with web interface</td><td class="cancelled">Postponed</td>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td></tr>
+  <tr><td>MIME code refactoring</td><td class="done">Done</td></tr>
+  <tr><td>IMAP code refactoring</td><td class="done">Done</td></tr>
+  <tr><td>Complete configuration with web interface</td><td class="cancelled">Postponed</td></tr>
   <tr><td>Dynamic resortable portal screen</td><td class="cancelled">Postponed</td></tr>
 </table>
 
@@ -83,7 +83,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Better vCard and iCalendar support</td><td class="done">Done</td></tr>
   <tr><td>Improved synchronization</td><td class="done">Done</td></tr>
   <tr><td>Complete removing of a user's data</td><td class="done">Done</td></tr>
@@ -98,7 +98,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Group and share caching</td><td class="done">Done</td></tr>
   <tr><td>Help viewer with tree navigation and search</td><td class="done">Done</td></tr>
   <tr><td>WYSIWYG editor switched to Xinha</td><td class="done">Done</td></tr>

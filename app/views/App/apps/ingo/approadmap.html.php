@@ -12,19 +12,32 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Ingo 4.2</h3>
+<h3>Ingo 5.0</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Planned</p>
 
-<p><b>Planned release timeframe:</b> None</p>
+<p><b>Planned release timeframe:</b> Open</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td>
-  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td>
-  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td></tr>
+  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td></tr>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td></tr>
+</table>
+
+<h3>Ingo 4.2</h3>
+
+<p><b>Status:</b> In development</p>
+
+<p><b>Planned release timeframe:</b> July 8th, 2014</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Drag &amp; drop resorting of filter rules</td><td class="done">Done</td></tr>
 </table>
 
 <div class="dimmed">
@@ -38,11 +51,11 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Merge Vacation drivers (customsql)</td><td class="done">Done</td>
-  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="cancelled">Postponed</td>
-  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="cancelled">Postponed</td>
-  <tr><td>Composite driver to manage different backends for different services</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Merge Vacation drivers (customsql)</td><td class="done">Done</td></tr>
+  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="cancelled">Postponed</td></tr>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="cancelled">Postponed</td></tr>
+  <tr><td>Composite driver to manage different backends for different services</td><td class="done">Done</td></tr>
 </table>
 
 <h3>Ingo 3.0</h3>
@@ -60,12 +73,12 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Native PHP 5 code</td><td class="done">Done</td>
-  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="cancelled">Postponed</td>
-  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="cancelled">Postponed</td>
-  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="cancelled">Postponed</td>
-  <tr><td>Composite driver to manage different backends for different services</td><td class="cancelled">Postponed</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td></tr>
+  <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="cancelled">Postponed</td></tr>
+  <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="cancelled">Postponed</td></tr>
+  <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="cancelled">Postponed</td></tr>
+  <tr><td>Composite driver to manage different backends for different services</td><td class="cancelled">Postponed</td></tr>
 </table>
 
 <h3>Ingo 1.2</h3>
@@ -77,7 +90,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>SQL storage backend</td><td class="done">Done</td></tr>
   <tr><td>Spam filter rule</td><td class="done">Done</td></tr>
   <tr><td>Maildrop vacation rule</td><td class="done">Done</td></tr>

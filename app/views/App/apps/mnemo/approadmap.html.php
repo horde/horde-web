@@ -16,7 +16,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> In Development</p>
 
-<p><b>Planned release timeframe:</b> December 2013</p>
+<p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 

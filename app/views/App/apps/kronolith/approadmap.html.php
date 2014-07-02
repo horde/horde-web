@@ -16,9 +16,16 @@ at least some of the following changes:
 
 <p><b>Status:</b> In Development</p>
 
-<p><b>Planned release timeframe:</b> December 2013</p>
+<p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
-<p><b>No major features currently planned for the next release.</b></p>
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>ActiveSync synchronization of multiple calendars</td><td class="done">Done</td></tr>
+  <tr><td>CalDAV synchronization of shared calendars</td><td class="done">Done</td></tr>
+  <tr><td>CalDAV synchronization of attendees</td><td class="done">Done</td></tr>
+</table>
 
 <div class="dimmed">
 
@@ -31,7 +38,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>CalDAV server capabilities</td><td class="done">Done</td></tr>
 </table>
 
@@ -44,7 +51,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Work week view in dynamic mode</td><td class="done">Done</td></tr>
   <tr><td>Individual time zones per event</td><td class="done">Done</td></tr>
   <tr><td>Resource scheduling in dynamic view</td><td class="done">Done</td></tr>
@@ -60,15 +67,15 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Native PHP 5 code</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td></tr>
   <tr><td>Ajax interface</td><td class="done">Done</td></tr>
   <tr><td>Better timezone support</td><td class="done">Done</td></tr>
   <tr><td>CalDAV client capabilities</td><td class="done">Done</td></tr>
   <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
   <tr><td>GroupDAV server capabilities</td><td class="cancelled">Cancelled</td></tr>
-  <tr><td>Resource scheduling</td><td class="done">Done</td>
-  <tr><td>Simpler meeting scheduling</td><td class="cancelled">Postponed</td>
+  <tr><td>Resource scheduling</td><td class="done">Done</td></tr>
+  <tr><td>Simpler meeting scheduling</td><td class="cancelled">Postponed</td></tr>
 </table>
 
 <h3>Kronolith 2.3</h3>
@@ -80,7 +87,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Maintenance task to purge old events</td><td class="done">Done</td></tr>
   <tr><td>Atom feeds</td><td class="done">Done</td></tr>
   <tr><td>Calendar widgets to embed into websites</td><td class="done">Done</td></tr>
@@ -95,7 +102,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>WebDAV server capabilities</td><td class="done">Done</td></tr>
   <tr><td>Event delegation</td><td class="done">Done</td></tr>
   <tr><td>Private event flag</td><td class="done">Done</td></tr>

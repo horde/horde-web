@@ -21,9 +21,9 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Merge into <?php echo $this->linkTo('Kronolith', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith')) ?></td><td class="planned">Planned</td></tr>
-  <tr><td>Task dependencies</td><td class="planned">Planned</td>
+  <tr><td>Task dependencies</td><td class="planned">Planned</td></tr>
   <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="planned">Planned</td></tr>
 </table>
 
@@ -31,13 +31,16 @@ at least some of the following changes:
 
 <p><b>Status:</b> In Development</p>
 
-<p><b>Planned release timeframe:</b> December 2013</p>
+<p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Add missing form elements to dynamic resp. basic view</td><td class="planned">Planned</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Add missing form elements to dynamic resp. basic view</td><td class="done">Done</td></tr>
+  <tr><td>ActiveSync synchronization of multiple task lists</td><td class="done">Done</td></tr>
+  <tr><td>CalDAV synchronization of shared task lists</td><td class="done">Done</td></tr>
+  <tr><td>Don't require URL rewriting</td><td class="done">Done</td></tr>
 </table>
 
 <div class="dimmed">
@@ -51,7 +54,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>CalDAV server capabilities</td><td class="done">Done</td></tr>
   <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="cancelled">Postponed</td></tr>
 </table>
@@ -65,9 +68,9 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Recurring tasks</td><td class="done">Done</td>
-  <tr><td>Smart lists</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Recurring tasks</td><td class="done">Done</td></tr>
+  <tr><td>Smart lists</td><td class="done">Done</td></tr>
 </table>
 
 <h3>Nag 3.0</h3>
@@ -79,14 +82,14 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
-  <tr><td>Native PHP 5 code</td><td class="done">Done</td>
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Native PHP 5 code</td><td class="done">Done</td></tr>
   <tr><td>Integration with <?php echo $this->linkTo('Kronolith', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith')) ?> AJAX interface</td><td class="done">Done</td></tr>
   <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="cancelled">Postponed</td></tr>
   <tr><td>CalDAV server capabilities</td><td class="progress">In progress</td></tr>
   <tr><td>GroupDAV server capabilities</td><td class="cancelled">Cancelled</td></tr>
-  <tr><td>Recurring tasks</td><td class="cancelled">Postponed</td>
-  <tr><td>Task dependencies</td><td class="cancelled">Postponed</td>
+  <tr><td>Recurring tasks</td><td class="cancelled">Postponed</td></tr>
+  <tr><td>Task dependencies</td><td class="cancelled">Postponed</td></tr>
 </table>
 
 <h3>Nag 2.3</h3>
@@ -98,7 +101,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Task assignees</td><td class="done">Done</td></tr>
   <tr><td>Customizable list view</td><td class="done">Done</td></tr>
 </table>
@@ -112,7 +115,7 @@ at least some of the following changes:
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
-  <tr><th>Feature</th><th>Status</th>
+  <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>WebDAV server capabilities</td><td class="done">Done</td></tr>
   <tr><td>Sub tasks</td><td class="done">Done</td></tr>
   <tr><td>Start dates for tasks</td><td class="done">Done</td></tr>

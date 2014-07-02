@@ -16,14 +16,14 @@ at least some of the following changes:
 
 <p><b>Status:</b> In Development</p>
 
-<p><b>Planned release timeframe:</b> December 2013</p>
+<p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Tag support</td><td class="done">Done</td>
-  <tr><td>Distribution lists and photos for Kolab</td><td class="progress">In Development</td>
+  <tr><td>Distribution lists and photos for Kolab</td><td class="done">Done</td>
 </table>
 
 <div class="dimmed">
