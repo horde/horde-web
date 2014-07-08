@@ -3,6 +3,7 @@
 v4.2.0-git
 ----------
 
+[jan] Fix selecting days in the sidebar mini calendar (<a href="http://bugs.horde.org/ticket/13327">Bug #13327</a>).
 [mjr] Issue a cancellation iTip when an event's status changes to cancelled
       (<a href="http://bugs.horde.org/ticket/13321">Bug #13321</a>).
 [jan] Fix loading events for intial view in smartphone mode.
@@ -80,6 +81,21 @@ v4.2.0alpha1
 [mjr] Add ability to export event to a timeslice (<a href="http://bugs.horde.org/ticket/11307">Request #11307</a>).
 [mjr] Add API support for supporting multiple calendar sync via ActiveSync.
 [jan] Improve sort order of events in month view (<a href="http://bugs.horde.org/ticket/11155">Request #11155</a>).
+
+
+------
+v4.1.6
+------
+
+[jan] Fix history not always returning the last modification time of an event
+      (<a href="http://bugs.horde.org/ticket/13113">Bug #13113</a>).
+[jan] Support timezone aliases when importing events (<a href="http://bugs.horde.org/ticket/13100">Bug #13100</a>).
+[mjr] Honor the no_sharing configuration option in dynamic view (<a href="http://bugs.horde.org/ticket/13002">Bug #13002</a>).
+[mjr] Fix issue that could remove all events from shared calendars if a user
+      with Horde_Perms::EDIT on that calendar is removed via the removeUserData
+      API (<a href="http://bugs.horde.org/ticket/12524">Bug #12524</a>).
+[jan] Fix TRIGGER generation if alarm value is negative (<a href="http://bugs.horde.org/ticket/13064">Bug #13064</a>).
+[jan] Update Korean translation (Deokgon Kim &lt;dgkim@dgkim.net>).
 
 
 ------
