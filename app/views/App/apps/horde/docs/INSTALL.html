@@ -138,10 +138,20 @@ http://www.php.net/
 </pre>
 <div class="note">
 <p class="first admonition-title">Note</p>
+<p class="last">Although the PHP 5.3 API is supported, for stability, performance,
+and security reasons it is <strong>HIGHLY RECOMMENDED</strong> to use a version of
+PHP &gt;= 5.4.0.</p>
+</div>
+<div class="note">
+<p class="first admonition-title">Note</p>
 <p class="last">While it may be possible to install PHP using the package manager
-for your operating system, it is highly recommended to install PHP from
-source, since distribution packages often do not contain the most recent
-bug and security patches.</p>
+for your operating system, it is not recommended to do so if your
+distribution (e.g. Debian) does NOT update the actual PHP version in
+its package updates. Otherwise, you will be stuck with a PHP version that
+does not contain the most recent bug and security patches. On these
+systems, it is <strong>HIGHLY RECOMMENDED</strong> to either install PHP from source
+OR use a 3rd party package repository that contains the most recently
+released PHP version on the branch (5.4, 5.5, etc.) that you want to use.</p>
 </div>
 <p>Follow the instructions in the PHP package to build PHP for your system. If
 you use Apache, be sure to build PHP as a library with one of the following
