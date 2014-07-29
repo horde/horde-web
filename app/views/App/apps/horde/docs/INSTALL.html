@@ -672,8 +672,26 @@ in the configuration screen.</p>
 <p>Please note that this requires the database that you entered in the database
 configuration to already exist, and the configured database user to have
 sufficient permissions to create new tables in this database.</p>
-<p>Alternatively you can run the <tt class="docutils literal"><span class="pre">bin/horde-db-migrate</span></tt> script in the Horde
+<p>Alternatively you can run the <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> script in the Horde
 directory from the command line.</p>
+<p>If you installed Horde into the global PEAR system, this script should be in
+your command path. If the script cannot be found in your path, you need to
+specify the full path to the script, e.g.:</p>
+<pre class="literal-block">
+/var/www/horde/pear/horde-db-migrate
+</pre>
+<p>You can use the <tt class="docutils literal">pear</tt> command to find the place where the script has been
+installed:</p>
+<pre class="literal-block">
+pear config-get bin_dir
+</pre>
+<p>If you installed into a local PEAR installation, you need to tell PHP and
+PEAR where to find the installation and the script, e.g.:</p>
+<pre class="literal-block">
+PHP_PEAR_SYSCONF_DIR=/var/www/horde php \
+    -d include_path=/var/www/horde/pear/php \
+    /var/www/horde/pear/horde-db-migrate
+</pre>
 </li>
 <li><p class="first">Setting up alarm emails</p>
 <p>If you want your users to be able to receive emails from the Horde_Alarm
