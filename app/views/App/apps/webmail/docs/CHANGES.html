@@ -1,8 +1,154 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v5.2.1-git
+v5.2.2-git
 ----------
 
+
+
+------
+v5.2.1
+------
+
+Horde Changes
+-------------
+[mjr] Fix cancelling remote wipe of EAS client from user prefs.
+[mms] Fix fatal error in signup confirmation script.
+[mjr] Fix removing ActiveSync device state from administrative interface when
+      multiple user accounts exist on the same device (<a href="http://bugs.horde.org/ticket/13336">Bug #13336</a>).
+
+Mail Changes
+------------
+[mjr] Fix iTip handling when recurrence exceptions are present (<a href="http://bugs.horde.org/ticket/13399">Bug #13399</a>).
+[mms] Fix displaying Sent mailbox label when multiple sent-mail mailboxes are
+      defined.
+[mms] Fix advanced search in all mailboxes if virtual folders or remote
+      accounts exist (<a href="http://bugs.horde.org/ticket/13384">Bug #13384</a>).
+[mms] Fix regression in automatically expanding deeply nested mailboxes in the
+      dynamic folder list.
+[mms] Fix regression where containers could not be moved via drag/drop in
+      dynamic view.
+[mms] Don't perform purge sentmail login task unless at least one sentmail
+      mailbox exists.
+[mms] Don't perform purge Spam login task unless Spam mailbox exists.
+[mms] Fix dragging a mailbox to the base level in dynamic view.
+[mms] Add ability to drag/drop text to dynamic HTML compose window on Chrome
+      and IE.
+[mms] Re-enable drag/drop of text to dynamic plaintext compose window (<a href="http://bugs.horde.org/ticket/13281">Bug
+      #13281</a>).
+
+Address Book Changes
+--------------------
+[jan] Display correct address books in WebDAV folders.
+[jan] Fix displayed CardDAV URLs for shared address books (<a href="http://bugs.horde.org/ticket/12380">Bug #12380</a>).
+[mms] Only include e-mail addresses that match the search string in the return
+      from the search() API call (<a href="http://bugs.horde.org/ticket/12480">Request #12480</a>).
+[mjr] Fix exporting tags via vCard and ActiveSync (<a href="http://bugs.horde.org/ticket/13393">Bug #13393</a>).
+[mjr] Add EAS client created shares to the sync_books preference (<a href="http://bugs.horde.org/ticket/13359">Bug #13359</a>).
+[mjr] Add missing API support for searchTags API (<a href="http://bugs.horde.org/ticket/13362">Bug #13362</a>).
+[mjr] Fix issue that caused contacts to be tagged with a broken username.
+
+Calendar Changes
+----------------
+[jan] Fix displayed CalDAV URLs for shared calendars (<a href="http://bugs.horde.org/ticket/12380">Bug #12380</a>).
+[jan] Don't show today's events that are over in portal (<a href="http://bugs.horde.org/ticket/13368">Bug #13368</a>).
+[mjr] Fix exporting to ics file when event contains exceptions and an explicit
+      timezone (<a href="http://bugs.horde.org/ticket/13369">Bug #13369</a>).
+[mjr] Fix importing iCalendar data that contains timezone parameters.
+[mjr] Fix both importing and replacing text/calendar data via the API when
+      recurrence exceptions are present (<a href="http://bugs.horde.org/ticket/13399">Bug #13399</a>).
+[mjr] Ensure default share attribute is set when auto determining a default
+      share.
+[mjr] Fix fatal error when calculating alarms on a recurring event that has
+      completed.
+[mjr] Fix catching minical clicks on browsers that return element names in
+      uppercase (Jasper.Olbrich@students.uni-marburg.de, <a href="http://bugs.horde.org/ticket/13370">Bug #13370</a>).
+
+Tasks Changes
+-------------
+[jan] Don't include external tasks with WebDAV task list.
+[jan] Fix displayed CalDAV URLs for shared task lists (<a href="http://bugs.horde.org/ticket/12380">Bug #12380</a>).
+[mjr] Fix remembering auto determined default share (<a href="http://bugs.horde.org/ticket/13360">Bug #13360</a>).
+[mjr] Add EAS client created shares to the sync_lists preference (<a href="http://bugs.horde.org/ticket/13359">Bug #13359</a>).
+[mjr] Add missing API support for searchTags API (<a href="http://bugs.horde.org/ticket/13364">Bug #13364</a>).
+[mjr] Fix detecting task completion when sending task change notifications
+      (Alfonso Marín Marín &lt;almarin@um.es>, <a href="http://bugs.horde.org/ticket/13350">Bug #13350</a>).
+
+Notes Changes
+-------------
+[mjr] Ensure default share attribute is set when auto determining a default
+      share.
+[mjr] Fix showing the notepad name in list view when show_notepad preference is
+      set (<a href="http://bugs.horde.org/ticket/13352">Bug #13352</a>).
+[mjr] Add EAS client created shares to the sync_notpads preference (<a href="http://bugs.horde.org/ticket/13359">Bug
+      #13359</a>).
+[mjr] Add missing API support for searchTags API (<a href="http://bugs.horde.org/ticket/13361">Bug #13361</a>).
+[mjr] Fix issue that caused notes to be tagged with a broken username.
+
+File Manager Changes
+--------------------
+[jan] Update Polish translation (Maciej Uhlig &lt;maciej.uhlig@us.edu.pl>).
+[jan] Make shares table compatible with Oracle.
+
+Bookmarks Changes
+-----------------
+[mjr] Fix fatal error due to botched merge.
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Prevent another issue that could cause an error when attempting to update
+      a non-existent state (<a href="http://bugs.horde.org/ticket/13338">Bug #13338</a>).
+[mjr] Prevent error caused by attempting to update a non-existent state (<a href="http://bugs.horde.org/ticket/13338">Bug
+      #13338</a>).
+
+Core
+[mms] Add Horde_Core_Script_Package_Autocomplete.
+[mms] Fix broken parse_url() behavior for PHP &lt; 5.3.6.
+[mms] Horde_Data now stores temporary data using Horde_Vfs to ensure data
+      persists and that it doesn't overload session storage (<a href="http://bugs.horde.org/ticket/11335">Request #11335</a>).
+[mms] Add method to allow any code to register tasks to run on logout.
+[mjr] Ensure EAS client created collections are requested to be added to the
+      application's sync preference (<a href="http://bugs.horde.org/ticket/13359">Bug #13359</a>).
+[mjr] Fix fatal error when executing a FOLDERDELETE command on certain
+      collections.
+[mjr] Fix regression in sending email via ActiveSync when no properly
+      configured identity exists (<a href="http://bugs.horde.org/ticket/13346">Bug #13346</a>).
+[mjr] Fix broken CHANGEFOLDER functionality for ActiveSync NOTES collections
+      (<a href="http://bugs.horde.org/ticket/13334">Bug #13334</a>).
+[mms] Better error handling when trying to load config files from the conf.d
+      subdirectory.
+
+CssMinify
+[mms] Fix Horde_CssMinify_CssParser#setOptions().
+
+Date
+[jan] Fix calculating recurrence end if UNTIL property of iCalendar data is
+      DATE value (<a href="http://bugs.horde.org/ticket/13401">Bug #13401</a>).
+
+HashTable
+[mms] Add Horde_Vfs driver.
+
+Imap_Client
+[mms] Determination of approximate part size should be done at IMAP level, not
+      within Horde_Mime_Part.
+[mms] Fix regression in handling invalid DateTime data due to a BC-incompatible
+      change in PHP.
+
+Mail
+[mms] Added the 'noquote' option to Horde_Mail_Rfc822_Object#writeAddress().
+
+Mime
+[mms] Fix fatal error in Horde_Mime_Mail#getBasePart() (Thomas Müller
+      &lt;thomas.mueller@tmit.eu>).
+[mms] Fix determination of part size when the part contains explicit sizing
+      information.
+
+Smtp
+[mms] Added support for sending internationalized header data (RFC 6531).
+
+SyncMl
+[mjr] Hotfix to deal with failure exporting non-contact data due to
+      inconsistency in export methods between applications (<a href="http://bugs.horde.org/ticket/13394">Bug #13394</a>).
 
 
 ------
