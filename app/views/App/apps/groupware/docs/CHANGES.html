@@ -1,8 +1,132 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v5.2.2-git
+v5.2.3-git
 ----------
 
+
+
+------
+v5.2.2
+------
+
+Address Book Changes
+--------------------
+[jan] Fix duplicate searching in address books without owner field.
+[jan] Fix duplicate search form (woe@gmx.de, <a href="http://bugs.horde.org/ticket/13528">Bug #13528</a>).
+[mms] Make case-insensitive API e-mail search work on non-ASCII data (<a href="http://bugs.horde.org/ticket/12480">Request
+      #12480</a>).
+[jan] Fix listing group members that contain colons in their IDs.
+
+Calendar Changes
+----------------
+[mjr] Fix removing resource event when editing the bound event causes the
+      resource to reject the event (<a href="http://bugs.horde.org/ticket/13466">Bug #13466</a>).
+[mjr] Fix refreshing resource events in the UI when the host event changes
+      (<a href="http://bugs.horde.org/ticket/13465">Bug #13465</a>).
+[mjr] Fix updating the exceptionoriginaldate field when the base event changes
+      (<a href="http://bugs.horde.org/ticket/13512">Bug #13512</a>).
+[mjr] Fix moving recurring events with exceptions from one calendar to another
+      (<a href="http://bugs.horde.org/ticket/13524">Bug #13524</a>).
+[mjr] Fix honoring resource_management permission (<a href="http://bugs.horde.org/ticket/13049">Bug #13049</a>).
+[jan] Fix visual overlapping of certain events (<a href="http://bugs.horde.org/ticket/13376">Bug #13376</a>).
+[jan] Fix error editing events if using exotic date formats.
+[jan] Fix JavaScript error if not showing all events in month view (Jasper
+      Olbrich &lt;Jasper.Olbrich@students.uni-marburg.de>, <a href="http://bugs.horde.org/ticket/13433">Bug #13433</a>).
+[jan] Fix displayed CalDAV URLs for shared calendars in basic view too
+      (piper@hrz.uni-marburg.de, <a href="http://bugs.horde.org/ticket/12380">Bug #12380</a>).
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Added Horde_ActiveSync_Rfc822::replaceMime().
+[mjr] Added Horde_ActiveSync_Mime class.
+[mjr] Added Horde_ActiveSync_Exception_EmailFatalFailure.
+[mjr] Fix issues with 8-bit characters in Subject header in some cases (<a href="http://bugs.horde.org/ticket/13456">Bug
+      #13456</a>).
+[mjr] Fix POOMTASKS_SUBORDINALDATE parsing (<a href="http://bugs.horde.org/ticket/13461">Bug #13461</a>).
+[mjr] Prevent folder cache from being overwritten (<a href="http://bugs.horde.org/ticket/13273">Bug #13273</a>).
+[mjr] Add Horde_ActiveSync_Imap_Adapter::emptyMailbox().
+[mjr] Fix sending ItemSettings responses for EAS 14.1.
+[mjr] Add unofficial WindowsLive codepage extensions.
+[mjr] Fix yearly recurrences appearing on incorrect day in certain cases.
+[mjr] Add support for synchronizing user-defined IMAP flags as EAS Email
+      categories.
+[mjr] Prevent infinite loops due to broken clients sending invalid OPTIONS data
+      (<a href="http://bugs.horde.org/ticket/13405">Bug #13405</a>).
+[mjr] Prevent fatal WBXML parsing error due to broken BlackBerry clients (<a href="http://bugs.horde.org/ticket/13351">Bug
+      #13351</a>).
+
+Core
+[mjr] Fix dependency on Horde_HashTable (<a href="http://bugs.horde.org/ticket/13549">Bug #13549</a>).
+[mjr] Add activesync_email_presend hook.
+[mjr] Fix issue where replying or forwarding broken email messages would break
+      ActiveSync synchronization when saving to Sent mail.
+[mjr] Fix issues with 8-bit characters in Subject header when sending smart
+      replies via ActiveSync (<a href="http://bugs.horde.org/ticket/13456">Bug #13456</a>).
+[mjr] Fix GAL searches returning all address book entries.
+[jan] Improve positioning of date picker popup (Karim Geiger
+      &lt;me@karim-geiger.de>).
+[jan] Really fix returning session start time from session handler (<a href="http://bugs.horde.org/ticket/13428">Bug
+      #13428</a>).
+[mms] Ensure persistently stored data is not overwritten by another session.
+[mms] Fix boostrapping DB object when using SQL as the Horde cache driver (<a href="http://bugs.horde.org/ticket/13439">Bug
+      #13439</a>).
+[mjr] Support ITEMOPERATIONS_EMPTYFOLDER requests via ActiveSync.
+[mjr] Fetch correct data for EAS ItemSettings requests.
+[jan] Catch exception from application in portal block (<a href="http://bugs.horde.org/ticket/13427">Bug #13427</a>).
+[jan] Fix returning session start time from session handler (<a href="http://bugs.horde.org/ticket/13428">Bug #13428</a>).
+[mjr] Add support for synchronizing user-defined IMAP flags as EAS Email
+      categories.
+[mjr] Fix BC break when detecting the ActiveSync state driver.
+
+Imap_Client
+[mms] Add support for Gmail-specific WEBALERT response code.
+[mms] IMAP/POP3 URL generation split into a more modular library structure.
+[mms] Ignore message-specific URL parameters if a search query appears in an
+      IMAP URL.
+[mms] Fix encoding/decoding URL elements in IMAP/POP3 URLs.
+[mms] Fix setting default port for POP3 URLs.
+[mms] Fix client-side reverse sorting.
+[mms] Fix client-side sequence sorting, when that is the only sort criteria.
+[mms] Use Collator class, if present, to sort string fields on the client side.
+[mms] Fix client-side sorting of display addresses.
+[mms] Even more improved pseudo-UIDNEXT value for POP3 servers.
+[mms] Improved sanity checking so that non-ASCII data is not sent to server in
+      commands where it is not supported.
+[mms] Fix typo in Horde_Imap_Client_Data_Sync (<a href="http://bugs.horde.org/ticket/13430">Bug #13430</a>; Jasper Olbrich
+      &lt;Jasper.Olbrich@students.uni-marburg.de>).
+[mms] Fix regression in reporting capabilities (<a href="http://bugs.horde.org/ticket/13421">Bug #13421</a>).
+
+Kolab_Storage
+[jan] Fix tests including Horde_Mime_Part.
+
+Mime
+[mms] Fix generation of Original-Message-ID header in MDN notification (<a href="http://bugs.horde.org/ticket/13526">Bug
+      #13526</a>).
+[mms] Fix determination of MDN user confirmation in certain instances.
+
+Pack
+[mms] Attempt to workaround broken JSON-C decoder regarding null characters.
+
+Prefs
+[mms] Add ArrayAccess, Countable, and Iterator functionality to the
+      Horde_Prefs_Identity object.
+
+Test
+[mms] Fix determination of test cases using AllTests.php.
+[mms] Fix AllTests.php when dealing with test cases that inherit from parent
+      test cases.
+
+Timezone
+[jan] Fix "Undefined offset" notice (<a href="http://bugs.horde.org/ticket/13455">Bug #13455</a>).
+
+Util
+[mms] Fix another issue with older versions of PHP in
+      Horde_String_Transliterate.
+[mms] Fix regression in Horde_String_Transliterate for PHP 5.3 (<a href="http://bugs.horde.org/ticket/13419">Bug #13419</a>).
+[mms] Added Horde_String::ipos() and Horde_String::ripos().
+[mms] Fallback to lesser priority transliterator driver when an error is
+      encountered.
 
 
 ------
