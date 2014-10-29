@@ -3,6 +3,77 @@
 v5.2.3-git
 ----------
 
+Horde Changes
+-------------
+[mjr] Honor date_format_mini in Moon block (<a href="http://bugs.horde.org/ticket/13628">Bug #13628</a>).
+[jan] Fix spacing in top menu (<a href="http://bugs.horde.org/ticket/13617">Bug #13617</a>).
+[jan] Don't show password reset preferences if disabled in configuration (<a href="http://bugs.horde.org/ticket/13618">Bug
+      #13618</a>).
+[mjr] Remove non-existent Yahoo Maps option for map tile provider.
+[mms] Fix display of Horde stylesheets not served from the local server (i.e.
+      via a CDN).
+[jan] Hide weather portal block if weather configuration is disabled (<a href="http://bugs.horde.org/ticket/13559">Bug
+      #13559</a>).
+[jan] Add show_encryption setting to HTTP authentication configuration
+      (Jasper.Olbrich@students.uni-marburg.de, <a href="http://bugs.horde.org/ticket/13444">Bug #13444</a>).
+
+Mail Changes
+------------
+[mms] Fix handling authentication errors when they take place during an attempt
+      to determine a mailbox's namespace.
+[mms] Fix some folder display issues when not using IMAP subscriptions in
+      dynamic view (<a href="http://bugs.horde.org/ticket/13553">Bug #13553</a>).
+[mms] Fix accessing dynamic compose page when file uploads are not available
+      (<a href="http://bugs.horde.org/ticket/13580">Bug #13580</a>).
+[mms] Fix saving unique browser preferences for a specific backend in dynamic
+      view.
+[mms] Fix toggling select all checkbox in both dynamic mailbox layouts.
+
+Filters Changes
+---------------
+[jan] Disable forward rule by default.
+[mms] Fix checking the 'max_forward' permission (<a href="http://bugs.horde.org/ticket/13568">Bug #13568</a>).
+[mms] IMAP driver needs to explicitly search for UTF-8 text, since we don't
+      restrict charset input at the UI level (<a href="http://bugs.horde.org/ticket/13554">Bug #13554</a>).
+[mjr] Fix issues when preferred configuration contains an array (<a href="http://bugs.horde.org/ticket/13548">Bug #13548</a>).
+
+Address Book Changes
+--------------------
+[jan] Fix importing empty birthdays/anniversaries from vCard.
+[mjr] Fix defaulting to the defined search fields when searching via the API.
+[mjr] Fix broken EAS synchronization due to incorrect setting of the
+      Categories field.
+
+Calendar Changes
+----------------
+[jan] Support time label rotation in week and day views on IE 11.
+[jan] Fix updating of task list view if no tasks are returned from server.
+[jan] Fix ordering of sub-tasks.
+[jan] Send iTip notifications even to attendees that are not required to attend
+      (<a href="http://bugs.horde.org/ticket/13600">Bug #13600</a>).
+[jan] Fix notification and alarm issues if alarm is longer than a day (<a href="http://bugs.horde.org/ticket/13584">Bug
+      #13584</a>).
+[jan] Fix closure compiler errors (<a href="http://bugs.horde.org/ticket/13593">Bug #13593</a>).
+[mjr] Fix checking resource availability when adding multiple resources (<a href="http://bugs.horde.org/ticket/13561">Bug
+      #13561</a>).
+
+Tasks Changes
+-------------
+[jan] Fix search attribute of SQL shares on Oracle.
+[mjr] Fix adding a new tasklist to the syncronized tasklists (<a href="http://bugs.horde.org/ticket/13642">Bug #13642</a>).
+[jan] Pass current start date of recurring tasks to dynamic interface.
+[jan] Fix setting task list name for external tasks.
+[jan] Fix link to create sub-task from a task view.
+[jan] Fix listing of recurring tasks with start dates.
+[mjr] Add missing categories to EAS tasks.
+[jan] Fix sidebar display of system task lists in basic view.
+[jan] Fix retrieving individual tasks via WebDAV.
+
+Notes Changes
+-------------
+[mjr] Fix adding new notepads via the API.
+[jan] Hide PDF button if Horde_Pdf_Writer is not installed (<a href="http://bugs.horde.org/ticket/13624">Bug #13624</a>).
+[mjr] Fix replacing tags in existing notes (<a href="http://bugs.horde.org/ticket/13417">Bug #13417</a>).
 
 
 ------
