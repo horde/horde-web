@@ -81,4 +81,8 @@ $quotes = array(
         'quote' => '"Ich ziemlich entzückt von der Horde Groupware. Endlich habe ich einen Ersatz für Google Calendar!"',
         'author' => 'Helge Eichelberg @hael_ge'
     ),
+    array(
+        'quote' => '"Horde. Mi favorito últimamente. Muy versátil, muy eficiente, permite compartir cualquier contenido creado y permite exportar los calendarios y los contactos a formatos estándares para sincronizarlos con otras plataformas o dispositivos."',
+        'author' => 'Borja V. Muñoz, Inercia Digital'
+    ),
 );
