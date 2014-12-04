@@ -1,6 +1,6 @@
 <h3>Release notes for the latest release</h3><pre>
 The Horde Team is pleased to announce the final release of the Horde Groupware
-Webmail Edition version 5.2.3.
+Webmail Edition version 5.2.4.
 
 Horde Groupware Webmail Edition is a free, enterprise ready, browser based
 communication suite. Users can read, send and organize email messages with four
@@ -14,6 +14,21 @@ http://www.horde.org/apps/webmail/docs/UPGRADING
 For detailed installation and configuration instructions, please see
 http://www.horde.org/apps/webmail/docs/INSTALL
 
-The major changes compared to the Horde Groupware Webmail Edition version 5.2.2
+The major changes compared to the Horde Groupware Webmail Edition version 5.2.3
 are:
-    * Small bugfixes and improvements.</pre>
+
+General changes:
+    * Small bugfixes and improvements.
+
+Calendar changes:
+    * Fixed disclosure of private events in daily agenda.
+    * Fixed adding and updating events via CalDAV.
+    * Fixed incomplete month views.
+
+Notes changes:
+    * Fixed permission check when editing notes. Mitigation: the attacker needs
+      to know the note's (random) URL to exploit this flaw.
+    * Small API improvement.
+
+Thanks to Christopher Neuhaus for reporting the security issue in the note
+manager.</pre>
