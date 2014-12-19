@@ -387,11 +387,17 @@ div.rightcol h2 {
 div.rightcol ul.ads {
     list-style:none;
 }
-
 div.rightcol ul.ads li {
     float:left;
     padding-bottom:15px;
     padding-right:15px;
+}
+
+div.rightcol p.thanks {
+    clear: left;
+    background:url(../images/heart.png) no-repeat 0 3px;
+    padding-left:15px;
+    margin-left: 10px;
 }
 
 div.featuredat a {
@@ -958,12 +964,6 @@ div.mail {
 {
     background:url(../images/gear.png) no-repeat 0 3px;
     padding-left:15px;
-}
-.thanks
-{
-    background:url(../images/heart.png) no-repeat 0 3px;
-    padding-left:15px;
-    margin-left: 10px;
 }
 
 h3 img.download {

@@ -17,10 +17,11 @@
 
   <h2>Sponsors</h2>
   <ul class="ads">
-    <li><a href="http://www.hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png"/></a></li>
+    <li><a href="http://www.hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png" /></a></li>
+    <li><a href="https://www.b1-systems.de/"><img src="<?php echo $GLOBALS['host_base'] ?>/images/b1systems.png" /></a></li>
   </ul>
-  <p>
-    <?php echo $this->linkTo('"Thanks!" to all our other sponsors', array('controller' => 'home', 'action' => 'thanks'), array('class' => 'thanks')); ?>
+  <p class="thanks">
+    <?php echo $this->linkTo('"Thanks!" to all our other sponsors', array('controller' => 'home', 'action' => 'thanks')); ?>
   </p>
 
   <h2>Twitter</h2>
