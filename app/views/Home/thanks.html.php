@@ -74,7 +74,7 @@
           <select name="os0">
             <option value="Bronze">Bronze : $100.00USD - monthly</option>
             <option value="Silver">Silver : $250.00USD - monthly</option>
-            <option value="Gold">Gold : $500.00USD - monthly</option>
+            <option value="Gold" selected="selected">Gold : $500.00USD - monthly</option>
             <option value="Platin">Platin : $1,000.00USD - monthly</option>
           </select>
         </div>
