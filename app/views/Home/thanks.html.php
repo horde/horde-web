@@ -28,7 +28,7 @@
           <a style="margin:20px;text-decoration:none" href="http://www.aoe.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_aoe.jpg" height="40"/>
           </a>
-          <a style="margin:20px;text-decoration:none" href="https://bluepromocode.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://dealspotr.com/" target="_blank">
             <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_blue.png"/>
           </a>
           <a style="margin:20px;text-decoration:none" href="http://www.beslist.be/" target="_blank">
