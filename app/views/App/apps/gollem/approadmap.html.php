@@ -12,7 +12,7 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Gollem 3.1</h3>
+<h3>Gollem 4.0</h3>
 
 <p><b>Status:</b> Planned</p>
 

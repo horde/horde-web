@@ -14,7 +14,7 @@ at least some of the following changes:
 
 <h3>Ingo 5.0</h3>
 
-<p><b>Status:</b> Planned</p>
+<p><b>Status:</b> In development</p>
 
 <p><b>Planned release timeframe:</b> Open</p>
 
@@ -22,14 +22,18 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>NoSQL (MongoDB) driver for the storage backend</td><td class="done">Done</td></tr>
+  <tr><td>Improved default order of filter rules</td><td class="done">Done</td></tr>
   <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td></tr>
   <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td></tr>
   <tr><td>Merge Forwards drivers (forwards, ldap, mdaemon, qmail, soap, sql, customsql)</td><td class="planned">Planned</td></tr>
 </table>
 
+<div class="dimmed">
+
 <h3>Ingo 4.2</h3>
 
-<p><b>Status:</b> In development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
@@ -39,8 +43,6 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Drag &amp; drop resorting of filter rules</td><td class="done">Done</td></tr>
 </table>
-
-<div class="dimmed">
 
 <h3>Ingo 4.1</h3>
 

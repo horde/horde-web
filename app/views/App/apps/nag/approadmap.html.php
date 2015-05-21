@@ -14,7 +14,7 @@ at least some of the following changes:
 
 <h3>Nag 5.0</h3>
 
-<p><b>Status:</b> Planned</p>
+<p><b>Status:</b> In development</p>
 
 <p><b>Planned release timeframe:</b> Open</p>
 
@@ -22,14 +22,21 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Added task organizers</td><td class="done">Done</td></tr>
+  <tr><td>Task list background color in basic view</td><td class="done">Done</td></tr>
+  <tr><td>Track actual time spent</td><td class="done">Done</td></tr>
+  <tr><td>Import and export of alarms and recurrence rules to/from iCalendar</td><td class="done">Done</td></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/1922">Monthly recurrence on last weekday</a></td><td class="done">Done</td></tr>
   <tr><td>Merge into <?php echo $this->linkTo('Kronolith', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith')) ?></td><td class="planned">Planned</td></tr>
   <tr><td>Task dependencies</td><td class="planned">Planned</td></tr>
-  <tr><td>WebDAV/CalDAV/GroupDAV client capabilities</td><td class="planned">Planned</td></tr>
+  <tr><td>WebDAV/CalDAV client capabilities</td><td class="planned">Planned</td></tr>
 </table>
+
+<div class="dimmed">
 
 <h3>Nag 4.2</h3>
 
-<p><b>Status:</b> In Development</p>
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
@@ -42,8 +49,6 @@ at least some of the following changes:
   <tr><td>CalDAV synchronization of shared task lists</td><td class="done">Done</td></tr>
   <tr><td>Don't require URL rewriting</td><td class="done">Done</td></tr>
 </table>
-
-<div class="dimmed">
 
 <h3>Nag 4.1</h3>
 

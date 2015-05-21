@@ -12,9 +12,27 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Kronolith 4.2</h3>
+<h3>Kronolith 5.0</h3>
 
 <p><b>Status:</b> In Development</p>
+
+<p><b>Planned release timeframe:</b> None</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Refresh button to update individual calendars and task lists</td><td class="done">Done</td></tr>
+  <tr><td>Importing of calendars from a URL</td><td class="done">Done</td></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/1922">Monthly recurrence on last weekday</a></td><td class="done">Done</td></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/13647">Individual permissions for resources</a></td><td class="done">Done</td></tr>
+</table>
+
+<div class="dimmed">
+
+<h3>Kronolith 4.2</h3>
+
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
@@ -26,8 +44,6 @@ at least some of the following changes:
   <tr><td>CalDAV synchronization of shared calendars</td><td class="done">Done</td></tr>
   <tr><td>CalDAV synchronization of attendees</td><td class="done">Done</td></tr>
 </table>
-
-<div class="dimmed">
 
 <h3>Kronolith 4.1</h3>
 

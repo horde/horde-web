@@ -12,9 +12,24 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Whups 3.0</h3>
+<h3>Whups 4.0</h3>
 
 <p><b>Status:</b> In Development</p>
+
+<p><b>Planned release timeframe:</b> None</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th>
+  <tr><td>Compatible with Horde 6</td><td class="done">Done</td>
+</table>
+
+<div class="dimmed">
+
+<h3>Whups 3.0</h3>
+
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> September 10, 2013</p>
 
@@ -24,8 +39,6 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th>
   <tr><td>Compatible with Horde 5</td><td class="done">Done</td>
 </table>
-
-<div class="dimmed">
 
 <h3>Whups 2.0</h3>
 

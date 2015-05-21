@@ -12,9 +12,24 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Horde 5.2</h3>
+<h3>Horde 6.0</h3>
 
 <p><b>Status:</b> In Development</p>
+
+<p><b>Planned release timeframe:</b> None</p>
+
+<p><b>Features currently planned for the next release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Extended administration pages</td><td class="done">Done</td></tr>
+</table>
+
+<div class="dimmed">
+
+<h3>Horde 5.2</h3>
+
+<p><b>Status:</b> Released</p>
 
 <p><b>Planned release timeframe:</b> July 8th, 2014</p>
 
@@ -24,8 +39,6 @@ at least some of the following changes:
   <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Small ActiveSync feature additions</td><td class="done">Done</td></tr>
 </table>
-
-<div class="dimmed">
 
 <h3>Horde 5.1</h3>
 
