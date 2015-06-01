@@ -9,6 +9,10 @@
         written about Horde and Horde components, listed roughly in reverse
         chronological order.</p>
 
+        <p><a href="http://ua.thedna.org/the-horde-project/">Universal
+        Acceptance</a> case study, as presented to the Domain Name
+        Association.</p>
+
         <p><a href="<?php echo $GLOBALS['host_base']
         ?>/papers/MergingHordeJQM.pdf">Merging Horde Groupware with jQuery
         Mobile</a> was presented
@@ -25,7 +29,7 @@
         href="http://www.cebit.de">CeBIT 2012</a> by <a
         href="<?php echo $this->urlWriter->urlFor('team', array('anchor' => 'gunnar')) ?>">
         Gunnar</a> in German. The presentations are available as a PDF and on Slideshare (<a
-        href="http://www.slideshare.net/wrobel/deployment-und-sicherheit-komplexer-opensource-webanwendungen">"Deployment"</a> and 
+        href="http://www.slideshare.net/wrobel/deployment-und-sicherheit-komplexer-opensource-webanwendungen">"Deployment"</a> and
         <a
         href="http://www.slideshare.net/wrobel/20120310-mobile">"Mobile"</a>).</p>
 
