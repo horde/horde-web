@@ -85,4 +85,8 @@ $quotes = array(
         'quote' => '"Horde. Mi favorito últimamente. Muy versátil, muy eficiente, permite compartir cualquier contenido creado y permite exportar los calendarios y los contactos a formatos estándares para sincronizarlos con otras plataformas o dispositivos."',
         'author' => 'Borja V. Muñoz, Inercia Digital'
     ),
+    array(
+        'quote' => '"Horde Groupware is a great open source collaboration platform."',
+        'author' => 'OtherData @OtherdataODN'
+    ),
 );
