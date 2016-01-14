@@ -85,7 +85,8 @@
         organizations:
         <ul>
           <li><a href="http://www.hub.org/?ri=765">Hub.org Networking
-            Services</a>: Mailing lists, Anonymous CVS, Horde website</li>
+            Services</a>: Mailing lists, PEAR, FTP</li>
+          <li><a href="https://www.b1-systems.de/">B1 Systems</a></li>
         </ul>
         </p>
 
