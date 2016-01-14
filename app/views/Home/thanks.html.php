@@ -86,11 +86,6 @@
         <ul>
           <li><a href="http://www.hub.org/?ri=765">Hub.org Networking
             Services</a>: Mailing lists, Anonymous CVS, Horde website</li>
-          <li><a href="http://www.verendus.com/">Verendus</a>:
-            Developer CVS, Wiki, Bug Tracking System</li>
-          <li><a href="http://www.easyDNS.com/">easyDNS</a> is generously
-            hosting the DNS service for horde.org, freeing us from the horror
-            that is dealing with Internic.</li>
         </ul>
         </p>
 
