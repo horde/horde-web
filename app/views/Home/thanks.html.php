@@ -9,7 +9,7 @@
 
         <h3>Sponsors</h3>
         <p>
-          The following sponsors donate funds to support general Horde
+          The following bronze sponsors donate funds to support general Horde
           development:
         </p>
         <br/>
@@ -56,7 +56,7 @@
         </p>
 
         <p>
-          Thank you for your support!          
+          Thank you for your support!
         </p>
 
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -67,10 +67,10 @@
         </div>
         <div style="text-align:center;">
           <select name="os0">
-            <option value="Bronze">Bronze : $100.00USD - monthly</option>
-            <option value="Silver">Silver : $250.00USD - monthly</option>
-            <option value="Gold" selected="selected">Gold : $500.00USD - monthly</option>
-            <option value="Platin">Platin : $1,000.00USD - monthly</option>
+            <option value="Bronze">Bronze: $100.00USD - monthly (Small logo on this page)</option>
+            <option value="Silver">Silver: $250.00USD - monthly (Large logo on this page)</option>
+            <option value="Gold" selected="selected">Gold: $500.00USD - monthly (Banner on this page)</option>
+            <option value="Platin">Platin: $1,000.00USD - monthly (Logo on front page)</option>
           </select>
         </div>
         <input type="hidden" name="currency_code" value="USD">
