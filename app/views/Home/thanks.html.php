@@ -70,7 +70,7 @@
             <option value="Bronze">Bronze: $100.00USD - monthly (Small logo on this page)</option>
             <option value="Silver">Silver: $250.00USD - monthly (Large logo on this page)</option>
             <option value="Gold" selected="selected">Gold: $500.00USD - monthly (Banner on this page)</option>
-            <option value="Platin">Platin: $1,000.00USD - monthly (Logo on front page)</option>
+            <option value="Platin">Platinum: $1,000.00USD - monthly (Logo on front page)</option>
           </select>
         </div>
         <input type="hidden" name="currency_code" value="USD">
