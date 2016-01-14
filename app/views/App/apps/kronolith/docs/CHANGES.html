@@ -1,7 +1,90 @@
 <h3>Changes by Release</h3><pre>
-----------
-v4.2.5-git
-----------
+-----------
+v4.2.12-git
+-----------
+
+[jan] Use access rules compatible with both Apache 2.2 and 2.4.
+[jan] Fix accidental deletion of events if importing recurring events without a
+      UID attribute (<a href="http://bugs.horde.org/ticket/14208">Bug #14208</a>).
+[mjr] Honor confirm_delete preference in dynamic view (<a href="http://bugs.horde.org/ticket/14188">Bug #14188</a>).
+[mjr] Correctly deal with cancelled meetings via ActiveSync.
+[mjr] Fix visibility of alarm titles when alarm is generated via CLI (<a href="http://bugs.horde.org/ticket/14154">Bug
+      #14154</a>).
+[mjr] Fix display of embed code by adding the full url.
+
+
+-------
+v4.2.11
+-------
+
+[mjr] Fix issue when replacing an event via the API and the attendee list
+      changes (<a href="http://bugs.horde.org/ticket/14118">Bug #14118</a>).
+[mjr] Fix fatal test error related to Content_Tagger.
+
+
+-------
+v4.2.10
+-------
+
+[mjr] Fix exporting events from Horde_Perms::SHOW calendars over DAV (<a href="http://bugs.horde.org/ticket/14128">Bug
+      #14128</a>).
+[mjr] Send CANCEL iTip when attendee is removed from a meeting (<a href="http://bugs.horde.org/ticket/14118">Request
+      #14118</a>).
+[mjr] Remove object reference from Content when object is deleted (<a href="http://bugs.horde.org/ticket/14112">Bug #14112</a>).
+[mjr] Fix incorrect offset of freebusy times in certain cases (<a href="http://bugs.horde.org/ticket/14084">Bug #14084</a>).
+[mjr] Fix handling of email groups as attendees (<a href="http://bugs.horde.org/ticket/14093">Bug #14093</a>).
+[mjr] Fix importing text/calendar data via API (<a href="http://bugs.horde.org/ticket/14089">Bug #14089</a>).
+
+
+------
+v4.2.9
+------
+
+[mjr] Fix enabling deletion of resources for non-admin users (<a href="http://bugs.horde.org/ticket/14069">Bug #14069</a>).
+[mjr] Honor workweek view as the login_view (<a href="http://bugs.horde.org/ticket/14042">Bug #14042</a>).
+[mjr] Fix Permission Denied error after removing a currently displayed
+      timeObject (<a href="http://bugs.horde.org/ticket/14022">Bug #14022</a>).
+[jan] Enable purge calendar checkbox if user has delete permissions.
+[mjr] Honor locking the remote_cals preference.
+[mjr] Fix detecting duplicate events during import via the API (<a href="http://bugs.horde.org/ticket/14018">Bug #14018</a>).
+
+
+------
+v4.2.8
+------
+
+[jan] Don't delete existing exceptions and completions when editing recurring
+      events or tasks.
+
+
+------
+v4.2.7
+------
+
+[jan] Fix importing iCalendar events via the API (<a href="http://bugs.horde.org/ticket/13975">Bug #13975</a>).
+
+
+------
+v4.2.6
+------
+
+[jan] Fix building recipient list for event update notifications.
+[mjr] Honor background color for listTimeObjects API calendars (<a href="http://bugs.horde.org/ticket/13951">Bug #13951</a>).
+[jan] Always sort users in advanced sharing dialog (<a href="http://bugs.horde.org/ticket/13938">Bug #13938</a>).
+[mjr] Fix saving recurring event after a change in resources (<a href="http://bugs.horde.org/ticket/13921">Bug #13921</a>).
+[mjr] Fix creating recurrence exceptions from CalDAV clients.
+[jan] Added an index to find base events of recurrence exceptions faster.
+[jan] Fix finding duplicate events by UID.
+[mjr] Fix updating FB data when start date changes.
+[mjr] Fix detecting attendees when email address is not lowercase (<a href="http://bugs.horde.org/ticket/13905">Bug #13905</a>).
+[jan] Fix duplicate group names in sharing dialog.
+[jan] Fix JavaScript error when saving an unselected calendar.
+[mjr] Fix using custom SQL configuration parameters.
+
+
+------
+v4.2.5
+------
 
 [mjr] Fix generating calendar embed code (<a href="http://bugs.horde.org/ticket/13828">Bug #13828</a>).
 [jan] Don't wipe out whole calendars when PUTing individual events via WebDAV.

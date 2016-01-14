@@ -1,7 +1,66 @@
 <h3>Changes by Release</h3><pre>
-----------
-v6.2.7-git
-----------
+-----------
+v6.2.12-git
+-----------
+
+[jan] Use access rules compatible with both Apache 2.2 and 2.4.
+[jan] Allow to disable remote accounts by locking the preference.
+[jan] Fix setting title with newmail count in IE11 and Edge (<a href="http://bugs.horde.org/ticket/14189">Bug #14189</a>).
+[jan] Fix wrapping of plain text converted from HTML MIME parts.
+
+
+-------
+v6.2.11
+-------
+
+[mjr] Request that the contacts API only consider email fields when detecting
+      duplicates during automatic saving of attendees to the address book (<a href="http://bugs.horde.org/ticket/14119">Bug
+      #14119</a>).
+[jan] Don't show "Create Keys" button if creating PGP keys is disabled
+      (steffen.hau@rz.uni-mannheim.de, <a href="http://bugs.horde.org/ticket/14096">Request #14096</a>).
+[mjr] Fix displaying iTips with certain locale/date_format preference
+      combinations (<a href="http://bugs.horde.org/ticket/14076">Bug #14076</a>).
+
+
+-------
+v6.2.10
+-------
+
+[mms] Ensure mailbox name is a valid string (<a href="http://bugs.horde.org/ticket/14049">Bug #14049</a>).
+
+
+------
+v6.2.9
+------
+
+[jan] Don't focus body field when composing message with HTML editor.
+[jan] Protect against infinite request loop if expanding all mailboxes.
+[jan] Fix redirecting in smartmobile mode (<a href="http://bugs.horde.org/ticket/14002">Bug #14002</a>).
+[jan] Fix address autocompletion in redirection window of smartmobile mode
+      (<a href="http://bugs.horde.org/ticket/14002">Bug #14002</a>).
+[jan] Fix setting single recipients in redirection window in basic mode (<a href="http://bugs.horde.org/ticket/14002">Bug
+      #14002</a>).
+[jan] Don't switch to regular compose view after an error in the redirection
+      view in basic mode.
+[jan] Fix cancelling redirection window in basic mode (<a href="http://bugs.horde.org/ticket/14002">Bug #14002</a>).
+
+
+------
+v6.2.8
+------
+
+[mms] SECURITY: Fix XSS vulnerability when manually switching between plaintext
+      -> HTML compose mode.
+[jan] Update Bcc address when switching identities (João Machado
+      &lt;geral@jpaulo.eu>, <a href="http://bugs.horde.org/ticket/13922">Bug #13922</a>).
+[jan] Fix protocol name in POP3 example backend configuration.
+[mms] Don't honor linked attachment limit configuration options if linked
+      attachments are disabled (<a href="http://bugs.horde.org/ticket/13665">Bug #13665</a>).
+
+
+------
+v6.2.7
+------
 
 [jan] Fix regression with not being able to list users (<a href="http://bugs.horde.org/ticket/13808">Bug #13808</a>).
 [mms] Fix rebuilding the folder tree translations when the language is changed

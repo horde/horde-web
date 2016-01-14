@@ -1,7 +1,70 @@
 <h3>Changes by Release</h3><pre>
-----------
-v4.2.5-git
-----------
+-----------
+v4.2.12-git
+-----------
+
+[jan] Use access rules compatible with both Apache 2.2 and 2.4.
+[mjr] Fix splitting tags over ActiveSync (<a href="http://bugs.horde.org/ticket/14218">Bug #14218</a>).
+[mjr] Fix searching within virtual address books (<a href="http://bugs.horde.org/ticket/14155">Bug #14155</a>).
+[mjr] Fix import of vCard with single component via API.
+
+
+-------
+v4.2.11
+-------
+
+[mjr] Fix regression in removing all contacts from a single address book in the
+      SQL driver (<a href="http://bugs.horde.org/ticket/14145">Bug #14145</a>, Guenter Bartsch
+      &lt;guenter.bartsch@vista-rasch.com>).
+
+
+-------
+v4.2.10
+-------
+
+[mjr] Fix fatal test error related to Content_Tagger.
+
+
+------
+v4.2.9
+------
+
+[mjr] Better prevention of importing duplicate contacts with same email
+      addresses via the API (<a href="http://bugs.horde.org/ticket/14119">Bug #14119</a>).
+[mjr] Remove object reference from Content when object is deleted (<a href="http://bugs.horde.org/ticket/14112">Bug #14112</a>).
+[mjr] Remove tags from Content when tagged object is deleted (<a href="http://bugs.horde.org/ticket/14112">Bug #14112</a>).
+[mjr] Allow API to search all email type fields when calling getField().
+[mjr] Fix removing all contacts owned by a specific user.
+[jan] Fix inserting and updating photos with Oracle backends.
+[mjr] Fix incorrectly populating email field when importing vCard (<a href="http://bugs.horde.org/ticket/14046">Bug #14046</a>).
+
+
+------
+v4.2.8
+------
+
+[mjr] Fix issue where sidebar links point to incorrect address book.
+
+
+------
+v4.2.7
+------
+
+[jan] Fix error when removing user data.
+
+
+------
+v4.2.6
+------
+
+[jan] Don't try to load Content application if tags are disabled.
+[mjr] Fix adding tags to new contacts (<a href="http://bugs.horde.org/ticket/13884">Bug #13884</a>).
+[jan] Fix waiting for replication on LDAP backend.
+
+
+------
+v4.2.5
+------
 
 [jan] Fix export format of tags to vCard 3.0 categories (<a href="http://bugs.horde.org/ticket/13800">Bug #13800</a>).
 

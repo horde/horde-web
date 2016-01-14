@@ -1,8 +1,49 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v4.2.4-git
+v4.2.7-git
 ----------
 
+[jan] Use access rules compatible with both Apache 2.2 and 2.4.
+[mjr] Fix possible fatal error due to tasks created with an alarm but no due
+      date (<a href="http://bugs.horde.org/ticket/14214">Bug #14214</a>).
+[mjr] Fix storage of parent field when using Kolab driver (<a href="http://bugs.horde.org/ticket/14197">Bug #14197</a>,
+      mike.gabriel@das-netzwerkteam.de).
+[mjr] Fix switching tab/filters when using Kolab driver (<a href="http://bugs.horde.org/ticket/14196">Bug #14196</a>,
+      mike.gabriel@das-netzwerkteam.de).
+[mjr] Fix moving subtasks to another tasklist when parent task is moved (<a href="http://bugs.horde.org/ticket/14209">Bug
+      #14209</a>).
+[mjr] Fix fatal error when saving tasks when system shares are present in
+      certain cases.
+[mjr] Return recurring tasks via listTimeObjects API (<a href="http://bugs.horde.org/ticket/14137">Bug #14137</a>).
+[mjr] Prevent orphaning tasks via the API.
+
+
+------
+v4.2.6
+------
+
+[jan] Update Italian translation.
+[mjr] Fix indentation level when searching (<a href="http://bugs.horde.org/ticket/14138">Bug #14138</a>).
+[mjr] Remove object reference from Content when object is deleted (<a href="http://bugs.horde.org/ticket/14112">Bug #14112</a>).
+[mjr] Remove tags from Content when tagged object is deleted (<a href="http://bugs.horde.org/ticket/14112">Bug #14112</a>).
+[jan] Fix linking to external tasks from smartmobile view.
+
+
+------
+v4.2.5
+------
+
+[jan] Fix positioning of dialog windows.
+[jan] Don't delete existing completions when editing a recurring task.
+[jan] Only delete the last completion when toggling a recurring task to
+      incomplete.
+
+
+------
+v4.2.4
+------
+
+[jan] Don't list task lists without SHOW permissions (<a href="http://bugs.horde.org/ticket/13837">Bug #13837</a>).
 [jan] Use consistent checkbox.
 [jan] Don't allow deletion of tasks with sub-tasks (<a href="http://bugs.horde.org/ticket/13809">Bug #13809</a>).
 [jan] Don't allow completion of tasks with incomplete sub-tasks and vice versa.

@@ -1,7 +1,49 @@
 <h3>Changes by Release</h3><pre>
 ----------
-v3.2.4-git
+v3.2.8-git
 ----------
+
+[jan] Use access rules compatible with both Apache 2.2 and 2.4.
+[jan] Fix variable name in vacation_addresses hook example.
+[jan] Correctly save names of mailbox created from the rule form (<a href="http://bugs.horde.org/ticket/14150">Bug #14150</a>).
+[mjr] Fix invalid URLs in certain forms when cookies are disabled (<a href="http://bugs.horde.org/ticket/14148">Bug #14148</a>).
+
+
+------
+v3.2.7
+------
+
+[jan] Update Italian translation.
+[mjr] Add database migration for fixing corrupt rule ordering.
+[mjr] Fix corruption of rule order when reordering rules in certain cases.
+
+
+------
+v3.2.6
+------
+
+[mjr] Fix using transport parameters in Procmail driver.
+[jan] Update Czech translation.
+[jan] Update Italian translation.
+[mjr] Fix selecting incorrect rule when performing any action after reordering
+      (<a href="http://bugs.horde.org/ticket/14064">Bug #14064</a> and Bug #13643).
+[jan] Fix duplicate messages when using the redirect-and-keep rule with
+      Procmail backends.
+
+
+------
+v3.2.5
+------
+
+[jan] Add Galician translation.
+[mms] Enforce selection of a target folder for the spam filter in the UI (<a href="http://bugs.horde.org/ticket/13917">Bug
+      #13917</a>).
+[jan] Fix Sieve error if days of vacation is unset (<a href="http://bugs.horde.org/ticket/13890">Bug #13890</a>).
+
+
+------
+v3.2.4
+------
 
 [mms] Rate-limit filters drag/drop changes to prevent race conditions (<a href="http://bugs.horde.org/ticket/13819">Bug
       #13819</a>).
