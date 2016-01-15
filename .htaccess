@@ -1,4 +1,9 @@
-allow from all
+<IfModule authz_core_module>
+    Require all granted
+</IfModule>
+<IfModule !authz_core_module>
+    Allow from all
+</IfModule>
 
 # Old website's URLs. Still missing:
 # /demo
