@@ -34,6 +34,11 @@
           <a style="margin:20px;text-decoration:none" href="http://www.chameleonjohn.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_chameleon-john.jpg" height="40"/>
           </a>
+          <?php if (time() < mktime(0, 0, 0, 1, 16, 2017)): ?>
+          <a style="margin:20px;text-decoration:none" href="http://travel-ticker.com/" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_travelticker.jpg" height="40"/>
+          </a>
+          <?php endif ?>
         </p>
         <br/>
 
