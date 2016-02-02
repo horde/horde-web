@@ -89,4 +89,15 @@ $quotes = array(
         'quote' => '"Horde Groupware is a great open source collaboration platform."',
         'author' => 'OtherData @OtherdataODN'
     ),
+    array(
+        'quote' => '"I must say that I\'m highly impressed by the overall
+quality of your (the Horde team) work! Horde is a model in terms of modular
+design, reusable components, features and configurability. Congratulations
+for this very high piece of quality software!
+And the quality of support on the mailing lists is on par with the software
+quality. I deal with commercial products by (unfortunate) necessity that
+don\'t have the tenth of your reactivity for support, let alone the coding
+quality!"',
+        'author' => 'Ob Noxious'
+    ),
 );
