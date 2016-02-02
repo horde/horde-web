@@ -107,9 +107,8 @@ Geheugen uitgeput
 <p>Assuming that you have put the translated Horde file in
 <tt class="docutils literal">/var/www/horde/locale/nl/LC_MESSAGES/horde.mo</tt>:</p>
 <pre class="literal-block">
-$ export TEXTDOMAINDIR=/var/www/horde/locale
-$ (LANG=nl_NL; LANGUAGE=nl_NL; LC_MESSAGES=nl_NL; gettext horde &quot;Message&quot; )
-Bericht
+$ TEXTDOMAINDIR=/var/www/horde/locale LANG=nl_NL.utf8 LANGUAGE=nl_NL.utf8 LC_MESSAGES=nl_NL.utf8 gettext horde &quot;Calendar&quot; )
+Agenda
 </pre>
 <p>Create a file in the horde directory, langtest.php:</p>
 <pre class="literal-block">
@@ -129,19 +128,19 @@ bindtextdomain('horde', './locale');
 textdomain('horde');
 
 // Print the already tested message
-echo _(&quot;Message&quot;);
+echo _(&quot;Calendar&quot;);
 echo '&lt;br /&gt;';
 
 // this should print the same.
-echo dgettext('horde', 'Message');
+echo dgettext('horde', 'Calendar');
 
 ?&gt;
 </pre>
 <p>Output web browser:</p>
 <pre class="literal-block">
 Geheugen uitgeput
-Bericht
-Bericht
+Agenda
+Agenda
 </pre>
 </li>
 </ol>
