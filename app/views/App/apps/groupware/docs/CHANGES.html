@@ -3,6 +3,78 @@
 v5.2.12-git
 -----------
 
+[jan] Use access rules compatible with both Apache 2.2 and 2.4.
+
+Horde Changes
+-------------
+[jan] SECURITY: Fix XSS vulnerability in menu bar exposed by few applications
+      (<a href="http://bugs.horde.org/ticket/14213">Bug #14213</a>).
+[jan] Add more detailed user DN settings to Kolab group configuration (<a href="http://bugs.horde.org/ticket/11737">Request
+      #11737</a>).
+[jan] Fix returning to last page after problem reporting from AJAX pages (<a href="http://bugs.horde.org/ticket/12112">Bug
+      #12112</a>).
+[jan] Fix custom database configuration for groups (<a href="http://bugs.horde.org/ticket/11664">Bug #11664</a>).
+[mjr] Fix reporting results for non-select queries in administrative sql shell
+      (<a href="http://bugs.horde.org/ticket/14216">Bug #14216</a>).
+
+Address Book Changes
+--------------------
+[jan] Fix building search query if some fields are set for strict search (<a href="http://bugs.horde.org/ticket/12272">Bug
+      #12272</a>).
+[mjr] Fix splitting tags over ActiveSync (<a href="http://bugs.horde.org/ticket/14218">Bug #14218</a>).
+[mjr] Fix searching within virtual address books (<a href="http://bugs.horde.org/ticket/14155">Bug #14155</a>).
+[mjr] Fix import of vCard with single component via API.
+
+Calendar Changes
+----------------
+[mjr] Fix missing truncated event description when using ActiveSync.
+[jan] Fix week number in basic view if week starts on Sundays.
+[mjr] Fix issue where new event could be created with exceptions from
+      previously edited event.
+[jan] Mark preferences only available in basic mode.
+[jan] Fix accidental deletion of events if importing recurring events without a
+      UID attribute (<a href="http://bugs.horde.org/ticket/14208">Bug #14208</a>).
+[mjr] Honor confirm_delete preference in dynamic view (<a href="http://bugs.horde.org/ticket/14188">Bug #14188</a>).
+[mjr] Correctly deal with cancelled meetings via ActiveSync.
+[mjr] Fix visibility of alarm titles when alarm is generated via CLI (<a href="http://bugs.horde.org/ticket/14154">Bug
+      #14154</a>).
+[mjr] Fix display of embed code by adding the full url.
+
+Tasks Changes
+-------------
+[mjr] Enforce child tasks must be completed before parent tasks in edit form
+      (<a href="http://bugs.horde.org/ticket/12308">Bug #12308</a>).
+[mjr] Fix possible fatal error due to tasks created with an alarm but no due
+      date (<a href="http://bugs.horde.org/ticket/14214">Bug #14214</a>).
+[mjr] Fix storage of parent field when using Kolab driver (<a href="http://bugs.horde.org/ticket/14197">Bug #14197</a>,
+      mike.gabriel@das-netzwerkteam.de).
+[mjr] Fix switching tab/filters when using Kolab driver (<a href="http://bugs.horde.org/ticket/14196">Bug #14196</a>,
+      mike.gabriel@das-netzwerkteam.de).
+[mjr] Fix moving subtasks to another tasklist when parent task is moved (<a href="http://bugs.horde.org/ticket/14209">Bug
+      #14209</a>).
+[mjr] Fix fatal error when saving tasks when system shares are present in
+      certain cases.
+[mjr] Return recurring tasks via listTimeObjects API (<a href="http://bugs.horde.org/ticket/14137">Bug #14137</a>).
+[mjr] Prevent orphaning tasks via the API.
+
+Notes Changes
+-------------
+[mjr] Fix fatal error when removing notepads in certain cases.
+
+File Manager Changes
+--------------------
+[jan] Fix fatal error when cutting and pasting files on the same backend.
+
+Bookmarks Changes
+-----------------
+[mjr] Fix tag links when tags contain URL special characters.
+
+Timeobject Changes
+------------------
+[jan] Add Italian translation (Massimo Balestrieri &lt;nag@hidaba.com>).
+
+Library Changes
+---------------
 
 
 -------
