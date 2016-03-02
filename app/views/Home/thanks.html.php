@@ -15,28 +15,28 @@
         <br/>
         <p style="text-align:center">
           <a style="margin:20px;text-decoration:none" href="http://www.psw.net/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_psw.gif" height="40"/>
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/psw.gif" height="40"/>
           </a>
           <a style="margin:20px;text-decoration:none" href="http://www.canadianwebhosting.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_cwh.png" height="40"/>
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/cwh.png" height="40"/>
           </a>
           <a style="margin:20px;text-decoration:none" href="http://www.qr-code-generator.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_qrcode.png" height="40"/>
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/qrcode.png" height="40"/>
           </a>
         </p>
         <p style="text-align:center">
           <a style="margin:20px;text-decoration:none" href="http://www.aoe.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_aoe.jpg" height="40"/>
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/aoe.jpg" height="40"/>
           </a>
           <a style="margin:20px;text-decoration:none" href="http://dealspotr.com/" target="_blank">
-            <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_blue.png" height="40" />
+            <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/blue.png" height="40" />
           </a>
           <a style="margin:20px;text-decoration:none" href="http://www.chameleonjohn.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_chameleon-john.jpg" height="40"/>
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/chameleon-john.jpg" height="40"/>
           </a>
           <?php if (time() < mktime(0, 0, 0, 1, 16, 2017)): ?>
           <a style="margin:20px;text-decoration:none" href="http://travel-ticker.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/logo_sponsor_travelticker.jpg" height="40"/>
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/travelticker.jpg" height="40"/>
           </a>
           <?php endif ?>
         </p>
