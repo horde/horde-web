@@ -23,11 +23,11 @@
           <a style="margin:20px;text-decoration:none" href="http://www.qr-code-generator.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/qrcode.png" height="40"/>
           </a>
-        </p>
-        <p style="text-align:center">
           <a style="margin:20px;text-decoration:none" href="http://www.aoe.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/aoe.jpg" height="40"/>
           </a>
+        </p>
+        <p style="text-align:center">
           <a style="margin:20px;text-decoration:none" href="http://dealspotr.com/" target="_blank">
             <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/blue.png" height="40" />
           </a>
@@ -39,6 +39,9 @@
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/travelticker.jpg" height="40"/>
           </a>
           <?php endif ?>
+          <a style="margin:20px;text-decoration:none" href="http://whatisseo.com/" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/whatisseo.png" yheight="40"/>
+          </a>
         </p>
         <br/>
 
