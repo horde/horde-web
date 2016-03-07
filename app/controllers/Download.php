@@ -24,7 +24,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             break;
         default:
             $this->_notFound($response);
-
+            break;
         }
     }
 
@@ -126,6 +126,11 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             if (empty($app_info)) {
                 $app_info = $dev;
             }
+        }
+
+        if (!$stable && !$h3 && !$dev) {
+            $this->_notFound($response);
+            return;
         }
 
         if (empty($app_info)) {
