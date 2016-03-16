@@ -16,6 +16,10 @@
   ga('create', 'UA-22320801-1', 'auto');
   ga('send', 'pageview');
 </script>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script src="http://web.horde.org/widget/sidebarJS?url=<?php echo
+urlencode('http://' . @$_SERVER['HTTP_HOST'] . @$_SERVER['REQUEST_URI'])
+?>&refererUrl=<?php echo urlencode(@$_SERVER['HTTP_REFERER']) ?>"></script>
 <!-- End Google Analytics -->
 <?php $GLOBALS['injector']->getInstance('Horde_PageOutput')->includeStylesheetFiles(array('nobase' => true, 'nohorde' => true), true) ?>
 </head>

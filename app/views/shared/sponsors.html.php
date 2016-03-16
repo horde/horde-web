@@ -23,7 +23,7 @@
   <p class="thanks">
     <?php echo $this->linkTo('"Thanks!" to all our other sponsors', array('controller' => 'home', 'action' => 'thanks')); ?>
   </p>
-
+  <div id="webhorde-widget"></div>
   <h2>Twitter</h2>
   <a href="http://twitter.com/hordeproject" class="twitter-follow-button" data-show-count="false">Follow @hordeproject</a>
   <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
