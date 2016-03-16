@@ -969,3 +969,7 @@ div.mail {
 h3 img.download {
     margin-left: 5px;
 }
+
+#webhorde-widget li {
+    list-style: none;
+}
