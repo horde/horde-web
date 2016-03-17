@@ -45,7 +45,7 @@
         screen. Also, please take a look
         at <a href="http://web.horde.org/asktog.com/columns/047HowToWriteAReport.html">How
         to Deliver a Report Without Getting Lynched</a> or
-        ESR's <a href="http://web.horde.org/tuxedo.org/~esr/faqs/smart-questions.html">How
+        ESR's <a href="http://web.horde.org/catb.org/esr/faqs/smart-questions.html">How
         To Ask Questions The Smart Way</a>. It will help us help you.</p>
 
         <div class="hint"><p>Note: your best bet for help is the mailing
@@ -62,7 +62,7 @@
         first to see if anyone has already filed a similar bug, if not open a
         new bug yourself.  Remember to use clear language, to be specific and
         verbose in your description.  Please
-        read <a href="http://web.horde.org/freshmeat.net/articles/view/149/">this
+        read <a href="http://web.horde.org/freecode.com/articles/how-to-report-bugs-effectively">this
         editorial</a> on writing good bug reports.</p>
 
         <div class="warning"><p>Please remember: bug reports and any feedback

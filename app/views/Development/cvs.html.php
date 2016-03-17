@@ -17,12 +17,12 @@
           should be installed with most modern Linux distributions, easily
           available on *BSD systems, and there are clients for Win32, MacOS, and
           GUI clients for the Unices. A number of them are available at <a
-          href="http://web.horde.org/cvshome.org/">http://www.cvshome.org/</a>.</p>
+          href="http://web.horde.org/nongnu.org/cvs/">http://www.nongnu.org/cvs/</a>.</p>
 
           <p>These command lines should be the bare-bones needed to get you
           started with Horde and CVS; this is not a CVS tutorial, however. The
           standard CVS documentation is available <a
-          href="http://web.horde.org/loria.fr/~molli/cvs/doc/cvs_toc.html">here</a>, and
+          href="http://web.horde.org/nongnu.org/cvs/">here</a>, and
           there are many HOWTOs available on the web.</p>
           </div>
 
@@ -133,7 +133,8 @@
         <p>where -r &lt;TAG&gt; is optional, and specifies a tag or branch to
         check out (see <a href="index.php">the general CVS info</a> for what
         the branches mean), and &lt;MODULE&gt; is one of the <a
-        href="modules.php">available modules</a>. The modules list also says
+        href="<?php echo $this->urlWriter->urlFor('development',
+          array('action' => 'cvsmodules')) ?>">available modules</a>. The modules list also says
         what tags are available for each module.</p>
 
         <p>This will create a <tt>&lt;MODULE&gt;</tt> directory in your

@@ -8,6 +8,6 @@
         href="http://web.horde.org/php.net/">PHP</a>, and <a
         href="http://web.horde.org/php.net/">PEAR</a>.</li>
     <li>Personal: <a href="http://web.horde.org/hagenbu.ch/">http://hagenbu.ch/</a></li>
-    <li>Wishlists: <a href="http://web.horde.org/amazon.com/o/registry/W0X96F8UISR4">Amazon</a></li>
+    <li>Wishlists: <a href="http://web.horde.org/amazon.com/gp/registry/wishlist/2BT5O4LQC1U7Y">Amazon</a></li>
   </ul>
 </div>

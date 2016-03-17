@@ -59,7 +59,7 @@
         a scripting language explicitly designed to be embedded in web pages. PHP can
         be embedded directly into the web server, with plugins for not just <a
         href="http://web.horde.org/apache.org/">Apache</a> but also <a
-        href="http://web.horde.org/microsoft.com/iis/">IIS</a>, <a
+        href="http://web.horde.org/iis.net/">IIS</a>, <a
         href="http://web.horde.org/wwws.sun.com/software/products/web_srvr/home_web_srvr.html">Sun Web
         Server</a>, and <a
         href="http://web.horde.org/redmine.lighttpd.net/projects/show/lighttpd/">Lighttpd</a>
