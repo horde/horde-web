@@ -14,32 +14,32 @@
         </p>
         <br/>
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="http://www.psw.net/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/psw.net/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/psw.gif" height="40" alt="PSW GROUP" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://www.canadianwebhosting.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/canadianwebhosting.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/cwh.png" height="40" alt="Canadian Web Hosting" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://www.qr-code-generator.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/qr-code-generator.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/qrcode.png" height="40" alt="QR Code Generator" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://www.aoe.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/aoe.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/aoe.jpg" height="40" alt="AOE" />
           </a>
         </p>
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="http://dealspotr.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/dealspotr.com/" target="_blank">
             <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/blue.png" height="40" alt="Dealspotr" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://www.chameleonjohn.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/chameleonjohn.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/chameleon-john.jpg" height="40" alt="ChameleonJohn" />
           </a>
           <?php if (time() < mktime(0, 0, 0, 1, 16, 2017)): ?>
-          <a style="margin:20px;text-decoration:none" href="http://travel-ticker.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/travel-ticker.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/travelticker.jpg" height="40" alt="Travel Ticker" />
           </a>
           <?php endif ?>
-          <a style="margin:20px;text-decoration:none" href="http://whatisseo.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/whatisseo.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/whatisseo.png" height="40" alt="What Is SEO?" />
           </a>
         </p>
@@ -92,9 +92,9 @@
         <p>The Horde.org servers are generously hosted by the following
         organizations:
         <ul>
-          <li><a href="http://www.hub.org/?ri=765">Hub.org Networking
+          <li><a href="http://web.horde.org/hub.org/?ri=765">Hub.org Networking
             Services</a>: Mailing lists, PEAR, FTP</li>
-          <li><a href="https://www.b1-systems.de/">B1 Systems</a></li>
+          <li><a href="http://web.horde.org/b1-systems.de/">B1 Systems</a></li>
         </ul>
         </p>
 
@@ -103,7 +103,7 @@
         Viebrock.</p>
 
         <h3>Licenses</h3>
-        <a style="display:block; text-decoration:none" href="http://www.synthesis.ch/" target="_blank">
+        <a style="display:block; text-decoration:none" href="http://web.horde.org/synthesis.ch/" target="_blank">
         <img src="<?php echo $GLOBALS['host_base'] ?>/images/synthesis.jpg" height="31"/>
         SyncML client licenses have been generously donated by Synthesis AG</a>
 

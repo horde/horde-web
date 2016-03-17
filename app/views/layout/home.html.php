@@ -17,7 +17,7 @@
   ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
-<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="<?php echo $GLOBALS['host_base'] ?>/js/jquery-1.4.4.min.js"></script>
 <script src="http://web.horde.org/widget/sidebarJS?url=<?php echo
 urlencode('http://' . @$_SERVER['HTTP_HOST'] . @$_SERVER['REQUEST_URI'])
 ?>&refererUrl=<?php echo urlencode(@$_SERVER['HTTP_REFERER']) ?>"></script>
