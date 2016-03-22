@@ -283,4 +283,26 @@ class HordeWeb_Utils
         return $GLOBALS['injector']->getInstance('Horde_Cache');
     }
 
+    /**
+     * Replace links with links to the web.horde.org subdomain.
+     *
+     * Replaces any URLs that do not point to a horde.org domain.
+     *
+     * @param  string  The URL to replace.
+     *
+     * @return string  The new URL.
+     */
+    static public function wrapLink($link)
+    {
+        $parts = parse_url($link);
+        if (!empty($parts['scheme']) &&
+            strpos($parts['scheme'], 'http') === 0 &&
+            strpos($parts['host'], 'horde.org') === false) {
+            $link = 'http://web.horde.org/'
+                . preg_replace('/^www\./', '', $parts['host'])
+                . (!empty($parts['path']) ? $parts['path'] : '');
+        }
+        return $link;
+    }
+
 }
