@@ -973,3 +973,45 @@ h3 img.download {
 #webhorde-widget li {
     list-style: none;
 }
+
+#web-horde h2 {
+  background: rgba(0, 0, 0, 0) url(../images/web-horde-widget-ribbon.png) no-repeat scroll 0 0;
+  font-size: 14px;
+  height: 43px;
+  left: -24px;
+  letter-spacing: -1px;
+  line-height: 26px;
+  padding-left: 24px;
+  padding-top: 8px;
+  position: relative;
+}
+#web-horde h2 i {
+  color: #fff;
+  font: 10px/12px Tahoma;
+  letter-spacing: normal;
+  line-height: 26px;
+  margin-bottom: 0;
+  padding: 0;
+  position: absolute;
+  right: 24px;
+  top: 8px;
+}
+#web-horde ul {
+  margin-left: 10px;
+  overflow: hidden;
+  list-style: outside none none;
+}
+#web-horde li {
+  float: left;
+  margin-left: 20px;
+  border-bottom: 1px dotted #afafaf;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+#web-horde li a {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  word-wrap: break-word;
+}
