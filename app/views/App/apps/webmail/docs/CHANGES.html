@@ -1,8 +1,211 @@
 <h3>Changes by Release</h3><pre>
 -----------
-v5.2.13-git
+v5.2.15-git
 -----------
 
+
+
+-------
+v5.2.14
+-------
+
+[jan] Update Greek translation (Limperis Antonis &lt;limperis@cti.gr>).
+
+Mail Changes
+------------
+[mjr] Fix renaming subfolders in basic view (<a href="http://bugs.horde.org/ticket/14254">Bug #14254</a>).
+[mjr] Fix display of mailbox sizes in basic view (<a href="http://bugs.horde.org/ticket/14308">Bug #14308</a>).
+[mjr] Fix fatal error when deleting messages in basic view when IMAP server
+      does not support QRESYNC or CONDSTORE (<a href="http://bugs.horde.org/ticket/14257">Bug #14257</a>).
+
+Filter Changes
+--------------
+[jan] Don't duplicate messages in Procmail's vacation recipe if excluding email
+      addresses (Michael.Martin@warp-it.com, <a href="http://bugs.horde.org/ticket/14275">Bug #14275</a>).
+[jan] Remove stop-script feature from Procmail driver.
+
+Address Book Changes
+--------------------
+[mjr] Fix persisting tags when moving or copying a contact to another address
+      book (<a href="http://bugs.horde.org/ticket/14312">Bug #14312</a>).
+[mjr] Fix resetting state when changing sync_book prefs and device has forced
+      multiplex.
+[mjr] Fix synchronizing contact notes via ActiveSync when no truncation value
+      is requested by the client (<a href="http://bugs.horde.org/ticket/14307">Bug #14307</a>).
+
+Tasks Changes
+-------------
+[jan] Fix regression with date picker in tasks form (<a href="http://bugs.horde.org/ticket/14303">Bug #14303</a>).
+[mjr] Fix handling EAS categories/tags.
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Improve handling of when a client sends an incorrect synckey.
+
+Auth
+[mjr] Fix creating/removing mailbox in cyrsql driver
+      (federico.mennite@lifeware.ch, <a href="http://bugs.horde.org/ticket/14295">Bug #14295</a>).
+
+Crypt
+[jan] Work around broken PGP key servers.
+
+Css_Parser
+[jan] Update to PHP-CSS-Parser 7.0.2 (<a href="http://bugs.horde.org/ticket/14297">Request #14297</a>).
+
+Dav
+[jan] Fix down migration of database schema.
+
+Log
+[jan] Add a few common aliases for the log level constants.
+[jan] Allow to have mltiple log level names with the same value.
+
+Nls
+[jan] Add Horde_Nls::getTimezonesWithAbbreviations().
+
+
+-------
+v5.2.13
+-------
+
+[jan] Update Greek translation (Limperis Antonis &lt;limperis@cti.gr>).
+
+Horde Changes
+-------------
+[mjr] Remove broken Facebook posting functionality from the Facebook block.
+[jan] Check if temporary directory is writable
+      (skhorde@smail.inf.fh-bonn-rhein-sieg.de, <a href="http://bugs.horde.org/ticket/14237">Request #14237</a>).
+
+Mail Changes
+------------
+[mjr] Fix opening compose window on IE when uploads are disabled (<a href="http://bugs.horde.org/ticket/14267">Bug #14267</a>).
+[jan] Fix creating new trash folder from preference screen.
+[jan] Fix finding reply or forward text from signed or encrypted messages with
+      HTML content.
+
+Filter Changes
+--------------
+[mjr] Fix PHP deprecated warnings in unit test (PR #176, Mathieu Parent
+      &lt;math.parent@gmail.com>).
+[mjr] Honor 'date', 'echo', and 'ls' path overrides (<a href="http://bugs.horde.org/ticket/14284">Bug #14284</a>).
+[jan] Fix Oracle compatibility (<a href="http://bugs.horde.org/ticket/14262">Bug #14262</a>).
+
+Address Book Changes
+--------------------
+[mjr] Honor alternative_name mapping (<a href="http://bugs.horde.org/ticket/14280">Bug #14280</a>).
+[mjr] Fix dealing with orphaned virtual address books.
+
+Calendar Changes
+----------------
+[mjr] Fix updating list of resource calendars in resource group dialog (<a href="http://bugs.horde.org/ticket/14281">Bug
+      #14281</a>).
+[jan] Fixed several issues with resource management.
+[mjr] Fix typo preventing deletion of events from dynamic view (<a href="http://bugs.horde.org/ticket/14256">Bug #14256</a>).
+[jan] Handle gracefully if the base event of an imported recurrence exception
+      is no longer recurring (<a href="http://bugs.horde.org/ticket/14249">Bug #14249</a>).
+[mjr] Fix issue deleting and closing event dialog during event deletion.
+[mjr] Honor the SCHEDULE-AGENT attribute during CalDAV import.
+[mjr] Add missing EAS ghosted property support for all EAS versions. Prevents
+      potential loss of event data during synchronization.
+
+Tasks Changes
+-------------
+[mjr] Honor date_format prefs in Task form (<a href="http://bugs.horde.org/ticket/14287">Bug #14287</a>).
+
+Bookmarks Changes
+-----------------
+[cjh] Fix error when deleting bookmarks.
+
+Library Changes
+---------------
+[jan] Mark PHP 7 as supported.
+
+ActiveSync
+[mjr] Fix possible leaking of Horde_Imap_Client Exceptions.
+[mjr] Fix reversed login in GHOSTED element handling.
+[mjr] Changes for EAS 16.0 support.
+[mjr] Fix error when attempting to rewrite previous syncstate.
+[mjr] Another fix for GHOSTED support on certain clients.
+[mjr] Fix regression in handling all day events in EAS versions prior to 16.0.
+[mjr] Fix undefined variable notices (<a href="http://bugs.horde.org/ticket/14251">Bug #14251</a>).
+[mjr] Fix WBXML output when allday event exceptions have no starttime set (<a href="http://bugs.horde.org/ticket/14255">Bug
+      #14255</a>).
+[mjr] Fix calculation of when to send MOREAVAILABLE tag.
+[mjr] More fixes for allday exception events (<a href="http://bugs.horde.org/ticket/14255">Bug #14255</a>).
+[mjr] Improvements to ActiveSync SETTINGS_ACCOUNTS response data.
+[mjr] Prevent mirroring back email category changes.
+[mjr] Fix the workaround for some versions of Outlook's broken behavior
+      regarding moving email messages.
+[mjr] Improve allday event handling in appointment objects (<a href="http://bugs.horde.org/ticket/14278">Bug #14278</a>).
+[mjr] Work around BC break in PHP 5.5.10 with converting timezone abbreviations
+      to full timezone names.
+
+Cache
+[jan] Fix incomplete migration from old to new garbage collection in file
+      backend (<a href="http://bugs.horde.org/ticket/14258">Bug #14258</a>).
+
+Core
+[mjr] Improvements to GHOSTED/SUPPORTED handling for ActiveSync.
+[mjr] Do not throw a fatal error if a meeting request can not be deleted after
+      responding to it.
+[mjr] Changes for EAS 16.0 support.
+[mjr] Honor the disabled property when rendering boolean form types.
+[jan] Fix returning to last page after problem reporting from AJAX pages (<a href="http://bugs.horde.org/ticket/12112">Bug
+      #12112</a>).
+[jan] Fix updating group cache with LDAP backend.
+[jan] Horde_Registry_Nlsconfig#validLang() checks now if a locale is installed
+      (<a href="http://bugs.horde.org/ticket/10457">Request #10457</a>).
+[jan] Add option to always lowercase user names after logging in.
+[mjr] Improvements to ActiveSync SETTINGS_ACCOUNTS response data.
+[mjr] Fix issues with ActiveSync clients and user defined message flags.
+[jan] Fix logging in from a different page than the login page (<a href="http://bugs.horde.org/ticket/14231">Bug #14231</a>).
+[jan] Add Horde_Core_Auth_Application#listNames().
+[jan] Don't call authusername() hook on administrator names when running CLI
+      scripts.
+[mjr] Fix fatal error with broken EAS clients searching the Outbox.
+
+Crypt
+[jan] Try three times to retrieve public PGP if the keyserver pool contains
+      broken servers.
+[jan] Fix throwing exception if verifying a PGP signature failed.
+
+Date
+[jan] Add Horde_Date::getTimezoneAlias().
+
+Image
+[mjr] Fixes for PHP 7.1.
+
+JavascriptMinify
+[jan] Fix compression with Closure.
+
+ManageSieve
+[jan] Fix usage of &apos;tlsv1&apos; connection setting (Ralf Becker
+      &lt;RalfBecker@outdoor-training.de>).
+[jan] Fix setting authentication credentials from login() (Ralf Becker
+      &lt;RalfBecker@outdoor-training.de>).
+[jan] Fix throwing exceptions (Ralf Becker &lt;RalfBecker@outdoor-training.de>).
+
+Db
+[jan] Bump earliest supported PostgreSQL version to 8.3.
+[jan] Improve getting tables and indexes from PostgreSQL servers (Ivan Sergio
+      Borgonovo &lt;mail@webthatworks.it>).
+
+Form
+[mjr] Allow non-breaking space to match in a telephone field (<a href="http://bugs.horde.org/ticket/14235">Request #14235</a>).
+
+Mapi
+[mjr] Work around BC break in PHP 5.5.10 with converting timezone abbreviations
+      to full timezone names.
+
+Mime_Viewer
+[jan] Add temp_dir configuration parameter to OpenOffice/LibreOffice viewer
+      (<a href="http://bugs.horde.org/ticket/11756">Request #11756</a>).
+
+Share
+[jan] Protect against certain share tables corruption (<a href="http://bugs.horde.org/ticket/14259">Bug #14259</a>).
+
+Timezone
+[jan] Support more timezone names in Horde_Timezone#getZone().
 
 
 -------
