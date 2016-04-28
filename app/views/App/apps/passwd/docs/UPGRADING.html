@@ -1,1 +1,126 @@
-
+<div class="document" id="upgrading-passwd">
+<h1 class="title">Upgrading Passwd</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#general-instructions" id="id3">1&nbsp;&nbsp;&nbsp;General instructions</a></li>
+<li><a class="reference internal" href="#upgrading-to-passwd-5-0-2" id="id4">2&nbsp;&nbsp;&nbsp;Upgrading to Passwd 5.0.2</a><ul class="auto-toc">
+<li><a class="reference internal" href="#hooks-configuration-hooks-php" id="id5">2.1&nbsp;&nbsp;&nbsp;Hooks Configuration (hooks.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-to-passwd-5-0" id="id6">3&nbsp;&nbsp;&nbsp;Upgrading to Passwd 5.0</a><ul class="auto-toc">
+<li><a class="reference internal" href="#backend-configuration-backends-php" id="id7">3.1&nbsp;&nbsp;&nbsp;Backend Configuration (backends.php)</a></li>
+<li><a class="reference internal" href="#id1" id="id8">3.2&nbsp;&nbsp;&nbsp;Hooks Configuration (hooks.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-to-passwd-4-0" id="id9">4&nbsp;&nbsp;&nbsp;Upgrading to Passwd 4.0</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id2" id="id10">4.1&nbsp;&nbsp;&nbsp;Backend Configuration (backends.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-to-passwd-3-1" id="id11">5&nbsp;&nbsp;&nbsp;Upgrading to Passwd 3.1</a><ul class="auto-toc">
+<li><a class="reference internal" href="#application-hooks" id="id12">5.1&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
+<li><a class="reference internal" href="#new-hook-parameters" id="id13">5.2&nbsp;&nbsp;&nbsp;New Hook Parameters</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general-instructions">
+<h1><a class="toc-backref" href="#id3">1&nbsp;&nbsp;&nbsp;General instructions</a></h1>
+<p>These are instructions to upgrade from earlier Passwd versions.</p>
+<p>Upgrading Passwd is as easy as running:</p>
+<pre class="literal-block">
+pear upgrade -a -B horde/passwd
+</pre>
+<p>If you want to upgrade Passwd with all binary dependencies, you need to remove
+the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP extensions
+through PECL that might need further configuration or activation in your PHP
+configuration:</p>
+<pre class="literal-block">
+pear upgrade -a horde/passwd
+</pre>
+<p>If you want to upgrade to an alpha or beta version of Passwd, you need to tell
+the PEAR installer to prefer non-stable package versions. Please note that this
+might also install pre-release 3rd-party PEAR packages:</p>
+<pre class="literal-block">
+pear -d preferred_state=alpha upgrade -a horde/passwd
+</pre>
+<p>If you want to upgrade from a Passwd version prior to 4.0, please follow the
+instructions in <a class="reference external" href="INSTALL">INSTALL</a> to install the most recent Passwd version using the
+PEAR installer.</p>
+<p>After updating to a newer Passwd version, you <strong>always</strong> need to update
+configurations. Log in as an administrator, go to Administration =&gt;
+Configuration and update anything that's highlighted as outdated.</p>
+</div>
+<div class="section" id="upgrading-to-passwd-5-0-2">
+<h1><a class="toc-backref" href="#id4">2&nbsp;&nbsp;&nbsp;Upgrading to Passwd 5.0.2</a></h1>
+<div class="section" id="hooks-configuration-hooks-php">
+<h2><a class="toc-backref" href="#id5">2.1&nbsp;&nbsp;&nbsp;Hooks Configuration (hooks.php)</a></h2>
+<p>The 'userdn' hook has been re-added.</p>
+</div>
+</div>
+<div class="section" id="upgrading-to-passwd-5-0">
+<h1><a class="toc-backref" href="#id6">3&nbsp;&nbsp;&nbsp;Upgrading to Passwd 5.0</a></h1>
+<p>NOTE: If changing a password that is currently being used to authenticate to
+Horde, you CANNOT continue to use Horde after changing the authentication
+password. Instead, you MUST configure backends.local.php to logout of Horde
+after a successful password change (see the logout parameter in
+<tt class="docutils literal">config/backends.php</tt>). The old authentication credentials may be cached in
+various Horde applications, and there is no way to clear this cache unless the
+session is destroyed.</p>
+<div class="section" id="backend-configuration-backends-php">
+<h2><a class="toc-backref" href="#id7">3.1&nbsp;&nbsp;&nbsp;Backend Configuration (backends.php)</a></h2>
+<p>The following options have been added:</p>
+<pre class="literal-block">
+logout
+</pre>
+<p>The following options have been removed:</p>
+<pre class="literal-block">
+no_reset
+</pre>
+</div>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id8">3.2&nbsp;&nbsp;&nbsp;Hooks Configuration (hooks.php)</a></h2>
+<p>The 'default_username' hook no longer receives a $user parameter.</p>
+<p>The 'userdn' hook has been removed. It can now be configured using the
+'userdn' parameter in the LDAP driver configuration.</p>
+</div>
+</div>
+<div class="section" id="upgrading-to-passwd-4-0">
+<h1><a class="toc-backref" href="#id9">4&nbsp;&nbsp;&nbsp;Upgrading to Passwd 4.0</a></h1>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id10">4.1&nbsp;&nbsp;&nbsp;Backend Configuration (backends.php)</a></h2>
+<p>The 'password policy' setting in backends.php has been renamed to 'policy'.</p>
+</div>
+</div>
+<div class="section" id="upgrading-to-passwd-3-1">
+<h1><a class="toc-backref" href="#id11">5&nbsp;&nbsp;&nbsp;Upgrading to Passwd 3.1</a></h1>
+<div class="section" id="application-hooks">
+<h2><a class="toc-backref" href="#id12">5.1&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
+<p>All hooks that are specific to Passwd have been moved from the
+<tt class="docutils literal">horde/config/hooks.php</tt> file. Move your existing Passwd Hooks from there to
+<tt class="docutils literal">passwd/config/hooks.php</tt>.</p>
+</div>
+<div class="section" id="new-hook-parameters">
+<h2><a class="toc-backref" href="#id13">5.2&nbsp;&nbsp;&nbsp;New Hook Parameters</a></h2>
+<p>The _passwd_hook_username hook is now passed an additional parameter, the
+Passwd_Driver_* object for the backend that you are changing the password on.
+This allows Passwd to support users being able to change passwords on multiple
+backends even when the different backends may have different requirements for
+the username (such as one <a class="reference external" href="mailto:requiring'user&#64;example.com">requiring'user&#64;example.com</a>' while another only
+requiring 'user'). Additionally, the Passwd_Driver_composite driver also
+supports this functionality by checking for the existence of a parameter
+called 'be_username' in each of it's sub-drivers. If this parameter is
+present, its value overrides any other value of $userid it is passed. If you
+wish to use this functionality of the composite driver, look at the example
+_passwd_hook_username function in horde/config/hooks.php.dist.</p>
+</div>
+</div>
+</div>

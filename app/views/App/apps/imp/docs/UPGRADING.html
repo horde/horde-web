@@ -1,1 +1,743 @@
+<div class="document" id="upgrading-imp">
+<h1 class="title">Upgrading IMP</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:imp&#64;lists.horde.org">imp&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#general-instructions" id="id23">1&nbsp;&nbsp;&nbsp;General instructions</a></li>
+<li><a class="reference internal" href="#upgrading-imp-from-6-1-x-to-6-2" id="id24">2&nbsp;&nbsp;&nbsp;Upgrading IMP From 6.1.x To 6.2</a><ul class="auto-toc">
+<li><a class="reference internal" href="#server-options-backends-php" id="id25">2.1&nbsp;&nbsp;&nbsp;Server Options (backends.php)</a></li>
+<li><a class="reference internal" href="#configuration-options-conf-php" id="id26">2.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
+<li><a class="reference internal" href="#hooks-hooks-php" id="id27">2.3&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></li>
+<li><a class="reference internal" href="#mime-viewer-options-mime-drivers-php" id="id28">2.4&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></li>
+<li><a class="reference internal" href="#permissions" id="id29">2.5&nbsp;&nbsp;&nbsp;Permissions</a></li>
+<li><a class="reference internal" href="#preferences-prefs-php" id="id30">2.6&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+<li><a class="reference internal" href="#api-changes" id="id31">2.7&nbsp;&nbsp;&nbsp;API Changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-6-1-x-to-6-1-4" id="id32">3&nbsp;&nbsp;&nbsp;Upgrading IMP From 6.1.x To 6.1.4</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id1" id="id33">3.1&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-6-0-x-to-6-1" id="id34">4&nbsp;&nbsp;&nbsp;Upgrading IMP From 6.0.x To 6.1</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id2" id="id35">4.1&nbsp;&nbsp;&nbsp;Server Options (backends.php)</a></li>
+<li><a class="reference internal" href="#id3" id="id36">4.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
+<li><a class="reference internal" href="#id4" id="id37">4.3&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></li>
+<li><a class="reference internal" href="#id5" id="id38">4.4&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></li>
+<li><a class="reference internal" href="#id6" id="id39">4.5&nbsp;&nbsp;&nbsp;Permissions</a></li>
+<li><a class="reference internal" href="#id7" id="id40">4.6&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+<li><a class="reference internal" href="#id8" id="id41">4.7&nbsp;&nbsp;&nbsp;API Changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-x-to-6-x" id="id42">5&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.x To 6.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id9" id="id43">5.1&nbsp;&nbsp;&nbsp;Server Options (backends.php)</a></li>
+<li><a class="reference internal" href="#id10" id="id44">5.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
+<li><a class="reference internal" href="#id11" id="id45">5.3&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></li>
+<li><a class="reference internal" href="#id12" id="id46">5.4&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></li>
+<li><a class="reference internal" href="#id13" id="id47">5.5&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+<li><a class="reference internal" href="#id14" id="id48">5.6&nbsp;&nbsp;&nbsp;API Changes</a></li>
+<li><a class="reference internal" href="#compose-linked-attachments" id="id49">5.7&nbsp;&nbsp;&nbsp;Compose: Linked Attachments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-22" id="id50">6&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.22</a><ul class="auto-toc">
+<li><a class="reference internal" href="#configuration-conf-php" id="id51">6.1&nbsp;&nbsp;&nbsp;Configuration (conf.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-20" id="id52">7&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.20</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id15" id="id53">7.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-15" id="id54">8&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.15</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id16" id="id55">8.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-14" id="id56">9&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.14</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id17" id="id57">9.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-12" id="id58">10&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.12</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id18" id="id59">10.1&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-5-0-x-to-5-0-10" id="id60">11&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.10</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id19" id="id61">11.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-4-x-to-5-x" id="id62">12&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.x To 5.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#html-gui-editor" id="id63">12.1&nbsp;&nbsp;&nbsp;HTML GUI editor</a></li>
+<li><a class="reference internal" href="#server-options-backends-php-old-servers-php" id="id64">12.2&nbsp;&nbsp;&nbsp;Server Options (backends.php; OLD servers.php)</a></li>
+<li><a class="reference internal" href="#id20" id="id65">12.3&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></li>
+<li><a class="reference internal" href="#id21" id="id66">12.4&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></li>
+<li><a class="reference internal" href="#id22" id="id67">12.5&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></li>
+<li><a class="reference internal" href="#custom-message-headers-old-header-php" id="id68">12.6&nbsp;&nbsp;&nbsp;Custom Message Headers (OLD header.php)</a></li>
+<li><a class="reference internal" href="#custom-message-trailers-old-trailer-txt" id="id69">12.7&nbsp;&nbsp;&nbsp;Custom Message Trailers (OLD trailer.txt)</a></li>
+<li><a class="reference internal" href="#fetchmail" id="id70">12.8&nbsp;&nbsp;&nbsp;Fetchmail</a></li>
+<li><a class="reference internal" href="#flags" id="id71">12.9&nbsp;&nbsp;&nbsp;Flags</a></li>
+<li><a class="reference internal" href="#menu" id="id72">12.10&nbsp;&nbsp;&nbsp;Menu</a></li>
+<li><a class="reference internal" href="#portal" id="id73">12.11&nbsp;&nbsp;&nbsp;Portal</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-4-1-x-to-4-2-x" id="id74">13&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.1.x To 4.2.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sql-backend" id="id75">13.1&nbsp;&nbsp;&nbsp;SQL Backend</a></li>
+<li><a class="reference internal" href="#unified-imap-quota-driver" id="id76">13.2&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></li>
+<li><a class="reference internal" href="#application-hooks" id="id77">13.3&nbsp;&nbsp;&nbsp;Application Hooks</a></li>
+<li><a class="reference internal" href="#user-defined-mailbox-icons" id="id78">13.4&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></li>
+<li><a class="reference internal" href="#changed-preferences" id="id79">13.5&nbsp;&nbsp;&nbsp;Changed Preferences</a></li>
+<li><a class="reference internal" href="#new-message-list-format-hook" id="id80">13.6&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></li>
+<li><a class="reference internal" href="#spell-checking" id="id81">13.7&nbsp;&nbsp;&nbsp;Spell Checking</a></li>
+<li><a class="reference internal" href="#javascript-html-editor" id="id82">13.8&nbsp;&nbsp;&nbsp;Javascript HTML Editor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upgrading-imp-from-4-0-x-to-4-1-x" id="id83">14&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.0.x To 4.1.x</a><ul class="auto-toc">
+<li><a class="reference internal" href="#automatic-namespace-detection" id="id84">14.1&nbsp;&nbsp;&nbsp;Automatic Namespace Detection</a></li>
+<li><a class="reference internal" href="#user-defined-headers" id="id85">14.2&nbsp;&nbsp;&nbsp;User-Defined Headers</a></li>
+<li><a class="reference internal" href="#removed-preferences" id="id86">14.3&nbsp;&nbsp;&nbsp;Removed Preferences</a></li>
+<li><a class="reference internal" href="#virtual-folders" id="id87">14.4&nbsp;&nbsp;&nbsp;Virtual Folders</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general-instructions">
+<h1><a class="toc-backref" href="#id23">1&nbsp;&nbsp;&nbsp;General instructions</a></h1>
+<p>These are instructions to upgrade from earlier IMP versions. Please backup your
+existing data before running any of the steps described below. You can't use
+the updated data with your old IMP version anymore.</p>
+<p>Upgrading IMP is as easy as running:</p>
+<pre class="literal-block">
+pear upgrade -a -B horde/imp
+</pre>
+<p>If you want to upgrade IMP with all binary dependencies, you need to remove
+the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP extensions
+through PECL that might need further configuration or activation in your PHP
+configuration:</p>
+<pre class="literal-block">
+pear upgrade -a horde/imp
+</pre>
+<p>If you want to upgrade to an alpha or beta version of IMP, you need to tell
+the PEAR installer to prefer non-stable package versions. Please note that this
+might also install pre-release 3rd-party PEAR packages:</p>
+<pre class="literal-block">
+pear -d preferred_state=alpha upgrade -a horde/imp
+</pre>
+<p>If you want to upgrade from an IMP version prior to 5.0, please follow the
+instructions in <a class="reference external" href="INSTALL">INSTALL</a> to install the most recent IMP version using the PEAR
+installer.</p>
+<p>After updating to a newer IMP version, you <strong>always</strong> need to update
+configurations and database schemes. Log in as an administrator, go to
+Administration =&gt; Configuration and update anything that's highlighted as
+outdated.</p>
+</div>
+<div class="section" id="upgrading-imp-from-6-1-x-to-6-2">
+<h1><a class="toc-backref" href="#id24">2&nbsp;&nbsp;&nbsp;Upgrading IMP From 6.1.x To 6.2</a></h1>
+<div class="section" id="server-options-backends-php">
+<h2><a class="toc-backref" href="#id25">2.1&nbsp;&nbsp;&nbsp;Server Options (backends.php)</a></h2>
+<p>The 'format' quota option has been removed.</p>
+<p>The 'cache_lifetime' option is now honored for the 'cache' and 'hashtable'
+caching backends.</p>
+<p>The 'interval' parameter has been added to the quota configuration.</p>
+<p>The 'lmtp' parameter has been added to the smtp configuration.</p>
+</div>
+<div class="section" id="configuration-options-conf-php">
+<h2><a class="toc-backref" href="#id26">2.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
+<p>The following options have been added:</p>
+<pre class="literal-block">
+$conf['compose']['htmlsig_img_size']
+$conf['compose']['link_attach_size_hard']
+$conf['contactsimage']['backends']
+$conf['maillog']['driver']
+</pre>
+<p>The following options have been removed:</p>
+<pre class="literal-block">
+$conf['compose']['ac_threshold']
+$conf['compose']['convert_to_related']
+$conf['maillog']['use_maillog']
+</pre>
+<p>The default value for the following options have been changed:</p>
+<blockquote>
+$conf['pgp']['keylength']</blockquote>
+</div>
+<div class="section" id="hooks-hooks-php">
+<h2><a class="toc-backref" href="#id27">2.3&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
+<p>The following hooks have been added:</p>
+<pre class="literal-block">
+compose_addr
+</pre>
+</div>
+<div class="section" id="mime-viewer-options-mime-drivers-php">
+<h2><a class="toc-backref" href="#id28">2.4&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></h2>
+<p>The 'pgp_inline' config parameter has been added to the plaintext driver.
+The 'thumbnails_dataurl' config parameter has been added to the images driver.</p>
+</div>
+<div class="section" id="permissions">
+<h2><a class="toc-backref" href="#id29">2.5&nbsp;&nbsp;&nbsp;Permissions</a></h2>
+<p>The 'max_bodysize' permission has been added.</p>
+</div>
+<div class="section" id="preferences-prefs-php">
+<h2><a class="toc-backref" href="#id30">2.6&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The following preferences have been added:</p>
+<pre class="literal-block">
+signature_show_compose
+</pre>
+<p>The following preferences have been removed:</p>
+<pre class="literal-block">
+default_msg_charset
+mail_domain
+mimp_download_confirm
+mimp_inline_all
+mimp_preview_msg
+pgp_scan_body
+</pre>
+<p>The default value for the following preferences have been changed:</p>
+<pre class="literal-block">
+ckeditor_buttons
+</pre>
+</div>
+<div class="section" id="api-changes">
+<h2><a class="toc-backref" href="#id31">2.7&nbsp;&nbsp;&nbsp;API Changes</a></h2>
+<p>These API calls have been changed:</p>
+<pre class="literal-block">
+- mailboxList
 
+  Added the 'subscribed' return value.
+</pre>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-6-1-x-to-6-1-4">
+<h1><a class="toc-backref" href="#id32">3&nbsp;&nbsp;&nbsp;Upgrading IMP From 6.1.x To 6.1.4</a></h1>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id33">3.1&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
+<p>The 'trailer' hook now has two additional parameters in addition to the
+previously existing $html parameter: $identity and $to. Further details on
+the content of these parameters can be found in hooks.php.dist.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-6-0-x-to-6-1">
+<h1><a class="toc-backref" href="#id34">4&nbsp;&nbsp;&nbsp;Upgrading IMP From 6.0.x To 6.1</a></h1>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id35">4.1&nbsp;&nbsp;&nbsp;Server Options (backends.php)</a></h2>
+<p>Sorting on non-IMAP servers, or IMAP servers that do not support the SORT
+extension, has been disabled by default in IMP 6.1. To restore the old
+behavior (NOT RECOMMENDED), see the 'sort_force' option in
+<tt class="docutils literal">config/backends.local.php</tt>.</p>
+<p>The 'debug' option has been added to the SMTP configuration.</p>
+<p>IMAP/POP caching can now be done using database backends (see documentation
+for the 'cache' parameter).</p>
+<p>The following quota drivers have been removed:</p>
+<pre class="literal-block">
+Command
+Maildir
+Mdaemon
+Mercury32
+Sql
+</pre>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id36">4.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
+<p>The $conf['user']['allow_folders'] option has been removed. This can now be
+set per-backend using the Horde permissions system.</p>
+<p>The $conf['server']['fixed_folders'] option has been removed. Preventing
+actions on a specific mailbox can be controlled via native IMAP ACLs or,
+alternatively, by the 'mbox_acl' hook.</p>
+<p>The $conf['user']['autocreate_special'] option has been removed. This can now
+be set on a per-backend basis in <tt class="docutils literal">config/backends.local.php</tt>
+('autocreate_special' option).</p>
+<p>The $conf['msgsettings']['filtering'] and $conf['msgsettings']['replacement']
+options have been removed. This feature has been moved to the 'msg_filter'
+hook.</p>
+<p>The following spam-reporting options have been removed and can now be
+configured per-backend in <tt class="docutils literal">config/backends.local.php</tt>:</p>
+<pre class="literal-block">
+$conf['notspam']['email']
+$conf['notspam']['email_format']
+$conf['notspam']['program']
+$conf['notspam']['reporting']
+$conf['notspam']['spamfolder']
+$conf['spam']['email']
+$conf['spam']['email_format']
+$conf['spam']['program']
+$conf['spam']['reporting']
+$conf['spam']['spamfolder']
+</pre>
+<p>The following options have been added:</p>
+<pre class="literal-block">
+$conf['pgp']['keylength']
+</pre>
+<p>The following options have been removed:</p>
+<pre class="literal-block">
+$conf['compose']['link_all_attachments']
+</pre>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id37">4.3&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
+<p>The 'attach_body_check' hook has been added. This hook handles the attachment
+word checking code that previously was provided as an example in the
+'pre_sent' hook.</p>
+<p>The 'compose_attach' hook has been removed and replaced by the
+'compose_attachment' hook. Both hooks are designed for the same purpose;
+however, the arguments have been completely changed so it is safest to
+entirely deprecate usage of the previous hook.</p>
+<p>The 'mbox_readonly' hook has been removed. Mailbox permissions can instead be
+controlled via native IMAP ACLs or, alternatively, by the 'mbox_acl' hook.</p>
+<p>The 'mbox_special' hook has been removed. Additional special mailboxes can
+now be defined per-backend in <tt class="docutils literal">config/backends.local.php</tt>.</p>
+<p>The 'mailboxarray' and 'msglist_flags' hooks have been altered to remove the
+second argument ($mode). If the current view mode is needed, it can be
+obtained via a call to $GLOBALS['registry']-&gt;getView().</p>
+<p>The 'spam_email' hook has been removed. This configuration can now be defined
+per-backend in <tt class="docutils literal">config/backends.local.php</tt>.</p>
+<p>The $html argument to the 'trailer' hook has been added.</p>
+<p>The following hooks have been added:</p>
+<pre class="literal-block">
+mbox_acl
+msg_filter
+</pre>
+<p>The following hooks have been removed:</p>
+<pre class="literal-block">
+dimp_messageview
+dimp_previewview
+mimp_advanced
+signature
+</pre>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id38">4.4&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></h2>
+<p>Thumbnails can now be disabled for images and PDF attachments.</p>
+<p>Thumbnails are now automatically generated for video attachments if the ffmpeg
+binary is present on your system.  This is enabled by default.</p>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id39">4.5&nbsp;&nbsp;&nbsp;Permissions</a></h2>
+<p>IMP permissions are now applied per backend. To upgrade existing permissions,
+an admin needs to run the following script:</p>
+<pre class="literal-block">
+bin/imp-admin-upgrade --task=backend_perms
+</pre>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id40">4.6&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The default values for these preferences have been changed:</p>
+<pre class="literal-block">
+request_mdn
+</pre>
+<p>The following preferences are no longer used and may be safely removed from
+your preference backend (only after all users have logged in - these
+preferences MAY be used to automatically upgrade to new preferences when
+a user logs into IMP 6 for the first time):</p>
+<pre class="literal-block">
+compose_bcc
+compose_cc
+link_attach
+</pre>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id41">4.7&nbsp;&nbsp;&nbsp;API Changes</a></h2>
+<p>These API calls have been added:</p>
+<pre class="literal-block">
+- getMaillog
+- getMaillogChanges
+- logMaillog
+</pre>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-5-x-to-6-x">
+<h1><a class="toc-backref" href="#id42">5&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.x To 6.x</a></h1>
+<p>The basic view now requires javascript support on the browser. If not
+available, the user will automatically be redirected to the minimal view.</p>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id43">5.1&nbsp;&nbsp;&nbsp;Server Options (backends.php)</a></h2>
+<p>The 'namespace' option now requires the namespaces to be in the UTF-8 charset,
+not UTF7-IMAP.</p>
+<p>The 'smtphost' and 'smtpport' options have been removed. They have been
+replaced by the 'smtp' option, which allows ALL available SMTP configuration
+options to be overriden.</p>
+<p>The 'admin' option has been changed: optional configuration parameters should
+live within the base 'admin' array rather than a 'params' array within the
+base.</p>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id44">5.2&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
+<p>The $conf['fixed_folders'] option now requires the mailboxes to be in the
+UTF-8 charset, not UTF7-IMAP.</p>
+<p>The $conf['compose']['link_attach_size_limit'] option was added.</p>
+<p>The $conf['print']['add_printedby'] option was removed and replaced by the
+'add_printedby' preference.</p>
+<p>The $conf['user']['select_sentmail_folder'] option was removed. To prevent
+changing the sentmail mailbox, the 'sent_mail_folder' preference should be
+locked instead.</p>
+<p>The following configuration options were removed:</p>
+<pre class="literal-block">
+$conf['dimp']['viewport']['buffer_pages']
+$conf['dimp']['viewport']['viewport_wait']
+</pre>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id45">5.3&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></h2>
+<p>The 'safe_addrs' option has been removed from the Images driver config.
+To set the default list of e-mail addresses that should be considered &quot;safe&quot;,
+the 'image_replacement_addrs' preference can now be used.</p>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id46">5.4&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
+<p>The 'mbox_sort' and 'mbox_special' hooks have been added.</p>
+<p>The 'dimp_addressformatting' hook has been removed.</p>
+<p>The $action parameter for reporting not spam message to the 'spam_email' and
+'post_spam' hooks has been changed from 'ham' to 'innocent'.</p>
+</div>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id47">5.5&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The default values for these preferences have been changed:</p>
+<pre class="literal-block">
+drafts_folder
+sent_mail_folder
+spam_folder
+trash_folder
+</pre>
+<p>The following preferences are no longer used and may be safely removed from
+your preference backend (only after all users have logged in - these
+preferences MAY be used to automatically upgrade to new preferences when
+a user logs into IMP 6 for the first time):</p>
+<pre class="literal-block">
+dimp_qsearch_field
+dimp_show_preview
+dimp_splitbar
+dimp_splitbar_vert
+dimp_toggle_headers
+dynamic_view
+image_addrbook
+move_ham_after_report
+sig_first
+stationery
+</pre>
+<p>The 'cursor_compose' preference removed the 'sig' option. Existing preferences
+will automatically be converted to 'bottom'.</p>
+<p>The 'save_attachments' preference removed the 'prompt_yes' and 'prompt_no'
+options. Existing preferences will automatically be converted.</p>
+<p>The 'add_printedby', 'image_replacement_addrs', 'reply_charset', and
+'reply_strip_sig' preferences were added.</p>
+<p>The 'forward_default' preference now contains the 'editasnew' option.</p>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id48">5.6&nbsp;&nbsp;&nbsp;API Changes</a></h2>
+<blockquote>
+<ul>
+<li><p class="first">copyMessages</p>
+<p>The $mailbox and $target parameters are now required to be UTF-8 strings.</p>
+</li>
+<li><p class="first">createFolder</p>
+<p>This call has been removed (replaced with 'createMailbox').</p>
+</li>
+<li><p class="first">deleteMessages</p>
+<p>The $mailbox parameter is now required to be a UTF-8 string.</p>
+</li>
+<li><p class="first">flagMessages</p>
+<p>The $mailbox parameter is now required to be a UTF-8 string.</p>
+</li>
+<li><p class="first">folderlist</p>
+<p>This call has been removed (replaced with 'mailboxList').</p>
+</li>
+<li><p class="first">moveMessages</p>
+<p>The $mailbox and $target parameters are now required to be UTF-8 strings.</p>
+</li>
+<li><p class="first">searchMailbox</p>
+<p>The $mailbox parameter is now required to be a UTF-8 string.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="compose-linked-attachments">
+<h2><a class="toc-backref" href="#id49">5.7&nbsp;&nbsp;&nbsp;Compose: Linked Attachments</a></h2>
+<p>Linking attachments is no longer a user-configurable action. If enabled, ALL
+attachments are now linked unless the size of the attachment is less than
+$conf['compose']['link_attach_threshold'].</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-5-0-x-to-5-0-22">
+<h1><a class="toc-backref" href="#id50">6&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.22</a></h1>
+<div class="section" id="configuration-conf-php">
+<h2><a class="toc-backref" href="#id51">6.1&nbsp;&nbsp;&nbsp;Configuration (conf.php)</a></h2>
+<p>The $conf['spam']['email_format'] and $conf['notspam']['email_format']
+configuration options have been added.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-5-0-x-to-5-0-20">
+<h1><a class="toc-backref" href="#id52">7&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.20</a></h1>
+<div class="section" id="id15">
+<h2><a class="toc-backref" href="#id53">7.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The 'delhide_trash' preference has been added.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-5-0-x-to-5-0-15">
+<h1><a class="toc-backref" href="#id54">8&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.15</a></h1>
+<div class="section" id="id16">
+<h2><a class="toc-backref" href="#id55">8.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The 'delete_mark_seen' preference has been added.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-5-0-x-to-5-0-14">
+<h1><a class="toc-backref" href="#id56">9&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.14</a></h1>
+<div class="section" id="id17">
+<h2><a class="toc-backref" href="#id57">9.1&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The 'reply_lang' preference has been added.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-5-0-x-to-5-0-12">
+<h1><a class="toc-backref" href="#id58">10&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.12</a></h1>
+<div class="section" id="id18">
+<h2><a class="toc-backref" href="#id59">10.1&nbsp;&nbsp;&nbsp;MIME Viewer Options (mime_drivers.php)</a></h2>
+<p>The 'allthumbs' option has been removed from the HTML driver.  Image thumbnail
+previews are now always shown if an image conversion utility is present on the
+system.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-5-0-x-to-5-0-10">
+<h1><a class="toc-backref" href="#id60">11&nbsp;&nbsp;&nbsp;Upgrading IMP From 5.0.x To 5.0.10</a></h1>
+<div class="section" id="id19">
+<h2><a class="toc-backref" href="#id61">11.1&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
+<p>The 'allow_resume_all' option has been removed.  Only messages specifically
+marked as drafts can be resumed; however, all messages are given the option
+to &quot;Edit As New&quot;.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-4-x-to-5-x">
+<h1><a class="toc-backref" href="#id62">12&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.x To 5.x</a></h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between an IMP
+4.x installation to IMP 5.x.</p>
+<div class="section" id="html-gui-editor">
+<h2><a class="toc-backref" href="#id63">12.1&nbsp;&nbsp;&nbsp;HTML GUI editor</a></h2>
+<p>IMP only supports the CKeditor javascript HTML rich text editor.  Xinha is no
+longer supported.</p>
+<p>Button configuration is now stored in the prefs value 'ckeditor_buttons'.</p>
+</div>
+<div class="section" id="server-options-backends-php-old-servers-php">
+<h2><a class="toc-backref" href="#id64">12.2&nbsp;&nbsp;&nbsp;Server Options (backends.php; OLD servers.php)</a></h2>
+<p>The format of servers.php has changed and has been renamed to backends.php.</p>
+<p>The 'realm' option has been removed.  Altering usernames at runtime should
+instead by accomplished by using Horde's 'authusername' and/or IMP's
+'preauthenticate' hooks.</p>
+</div>
+<div class="section" id="id20">
+<h2><a class="toc-backref" href="#id65">12.3&nbsp;&nbsp;&nbsp;Configuration Options (conf.php)</a></h2>
+<p>Configuration relating to displaying the terms of agreement, GnuPG, OpenSSL,
+spellchecking, and login redirection have been moved to Horde.</p>
+<p>The 'show_preview' option has been removed; enabling previews is now handled
+by the 'show_preview' preference.</p>
+<p>The 'allow_resume_all_in_drafts' option has been removed; all messages that
+appear in the configured Drafts mailbox are now always allowed to be resumed.</p>
+<p>The 'css_files' configuration option for the dynamic (dimp) display has been
+removed.  Equivalent behavior can now be found in the Horde-wide 'cssfiles'
+hook.</p>
+<p>The 'max_from_chars' and 'max_subj_chars' configuration options for the
+minimal (mimp) display have been removed.</p>
+<p>The following configuration options have been removed:</p>
+<pre class="literal-block">
+allow_receipts
+append_trailer
+cache_folders
+limit_factor
+prepend_header
+show_account_colors
+size_limit
+sort_limit
+</pre>
+</div>
+<div class="section" id="id21">
+<h2><a class="toc-backref" href="#id66">12.4&nbsp;&nbsp;&nbsp;Preferences (prefs.php)</a></h2>
+<p>The 'sending_charset' and 'time_format' preferences have been moved to Horde.</p>
+<p>The following preferences are no longer used and may be safely removed from
+your preference backend:</p>
+<pre class="literal-block">
+attachment_display
+auto_delete_drafts
+delete_attachments_monthly
+delete_sentmail_monthly
+dimp_login_view
+disposition_request_read
+disposition_send_mdn
+fckeditor_buttons
+fetchmail_link
+fetchmail_menu
+filter_on_sidebar
+forward_bodytext
+image_addrbook
+image_replacement
+nav_audio
+nav_expanded_sidebar
+nav_popup
+purge_sentmail
+purge_spam
+purge_trash
+use_vinbox
+use_vtrash
+vinbox_id
+vtrash_id
+</pre>
+</div>
+<div class="section" id="id22">
+<h2><a class="toc-backref" href="#id67">12.5&nbsp;&nbsp;&nbsp;Hooks (hooks.php)</a></h2>
+<p>The format of hooks.php has changed.  See horde/docs/UPGRADING for more
+information.</p>
+<p>The 'vinfo' hook has been removed.  Use Horde's 'authusername' and/or IMP's
+'preauthenticate' hooks instead.</p>
+<p>The 'msglist_format' hook has been removed.  X-Priority header handling is now
+handled in the core IMP code.  Attachment icon display is now handled by the
+'atc_flag' preference.  The 'msglist_flags' hook is now used to dynamically
+set flags on messages.</p>
+</div>
+<div class="section" id="custom-message-headers-old-header-php">
+<h2><a class="toc-backref" href="#id68">12.6&nbsp;&nbsp;&nbsp;Custom Message Headers (OLD header.php)</a></h2>
+<p>The header.php configuration file has been removed.  Setting custom headers
+is now done in the 'pre_sent' hook.</p>
+</div>
+<div class="section" id="custom-message-trailers-old-trailer-txt">
+<h2><a class="toc-backref" href="#id69">12.7&nbsp;&nbsp;&nbsp;Custom Message Trailers (OLD trailer.txt)</a></h2>
+<p>The trailer.txt file has been removed.  Setting message trailers is now done
+in the 'trailer' hook.</p>
+</div>
+<div class="section" id="fetchmail">
+<h2><a class="toc-backref" href="#id70">12.8&nbsp;&nbsp;&nbsp;Fetchmail</a></h2>
+<p>All code relating to fetchmail has been removed.</p>
+</div>
+<div class="section" id="flags">
+<h2><a class="toc-backref" href="#id71">12.9&nbsp;&nbsp;&nbsp;Flags</a></h2>
+<p>The list of available IMAP Flags/Keywords is now configurable via the
+'msgflags' preference.</p>
+<p>The Answered, Deleted, and Draft IMAP flags are no longer user settable
+by default - these flags have special meanings and are automatically handled
+by the various message action functions instead.</p>
+</div>
+<div class="section" id="menu">
+<h2><a class="toc-backref" href="#id72">12.10&nbsp;&nbsp;&nbsp;Menu</a></h2>
+<p>The dynamic view (DIMP) no longer supports the 'action' parameter located
+in config/menu.php.</p>
+</div>
+<div class="section" id="portal">
+<h2><a class="toc-backref" href="#id73">12.11&nbsp;&nbsp;&nbsp;Portal</a></h2>
+<p>Portal rendering has been moved to Horde - config/portal.php is no longer
+needed or used.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-4-1-x-to-4-2-x">
+<h1><a class="toc-backref" href="#id74">13&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.1.x To 4.2.x</a></h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between an IMP
+4.1.x installation to IMP 4.2.x.</p>
+<div class="section" id="sql-backend">
+<h2><a class="toc-backref" href="#id75">13.1&nbsp;&nbsp;&nbsp;SQL Backend</a></h2>
+<p>An SQL table has been added that can be used to track sent messages. This is
+necessary to provide users with the &quot;favourite recipients&quot; address book, and
+for message rate throttling.</p>
+<p>Execute the provided SQL script to add the table to your database, e.g.:</p>
+<pre class="literal-block">
+mysql --user=root --password=&lt;MySQL-root-password&gt; &lt;db name&gt; &lt; scripts/sql/imp.sql
+</pre>
+</div>
+<div class="section" id="unified-imap-quota-driver">
+<h2><a class="toc-backref" href="#id76">13.2&nbsp;&nbsp;&nbsp;Unified IMAP Quota Driver</a></h2>
+<p>Separate quota drivers for Cyrus and Courier servers are no longer
+necessary. These drivers have been replaced by a generic IMAP driver that
+should also be suitable for other IMAP servers that support the QUOTA
+extension. Update <tt class="docutils literal">config/servers.php</tt> and change the 'quota' =&gt; 'driver'
+setting to 'imap'.</p>
+</div>
+<div class="section" id="application-hooks">
+<h2><a class="toc-backref" href="#id77">13.3&nbsp;&nbsp;&nbsp;Application Hooks</a></h2>
+<p>All hooks that are specific to IMP have been moved from the
+<tt class="docutils literal">horde/config/hooks.php</tt> file. Move your existing IMP Hooks from there to
+<tt class="docutils literal">imp/config/hooks.php</tt>.</p>
+</div>
+<div class="section" id="user-defined-mailbox-icons">
+<h2><a class="toc-backref" href="#id78">13.4&nbsp;&nbsp;&nbsp;User-Defined Mailbox Icons</a></h2>
+<p>The usage of the hook <tt class="docutils literal">_imp_hook_mbox_icons()</tt> has changed.  If you use this
+hook, make sure you change your implementation so it returns the correct
+value.</p>
+</div>
+<div class="section" id="changed-preferences">
+<h2><a class="toc-backref" href="#id79">13.5&nbsp;&nbsp;&nbsp;Changed Preferences</a></h2>
+<p>The default values for the mailbox preferences 'sent_mail_folder',
+'drafts_folder', and 'trash_folder' have been changed and localized. Use the
+old values to prohibit the creation of duplicate mailboxes for users that
+didn't explicitly set the mailboxes in their preferences.</p>
+<p>The following preferences are no longer used and may be safely removed from
+your <tt class="docutils literal">config/prefs.php</tt> file and your preferences backend:</p>
+<pre class="literal-block">
+'auto_expand'
+'num_words'
+</pre>
+<p>The 'mail_hdr' preferences has been moved from the identities to a regular
+preference. Existing user preferences are no longer used and have to be
+re-created by the users.</p>
+</div>
+<div class="section" id="new-message-list-format-hook">
+<h2><a class="toc-backref" href="#id80">13.6&nbsp;&nbsp;&nbsp;New Message List Format Hook</a></h2>
+<p>The new hook <tt class="docutils literal">_imp_hook_msglist_format()</tt> has been added which allows the
+formatting of a message entry in the mailbox message list to be altered
+at the time the list is created.  This hook has made the following
+configuration options obsolete:</p>
+<pre class="literal-block">
+$conf['mailbox']['show_attachments']
+$conf['mailbox']['show_xpriority']
+</pre>
+<p>If you wish to continue using the functionality previously provided by these
+options, you should activate the msglist_format hook in <tt class="docutils literal">config/conf.php</tt>.
+The sample hook contained in <tt class="docutils literal">config/hooks.php</tt> contains the code necessary
+to replicate the previous behavior.</p>
+</div>
+<div class="section" id="spell-checking">
+<h2><a class="toc-backref" href="#id81">13.7&nbsp;&nbsp;&nbsp;Spell Checking</a></h2>
+<p>The <tt class="docutils literal">pspell</tt> driver is no longer supported since it does not work with
+HTML messages.  If using pspell, you must upgrade to aspell version 0.60+.</p>
+</div>
+<div class="section" id="javascript-html-editor">
+<h2><a class="toc-backref" href="#id82">13.8&nbsp;&nbsp;&nbsp;Javascript HTML Editor</a></h2>
+<p>Support has been added for FCKeditor as an option for the javascript HTML
+editor available on the compose page.  You must have Horde 3.2 or later
+installed to use this editor.</p>
+</div>
+</div>
+<div class="section" id="upgrading-imp-from-4-0-x-to-4-1-x">
+<h1><a class="toc-backref" href="#id83">14&nbsp;&nbsp;&nbsp;Upgrading IMP From 4.0.x To 4.1.x</a></h1>
+<p>This is a non-exhaustive, quick explanation of what has changed between an IMP
+4.0.x installation to IMP 4.1.x.</p>
+<div class="section" id="automatic-namespace-detection">
+<h2><a class="toc-backref" href="#id84">14.1&nbsp;&nbsp;&nbsp;Automatic Namespace Detection</a></h2>
+<p>The <tt class="docutils literal">namespace</tt>, <tt class="docutils literal">hierarchies</tt>, <tt class="docutils literal">folders</tt>, <tt class="docutils literal">delimiter</tt>, and
+<tt class="docutils literal">dotfiles</tt> parameters were removed from <tt class="docutils literal">config/servers.php</tt>.  Namespaces
+are now automatically configured pursuant to <a class="reference external" href="http://www.faqs.org/rfcs/rfc2342.html">RFC 2342</a>.</p>
+<p>If using the UW IMAP daemon, you may notice a bunch of additional namespaces
+that were not displayed before as well as the ability of the user to
+view all files that live in their home directory via the folders screen.
+Information on how to correct your IMAP server configuration can be found at</p>
+<blockquote>
+<a class="reference external" href="http://wiki.horde.org/ImpUWIMAPNamespaces">http://wiki.horde.org/ImpUWIMAPNamespaces</a></blockquote>
+</div>
+<div class="section" id="user-defined-headers">
+<h2><a class="toc-backref" href="#id85">14.2&nbsp;&nbsp;&nbsp;User-Defined Headers</a></h2>
+<p>The <tt class="docutils literal">config/headers.txt</tt> file has been removed and replaced by
+<tt class="docutils literal">config/headers.php</tt>.  Any user-defined headers should be migrated to this
+file.  The new file has the advantage of allowing any valid PHP expression
+to be executed at run-time when generating the headers.  See the top of
+the <tt class="docutils literal">headers.php</tt> file for the new format required.</p>
+</div>
+<div class="section" id="removed-preferences">
+<h2><a class="toc-backref" href="#id86">14.3&nbsp;&nbsp;&nbsp;Removed Preferences</a></h2>
+<p>The following preferences are no longer used and may be safely removed from
+your <tt class="docutils literal">config/prefs.php</tt> file and your preferences backend:</p>
+<pre class="literal-block">
+'disposition_request_delivery'
+'wrap_width'
+</pre>
+</div>
+<div class="section" id="virtual-folders">
+<h2><a class="toc-backref" href="#id87">14.4&nbsp;&nbsp;&nbsp;Virtual Folders</a></h2>
+<p>The format for saved Virtual Folders has changed.  To convert to the new
+format you must run the script located at
+<tt class="docutils literal">scripts/upgrades/convert_vfolders.php</tt>.</p>
+</div>
+</div>
+</div>

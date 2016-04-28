@@ -1,1 +1,216 @@
-
+<div class="document" id="installing-kronolith-h5">
+<h1 class="title">Installing Kronolith H5</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:kronolith&#64;lists.horde.org">kronolith&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#prerequisites" id="id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-kronolith" id="id2">2&nbsp;&nbsp;&nbsp;Installing Kronolith</a><ul class="auto-toc">
+<li><a class="reference internal" href="#installing-with-pear" id="id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></li>
+<li><a class="reference internal" href="#installing-from-git" id="id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuring-kronolith" id="id5">3&nbsp;&nbsp;&nbsp;Configuring Kronolith</a></li>
+<li><a class="reference internal" href="#obtaining-support" id="id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></li>
+</ul>
+</div>
+<p>This document contains instructions for installing the Kronolith web-based
+calendar application on your system.</p>
+<p>For information on the capabilities and features of Kronolith, see the file
+<a class="reference external" href="README">README</a> in the top-level directory of the Kronolith distribution.</p>
+<div class="section" id="prerequisites">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Prerequisites</a></h1>
+<p>To function properly, Kronolith <strong>requires</strong> the following:</p>
+<ol class="arabic">
+<li><p class="first">A working Horde installation.</p>
+<p>Kronolith runs within the <a class="reference external" href="http://www.horde.org/apps/horde">Horde Application Framework</a>, a set of common
+tools for Web applications written in PHP.  You must install Horde before
+installing Kronolith.</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Kronolith H5 requires version 5.0+ of the Horde Framework -
+earlier versions of Horde will <strong>not</strong> work.</p>
+</div>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">Be sure to have completed all of the steps in the
+<a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> file for the Horde Framework before
+installing Kronolith. Many of Kronolith's prerequisites are
+also Horde prerequisites. Additionally, many of Kronolith's
+optional features are configured via the Horde install.</p>
+</div>
+</li>
+<li><p class="first">SQL support in PHP, or Kolab support in Horde</p>
+<p>Kronolith store its data in a backend - either an SQL database or a
+Kolab server. Build PHP with whichever SQL driver you require; see
+the Horde <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> file for more details on using databases
+with Horde, or the Kolab webclient documentation for how to set up
+Kronolith for Kolab.</p>
+</li>
+<li><p class="first">Operating System with support for dates before 1970-01-01 [OPTIONAL]</p>
+<p>If you want to use dates earlier the January 1st 1970, for example
+birthdays, you need an Operating System that supports negative
+timestamps. Microsoft Windows does <strong>not</strong> support such dates.</p>
+</li>
+<li><p class="first">The following PEAR package:
+(See <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> for instructions on installing PEAR package)</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p class="last">If you are going to install Kronolith the recommended way,
+i.e. using the PEAR installer, you can skip the remainder of
+this section. Installing Kronolith through PEAR will
+automatically download and install all required PEAR modules.</p>
+</div>
+<ol class="loweralpha">
+<li><p class="first">Date</p>
+<p>Kronolith uses the Date package for various date calculations.</p>
+</li>
+<li><p class="first">Date_Holidays 0.21.0 [OPTIONAL]</p>
+<p>Kronolith can use the Date_Holidays package to show several sets of
+national and religious holidays and memorial days. Since Date_Holidays
+consists of a number of sub-packages, one for each country, you should
+install all packages at once:</p>
+<pre class="literal-block">
+pear install Date_Holidays-alpha#all
+</pre>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="installing-kronolith">
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Installing Kronolith</a></h1>
+<p>The <strong>RECOMMENDED</strong> way to install Kronolith is using the PEAR installer.
+Alternatively, if you want to run the latest development code or get the
+latest not yet released fixes, you can install Kronolith from Git.</p>
+<div class="section" id="installing-with-pear">
+<h2><a class="toc-backref" href="#id3">2.1&nbsp;&nbsp;&nbsp;Installing with PEAR</a></h2>
+<p>First follow the instructions in <a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a> to prepare a PEAR
+environment for Horde and install the Horde Framework.</p>
+<p>When installing Kronolith through PEAR now, the installer will automatically
+install any dependencies of Kronolith too. If you want to install Kronolith
+with all optional dependencies, but without the binary PECL packages that need
+to be compiled, specify both the <tt class="docutils literal"><span class="pre">-a</span></tt> and the <tt class="docutils literal"><span class="pre">-B</span></tt> flag:</p>
+<pre class="literal-block">
+pear install -a -B horde/kronolith
+</pre>
+<p>By default, only the required dependencies will be installed:</p>
+<pre class="literal-block">
+pear install horde/kronolith
+</pre>
+<p>If you want to install Kronolith even with all binary dependencies, you need to
+remove the <tt class="docutils literal"><span class="pre">-B</span></tt> flag. Please note that this might also try to install PHP
+extensions through PECL that might need further configuration or activation in
+your PHP configuration:</p>
+<pre class="literal-block">
+pear install -a horde/kronolith
+</pre>
+</div>
+<div class="section" id="installing-from-git">
+<h2><a class="toc-backref" href="#id4">2.2&nbsp;&nbsp;&nbsp;Installing from Git</a></h2>
+<p>See <a class="reference external" href="http://www.horde.org/source/git.php">http://www.horde.org/source/git.php</a></p>
+</div>
+</div>
+<div class="section" id="configuring-kronolith">
+<h1><a class="toc-backref" href="#id5">3&nbsp;&nbsp;&nbsp;Configuring Kronolith</a></h1>
+<ol class="arabic">
+<li><p class="first">Configuring Horde for Kronolith</p>
+<p>Kronolith requires a permanent <tt class="docutils literal">Shares</tt> backend in Horde to manage
+calendars and to add events to calendars.  If you didn't setup a Share
+backend yet, go to the configuration interface, select Horde from the
+list of applications and select the <tt class="docutils literal">Shares</tt> tab. Unless you are using
+Kolab, you should select <tt class="docutils literal">SQL</tt>.</p>
+</li>
+<li><p class="first">Configuring Kronolith</p>
+<p>You must login to Horde as a Horde Administrator to finish the
+configuration of Kronolith.  Use the Horde <tt class="docutils literal">Administration</tt> menu item to
+get to the administration page, and then click on the <tt class="docutils literal">Configuration</tt>
+icon to get the configuration page.  Select <tt class="docutils literal">Calendar</tt> from the selection
+list of applications.  Fill in or change any configuration values as
+needed.  When done click on <tt class="docutils literal">Generate Calendar Configuration</tt> to generate
+the <tt class="docutils literal">conf.php</tt> file.  If your web server doesn't have write permissions
+to the Kronolith configuration directory or file, it will not be able to
+write the file.  In this case, go back to <tt class="docutils literal">Configuration</tt> and choose one
+of the other methods to create the configuration file
+<tt class="docutils literal">kronolith/config/conf.php</tt>.</p>
+<p>Documentation on the format and purpose of the other configuration files in
+the <tt class="docutils literal">config/</tt> directory can be found in each file. You may create
+<tt class="docutils literal">*.local.php</tt> versions of these files if you wish to customize Kronolith's
+appearance and behavior. See the header of the configuration files for
+details and examples. The defaults will be correct for most sites.</p>
+</li>
+<li><p class="first">Creating the database tables</p>
+<p>Once you finished the configuration in the previous step, you can create all
+database tables by clicking the <tt class="docutils literal">DB schema is out of date.</tt> link in the
+Kronolith row of the configuration screen.</p>
+<p>Alternatively you creating the Kronolith database tables can be accomplished
+with horde's <tt class="docutils literal"><span class="pre">horde-db-migrate</span></tt> utility.  If your database is properly
+setup in the Horde configuration, just run the following:</p>
+<pre class="literal-block">
+horde/bin/horde-db-migrate kronolith
+</pre>
+</li>
+<li><p class="first">Setting up reminder emails</p>
+<p>There are two kind of reminders sent to users, reminders on individual
+events with alarms, and daily agendas. Generally, if you set up cron jobs,
+you must have the PHP CLI installed (a CGI binary is not supported - <tt class="docutils literal">php
+<span class="pre">-v</span></tt> will report what kind of PHP binary you have).</p>
+<ol class="loweralpha">
+<li><p class="first">If you have not already set up the Horde Alarm system, you have to set up
+a cron entry for the Horde alarm script as documented in
+<a class="reference external" href="../../horde/docs/INSTALL">horde/docs/INSTALL</a>. This will send reminders for individual events.</p>
+</li>
+<li><p class="first">To send daily agendas, you must create a cron entry for
+<tt class="docutils literal"><span class="pre">kronolith-agenda</span></tt>, and running the job once a day is recommended,
+e.g. at 2 a.m.:</p>
+<pre class="literal-block">
+# Kronolith agenda
+0 2 * * * /usr/bin/kronolith-agenda
+</pre>
+</li>
+</ol>
+<p>If not installing Kronolith through PEAR of if PEAR's <tt class="docutils literal">bin_dir</tt>
+configuration doesn't point to <tt class="docutils literal">/usr/bin/</tt>, replace
+<tt class="docutils literal"><span class="pre">/usr/bin/kronolith-agenda</span></tt> with the path to the <tt class="docutils literal"><span class="pre">kronolith-agenda</span></tt>
+script in your Kronolith installation.</p>
+</li>
+<li><p class="first">Testing Kronolith</p>
+<p>Use Kronolith to create, modify, and delete events. Test at least the
+following:</p>
+<ul class="simple">
+<li>Creating a new event</li>
+<li>Creating a recurring event</li>
+<li>Modifying an event</li>
+<li>Deleting an event</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="obtaining-support">
+<h1><a class="toc-backref" href="#id6">4&nbsp;&nbsp;&nbsp;Obtaining Support</a></h1>
+<p>If you encounter problems with Kronolith, help is available!</p>
+<p>The Horde Frequently Asked Questions List (FAQ), available on the Web at</p>
+<blockquote>
+<a class="reference external" href="http://wiki.horde.org/FAQ">http://wiki.horde.org/FAQ</a></blockquote>
+<p>The Horde Project runs a number of mailing lists, for individual applications
+and for issues relating to the project as a whole.  Information, archives, and
+subscription information can be found at</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/community/mail">http://www.horde.org/community/mail</a></blockquote>
+<p>Lastly, Horde developers, contributors and users may also be found on IRC,
+on the channel #horde on the Freenode Network (irc.freenode.net).</p>
+<p>Please keep in mind that Kronolith is free software written by volunteers.
+For information on reasonable support expectations, please read</p>
+<blockquote>
+<a class="reference external" href="http://www.horde.org/community/support">http://www.horde.org/community/support</a></blockquote>
+<p>Thanks for using Kronolith!</p>
+<p>The Horde team</p>
+</div>
+</div>

@@ -1,1 +1,104 @@
+<div class="document" id="horde-release-process-notes">
+<h1 class="title">Horde Release Process Notes</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:horde&#64;lists.horde.org">horde&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#the-steps-to-use-when-cutting-a-new-release" id="id1">The steps to use when cutting a new release</a></li>
+<li><a class="reference internal" href="#guidelines-for-release-cycles" id="id2">Guidelines for release cycles</a></li>
+<li><a class="reference internal" href="#example-format-for-announcement-messages" id="id3">Example format for announcement messages</a></li>
+</ul>
+</div>
+<div class="section" id="the-steps-to-use-when-cutting-a-new-release">
+<h1><a class="toc-backref" href="#id1">The steps to use when cutting a new release</a></h1>
+<ol class="arabic">
+<li><p class="first">Examine <tt class="docutils literal">*/docs/CHANGES</tt> files:</p>
+<ul class="simple">
+<li>Add the word SECURITY in front of any security-related changes,
+and move them to the top, to draw attention to them.</li>
+<li>Cull out the most important ones, and prepare the text of an
+announcement.</li>
+<li>Write the release announcements into the <tt class="docutils literal">docs/RELEASE_NOTES</tt> file and
+check if it parses with <tt class="docutils literal">php <span class="pre">-l</span> docs/RELEASE_NOTES</tt>.</li>
+</ul>
+<p>As an extra effort to ensure completeness, you could also check the
+changelogs for any changes that may not have been inserted in the
+<tt class="docutils literal">*/docs/CHANGES</tt> file and integrate them into the above points.</p>
+</li>
+<li><p class="first">Examine <tt class="docutils literal">docs/*</tt> files, and update the version if this is a major
+release. Minor releases should not change the versions in these files.</p>
+<p>Add <tt class="docutils literal"><span class="pre">-alpha</span></tt> or <tt class="docutils literal"><span class="pre">-beta</span></tt> sentinels to the <tt class="docutils literal">pear install</tt> instructions
+if switching from stable release to pre-release, and vice versa.</p>
+</li>
+<li><p class="first">Update the .pot file: <tt class="docutils literal"><span class="pre">horde-translation</span> extract <span class="pre">--module</span> foo</tt> and commit
+it.</p>
+</li>
+<li><p class="first">Make sure your settings in <tt class="docutils literal">components/config/conf.php</tt> are correct.</p>
+</li>
+<li><p class="first">Make a &quot;dry run&quot; of the <tt class="docutils literal"><span class="pre">horde-components</span></tt> script by adding <tt class="docutils literal"><span class="pre">--pretend</span></tt>
+to the command line parameters.</p>
+</li>
+<li><p class="first">Create the PEAR package releases using <tt class="docutils literal"><span class="pre">horde-components</span> ./foo release</tt>:</p>
+<pre class="literal-block">
+- For usage, use the ``--help`` flag.
+</pre>
+</li>
+<li><p class="first">Commit the web site (<tt class="docutils literal"><span class="pre">horde-web</span></tt> Git repository):</p>
+<ul class="simple">
+<li>Push changes to <tt class="docutils literal">config/versions.sqlite</tt> to update the version
+information.</li>
+</ul>
+</li>
+<li><p class="first">Add new version to bugs.horde.org if not added automatically by the release
+script.</p>
+<p>If releasing the first stable version after a release cycle, mark all
+pre-release versions as inactive.</p>
+</li>
+<li><p class="first">Bump version numbers of showstopper tickets that didn't go into the release,
+then bump version number in the showstopper query on bugs.horde.org.</p>
+</li>
+<li><p class="first">Update demo.horde.org</p>
+</li>
+</ol>
+</div>
+<div class="section" id="guidelines-for-release-cycles">
+<h1><a class="toc-backref" href="#id2">Guidelines for release cycles</a></h1>
+<ul class="simple">
+<li>When switching between stable and unstable releases, make sure the release
+state and release version in package.xml are correct.</li>
+<li>During unstable releases the release version must be checked for every
+release, because the components scripts does automatically bump versions, but
+doesn't switch versions when changing from alpha to beta to RC.</li>
+<li>During unstable releases check carefully the dependency versions. It may be
+necessary to set an alpha/beta/RC version as the minimum version of a
+dependency.</li>
+</ul>
+</div>
+<div class="section" id="example-format-for-announcement-messages">
+<h1><a class="toc-backref" href="#id3">Example format for announcement messages</a></h1>
+<pre class="literal-block">
+The Horde Team is pleased to announce the (first release candidate|official
+release) of the [MODULE NAME] [MODULE DESCRIPTION] version [VERSION].
 
+[MODULE DESCRIPTION]
+
+[Barring any problems, this code will be released as [MODULE] [VERSION].
+Testing is requested and comments are encouraged.
+Updated translations would also be great.]
+
+[[MODULE] version H3 ([VERSION]) is a major upgrade in the a.x release series,
+including these enhancements:]
+[The major changes compared to the [MODULE] version H3 (a.b) are:]
+  * [CHANGE 1]
+  * [CHANGE 2]
+  * ...
+</pre>
+</div>
+</div>

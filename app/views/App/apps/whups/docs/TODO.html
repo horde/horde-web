@@ -1,1 +1,62 @@
-
+<div class="document" id="whups-development-todo-list">
+<h1 class="title">Whups Development TODO List</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<ul>
+<li><p class="first">Ability to take/steal tickets from other users in the list UI.</p>
+</li>
+<li><p class="first">Ability to merge a ticket with another ticket (instead of marking as
+duplicate).  Histories of two tickets should be merged.</p>
+</li>
+<li><p class="first">Better permissions integration.</p>
+</li>
+<li><p class="first">Possible integration with other Horde queues (nag/turba/hermes), including
+api support between them.</p>
+</li>
+<li><p class="first">docs and help files...</p>
+</li>
+<li><p class="first">Additional &quot;work flow&quot; support.</p>
+</li>
+<li><p class="first">Handle attachments in Whups_Mail</p>
+</li>
+<li><p class="first">States/Priorities (or whole types?) cloning:</p>
+<div class="line-block">
+<div class="line">&gt; What if we had a &quot;clone&quot; feature? When editing states/priorities, just</div>
+<div class="line">&gt; being able to clone the states/priorities from another type into this</div>
+<div class="line">&gt; type?</div>
+<div class="line"><br /></div>
+<div class="line">I now think that this would be a good idea.  It's almost the same as</div>
+<div class="line">Gary's template patch, but it should work in a slightly different way</div>
+<div class="line">to better fit the workflow direction.</div>
+<div class="line"><br /></div>
+<div class="line">When we have state transitions, it's more important that a type</div>
+<div class="line">doesn't change as tickets flow through it because that could cause</div>
+<div class="line">tickets to become inconsistent.  However, it's very likely that as the</div>
+<div class="line">type is being used, people see some way of making it fit the model</div>
+<div class="line">more accurately.  In that case, probably the best way to fix it is to</div>
+<div class="line">copy the existing type into a new one.  You can then modify the new</div>
+<div class="line">type however you see fit then 'publish' the type and start creating</div>
+<div class="line">tickets in it.  Published types can't be altered.</div>
+<div class="line"><br /></div>
+<div class="line">With the type templates, you could only copy particular types into new</div>
+<div class="line">ones, instead of any type that you need to.</div>
+<div class="line"><br /></div>
+<div class="line">However, with the templates, type were created as 'just a template',</div>
+<div class="line">ie. one that shouldn't have tickets created.  This can be quite</div>
+<div class="line">useful, but instead of using an underscore prefix to identify it, I'd</div>
+<div class="line">prefer to have a 'published' field in the table to represent types</div>
+<div class="line">that can have tickets in it.  A template could then be a normal,</div>
+<div class="line">unpublished, type.</div>
+</div>
+</li>
+<li><p class="first">For project scheduling:
+<a class="reference external" href="http://www.joelonsoftware.com/articles/fog0000000245.html">http://www.joelonsoftware.com/articles/fog0000000245.html</a></p>
+</li>
+</ul>
+</div>

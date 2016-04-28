@@ -1,1 +1,847 @@
+<div class="document" id="horde-coding-standards">
+<h1 class="title">Horde Coding Standards</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:dev&#64;lists.horde.org">dev&#64;lists.horde.org</a></td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#basics" id="id2">1&nbsp;&nbsp;&nbsp;Basics</a></li>
+<li><a class="reference internal" href="#indenting-whitespace" id="id3">2&nbsp;&nbsp;&nbsp;Indenting/Whitespace</a></li>
+<li><a class="reference internal" href="#language-case" id="id4">3&nbsp;&nbsp;&nbsp;Language Case</a></li>
+<li><a class="reference internal" href="#control-structures" id="id5">4&nbsp;&nbsp;&nbsp;Control Structures</a></li>
+<li><a class="reference internal" href="#function-calls" id="id6">5&nbsp;&nbsp;&nbsp;Function Calls</a></li>
+<li><a class="reference internal" href="#function-definitions" id="id7">6&nbsp;&nbsp;&nbsp;Function Definitions</a></li>
+<li><a class="reference internal" href="#class-definitions" id="id8">7&nbsp;&nbsp;&nbsp;Class Definitions</a></li>
+<li><a class="reference internal" href="#naming-libraries" id="id9">8&nbsp;&nbsp;&nbsp;Naming Libraries</a><ul class="auto-toc">
+<li><a class="reference internal" href="#example" id="id10">8.1&nbsp;&nbsp;&nbsp;Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comments" id="id11">9&nbsp;&nbsp;&nbsp;Comments</a></li>
+<li><a class="reference internal" href="#including-code" id="id12">10&nbsp;&nbsp;&nbsp;Including Code</a></li>
+<li><a class="reference internal" href="#php-code-tags" id="id13">11&nbsp;&nbsp;&nbsp;PHP Code Tags</a></li>
+<li><a class="reference internal" href="#header-comment-blocks" id="id14">12&nbsp;&nbsp;&nbsp;Header Comment Blocks</a></li>
+<li><a class="reference internal" href="#example-urls" id="id15">13&nbsp;&nbsp;&nbsp;Example URLs</a></li>
+<li><a class="reference internal" href="#php-ini-settings" id="id16">14&nbsp;&nbsp;&nbsp;php.ini settings</a></li>
+<li><a class="reference internal" href="#html-4-compliance" id="id17">15&nbsp;&nbsp;&nbsp;HTML 4 Compliance</a></li>
+<li><a class="reference internal" href="#database-conventions" id="id18">16&nbsp;&nbsp;&nbsp;Database Conventions</a></li>
+<li><a class="reference internal" href="#regular-expression-use" id="id19">17&nbsp;&nbsp;&nbsp;Regular Expression Use</a></li>
+<li><a class="reference internal" href="#parameter-passing" id="id20">18&nbsp;&nbsp;&nbsp;Parameter Passing</a></li>
+<li><a class="reference internal" href="#long-lines" id="id21">19&nbsp;&nbsp;&nbsp;Long Lines</a></li>
+<li><a class="reference internal" href="#line-breaks" id="id22">20&nbsp;&nbsp;&nbsp;Line Breaks</a></li>
+<li><a class="reference internal" href="#private-variables" id="id23">21&nbsp;&nbsp;&nbsp;Private Variables</a></li>
+<li><a class="reference internal" href="#array-definitions" id="id24">22&nbsp;&nbsp;&nbsp;Array Definitions</a></li>
+<li><a class="reference internal" href="#internationalization-i18n" id="id25">23&nbsp;&nbsp;&nbsp;Internationalization (I18n)</a></li>
+<li><a class="reference internal" href="#error-checking" id="id26">24&nbsp;&nbsp;&nbsp;Error checking</a></li>
+<li><a class="reference internal" href="#exceptions-in-framework-packages" id="id27">25&nbsp;&nbsp;&nbsp;Exceptions in Framework Packages</a><ul class="auto-toc">
+<li><a class="reference internal" href="#code-logic-exceptions" id="id28">25.1&nbsp;&nbsp;&nbsp;Code/Logic Exceptions</a></li>
+<li><a class="reference internal" href="#execution-exceptions" id="id29">25.2&nbsp;&nbsp;&nbsp;Execution Exceptions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#existence-checking" id="id30">26&nbsp;&nbsp;&nbsp;Existence checking</a></li>
+<li><a class="reference internal" href="#quotes" id="id31">27&nbsp;&nbsp;&nbsp;Quotes</a></li>
+<li><a class="reference internal" href="#define" id="id32">28&nbsp;&nbsp;&nbsp;define()</a></li>
+<li><a class="reference internal" href="#security-considerations" id="id33">29&nbsp;&nbsp;&nbsp;Security Considerations</a><ul class="auto-toc">
+<li><a class="reference internal" href="#php-code-execution" id="id34">29.1&nbsp;&nbsp;&nbsp;PHP Code Execution:</a></li>
+<li><a class="reference internal" href="#command-execution" id="id35">29.2&nbsp;&nbsp;&nbsp;Command Execution:</a></li>
+<li><a class="reference internal" href="#file-disclosure" id="id36">29.3&nbsp;&nbsp;&nbsp;File Disclosure:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optimizations" id="id37">30&nbsp;&nbsp;&nbsp;Optimizations</a><ul class="auto-toc">
+<li><a class="reference internal" href="#extension-loaded" id="id38">30.1&nbsp;&nbsp;&nbsp;extension_loaded()</a></li>
+<li><a class="reference internal" href="#concatenate-strings" id="id39">30.2&nbsp;&nbsp;&nbsp;Concatenate strings</a></li>
+<li><a class="reference internal" href="#loops" id="id40">30.3&nbsp;&nbsp;&nbsp;Loops</a></li>
+<li><a class="reference internal" href="#array" id="id41">30.4&nbsp;&nbsp;&nbsp;Array</a></li>
+<li><a class="reference internal" href="#user-defined-functions" id="id42">30.5&nbsp;&nbsp;&nbsp;User defined functions</a></li>
+<li><a class="reference internal" href="#dynamically-created-functions-eval-and-create-function" id="id43">30.6&nbsp;&nbsp;&nbsp;Dynamically created functions (eval and create_function)</a></li>
+<li><a class="reference internal" href="#disk-i-o" id="id44">30.7&nbsp;&nbsp;&nbsp;Disk I/O</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stdin-stdout-stderr" id="id45">31&nbsp;&nbsp;&nbsp;STDIN/STDOUT/STDERR</a></li>
+<li><a class="reference internal" href="#php-function-issues" id="id46">32&nbsp;&nbsp;&nbsp;PHP Function Issues</a><ul class="auto-toc">
+<li><a class="reference internal" href="#fpassthru" id="id47">32.1&nbsp;&nbsp;&nbsp;fpassthru()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hashing-algorithm" id="id48">33&nbsp;&nbsp;&nbsp;Hashing Algorithm</a><ul class="auto-toc">
+<li><a class="reference internal" href="#recommended-algorithm" id="id49">33.1&nbsp;&nbsp;&nbsp;Recommended Algorithm</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#csrf-token-protection" id="id50">34&nbsp;&nbsp;&nbsp;CSRF Token protection</a></li>
+</ul>
+</div>
+<div class="section" id="basics">
+<h1><a class="toc-backref" href="#id2">1&nbsp;&nbsp;&nbsp;Basics</a></h1>
+<p>Horde Coding Standards are following PSR-0, PSR-1 and PSR-2 of the <a class="reference external" href="http://www.php-fig.org/">PHP
+Framework Interop Group</a></p>
+</div>
+<div class="section" id="indenting-whitespace">
+<h1><a class="toc-backref" href="#id3">2&nbsp;&nbsp;&nbsp;Indenting/Whitespace</a></h1>
+<p>Use an indent of 4 spaces, with no tabs.  Remove all trailing whitespace.  If
+using vim, the following .vimrc code will highlight trailing whitespace in
+red:</p>
+<pre class="literal-block">
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+</pre>
+</div>
+<div class="section" id="language-case">
+<h1><a class="toc-backref" href="#id4">3&nbsp;&nbsp;&nbsp;Language Case</a></h1>
+<p>When working with PHP statements, constructs or keywords, lowercase text is
+required. This does not apply to classes provided by PHP, which should be
+written as they are in the PHP manual (e.g. <a class="reference external" href="http://us.php.net/manual/en/domdocument.createcdatasection.php">DOMDocument::createCDATASection</a>)</p>
+</div>
+<div class="section" id="control-structures">
+<h1><a class="toc-backref" href="#id5">4&nbsp;&nbsp;&nbsp;Control Structures</a></h1>
+<p>These include <tt class="docutils literal">if</tt>, <tt class="docutils literal">for</tt>, <tt class="docutils literal">while</tt>, <tt class="docutils literal">switch</tt>, etc.  Here is an example
+<tt class="docutils literal">if</tt> statement, since it is the most complicated of them:</p>
+<pre class="literal-block">
+if ((condition1) || (condition2)) {
+    action1;
+} elseif ((condition3) &amp;&amp; (condition4)) {
+    action2;
+} else {
+    defaultaction;
+}
+</pre>
+<p>Multi-line if conditions are braced this way:</p>
+<pre class="literal-block">
+if ((condition1) || (condition2) || (condition3) ||
+    (condition4)) {
+    action1;
+}
+</pre>
+<p>Control statements should have one space between the control keyword and
+opening parenthesis, to distinguish them from function calls.</p>
+<p>Do not omit the curly braces under any circumstance.  In the case of a large
+number of short tests and actions, the following is acceptable:</p>
+<pre class="literal-block">
+if (condition)   { action; }
+if (condition 2) { action 2; }
+...
+</pre>
+<p>For switch statements:</p>
+<pre class="literal-block">
+switch (condition) {
+case 1:
+    action1;
+    break;
 
+case 2:
+    action2;
+    break;
+
+default:
+    defaultaction;
+    break;
+}
+</pre>
+</div>
+<div class="section" id="function-calls">
+<h1><a class="toc-backref" href="#id6">5&nbsp;&nbsp;&nbsp;Function Calls</a></h1>
+<p>Functions should be called with no spaces between the function name, the
+opening parenthesis, and the first parameter; spaces between commas and each
+parameter, and no space between the last parameter, the closing parenthesis,
+and the semicolon.  Here's an example:</p>
+<pre class="literal-block">
+$var = foo($bar, $baz, $quux);
+</pre>
+<p>As displayed above, there should be one space on either side of an equals sign
+used to assign the return value of a function to a variable.  In the case of a
+block of related assignments, more space may be inserted to promote
+readability:</p>
+<pre class="literal-block">
+$short         = foo($bar);
+$long_variable = foo($baz);
+</pre>
+<p>The &quot;&#64;&quot; operator can be used to silence any errors that a function call may
+generate. This should be used with caution, as any fatal errors will be
+completely transparent to the user. Only use &quot;&#64;&quot; to silence functions that,
+e.g., emit warnings when the data input is incorrect (such as unserialize()).</p>
+</div>
+<div class="section" id="function-definitions">
+<h1><a class="toc-backref" href="#id7">6&nbsp;&nbsp;&nbsp;Function Definitions</a></h1>
+<p>Function declarations follow the &quot;BSD/Allman&quot; convention:</p>
+<pre class="literal-block">
+function fooFunction($arg1, $arg2 = '')
+{
+    if (condition) {
+        statement;
+    }
+    return $val;
+}
+</pre>
+<p>Arguments with default values go at the end of the argument list.  Always
+attempt to return a meaningful value from a function if one is appropriate.</p>
+<p>Functions used only in the current script/class (e.g. private or protected)
+should begin with a <tt class="docutils literal">_</tt> character (e.g. <tt class="docutils literal">_exampleLibrary</tt>).  This helps
+distinguish these private functions from other, publicly available functions.</p>
+</div>
+<div class="section" id="class-definitions">
+<h1><a class="toc-backref" href="#id8">7&nbsp;&nbsp;&nbsp;Class Definitions</a></h1>
+<p>Class definitions also follow the &quot;BSD/Allman&quot; convention:</p>
+<pre class="literal-block">
+class Some_Class
+{
+    /**
+     *
+     */
+    var $_variable;
+
+    public function fooFunction()
+    {
+        statement;
+    }
+
+}
+</pre>
+<p>Note the blank line at the end of the class definition.</p>
+</div>
+<div class="section" id="naming-libraries">
+<h1><a class="toc-backref" href="#id9">8&nbsp;&nbsp;&nbsp;Naming Libraries</a></h1>
+<p>Libraries (any file located in the <tt class="docutils literal">lib/</tt> directory of the application)
+should be named with capital letters at the beginning of each word.  Use
+studlycaps for naming; a session cache class would be stored in
+<tt class="docutils literal">lib/SessionCache.php</tt>.</p>
+<p>If the library/class is extended, the extending files should be stored in a
+directory under <tt class="docutils literal">lib/</tt> with the same name as the original library.
+Subclasses follow the exact same naming requirements.</p>
+<div class="section" id="example">
+<h2><a class="toc-backref" href="#id10">8.1&nbsp;&nbsp;&nbsp;Example</a></h2>
+<p>The &quot;Example Library&quot; library should be saved as <tt class="docutils literal">lib/ExampleLibrary.php</tt>.
+Any file extending the library/class should be stored in the directory
+<tt class="docutils literal">lib/ExampleLibrary/</tt>.</p>
+</div>
+</div>
+<div class="section" id="comments">
+<h1><a class="toc-backref" href="#id11">9&nbsp;&nbsp;&nbsp;Comments</a></h1>
+<p>Inline documentation for classes should follow the <a class="reference external" href="http://phpdoc.org/">phpDocumentor conventions</a>.</p>
+<p>Quick example for private variable definition for Horde:</p>
+<pre class="literal-block">
+/**
+ * Variable description.
+ *
+ * &#64;var datatype
+ */
+</pre>
+<p>Quick example function definition for Horde:</p>
+<pre class="literal-block">
+/**
+ * The description of the function goes here.
+ *
+ * &#64;param datatype $variablename   Description of variable.
+ * &#64;param datatype $variable2name  Description of variable2.
+ * ...
+ * [Insert 2 spaces after the longest $variable definition, and then line
+ *  up all descriptions with this description]
+ *
+ * &#64;return datatype  Description of return value.
+ * [Once again, insert 2 spaces after the datatype, and line up all
+ *  subsequent lines, if any, with this character.]
+ *
+ * &#64;since Horde x.x.x [Only if necessary - use if function is added to the
+ * current release versions to indicate that the function has not been
+ * available in previous versions. &#64;since is only needed if the function
+ * has been added after the last major point release - e.g. x.0.]
+ */
+</pre>
+</div>
+<div class="section" id="including-code">
+<h1><a class="toc-backref" href="#id12">10&nbsp;&nbsp;&nbsp;Including Code</a></h1>
+<p>You should not explicitly include or require classes. Horde provides an
+autoloader library, so the class should be autoloaded. This will allow
+maximum flexibility in managing class libraries.</p>
+<p>For all other includes (configuration files, data files, etc.) use <a class="reference external" href="http://php.net/include">include</a>.</p>
+</div>
+<div class="section" id="php-code-tags">
+<h1><a class="toc-backref" href="#id13">11&nbsp;&nbsp;&nbsp;PHP Code Tags</a></h1>
+<p>Always use <tt class="docutils literal"><span class="pre">&lt;?php</span></tt> to delimit PHP code, not the <tt class="docutils literal">&lt;?</tt> shorthand.
+This is required for PEAR compliance and is also the most portable way to
+include PHP code on differing operating systems and setups.</p>
+<p>In templates, make sure to use this as well (<tt class="docutils literal"><span class="pre">&lt;?php</span> echo $varname <span class="pre">?&gt;</span></tt>), as
+the shortcut version (<tt class="docutils literal"><span class="pre">&lt;?=</span> $var <span class="pre">?&gt;</span></tt>) does not work with <a class="reference external" href="http://www.php.net/manual/en/configuration.directives.php#ini.short-open-tag">short_open_tag</a>
+turned off.</p>
+<p>Files should never end with a closing '?&gt;'. This is redundant and can allow
+whitespace added to the end of a file to cause PHP to send headers early.</p>
+</div>
+<div class="section" id="header-comment-blocks">
+<h1><a class="toc-backref" href="#id14">12&nbsp;&nbsp;&nbsp;Header Comment Blocks</a></h1>
+<p>All source code files in the Horde distribution should contain the following
+comment block as the header:</p>
+<p>Example for <a class="reference external" href="http://www.opensource.org/licenses/lgpl-license.php">LGPL</a>'ed Horde code:</p>
+<pre class="literal-block">
+/**
+ * The Horde_Foo class provides an API for various foo
+ * techniques that can be used by Horde applications.
+ *
+ * Copyright 2009-2016 Horde LLC (http://www.horde.org/)
+ *
+ * See the enclosed file COPYING for license information (LGPL-2). If you
+ * did not receive this file, see http://www.horde.org/licenses/lgpl.
+ *
+ * &#64;author   Original Author &lt;author&#64;example.com&gt;
+ * &#64;author   Your Name &lt;you&#64;example.com&gt;
+ * &#64;category Horde
+ * &#64;package  Package
+ * &#64;license  http://www.horde.org/licenses/lgpl LGPL-2
+ * &#64;since    Horde 4.0.1 [only if needed]
+ */
+</pre>
+<p>Example for <a class="reference external" href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>'ed application code:</p>
+<pre class="literal-block">
+/**
+ * The App_Bar class contains all functions related to handling
+ * bars in App.
+ *
+ * Copyright 2009-2016 Horde LLC (http://www.horde.org/)
+ *
+ * See the enclosed file COPYING for license information (GPL). If you
+ * did not receive this file, see http://www.horde.org/licenses/gpl.
+ *
+ * &#64;author   Original Author &lt;author&#64;example.com&gt;
+ * &#64;author   Your Name &lt;you&#64;example.com&gt;
+ * &#64;category Horde
+ * &#64;package  App
+ * &#64;license  http://www.horde.org/licenses/gpl GPL
+ * &#64;since    App 1.0.1 [only if needed]
+ */
+</pre>
+<p>There's no hard rule to determine when a new code contributer should be added
+to the list of authors for a given source file.  In general, their changes
+should fall into the &quot;substantial&quot; category (meaning somewhere around 10% to
+20% of code changes).  Exceptions could be made for rewriting functions or
+contributing new logic.</p>
+<p>Simple code reorganization or bug fixes would not justify the addition of a
+new individual to the list of authors.</p>
+</div>
+<div class="section" id="example-urls">
+<h1><a class="toc-backref" href="#id15">13&nbsp;&nbsp;&nbsp;Example URLs</a></h1>
+<p>Use <tt class="docutils literal">example.com</tt> for all example URLs, per <a class="reference external" href="http://www.faqs.org/rfcs/rfc2606.html">RFC 2606</a>.</p>
+</div>
+<div class="section" id="php-ini-settings">
+<h1><a class="toc-backref" href="#id16">14&nbsp;&nbsp;&nbsp;php.ini settings</a></h1>
+<p>Horde code MUST NOT use global variables set by EGPCS (Environment, GET, POST,
+Cookie, Server) data.  Instead, the magic variables <tt class="docutils literal">$_ENV</tt>, <tt class="docutils literal">$_GET</tt>,
+<tt class="docutils literal">$_POST</tt>, $_COOKIE``, and <tt class="docutils literal">$_SERVER</tt> must be used instead.</p>
+<p>To retrieve posted data (in the global <tt class="docutils literal">$_GET</tt> and <tt class="docutils literal">$_POST</tt> variables),
+you should normally use <a class="reference external" href="http://dev.horde.org/api/framework/Horde_Util/Horde_Util.html#methodgetFormData">Horde_Util::getFormData()</a> which will automatically
+run <a class="reference external" href="http://dev.horde.org/api/framework/Horde_Util/Horde_Util.html#methoddispelMagicQuotes">Horde_Util::dispelMagicQuotes()</a>. This will ensure that all Horde code
+will work regardless of the setting of <a class="reference external" href="http://www.php.net/manual/en/ref.info.php#ini.magic-quotes-gpc">magic_quotes_gpc</a>. The only time you
+should not use <a class="reference external" href="http://dev.horde.org/api/framework/Horde_Util/Horde_Util.html#methodgetFormData">Horde_Util::getFormData()</a> is if you want to directly access
+a GET or POST variable instead; in this case, you should use
+<a class="reference external" href="http://dev.horde.org/api/framework/Horde_Util/Horde_Util.html#methodgetGet">Horde_Util::getGet()</a> or <a class="reference external" href="http://dev.horde.org/api/framework/Horde_Util/Horde_Util.html#methodgetPost">Horde_Util::getPost()</a> respectively.</p>
+<p>All Horde code should work with <a class="reference external" href="http://www.php.net/manual/en/ref.errorfunc.php#ini.error-reporting">error_reporting</a> = E_ALL. Failure to do so
+would result in ugly output, error logs getting filled with lots of warning
+messages, or even downright broken scripts.</p>
+<p>No Horde code should assume that '.' is in the include path. Always specify
+'./' in front of a filename when you are including a file in the same
+directory.</p>
+</div>
+<div class="section" id="html-4-compliance">
+<h1><a class="toc-backref" href="#id17">15&nbsp;&nbsp;&nbsp;HTML 4 Compliance</a></h1>
+<p>All Horde libraries and applications that generate content to be sent to a web
+browser are expected to generate HTML 4 compliant syntax.  This is a change
+from earlier mandates to use XHTML 1.0.</p>
+<p>All tag names and parameters must be lower case including javascript event
+handlers:</p>
+<pre class="literal-block">
+&lt;font color=&quot;#ffffff&quot;&gt;...&lt;/font&gt;
+&lt;a href=&quot;http://example.com&quot; onmouseover=&quot;status=''&quot; onmouseout=&quot;status=''&quot;&gt;...&lt;/a&gt;
+</pre>
+<p>All tag parameters must be of a valid parameter=&quot;value&quot; form (numeric values
+must also be surrounded by quotes).  For parameters that had no value in HTML,
+the parameter name is the value.  For example:</p>
+<pre class="literal-block">
+&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;
+&lt;select name=&quot;example&quot;&gt;
+    &lt;option selected=&quot;selected&quot; value=&quot;1&quot;&gt;Example&lt;/option&gt;
+&lt;/select&gt;
+&lt;td nowrap=&quot;nowrap&quot;&gt;Example&lt;/td&gt;
+</pre>
+<p>All form definitions must be on their own line and either fully defined within
+a <tt class="docutils literal"><span class="pre">&lt;td&gt;&lt;/td&gt;</span></tt> pair or be outside table tags.  Forms must also always have an
+action parameter:</p>
+<pre class="literal-block">
+&lt;form method=&quot;post&quot; action=&quot;http://example.com/example.cgi&quot;&gt;
+&lt;table&gt;
+    &lt;tr&gt;&lt;td&gt;example&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;&lt;td&gt;
+        &lt;form action=&quot;javascript:void(0)&quot; onsubmit=&quot;return false;&quot;&gt;
+        &lt;/form&gt;
+    &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<p>All JavaScript tags must have a valid type parameter:</p>
+<pre class="literal-block">
+&lt;script type=&quot;text/javascript&quot;&gt;
+...
+&lt;/script&gt;
+</pre>
+<p>Nothing may appear after <tt class="docutils literal">&lt;/html&gt;</tt>, therefore include any common footers
+after all other output.</p>
+<p>All images must have an <tt class="docutils literal">alt</tt> attribute:</p>
+<pre class="literal-block">
+&lt;img src=&quot;example.gif&quot; alt=&quot;&lt;?php echo _(&quot;Example&quot;) ?&gt;&quot; /&gt;
+&lt;?php
+    echo Horde_Themes_Image::tag('example.gif', array(
+        'alt' =&gt; _(&quot;Example&quot;)
+    ));
+?&gt;
+</pre>
+<p>Input fields of type &quot;image&quot; do not allow the border attribute and may render
+with a border on some browsers.  Use the following instead:</p>
+<pre class="literal-block">
+&lt;a href=&quot;&quot; onclick=&quot;document.formname.submit(); return false;&quot;&gt;&lt;?php
+    echo Horde_Themes_Image::tag(&quot;example.gif&quot;, array(
+        'alt' =&gt; _(&quot;Example&quot;)
+    ));
+?&gt;&lt;/a&gt;
+</pre>
+</div>
+<div class="section" id="database-conventions">
+<h1><a class="toc-backref" href="#id18">16&nbsp;&nbsp;&nbsp;Database Conventions</a></h1>
+<p>All database tables used by Horde resources and Horde applications need to
+make sure that their table and field names work in all databases.  Many
+databases reserve words like 'uid', 'user', etc. for internal use, and forbid
+words that are SQL keywords (select, where, etc.).  Also, all names should be
+lowercase, with underscores ('_') to separate words, to avoid case sensitivity
+issues.</p>
+<p>A good way to do this for field names is to make the field name
+tablename_fieldname.</p>
+<p>Other general guidelines: Table names should be plural (users); field names
+should be singular (user_name).</p>
+<p>Use Horde_Db for any SQL schema management and for queries, especially for
+result set pagination ('LIMIT' is not portable). Also, do not use the 'AS'
+keyword for table aliases.</p>
+<p>In SQL queries, keywords should be capitalized.</p>
+<p>Identifiers should not be longer than 30 characters.</p>
+</div>
+<div class="section" id="regular-expression-use">
+<h1><a class="toc-backref" href="#id19">17&nbsp;&nbsp;&nbsp;Regular Expression Use</a></h1>
+<p>Always use the <a class="reference external" href="http://www.php.net/manual/en/ref.pcre.php">preg_</a> functions instead of <a class="reference external" href="http://www.php.net/manual/en/ref.regex.php">ereg_</a> (and
+<a class="reference external" href="http://www.php.net/manual/en/function.preg-split.php">preg_split()</a> instead of <a class="reference external" href="http://www.php.net/manual/en/function.split.php">split()</a>); they are included in PHP by default
+and are faster than <a class="reference external" href="http://www.php.net/manual/en/ref.regex.php">ereg_</a>; <a class="reference external" href="http://www.php.net/manual/en/ref.regex.php">ereg_</a> is also deprecated in PHP 5.3+.</p>
+<p><strong>NEVER</strong> use a regular expression to match or replace a static string.
+<a class="reference external" href="http://www.php.net/manual/en/function.explode.php">explode()</a> (in place of <a class="reference external" href="http://www.php.net/manual/en/function.preg-split.php">preg_split()</a>), <a class="reference external" href="http://www.php.net/manual/en/function.str-replace.php">str_replace()</a>, <a class="reference external" href="http://www.php.net/manual/en/function.strpos.php">strpos()</a>, or
+<a class="reference external" href="http://www.php.net/manual/en/function.strtr.php">strtr()</a> do the job much more efficiently.</p>
+<p>In addition, when doing replacement or regex matching on large
+strings, if you don't know if the target string contains the text to
+be matched or replaced, it is often a performance win to use
+<a class="reference external" href="http://www.php.net/manual/en/function.strpos.php">strpos()</a> to check first. Then, only if the text to be matched or
+replaced is present, go ahead and do the more memory intensive string
+manipulation.</p>
+</div>
+<div class="section" id="parameter-passing">
+<h1><a class="toc-backref" href="#id20">18&nbsp;&nbsp;&nbsp;Parameter Passing</a></h1>
+<p>Parameters should be passed by value wherever semantically possible.
+This practice takes full advantage of reference counting.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <a class="reference external" href="http://www.php.net/manual/en/language.operators.comparison.php#language.operators.comparison.ternary">ternary operator</a> automatically returns a copy of its
+operands, so don't use it with objects unless you are sure you want
+to return an object copy.</p>
+</div>
+<p>If at all possible, the number of optional arguments to a function should be
+limited.  If optional arguments are needed, it is usually best to have the
+last parameter be an array which contains the list of optional arguments.
+This also eases future expansion since new options can be added without
+changing the API.</p>
+</div>
+<div class="section" id="long-lines">
+<h1><a class="toc-backref" href="#id21">19&nbsp;&nbsp;&nbsp;Long Lines</a></h1>
+<p>The optimal line length is 80 characters, including comments. The maximum line
+length is 100 characters unless this severely impacts the clarity of the
+code. When deciding where to wrap, aim for readability, understanding that
+different developers will have different views on this. Always wrap comments
+and leave at least 2 spaces at the right margin (in other words, wrap at 78
+characters).</p>
+</div>
+<div class="section" id="line-breaks">
+<h1><a class="toc-backref" href="#id22">20&nbsp;&nbsp;&nbsp;Line Breaks</a></h1>
+<p>Only use UNIX style of linebreak (<tt class="docutils literal">\n</tt>), not Windows/DOS/Mac style
+(<tt class="docutils literal">\r\n</tt>).</p>
+<p>Using vim, to convert from DOS style type:</p>
+<pre class="literal-block">
+:set ff=unix
+</pre>
+<p>Using vi, to convert from DOS style type:</p>
+<pre class="literal-block">
+:g/^M/s///g
+</pre>
+<p>(Note that the <tt class="docutils literal">^M</tt> is a control character, and to reproduce it when you
+type in the vi command you have to pad it first using the special <tt class="docutils literal">^V</tt>
+character.)</p>
+</div>
+<div class="section" id="private-variables">
+<h1><a class="toc-backref" href="#id23">21&nbsp;&nbsp;&nbsp;Private Variables</a></h1>
+<p>Variables used exclusively within a class should begin with a underscore ('_')
+character.  An example class variable definition: <tt class="docutils literal">protected
+$_variablename;</tt></p>
+</div>
+<div class="section" id="array-definitions">
+<h1><a class="toc-backref" href="#id24">22&nbsp;&nbsp;&nbsp;Array Definitions</a></h1>
+<p>When defining arrays, or nested arrays, use the following format, where
+indentation is noted via the closing parenthesis characters:</p>
+<pre class="literal-block">
+$arrayname['index'] = array(
+    'name1' =&gt; 'value1',
+    'name2' =&gt; array(
+        'subname1' =&gt; 'subvalue1',
+        'subname2' =&gt; 'subvalue2'
+    ),
+);
+</pre>
+<p>The only exception should be for empty or short arrays that fit on one line,
+which may be written as:</p>
+<pre class="literal-block">
+$arrayname['index'] = array();
+$arrayvar = array('foo1' =&gt; 'bar1');
+</pre>
+</div>
+<div class="section" id="internationalization-i18n">
+<h1><a class="toc-backref" href="#id25">23&nbsp;&nbsp;&nbsp;Internationalization (I18n)</a></h1>
+<p>Mark all strings presented to the user as gettext strings by calling the
+gettext shortcut function (<tt class="docutils literal">_()</tt>):</p>
+<pre class="literal-block">
+echo _(&quot;Hello world&quot;);
+</pre>
+<p>Don't use the gettext functions for strings that will be written to a log file
+or otherwise presented to the administrator.</p>
+<p>The Horde_String:: class contains several string manipulation methods that
+are, as opposed to their PHP equivalents, locale and charset safe.</p>
+<p>Use Horde_String::convertCharset() if you need to convert between different
+character set encodings (for example, between user input and a storage backend
+or data from an external source and the user interface).  You don't need to
+care if the character sets are really different.</p>
+<p>Use the Horde_String::lower() and Horde_String::upper() methods without a
+second parameter if you need to perform a locale-independent string
+conversion.  That's the case for all strings that are further processed or
+interpreted by code.  Use these methods with the second parameter set to true
+for strings that need to be converted correctly according to the current (or
+specified) character set.</p>
+<p>Use the other Horde_String:: equivalents of PHP string functions to manipulate
+strings correctly according to the current (or specified) character set but
+use the PHP functions for code/machine processed strings.</p>
+</div>
+<div class="section" id="error-checking">
+<h1><a class="toc-backref" href="#id26">24&nbsp;&nbsp;&nbsp;Error checking</a></h1>
+<p>Horde code should throw <tt class="docutils literal">Horde_Exception</tt> objects (or equivalent Exception
+derivatives) to report errors.  The calling code should either explicitly
+catch the exception and handle it or else the Horde-wide exception handler
+will handle the exception, display an error message, and exit the script:</p>
+<pre class="literal-block">
+try {
+    $result = $something-&gt;call('may error');
+    // Succeeded.
+} catch (Horde_Exception $e) {
+    // Handle error condition.
+}
+</pre>
+<p>Do NOT return PEAR_Error objects. Any PEAR_Error objects should be converted
+to a Horde_Exception before throwing.</p>
+<p>When throwing a Horde_Exception the error message provided should not be
+localized.</p>
+<p>Throwing exceptions is expensive, so use them carefully for logic flow. You
+should cache results of Horde_Core_Hooks#callHook() calls for example, if you
+plan on calling a hook hundreds of time an access.</p>
+</div>
+<div class="section" id="exceptions-in-framework-packages">
+<h1><a class="toc-backref" href="#id27">25&nbsp;&nbsp;&nbsp;Exceptions in Framework Packages</a></h1>
+<p>Exceptions thrown in packages can be divided into two categories: code/logic
+exceptions and execution exceptions.</p>
+<div class="section" id="code-logic-exceptions">
+<h2><a class="toc-backref" href="#id28">25.1&nbsp;&nbsp;&nbsp;Code/Logic Exceptions</a></h2>
+<p>These are exceptions that should be thrown when there is an issue with the
+programming logic - e.g. the environment was not properly set up by an
+application, or a required parameter was not provided.</p>
+<p>These type of exceptions should throw one of the SPL Exceptions (e.g.
+BadFunctionCallException, LogicException, RuntimeException), NOT a package
+exception.  This ensures that errors will normally cause a fatal error, rather
+than potentially being caught and ignored by the calling code.  As such, there
+is no need to document the exception in phpdoc.  Further, the exception
+messages should not be translated, as these messages are intended for
+developers not users.</p>
+</div>
+<div class="section" id="execution-exceptions">
+<h2><a class="toc-backref" href="#id29">25.2&nbsp;&nbsp;&nbsp;Execution Exceptions</a></h2>
+<p>These are exceptions that are thrown due to an error encountered while
+performing the action requested by the calling code.</p>
+<p>Any package that throws at least one execution Exception should define a
+Horde_PackageName_Exception class that extends Horde_Exception.  Execution
+exceptions should use this class when throwing an error.  Any method that
+throws this kind of exception should document it in the phpdoc using the
+&#64;throws keyword.  These messages should be translated, as they potentially
+could be displayed to the user at the application level.</p>
+</div>
+</div>
+<div class="section" id="existence-checking">
+<h1><a class="toc-backref" href="#id30">26&nbsp;&nbsp;&nbsp;Existence checking</a></h1>
+<p>Often you'll need to check whether or not a variable or property exists.
+There are several cases here:</p>
+<ol class="loweralpha">
+<li><p class="first">If you need to know if a variable exists at all and is not <tt class="docutils literal">null</tt>, use
+<a class="reference external" href="http://www.php.net/manual/en/function.isset.php">isset()</a>:</p>
+<pre class="literal-block">
+// Check to see if $param is defined.
+if (isset($param)) {
+    // $param may be false, but it's there.
+}
+</pre>
+</li>
+<li><p class="first">If you need to know if a variable exists AND has a non-empty value (not
+<tt class="docutils literal">null</tt>, 0, <tt class="docutils literal">false</tt>, empty string or undefined), use !empty():</p>
+<pre class="literal-block">
+// Make sure that $answer exists, is not an empty string, and is
+// not 0:
+if (!empty($answer)) {
+    // $answer has some non-false content.
+} else {
+    // (bool)$answer would be false.
+}
+</pre>
+</li>
+</ol>
+<p>As pointed out in the comment of the else clause, <a class="reference external" href="http://www.php.net/manual/en/function.empty.php">empty()</a> essentially does
+the same check as <a class="reference external" href="http://www.php.net/manual/en/function.isset.php">isset()</a> -- is this variable defined in the current scope?
+-- and then, if it is, returns what the variable would evaluate to as a
+boolean. This means that 0, while potentially valid input, is &quot;empty&quot; - so if
+0 is valid data for your case, don't use !empty().</p>
+<ol class="loweralpha" start="3">
+<li><p class="first">If you want to know if a variable is a non-empty string, including 0, you
+have to use <a class="reference external" href="http://www.php.net/manual/en/function.strlen.php">strlen()</a>. This only works with strings or scalars that
+automatically cast to strings without problems:</p>
+<pre class="literal-block">
+// Make sure that $str is a non-empty string. $str must exist, so add an
+// additional check with isset() if necessary.
+if (strlen($str)) {
+    // $str has a non-zero length.
+} else {
+    // $str is an empty string '', or null.
+}
+</pre>
+</li>
+<li><p class="first">If you know you are working with a mixed variable then using just
+<a class="reference external" href="http://www.php.net/manual/en/function.isset.php">isset()</a> and <a class="reference external" href="http://www.php.net/manual/en/function.empty.php">empty()</a> could cause unexpected results, for example if
+testing for a key and the variable is actually a string:</p>
+<pre class="literal-block">
+$foo = 'bar';
+if (isset($foo['somekey'])) {
+    // This will evaluate to TRUE!
+}
+</pre>
+</li>
+</ol>
+<p>If you know that there is a possibility of a mixed type variable the solution
+in this case would be to add an <a class="reference external" href="http://www.php.net/manual/en/function.is-array.php">is_array()</a> check in the <tt class="docutils literal">if()</tt> statement.</p>
+<ol class="loweralpha" start="5">
+<li><p class="first">Use <a class="reference external" href="http://www.php.net/manual/en/function.array-key-exists.php">array_key_exists()</a> when you want to check if an array key is defined
+even if it has a value of <tt class="docutils literal">null</tt>:</p>
+<pre class="literal-block">
+// Make sure we have a charset parameter. Value could also be null.
+if (!array_key_exists('charset', $params)) {
+    throw new Horde_Exception('Incomplete configuration');
+}
+</pre>
+</li>
+</ol>
+<p>Please note that <a class="reference external" href="http://www.php.net/manual/en/function.array-key-exists.php">array_key_exists()</a> is a performance hit (25%-100%) and
+should only be used when necessary. Instead try to use !empty() or
+<a class="reference external" href="http://www.php.net/manual/en/function.isset.php">isset()</a> instead.</p>
+</div>
+<div class="section" id="quotes">
+<h1><a class="toc-backref" href="#id31">27&nbsp;&nbsp;&nbsp;Quotes</a></h1>
+<p>You should always use single quote (') characters around strings, except where
+double quote (&quot;) characters are required.  All literal strings should be in
+single quotes.  A comparison of single and double quote usage follows:</p>
+<dl class="docutils">
+<dt>Single Quotes:</dt>
+<dd><ul class="first last simple">
+<li>Variables in the string are not parsed or expanded.</li>
+<li>New line symbols can be included as literal line ends (not recommended).</li>
+<li>To include a single quote character, escape it with a <tt class="docutils literal">\</tt> (backslash)
+character, as in: <tt class="docutils literal">echo <span class="pre">'Here\'s</span> an example';</tt></li>
+<li>To specify a <tt class="docutils literal">\</tt> (backslash) character, double it: <tt class="docutils literal">echo <span class="pre">'c:\\temp';</span></tt></li>
+</ul>
+</dd>
+<dt>Double Quotes:</dt>
+<dd><ul class="first last simple">
+<li>Parses and expands variables in the string.</li>
+<li>Uses advanced (<a class="reference external" href="http://www.php.net/sprintf">sprintf</a>-style) escape sequences like <tt class="docutils literal">\n</tt>, <tt class="docutils literal">\$</tt>,
+<tt class="docutils literal">\t</tt>, etc.</li>
+<li>Should be used in the gettext shortcut <tt class="docutils literal"><span class="pre">_(&quot;&quot;)</span></tt> format.</li>
+<li>Use with care, as many correct looking strings are really invalid.</li>
+</ul>
+</dd>
+</dl>
+<p>The following are incorrect:</p>
+<pre class="literal-block">
+echo &quot;Today is the $date['day'] of $date['month']&quot;
+$foo[index] = $foo[&quot;old_index&quot;];
+</pre>
+</div>
+<div class="section" id="define">
+<h1><a class="toc-backref" href="#id32">28&nbsp;&nbsp;&nbsp;define()</a></h1>
+<p><a class="reference external" href="http://www.php.net/manual/en/function.define.php">define()</a> is a somewhat slow function in PHP (as of PHP 4.3.x) so excessive
+use is discouraged.  Every constant created by <tt class="docutils literal">define()</tt> should be prefixed
+with <tt class="docutils literal">HORDE_</tt>, its package name, or the application name.</p>
+<p>Class constants should be defined inside the class using the <tt class="docutils literal">const</tt>
+keyword.</p>
+</div>
+<div class="section" id="security-considerations">
+<h1><a class="toc-backref" href="#id33">29&nbsp;&nbsp;&nbsp;Security Considerations</a></h1>
+<p>The following are a non-exhaustive list of features/functions to take
+special care with:</p>
+<div class="section" id="php-code-execution">
+<h2><a class="toc-backref" href="#id34">29.1&nbsp;&nbsp;&nbsp;PHP Code Execution:</a></h2>
+<p>require, include, require_once, include_once - Carefully audit any
+variables used in these functions, and check the source of any
+constants as well.</p>
+<p>eval and create_function - Obvious danger if user input is supplied to
+it in uncontrolled conditions.</p>
+<p>preg_replace - The /e modifier is deprecated and must no longer be used.</p>
+</div>
+<div class="section" id="command-execution">
+<h2><a class="toc-backref" href="#id35">29.2&nbsp;&nbsp;&nbsp;Command Execution:</a></h2>
+<p>exec - Executes a specified command and returns the last line of output.</p>
+<p>passthru - Executes a specified command and writes the output to STDOUT.</p>
+<p>`` (backticks) - Executes the specified command and returns all the
+output in an array.</p>
+<p>system - Like passthru() but doesn't handle binary data.</p>
+<p>popen - Executes a specified command and connects its output or input
+stream to a PHP file descriptor.</p>
+</div>
+<div class="section" id="file-disclosure">
+<h2><a class="toc-backref" href="#id36">29.3&nbsp;&nbsp;&nbsp;File Disclosure:</a></h2>
+<p>File functions which can be potentially used to open remote or
+unintended files: fopen, readfile, file, file_get_contents.</p>
+</div>
+</div>
+<div class="section" id="optimizations">
+<h1><a class="toc-backref" href="#id37">30&nbsp;&nbsp;&nbsp;Optimizations</a></h1>
+<p>The following optimizations should be used, if possible:</p>
+<div class="section" id="extension-loaded">
+<h2><a class="toc-backref" href="#id38">30.1&nbsp;&nbsp;&nbsp;extension_loaded()</a></h2>
+<p>This appears to be an expensive PHP call.  Use Horde_Util::extensionExists()
+instead, which will cache the results of the call.</p>
+</div>
+<div class="section" id="concatenate-strings">
+<h2><a class="toc-backref" href="#id39">30.2&nbsp;&nbsp;&nbsp;Concatenate strings</a></h2>
+<p>Building a string with concatenation (the &quot;.&quot; operator) using
+single-quoted strings and variables is faster than using an
+interpolated string (a string inside double quotes with variables
+inside the string itself).  In addition, concatenation is easier to
+read and audit for logic and security problems.</p>
+</div>
+<div class="section" id="loops">
+<h2><a class="toc-backref" href="#id40">30.3&nbsp;&nbsp;&nbsp;Loops</a></h2>
+<p>Make sure that you do not continue to define the same variable within a
+loop.  Instead, declare the variable a single time before the loop is run.</p>
+<p>Additionally, for large amounts of data, do not use foreach() loops, as PHP
+will make an additional copy in memory of every element of the array when
+traversing.  Instead, use either array_shift, a for() loop, or the
+next()/each() functions.  (NOTE: As of PHP 5, it is possible to indicate that
+the values should be provided to the interior of the loop by reference,
+thereby eliminating the need to create a copy of the value.)</p>
+</div>
+<div class="section" id="array">
+<h2><a class="toc-backref" href="#id41">30.4&nbsp;&nbsp;&nbsp;Array</a></h2>
+<p>Avoid frequent array accesses.  If you use an array or an array member in a
+loop, assign it to a variable first:</p>
+<pre class="literal-block">
+$a = array('x' =&gt; 'y');
+$entries = array(...);
+
+$length = count($entries);
+$x = $a['x'];
+for ($i = 0; $i &lt; $length; ++$i) {
+    echo $x;
+}
+</pre>
+<p>Don't use array_unique().  The following is reported to be 20 times faster:</p>
+<pre class="literal-block">
+$unique = array_keys(array_flip($foo));
+</pre>
+<p>Even better, if possible rework the algorithm to store the unique data in the
+key and then call array_keys($foo) to return the unique list.</p>
+<p>Avoid array_push(), the [] operator is much faster:</p>
+<pre class="literal-block">
+$array[] = 'element';
+</pre>
+</div>
+<div class="section" id="user-defined-functions">
+<h2><a class="toc-backref" href="#id42">30.5&nbsp;&nbsp;&nbsp;User defined functions</a></h2>
+<p>User defined functions are more expensive than &quot;regular&quot; functions.  Use them
+only if they improve the code readability more than regular functions.</p>
+</div>
+<div class="section" id="dynamically-created-functions-eval-and-create-function">
+<h2><a class="toc-backref" href="#id43">30.6&nbsp;&nbsp;&nbsp;Dynamically created functions (eval and create_function)</a></h2>
+<p>Code executed with eval, and functions created with create_function,
+are essentially PHP code that the engine has to parse every time it is
+run. This code is impossible to cache with an opcode cache, and even
+without one is slower than regular PHP code. Because they also have
+security risks, they should be avoided if at all possible.</p>
+</div>
+<div class="section" id="disk-i-o">
+<h2><a class="toc-backref" href="#id44">30.7&nbsp;&nbsp;&nbsp;Disk I/O</a></h2>
+<p>Disk read and write operations are slow.  If possible read and write files in
+large chunks.  According to the PHP documentation, file_get_contents() is
+potentially much faster than using fopen()/fread()/fclose(). BUT the
+trade-off is the need to read the entire file into memory, so use of
+file_get_contents() depends on the data size.</p>
+</div>
+</div>
+<div class="section" id="stdin-stdout-stderr">
+<h1><a class="toc-backref" href="#id45">31&nbsp;&nbsp;&nbsp;STDIN/STDOUT/STDERR</a></h1>
+<p>To access either STDIN, STDOUT, or STDERR, the following code should be used:</p>
+<pre class="literal-block">
+while (!feof([STDIN|STDOUT|STDERR])) {
+    $line = fgets([STDIN|STDOUT|STDERR]);
+    // process $line here
+}
+</pre>
+</div>
+<div class="section" id="php-function-issues">
+<h1><a class="toc-backref" href="#id46">32&nbsp;&nbsp;&nbsp;PHP Function Issues</a></h1>
+<div class="section" id="fpassthru">
+<h2><a class="toc-backref" href="#id47">32.1&nbsp;&nbsp;&nbsp;fpassthru()</a></h2>
+<p>This function can fail depending on the size of the stream. Instead, use
+fread() to get the stream data:</p>
+<pre class="literal-block">
+// NO: fpassthru($stream);
+while (!feof($stream)) {
+    echo fread($stream, 8192);
+}
+</pre>
+</div>
+</div>
+<div class="section" id="hashing-algorithm">
+<h1><a class="toc-backref" href="#id48">33&nbsp;&nbsp;&nbsp;Hashing Algorithm</a></h1>
+<div class="section" id="recommended-algorithm">
+<h2><a class="toc-backref" href="#id49">33.1&nbsp;&nbsp;&nbsp;Recommended Algorithm</a></h2>
+<p>FNV1-32 is the recommended algorithm to use for non-cryptographic hashing
+actions. Unfortunately, it is not available until PHP 5.4. For PHP 5.3, use
+SHA-1 instead:</p>
+<pre class="literal-block">
+$hash = hash(PHP_MINOR_VERSION &gt;= 4) ? 'fnv132' : 'sha1', $string);
+</pre>
+<p>MD5 should NOT be used, as it has known collision issues. (NOTE: SHA-1 hashes
+are 160-bit vs. MD5 hashes which are 128-bit; care needs to be taken if
+switching between methods regarding storage side of the hash string. FNV1-32
+hashes are 32-bit.)</p>
+</div>
+</div>
+<div class="section" id="csrf-token-protection">
+<h1><a class="toc-backref" href="#id50">34&nbsp;&nbsp;&nbsp;CSRF Token protection</a></h1>
+<p>Any &quot;destructive&quot; action must be protected by a token to prevent CSRF attacks.
+The session token can be retrieved via Horde_Session#getToken() and checked
+via Horde_Session&#64;checkToken().</p>
+</div>
+</div>
