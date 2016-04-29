@@ -13,7 +13,7 @@
              <input type="hidden" name="sitesearch" value="http://lists.horde.org" />
              <input type="hidden" name="domains" value="http://lists.horde.org" />
              <p>Search all mailing lists:<br />
-             <a href="http://www.google.com/"><img src="http://www.google.com/logos/Logo_25wht.gif" align="middle" alt="Google" /></a>
+             <a href="http://www.google.com/"><img src="//www.google.com/logos/Logo_25wht.gif" align="middle" alt="Google" /></a>
              <input type="text" name="q" size="20" maxlength="255" value="" />
              <input type="submit" name="btnG" value="Search" />
              </p>
