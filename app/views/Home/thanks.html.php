@@ -31,9 +31,6 @@
           <a style="margin:20px;text-decoration:none" href="http://web.horde.org/dealspotr.com/" target="_blank">
             <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/blue.png" height="40" alt="Dealspotr" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.org/chameleonjohn.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/chameleon-john.jpg" height="40" alt="ChameleonJohn" />
-          </a>
           <?php if (time() < mktime(0, 0, 0, 1, 16, 2017)): ?>
           <a style="margin:20px;text-decoration:none" href="http://web.horde.org/travel-ticker.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/travelticker.jpg" height="40" alt="Travel Ticker" />
