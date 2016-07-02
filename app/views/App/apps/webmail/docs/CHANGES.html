@@ -3,6 +3,142 @@
 v5.2.15-git
 -----------
 
+[jan] Update Portuguese translation.
+[jan] Update Basque translation.
+
+Address Book Changes
+--------------------
+[mjr] Fix searching via the API when specifying fields and not specifying
+      source.
+[mjr] Require Horde_Perms::DELETE for including an address book  as sync-able.
+
+Bookmarks Changes
+-----------------
+[mjr] Honor ['content_index']['enabled'] setting (<a href="http://bugs.horde.org/ticket/14345">Bug #14345</a>).
+
+Calendar Changes
+----------------
+[mjr] Fix issue where it is possible to save an event with an empty start or
+      end date on some browsers.
+[mjr] Require Horde_Perms::DELETE for including a calendar as sync-able.
+[mjr] Fix end date when toggling an all day event off (<a href="http://bugs.horde.org/ticket/13979">Bug #13979</a>).
+[jan] Fix showing error message if loading of remote calendars failed.
+
+Filter Changes
+--------------
+[jan] Don't ignore 'initial_page' registry setting.
+
+Mail Changes
+------------
+[jan] Remove &lt;link rel=""> tags with "Previous" and "Next" from basic message
+      view (<a href="http://bugs.horde.org/ticket/14400">Bug #14400</a>).
+[jan] Display translated mailbox names in drop down lists too.
+[jan] Consistently display the raw mailbox name in mailbox element titles.
+[jan] Unset window opener when opening new windows from HTML messages (João
+      Machado &lt;geral@jpaulo.eu>).
+[mjr] Fix re-adding an attachment after it has been removed from the compose
+      window (<a href="http://bugs.horde.org/ticket/14329">Bug #14329</a>).
+
+Notes Changes
+-------------
+[mjr] Require Horde_Perms::DELETE for including a notebook as sync-able.
+
+Tasks Changes
+-------------
+[mjr] Fix handling of start and due dates when syncing via EAS.
+[jan] Avoid fatal errors if tasks don't have a UID.
+[mjr] Fix parsing certain date formats (<a href="http://bugs.horde.org/ticket/14348">Bug #14348</a>).
+[jan] Fix deleteing alarms when completing a task.
+[mjr] Require Horde_Perms::DELETE for including a tasklist as sync-able.
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Fix PHP error when handling a STATUS_FOLDERSYNC_REQUIRED.
+[mjr] Protect against colliding synckeys.
+[mjr] Support TLS encryption setting in Outlook autodiscovery responses.
+[mjr] Fix mirroring client changes back to the client (<a href="http://bugs.horde.org/ticket/14354">Bug #14354</a>).
+[mjr] Fix iOS version detection for some iOS devices.
+[mjr] Work around broken iOS behavior of sending empty POOMCONTACTS:Picture tags (<a href="http://bugs.horde.org/ticket/14361">Bug #14361</a>).
+[mjr] Improve performance in certain cases by updating collection syncstamps (Ticket #14368).
+[mjr] Fix normalizing POOMCONTACTS:Birthday and other date fields for the "Nine" client.
+[mjr] Honor the LOG_DETAILED debug log setting even when data is contained in a stream.
+[mjr] Birthday workaround fixes for BB10 (<a href="http://bugs.horde.org/ticket/14375">Bug #14375</a>).
+[mjr] Sanity check envelope date (Ticket #14381).
+[mjr] Prevent sending empty message objects.
+[mjr] Improved handling of task dates.
+[mjr] Fix fatal error when handling email errors due to a typo (<a href="http://bugs.horde.org/ticket/14398">Bug #14398</a>).
+
+Css_Parser
+[jan] Update to PHP-CSS-Parser 7.0.3.
+
+Core
+[mjr] Improve EAS logging when sending email messages.
+[jan] Fix specifying custom log template (Viktor Szépe &lt;viktor@szepe.net>).
+[jan] Upgrade prototype.js to version 1.7.3.
+[jan] Pre-select the current locale when building the spellchecker languages (<a href="http://bugs.horde.org/ticket/14244">Request #14244</a>).
+[jan] Fix pre-selecting an item in key-navigation-lists.
+[jan] Add classes to support the Horde 6 davusername hook.
+[jan] Fix session_regenerate_id() warnings with PHP 7.
+[jan] Fix running garbage collection on cached CSS and JS files (<a href="http://bugs.horde.org/ticket/14285">Bug #14285</a>).
+
+Date
+[jan] Add old Olson timezone names as aliases.
+
+Db
+[jan] Drop ereg_replace() usage (Remi Collet &lt;fedora@famillecollet.com>).
+[mjr] Fix setting Oracle charset in certain cases.
+
+Form
+[mjr] Fix handling of incomplete date arrays (Neal Thomas Oakey &lt;oakey@b1-systems.de>).
+[mjr] Fix bug when using multiple sections (Neal Thomas Oakey &lt;oakey@b1-systems.de>).
+
+HashTable
+[jan] Fix tests.
+
+Http
+[jan] Support HTTP PECL extension version 3.x.
+
+Imap_Client
+[mjr] Add sanity check for malformed offset in Date header (<a href="http://bugs.horde.org/ticket/14381">Bug #14381</a>).
+[mjr] Fix fatal error in certain cases when performing a BODY[HEADER.FIELDS] query.
+[jan] Avoid notice with Horde_Mongo on PHP 7.
+[mjr] Catch incorrectly localized Date headers.
+
+Kolab_Format
+[jan] Drop split() usage (Remi Collet &lt;fedora@famillecollet.com>).
+
+Lock
+[jan] Avoid notice with Horde_Mongo on PHP 7.
+
+Memcache
+[jan] Fix locking.
+[jan] Add support for memcached extension and PHP 7.
+
+Mime
+[mjr] Add sanity check for malformed offset in Date header (<a href="http://bugs.horde.org/ticket/14381">Bug #14381</a>).
+[jan] Add Horde_Mime_Part#isAttachment().
+[mjr] Add workaround for failures due to sending broken rfc822/message attachments (<a href="http://bugs.horde.org/ticket/14324">Bug #14324</a>).
+[mjr] Catch incorrectly localized Date headers.
+
+Service_Weather
+[mjr] Fix fatal error related to setting timezone in WWO driver (<a href="http://bugs.horde.org/ticket/14289">Bug #14289</a>).
+[jan] Fix translations of weather alert types and significances.
+[jan] Calculate time of last condition update more precisely.
+
+Share
+[mjr] Fix handling of text/clob fields (<a href="http://bugs.horde.org/ticket/14357">Bug #14357</a>).
+
+Stringprep
+[jan] Update bundled code from github.
+
+Util
+[mjr] Fix detecting certain types of broken UTF-8 strings.
+
+Vfs
+[jan] Fix creating the vfsroot when using paths in the 'hostspec' parameter of the Smb driver.
+[jan] Don't change directory when listing folders in File backend.
+[jan] Allow to specify root folder ('/') as 'vfsroot' parameter.
 
 
 -------
