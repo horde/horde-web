@@ -13,16 +13,16 @@
             developer.</p>
 
             <p>You will need a Git client, if you don't already have one.
-            Information on Git can be found at <a href="http://web.horde.org/git-scm.com/">
+            Information on Git can be found at <a href="http://web.horde.to/git-scm.com/">
             http://git-scm.com/</a>.</p>
 
             <p>These command lines should be the bare-bones needed to get you
             started with Horde and Git; this is not a Git tutorial, however. The
             standard Git documentation is available <a
-            href="http://web.horde.org/kernel.org/pub/software/scm/git/docs/">here</a>.
+            href="http://web.horde.to/kernel.org/pub/software/scm/git/docs/">here</a>.
             Additional tips and useful links can be found at <a
-            href="http://web.horde.org/gitready.com/">git ready</a> and
-            <a href="http://web.horde.org/andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
+            href="http://web.horde.to/gitready.com/">git ready</a> and
+            <a href="http://web.horde.to/andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
             25 Tips for Intermediate Git Users</a>.</p>
         </div>
 
@@ -146,7 +146,7 @@
 
         <ol>
             <li>Create a GitHub account.</li>
-            <li><a href="http://web.horde.org/help.github.com/linux-key-setup/">Setup your
+            <li><a href="http://web.horde.to/help.github.com/linux-key-setup/">Setup your
             SSH public key</a>. This SSH key must exist in your github.com
             account.</li>
             <li><a href="http://lists.horde.org/archives/dev/Week-of-Mon-20100830/025226.html">Make
@@ -187,7 +187,7 @@
         <pre class="brush:bash">git pull --rebase</pre>
 
         <p>Better still, to prevent an unnecessary merge, you can configure
-        <tt><a href="http://web.horde.org/kernel.org/pub/software/scm/git/docs/git-pull.html">git
+        <tt><a href="http://web.horde.to/kernel.org/pub/software/scm/git/docs/git-pull.html">git
         pull</a></tt> to always rebase when pulling for a particular repo by
         using the following command:</p>
 
@@ -219,8 +219,8 @@
 
         <p>For more information on rebasing, and the commands needed if
         conflicts are detected during the rebase/merge, see:
-        <a href="http://web.horde.org/kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
-        and <a href="http://web.horde.org/jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
+        <a href="http://web.horde.to/kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
+        and <a href="http://web.horde.to/jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
 
 
         <h3 id="createcommit">Creating commits</h3>
@@ -242,7 +242,7 @@
         git commit
         </pre>
 
-        <p><tt><a href="http://web.horde.org/kernel.org/pub/software/scm/git/docs/git-add.html">git
+        <p><tt><a href="http://web.horde.to/kernel.org/pub/software/scm/git/docs/git-add.html">git
         add</a></tt> has many powerful tools to indicate what files or portions
         of a file you want to commit: the <tt>-i</tt> option (interactive
         mode), and
@@ -293,7 +293,7 @@
         the temporary branch, push your commits to the server, and then
         re-apply your work-in-progress to the current branch. Git has a
         wonderful built-in command that will do all this work for you:
-        <tt><a href="http://web.horde.org/kernel.org/pub/software/scm/git/docs/git-stash.html">stash</a></tt>.
+        <tt><a href="http://web.horde.to/kernel.org/pub/software/scm/git/docs/git-stash.html">stash</a></tt>.
         To stash all work-in-progress on the current tree, use:</p>
 
         <pre class="brush:bash">git stash</pre>
