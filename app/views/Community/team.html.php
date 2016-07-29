@@ -5,16 +5,16 @@
       <?php echo $this->render('communitynav'); ?>
       <div class="section">
         <?php
-        echo $this->render('Chuck_Hagenbuch');
         echo $this->render('Jan_Schneider');
-        echo $this->render('Michael_Slusarz');
         echo $this->render('Michael_Rubinsky');
-        echo $this->render('Ben_Klang');
-        echo $this->render('Gunnar_Wrobel');
+        echo $this->render('Chuck_Hagenbuch');
         echo $this->render('Ralf_Lang');?>
         <br />
         <h2><span>&nbsp;</span>Retired Developers</h2>
         <?php
+        echo $this->render('Michael_Slusarz');
+        echo $this->render('Ben_Klang');
+        echo $this->render('Gunnar_Wrobel');
         echo $this->render('Matt_Selsky');
         echo $this->render('Jon_Parise');
         echo $this->render('Eric_Rostetter');
