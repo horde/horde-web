@@ -17,12 +17,12 @@
           should be installed with most modern Linux distributions, easily
           available on *BSD systems, and there are clients for Win32, MacOS, and
           GUI clients for the Unices. A number of them are available at <a
-          href="http://web.horde.to/nongnu.org/cvs/">http://www.nongnu.org/cvs/</a>.</p>
+          href="http://web.horde.ws/nongnu.org/cvs/">http://www.nongnu.org/cvs/</a>.</p>
 
           <p>These command lines should be the bare-bones needed to get you
           started with Horde and CVS; this is not a CVS tutorial, however. The
           standard CVS documentation is available <a
-          href="http://web.horde.to/nongnu.org/cvs/">here</a>, and
+          href="http://web.horde.ws/nongnu.org/cvs/">here</a>, and
           there are many HOWTOs available on the web.</p>
           </div>
 

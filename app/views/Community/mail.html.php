@@ -29,8 +29,8 @@ list for "<i>listname</i>"), or use the <a href="http://lists.horde.org/">web
 interface</a> where you can fully manage your list subscriptions.</p>
 
 <p>All of the Horde mailing lists are run using <a
-href="http://web.horde.to/list.org/">Mailman</a>. You can also view the <a
-href="http://web.horde.to/list.org/mailman-member/">Mailman Members' Documentation</a>
+href="http://web.horde.ws/list.org/">Mailman</a>. You can also view the <a
+href="http://web.horde.ws/list.org/mailman-member/">Mailman Members' Documentation</a>
 for some further information.</p>
 
  <h2><span>&nbsp;</span>Before posting a question, consider the following points:</h2>
@@ -40,9 +40,9 @@ for some further information.</p>
    first!</strong></li>
   <li>Take a look at the <a href="http://bugs.horde.org/">bugs database</a>,
    too.</li>
-  <li><a href="http://web.horde.to/catb.org/~esr/faqs/smart-questions.html">How To Ask
+  <li><a href="http://web.horde.ws/catb.org/~esr/faqs/smart-questions.html">How To Ask
    Questions The Smart Way</a> and <a
-   href="http://web.horde.to/asktog.com/columns/047HowToWriteAReport.html">How To
+   href="http://web.horde.ws/asktog.com/columns/047HowToWriteAReport.html">How To
    Deliver A Report Without Getting Lynched</a> are good reads.</li>
   <li>Try searching the archives for any similar topics.</li>
   <li>Help people help you - if you've searched the archives or read the FAQ
@@ -79,15 +79,15 @@ for some further information.</p>
       <?php echo $list_val['traffic'] ?>
     </td><td>
       <?php if (!empty($list_val['marc'])): ?>
-        [<a href="http://web.horde.to/marc.info/?l=<?php echo $list_val['marc'] ?>&amp;r=1&amp;w=2">MARC</a>]
+        [<a href="http://web.horde.ws/marc.info/?l=<?php echo $list_val['marc'] ?>&amp;r=1&amp;w=2">MARC</a>]
       <?php endif; ?>
     </td><td>
       <?php if (!empty($list_val['gmane'])): ?>
-        [<a href="http://web.horde.to/news.gmane.org/gmane.comp.horde.<?php echo $list_val['gmane'] ?>">Gmane</a>]
+        [<a href="http://web.horde.ws/news.gmane.org/gmane.comp.horde.<?php echo $list_val['gmane'] ?>">Gmane</a>]
       <?php endif; ?>
     </td><td>
       <?php if (!empty($list_val['google'])): ?>
-        [<a href="http://web.horde.to/groups.google.com/group/mailing.www.<?php echo $list_val['google'] ?>">Google</a>]
+        [<a href="http://web.horde.ws/groups.google.com/group/mailing.www.<?php echo $list_val['google'] ?>">Google</a>]
       <?php endif; ?>
     </td><td>
       <?php if (!empty($list_val['desc'])) echo $list_val['desc'] ?>

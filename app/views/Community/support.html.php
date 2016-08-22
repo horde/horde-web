@@ -32,7 +32,7 @@
         mailing lists</a>. You can also ask for help on IRC.</p>
 
         <p>There is a <tt>#horde</tt> channel on <tt>irc.freenode.net</tt>
-        (<i>see</i> <a href="http://web.horde.to/freenode.net/">
+        (<i>see</i> <a href="http://web.horde.ws/freenode.net/">
         http://www.freenode.net/</a>), for discussion of Horde applications,
         the Horde Framework, random development questions, and anything else
         that seems relevant. Come join us!</p>
@@ -43,16 +43,16 @@
         understanding. As always with IRC, ask your question and be patient for
         an answer. People are often busy or not even in front of the
         screen. Also, please take a look
-        at <a href="http://web.horde.to/asktog.com/columns/047HowToWriteAReport.html">How
+        at <a href="http://web.horde.ws/asktog.com/columns/047HowToWriteAReport.html">How
         to Deliver a Report Without Getting Lynched</a> or
-        ESR's <a href="http://web.horde.to/catb.org/esr/faqs/smart-questions.html">How
+        ESR's <a href="http://web.horde.ws/catb.org/esr/faqs/smart-questions.html">How
         To Ask Questions The Smart Way</a>. It will help us help you.</p>
 
         <div class="hint"><p>Note: your best bet for help is the mailing
         lists. There are more people reading the mailing lists than the bug
         system email. The more people that see your message, the more likely
         you are to get help. Make sure to
-        include <a href="http://web.horde.to/chiark.greenend.org.uk/~sgtatham/bugs.html">enough
+        include <a href="http://web.horde.ws/chiark.greenend.org.uk/~sgtatham/bugs.html">enough
         information</a> so that people can help you.</p></div>
 
         <h3>Bugs and Feature Requests</h3>
@@ -62,7 +62,7 @@
         first to see if anyone has already filed a similar bug, if not open a
         new bug yourself.  Remember to use clear language, to be specific and
         verbose in your description.  Please
-        read <a href="http://web.horde.to/freecode.com/articles/how-to-report-bugs-effectively">this
+        read <a href="http://web.horde.ws/freecode.com/articles/how-to-report-bugs-effectively">this
         editorial</a> on writing good bug reports.</p>
 
         <div class="warning"><p>Please remember: bug reports and any feedback

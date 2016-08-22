@@ -284,7 +284,7 @@ class HordeWeb_Utils
     }
 
     /**
-     * Replace links with links to the web.horde.to subdomain.
+     * Replace links with links to the web.horde.ws subdomain.
      *
      * Replaces any URLs that do not point to a horde.org domain.
      *
@@ -298,7 +298,7 @@ class HordeWeb_Utils
         if (!empty($parts['scheme']) &&
             strpos($parts['scheme'], 'http') === 0 &&
             strpos($parts['host'], 'horde.org') === false) {
-            $link = 'http://web.horde.to/'
+            $link = 'http://web.horde.ws/'
                 . preg_replace('/^www\./', '', $parts['host'])
                 . (!empty($parts['path']) ? $parts['path'] : '');
         }
