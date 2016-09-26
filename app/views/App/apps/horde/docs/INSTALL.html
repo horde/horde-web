@@ -356,15 +356,13 @@ the portal page. See the file <tt class="docutils literal">data/Services_Weather
 in your PEAR directory for details.</p>
 </li>
 <li><p class="first">File_Fstab</p>
-</li>
-</ol>
-<blockquote>
 <p>Required only if you use the localhost driver for the Accounts block.
 To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
 pear install File_Fstab
 </pre>
-</blockquote>
+</li>
+</ol>
 <p>This method of installing PEAR packages requires that you have a PHP version
 that has been compiled as a static binary.  All versions of PHP build both
 both a SAPI module (Apache, CGI, etc.) and a command-line (CLI) binary.
@@ -410,7 +408,7 @@ compression on data, resulting in reduced storage load on the server for
 things like cache storage and session data. It is highly recommended.</p>
 <p>To install, enter the following at the command prompt:</p>
 <pre class="literal-block">
-pecl install horde_lz4
+pecl install horde/horde_lz4
 </pre>
 </li>
 <li><p class="first">memcache</p>
