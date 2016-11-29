@@ -34,18 +34,18 @@
   </p>
 
   <h2>Shops</h2>
-  <span style="text-align:center;width:91px;float:left;">European Store<a class="boxl"
+  <span style="text-align:center;width:121px;float:left;">European Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopeu')?>">
   <img src="<?php echo $GLOBALS['host_base'] ?>/images/store-eu.png"/>
   </a></span>
-  <span style="text-align:center;width:91px;float:left;">US Store<a class="boxl"
+  <span style="text-align:center;width:121px;float:left;">US Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopus')?>">
   <img src="<?php echo $GLOBALS['host_base'] ?>/images/store-us.png"/>
   </a></span>
-  <span style="text-align:center;width:61px;float:left;">CafePress<a class="boxl"
+<!--   <span style="text-align:center;width:61px;float:left;">CafePress<a class="boxl"
   href="http://cafepress.com/hordeproject"> <img style="margin-top:15px"
   src="<?php echo $GLOBALS['host_base'] ?>/images/store-cafepress.jpg"/>
-  </a></span>
+  </a></span> -->
   <!--Cafepress widget seems to have js issues...getting all kinds of errors while navigating-->
    <!--<div id="cpi-s1-1001" class="cpi cpi-s1" affiliate=""
    tracking="hordeproject" color="#797979" source="shop:hordeproject"
