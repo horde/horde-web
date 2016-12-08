@@ -74,7 +74,7 @@ class HordeWeb_Development_Controller extends HordeWeb_Controller_Base
     {
         $stable = HordeWeb_Utils::getH3Apps($module);
         $dev = HordeWeb_Utils::getDevApps($module);
-        return '<td><a href="http://git.horde.org/horde/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
+        return '<td nowrap="nowrap"><a href="http://git.horde.org/horde/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
             . '</td><td>' . ($stable ? htmlspecialchars($stable['version']) : ($dev && substr($dev['version'], 0, 2) == 'H3' ? htmlspecialchars($dev['version']) : '&nbsp;'))
             . '</td>';
     }
