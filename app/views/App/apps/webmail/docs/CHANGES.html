@@ -3,7 +3,139 @@
 v5.2.17-git
 -----------
 
+Horde Changes
+-------------
+[jan] Disallow setting of creator permissions too if sharing with world is
+      disabled.
 
+Mail Changes
+------------
+[jan] Update German translation.
+[jan] Update Greek translation.
+[mjr] Fix issue when forwarding an email to multiple recipients in Mobile view (<a href="http://bugs.horde.org/ticket/14060">Bug #14060</a>).
+[jan] Fix iTip MIME viewer actions if attachment type hasn't been specified.
+[mjr] Add option to reload folder tree when fetching via the API.
+[jan] Update preview cache after permanently unblocking images from a sender
+      (<a href="http://bugs.horde.org/ticket/14446">Bug #14446</a>).
+
+Filters Changes
+---------------
+[jan] Convert vacation rules in preference backend from Ingo &lt; 2.0.
+[jan] Fix some edge cases with Sieve vacation rules with date limits (<a href="http://bugs.horde.org/ticket/14486">Bug
+      #14486</a>).
+
+Address Book Changes
+--------------------
+[jan] Remove left over from 10-years-old code (<a href="http://bugs.horde.org/ticket/14521">Bug #14521</a>).
+[mjr] Fix regression in sorting contacts by a name field (<a href="http://bugs.horde.org/ticket/14471">Bug #14471</a>).
+[mjr] Fix regression in saving tags (<a href="http://bugs.horde.org/ticket/14463">Bug #14463</a>).
+
+Bookmarks Changes
+-----------------
+[jan] Update German translation.
+
+Calendar Changes
+----------------
+[mjr] Fix allowing ics import on when user has edit permissions on a shared
+      calendar (<a href="http://bugs.horde.org/ticket/14501">Bug #14501</a>).
+[jan] Disallow setting of creator permissions too if sharing with world is
+      disabled.
+[jan] Split shared users by linebreaks too.
+
+Files Changes
+-------------
+[jan] Update German translation.
+[jan] Update Portuguese translation.
+[jan] Update Basque translation.
+[jan] Add Greek translation (Limperis Antonis &lt;limperis@cti.gr>).
+[jan] Use access rules compatible with both Apache 2.2 and 2.4.
+[jan] Fix fatal error when cutting and pasting files on the same backend.
+[jan] Update Italian translation.
+
+Notes Changes
+-------------
+[jan] Update German translation.
+
+Tasks Changes
+-------------
+[jan] Fix sorting by due date with PHP &lt; 5.5 (<a href="http://bugs.horde.org/ticket/14507">Bug #14507</a>).
+[mjr] Fix fatal error caused by regression in sorting recurring tasks with due
+      dates (<a href="http://bugs.horde.org/ticket/14504">Bug #14504</a>).
+
+Timeobject Changes
+------------------
+[jan] Update Basque translation.
+[jan] Update German translation.
+[jan] Add Greek translation (Limperis Antonis &lt;limperis@cti.gr>).
+
+Library Changes
+---------------
+
+ActiveSync
+[mjr] Fix test issue on 32bit systems (<a href="http://bugs.horde.org/ticket/14532">Bug #14532</a>).
+[mjr] Improve handling of case when IMAP server returns invalid HIGHESTMODSEQ values (DVT - Daten-Verarbeitung-Tirol GmbH).
+[mjr] Fix regression in initial synchronization.
+[mjr] Attempt to work around IMAP servers that report broken HIGHESTMODSEQ values.
+[mjr] Prevent invalid UTF-8 text in address fields.
+[mjr] Add support for EAS 16 draft email sync.
+[mjr] Close database connections while sleeping during PING requests.
+[mjr] Fix converting charset of subject and attachment names in certain cases (<a href="http://bugs.horde.org/ticket/14457">Bug #14457</a>).
+[mjr] Changes to support attachment sync support for Appointment objects.
+
+Auth
+[jan] Use more efficient database access in SQL backend.
+
+Core
+[jan] Fix Horde_Form dependency (<a href="http://bugs.horde.org/ticket/14460">Bug #14460</a>).
+[mjr] Fix BC break in Weather block (<a href="http://bugs.horde.org/ticket/14473">Bug #14473</a>).
+[mjr] Fix locking user account after bad logins (<a href="http://bugs.horde.org/ticket/14467">Bug #14467</a>).
+[mjr] Add support for EAS 16 draft email sync.
+[jan] Allow administrators to log in if preference backend is not available.
+[mjr] Log message headers on error when sending email via ActiveSync.
+[jan] Fix warning if an old locale is longer than 255 characters (<a href="http://bugs.horde.org/ticket/14489">Bug #14489</a>).
+[jan] Fix abbreviated Norwegian month names in JavaScript to include trailing dot (<a href="http://bugs.horde.org/ticket/14488">Bug #14488</a>).
+[jan] Fix reading session data from the command line with PHP 7.
+[mjr] Prevent building invalid HTML when building an email from a SMART_REPLY (<a href="http://bugs.horde.org/ticket/14500">Bug #14500</a>).
+[mjr] Improve handling of certain ActiveSync failures.
+[jan] Fix parsing abbreviated Norwegian month names too (<a href="http://bugs.horde.org/ticket/14503">Bug #14503</a>).
+[mjr] Fix Google Map API warnings (<a href="http://bugs.horde.org/ticket/14525">Bug #14525</a>, arjen+horde@de-korte.org).
+[jan] Catch errors from NoSQL preference backend.
+[jan] Make &apos;hostspec&apos; parameter for MongoDB configuration optional again on PHP 7.
+[jan] Fix session preference driver.
+[jan] Don&apos;t pollute DB DSN with unknown parameters when using Cyrsql authentication driver.
+[mjr] Refresh mailbox list when retrieving for ActiveSync.
+[mjr] Add support for a activesync_mailboxlist hook.
+[jan] Don't show apps with 'admin' status in menu (<a href="http://bugs.horde.org/ticket/14526">Bug #14526</a>).
+
+Crypt
+[mjr] Ensure version information is output in ASCII armored output.
+[jan] Fix parsing inline signed PGP messages with PHP 7+ (<a href="http://bugs.horde.org/ticket/14352">Bug #14352</a>).
+[jan] Fix label for S/MIME Encrypted Key Usage attribute.
+
+Db
+[jan] Fix some PHP 7.2 issues.
+
+Imap_Client
+[jan] Fix parsing GETACL responses from RFC 4314 capable IMAP servers (<a href="http://bugs.horde.org/ticket/14466">Bug #14466</a>).
+[mjr] Fix failed connections when using unix sockets (Thomas Jarosch &lt;thomas.jarosch@intra2net.com>).
+[mjr] Fix command syntax for CREATE-SPECIAL-USE support.
+
+Mime
+[mjr] Fix regression caused by incorrect fix and test for Bug #14456 (<a href="http://bugs.horde.org/ticket/14505">Bug #14505</a>).
+
+Nls
+[jan] Update country list.
+
+Pack
+[jan] Avoid notice if packing an invalid UTF-8 string (<a href="http://bugs.horde.org/ticket/14522">Bug #14522</a>).
+
+Service_Weather
+[mjr] Replace defunct data source for surface station data (<a href="http://bugs.horde.org/ticket/14502">Bug #14502</a>).
+[mjr] Create standalone CLI script for generation of metar station data.
+[mjr] Improve metar table creation performance.
+
+Vfs
+[jan] Use more efficient database access in SQL backend.
 
 -------
 v5.2.16
