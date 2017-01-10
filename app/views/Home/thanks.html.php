@@ -14,7 +14,7 @@
         </p>
         <br />
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="http://www.intra2net.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://www.intra2net.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/intra2net.png" height="100" alt="intra2net" />
           </a>
         <p>
