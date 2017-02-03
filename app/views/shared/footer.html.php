@@ -3,15 +3,15 @@
     <div class="add-nav">
       <h3>Site Navigation</h3>
       <ul>
-        <li><a href="<?php echo $this->urlWriter->urlFor('home')?>" title="Home" class="home">Home</a></li>
-        <li><a href="<?php echo $this->urlWriter->urlFor('community')?>" title="Community" class="community">Community</a></li>
-        <li><a href="<?php echo $this->urlWriter->urlFor('development')?>" title="Development" class="home">Development</a></li>
-        <li><a href="<?php echo $this->urlWriter->urlFor('services')?>" title="Services" class="services">Services</a></li>
-        <li><a href="<?php echo $this->urlWriter->urlFor('apps')?>" title="Applications" class="applications">Applications</a></li>
-        <li><a href="http://wiki.horde.org" title="Wiki" class="wiki">Wiki</a></li>
-        <li><a href="http://demo.horde.org" title="Demo" class="demo">Demo</a></li>
-        <li><a href="<?php echo $this->urlWriter->urlFor('support')?>" title="Support" class="support">Support</a></li>
-        <li><a href="<?php echo $this->urlWriter->urlFor('contact')?>" title="Contact Us" class="contactus">Contact Us</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('home')?>" title="Home">Home</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('community')?>" title="Community">Community</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('development')?>" title="Development">Development</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('services')?>" title="Services">Services</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('apps')?>" title="Applications">Applications</a></li>
+        <li><a href="http://wiki.horde.org" title="Wiki">Wiki</a></li>
+        <li><a href="http://demo.horde.org" title="Demo">Demo</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('support')?>" title="Support">Support</a></li>
+        <li><a href="<?php echo $this->urlWriter->urlFor('contact')?>" title="Contact Us">Contact Us</a></li>
       </ul>
     </div>
     <div class="follow-us">
