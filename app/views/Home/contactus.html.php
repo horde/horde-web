@@ -22,7 +22,7 @@
         reporting procedures at
         <a href="http://wiki.horde.org/SecurityManagement">http://wiki.horde.org/SecurityManagement</a>
         </p>
-        
+
         <h3>Consulting Services</h3>
         <p>If you are looking to contact us about possible consulting servcies
         or other custom work, you may contact us at
@@ -38,11 +38,13 @@
 
         <h3>Telephone</h3>
         <table>
+          <!--
           <tr>
             <td>USA:</td>
             <td>&nbsp;<a href="tel:+1.404.475.4830">+1.404.475.4830</a></td>
             <td>&nbsp;(English)</td>
           </tr>
+          -->
           <tr>
             <td>Germany:</td>
             <td>&nbsp;<a href="tel:+49.521.4469.8995">+49.521.4469.8995</a></td>
