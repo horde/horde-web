@@ -11,6 +11,7 @@
         <li><a href="http://wiki.horde.org" title="Wiki">Wiki</a></li>
         <li><a href="http://demo.horde.org" title="Demo">Demo</a></li>
         <li><a href="<?php echo $this->urlWriter->urlFor('support')?>" title="Support">Support</a></li>
+        <li><a href="http://status.horde.org" title="System Status">Status</a></li>
         <li><a href="<?php echo $this->urlWriter->urlFor('contact')?>" title="Contact Us">Contact Us</a></li>
       </ul>
     </div>

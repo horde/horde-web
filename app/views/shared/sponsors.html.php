@@ -56,4 +56,41 @@
   </div>
   <script type="text/javascript" src="//content4.cpcache.com/marketplace/widgets/javascripts/widget.js"></script>
   -->
+
+  <h2>Status</h2>
+  <div class="status">
+    <a href="http://status.horde.org">
+      <span id="status-check">Checking...</span>
+      <span id="status-up" style="display:none"><img src="<?php echo $GLOBALS['host_base'] ?>/images/up.png"> All Systems Up</span>
+      <span id="status-down" style="display:none"><img src="<?php echo $GLOBALS['host_base'] ?>/images/down.png"> <span id="status-name"></span> is down</span>
+    </a>
+  </div>
+  <script type="text/javascript">
+  (function() {
+      $.ajax({
+          dataType: 'jsonp',
+          url: "https://app.statuscake.com/Workfloor/PublicReportHandler.php?PublicID=jiTk8BseRI&callback=statusUpdate",
+          success: statusUpdate
+      });
+      function statusUpdate(data) {
+          var down = false;
+          if (!data || !data.TestData) {
+              return;
+          }
+          $(data.TestData).each(function(id, server) {
+              if (server.Status != 'Up') {
+                  down = server.Name;
+                  return false;
+              }
+          });
+          $('#status-check').hide();
+          if (down) {
+              $('#status-name').text(down);
+              $('#status-down').show();
+          } else {
+              $('#status-up').show();
+          }
+      }
+  })();
+  </script>
 </div>

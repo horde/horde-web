@@ -400,6 +400,15 @@ div.rightcol p.thanks {
     margin-left: 10px;
 }
 
+div.rightcol div.status {
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+div.rightcol div.status img {
+    vertical-align: middle;
+}
+
 div.featuredat a {
     color:#7f7f7f;
 }
