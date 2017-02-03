@@ -81,8 +81,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="rightcol"><?php echo $this->render('sponsors');
-                ?></div>
+                <div class="rightcol"><?php echo $this->render('sponsors') ?></div>
                 <div class="clear"></div>
               </div>
             </div>
