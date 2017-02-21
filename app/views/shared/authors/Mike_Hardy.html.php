@@ -4,7 +4,7 @@
     <li>Not currently doing more than cutting the releases for Horde and IMP because I
     work at a startup and its deadline time (bleh). I'm enjoying life in The
     City (San Francisco) though, since I just moved there this month</li>
-    <li><a href="http://web.horde.ws/mikehardy.net">vanity domain</a> so I have
+    <li><a href="https://web-horde.org/w/mikehardy.net">vanity domain</a> so I have
     a stable net presence...</li>
    <li>Since everyone else seems to have the minor personal blurb here, I'm 24, enjoy
    moving at high rates of speed outdoors whenever possible (sportbikes, racing

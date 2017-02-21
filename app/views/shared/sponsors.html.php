@@ -17,8 +17,8 @@
 
   <h2>Sponsors</h2>
   <ul class="ads">
-    <li><a href="http://web.horde.ws/hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png" alt="Hub.Org"></a></li>
-    <li><a href="http://web.horde.ws/b1-systems.de/"><img src="<?php echo $GLOBALS['host_base'] ?>/images/b1systems.png" alt="B1 Systems"></a></li>
+    <li><a href="https://web-horde.org/w/hub.org/?ri=765"><img src="<?php echo $GLOBALS['host_base'] ?>/images/hub.png" alt="Hub.Org"></a></li>
+    <li><a href="https://web-horde.org/w/b1-systems.de/"><img src="<?php echo $GLOBALS['host_base'] ?>/images/b1systems.png" alt="B1 Systems"></a></li>
   </ul>
   <p class="thanks">
     <?php echo $this->linkTo('"Thanks!" to all our other sponsors', array('controller' => 'home', 'action' => 'thanks')); ?>

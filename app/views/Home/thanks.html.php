@@ -23,29 +23,29 @@
         </p>
         <br/>
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.ws/psw.net/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/psw.net/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/psw.gif" height="40" alt="PSW GROUP" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.ws/canadianwebhosting.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/canadianwebhosting.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/cwh.png" height="40" alt="Canadian Web Hosting" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.ws/qr-code-generator.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/qr-code-generator.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/qrcode.png" height="40" alt="QR Code Generator" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.ws/aoe.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/aoe.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/aoe.jpg" height="40" alt="AOE" />
           </a>
         </p>
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.ws/dealspotr.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/dealspotr.com/" target="_blank">
             <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/blue.png" height="40" alt="Dealspotr" />
           </a>
           <?php if (time() < mktime(0, 0, 0, 1, 16, 2017)): ?>
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.ws/travel-ticker.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/travel-ticker.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/travelticker.jpg" height="40" alt="Travel Ticker" />
           </a>
           <?php endif ?>
-          <a style="margin:20px;text-decoration:none" href="http://web.horde.ws/whatisseo.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/whatisseo.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/whatisseo.png" height="40" alt="What Is SEO?" />
           </a>
         </p>
@@ -98,9 +98,9 @@
         <p>The Horde.org servers are generously hosted by the following
         organizations:
         <ul>
-          <li><a href="http://web.horde.ws/hub.org/?ri=765">Hub.org Networking
+          <li><a href="https://web-horde.org/w/hub.org/?ri=765">Hub.org Networking
             Services</a>: Mailing lists, PEAR, FTP</li>
-          <li><a href="http://web.horde.ws/b1-systems.de/">B1 Systems</a></li>
+          <li><a href="https://web-horde.org/w/b1-systems.de/">B1 Systems</a></li>
         </ul>
         </p>
 
@@ -109,7 +109,7 @@
         Viebrock.</p>
 
         <h3>Licenses</h3>
-        <a style="display:block; text-decoration:none" href="http://web.horde.ws/synthesis.ch/" target="_blank">
+        <a style="display:block; text-decoration:none" href="https://web-horde.org/w/synthesis.ch/" target="_blank">
         <img src="<?php echo $GLOBALS['host_base'] ?>/images/synthesis.jpg" height="31"/>
         SyncML client licenses have been generously donated by Synthesis AG</a>
 

@@ -7,6 +7,6 @@
         hours of lost time :)
     <li>I am currently working on HordeConduit - a conduit for synchronizing Horde
         applications Kronolith, Nag, Mnemo, and Turba with a PalmOS-based PDA.
-    <li>Personal: <a href="http://web.horde.ws/riboflavin.net/">http://www.riboflavin.net/</a>.</li>
+    <li>Personal: <a href="https://web-horde.org/w/riboflavin.net/">http://www.riboflavin.net/</a>.</li>
   </ul>
 </div>
