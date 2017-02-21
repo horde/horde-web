@@ -57,10 +57,12 @@
 
         <h3>Contact us for a free assessment of your project</h3>
         <p>We love to talk shop.  Give us a call at
-        <span style="font-weight: bold;">+1.404.475.4830</span> or drop us a
-        line at <a href="mailto:info@horde.org" style="font-weight: bold;">
-        info@horde.org</a>. We will set up a time to discuss your project and
-        help you establish a roadmap for achieving your objectives.</p>
+        <span style="font-weight: bold;">+1.404.400.1661</span>
+        or <span style="font-weight: bold;">+49.521.4469.8995</span>, or drop
+        us a line at <a href="mailto:info@horde.org" style="font-weight:
+        bold;"> info@horde.org</a>. We will set up a time to discuss your
+        project and help you establish a roadmap for achieving your
+        objectives.</p>
       </div>
     </div>
     <div class="rightcol" style="background: none;"><?php echo $this->render('sponsors'); ?></div>
