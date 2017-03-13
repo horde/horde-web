@@ -131,11 +131,14 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
               'xml xhtml xslt html    {$path}shBrushXml.js'
             );
 EOT;
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addInlineScript(array(
-            $brushes,
-            'SyntaxHighlighter.defaults[\'toolbar\'] = false',
-            'SyntaxHighlighter.all()'
-        ), 'dom');
+        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addInlineScript(
+            array(
+                $brushes,
+                'SyntaxHighlighter.defaults[\'toolbar\'] = false',
+                'SyntaxHighlighter.all()'
+            ),
+            'jquery'
+        );
 
         $sh_js_fs = $GLOBALS['registry']->get('jsfs', 'horde') . '/syntaxhighlighter/styles/';
         $sh_js_uri = Horde::url($GLOBALS['registry']->get('jsuri', 'horde'), false, -1) . '/syntaxhighlighter/styles/';
