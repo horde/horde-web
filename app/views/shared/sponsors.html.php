@@ -51,32 +51,35 @@
       <span id="status-down" style="display:none"><img src="<?php echo $GLOBALS['host_base'] ?>/images/down.png"> <span id="status-name"></span> is down</span>
     </a>
   </div>
-  <script type="text/javascript">
-  (function() {
-      $.ajax({
-          dataType: 'jsonp',
-          url: "https://app.statuscake.com/Workfloor/PublicReportHandler.php?PublicID=jiTk8BseRI&callback=statusUpdate",
-          success: statusUpdate
-      });
-      function statusUpdate(data) {
-          var down = false;
-          if (!data || !data.TestData) {
-              return;
-          }
-          $(data.TestData).each(function(id, server) {
-              if (server.Status != 'Up') {
-                  down = server.Name;
-                  return false;
-              }
-          });
-          $('#status-check').hide();
-          if (down) {
-              $('#status-name').text(down);
-              $('#status-down').show();
-          } else {
-              $('#status-up').show();
-          }
-      }
-  })();
-  </script>
+<?php
+$GLOBALS['injector']->getInstance('Horde_PageOutput')->addInlineScript(
+    '(function() {
+        $.ajax({
+            dataType: "jsonp",
+            url: "https://app.statuscake.com/Workfloor/PublicReportHandler.php?PublicID=jiTk8BseRI&callback=statusUpdate",
+            success: statusUpdate
+        });
+        function statusUpdate(data) {
+            var down = false;
+            if (!data || !data.TestData) {
+                return;
+            }
+            $(data.TestData).each(function(id, server) {
+                if (server.Status != "Up") {
+                    down = server.Name;
+                    return false;
+                }
+            });
+            $("#status-check").hide();
+            if (down) {
+                $("#status-name").text(down);
+                $("#status-down").show();
+            } else {
+                $("#status-up").show();
+            }
+        }
+    })();',
+    'jquery'
+);
+?>
 </div>
