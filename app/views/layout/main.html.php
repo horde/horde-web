@@ -4,7 +4,6 @@
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="keywords" content="groupware,webmail,web,application,framework,php,consulting,support,development,library">
-<link type="text/css" rel="stylesheet" href="<?php echo $GLOBALS['host_base'] ?>/css/horde.css" media="screen">
 <link rel="SHORTCUT ICON" type="image/x-icon" href="<?php echo $GLOBALS['host_base'] ?>/images/favicon.ico">
 <link href="https://plus.google.com/105569801098474752113" rel="publisher">
 <!-- Google Analytics -->
@@ -16,7 +15,6 @@
   ga('create', 'UA-22320801-1', 'auto');
   ga('send', 'pageview');
 </script>
-<script type="text/javascript" src="<?php echo $GLOBALS['host_base'] ?>/js/jquery-1.4.4.min.js"></script>
 <!-- End Google Analytics -->
 <?php $GLOBALS['injector']->getInstance('Horde_PageOutput')->includeStylesheetFiles(array('nobase' => true, 'nohorde' => true), true) ?>
 </head>
@@ -29,10 +27,12 @@
     <?php echo $this->render('footer');?>
   </div>
 </div>
-<?php $GLOBALS['injector']->getInstance('Horde_PageOutput')->includeScriptFiles() ?>
-<?php $GLOBALS['injector']->getInstance('Horde_PageOutput')->outputInlineScript() ?>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<script type="text/javascript" src="<?php echo $GLOBALS['host_base'] ?>/js/informer.js"></script>
-<script type="text/javascript" src="<?php echo $GLOBALS['host_base'] ?>/js/toc.js"></script>
+<?php
+$GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile(
+    new HordeWeb_Script_File('toc.js')
+);
+$GLOBALS['injector']->getInstance('Horde_PageOutput')->includeScriptFiles();
+$GLOBALS['injector']->getInstance('Horde_PageOutput')->outputInlineScript();
+?>
 </body>
 </html>

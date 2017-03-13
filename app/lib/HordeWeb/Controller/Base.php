@@ -59,9 +59,24 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
     {
         global $host_base, $injector, $site_name;
 
-        $script = new Horde_Script_File_External(
-            $host_base . '/js/jquery-1.4.4.min.js');
-        $injector->getInstance('Horde_PageOutput')->addScriptFile($script);
+        $pageOutput = $injector->getInstance('Horde_PageOutput');
+        $pageOutput->addScriptFile(
+            new HordeWeb_Script_File('jquery-1.4.4.min.js')
+        );
+        $pageOutput->addScriptFile(
+            new HordeWeb_Script_File('informer.js')
+        );
+        $pageOutput->addScriptFile(new Horde_Script_File_External(
+            'https://apis.google.com/js/plusone.js'
+        ));
+        $css = new Horde_Themes_Element(
+            'horde.css',
+            array('data' => array(
+               'fs' => __DIR__ . '/../../../../css/horde.css',
+               'uri' => $host_base . '/css/horde.css'
+            ))
+        );
+        $pageOutput->addStylesheet($css->fs, $css->uri);
 
         // Set the view, with correct template path set by the binder
         $view = $injector->getInstance('HordeWeb_View');
