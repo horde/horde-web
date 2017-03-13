@@ -28,6 +28,7 @@
   </div>
 <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<?php $GLOBALS['injector']->getInstance('Horde_PageOutput')->outputInlineScript() ?>
 <script type="text/javascript" src="js/informer.js"></script>
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <script type="text/javascript">
