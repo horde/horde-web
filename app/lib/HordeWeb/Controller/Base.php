@@ -42,7 +42,9 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
      * @param Horde_Controller_Request $request
      * @param Horde_Controller_Response $response
      */
-    public function processRequest(Horde_Controller_Request $request, Horde_Controller_Response $response)
+    public function processRequest(
+        Horde_Controller_Request $request, Horde_Controller_Response $response
+    )
     {
         $this->_matchDict = $this->_matcher->getMatchDict();
         $this->_setup();
@@ -55,13 +57,14 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
      */
     protected function _setup()
     {
-        global $site_name;
+        global $host_base, $injector, $site_name;
 
-        $script = new Horde_Script_File_External($GLOBALS['host_base'] . '/js/jquery-1.4.4.min.js');
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile($script);
+        $script = new Horde_Script_File_External(
+            $host_base . '/js/jquery-1.4.4.min.js');
+        $injector->getInstance('Horde_PageOutput')->addScriptFile($script);
 
         // Set the view, with correct template path set by the binder
-        $view = $GLOBALS['injector']->getInstance('HordeWeb_View');
+        $view = $injector->getInstance('HordeWeb_View');
 
         $this->urlWriter = $view->urlWriter = $this->getUrlWriter();
         $view->homeurl = $this->urlWriter->urlFor('home');
@@ -72,7 +75,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $view->controller = $this;
 
         // @TODO: Refactor away the globals
-        $view->host_base = $GLOBALS['host_base'];
+        $view->host_base = $host_base;
         $this->setView($view);
     }
 
@@ -83,7 +86,9 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
-        $response->setHeaders(array('Status' => '404 Not Found', 'HTTP/1.0' => '404 Not Found'));
+        $response->setHeaders(
+            array('Status' => '404 Not Found', 'HTTP/1.0' => '404 Not Found')
+        );
         $response->setBody($layout->render('404'));
     }
 
@@ -94,15 +99,26 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
-        $response->setHeaders(array('Status' => '410 Page Gone', 'HTTP/1.0' => '410 Page Gone'));
+        $response->setHeaders(
+            array('Status' => '410 Page Gone', 'HTTP/1.0' => '410 Page Gone')
+        );
         $response->setBody($layout->render('410'));
     }
 
     protected function _addSyntaxhighlighter()
     {
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile('syntaxhighlighter/scripts/shCore.js', 'horde');
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile('syntaxhighlighter/scripts/shAutoloader.js', 'horde');
-        $path = $GLOBALS['registry']->get('jsuri', 'horde') . '/syntaxhighlighter/scripts/';
+        global $injector, $registry;
+
+        $pageOutput = $injector->getInstance('Horde_PageOutput');
+
+        $pageOutput->addScriptFile(
+            'syntaxhighlighter/scripts/shCore.js', 'horde'
+        );
+        $pageOutput->addScriptFile(
+            'syntaxhighlighter/scripts/shAutoloader.js', 'horde'
+        );
+        $path = $registry->get('jsuri', 'horde')
+            . '/syntaxhighlighter/scripts/';
         $brushes = <<<EOT
             SyntaxHighlighter.autoloader(
               'applescript            {$path}shBrushAppleScript.js',
@@ -131,7 +147,7 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
               'xml xhtml xslt html    {$path}shBrushXml.js'
             );
 EOT;
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addInlineScript(
+        $pageOutput->addInlineScript(
             array(
                 $brushes,
                 'SyntaxHighlighter.defaults[\'toolbar\'] = false',
@@ -140,12 +156,26 @@ EOT;
             'jquery'
         );
 
-        $sh_js_fs = $GLOBALS['registry']->get('jsfs', 'horde') . '/syntaxhighlighter/styles/';
-        $sh_js_uri = Horde::url($GLOBALS['registry']->get('jsuri', 'horde'), false, -1) . '/syntaxhighlighter/styles/';
-        $css = new Horde_Themes_Element('shCoreEclipse.css', array('data' => array('fs' => $sh_js_fs . 'shCoreEclipse.css', 'uri' => $sh_js_uri . 'shCoreEclipse.css')));
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addStylesheet($css->fs, $css->uri);
-        $css = new Horde_Themes_Element('shThemeEclipse.css', array('data' => array('fs' => $sh_js_fs . 'shThemeEclipse.css', 'uri' => $sh_js_uri . 'shThemeEclipse.css')));
-        $GLOBALS['injector']->getInstance('Horde_PageOutput')->addStylesheet($css->fs, $css->uri);
+        $sh_js_fs = $registry->get('jsfs', 'horde')
+            . '/syntaxhighlighter/styles/';
+        $sh_js_uri = Horde::url($registry->get('jsuri', 'horde'), false, -1)
+            . '/syntaxhighlighter/styles/';
+        $css = new Horde_Themes_Element(
+            'shCoreEclipse.css',
+            array('data' => array(
+               'fs' => $sh_js_fs . 'shCoreEclipse.css',
+               'uri' => $sh_js_uri . 'shCoreEclipse.css'
+            ))
+        );
+        $pageOutput->addStylesheet($css->fs, $css->uri);
+        $css = new Horde_Themes_Element(
+            'shThemeEclipse.css',
+            array('data' => array(
+                'fs' => $sh_js_fs . 'shThemeEclipse.css',
+                'uri' => $sh_js_uri . 'shThemeEclipse.css'
+            ))
+        );
+        $pageOutput->addStylesheet($css->fs, $css->uri);
     }
 
 }
