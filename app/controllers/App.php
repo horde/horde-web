@@ -171,7 +171,6 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
     protected function _screenshots(Horde_Controller_Response $response, $type)
     {
         $page_output = $GLOBALS['injector']->getInstance('Horde_PageOutput');
-        $page_output->addScriptFile($script);
         $script = new Horde_Script_File_External($GLOBALS['host_base'] . '/js/jquery.lightbox-0.5.min.js');
         $page_output->addScriptFile($script);
 
