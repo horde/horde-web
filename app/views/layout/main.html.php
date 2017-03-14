@@ -31,7 +31,7 @@
 $GLOBALS['injector']->getInstance('Horde_PageOutput')->addScriptFile(
     new HordeWeb_Script_File('toc.js')
 );
-$GLOBALS['injector']->getInstance('Horde_PageOutput')->includeScriptFiles();
+$GLOBALS['injector']->getInstance('Horde_PageOutput')->includeScriptFiles(true);
 $GLOBALS['injector']->getInstance('Horde_PageOutput')->outputInlineScript();
 ?>
 </body>
