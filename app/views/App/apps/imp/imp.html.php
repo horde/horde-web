@@ -1,3 +1,4 @@
+<!--
 <p>
  <!-- comment out for now, until sub naviagation works...need to update for 5
  anyway -->
@@ -12,7 +13,8 @@
  <a href="3.1/">3.1</a> |
  <a href="3.0/">3.0</a> |
  <a href="2.2/">2.2</a>
-</p>-->
+</p>
+-->
 
 <p>
  IMP is the Internet Messaging Program. It is written in <a
