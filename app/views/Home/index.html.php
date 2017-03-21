@@ -73,11 +73,11 @@
                     <ul>
                       <?php if (empty($this->planet)):?>
                         <li>The Planet Horde newsfeed is temporarily
-                      unavailable.</li>  <?php endif; ?> <?php $i = 0; ?>
+                      unavailable.</li>  <?php else: ?> <?php $i = 0; ?>
                       <?php foreach ($this->planet as $entry): if ($i++ >=
                       $this->maxPlanetItems) { break; } echo
                       $this->renderPartial('feedListDetailedItem', array('locals' =>
-                      array('entry' => $entry))); endforeach; ?>
+                      array('entry' => $entry))); endforeach; endif;?>
                     </ul>
                   </div>
                 </div>
