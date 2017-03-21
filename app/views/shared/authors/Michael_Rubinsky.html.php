@@ -10,7 +10,7 @@
           small aircraft, black and white
           <a href="https://web-horde.org/w/flickr.com/photos/mrubinsk/">photography</a>
           and spending time with my family</li>
-      <li>Amazon wishlist: <a href="https://web-horde.org/w/amazon.com/registry/wishlist/1IDWZ8XSJVUO1">amazon.com</a>.</li>
       <li>Website: <a href="https://web-horde.org/w/theupstairsroom.com/">http://theupstairsroom.com</a>.</li>
+      <li><strong>Amazon wishlist: <a href="https://web-horde.org/w/amazon.com/registry/wishlist/1IDWZ8XSJVUO1">amazon.com</a>.</strong></li>
   </ul>
 </div>

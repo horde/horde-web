@@ -14,6 +14,9 @@
       <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </div>
   </form>
+  <p class="wishlist">
+    <?php echo $this->linkTo('Buy a present for our developers', array('controller' => 'community', 'action' => 'team')); ?>
+  </p>
 
   <h2>Sponsors</h2>
   <ul class="ads">

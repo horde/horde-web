@@ -393,9 +393,14 @@ div.rightcol ul.ads li {
     padding-right:15px;
 }
 
+div.rightcol p.wishlist {
+    background:url(../images/gift.png) no-repeat 0 2px;
+    padding-left:15px;
+}
+
 div.rightcol p.thanks {
     clear: left;
-    background:url(../images/heart.png) no-repeat 0 3px;
+    background:url(../images/heart.png) no-repeat 0 2px;
     padding-left:15px;
 }
 
@@ -970,7 +975,7 @@ div.mail {
 
 .logos
 {
-    background:url(../images/gear.png) no-repeat 0 3px;
+    background:url(../images/gear.png) no-repeat 0 2px;
     padding-left:15px;
 }
 
