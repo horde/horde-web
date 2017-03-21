@@ -7,11 +7,11 @@
         <?php
         echo $this->render('Jan_Schneider');
         echo $this->render('Michael_Rubinsky');
-        echo $this->render('Chuck_Hagenbuch');
         echo $this->render('Ralf_Lang');?>
         <br />
         <h2><span>&nbsp;</span>Retired Developers</h2>
         <?php
+        echo $this->render('Chuck_Hagenbuch');
         echo $this->render('Michael_Slusarz');
         echo $this->render('Ben_Klang');
         echo $this->render('Gunnar_Wrobel');
