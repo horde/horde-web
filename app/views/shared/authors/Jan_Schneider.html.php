@@ -11,6 +11,6 @@
       at <a href="https://web-horde.org/w/uni-bielefeld.de/">University of Bielefeld</a>,
       Germany.</li>
     <li>Website: <a href="https://web-horde.org/w/janschneider.de/">http://janschneider.de</a></li>
-    <li>Amazon wishlist: <a href="https://web-horde.org/w/amazon.de/exec/obidos/registry/3DQXLRXA5BENK">amazon.de</a>.</li>
+    <li>Amazon wishlist: <a href="https://web-horde.org/w/www.amazon.de/registry/wishlist/3DQXLRXA5BENK">amazon.de</a>.</li>
  </ul>
 </div>
