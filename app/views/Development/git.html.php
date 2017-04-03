@@ -208,7 +208,7 @@
 
         <pre class="brush:bash">
         [alias]
-            get = !BRANCH=$(git branch -vv | grep ^\\* | sed -r 's/^[^[]+\\[([^]:]+).+$/\\1/') &&
+            get = !BRANCH=$(git branch -vv | grep ^\\* | sed -E 's/^[^[]+\\[([^]:]+).+$/\\1/') &&
                 git fetch &&
                 ( git rebase -v $BRANCH ||
                     ( git stash &&
