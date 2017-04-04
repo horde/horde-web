@@ -7,9 +7,12 @@
     <dd>
       <span class="fn">Horde LLC</span><br>
       <span class="adr">
-        <span class="post-office-box">P.O. Box 79322</span><br>
+        <span class="street-address">
+          691 John Wesley<br>
+          Dobbs Ave, Unit C
+        </span><br>
         <span class="locality">Atlanta</span>, <span class="region">GA</span><br>
-        <span class="postal-code">30307</span><br>
+        <span class="postal-code">30312</span><br>
         <span class="country-name">United States</span>
       </span>
     </dd>
