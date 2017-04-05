@@ -29,9 +29,6 @@
           <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/canadianwebhosting.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/cwh.png" height="40" alt="Canadian Web Hosting" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/qr-code-generator.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/qrcode.png" height="40" alt="QR Code Generator" />
-          </a>
           <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/aoe.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/aoe.jpg" height="40" alt="AOE" />
           </a>
