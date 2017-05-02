@@ -22,8 +22,12 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/2009">File attachments to events</a></td><td class="done">Done</td></tr>
+  <tr><td>Simplified meeting planning with local users</td><td class="progress">In Progress</td></tr>
   <tr><td>Refresh button to update individual calendars and task lists</td><td class="done">Done</td></tr>
   <tr><td>Importing of calendars from a URL</td><td class="done">Done</td></tr>
+  <tr><td>Editing of system calendars in dynamic view</td><td class="done">Done</td></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/3965">Tracking of event organizor</a></td><td class="done">Done</td></tr>
   <tr><td><a href="http://bugs.horde.org/ticket/1922">Monthly recurrence on last weekday</a></td><td class="done">Done</td></tr>
   <tr><td><a href="http://bugs.horde.org/ticket/13647">Individual permissions for resources</a></td><td class="done">Done</td></tr>
 </table>

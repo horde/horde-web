@@ -22,6 +22,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Tagging support</td><td class="done">Done</td></tr>
   <tr><td>WebDAV access to notes</td><td class="done">Done</td></tr>
 </table>
 

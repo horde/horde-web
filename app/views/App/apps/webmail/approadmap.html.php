@@ -22,8 +22,14 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Per-user backup and restore</td><td class="progress">In Progress</td></tr>
   <tr><td>Extended administration pages</td><td class="done">Done</td></tr>
+  <tr><td>Portal weather map</td><td class="done">Done</td></tr>
+  <tr><td>Administrator check for updates</td><td class="done">Done</td></tr>
+  <tr><td>Caching for group system</td><td class="done">Done</td></tr>
   <tr><td>Dropped basic and minimal webmail views</td><td class="done">Done</td></tr>
+  <tr><td>Mailbox sub-headers in search results</td><td class="progress">In Progress</td></tr>
+  <tr><td>Different S/MIME certifcates for encryption and signing</td><td class="done">Done</td></tr>
   <tr><td>Progress bar when uploading message attachments</td><td class="done">Done</td></tr>
   <tr><td>Improved support for e-mail groups in webmail</td><td class="done">Done</td></tr>
   <tr><td>Link to sent message replies</td><td class="done">Done</td></tr>
@@ -35,17 +41,24 @@ at least some of the following changes:
   <tr><td>Option to more accurately determine attachments in message list</td><td class="done">Done</td></tr>
   <tr><td><a href="http://bugs.horde.org/ticket/13155">Purge Deleted button in smartphone view</a></td><td class="done">Done</td></tr>
   <tr><td>NoSQL (MongoDB) driver for the filter storage backend</td><td class="done">Done</td></tr>
+  <tr><td>Display of vacation in calendar</td><td class="done">Done</td></tr>
+  <tr><td>Date extension for the Sieve backend</td><td class="done">Done</td></tr>
   <tr><td>Improved default order of filter rules</td><td class="done">Done</td></tr>
   <tr><td><a href="http://bugs.horde.org/ticket/13693">Contact searching for tags</a></td><td class="done">Done</td></tr>
   <tr><td>Optional special characters in the contacts alpha pager</td><td class="done">Done</td></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/2009">File attachments to events</a></td><td class="done">Done</td></tr>
+  <tr><td>Simplified meeting planning with local users</td><td class="progress">In Progress</td></tr>
   <tr><td>Refresh button to update individual calendars and task lists</td><td class="done">Done</td></tr>
   <tr><td>Importing of calendars from a URL</td><td class="done">Done</td></tr>
-  <tr><td><a href="http://bugs.horde.org/ticket/1922">Monthly recurrence on last weekday</a></td><td class="done">Done</td></tr>
+  <tr><td>Editing of system calendars in dynamic view</td><td class="done">Done</td></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/3965">Tracking of event organizor</a></td><td class="done">Done</td></tr>
+  <tr><td><a href="http://bugs.horde.org/ticket/1922">Monthly event and task recurrence on last weekday</a></td><td class="done">Done</td></tr>
   <tr><td><a href="http://bugs.horde.org/ticket/13647">Individual permissions for calendar resources</a></td><td class="done">Done</td></tr>
   <tr><td>Added task organizers</td><td class="done">Done</td></tr>
   <tr><td>Task list background color in basic view</td><td class="done">Done</td></tr>
   <tr><td>Track actual time spent for task</td><td class="done">Done</td></tr>
   <tr><td>Import and export of task alarms and recurrence rules to/from iCalendar</td><td class="done">Done</td></tr>
+  <tr><td>Tagging support for notes</td><td class="done">Done</td></tr>
   <tr><td>WebDAV access to notes</td><td class="done">Done</td></tr>
   <tr><td><a href="http://bugs.horde.org/ticket/12397">Reactivate WebDAV access to file manager</a></td><td class="planned">Planned</td>
   <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td></tr>

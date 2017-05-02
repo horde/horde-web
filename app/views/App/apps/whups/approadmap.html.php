@@ -22,7 +22,10 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td>Compatible with Horde 6</td><td class="done">Done</td>
+  <tr><td>Automatically add ticket listeners from email messages</td><td class="done">Done</td>
+  <tr><td>Store email messages separately from attachments</td><td class="done">Done</td>
+  <tr><td>Display ticket listeners</td><td class="done">Done</td>
+  <tr><td>Batch deletion of tickets</td><td class="done">Done</td>
 </table>
 
 <div class="dimmed">

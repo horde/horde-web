@@ -21,6 +21,7 @@ at least some of the following changes:
 <p><b>Features currently planned:</b></p>
 <table cellspacing="0" class="roadmap">
 <tr><th>Feature</th><th>Status</th></tr>
+<tr><td>Dynamic view</td><td class="progress">In Progress</td></tr>
 <tr><td>Improved image search</td><td class="planned">Planned</td></tr>
 <tr><td>Remote Galleries (Import/Export to Facebook, Flickr, etc...)</td><td class="planned">Planned</td></tr>
 <tr><td>Video Support</td><td class="planned">Planned</td></tr>

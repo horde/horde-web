@@ -23,6 +23,8 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>NoSQL (MongoDB) driver for the storage backend</td><td class="done">Done</td></tr>
+  <tr><td>Display of vacation in calendar</td><td class="done">Done</td></tr>
+  <tr><td>Date extension for the Sieve backend</td><td class="done">Done</td></tr>
   <tr><td>Improved default order of filter rules</td><td class="done">Done</td></tr>
   <tr><td>Merge Vacation drivers (forwards, ldap, qmail, sql)</td><td class="planned">Planned</td></tr>
   <tr><td>Merge Vacation alias drivers (none, ftp)</td><td class="planned">Planned</td></tr>

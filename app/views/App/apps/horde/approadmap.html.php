@@ -22,7 +22,11 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Per-user backup and restore</td><td class="progress">In Progress</td></tr>
   <tr><td>Extended administration pages</td><td class="done">Done</td></tr>
+  <tr><td>Portal weather map</td><td class="done">Done</td></tr>
+  <tr><td>Administrator check for updates</td><td class="done">Done</td></tr>
+  <tr><td>Caching for group system</td><td class="done">Done</td></tr>
 </table>
 
 <div class="dimmed">

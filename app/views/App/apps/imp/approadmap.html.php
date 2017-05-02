@@ -23,6 +23,8 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
  <tr><th>Feature</th><th>Status</th>
  <tr><td>Dropped basic and minimal views</td><td class="done">Done</td></tr>
+ <tr><td>Mailbox sub-headers in search results</td><td class="progress">In Progress</td></tr>
+ <tr><td>Different S/MIME certifcates for encryption and signing</td><td class="done">Done</td></tr>
  <tr><td>Progress bar when uploading attachments</td><td class="done">Done</td></tr>
  <tr><td>Improved support for e-mail groups and the address book</td><td class="done">Done</td></tr>
  <tr><td>Link to sent message replies</td><td class="done">Done</td></tr>
