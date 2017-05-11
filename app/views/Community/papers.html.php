@@ -33,6 +33,17 @@
         <a
         href="https://web-horde.org/w/slideshare.net/wrobel/20120310-mobile/">"Mobile"</a>).</p>
 
+        <p><a href="<?php echo $this->urlWriter->urlFor('team', array('anchor'
+        => 'jan')) ?>"> Jan</a> was interviewed by
+        <a href="https://web-horde.org/w/www.radiotux.de/">RadioTux</a>
+        at <a href="https://web-horde.org/w/linuxtag.org/2011/">LinuxTag
+        2011</a>. The interview in German about the freshly released Horde
+        version 4 and the new development model is
+        <a href="https://web-horde.org/w/www.radiotux.de/index.php?/archives/6781-LinuxTag-Interview-mit-Jan-Schneider-ueber-Horde.html">available</a>
+        on their website. An English transcript can be
+        found <a href="https://web-horde.org/w/janschneider.de/news/5/338">on
+        Jan's blog</a></p>
+
         <p><a
         href="<?php echo $GLOBALS['host_base'] ?>/papers/20110512_LinuxTag_horde4.pdf">
         The Horde 4 PHP framework</a> was presented at <a
