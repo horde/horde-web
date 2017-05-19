@@ -37,11 +37,6 @@
           <a style="margin:20px;text-decoration:none" href="http://dealspotr.com/" target="_blank">
             <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/blue.png" height="40" alt="Dealspotr" />
           </a>
-          <?php if (time() < mktime(0, 0, 0, 1, 16, 2017)): ?>
-          <a style="margin:20px;text-decoration:none" href="http://travel-ticker.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/travelticker.jpg" height="40" alt="Travel Ticker" />
-          </a>
-          <?php endif ?>
           <a style="margin:20px;text-decoration:none" href="http://whatisseo.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/whatisseo.png" height="40" alt="What Is SEO?" />
           </a>
