@@ -23,26 +23,26 @@
         </p>
         <br/>
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/psw.net/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://psw.net/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/psw.gif" height="40" alt="PSW GROUP" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/canadianwebhosting.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://canadianwebhosting.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/cwh.png" height="40" alt="Canadian Web Hosting" />
           </a>
-          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/aoe.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://aoe.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/aoe.jpg" height="40" alt="AOE" />
           </a>
         </p>
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/dealspotr.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://dealspotr.com/" target="_blank">
             <img style="margin-bottom:5px" src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/blue.png" height="40" alt="Dealspotr" />
           </a>
           <?php if (time() < mktime(0, 0, 0, 1, 16, 2017)): ?>
-          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/travel-ticker.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://travel-ticker.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/travelticker.jpg" height="40" alt="Travel Ticker" />
           </a>
           <?php endif ?>
-          <a style="margin:20px;text-decoration:none" href="https://web-horde.org/w/whatisseo.com/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="http://whatisseo.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/whatisseo.png" height="40" alt="What Is SEO?" />
           </a>
         </p>
