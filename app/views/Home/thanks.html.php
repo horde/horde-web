@@ -29,9 +29,11 @@
           <a style="margin:20px;text-decoration:none" href="http://canadianwebhosting.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/cwh.png" height="40" alt="Canadian Web Hosting" />
           </a>
+          <?php if (time() < mktime(0, 0, 0, 7, 29, 2017)): ?>
           <a style="margin:20px;text-decoration:none" href="http://aoe.com/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/aoe.jpg" height="40" alt="AOE" />
           </a>
+          <?php endif ?>
         </p>
         <p style="text-align:center">
           <?php if (time() < mktime(0, 0, 0, 6, 1, 2017)): ?>
