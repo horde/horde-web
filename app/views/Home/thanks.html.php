@@ -35,13 +35,6 @@
           </a>
           <?php endif ?>
         </p>
-        <p style="text-align:center">
-          <?php if (time() < mktime(0, 0, 0, 6, 1, 2017)): ?>
-          <a style="margin:20px;text-decoration:none" href="http://whatisseo.com/" target="_blank">
-            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/whatisseo.png" height="40" alt="What Is SEO?" />
-          </a>
-          <?php endif ?>
-        </p>
         <br/>
 
         <h3>New sponsors</h3>
