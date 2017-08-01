@@ -1,8 +1,100 @@
 <h3>Changes by Release</h3><pre>
 -----------
-v5.2.21-git
+v5.2.22-git
 -----------
 
+
+
+-------
+v5.2.21
+-------
+
+[jan] SECURITY: Fix open redirects.
+[jan] Update Turkish translations (İTÜ BİDB &lt;sistemdestek@itu.edu.tr>).
+
+Address Book Changes
+--------------------
+[jan] Fix creating address books with the external API.
+
+Calendar Changes
+----------------
+[mjr] Prevent broken iCalendar files from causing fatal errors (<a href="http://bugs.horde.org/ticket/14672">Bug #14672</a>).
+[jan] Work around calendar servers advertising as CalDAV-capable, but ignoring
+      CalDAV requests (<a href="http://bugs.horde.org/ticket/14662">Bug #14662</a>).
+[jan] Fix displaying yesterday's event in Prior Events portal block
+      (admin@layertec.de, <a href="http://bugs.horde.org/ticket/14638">Bug #14638</a>).
+
+Tasks Changes
+-------------
+[mjr] Fix handling of delayed start dates (<a href="http://bugs.horde.org/ticket/14634">Bug #14634</a>).
+
+File Manager Changes
+--------------------
+[jan] Fix redirection after logins with Horde 5.2.16 and later.
+
+Library Changes
+---------------
+ActiveSync
+[mjr] Fix undefined constant error (<a href="http://bugs.horde.org/ticket/14671">Bug #14671</a>).
+[mjr] Improve support for android Gmail application (<a href="http://bugs.horde.org/ticket/14655">Bug #14655</a>).
+[mjr] Fix undefined property warnings (<a href="http://bugs.horde.org/ticket/14631">Bug #14631</a>).
+
+Alarm
+[jan] Fix catching database backend exceptions.
+
+Browser
+[jan] Filter out control characters from file names when sending download
+      headers.
+
+Cli
+[jan] Fix returning to normal font after text with light colors.
+[jan] Fix fatal error screen for PHP 7 error objects.
+[jan] Fix header() method to print, not return the header.
+[jan] Really silence errors from tput and stty (<a href="http://bugs.horde.org/ticket/14632">Bug #14632</a>).
+[jan] Silence errors from tput and stty (<a href="http://bugs.horde.org/ticket/14632">Bug #14632</a>).
+
+Core
+[jan] SECURITY: Fix XSS vulnerability with pathinfo component in
+      Horde::selfUrl().
+[jan] Deprecate Horde::redirect().
+[jan] Add Horde::signUrl() and Horde::verifySignedUrl().
+[jan] Fix JavaScript minifying with recent Closure compilers (<a href="http://bugs.horde.org/ticket/14650">Bug #14650</a>).
+[jan] Add Horde_Registry_Application#backup(), restore(), and
+      restoreDependencies().
+[mjr] Fix calculating ActiveSync SOFTDELETE times for calendar collections (<a href="http://bugs.horde.org/ticket/14631">Bug
+      #14631</a>).
+
+Crypt
+[jan] More fixes for GnuPG 2 (Mathieu Parent &lt;math.parent@gmail.com>).
+[jan] Remove dependency on openssl executable (Hadi Nategh &lt;hnategh@gmail.com>).
+
+Date
+[jan] Add Horde_Date_Recurrence::fromHash() and toHash().
+
+Form
+[jan] SECURITY: Fix XSS vulnerability with form sections.
+
+Icalendar
+[jan] Fix unescaping of commas in ADR, N, and ORG attributes.
+
+Image
+[mjr] SECURITY: Fix more potential places for command injections.
+[mjr] SECURITY: Prevent DOS attack by preventing an infinite loop in certain
+      conditions (CVE-2017-9773, reported by Fariskhi Vidyan
+      &lt;farislab@gmail.com>).
+[mjr] SECURITY: Prevent RCE attacks by properly sanitizing shell arguments
+      (CVE-2017-9774, reported by Fariskhi Vidyan &lt;farislab@gmail.com>).
+[jan] Add blur effect.
+
+Imap_Client
+[jan] Fix check if QRESYNC is enabled in vanished() (i.badamshin
+      &lt;i.badamshin@i-infinite.net>).
+
+JavascriptMinify
+[jan] Add unit tests.
+
+Url
+[jan] SECURITY: Fix XSS vulnerability with pathinfo component in toString().
 
 
 -------
