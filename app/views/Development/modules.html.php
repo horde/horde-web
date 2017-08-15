@@ -5,11 +5,13 @@
       <?php echo $this->render('developmentnav');?>
       <div class="section">
         <div class="sectionintro">
-          <p>The following modules are in the Horde <?php echo
+          <p>The following, maintained modules are in the Horde <?php echo
           $this->linkTo('Git', array('controller' => 'development', 'action' =>
-          'git')) ?> Repository, with the listed production level available. If
-          no version is listed, then there has not yet been a stable release of
-          that module.</p>
+          'git')) ?> Repositories, with the listed production level
+          available. If no version is listed, then there has not yet been a
+          stable release of that module. If a module is not listed, but
+          available as a repository, it's either not maintained at the moment,
+          or this page is outdated.</p>
         </div>
 
         <table id="ModulesTable" class="striped" cellspacing="0">
@@ -34,19 +36,9 @@
         </tr>
         <tr><td colspan="4">&nbsp;</td></tr>
         <tr>
-         <?php echo $this->controller->git_and_ver('agora') ?>
-         <td>Forum module</td>
-         <td>Beta</td>
-        </tr>
-        <tr>
          <?php echo $this->controller->git_and_ver('ansel') ?>
          <td>Photo Gallery application</td>
          <td><strong>Production</strong></td>
-        </tr>
-        <tr>
-         <?php echo $this->controller->git_and_ver('beatnik') ?>
-         <td>DNS record management user interface</td>
-         <td>Development</td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('chora') ?>
@@ -59,9 +51,9 @@
          <td><strong>Production</strong></td>
         </tr>
         <tr>
-          <?php echo $this->controller->git_and_ver('hermes') ?>
-          <td>Time-tracking/billing data system</td>
-          <td><strong>Production</strong></td>
+         <?php echo $this->controller->git_and_ver('hermes') ?>
+         <td>Time-tracking/billing data system</td>
+         <td><strong>Production</strong></td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('imp') ?>
@@ -79,19 +71,9 @@
          <td>Beta</td>
         </tr>
         <tr>
-         <?php echo $this->controller->git_and_ver('klutz') ?>
-         <td>Comics module</td>
-         <td><strong>Production</strong></td>
-        </tr>
-        <tr>
          <?php echo $this->controller->git_and_ver('kronolith') ?>
          <td>Calendar and scheduling</td>
          <td><strong>Production</strong></td>
-        </tr>
-        <tr>
-         <?php echo $this->controller->git_and_ver('luxor') ?>
-         <td>LXR Port</td>
-         <td>Beta</td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('mnemo') ?>
@@ -137,11 +119,6 @@
          <?php echo $this->controller->git_and_ver('ulaform') ?>
          <td>A form generation/processing tool</td>
          <td>Beta</td>
-        </tr>
-        <tr>
-         <?php echo $this->controller->git_and_ver('vilma') ?>
-         <td>Virtual email domain administrator</td>
-         <td>Development</td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('whups') ?>
