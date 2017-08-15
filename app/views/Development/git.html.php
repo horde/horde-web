@@ -6,7 +6,7 @@
       <div class="section">
         <div class="sectionintro">
           <p>All development work is done against
-          our <a href="https://github.com/horde/">git repositories on
+          our <a href="https://github.com/horde/">Git repositories on
           GitHub</a>.</p>
           <p>The master branch is considered the mainline,
           authoritative branch that will eventually become the next
