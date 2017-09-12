@@ -157,10 +157,19 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
 
     protected function _docs(Horde_Controller_Response $response)
     {
+        $file = $GLOBALS['fs_base'] . '/app/views/App/apps/'
+            . $this->_matchDict->app . '/docs/'
+            . ($this->_matchDict->file ? $this->_matchDict->file : 'docs')
+            . '.html';
+        if (!file_exists($file)) {
+            $this->_notFound($response);
+            return;
+        }
+
         $view = $this->getView();
         $view->page_title = 'Documentation - ' . $view->appnameHuman . ' - The Horde Project';
         Horde::startBuffer();
-        include $GLOBALS['fs_base'] . '/app/views/App/apps/' . $this->_matchDict->app . '/docs/' . ($this->_matchDict->file ? $this->_matchDict->file : 'docs') . '.html';
+        include $file;
         $view->content = Horde::endBuffer();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
