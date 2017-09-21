@@ -1,6 +1,6 @@
 <h3>Release notes for the latest release</h3><code>
 The Horde Team is pleased to announce the final release of the Horde Groupware<br />
-Webmail Edition version 5.2.21.<br />
+Webmail Edition version 5.2.22.<br />
 <br />
 Horde Groupware Webmail Edition is a free, enterprise ready, browser based<br />
 communication suite. Users can read, send and organize email messages with four<br />
@@ -14,10 +14,24 @@ http://www.horde.org/apps/webmail/docs/UPGRADING<br />
 For detailed installation and configuration instructions, please see<br />
 http://www.horde.org/apps/webmail/docs/INSTALL<br />
 <br />
+Thanks to Tim O'Driscoll &lt;tim.odriscoll@lambrookschool.co.uk&gt; for reporting the<br />
+missing authorization check for file downloads on backends that don't require<br />
+implicit authentication.<br />
+<br />
 The major changes compared to the Horde Groupware Webmail Edition version<br />
-5.2.20 are:<br />
+5.2.21 are:<br />
 <br />
 General changes:<br />
-    * Fixed open redirects.<br />
-    * Fixed XSS vulnerabilities.<br />
-    * Small bugfixes and improvements.</code>
+    * Officially support PHP 7.<br />
+    * Small bugfixes.<br />
+<br />
+Calendar changes:<br />
+    * Fixed deleting events from remote CalDAV servers.<br />
+<br />
+Tasks changes:<br />
+    * Fixed unauthorized export of task lists.<br />
+    * Fixed returning to task list after completing a task.<br />
+    * Improved CalDAV synchronization compatibility.<br />
+<br />
+File Manager changes:<br />
+    * Fixed unauthorized access to file downloads.</code>

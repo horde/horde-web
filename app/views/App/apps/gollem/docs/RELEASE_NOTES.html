@@ -1,6 +1,6 @@
 <h3>Release notes for the latest release</h3><code>
 The Horde Team is pleased to announce the final release of the Gollem File<br />
-Manager version H5 (3.0.11).<br />
+Manager version H5 (3.0.12).<br />
 <br />
 Gollem is a web-based file manager, providing the ability to fully manage a<br />
 hierarchical file system stored in a variety of backends such as a SQL<br />
@@ -13,5 +13,10 @@ http://www.horde.org/apps/gollem/docs/UPGRADING<br />
 For detailed installation and configuration instructions, please see<br />
 http://www.horde.org/apps/gollem/docs/INSTALL<br />
 <br />
-The major changes compared to Gollem version H5 (3.0.10) are:<br />
-    * Fixed redirection after logging in with recent Horde versions.</code>
+Thanks to Tim O'Driscoll &lt;tim.odriscoll@lambrookschool.co.uk&gt; for reporting the<br />
+missing authorization check for file downloads on backends that don't require<br />
+implicit authentication.<br />
+<br />
+The major changes compared to Gollem version H5 (3.0.11) are:<br />
+    * Fixed unauthorized access to file downloads.<br />
+    * Officially support PHP 7.</code>
