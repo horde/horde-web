@@ -65,7 +65,7 @@ for some further information.</p>
       List
     </th><th>
       Traffic
-    </th><th colspan="3">
+    </th><th colspan="2">
       Archives
     </th><th>
       Description
@@ -80,10 +80,6 @@ for some further information.</p>
     </td><td>
       <?php if (!empty($list_val['marc'])): ?>
         [<a href="https://web-horde.org/w/marc.info/?l=<?php echo $list_val['marc'] ?>&amp;r=1&amp;w=2">MARC</a>]
-      <?php endif; ?>
-    </td><td>
-      <?php if (!empty($list_val['gmane'])): ?>
-        [<a href="https://web-horde.org/w/news.gmane.org/gmane.comp.horde.<?php echo $list_val['gmane'] ?>">Gmane</a>]
       <?php endif; ?>
     </td><td>
       <?php if (!empty($list_val['google'])): ?>
