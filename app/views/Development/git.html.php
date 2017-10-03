@@ -5,96 +5,76 @@
       <?php echo $this->render('developmentnav');?>
       <div class="section">
         <div class="sectionintro">
-          <p>All new development work should be done against current git code.
-          The master branch is considered the mainline, authoritative branch
-          that will eventually become the next release.</p>
+          <p>All development work is done against
+          our <a href="https://github.com/horde/">Git repositories on
+          GitHub</a>.</p>
 
-            <p>You can use the Horde Git repository as an anonymous user or as a
-            developer.</p>
+          <p>You can use the Horde Git repositories as an anonymous user or as
+          a developer.</p>
 
-            <p>You will need a Git client, if you don't already have one.
-            Information on Git can be found at <a href="https://web-horde.org/w/git-scm.com/">
-            http://git-scm.com/</a>.</p>
+          <p>You can checkout, fork, or install each Git module individually
+          and independently from each other, using standard Git commands and
+          tools. If you want to work with the whole Horde Framework or several
+          Horde applications, it is suggested that you use
+          the <a href="https://github.com/horde/git-tools">Horde Git
+          Tools</a> though. The instructions below focus on these tools.</p>
 
-            <p>These command lines should be the bare-bones needed to get you
-            started with Horde and Git; this is not a Git tutorial, however. The
-            standard Git documentation is available <a
-            href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/">here</a>.
-            Additional tips and useful links can be found at <a
-            href="https://web-horde.org/w/gitready.com/">git ready</a> and
-            <a href="https://web-horde.org/w/andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
-            25 Tips for Intermediate Git Users</a>.</p>
+          <p>You will need a Git client, if you don't already have one.
+          Information on Git can be found
+          at <a href="https://web-horde.org/w/git-scm.com/">http://git-scm.com/</a>.</p>
+
+          <p>These command lines should be the bare-bones needed to get you
+          started with Horde and Git; this is not a Git tutorial, however. The
+          standard Git documentation is
+          available <a href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/">here</a>.
+          Additional tips and useful links can be found
+          at <a href="https://web-horde.org/w/gitready.com/">git ready</a> and
+          <a href="https://web-horde.org/w/andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
+          25 Tips for Intermediate Git Users</a>.</p>
         </div>
 
-        <h3>Available Repositories</h3>
-        <ul>
-            <li><tt><a href="http://git.horde.org/?rt=horde-git">horde</a></tt> - Horde application code</li>
-            <li><tt><a href="http://git.horde.org/?rt=horde-support">horde-support</a></tt> - Support code</li>
-            <li><tt><a href="http://git.horde.org/?rt=horde-web">horde-web</a></tt> - Website source code</li>
-        </ul>
-        <br />
+        <h2><span>&nbsp;</span>Horde Git Tools</h2>
 
-        <h2><span>&nbsp;</span>Anonymous Git</h2>
-        <p>Anonymous Git access is available via GitHub using the
-        <tt>git://</tt> protocol.</p>
+        <h3>Getting The Source Code</h3>
 
-        <p>To clone a repository, use the following command:</p>
+        <p>Use <a href="https://github.com/horde/git-tools/blob/master/README.md">these
+        instructions</a> to install the Horde Git Tools. Make sure to configure
+        the tools correctly for your needs, and read the documentation in the
+        configuration file.</p>
 
-        <pre class="brush:bash">git clone --depth 1 git://github.com/horde/[REPO]</pre>
+        <p>To clone the repositories, use the following command:</p>
 
-        <p>where <tt>REPO</tt> is one of the available repositories listed
-        above. The <tt>--depth 1</tt> option creates a <i>shallow</i> clone
-        rather than downloading the whole repository; this saves significant
-        storage space on your local machine and requires less network bandwidth
-        during the initial transfer. The disadvantage is that the full
-        repository history will not be available on your local machine, you
-        cannot clone or fetch from it, nor push from nor into it (none of these
-        activities are generally useful for anonymous repositories anyway). If
-        you do want the full repository, simply omit <tt>--depth 1</tt>.</p>
+        <pre class="brush:bash">horde-git-tools git clone</pre>
 
-        <p>To update the repository, enter the repository directory and use this
-        command:</p>
+        <p>To update the repositories, use this command:</p>
 
-        <pre class="brush:bash">git pull</pre>
+        <pre class="brush:bash">horde-git-tools git pull</pre>
 
         <h3>Making Development Repos Web-Accessible</h3>
 
-        <p>Make sure you have cloned the <tt>horde</tt> repo. Once initialized,
-        creating a web-accessible development installation can be done simply
-        by running the <tt>install_dev</tt> PHP script located at
-        <tt>horde-git/framework/bin</tt>. To properly run this script, the
-        <tt>Horde_Role</tt> package must be installed and a local copy of
-        install_dev.conf must be created on your system, with the variables
-        inside that file edited as necessary to apply to your system.</p>
+        <p>To create a web-accessible development installation, use the
+        following command:</p>
 
-        <p>For example:</p>
+        <pre class="brush:bash">horde-git-tools dev install</pre>
 
-        <pre class="brush:bash">
-        pear channel-discover pear.horde.org
-        pear install horde/horde_role
-        cd /path/to/horde-git/framework/bin
-        cp install_dev.conf.dist install_dev.conf
-        vi install_dev.conf (replace vi with your favorite editing tool)
-        ./install_dev
-        </pre>
-
-        <p>Running that script will symlink the entire horde package into the
-        web-accessible directory you specified in <tt>install_dev.conf</tt>,
-        symlink all other Horde applications within that directory, and will
-        properly set up the necessary include/horde path definitions. Note that
-        all edits should take place within the repository, as the
-        web-accessible directory will be deleted every time
-        the <tt>install_dev</tt> script is run.</p>
+        <p>Running that script will symlink the base horde package into the
+        web-accessible directory you specified
+        in <tt>git-tools/config/conf.php</tt>, symlink all other Horde
+        applications within that directory, and will properly set up the
+        necessary include/horde path definitions. Note that all edits should
+        take place within the repository, as the web-accessible directory will
+        be deleted every time the <tt>dev install</tt> script is run.</p>
 
         <p>Full directory paths will be needed in
         <tt>horde-git/horde/config/registry.php</tt> due to the symlinks. The
         easiest way to setup full paths is to set the <tt>$app_fileroot</tt>
         parameter in this file.</p>
 
-        <p>Note that unlike a PEAR install, the <tt>Autoloader_Cache</tt>
-        package will be enabled by default. If you attempt to use Horde or load
-        the test.php page before all PEAR dependencies are installed, you will
-        have to purge the autoloader cache.</p>
+        <p>Note that unlike a PEAR or Composer install,
+        the <tt>Autoloader_Cache</tt> package will be enabled by default. If
+        you attempt to use Horde or load the test.php page before all
+        dependencies are installed, you will have to purge the autoloader
+        cache.</p>
 
         <p>You can now follow the procedures in the normal <?php echo
         $this->linkTo('INSTALL', array('controller' => 'app', 'action' =>
@@ -108,7 +88,7 @@
         <pre class="brush:bash">./horde/bin/horde-db-migrate [application_name [up|down]]</pre>
 
         <p>If installing the framework libraries directly via PEAR, i.e. not
-        with with <tt>install_dev</tt>, you will need to define your horde
+        with with the Horde Git Tools, you will need to define your horde
         application directory (i.e. the filesystem directory where the Horde
         application is installed and accessible to a browser) in your PEAR
         config.  This can be done with the horde/Role package previously
@@ -120,102 +100,47 @@
 
         <h3 id="patch">Creating Patches</h3>
 
-        <p>To submit patches, first make the changes in your local
-        repository. You will need to <a href="#createcommit">commit these
-        changes locally</a>.  After committing, use the following command:</p>
-
-        <pre class="brush:bash">git format-patch -M -B origin</pre>
-
-        <p>This command creates a separate patch file for each commit that
-        exists locally on your machine but does not exist in the master Horde
-        branch (origin).  These patch files will be located in your local
-        directory.</p>
+        <p>Please use
+        the <a href="https://web-horde.org/w/help.github.com/articles/about-pull-requests/">Pull
+        Request</a> feature on GitHub to submit patches.</p>
 
         <h2><span>&nbsp;</span>Developer Git</h2>
 
-        <p>Access to the live Git repository is only available over SSH. You
-        will want to create an SSH key and use that with your account on
-        dev.horde.org to avoid having to enter your password on every
-        pull/push.</p>
-
-        <p>You will also need to create an account on GitHub as the master repo
-        will
-        be <a href="http://lists.horde.org/archives/dev/Week-of-Mon-20100830/025224.html">mirrored
-        to GitHub every time a commit is pushed</a>.  The following needs to be
+        <p>Write access to the Git repositories as a Horde developer is only
+        available over SSH. You will want to create an SSH key, and you will
+        also need to create an account on GitHub. The following needs to be
         done:</p>
 
         <ol>
             <li>Create a GitHub account.</li>
-            <li><a href="https://web-horde.org/w/help.github.com/linux-key-setup/">Setup your
-            SSH public key</a>. This SSH key must exist in your github.com
-            account.</li>
-            <li><a href="http://lists.horde.org/archives/dev/Week-of-Mon-20100830/025226.html">Make
-            sure the github host key is stored in your git.horde.org
-            account</a>.</li>
-            <li>Join the Horde organization on GitHub (send e-mail to core@lists.horde.org).</li>
+            <li><a href="https://web-horde.org/w/help.github.com/articles/connecting-to-github-with-ssh/">Setup
+            your SSH public key</a>.</li>
+            <li>Join the Horde organization on GitHub (send e-mail to
+            <a href="mailto:core@horde.org">core@horde.org</a>).</li>
         </ol>
 
+        <h3>Getting The Source Code</h3>
 
-        <h3>Cloning repository</h3>
+        <p>Follow the instruction above to install the Horde Git Tools, but
+        create the configuration file from <tt>config/conf.php.dev.dist</tt>
+        instead of <tt>config/conf.php.dist</tt>. Then continue with making
+        the repositories web-accessible as described above.</p>
 
-        <p>To clone a repository, use this command:</p>
+        <h3>Updating repositories</h3>
 
-        <pre class="brush:bash">git clone ssh://dev.horde.org/horde/git/[REPO]</pre>
+        <p>To update your local repositories, <span style="color:red">you MUST
+        rebase the changes on top of your local repo copy</span> if using Git
+        manually, i.e. without using the Horde Git
+        Tools. <span style="color:red">Failure to do so will result in useless,
+        annoying commit merge messages both added to the master repository and
+        sent in the commit e-mails.</span></p>
 
-        <p>where <tt>REPO</tt> is one of the available repositories listed
-        above.</p>
+        <p>To update/rebase the changes, you can use the following command that
+        already rebases automatically, and adds a helpful Git <tt>get</tt>
+        alias to update your local repositories while seeing changed files and
+        avoiding conflicts.:</p>
 
-        <p>This will create a <tt>REPO</tt> directory in your current
-        directory.  Once completed, an up to date copy of the master Git
-        repository will be available on your system. You must use the SSH
-        protocol rather than the git protocol because the Horde Git repository
-        only supports pushing commits through SSH. (Since Git will
-        automatically use the protocol used to clone the repository for all
-        future push/pull operations, it is easiest to set your local repository
-        up correctly from the beginning.)</p>
-
-
-        <h3>Updating repository</h3>
-
-        <p>To update your local repository, <span style="color:red">you MUST
-        rebase the changes on top of your local repo copy. Failure to do so
-        will result in useless, annoying commit merge messages both added to
-        the master repository and sent in the commit e-mails.</span></p>
-
-        <p>To update/rebase the changes, you can use the following command:</p>
-
-        <pre class="brush:bash">git pull --rebase</pre>
-
-        <p>Better still, to prevent an unnecessary merge, you can configure
-        <tt><a href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/git-pull.html">git
-        pull</a></tt> to always rebase when pulling for a particular repo by
-        using the following command:</p>
-
-        <pre class="brush:bash">git config branch.[reponame].rebase true</pre>
-
-        <p>One disadvantage of <tt>git pull</tt> is that (as of Git v1.6.1.1)
-        it does not indicate which files are updated. To see a list of files
-        that are updated, you should run these two commands instead:</p>
-
-        <pre class="brush:bash">
-        git fetch
-        git rebase -v origin
-        </pre>
-
-        <p>A helpful alias for <pre class="brush:bash">.gitconfig</pre> to
-        update your local repository while seeing changed files and avoiding
-        conflicts is:</p>
-
-        <pre class="brush:bash">
-        [alias]
-            get = !BRANCH=$(git branch -vv | grep ^\\* | sed -E 's/^[^[]+\\[([^]:]+).+$/\\1/') &&
-                git fetch &&
-                ( git rebase -v $BRANCH ||
-                    ( git stash &&
-                        ( git rebase -v $BRANCH ||
-                          echo "WARNING: Run 'git stash pop' manually!" ) &&
-                      git stash pop ) )
-        </pre>
+        <pre class="brush:bash">horde-git-tools git pull</pre>
 
         <p>For more information on rebasing, and the commands needed if
         conflicts are detected during the rebase/merge, see:
@@ -265,6 +190,9 @@
 
         <pre class="brush:bash">git commit -a -m "[commit message]"</pre>
 
+        <p>The Horde Git Tools allow to do Git commits on all or several
+        repositories at once. Check its documentation for details.</p>
+
         <h3>Pushing commits</h3>
 
         <p>Once you finish with your local commits and want to push them to the
@@ -278,6 +206,9 @@
         verifies that the setting is configured properly:
 
         <pre class="brush:bash">git config push.default matching</pre>
+
+        <p>Again, using Horde Git Tools will help to push on several
+        repositories at once.</p>
 
         <h3>Stashing</h3>
 
@@ -302,8 +233,9 @@
 
         <pre class="brush:bash">git stash apply</pre>
 
-        <p>Stash has many more features that won't be explained here - check the
-        documentation (e.g. working with multiple stashes, popping a stash).</p>
+        <p>Stash has many more features that won't be explained here - check
+        the documentation (e.g. working with multiple stashes, popping a
+        stash).</p>
 
         <h3>Combining commits</h3>
 

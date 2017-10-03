@@ -916,6 +916,10 @@ table.roadmap .cancelled {
     background-color: #d99;
 }
 
+#ModulesTable td, #ModulesTable th {
+    padding: 2px;
+    border: 1px solid #797979;
+}
 .striped th {
     font-weight: bold;
 }

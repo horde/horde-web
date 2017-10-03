@@ -5,11 +5,13 @@
       <?php echo $this->render('developmentnav');?>
       <div class="section">
         <div class="sectionintro">
-          <p>The following modules are in the Horde <?php echo
+          <p>The following, maintained modules are in the Horde <?php echo
           $this->linkTo('Git', array('controller' => 'development', 'action' =>
-          'git')) ?> Repository, with the listed production level available. If
-          no version is listed, then there has not yet been a stable release of
-          that module.</p>
+          'git')) ?> Repositories, with the listed production level
+          available. If no version is listed, then there has not yet been a
+          stable release of that module. If a module is not listed, but
+          available as a repository, it's either not maintained at the moment,
+          or this page is outdated.</p>
         </div>
 
         <table id="ModulesTable" class="striped" cellspacing="0">
@@ -18,7 +20,7 @@
           <th>Module</th>
           <th>Release</th>
           <th>Description</th>
-          <th><a href="#status">Status</a></th>
+          <th>Status</th>
          </tr>
         </thead>
         <tbody>
@@ -34,19 +36,9 @@
         </tr>
         <tr><td colspan="4">&nbsp;</td></tr>
         <tr>
-         <?php echo $this->controller->git_and_ver('agora') ?>
-         <td>Forum module</td>
-         <td>Beta</td>
-        </tr>
-        <tr>
          <?php echo $this->controller->git_and_ver('ansel') ?>
          <td>Photo Gallery application</td>
          <td><strong>Production</strong></td>
-        </tr>
-        <tr>
-         <?php echo $this->controller->git_and_ver('beatnik') ?>
-         <td>DNS record management user interface</td>
-         <td>Development</td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('chora') ?>
@@ -59,9 +51,9 @@
          <td><strong>Production</strong></td>
         </tr>
         <tr>
-          <?php echo $this->controller->git_and_ver('hermes') ?>
-          <td>Time-tracking/billing data system</td>
-          <td><strong>Production</strong></td>
+         <?php echo $this->controller->git_and_ver('hermes') ?>
+         <td>Time-tracking/billing data system</td>
+         <td><strong>Production</strong></td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('imp') ?>
@@ -79,19 +71,9 @@
          <td>Beta</td>
         </tr>
         <tr>
-         <?php echo $this->controller->git_and_ver('klutz') ?>
-         <td>Comics module</td>
-         <td><strong>Production</strong></td>
-        </tr>
-        <tr>
          <?php echo $this->controller->git_and_ver('kronolith') ?>
          <td>Calendar and scheduling</td>
          <td><strong>Production</strong></td>
-        </tr>
-        <tr>
-         <?php echo $this->controller->git_and_ver('luxor') ?>
-         <td>LXR Port</td>
-         <td>Beta</td>
         </tr>
         <tr>
          <?php echo $this->controller->git_and_ver('mnemo') ?>
@@ -139,11 +121,6 @@
          <td>Beta</td>
         </tr>
         <tr>
-         <?php echo $this->controller->git_and_ver('vilma') ?>
-         <td>Virtual email domain administrator</td>
-         <td>Development</td>
-        </tr>
-        <tr>
          <?php echo $this->controller->git_and_ver('whups') ?>
          <td>A project management system</td>
          <td><strong>Production</strong></td>
@@ -156,29 +133,35 @@
         </tbody>
         </table>
 
-        <h3 id="status">A note on stability</h3>
+        <h3>A note on stability</h3>
 
-        <p>The <a href="#t_develop">develop</a> branch of a module will almost
+        <p>The master branch of an <em>application</em> module will almost
         always be development code, and may be unstable. The stability listed
         for each module is the general state of that module. However, just
         because that IMP and Horde are listed as Production quality software,
-        doesn't mean that &quot;develop&quot; will always work, be documented,
+        doesn't mean that &quot;master&quot; will always work, be documented,
         compile, or not cause frogs to dive-bomb you from tall trees. You've
         been warned. ;)</p>
 
-        <h3 id="branches">A note on branches</h3>
+        <h3>A note on branches</h3>
 
-        <p>The tags generally take one of these formats:</p>
+        <p>The branch names for <em>applications</em> generally take one of
+        these formats:</p>
 
         <ol>
-         <li><strong>master</strong> -- This is always the current stable
-         branch that contains bug fixes for the next release</li>
-         <li id="t_develop"><strong>develop</strong> -- This is always the
+         <li><strong>master</strong> -- This is always the
          current development branch, and may be unstable and undocumented.</li>
-         <li>FRAMEWORK_* -- These branches are created for major stable
-         releases that have gone into security fix mode.  Modules within a
-         FRAMEWORK_* branch are compatible with each other.</li>
+         <li><strong>FRAMEWORK_*</strong> -- These are always the current
+         stable branches that contains bug fixes for the next release.  Modules
+         within the same FRAMEWORK_* branch are compatible with each
+         other.</li>
         </ol>
+
+        <p><em>Framework library</em> modules usually only contains a
+        single <strong>master</strong> branch that may either contain bug fixes
+        for the next stable release, or new features for the next feature
+        release. Only if there are backward compatibility breaks, there may be
+        additional maitenance branches for earlier major releases.</p>
       </div>
     </div>
     <div class="rightcol" style="background: none;"><?php echo $this->render('sponsors'); ?></div>
