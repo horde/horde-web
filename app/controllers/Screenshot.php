@@ -26,6 +26,9 @@ class HordeWeb_Screenshot_Controller extends HordeWeb_Controller_Base
         case 'app':
             $this->_app($response);
             break;
+        default:
+            $this->_notFound($response);
+            return;
         }
     }
 

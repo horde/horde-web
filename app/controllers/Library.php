@@ -36,6 +36,7 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
             break;
         default:
             $this->_notFound($response);
+            return;
         }
     }
 

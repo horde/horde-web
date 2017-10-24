@@ -44,7 +44,7 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
             break;
         default:
             $this->_notFound($response);
-
+            return;
         }
     }
 

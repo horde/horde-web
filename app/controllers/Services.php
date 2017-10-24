@@ -28,7 +28,7 @@ class HordeWeb_Services_Controller extends HordeWeb_Controller_Base
             $this->_notFound($response);
             return;
         }
-        
+
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
         $layout->setView($view);
         $layout->setLayoutName('main');
@@ -40,7 +40,7 @@ class HordeWeb_Services_Controller extends HordeWeb_Controller_Base
         parent::_setup();
         $view = $this->getView();
         $view->addTemplatePath(
-            array($GLOBALS['fs_base'] . '/app/views/Services'));    
+            array($GLOBALS['fs_base'] . '/app/views/Services'));
     }
-    
+
 }

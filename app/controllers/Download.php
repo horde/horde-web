@@ -24,7 +24,7 @@ class HordeWeb_Download_Controller extends HordeWeb_Controller_Base
             break;
         default:
             $this->_notFound($response);
-            break;
+            return;
         }
     }
 
