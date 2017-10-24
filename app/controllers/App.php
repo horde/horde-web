@@ -101,8 +101,8 @@ class HordeWeb_App_Controller extends HordeWeb_Controller_Base
         $template = 'app';
         // Do we know about this app?
         if (file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . urlencode($this->_matchDict->app)) === false) {
-            $view->page_title = '404 Not Found';
-            $template = '404';
+            $this->_notFound($response);
+            return;
         }
 
         // Build the bug/news widget

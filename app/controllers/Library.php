@@ -79,14 +79,13 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
         $view = $this->getView();
         $layout = $this->getInjector()->getInstance('Horde_Core_Ui_Layout');
 
-        if ($this->_isKnownLibrary($view)) {
-            $template = 'library';
-        } else {
-            $template = '404';
+        if (!$this->_isKnownLibrary($view)) {
+            $this->_notFound($response);
+            return;
         }
         $layout->setView($view);
         $layout->setLayoutName('main');
-        $response->setBody($layout->render($template));
+        $response->setBody($layout->render('library'));
     }
 
     /**
@@ -143,12 +142,10 @@ class HordeWeb_Library_Controller extends HordeWeb_Controller_Base
     private function _isKnownLibrary($view)
     {
         if (!in_array($view->libraryName, $view->libraries)) {
-            $view->page_title = '404 Not Found';
             return false;
-        } else {
-            $view->page_title = $view->shortLibraryName . ' library - The Horde Project';
-            $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
-            return true;
         }
+        $view->page_title = $view->shortLibraryName . ' library - The Horde Project';
+        $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
+        return true;
     }
 }
