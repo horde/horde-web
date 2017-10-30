@@ -147,7 +147,6 @@
         <a href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
         and <a href="https://web-horde.org/w/jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
 
-
         <h3 id="createcommit">Creating commits</h3>
 
         <p>First, you should make sure your contact information is correct. The
@@ -192,6 +191,48 @@
 
         <p>The Horde Git Tools allow to do Git commits on all or several
         repositories at once. Check its documentation for details.</p>
+
+        <h3 id="createcommit">Committing with horde-components</h3>
+
+        <p><a href="https://github.com/horde/components">horde-components</a>
+        is a command line tool to help with all kind of developer tasks. To get
+        the full help and all available actions, run:</p>
+
+        <pre class="brush:bash">horde-components help</pre>
+
+        <p>When using the <tt>changed --commit</tt> option to update the
+        changelogs, two separate commits are created. The first one only
+        contains the changes to <tt>changelog.yml</tt> (and any file added
+        earlier to the commit with <tt>git add</tt>, which is the same across
+        all branches. Thus you can easily <tt>cherry-pick</tt> this commit from
+        a different branch. The second commit with the same commit message
+        contains changes to the <tt>package.xml</tt> and <tt>CHANGES</tt> files
+        that may differ between branches and should <strong>not</strong> be
+        cherry-picked. To update those files in the other branch, just
+        run <tt>horde-components changed</tt> without any further arguments
+        again, after cherry-picking the changes to <tt>changelog.yml</tt>. Such
+        a workflow may look like:</p>
+
+        <pre class="brush:bash">
+          $ git checkout master
+          $ git add changed_file1 directory/changed_file2
+          $ horde-components changed --commit "[xyz] Fix this bug."
+          [   OK   ] Added new note to version 1.2.3 of /horde/Component/doc/changelog.yml.
+          [   OK   ] Updated /horde/Component/package.xml.
+          [   OK   ] Updated /horde/Component/doc/Horde/Yaml/CHANGES.
+          [master 08c1c38] [xyz] Fix this bug.
+           3 files changed, 4 insertions(+)
+          [master 409eac9] [xyz] Fix this bug.
+           2 files changed, 3 insertions(+)
+          $ git checkout FRAMEWORK_5_2
+          $ git cp 08c1c38
+          [FRAMEWORK_5_2 cc95a99] [xyz] Fix this bug.
+           Date: Mon Oct 30 21:54:24 2017 +0100
+           3 file changed, 4 insertions(+)
+          $ horde-components changed
+          [   OK   ] Updated /horde/Component/package.xml.
+          [   OK   ] Updated /horde/Component/doc/Horde/Yaml/CHANGES.
+        </pre>
 
         <h3>Pushing commits</h3>
 
