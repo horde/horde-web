@@ -85,7 +85,7 @@
         the database migrations, you can run these from the checkout directory
         as so:</p>
 
-        <pre class="brush:bash">./horde/bin/horde-db-migrate [application_name [up|down]]</pre>
+        <pre class="brush:bash">./base/bin/horde-db-migrate [application_name [up|down]]</pre>
 
         <p>If installing the framework libraries directly via PEAR, i.e. not
         with with the Horde Git Tools, you will need to define your horde
