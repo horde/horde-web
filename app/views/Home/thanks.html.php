@@ -32,6 +32,9 @@
           <a style="margin:20px;text-decoration:none" href="https://www.topratedbingosites.co.uk/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/topratedbingosites.jpg" height="40" alt="topratedbingosites.co.uk" />
           </a>
+          <a style="margin:20px;text-decoration:none" href="https://hostpresto.com/?utm_source=horde" target="_blank">
+            <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/hostpresto.png" height="40" alt="HostPresto!" />
+          </a>
         </p>
         <br/>
 
