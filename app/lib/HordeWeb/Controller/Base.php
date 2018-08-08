@@ -63,9 +63,6 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
         $pageOutput->addScriptFile(
             new HordeWeb_Script_File('jquery-1.4.4.min.js')
         );
-        $pageOutput->addScriptFile(
-            new HordeWeb_Script_File('informer.js')
-        );
         $pageOutput->addScriptFile(new Horde_Script_File_External(
             'https://apis.google.com/js/plusone.js'
         ));
