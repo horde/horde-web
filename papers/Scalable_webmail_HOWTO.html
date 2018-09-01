@@ -29,7 +29,7 @@ solution that both relatively easy to implement and scalable to
 thousands or even millions of users.</p>
 
 <P>In my case, I work as a developer for <A href="http://www.dn.net">DigitalNation</a>,
-working on the <a href="http://www.wcities.com">Worldcities</a> project. 
+working on the <a href="http://www.wcities.com">Worldcities</a> project.
 <a href="http://www.wcities.com">Worldcities</a> is a globally local news and information site that also
 offers web based email.  Webmail is highly popular outside of the US
 since many non-US ISPs do not offer their customer mail services, and
@@ -37,7 +37,7 @@ since <a href="http://www.wcities.com">Worldcities</a> is not US centric, we've 
 scalability is very necessary.</p>
 
 <P>Our previous set up used dual servers, one running <a href="http://www.sendmail.org">Sendmail</a> and <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a>,
-and the other running <A href="http://horde.org">IMP</a>, an open source webmail
+and the other running <A href="https://horde.org">IMP</a>, an open source webmail
 system built in <a href="http://www.php.net">PHP</a> (and the best, I might add).  The system was very
 easy to implement, and served its job well.  However, after only a
 couple of months it became very apparent that our system was straining
@@ -45,17 +45,17 @@ under the pressure, and we needed to find a new solution quickly.  Also,
 since we had so many active users, we could not abandon their already
 existing mail.</p>
 
-<P>Previously we had chosed <A href="http://horde.org">IMP</a> because of it's free status (i.e. I can
+<P>Previously we had chosed <A href="https://horde.org">IMP</a> because of it's free status (i.e. I can
 make changes to it as necessary) and <a href="http://www.sendmail.org">Sendmail</a> and <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a> because they
 were the standard tools.  It was obvious that <a href="http://www.sendmail.org">Sendmail</a> and <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a> was
 too slow for our uses, so I researched other MTAs and IMAP servers.  </p>
 
 
 <p>I ultimately decided on <a href="http://www.postfix.org">postfix</a> as the MTA,
-since it's at minimum 3 times faster than <a href="http://www.sendmail.org">Sendmail</a>, and 
+since it's at minimum 3 times faster than <a href="http://www.sendmail.org">Sendmail</a>, and
 <A Href="http://andrew2.andrew.cmu.edu/cyrus">cyrus</a> since it neither requires user
 accounts on the host machine nor uses the system resources that <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a>
-does. We also kept <A href="http://horde.org">IMP</a> because of its free status, because of its easy
+does. We also kept <A href="https://horde.org">IMP</a> because of its free status, because of its easy
 configuration, and because we didn't want to subject users to a new
 interface.  Also, in the course of research, I discovered that <a href="http://www.postfix.org">postfix</a>
 can use an <a href="http://www.openldap.org">LDAP</a> server for its alias database
@@ -72,20 +72,20 @@ or machine based upon the maildrop attribute of an <a href="http://www.openldap.
 that needed to be done is to use a full email address for the maildrop
 attribute, which pointed to the machine that the user's mail was
 actually hosted on.  For instance, if the DNS MX record points to the
-frontend mailserver of mail.dom.ain, and <a href="http://www.openldap.org">LDAP</a> says to maildrop 
+frontend mailserver of mail.dom.ain, and <a href="http://www.openldap.org">LDAP</a> says to maildrop
 user@dom.ain to user@machine44.dom.ain, then <a href="http://www.postfix.org">postfix</a> running on the
-front end mail server will forward mail for that user to machine44. 
+front end mail server will forward mail for that user to machine44.
 With feature alone, you can have unlimited mail accounts in your
 domain.  All you have to do is keep adding boxes to the back end.</p>
 
 <p>The tricky part, or so I thought, was to get the mail off the backend
-server and into <A href="http://horde.org">IMP</a>.  Since <A href="http://horde.org">IMP</a> already supports mail servers separate
+server and into <A href="https://horde.org">IMP</a>.  Since <A href="https://horde.org">IMP</a> already supports mail servers separate
 from the web server, what needed to be done is to retrieve the mail
 server machine name from <a href="http://www.openldap.org">LDAP</a>, instead of relying on the configuration
 setting and a single mail server.  It turned out that setting the mail
 server was extremely easy, requiring only a few lines of new code in one
-file, and adding new configuration parameters to <A href="http://horde.org">IMP</a>s default
-configuration file.  We had <a href="http://www.postfix.org">postfix</a> forwarding and <A href="http://horde.org">IMP</a> retrieving mail
+file, and adding new configuration parameters to <A href="https://horde.org">IMP</a>s default
+configuration file.  We had <a href="http://www.postfix.org">postfix</a> forwarding and <A href="https://horde.org">IMP</a> retrieving mail
 from multiple machines.  I could have left it at that.</p>
 
 <p>However, <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a> was still an issue.  For a multiple of reasons, it was
@@ -129,12 +129,12 @@ installing software from source in a UNIX or Linux environment.
 <li>  <A Href="http://andrew2.andrew.cmu.edu/cyrus">Cyrus</A> 1.5.19 (note: do not use the 1.6 tree)
 <li>  <a href="http://www.postfix.org">postfix</a> 19990627
 <li>   <a href="http://www.linc-dev.com">pwcheck_ldap patch</a> for cyrus 1.5 series
-<li>   <A href="http://horde.org">IMP</a> (2.0.4, 2.0.10, and 2.1.3-dev tested)
+<li>   <A href="https://horde.org">IMP</a> (2.0.4, 2.0.10, and 2.1.3-dev tested)
 <li>  <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a> (for the c-client)
 </ul>
 
 <p>note: the cyrus 1.6 tree uses a different method of authentication,
-called SASL, and the pwcheck_ldap patch is not designed for it. 
+called SASL, and the pwcheck_ldap patch is not designed for it.
 However, I'm told that an LDAP patch for SASL is in the works, so when
 that happens, this point will be moot.</p>
 
@@ -148,7 +148,7 @@ that happens, this point will be moot.</p>
 <h3>2.1 The Web Server
 </h3>
 <P>On the web server, you will need to install Apache, <a href="http://www.php.net">PHP</a>, <a href="http://www.postfix.org">postfix</a>,
-<a href="http://www.openldap.org">OpenLDAP</a>, <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a>, and <A href="http://horde.org">IMP</a>.</P>
+<a href="http://www.openldap.org">OpenLDAP</a>, <a href="ftp://ftp.cac.washington.edu/imap/">UW IMAP</a>, and <A href="https://horde.org">IMP</a>.</P>
 
 <P>Installing Apache and <a href="http://www.php.net">PHP</a> is straight forward and is covered by the <a href="http://www.php.net">PHP</a>
 install docs.  You will need to compile in <a href="http://www.openldap.org">LDAP</a> and IMAP support in <a href="http://www.php.net">PHP</a>.</p>
@@ -204,7 +204,7 @@ the imap server, but keep it in mind. Also, don't choose an existing user for ad
 
 <h3>3.2 the imap server
 </h3>
-<P>configure <a href="http://www.postfix.org">postfix</a> on the imap server to use ldap for its alias mapping. 
+<P>configure <a href="http://www.postfix.org">postfix</a> on the imap server to use ldap for its alias mapping.
 This is explained in LDAP_README in the <a href="http://www.postfix.org">postfix</a> docs.  For <A Href="http://andrew2.andrew.cmu.edu/cyrus">Cyrus</a>, follow
 the install directions that come with the package.  Also, don't forget
 to activate pwcheck and to add your admin user to imapd.conf.</p>
@@ -235,7 +235,7 @@ $default->LDAP_dn                   = 'o=someorg,c=US';
 $default->LDAP_search_field         = 'uid';
 $default->ldap_choose_server        = true;
 </pre>
-to mailbox.php3 apply the following patch: 
+to mailbox.php3 apply the following patch:
 <pre>
 Index: mailbox.php3
 ===================================================================
@@ -249,9 +249,9 @@ diff -c -r2.29 mailbox.php3
 --- 29,51 ----
   require './lib/mimetypes.lib';
   require './config/defaults.php3';
-  
+
 + /************LDAP**************/
-+ 
++
 + if ($default->ldap_choose_server) {
 +   $ldapconnect = ldap_connect($default->LDAP_server);
 +   if ($ldapconnect) {
@@ -265,15 +265,15 @@ diff -c -r2.29 mailbox.php3
 +   }
 + }
 + /**********end ldap************/
-+ 
-+ 
++
++
   /* Html styles configuration */
   require './config/html.php3';
   /* Mailbox configuration */
 </pre>
 and you're done. Now you have a highly scalable web mail solution.</p>
 
-<P>note: as of August 5, 1999, the development version of <A href="http://horde.org">IMP</a> contains
+<P>note: as of August 5, 1999, the development version of <A href="https://horde.org">IMP</a> contains
 these patches, and therefore do not need to be added.</P>
 
 <h1>4. Miscellaneous
@@ -300,10 +300,10 @@ if ($ldapconn) {
 }
 
 $imapconn = imap_open("{" .$machine .".dom.ain:143}", "cyrusadmin","password");
-if ($imapopen) {   
+if ($imapopen) {
    imap_createmailbox($imapconn, "{" .$machine ."dom.ain:143}user.".$username );
    imap_close($imapconn);
-} 
+}
 ?></pre>
 
 <P>note: due to a bug which I have yet to track down, encrypted passwords
