@@ -21,15 +21,15 @@
 
           <p>You will need a Git client, if you don't already have one.
           Information on Git can be found
-          at <a href="https://web-horde.org/w/git-scm.com/">http://git-scm.com/</a>.</p>
+          at <a href="https://git-scm.com/">http://git-scm.com/</a>.</p>
 
           <p>These command lines should be the bare-bones needed to get you
           started with Horde and Git; this is not a Git tutorial, however. The
           standard Git documentation is
-          available <a href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/">here</a>.
+          available <a href="https://kernel.org/pub/software/scm/git/docs/">here</a>.
           Additional tips and useful links can be found
-          at <a href="https://web-horde.org/w/gitready.com/">git ready</a> and
-          <a href="https://web-horde.org/w/andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
+          at <a href="https://gitready.com/">git ready</a> and
+          <a href="https://andyjeffries.co.uk/articles/25-tips-for-intermediate-git-users">
           25 Tips for Intermediate Git Users</a>.</p>
         </div>
 
@@ -101,7 +101,7 @@
         <h3 id="patch">Creating Patches</h3>
 
         <p>Please use
-        the <a href="https://web-horde.org/w/help.github.com/articles/about-pull-requests/">Pull
+        the <a href="https://help.github.com/articles/about-pull-requests/">Pull
         Request</a> feature on GitHub to submit patches.</p>
 
         <h2><span>&nbsp;</span>Developer Git</h2>
@@ -113,7 +113,7 @@
 
         <ol>
             <li>Create a GitHub account.</li>
-            <li><a href="https://web-horde.org/w/help.github.com/articles/connecting-to-github-with-ssh/">Setup
+            <li><a href="https://help.github.com/articles/connecting-to-github-with-ssh/">Setup
             your SSH public key</a>.</li>
             <li>Join the Horde organization on GitHub (send e-mail to
             <a href="mailto:core@horde.org">core@horde.org</a>).</li>
@@ -144,8 +144,8 @@
 
         <p>For more information on rebasing, and the commands needed if
         conflicts are detected during the rebase/merge, see:
-        <a href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
-        and <a href="https://web-horde.org/w/jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
+        <a href="https://kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
+        and <a href="https://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
 
         <h3 id="createcommit">Creating commits</h3>
 
@@ -166,7 +166,7 @@
         git commit
         </pre>
 
-        <p><tt><a href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/git-add.html">git
+        <p><tt><a href="https://kernel.org/pub/software/scm/git/docs/git-add.html">git
         add</a></tt> has many powerful tools to indicate what files or portions
         of a file you want to commit: the <tt>-i</tt> option (interactive
         mode), and
@@ -265,7 +265,7 @@
         the temporary branch, push your commits to the server, and then
         re-apply your work-in-progress to the current branch. Git has a
         wonderful built-in command that will do all this work for you:
-        <tt><a href="https://web-horde.org/w/kernel.org/pub/software/scm/git/docs/git-stash.html">stash</a></tt>.
+        <tt><a href="https://kernel.org/pub/software/scm/git/docs/git-stash.html">stash</a></tt>.
         To stash all work-in-progress on the current tree, use:</p>
 
         <pre class="brush:bash">git stash</pre>

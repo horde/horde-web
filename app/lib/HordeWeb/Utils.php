@@ -298,7 +298,7 @@ class HordeWeb_Utils
         // if (!empty($parts['scheme']) &&
         //     strpos($parts['scheme'], 'http') === 0 &&
         //     strpos($parts['host'], 'horde.org') === false) {
-        //     $link = 'https://web-horde.org/w/'
+        //     $link = 'https://'
         //         . preg_replace('/^www\./', '', $parts['host'])
         //         . (!empty($parts['path']) ? $parts['path'] : '');
         // }

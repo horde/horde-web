@@ -55,14 +55,14 @@
         href="../licenses/lgpl.php">LGPL</a> and the
         <a href="../licenses/bsd.php">BSD License</a>.</p>
 
-        <p>The Horde applications are written in <a href="https://web-horde.org/w/php.net/">PHP</a>,
+        <p>The Horde applications are written in <a href="https://php.net/">PHP</a>,
         a scripting language explicitly designed to be embedded in web pages. PHP can
         be embedded directly into the web server, with plugins for not just <a
-        href="https://web-horde.org/w/apache.org/">Apache</a> but also <a
-        href="https://web-horde.org/w/iis.net/">IIS</a>, <a
-        href="https://web-horde.org/w/wwws.sun.com/software/products/web_srvr/home_web_srvr.html">Sun Web
+        href="https://apache.org/">Apache</a> but also <a
+        href="https://iis.net/">IIS</a>, <a
+        href="https://wwws.sun.com/software/products/web_srvr/home_web_srvr.html">Sun Web
         Server</a>, and <a
-        href="https://web-horde.org/w/redmine.lighttpd.net/projects/show/lighttpd/">Lighttpd</a>
+        href="https://redmine.lighttpd.net/projects/show/lighttpd/">Lighttpd</a>
         etc.</p>
 
         <p>Horde modules should run on any platform that can run PHP

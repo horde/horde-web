@@ -85,9 +85,9 @@
         <p>The Horde.org servers are generously hosted by the following
         organizations:
         <ul>
-          <li><a href="https://web-horde.org/w/hub.org/?ri=765">Hub.org Networking
+          <li><a href="https://hub.org/?ri=765">Hub.org Networking
             Services</a>: Mailing lists, PEAR, FTP</li>
-          <li><a href="https://web-horde.org/w/b1-systems.de/">B1 Systems</a></li>
+          <li><a href="https://b1-systems.de/">B1 Systems</a></li>
         </ul>
         </p>
 
@@ -96,7 +96,7 @@
         Viebrock.</p>
 
         <h3>Licenses</h3>
-        <a style="display:block; text-decoration:none" href="https://web-horde.org/w/synthesis.ch/" target="_blank">
+        <a style="display:block; text-decoration:none" href="https://synthesis.ch/" target="_blank">
         <img src="<?php echo $GLOBALS['host_base'] ?>/images/synthesis.jpg" height="31"/>
         SyncML client licenses have been generously donated by Synthesis AG</a>
 

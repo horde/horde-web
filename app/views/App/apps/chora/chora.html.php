@@ -1,6 +1,6 @@
 <p>Chora is our tool for viewing code repositories that are managed using the
-<a href="https://web-horde.org/w/nongnu.org/cvs/">CVS</a> or <a
-href="https://web-horde.org/w/subversion.tigris.org/">Subversion</a> source control systems. It
+<a href="https://nongnu.org/cvs/">CVS</a> or <a
+href="https://subversion.tigris.org/">Subversion</a> source control systems. It
 aims to provide a high degree of integration with CVS, SVN and the other Horde
 web-based tools.</p>
 
