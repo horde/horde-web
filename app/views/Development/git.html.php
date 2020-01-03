@@ -66,9 +66,9 @@
         be deleted every time the <tt>dev install</tt> script is run.</p>
 
         <p>Full directory paths will be needed in
-        <tt>horde-git/horde/config/registry.php</tt> due to the symlinks. The
+        <tt>horde-git/base/config/registry.php</tt> due to the symlinks. The
         easiest way to setup full paths is to set the <tt>$app_fileroot</tt>
-        parameter in this file.</p>
+        parameter in this file (or more appropriately,  registry.local.php).</p>
 
         <p>Note that unlike a PEAR or Composer install,
         the <tt>Autoloader_Cache</tt> package will be enabled by default. If
