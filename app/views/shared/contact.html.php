@@ -8,11 +8,10 @@
       <span class="p-name fn">Horde LLC</span><br>
       <span class="h-adr adr">
         <span class="p-street-address street-address">
-          691 John Wesley<br>
-          Dobbs Ave, Unit C
+          510 E Center St<br>
         </span><br>
-        <span class="p-locality locality">Atlanta</span>, <span class="p-region region">GA</span><br>
-        <span class="p-postal-code postal-code">30312</span><br>
+        <span class="p-locality locality">Clayton</span>, <span class="p-region region">NJ</span><br>
+        <span class="p-postal-code postal-code">08312</span><br>
         <span class="p-country-name country-name">United States</span>
       </span>
     </dd>
