@@ -50,13 +50,13 @@ configuration, which is the default setting in all Horde versions now.</p>
 Horde configuration. This will force cookies to be sent over secure connections
 only and helps to prevent sidejacking.</p>
 <p>If PHP sessions are set to use the <tt class="docutils literal">files</tt> save_handler, then these files
-should be secured properly. Sites can increase security by setting the PHP
+should be secured properly. Sites can increase security by configuring the PHP
 setting <tt class="docutils literal">session.save_path</tt> to a directory that is only readable and
 writable by the web server process.</p>
 <p>Sites with a large user base should consider setting the
 <tt class="docutils literal">session.entropy_file</tt> and <tt class="docutils literal">session.entropy_length</tt> to appropriate values.</p>
 <p>Horde will encrypt the user credentials before storing them in the session.
-Thus, a compromised sessions will not reveal the user's stored credentials.</p>
+Thus, a compromised session will not reveal the user's stored credentials.</p>
 </div>
 <div class="section" id="default-database-passwords">
 <h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Default database passwords</a></h1>
