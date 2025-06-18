@@ -1,0 +1,28 @@
+{
+    "name": "horde/horde-web",
+    "description": "The horde.org website",
+    "type": "horde-application",
+    "require": {
+        "horde/controller": "dev-FRAMEWORK_6_0 || ^3",
+        "horde/horde": "^6 || dev-FRAMEWORK_6_0",
+        "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || ^3",
+        "horde/routes": "dev-FRAMEWORK_6_0 || ^3",
+        "horde/feed": "dev-FRAMEWORK_6_0 || ^3"
+    },
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Ralf Lang",
+            "email": "ralf.lang@ralf-lang.de"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "horde/horde-installer-plugin": true
+        }
+    },
+    "autoload": {
+        "classmap": ["app/"]
+    }
+}
