@@ -1,5 +1,6 @@
 <?php
-require_once dirname(__FILE__) . '/../../config/conf.php';
+require_once dirname(__FILE__) . '/../../config/horde.local.php';
+require_once HORDE_CONFIG_BASE . '/hordeweb/conf.php';
 require_once HORDE_BASE . '/lib/core.php';
 $session_control = 'none';
 $nocompress = true;
