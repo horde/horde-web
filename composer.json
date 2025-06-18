@@ -1,5 +1,5 @@
 {
-    "name": "horde/horde-web",
+    "name": "horde/hordeweb",
     "description": "The horde.org website",
     "type": "horde-application",
     "require": {
