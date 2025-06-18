@@ -4,7 +4,9 @@
  *
  */
 
-define('HORDE_BASE', '/usr/local/horde/horde/horde');
+if (!defined('HORDE_BASE')) {
+    define('HORDE_BASE', '/usr/local/horde/horde/horde');
+}
 //ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . '/usr/local/horde/head_pear' . PATH_SEPARATOR . ini_get('include_path'));
 
 
