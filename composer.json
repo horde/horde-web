@@ -7,7 +7,9 @@
         "horde/horde": "^6 || dev-FRAMEWORK_6_0",
         "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || ^3",
         "horde/routes": "dev-FRAMEWORK_6_0 || ^3",
-        "horde/feed": "dev-FRAMEWORK_6_0 || ^3"
+        "horde/feed": "dev-FRAMEWORK_6_0 || ^3",
+        "ext-pdo_sqlite": "*",
+        "ext-pdo": "*"
     },
     "license": "BSD-2-Clause",
     "authors": [
