@@ -8,6 +8,7 @@
         "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || ^3",
         "horde/routes": "dev-FRAMEWORK_6_0 || ^3",
         "horde/feed": "dev-FRAMEWORK_6_0 || ^3",
+        "horde/service_gravatar": "dev-FRAMEWORK_6_0 || ^2",
         "ext-pdo_sqlite": "*",
         "ext-pdo": "*"
     },
