@@ -36,7 +36,7 @@ class HordeWeb_Script_File extends Horde_Script_File
         case 'url':
         case 'url_full':
             return $this->_url(
-                $GLOBALS['host_base'] . '/js/' . $this->_file,
+                $GLOBALS['registry']->get('jsuri', 'hordeweb') .'/'. $this->_file,
                 $name == 'url_full'
             );
         }
