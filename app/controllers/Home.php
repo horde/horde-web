@@ -75,7 +75,7 @@ class HordeWeb_Home_Controller extends HordeWeb_Controller_Base
             $view->planet = unserialize($planet);
         } else {
             try {
-                $view->planet = Horde_Feed::readUri('http://planet.horde.org/rss/');
+                $view->planet = Horde_Feed::readUri('https://www.ralf-lang.de/tag/horde/feed');
             } catch (Exception $e) {
                 $view->planet = null;
             }
