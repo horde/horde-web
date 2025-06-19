@@ -30,25 +30,6 @@
         our <?php echo $this->linkTo('Services', array('controller' =>
         'services', 'action' => 'index')) ?> page for more information.</p>
 
-        <h3>Postal Mail</h3>
-        <p>Horde, LLC<br />
-        P.O. Box 79322<br />
-        Atlanta, GA  30307<br />
-        United States</p>
-
-        <h3>Telephone</h3>
-        <table>
-          <tr>
-            <td>USA:</td>
-            <td>&nbsp;<a href="tel:+1.404.475.4830">+1.404.400.1661</a></td>
-            <td>&nbsp;(English)</td>
-          </tr>
-          <tr>
-            <td>Germany:</td>
-            <td>&nbsp;<a href="tel:+49.521.4469.8995">+49.521.4469.8995</a></td>
-            <td>&nbsp;(English, German)</td>
-          </tr>
-        </table>
       </div>
     </div>
     <div class="rightcol" style="background: none;">
