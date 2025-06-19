@@ -1,19 +1,14 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
                     <div class="slide-horde4 sliderview">
-                        <h2>Horde Groupware 5 re-freshed.</h2>
-                        <p>For the most recent release of <a href="<?php echo
-                        $this->urlWriter->urlFor('app', array('app' =>
-                        'groupware')) ?>">Horde Groupware</a>
-                        and <a href="<?php echo $this->urlWriter->urlFor('app',
-                        array('app' => 'webmail')) ?>">Horde Groupware Webmail
-                        Edition</a>, the Horde team and community have focused
-                        on improving the interface and usability of this widely
-                        deployed collaboration and communication system. A
-                        fresh design on top of the most flexible web groupware
-                        solution available, and further improved support for
-                        mobile devices make this the best Horde Groupware
-                        ever.</p>
+                        <h2>Horde 6 Beta</h2>
+                        <p>
+                            After a long hiatus, the Horde Project is
+                            pleased to announce the first beta release of Horde
+                            Groupware 6. This release is a major step forward
+                            for Horde, supporting the latest PHP releases,
+                            improved CalDAV and CardDAV support, and adopting many of the <a href="https://www.php-fig.org/">PHP-FIG</a> standards.
+                        </p>
                     </div>
 
                     <div class="slide-everywhere sliderview" style="display:none">
