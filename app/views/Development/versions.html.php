@@ -13,6 +13,18 @@
           versions which work with them.</p>
         </div>
 
+        <h3>Horde 6.x</h3>
+
+        <ul>
+        <li>IMP H6 (7.x)</li>
+        <li>Turba H6 (5.x)</li>
+        <li>Ingo H6 (4.x)</li>
+        <li>Kronolith H6 (5.x)</li>
+        <li>Nag H6 (5.x)</li>
+        <li>Mnemo H6 (5.x)</li>
+        <li>Passwd H6 (6.x)</li>
+        </ul>
+        
         <h3>Horde 5.x</h3>
 
         <ul>
