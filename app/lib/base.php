@@ -1,4 +1,12 @@
 <?php
+/**
+ * HordeWeb application initialization
+ *
+ * Copyright 2011-2026 Horde LLC (http://www.horde.org)
+ */
+
+use Horde\Routes\Mapper;
+
 require_once dirname(__FILE__) . '/../../config/horde.local.php';
 require_once HORDE_CONFIG_BASE . '/hordeweb/conf.php';
 require_once HORDE_BASE . '/lib/core.php';
@@ -17,5 +25,5 @@ $__autoloader->addClassPathMapper($myMapper);
 /* Binders */
 $GLOBALS['injector']->bindFactory('HordeWeb_View', 'HordeWeb_Factory_View', 'create');
 $registry = $GLOBALS['injector']->getInstance('Horde_Registry');
-$mapper = $GLOBALS['injector']->getInstance('Horde_Routes_Mapper');
+$mapper = $GLOBALS['injector']->getInstance(Mapper::class);
 require_once dirname(__FILE__) . '/../../config/routes.php';
