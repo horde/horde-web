@@ -2,15 +2,18 @@
 /**
  * Base class for HordeWeb controllers.
  *
- * Copyright 2011 Horde LLC (http://www.horde.org)
+ * Copyright 2011-2026 Horde LLC (http://www.horde.org)
  *
  * @author mrubinsk
  */
+
+use Horde\Routes\Matcher;
+
 abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
 {
     /**
      *
-     * @var Horde_Routes_Matcher the match dictionary handler
+     * @var Matcher the match dictionary handler
      */
     protected $_matcher;
 
@@ -29,9 +32,9 @@ abstract class HordeWeb_Controller_Base extends Horde_Controller_Base
     /**
      * Constructor.
      *
-     * @param Horde_Routes_Matcher $matcher  The match dictionary.
+     * @param Matcher $matcher  The match dictionary.
      */
-    public function __construct(Horde_Routes_Matcher $matcher)
+    public function __construct(Matcher $matcher)
     {
         $this->_matcher = $matcher;
     }
