@@ -24,6 +24,19 @@ $__autoloader->addClassPathMapper($myMapper);
 
 /* Binders */
 $GLOBALS['injector']->bindFactory('HordeWeb_View', 'HordeWeb_Factory_View', 'create');
+
+// Bind Routes Mapper - auto-create with no dependencies
+$GLOBALS['injector']->bindFactory(Mapper::class, function($injector) {
+    return new Mapper();
+});
+
+// Bind Routes Matcher - needs Mapper and Request
+$GLOBALS['injector']->bindFactory(Matcher::class, function($injector) {
+    $mapper = $injector->getInstance(Mapper::class);
+    $request = $injector->getInstance('Horde_Controller_Request');
+    return new Matcher($mapper, $request);
+});
+
 $registry = $GLOBALS['injector']->getInstance('Horde_Registry');
 $mapper = $GLOBALS['injector']->getInstance(Mapper::class);
 require_once dirname(__FILE__) . '/../../config/routes.php';
