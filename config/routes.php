@@ -4,13 +4,47 @@
  *
  */
 
+use Horde\Routes\RouteBuilder;
+
 $_root = ltrim(dirname($_SERVER['PHP_SELF']), '/');
-$mapper->connect('home', $_root . '/', array('controller' => 'home'));
-$mapper->connect('contact', $_root . '/contact/', array('controller' => 'home', 'action' => 'contact'));
+
+// Home controller routes (modern RouteBuilder pattern)
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/'))
+        ->withName('home')
+        ->withController('home')
+        ->withAction('index')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/contact/'))
+        ->withName('contact')
+        ->withController('home')
+        ->withAction('contact')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/thanks'))
+        ->withName('thanks')
+        ->withController('home')
+        ->withAction('thanks')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/logos'))
+        ->withName('logos')
+        ->withController('home')
+        ->withAction('logos')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/410'))
+        ->withController('home')
+        ->withAction('410')
+);
+
+// Legacy routes (old connect() style) - TODO: Migrate to RouteBuilder
 $mapper->connect('mail', $_root . '/mail', array('controller' => 'home', 'action' => 'mail'));
-$mapper->connect('thanks', $_root . '/thanks', array('controller' => 'home', 'action' => 'thanks'));
-$mapper->connect('logos', $_root . '/logos', array('controller' => 'home', 'action' => 'logos'));
-$mapper->connect($_root . '/410', array('controller' => 'home', 'action' => '410'));
 
 /* Community */
 $mapper->connect('community', $_root . '/community/:action', array('controller' => 'community', 'action' => 'index'));
