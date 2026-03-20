@@ -1,6 +1,6 @@
 <div class="hordeauthor">
   <h2><a name="gunnar">Gunnar Wrobel</a></h2>
-  <div style="float:right"><img src="<?php echo $this->gravatar->getAvatarUrl('p@rdus.de')?>" /></div>
+  <?php if ($this->gravatar): ?><div style="float:right"><img src="<?php echo $this->gravatar->getAvatarUrl('p@rdus.de')?>" /></div><?php endif; ?>
   <ul>
       <li>Originally a scientist in biological/medical research. Who then became a bioinformatician. Who then dropped the "bio" part.</li>
       <li><a href="https://ohloh.net/p/kolab/contributors/">Primary developer</a> of the <a href="https://kolab.org/">the Kolab groupware server</a>.</li>

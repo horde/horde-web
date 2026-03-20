@@ -1,6 +1,6 @@
 <div class="hordeauthor">
   <h2><a name="mrubinsk">Michael J Rubinsky</a></h2>
-  <div style="float:right;"><img src="<?php echo $this->gravatar->getAvatarUrl('mrubinsk@horde.org')?>" /></div>
+  <?php if ($this->gravatar): ?><div style="float:right;"><img src="<?php echo $this->gravatar->getAvatarUrl('mrubinsk@horde.org')?>" /></div><?php endif; ?>
   <ul class="hordeauthor">
       <li>Core developer and a founding member of Horde, LLC.</li>
       <li>Graduate of <a href="https://usip.edu/">University of the Sciences

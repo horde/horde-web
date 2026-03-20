@@ -1,6 +1,6 @@
 <div class="hordeauthor">
   <h2><a name="jan">Jan Schneider</a></h2>
-  <div style="float:right;"><img src="<?php echo $this->gravatar->getAvatarUrl('jan@horde.org')?>" /></div>
+  <?php if ($this->gravatar): ?><div style="float:right;"><img src="<?php echo $this->gravatar->getAvatarUrl('jan@horde.org')?>" /></div><?php endif; ?>
   <ul>
     <li>Core developer and a founding member of Horde, LLC.</li>
     <li>Member of the Horde Project since 2001.</li>
