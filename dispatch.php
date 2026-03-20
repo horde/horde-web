@@ -22,6 +22,18 @@ use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
+// Load Composer autoloader if not already loaded
+if (!class_exists('Composer\Autoload\ClassLoader', false)) {
+    $localAutoloader = dirname(__FILE__) . '/vendor/autoload.php';
+    $dependencyAutoloader = dirname(__FILE__) . '/../../autoload.php';
+
+    if (file_exists($localAutoloader)) {
+        require_once $localAutoloader;
+    } elseif (file_exists($dependencyAutoloader)) {
+        require_once $dependencyAutoloader;
+    }
+}
+
 // Initialize Horde framework (loads config, sets up injector)
 require_once dirname(__FILE__) . '/app/lib/base.php';
 
