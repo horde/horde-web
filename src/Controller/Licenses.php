@@ -13,7 +13,7 @@
 
 declare(strict_types=1);
 
-namespace HordeWeb\Controller;
+namespace Horde\Hordeweb\Controller;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;

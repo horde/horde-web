@@ -16,8 +16,6 @@ use Horde\Http\Server\ResponseWriterWeb;
 use Horde\Routes\Matcher;
 use Horde\Routes\Mapper;
 use Horde\Routes\Utils;
-use Horde\Controller\Request\Psr7Wrapper;
-use Horde\Controller\Response\Psr7Adapter;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -68,20 +66,27 @@ $injector->setInstance(Utils::class, $utils);
 $matcher = new Matcher($mapper, $psr7Request);
 $match = $matcher->getMatchDict();
 
-// Determine controller
-$controllerName = $match['controller'] ?? 'home';
-$modernControllerClass = 'HordeWeb\\Controller\\' . ucfirst($controllerName);
-$legacyControllerClass = 'HordeWeb_' . ucfirst($controllerName) . '_Controller';
+// Determine controller from route
+$controllerClass = $match['controller'] ?? 'home';
 
-// Check if modern PSR-15 controller exists
-if (class_exists($modernControllerClass)) {
-    // Instantiate modern controller
-    $controller = new $modernControllerClass($injector, $responseFactory, $streamFactory);
+// If controller is a string (not FQCN), it's from legacy routes - convert to FQCN
+if (!class_exists($controllerClass)) {
+    $controllerClass = 'Horde\\Hordeweb\\Controller\\' . ucfirst($controllerClass);
+}
+
+// Instantiate PSR-15 controller
+if (!class_exists($controllerClass)) {
+    // Controller not found - 404
+    $psr7Response = $responseFactory->createResponse(404, 'Not Found');
+    $body = $streamFactory->createStream('<h1>404 Not Found</h1><p>Controller not found.</p>');
+    $psr7Response = $psr7Response->withBody($body);
+} else {
+    $controller = new $controllerClass($injector, $responseFactory, $streamFactory);
 
     // Verify it implements RequestHandlerInterface
     if (!$controller instanceof RequestHandlerInterface) {
         throw new \RuntimeException(
-            "Modern controller {$modernControllerClass} must implement RequestHandlerInterface"
+            "Controller {$controllerClass} must implement RequestHandlerInterface"
         );
     }
 
@@ -90,30 +95,6 @@ if (class_exists($modernControllerClass)) {
 
     // Execute controller (returns PSR-7 response directly)
     $psr7Response = $controller->handle($psr7Request);
-
-} elseif (class_exists($legacyControllerClass)) {
-    // Legacy controller path
-    $controller = new $legacyControllerClass($matcher);
-    $controller->setInjector($injector);
-
-    // Wrap PSR-7 request for legacy controller
-    $legacyRequest = new Psr7Wrapper($psr7Request);
-
-    // Create legacy response object
-    $legacyResponse = new Horde_Controller_Response();
-
-    // Execute controller
-    $controller->processRequest($legacyRequest, $legacyResponse);
-
-    // Convert legacy response to PSR-7
-    $responseAdapter = new Psr7Adapter($responseFactory, $streamFactory);
-    $psr7Response = $responseAdapter->createPsr7Response($legacyResponse);
-
-} else {
-    // No controller found - 404
-    $psr7Response = $responseFactory->createResponse(404, 'Not Found');
-    $body = $streamFactory->createStream('<h1>404 Not Found</h1><p>Controller not found.</p>');
-    $psr7Response = $psr7Response->withBody($body);
 }
 
 // Output response

@@ -1,31 +1,47 @@
 {
     "name": "horde/hordeweb",
-    "description": "The horde.org website",
-    "type": "horde-application",
-    "require": {
-        "horde/controller": "dev-FRAMEWORK_6_0 || ^3",
-        "horde/horde": "^6 || dev-FRAMEWORK_6_0",
-        "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || ^3",
-        "horde/routes": "dev-FRAMEWORK_6_0 || ^3",
-        "horde/feed": "dev-FRAMEWORK_6_0 || ^3",
-        "horde/service_gravatar": "dev-FRAMEWORK_6_0 || ^2",
-        "ext-pdo_sqlite": "*",
-        "ext-pdo": "*"
-    },
-    "license": "BSD-2-Clause",
+    "description": "Horde.org Website",
+    "type": "horde-library",
+    "homepage": "https://www.horde.org",
+    "license": "LGPL-2.1",
     "authors": [
         {
             "name": "Ralf Lang",
-            "email": "ralf.lang@ralf-lang.de"
+            "email": "ralf.lang@ralf-lang.de",
+            "role": "lead"
         }
     ],
-    "minimum-stability": "dev",
-    "config": {
-        "allow-plugins": {
-            "horde/horde-installer-plugin": true
+    "time": "2026-03-20",
+    "repositories": [],
+    "require": {
+        "horde/horde-installer-plugin": "^3 || ^2",
+        "php": "^8.2",
+        "horde/util": "^3",
+        "horde/injector": "^3",
+        "horde/cli_modular": "^3",
+        "horde/cli": "^3",
+        "horde/argv": "^3",
+        "horde/yaml": "^3",
+        "horde/group": "^3",
+        "horde/phpconfigfile": "^1 || ^0"
+    },
+    "require-dev": {
+        "horde/test": "^3",
+        "phpunit/phpunit": "^12 || ^11 || ^9 || ^10.5"
+    },
+    "suggest": {},
+    "autoload": {
+        "psr-4": {
+            "Horde\\Hordeweb\\": "src/"
         }
     },
-    "autoload": {
-        "classmap": ["app/"]
+    "autoload-dev": {},
+    "config": {
+        "allow-plugins": {}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-FRAMEWORK_6_0": "1.x-dev"
+        }
     }
 }
