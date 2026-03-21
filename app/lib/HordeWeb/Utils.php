@@ -216,9 +216,30 @@ class HordeWeb_Utils
         $urlWriter = $controller->getUrlWriter();
         $crumb = '';
 
+        // Get logger if available
+        $logger = null;
+        try {
+            $logger = $controller->injector->getInstance(\Horde\Log\Logger::class);
+        } catch (\Throwable $e) {
+            // No logger available
+        }
+
         // Helper to build a link using urlFor
-        $buildLink = function($text, $route) use ($urlWriter) {
+        $buildLink = function($text, $route) use ($urlWriter, $logger) {
             $url = $urlWriter->urlFor($route);
+            // Fallback if urlFor returns null
+            if ($url === null || $url === '') {
+                if ($logger) {
+                    $logger->warning(
+                        'Breadcrumb URL generation failed: {text} -> {route}',
+                        [
+                            'text' => $text,
+                            'route' => json_encode($route),
+                        ]
+                    );
+                }
+                $url = '#';
+            }
             return '<a href="' . htmlspecialchars($url) . '">' . htmlspecialchars($text) . '</a>';
         };
 
