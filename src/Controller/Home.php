@@ -101,28 +101,51 @@ class Home implements RequestHandlerInterface
 
         $cache = $this->injector->getInstance(Horde_Cache::class);
 
+        // Cache version to invalidate old serialized data
+        $cacheVersion = 'v2';
+
         // Get the planet feed
-        if ($planet = $cache->get('planet', 600)) {
-            $view->planet = unserialize($planet);
-        } else {
+        $planetKey = 'planet_' . $cacheVersion;
+        if ($planet = $cache->get($planetKey, 600)) {
+            $unserialized = @unserialize($planet);
+            // Validate it's a traversable feed object
+            if ($unserialized && is_iterable($unserialized)) {
+                $view->planet = $unserialized;
+            } else {
+                // Corrupted cache, refetch
+                $view->planet = null;
+            }
+        }
+
+        if (!isset($view->planet)) {
             try {
                 $view->planet = Horde_Feed::readUri('https://www.ralf-lang.de/tag/horde/feed');
             } catch (\Exception $e) {
                 $view->planet = null;
             }
-            $cache->set('planet', serialize($view->planet));
+            $cache->set($planetKey, serialize($view->planet));
         }
 
         // Get the complete Horde feed (no tags)
-        if ($hordefeed = $cache->get('hordefeed', 600)) {
-            $view->hordefeed = unserialize($hordefeed);
-        } else {
+        $hordefeedKey = 'hordefeed_' . $cacheVersion;
+        if ($hordefeed = $cache->get($hordefeedKey, 600)) {
+            $unserialized = @unserialize($hordefeed);
+            // Validate it's a traversable feed object
+            if ($unserialized && is_iterable($unserialized)) {
+                $view->hordefeed = $unserialized;
+            } else {
+                // Corrupted cache, refetch
+                $view->hordefeed = null;
+            }
+        }
+
+        if (!isset($view->hordefeed)) {
             try {
                 $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url']);
             } catch (\Exception $e) {
                 $view->hordefeed = null;
             }
-            $cache->set('hordefeed', serialize($view->hordefeed));
+            $cache->set($hordefeedKey, serialize($view->hordefeed));
         }
 
         return $this->renderTemplate($view, 'index', 'home');
