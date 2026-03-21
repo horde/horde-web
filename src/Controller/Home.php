@@ -25,6 +25,7 @@ use Horde_Cache;
 use Horde_Feed;
 use HordeWeb_Utils;
 use Horde\Routes\Utils;
+use Throwable;
 
 /**
  * Home controller - PSR-15 RequestHandler
@@ -120,7 +121,7 @@ class Home implements RequestHandlerInterface
         if (!isset($view->planet)) {
             try {
                 $view->planet = Horde_Feed::readUri('https://www.ralf-lang.de/tag/horde/feed');
-            } catch (\Exception $e) {
+            } catch (Throwable $e) {
                 $view->planet = null;
             }
             $cache->set($planetKey, serialize($view->planet));
@@ -142,7 +143,7 @@ class Home implements RequestHandlerInterface
         if (!isset($view->hordefeed)) {
             try {
                 $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url']);
-            } catch (\Exception $e) {
+            } catch (Throwable $e) {
                 $view->hordefeed = null;
             }
             $cache->set($hordefeedKey, serialize($view->hordefeed));

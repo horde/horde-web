@@ -1,0 +1,41 @@
+---
+id: hordweb
+name: Hordeweb
+full: Horde.org Website
+description: A setup utility for manipulating horde application contents.
+list: dev
+type: library
+homepage: https://www.horde.org
+authors:
+  -
+    name: Ralf Lang
+    user: rlang
+    email: ralf.lang@ralf-lang.de
+    active: true
+    role: lead
+version:
+  release: 1.0.0-alpha10
+  api: 1.0.0alpha1
+state:
+  release: alpha
+  api: alpha
+license:
+  identifier: LGPL-2.1
+  uri: http://www.horde.org/licenses/lgpl21
+dependencies:
+  required:
+    php: ^8.2
+    composer:
+      horde/util: ^3
+      horde/injector: ^3
+      horde/cli_modular: ^3
+      horde/cli: ^3
+      horde/argv: ^3
+      horde/yaml: ^3
+      horde/group: ^3
+      horde/phpconfigfile: ^1 || ^0
+  dev:
+    composer:
+      horde/test: ^3
+      phpunit/phpunit: ^12 || ^11 || ^9 || ^10.5
+vendor: horde
