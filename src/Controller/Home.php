@@ -20,11 +20,15 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
+use Psr\Log\LoggerInterface;
 use Horde_Injector;
 use Horde_Cache;
 use Horde_Feed;
 use HordeWeb_Utils;
 use Horde\Routes\Utils;
+use Horde\Log\Logger;
+use Horde\Log\Handler\Syslog as SyslogHandler;
+use Horde\Log\LogLevels;
 use Throwable;
 
 /**
@@ -38,6 +42,7 @@ class Home implements RequestHandlerInterface
     private Horde_Injector $injector;
     private ResponseFactoryInterface $responseFactory;
     private StreamFactoryInterface $streamFactory;
+    private LoggerInterface $logger;
 
     public function __construct(
         Horde_Injector $injector,
@@ -47,6 +52,15 @@ class Home implements RequestHandlerInterface
         $this->injector = $injector;
         $this->responseFactory = $responseFactory;
         $this->streamFactory = $streamFactory;
+
+        // Get PSR-3 logger from injector, with fallback to syslog
+        try {
+            $this->logger = $injector->getInstance(Logger::class);
+        } catch (Throwable $e) {
+            // Fallback: create basic syslog logger
+            $handler = new SyslogHandler('hordeweb', LOG_USER);
+            $this->logger = new Logger([$handler], LogLevels::initWithCanonicalLevels());
+        }
     }
 
     /**
@@ -122,6 +136,13 @@ class Home implements RequestHandlerInterface
             try {
                 $view->planet = Horde_Feed::readUri('https://www.ralf-lang.de/tag/horde/feed');
             } catch (Throwable $e) {
+                $this->logger->error(
+                    'Home controller: Failed to fetch Planet Horde feed: {exception}: {message}',
+                    [
+                        'exception' => get_class($e),
+                        'message' => $e->getMessage(),
+                    ]
+                );
                 $view->planet = null;
             }
             $cache->set($planetKey, serialize($view->planet));
@@ -144,6 +165,13 @@ class Home implements RequestHandlerInterface
             try {
                 $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url']);
             } catch (Throwable $e) {
+                $this->logger->error(
+                    'Home controller: Failed to fetch Horde news feed: {exception}: {message}',
+                    [
+                        'exception' => get_class($e),
+                        'message' => $e->getMessage(),
+                    ]
+                );
                 $view->hordefeed = null;
             }
             $cache->set($hordefeedKey, serialize($view->hordefeed));

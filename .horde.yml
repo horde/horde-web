@@ -30,6 +30,9 @@ dependencies:
       horde/injector: ^3
       horde/cli_modular: ^3
       horde/cli: ^3
+      horde/feed: ^3
+      horde/log: ^3
+      psr/log: ^3
       horde/argv: ^3
       horde/yaml: ^3
       horde/group: ^3
