@@ -3,6 +3,13 @@
  * Utility functions
  *
  */
+
+use Horde\Hordeweb\Controller\App;
+use Horde\Hordeweb\Controller\Community;
+use Horde\Hordeweb\Controller\Development;
+use Horde\Hordeweb\Controller\Library;
+use Horde\Hordeweb\Controller\Licenses;
+
 class HordeWeb_Utils
 {
     /**
@@ -206,6 +213,7 @@ class HordeWeb_Utils
     {
         $separator = '&nbsp;&nbsp;&raquo;&nbsp;&nbsp;';
         $view = $controller->getView();
+        $crumb = '';
         switch (get_class($controller)) {
         case 'HordeWeb_App_Controller':
             $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'))
@@ -250,6 +258,51 @@ class HordeWeb_Utils
                     $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'licenses', 'action' => $action));
                 }
             }
+            break;
+        case Development::class:
+            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'));
+            if (!empty($params)) {
+                foreach ($params as $name => $action) {
+                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'development', 'action' => $action));
+                }
+            }
+            break;
+        case Community::class:
+            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'));
+            if (!empty($params)) {
+                foreach ($params as $name => $action) {
+                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'community', 'action' => $action));
+                }
+            }
+            break;
+        case Licenses::class:
+            $crumb = $view->linkToUnlessCurrent('Licenses', array('controller' => 'licenses'));
+            if (!empty($params)) {
+                foreach ($params as $name => $action) {
+                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'licenses', 'action' => $action));
+                }
+            }
+            break;
+        case Library::class:
+            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'))
+                . $separator
+                . $view->linkToUnlessCurrent('Libraries', array('controller' => 'library'));
+
+                if (!empty($view->shortLibraryName)) {
+                    $crumb .= $separator;
+                }
+                $crumb .= $view->linkToUnless(empty($view->shortLibraryName) || !$view->isCurrentPage(array('controller' => 'library')), $view->shortLibraryName, array('controller' => 'library', 'library' => $view->libraryName, 'action' => 'library'));
+            break;
+        case App::class:
+            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'))
+                . $separator
+                . $view->linkToUnlessCurrent('Applications', array('controller' => 'app'));
+
+                if (!empty($view->appname)) {
+                    $crumb .= $separator;
+                }
+                $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), $view->appnameHuman, array('controller' => 'app', 'action' => 'app'));
+            break;
         }
 
         return $crumb;
