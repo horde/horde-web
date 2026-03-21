@@ -82,6 +82,7 @@ class App implements RequestHandlerInterface
         $view->stable = $app == 'h3' ?
              HordeWeb_Utils::getH3Apps() : HordeWeb_Utils::getH4Apps();
         $view->appListController = array('controller' => 'app', 'action' => 'app');
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
 
         $template = $app == 'h3' ? 'horde3' : 'index';
         return $this->renderTemplate($view, $template, 'main');
@@ -92,6 +93,7 @@ class App implements RequestHandlerInterface
         $view = $this->setupView();
         $app = $this->route['app'] ?? '';
         $view->page_title = $view->appnameHuman . ' - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
 
         // Do we know about this app?
         if (file_exists($GLOBALS['fs_base'] . '/app/views/App/apps/' . urlencode($app)) === false) {
@@ -129,6 +131,7 @@ class App implements RequestHandlerInterface
         $view = $this->setupView();
         $view->addTemplatePath(array($GLOBALS['fs_base'] . '/app/views/shared/authors'));
         $view->page_title = 'Authors - ' . $view->appnameHuman . ' - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
 
         // Gracefully handle missing Gravatar service
         if (class_exists('Horde_Service_Gravatar')) {
@@ -144,6 +147,7 @@ class App implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Roadmap - ' . $view->appnameHuman . ' - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         return $this->renderTemplate($view, 'roadmap', 'main');
     }
 
@@ -160,6 +164,7 @@ class App implements RequestHandlerInterface
 
         $view = $this->setupView();
         $view->page_title = 'Documentation - ' . $view->appnameHuman . ' - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         \Horde::startBuffer();
         include $file;
         $view->content = \Horde::endBuffer();
@@ -171,6 +176,9 @@ class App implements RequestHandlerInterface
         $pageOutput = $this->injector->getInstance('Horde_PageOutput');
         $script = new \Horde_Script_File_External($GLOBALS['host_base'] . '/js/jquery.lightbox-0.5.min.js');
         $pageOutput->addScriptFile($script);
+
+        $view = $this->setupView();
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
 
         $css = new \Horde_Themes_Element('jquery.lightbox-0.5.css', array('data' => array('fs' => $GLOBALS['fs_base'] . '/css/jquery.lightbox-0.5.css', 'uri' => $GLOBALS['host_base'] . '/css/jquery.lightbox-0.5.css')));
         $pageOutput->addStylesheet($css->fs, $css->uri);

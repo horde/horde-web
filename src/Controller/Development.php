@@ -108,6 +108,7 @@ class Development implements RequestHandlerInterface
         $this->addSyntaxhighlighter();
         $view = $this->setupView();
         $view->page_title = 'Git - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Git' => 'git'));
         return $this->renderTemplate($view, 'git', 'main');
     }
 
@@ -116,6 +117,7 @@ class Development implements RequestHandlerInterface
         $this->addSyntaxhighlighter();
         $view = $this->setupView();
         $view->page_title = 'Cvs - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('CVS' => 'cvs'));
         return $this->renderTemplate($view, 'cvs', 'main');
     }
 
@@ -123,6 +125,7 @@ class Development implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Contribute - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Contribute' => 'contribute'));
         return $this->renderTemplate($view, 'contribute', 'main');
     }
 
@@ -130,6 +133,7 @@ class Development implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Documentation - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Documentation' => 'documentation'));
         return $this->renderTemplate($view, 'documentation', 'main');
     }
 
@@ -137,6 +141,7 @@ class Development implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Licenses - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Licenses' => 'licenses'));
         return $this->renderTemplate($view, 'licenses', 'main');
     }
 
@@ -145,6 +150,7 @@ class Development implements RequestHandlerInterface
         $this->injector->getInstance('Horde_PageOutput')->addScriptFile('stripe.js');
         $view = $this->setupView();
         $view->page_title = 'Modules - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Modules' => 'modules'));
         return $this->renderTemplate($view, 'modules', 'main');
     }
 
@@ -153,6 +159,7 @@ class Development implements RequestHandlerInterface
         $this->injector->getInstance('Horde_PageOutput')->addScriptFile('stripe.js');
         $view = $this->setupView();
         $view->page_title = 'Cvsmodules - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Modules' => 'modules'));
         return $this->renderTemplate($view, 'cvsmodules', 'main');
     }
 
@@ -160,6 +167,7 @@ class Development implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Versions - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Versions' => 'versions'));
         return $this->renderTemplate($view, 'versions', 'main');
     }
 

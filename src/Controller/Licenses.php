@@ -73,12 +73,14 @@ class Licenses implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Licenses - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Licenses' => 'licenses'));
         return $this->renderTemplate($view, 'index', 'main');
     }
 
     private function gplAction(): ResponseInterface
     {
         $view = $this->setupView();
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('GPL' => 'gpl'));
         $base = $GLOBALS['fs_base'] . '/app/views/Licenses/';
         $view->license = file($base . 'COPYING');
         return $this->renderTemplate($view, 'gpl', 'main');
@@ -87,6 +89,7 @@ class Licenses implements RequestHandlerInterface
     private function lgplAction(): ResponseInterface
     {
         $view = $this->setupView();
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('LGPL' => 'lgpl'));
         $base = $GLOBALS['fs_base'] . '/app/views/Licenses/';
         $view->license = file($base . 'LGPL');
         return $this->renderTemplate($view, 'lgpl', 'main');
@@ -95,6 +98,7 @@ class Licenses implements RequestHandlerInterface
     private function lgpl21Action(): ResponseInterface
     {
         $view = $this->setupView();
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('LGPL' => 'lgpl'));
         $base = $GLOBALS['fs_base'] . '/app/views/Licenses/';
         $view->license = file($base . 'LGPL-2.1');
         return $this->renderTemplate($view, 'lgpl21', 'main');
@@ -103,6 +107,7 @@ class Licenses implements RequestHandlerInterface
     private function bsdAction(): ResponseInterface
     {
         $view = $this->setupView();
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('BSD' => 'bsd'));
         $base = $GLOBALS['fs_base'] . '/app/views/Licenses/';
         $view->license = file($base . 'COPYRIGHT');
         return $this->renderTemplate($view, 'bsd', 'main');
@@ -111,6 +116,7 @@ class Licenses implements RequestHandlerInterface
     private function apacheAction(): ResponseInterface
     {
         $view = $this->setupView();
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Apache' => 'apache'));
         $base = $GLOBALS['fs_base'] . '/app/views/Licenses/';
         $view->license = file($base . 'LICENSE');
         return $this->renderTemplate($view, 'apache', 'main');

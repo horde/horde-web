@@ -213,95 +213,64 @@ class HordeWeb_Utils
     {
         $separator = '&nbsp;&nbsp;&raquo;&nbsp;&nbsp;';
         $view = $controller->getView();
+        $urlWriter = $controller->getUrlWriter();
         $crumb = '';
+
+        // Helper to build a link using urlFor
+        $buildLink = function($text, $route) use ($urlWriter) {
+            $url = $urlWriter->urlFor($route);
+            return '<a href="' . htmlspecialchars($url) . '">' . htmlspecialchars($text) . '</a>';
+        };
+
         switch (get_class($controller)) {
         case 'HordeWeb_App_Controller':
-            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'))
+        case App::class:
+            $crumb = $buildLink('Community', array('controller' => 'community'))
                 . $separator
-                . $view->linkToUnlessCurrent('Applications', array('controller' => 'app'));
+                . $buildLink('Applications', array('controller' => 'app'));
 
                 if (!empty($view->appname)) {
                     $crumb .= $separator;
+                    $crumb .= $buildLink($view->appnameHuman, array('controller' => 'app', 'action' => 'app'));
                 }
-                $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), $view->appnameHuman, array('controller' => 'app', 'action' => 'app'));
             break;
         case 'HordeWeb_Library_Controller':
-            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'))
+        case Library::class:
+            $crumb = $buildLink('Development', array('controller' => 'development'))
                 . $separator
-                . $view->linkToUnlessCurrent('Libraries', array('controller' => 'library'));
+                . $buildLink('Libraries', array('controller' => 'library'));
 
                 if (!empty($view->shortLibraryName)) {
                     $crumb .= $separator;
+                    $crumb .= $buildLink($view->shortLibraryName, array('controller' => 'library', 'action' => 'library'));
                 }
-                $crumb .= $view->linkToUnless(empty($view->shortLibraryName) || !$view->isCurrentPage(array('controller' => 'library')), $view->shortLibraryName, array('controller' => 'library', 'library' => $view->libraryName, 'action' => 'library'));
             break;
         case 'HordeWeb_Community_Controller':
-            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'));
+        case Community::class:
+            $crumb = $buildLink('Community', array('controller' => 'community'));
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
-                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'community', 'action' => $action));
+                    $crumb .= $separator . htmlspecialchars($name);
                 }
             }
             break;
         case 'HordeWeb_Development_Controller':
-            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'));
+        case Development::class:
+            $crumb = $buildLink('Development', array('controller' => 'development'));
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
-                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'development', 'action' => $action));
+                    $crumb .= $separator . htmlspecialchars($name);
                 }
             }
             break;
         case 'HordeWeb_Licenses_Controller':
-            $crumb = $view->linkToUnlessCurrent('Licenses', array('controller' => 'licenses'));
-            if (!empty($params)) {
-                foreach ($params as $name => $action) {
-                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'licenses', 'action' => $action));
-                }
-            }
-            break;
-        case Development::class:
-            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'));
-            if (!empty($params)) {
-                foreach ($params as $name => $action) {
-                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'development', 'action' => $action));
-                }
-            }
-            break;
-        case Community::class:
-            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'));
-            if (!empty($params)) {
-                foreach ($params as $name => $action) {
-                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'community', 'action' => $action));
-                }
-            }
-            break;
         case Licenses::class:
-            $crumb = $view->linkToUnlessCurrent('Licenses', array('controller' => 'licenses'));
+            $crumb = $buildLink('Licenses', array('controller' => 'licenses'));
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
-                    $crumb .= $separator . $view->linkToUnlessCurrent($name, array('controller' => 'licenses', 'action' => $action));
+                    $crumb .= $separator . htmlspecialchars($name);
                 }
             }
-            break;
-        case Library::class:
-            $crumb = $view->linkToUnlessCurrent('Development', array('controller' => 'development'))
-                . $separator
-                . $view->linkToUnlessCurrent('Libraries', array('controller' => 'library'));
-
-                if (!empty($view->shortLibraryName)) {
-                    $crumb .= $separator;
-                }
-                $crumb .= $view->linkToUnless(empty($view->shortLibraryName) || !$view->isCurrentPage(array('controller' => 'library')), $view->shortLibraryName, array('controller' => 'library', 'library' => $view->libraryName, 'action' => 'library'));
-            break;
-        case App::class:
-            $crumb = $view->linkToUnlessCurrent('Community', array('controller' => 'community'))
-                . $separator
-                . $view->linkToUnlessCurrent('Applications', array('controller' => 'app'));
-
-                if (!empty($view->appname)) {
-                    $crumb .= $separator;
-                }
-                $crumb .= $view->linkToUnless(empty($view->appname) || !$view->isCurrentPage(array('controller' => 'app')), $view->appnameHuman, array('controller' => 'app', 'action' => 'app'));
             break;
         }
 

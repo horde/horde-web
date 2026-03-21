@@ -84,6 +84,7 @@ class Community implements RequestHandlerInterface
         $view = $this->setupView();
         $view->addTemplatePath($GLOBALS['fs_base'] . '/app/views/shared/authors');
         $view->page_title = 'Team - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Team' => 'team'));
 
         // Gracefully handle missing Gravatar service
         if (class_exists('Horde_Service_Gravatar')) {
@@ -99,6 +100,7 @@ class Community implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Mailing Lists - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Mailing Lists' => 'mail'));
         $view->lists = HordeWeb_Utils::getLists();
         return $this->renderTemplate($view, 'mail', 'main');
     }
@@ -107,6 +109,7 @@ class Community implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Localization - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Localization' => 'localization'));
         return $this->renderTemplate($view, 'localization', 'main');
     }
 
@@ -114,6 +117,7 @@ class Community implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Support - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Support' => 'support'));
         return $this->renderTemplate($view, 'support', 'main');
     }
 
@@ -121,6 +125,7 @@ class Community implements RequestHandlerInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Documentation - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this, array('Documentation' => 'documentation'));
         return $this->renderTemplate($view, 'documentation', 'main');
     }
 
