@@ -9,6 +9,7 @@ use Horde\Hordeweb\Controller\Community;
 use Horde\Hordeweb\Controller\Development;
 use Horde\Hordeweb\Controller\Library;
 use Horde\Hordeweb\Controller\Licenses;
+use Horde\Hordeweb\Controller\Support;
 
 class HordeWeb_Utils
 {
@@ -288,6 +289,17 @@ class HordeWeb_Utils
         case 'HordeWeb_Licenses_Controller':
         case Licenses::class:
             $crumb = $buildLink('Licenses', 'licenses');
+            if (!empty($params)) {
+                foreach ($params as $name => $action) {
+                    $crumb .= $separator . htmlspecialchars($name);
+                }
+            }
+            break;
+        case 'HordeWeb_Support_Controller':
+        case Support::class:
+            $crumb = $buildLink('Community', 'community')
+                . $separator
+                . $buildLink('Support', 'support');
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
                     $crumb .= $separator . htmlspecialchars($name);

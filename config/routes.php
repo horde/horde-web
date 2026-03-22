@@ -72,7 +72,6 @@ $mapper->addRoute(
 $mapper->addRoute(
     (new RouteBuilder($_root . '/community/:action'))
         ->withController(Community::class)
-        ->withAction('index')
 );
 
 $mapper->addRoute(
@@ -100,12 +99,11 @@ $mapper->addRoute(
 $mapper->addRoute(
     (new RouteBuilder($_root . '/licenses/:action'))
         ->withController(Licenses::class)
-        ->withAction('index')
 );
 
 /* Support */
 $mapper->addRoute(
-    (new RouteBuilder($_root . '/support/:action'))
+    (new RouteBuilder($_root . '/support'))
         ->withName('support')
         ->withController(Support::class)
         ->withAction('index')
@@ -126,10 +124,15 @@ $mapper->addRoute(
 );
 
 $mapper->addRoute(
-    (new RouteBuilder($_root . '/apps/:app/:action'))
+    (new RouteBuilder($_root . '/apps/:app'))
         ->withName('app')
         ->withController(App::class)
         ->withAction('app')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/apps/:app/:action'))
+        ->withController(App::class)
 );
 
 $mapper->addRoute(
@@ -181,12 +184,11 @@ $mapper->addRoute(
 $mapper->addRoute(
     (new RouteBuilder($_root . '/development/:action'))
         ->withController(Development::class)
-        ->withAction('index')
 );
 
 /* Services */
 $mapper->addRoute(
-    (new RouteBuilder($_root . '/services/:action'))
+    (new RouteBuilder($_root . '/services'))
         ->withName('services')
         ->withController(Services::class)
         ->withAction('index')

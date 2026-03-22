@@ -22,6 +22,7 @@ use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Horde_Injector;
 use Horde\Routes\Utils;
+use HordeWeb_Utils;
 
 /**
  * Support controller - PSR-15 RequestHandler
@@ -58,10 +59,16 @@ class Support implements RequestHandlerInterface
         return $this->injector->getInstance(Utils::class);
     }
 
+    public function getView(): \Horde_View_Base
+    {
+        return $this->injector->getInstance('HordeWeb_View');
+    }
+
     private function indexAction(): ResponseInterface
     {
         $view = $this->setupView();
         $view->page_title = 'Support - The Horde Project';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         return $this->renderTemplate($view, 'index', 'main');
     }
 
@@ -103,7 +110,7 @@ class Support implements RequestHandlerInterface
         $view->urlWriter = $this->injector->getInstance(Utils::class);
         $view->homeurl = $view->urlWriter->urlFor('home');
         $view->feedurl = '';
-        $view->quote = \HordeWeb_Utils::getQuote();
+        $view->quote = HordeWeb_Utils::getQuote();
 
         // Add template path for Support views
         $view->addTemplatePath(
