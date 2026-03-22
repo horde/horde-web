@@ -225,16 +225,17 @@ class HordeWeb_Utils
         }
 
         // Helper to build a link using urlFor
-        $buildLink = function($text, $route) use ($urlWriter, $logger) {
-            $url = $urlWriter->urlFor($route);
+        $buildLink = function($text, $route, $params = []) use ($urlWriter, $logger) {
+            $url = $urlWriter->urlFor($route, $params);
             // Fallback if urlFor returns null
             if ($url === null || $url === '') {
                 if ($logger) {
                     $logger->warning(
-                        'Breadcrumb URL generation failed: {text} -> {route}',
+                        'Breadcrumb URL generation failed: {text} -> {route} with params {params}',
                         [
                             'text' => $text,
-                            'route' => json_encode($route),
+                            'route' => $route,
+                            'params' => json_encode($params),
                         ]
                     );
                 }
@@ -246,29 +247,29 @@ class HordeWeb_Utils
         switch (get_class($controller)) {
         case 'HordeWeb_App_Controller':
         case App::class:
-            $crumb = $buildLink('Community', array('controller' => 'community'))
+            $crumb = $buildLink('Community', 'community')
                 . $separator
-                . $buildLink('Applications', array('controller' => 'app'));
+                . $buildLink('Applications', 'apps');
 
                 if (!empty($view->appname)) {
                     $crumb .= $separator;
-                    $crumb .= $buildLink($view->appnameHuman, array('controller' => 'app', 'action' => 'app'));
+                    $crumb .= $buildLink($view->appnameHuman, 'app', ['app' => $view->appname]);
                 }
             break;
         case 'HordeWeb_Library_Controller':
         case Library::class:
-            $crumb = $buildLink('Development', array('controller' => 'development'))
+            $crumb = $buildLink('Development', 'development')
                 . $separator
-                . $buildLink('Libraries', array('controller' => 'library'));
+                . $buildLink('Libraries', 'libraries');
 
                 if (!empty($view->shortLibraryName)) {
                     $crumb .= $separator;
-                    $crumb .= $buildLink($view->shortLibraryName, array('controller' => 'library', 'action' => 'library'));
+                    $crumb .= $buildLink($view->shortLibraryName, 'library', ['library' => $view->libraryName]);
                 }
             break;
         case 'HordeWeb_Community_Controller':
         case Community::class:
-            $crumb = $buildLink('Community', array('controller' => 'community'));
+            $crumb = $buildLink('Community', 'community');
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
                     $crumb .= $separator . htmlspecialchars($name);
@@ -277,7 +278,7 @@ class HordeWeb_Utils
             break;
         case 'HordeWeb_Development_Controller':
         case Development::class:
-            $crumb = $buildLink('Development', array('controller' => 'development'));
+            $crumb = $buildLink('Development', 'development');
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
                     $crumb .= $separator . htmlspecialchars($name);
@@ -286,7 +287,7 @@ class HordeWeb_Utils
             break;
         case 'HordeWeb_Licenses_Controller':
         case Licenses::class:
-            $crumb = $buildLink('Licenses', array('controller' => 'licenses'));
+            $crumb = $buildLink('Licenses', 'licenses');
             if (!empty($params)) {
                 foreach ($params as $name => $action) {
                     $crumb .= $separator . htmlspecialchars($name);

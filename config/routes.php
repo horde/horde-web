@@ -63,8 +63,14 @@ $mapper->addRoute(
 
 /* Community */
 $mapper->addRoute(
-    (new RouteBuilder($_root . '/community/:action'))
+    (new RouteBuilder($_root . '/community'))
         ->withName('community')
+        ->withController(Community::class)
+        ->withAction('index')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/community/:action'))
         ->withController(Community::class)
         ->withAction('index')
 );
@@ -85,8 +91,14 @@ $mapper->addRoute(
 
 /* Licenses */
 $mapper->addRoute(
-    (new RouteBuilder($_root . '/licenses/:action'))
+    (new RouteBuilder($_root . '/licenses'))
         ->withName('licenses')
+        ->withController(Licenses::class)
+        ->withAction('index')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/licenses/:action'))
         ->withController(Licenses::class)
         ->withAction('index')
 );
@@ -160,8 +172,14 @@ $mapper->addRoute(
 
 /* Development */
 $mapper->addRoute(
-    (new RouteBuilder($_root . '/development/:action'))
+    (new RouteBuilder($_root . '/development'))
         ->withName('development')
+        ->withController(Development::class)
+        ->withAction('index')
+);
+
+$mapper->addRoute(
+    (new RouteBuilder($_root . '/development/:action'))
         ->withController(Development::class)
         ->withAction('index')
 );
