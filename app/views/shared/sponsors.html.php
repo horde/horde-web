@@ -32,6 +32,7 @@
     <a href="<?php echo $this->urlWriter->urlFor('logos');?>" class="logos">Logos</a>
   </p>
 
+  <?php /* Shops section disabled - no shops currently available
   <h2>Shops</h2>
   <span style="text-align:center;width:121px;float:left;">European Store<a class="boxl"
   href="<?php echo $this->urlWriter->urlFor('shopeu')?>">
@@ -41,6 +42,7 @@
   href="<?php echo $this->urlWriter->urlFor('shopus')?>">
   <img src="<?php echo $GLOBALS['host_base'] ?>/images/store-us.jpg" alt="US Store">
   </a></span>
+  */ ?>
 
   <h2>Status</h2>
   <div class="status">
