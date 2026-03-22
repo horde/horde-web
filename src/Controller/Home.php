@@ -138,13 +138,16 @@ class Home implements RequestHandlerInterface
                 // Corrupted cache, refetch
                 $view->planet = null;
             }
+        } else {
+            $view->planet = null;
         }
 
         if (!isset($view->planet)) {
             try {
                 // Use config variable with fallback to default
                 $planetFeedUrl = $GLOBALS['planet_feed_url'] ?? 'https://www.ralf-lang.de/tag/horde/feed/';
-                $view->planet = Horde_Feed::readUri($planetFeedUrl, $httpClient);
+                // Suppress deprecation warnings from Horde_Xml_Element
+                $view->planet = @Horde_Feed::readUri($planetFeedUrl, $httpClient);
             } catch (Throwable $e) {
                 $this->logger->error(
                     'Home controller: Failed to fetch Planet Horde feed: {exception}: {message}',
@@ -169,11 +172,14 @@ class Home implements RequestHandlerInterface
                 // Corrupted cache, refetch
                 $view->hordefeed = null;
             }
+        } else {
+            $view->hordefeed = null;
         }
 
         if (!isset($view->hordefeed)) {
             try {
-                $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url'], $httpClient);
+                // Suppress deprecation warnings from Horde_Xml_Element
+                $view->hordefeed = @Horde_Feed::readUri($GLOBALS['feed_url'], $httpClient);
             } catch (Throwable $e) {
                 $this->logger->error(
                     'Home controller: Failed to fetch Horde news feed: {exception}: {message}',

@@ -11,3 +11,4 @@ nbproject
 config/defaults.php
 config/conf.php
 config/lighttpd.conf
+/config/conf.php

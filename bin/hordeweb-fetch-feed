@@ -104,9 +104,33 @@ echo "URL: $planetFeedUrl\n";
 $planetKey = 'planet_' . $cacheVersion;
 echo "Cache key: $planetKey\n";
 
+// Check for existing cache first
+echo "Checking for existing cache...\n";
+$hadExistingCache = false;
+if ($existingCache = $cache->get($planetKey, 600)) {
+    $hadExistingCache = true;
+    echo "✓ Found existing cache\n";
+    $unserialized = @unserialize($existingCache);
+    if ($unserialized && is_iterable($unserialized)) {
+        echo "Existing cached feed title: " . ($unserialized->title ?? 'N/A') . "\n";
+        $itemCount = 0;
+        foreach ($unserialized as $entry) {
+            $itemCount++;
+            if ($itemCount <= 3) {
+                echo "  - " . ($entry->title ?? 'Untitled') . "\n";
+            }
+        }
+        echo "Total cached items: $itemCount\n";
+    } else {
+        echo "⚠ Existing cache corrupted\n";
+    }
+} else {
+    echo "✗ No existing cache found\n";
+}
+
 // Clear cache for testing
 $cache->expire($planetKey);
-echo "Cleared cache\n";
+echo "Cleared cache for fresh test\n";
 
 // Fetch feed
 echo "Fetching feed...\n";
@@ -130,13 +154,21 @@ try {
     $cache->set($planetKey, serialize($planet));
     echo "✓ Feed cached\n";
 
-    // Retrieve from cache
-    echo "Retrieving from cache...\n";
+    // Retrieve from cache immediately after write
+    echo "Reading back from " . ($hadExistingCache ? "newly written" : "just written") . " cache...\n";
     if ($cached = $cache->get($planetKey, 600)) {
         $unserialized = @unserialize($cached);
         if ($unserialized && is_iterable($unserialized)) {
             echo "✓ Successfully retrieved from cache\n";
             echo "Cached feed title: " . ($unserialized->title ?? 'N/A') . "\n";
+            $cachedItemCount = 0;
+            foreach ($unserialized as $entry) {
+                $cachedItemCount++;
+                if ($cachedItemCount <= 3) {
+                    echo "  - " . ($entry->title ?? 'Untitled') . "\n";
+                }
+            }
+            echo "Total cached items: $cachedItemCount\n";
         } else {
             echo "✗ Cache data corrupted or invalid\n";
         }
@@ -157,9 +189,33 @@ echo "URL: $feedUrl\n";
 $hordefeedKey = 'hordefeed_' . $cacheVersion;
 echo "Cache key: $hordefeedKey\n";
 
+// Check for existing cache first
+echo "Checking for existing cache...\n";
+$hadExistingCache = false;
+if ($existingCache = $cache->get($hordefeedKey, 600)) {
+    $hadExistingCache = true;
+    echo "✓ Found existing cache\n";
+    $unserialized = @unserialize($existingCache);
+    if ($unserialized && is_iterable($unserialized)) {
+        echo "Existing cached feed title: " . ($unserialized->title ?? 'N/A') . "\n";
+        $itemCount = 0;
+        foreach ($unserialized as $entry) {
+            $itemCount++;
+            if ($itemCount <= 3) {
+                echo "  - " . ($entry->title ?? 'Untitled') . "\n";
+            }
+        }
+        echo "Total cached items: $itemCount\n";
+    } else {
+        echo "⚠ Existing cache corrupted\n";
+    }
+} else {
+    echo "✗ No existing cache found\n";
+}
+
 // Clear cache for testing
 $cache->expire($hordefeedKey);
-echo "Cleared cache\n";
+echo "Cleared cache for fresh test\n";
 
 // Fetch feed
 echo "Fetching feed...\n";
@@ -183,13 +239,21 @@ try {
     $cache->set($hordefeedKey, serialize($hordefeed));
     echo "✓ Feed cached\n";
 
-    // Retrieve from cache
-    echo "Retrieving from cache...\n";
+    // Retrieve from cache immediately after write
+    echo "Reading back from " . ($hadExistingCache ? "newly written" : "just written") . " cache...\n";
     if ($cached = $cache->get($hordefeedKey, 600)) {
         $unserialized = @unserialize($cached);
         if ($unserialized && is_iterable($unserialized)) {
             echo "✓ Successfully retrieved from cache\n";
             echo "Cached feed title: " . ($unserialized->title ?? 'N/A') . "\n";
+            $cachedItemCount = 0;
+            foreach ($unserialized as $entry) {
+                $cachedItemCount++;
+                if ($cachedItemCount <= 3) {
+                    echo "  - " . ($entry->title ?? 'Untitled') . "\n";
+                }
+            }
+            echo "Total cached items: $cachedItemCount\n";
         } else {
             echo "✗ Cache data corrupted or invalid\n";
         }
