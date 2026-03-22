@@ -1,0 +1,206 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Test feed retrieval and caching
+ *
+ * This script tests the RSS feed fetching and caching mechanism used on the
+ * home page. It performs the same initialization as the web application,
+ * fetches both feeds, caches them, and then retrieves from cache.
+ *
+ * Usage:
+ *   ./bin/test-feeds.php
+ *
+ * Copyright 2026 Horde LLC (http://www.horde.org)
+ *
+ * @license  http://opensource.org/licenses/bsd-license.php BSD
+ */
+
+declare(strict_types=1);
+
+// Ensure script is only run from CLI
+if (PHP_SAPI !== 'cli') {
+    http_response_code(403);
+    exit;
+}
+
+// Enable all error reporting including deprecations and notices
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+
+// Determine project root
+$projectRoot = dirname(__DIR__);
+
+// Load composer autoloader if not already present
+if (!class_exists('Horde_Autoloader')) {
+    $autoloadPaths = [
+        $projectRoot . '/vendor/autoload.php',
+        $projectRoot . '/../../autoload.php', // If installed as dependency
+    ];
+
+    foreach ($autoloadPaths as $autoloadPath) {
+        if (file_exists($autoloadPath)) {
+            require_once $autoloadPath;
+            echo "Loaded autoloader from: $autoloadPath\n";
+            break;
+        }
+    }
+}
+
+// Bootstrap the application (same as web does)
+require_once $projectRoot . '/app/lib/base.php';
+
+// Override error handler to ensure all errors are visible
+// appInit may have installed a custom error handler that suppresses some errors
+set_error_handler(function($errno, $errstr, $errfile, $errline) {
+    $errorTypes = [
+        E_ERROR => 'ERROR',
+        E_WARNING => 'WARNING',
+        E_PARSE => 'PARSE',
+        E_NOTICE => 'NOTICE',
+        E_CORE_ERROR => 'CORE_ERROR',
+        E_CORE_WARNING => 'CORE_WARNING',
+        E_COMPILE_ERROR => 'COMPILE_ERROR',
+        E_COMPILE_WARNING => 'COMPILE_WARNING',
+        E_USER_ERROR => 'USER_ERROR',
+        E_USER_WARNING => 'USER_WARNING',
+        E_USER_NOTICE => 'USER_NOTICE',
+        E_STRICT => 'STRICT',
+        E_RECOVERABLE_ERROR => 'RECOVERABLE_ERROR',
+        E_DEPRECATED => 'DEPRECATED',
+        E_USER_DEPRECATED => 'USER_DEPRECATED',
+    ];
+
+    $type = $errorTypes[$errno] ?? "UNKNOWN($errno)";
+    echo "\n[PHP $type] $errstr in $errfile on line $errline\n";
+
+    // Don't execute PHP internal error handler
+    return true;
+});
+
+// Get timeout from config with fallback
+$feedTimeout = $GLOBALS['feed_timeout'] ?? 30;
+echo "Feed timeout: {$feedTimeout} seconds\n\n";
+
+echo "=== Feed Retrieval and Caching Test ===\n\n";
+
+// Get cache instance
+$cache = $GLOBALS['injector']->getInstance('Horde_Cache');
+echo "Cache instance: " . get_class($cache) . "\n\n";
+
+// Cache version (same as Home controller)
+$cacheVersion = 'v2';
+
+// Create HTTP client with custom timeout (same as Home controller)
+$feedTimeout = $GLOBALS['feed_timeout'] ?? 5;
+$httpClient = new Horde_Http_Client(['request.timeout' => $feedTimeout]);
+echo "Using HTTP client timeout: {$feedTimeout} seconds\n\n";
+
+// Test 1: Planet Horde Feed
+echo "--- Test 1: Planet Horde Feed ---\n";
+$planetFeedUrl = $GLOBALS['planet_feed_url'] ?? 'https://www.ralf-lang.de/tag/horde/feed/';
+echo "URL: $planetFeedUrl\n";
+
+$planetKey = 'planet_' . $cacheVersion;
+echo "Cache key: $planetKey\n";
+
+// Clear cache for testing
+$cache->expire($planetKey);
+echo "Cleared cache\n";
+
+// Fetch feed
+echo "Fetching feed...\n";
+try {
+    $planet = Horde_Feed::readUri($planetFeedUrl, $httpClient);
+    echo "✓ Successfully fetched feed\n";
+    echo "Feed title: " . ($planet->title ?? 'N/A') . "\n";
+
+    // Count items
+    $itemCount = 0;
+    foreach ($planet as $entry) {
+        $itemCount++;
+        if ($itemCount <= 3) {
+            echo "  - " . ($entry->title ?? 'Untitled') . "\n";
+        }
+    }
+    echo "Total items: $itemCount\n";
+
+    // Cache it
+    echo "Caching feed...\n";
+    $cache->set($planetKey, serialize($planet));
+    echo "✓ Feed cached\n";
+
+    // Retrieve from cache
+    echo "Retrieving from cache...\n";
+    if ($cached = $cache->get($planetKey, 600)) {
+        $unserialized = @unserialize($cached);
+        if ($unserialized && is_iterable($unserialized)) {
+            echo "✓ Successfully retrieved from cache\n";
+            echo "Cached feed title: " . ($unserialized->title ?? 'N/A') . "\n";
+        } else {
+            echo "✗ Cache data corrupted or invalid\n";
+        }
+    } else {
+        echo "✗ Cache miss\n";
+    }
+
+} catch (Throwable $e) {
+    echo "✗ ERROR: " . get_class($e) . "\n";
+    echo "Message: " . $e->getMessage() . "\n";
+    echo "File: " . $e->getFile() . ":" . $e->getLine() . "\n";
+}
+
+echo "\n--- Test 2: Horde News Feed ---\n";
+$feedUrl = $GLOBALS['feed_url'] ?? 'https://dev.horde.org/horde/jonah/delivery/rss.php?channel_id=1';
+echo "URL: $feedUrl\n";
+
+$hordefeedKey = 'hordefeed_' . $cacheVersion;
+echo "Cache key: $hordefeedKey\n";
+
+// Clear cache for testing
+$cache->expire($hordefeedKey);
+echo "Cleared cache\n";
+
+// Fetch feed
+echo "Fetching feed...\n";
+try {
+    $hordefeed = Horde_Feed::readUri($feedUrl, $httpClient);
+    echo "✓ Successfully fetched feed\n";
+    echo "Feed title: " . ($hordefeed->title ?? 'N/A') . "\n";
+
+    // Count items
+    $itemCount = 0;
+    foreach ($hordefeed as $entry) {
+        $itemCount++;
+        if ($itemCount <= 3) {
+            echo "  - " . ($entry->title ?? 'Untitled') . "\n";
+        }
+    }
+    echo "Total items: $itemCount\n";
+
+    // Cache it
+    echo "Caching feed...\n";
+    $cache->set($hordefeedKey, serialize($hordefeed));
+    echo "✓ Feed cached\n";
+
+    // Retrieve from cache
+    echo "Retrieving from cache...\n";
+    if ($cached = $cache->get($hordefeedKey, 600)) {
+        $unserialized = @unserialize($cached);
+        if ($unserialized && is_iterable($unserialized)) {
+            echo "✓ Successfully retrieved from cache\n";
+            echo "Cached feed title: " . ($unserialized->title ?? 'N/A') . "\n";
+        } else {
+            echo "✗ Cache data corrupted or invalid\n";
+        }
+    } else {
+        echo "✗ Cache miss\n";
+    }
+
+} catch (Throwable $e) {
+    echo "✗ ERROR: " . get_class($e) . "\n";
+    echo "Message: " . $e->getMessage() . "\n";
+    echo "File: " . $e->getFile() . ":" . $e->getLine() . "\n";
+}
+
+echo "\n=== Test Complete ===\n";

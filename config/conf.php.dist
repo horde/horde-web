@@ -16,6 +16,10 @@ $host_base = 'http://localhost/hordeweb';
 /* Filesystem base */
 $fs_base = '/private/var/www/html/hordeweb';
 
-/* RSS feed url */
+/* RSS feed urls */
 $site_name = "The Horde Project";
-$feed_url = 'http://dev.horde.org/horde/jonah/delivery/rss.php?channel_id=1';
+$feed_url = 'https://dev.horde.org/horde/jonah/delivery/rss.php?channel_id=1';
+$planet_feed_url = 'https://www.ralf-lang.de/tag/horde/feed/';
+
+/* Feed fetch timeout in seconds (default: 5) */
+$feed_timeout = 30;
