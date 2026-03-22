@@ -129,20 +129,16 @@ class Home implements RequestHandlerInterface
 
         // Get the planet feed
         $planetKey = 'planet_' . $cacheVersion;
+        $view->planet = null;
         if ($planet = $cache->get($planetKey, 600)) {
             $unserialized = @unserialize($planet);
             // Validate it's a traversable feed object
             if ($unserialized && is_iterable($unserialized)) {
                 $view->planet = $unserialized;
-            } else {
-                // Corrupted cache, refetch
-                $view->planet = null;
             }
-        } else {
-            $view->planet = null;
         }
 
-        if (!isset($view->planet)) {
+        if ($view->planet === null) {
             try {
                 // Use config variable with fallback to default
                 $planetFeedUrl = $GLOBALS['planet_feed_url'] ?? 'https://www.ralf-lang.de/tag/horde/feed/';
@@ -163,20 +159,16 @@ class Home implements RequestHandlerInterface
 
         // Get the complete Horde feed (no tags)
         $hordefeedKey = 'hordefeed_' . $cacheVersion;
+        $view->hordefeed = null;
         if ($hordefeed = $cache->get($hordefeedKey, 600)) {
             $unserialized = @unserialize($hordefeed);
             // Validate it's a traversable feed object
             if ($unserialized && is_iterable($unserialized)) {
                 $view->hordefeed = $unserialized;
-            } else {
-                // Corrupted cache, refetch
-                $view->hordefeed = null;
             }
-        } else {
-            $view->hordefeed = null;
         }
 
-        if (!isset($view->hordefeed)) {
+        if ($view->hordefeed === null) {
             try {
                 // Suppress deprecation warnings from Horde_Xml_Element
                 $view->hordefeed = @Horde_Feed::readUri($GLOBALS['feed_url'], $httpClient);
