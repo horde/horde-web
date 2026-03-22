@@ -131,19 +131,28 @@ class Home implements RequestHandlerInterface
         $planetKey = 'planet_' . $cacheVersion;
         $view->planet = null;
         if ($planet = $cache->get($planetKey, 600)) {
+            error_log("HOME DEBUG: Got planet from cache, size=" . strlen($planet));
             $unserialized = @unserialize($planet);
+            error_log("HOME DEBUG: Unserialized planet, class=" . ($unserialized ? get_class($unserialized) : 'null'));
             // Validate it's a traversable feed object
             if ($unserialized && is_iterable($unserialized)) {
                 $view->planet = $unserialized;
+                error_log("HOME DEBUG: Set view->planet successfully");
+            } else {
+                error_log("HOME DEBUG: Planet validation failed");
             }
+        } else {
+            error_log("HOME DEBUG: No planet cache found");
         }
 
         if ($view->planet === null) {
+            error_log("HOME DEBUG: Fetching planet feed from URL");
             try {
                 // Use config variable with fallback to default
                 $planetFeedUrl = $GLOBALS['planet_feed_url'] ?? 'https://www.ralf-lang.de/tag/horde/feed/';
                 // Suppress deprecation warnings from Horde_Xml_Element
                 $view->planet = @Horde_Feed::readUri($planetFeedUrl, $httpClient);
+                error_log("HOME DEBUG: Fetched planet, class=" . get_class($view->planet));
             } catch (Throwable $e) {
                 $this->logger->error(
                     'Home controller: Failed to fetch Planet Horde feed: {exception}: {message}',
@@ -153,25 +162,36 @@ class Home implements RequestHandlerInterface
                     ]
                 );
                 $view->planet = null;
+                error_log("HOME DEBUG: Planet fetch failed: " . $e->getMessage());
             }
             $cache->set($planetKey, serialize($view->planet));
+            error_log("HOME DEBUG: Cached planet feed");
         }
 
         // Get the complete Horde feed (no tags)
         $hordefeedKey = 'hordefeed_' . $cacheVersion;
         $view->hordefeed = null;
         if ($hordefeed = $cache->get($hordefeedKey, 600)) {
+            error_log("HOME DEBUG: Got hordefeed from cache, size=" . strlen($hordefeed));
             $unserialized = @unserialize($hordefeed);
+            error_log("HOME DEBUG: Unserialized hordefeed, class=" . ($unserialized ? get_class($unserialized) : 'null'));
             // Validate it's a traversable feed object
             if ($unserialized && is_iterable($unserialized)) {
                 $view->hordefeed = $unserialized;
+                error_log("HOME DEBUG: Set view->hordefeed successfully");
+            } else {
+                error_log("HOME DEBUG: Hordefeed validation failed");
             }
+        } else {
+            error_log("HOME DEBUG: No hordefeed cache found");
         }
 
         if ($view->hordefeed === null) {
+            error_log("HOME DEBUG: Fetching hordefeed from URL");
             try {
                 // Suppress deprecation warnings from Horde_Xml_Element
                 $view->hordefeed = @Horde_Feed::readUri($GLOBALS['feed_url'], $httpClient);
+                error_log("HOME DEBUG: Fetched hordefeed, class=" . get_class($view->hordefeed));
             } catch (Throwable $e) {
                 $this->logger->error(
                     'Home controller: Failed to fetch Horde news feed: {exception}: {message}',
@@ -181,9 +201,14 @@ class Home implements RequestHandlerInterface
                     ]
                 );
                 $view->hordefeed = null;
+                error_log("HOME DEBUG: Hordefeed fetch failed: " . $e->getMessage());
             }
             $cache->set($hordefeedKey, serialize($view->hordefeed));
+            error_log("HOME DEBUG: Cached hordefeed");
         }
+
+        error_log("HOME DEBUG: Final planet=" . ($view->planet ? get_class($view->planet) : 'null'));
+        error_log("HOME DEBUG: Final hordefeed=" . ($view->hordefeed ? get_class($view->hordefeed) : 'null'));
 
         return $this->renderTemplate($view, 'index', 'home');
     }

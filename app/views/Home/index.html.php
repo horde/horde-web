@@ -58,7 +58,7 @@
                   <div class="planethorde">
                     <ul>
                       <?php if (empty($this->hordefeed)):?>
-                        <li>The Horde newsfeed is temporarily unavailable.</li>
+                        <li>The Horde newsfeed is temporarily unavailable. (empty=true, class=<?php echo $this->hordefeed ? get_class($this->hordefeed) : 'null'; ?>)</li>
                       <?php else: ?> <?php $i = 0; ?> <?php foreach
                       ($this->hordefeed as $entry): if ($i++ >=
                       $this->maxHordeItems) { break; } echo
@@ -72,7 +72,7 @@
                     <ul>
                       <?php if (empty($this->planet)):?>
                         <li>The Planet Horde newsfeed is temporarily
-                      unavailable.</li>  <?php else: ?> <?php $i = 0; ?>
+                      unavailable. (empty=true, class=<?php echo $this->planet ? get_class($this->planet) : 'null'; ?>)</li>  <?php else: ?> <?php $i = 0; ?>
                       <?php foreach ($this->planet as $entry): if ($i++ >=
                       $this->maxPlanetItems) { break; } echo
                       $this->renderPartial('feedListDetailedItem', array('locals' =>
