@@ -1,7 +1,7 @@
 <div class="content">
   <div class="main">
     <div class="mainareasplit">
-        <h2><span>&nbsp;</span>Support</h2>
+        <h2><span>&nbsp;</span><?php echo $this->breadcrumb?></h2>
         <div class="section">
          <div class="sectionintro">
            <p>The Horde Project provides two levels of support for our software

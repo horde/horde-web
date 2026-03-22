@@ -74,6 +74,7 @@ class Library implements RequestHandlerInterface
         $this->addSyntaxhighlighter();
         $view = $this->setupView();
         $view->page_title = 'Horde PHP Libraries';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         $view->libraryListController = array('controller' => 'library', 'action' => '');
         return $this->renderTemplate($view, 'index', 'main');
     }
@@ -86,6 +87,7 @@ class Library implements RequestHandlerInterface
             return $this->notFoundAction();
         }
 
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         return $this->renderTemplate($view, 'library', 'main');
     }
 
@@ -96,6 +98,7 @@ class Library implements RequestHandlerInterface
 
         if ($this->isKnownLibrary($view)) {
             $template = 'download';
+            $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         } else {
             $template = '404';
         }
@@ -109,6 +112,7 @@ class Library implements RequestHandlerInterface
 
         if ($this->isKnownLibrary($view)) {
             $template = 'docs';
+            $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
             \Horde::startBuffer();
             include $GLOBALS['fs_base'] . '/app/views/Library/libraries/' . $view->libraryName . '/docs/' . ($this->route['file'] ?? 'docs') . '.html';
             $view->content = \Horde::endBuffer();
