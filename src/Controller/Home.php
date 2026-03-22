@@ -24,7 +24,11 @@ use Psr\Log\LoggerInterface;
 use Horde_Injector;
 use Horde_Cache;
 use Horde_Feed;
+use Horde_Http_Client;
 use HordeWeb_Utils;
+use HordeWeb_Script_File;
+use Horde_Script_File_External;
+use Horde_Themes_Element;
 use Horde\Routes\Utils;
 use Horde\Log\Logger;
 use Horde\Log\Handler\Syslog as SyslogHandler;
@@ -119,6 +123,10 @@ class Home implements RequestHandlerInterface
         // Cache version to invalidate old serialized data
         $cacheVersion = 'v2';
 
+        // Create HTTP client with custom timeout
+        $feedTimeout = $GLOBALS['feed_timeout'] ?? 5;
+        $httpClient = new Horde_Http_Client(['request.timeout' => $feedTimeout]);
+
         // Get the planet feed
         $planetKey = 'planet_' . $cacheVersion;
         if ($planet = $cache->get($planetKey, 600)) {
@@ -134,7 +142,9 @@ class Home implements RequestHandlerInterface
 
         if (!isset($view->planet)) {
             try {
-                $view->planet = Horde_Feed::readUri('https://www.ralf-lang.de/tag/horde/feed');
+                // Use config variable with fallback to default
+                $planetFeedUrl = $GLOBALS['planet_feed_url'] ?? 'https://www.ralf-lang.de/tag/horde/feed/';
+                $view->planet = Horde_Feed::readUri($planetFeedUrl, $httpClient);
             } catch (Throwable $e) {
                 $this->logger->error(
                     'Home controller: Failed to fetch Planet Horde feed: {exception}: {message}',
@@ -163,7 +173,7 @@ class Home implements RequestHandlerInterface
 
         if (!isset($view->hordefeed)) {
             try {
-                $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url']);
+                $view->hordefeed = Horde_Feed::readUri($GLOBALS['feed_url'], $httpClient);
             } catch (Throwable $e) {
                 $this->logger->error(
                     'Home controller: Failed to fetch Horde news feed: {exception}: {message}',
@@ -274,14 +284,14 @@ class Home implements RequestHandlerInterface
         // Setup page output (scripts, CSS)
         $pageOutput = $this->injector->getInstance('Horde_PageOutput');
         $pageOutput->addScriptFile(
-            new \HordeWeb_Script_File('jquery-1.4.4.min.js')
+            new HordeWeb_Script_File('jquery-1.4.4.min.js')
         );
-        $pageOutput->addScriptFile(new \Horde_Script_File_External(
+        $pageOutput->addScriptFile(new Horde_Script_File_External(
             'https://apis.google.com/js/plusone.js'
         ));
 
         // Add main CSS
-        $css = new \Horde_Themes_Element(
+        $css = new Horde_Themes_Element(
             'horde.css',
             array('data' => array(
                'fs' => $GLOBALS['fs_base'] . '/css/horde.css',
