@@ -4,14 +4,13 @@
         <h3>Applications</h3>
 
         <p>The documentation that is being distributed with the various Horde
-        applications are also available online. You can view the <?php echo
-        $this->linkTo('Applications page', array('controller' => 'app')) ?> and
+        applications are also available online. You can view the <a href="<?php echo $this->urlWriter->urlFor('apps')?>">Applications page</a> and
         select the application you are looking for.</p>
 
         <p>A <strong>flyer</strong> for <a href="<?php echo
-        $this->urlWriter->urlFor('app', array('app' => 'groupware')) ?>/">Horde
+        $this->urlWriter->urlFor('app', ['app' => 'groupware']) ?>/">Horde
         Groupware</a> and <a href="<?php echo $this->urlWriter->urlFor('app',
-        array('app' => 'webmail')) ?>">Horde Groupware Webmail Edition</a>
+        ['app' => 'webmail']) ?>">Horde Groupware Webmail Edition</a>
         which summarizes the features and requirements is available as
         a <a href="<?php echo $GLOBALS['host_base']?>/papers/groupware.pdf">PDF
         file for download</a> (<a href="<?php echo
@@ -31,7 +30,7 @@
         <h3>Library</h3>
 
         <p>The <a
-        href="<?php echo $this->urlWriter->urlFor('community', array('action' => 'papers')) ?>">Horde
+        href="<?php echo $this->urlWriter->urlFor('community', ['action' => 'papers']) ?>">Horde
         Library</a> is a collection of papers, reports, and presentations given
         by Horde developers over the years.</p>
 
