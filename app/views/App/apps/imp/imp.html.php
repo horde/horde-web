@@ -57,9 +57,9 @@
      <li>Folder subscriptions</li>
      <li>Various identities</li>
      <li>Alias and "tied to" addresses in user identities</li>
-     <li><?php echo $this->linkTo('Integration with e-mail filtering', array('controller' => 'app', 'action' => 'app', 'app' => 'ingo'))?></li>
-     <li><?php echo $this->linkTo('Integration with addressbook', array('controller' => 'app', 'action' => 'app', 'app' => 'turba'))?></li>
-     <li><?php echo $this->linkTo('Integration with calendar', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith'))?></li>
+     <li><a href="<?php echo $this->urlWriter->urlFor('app', ['app' => 'ingo'])?>">Integration with e-mail filtering</a></li>
+     <li><a href="<?php echo $this->urlWriter->urlFor('app', ['app' => 'turba'])?>">Integration with addressbook</a></li>
+     <li><a href="<?php echo $this->urlWriter->urlFor('app', ['app' => 'kronolith'])?>">Integration with calendar</a></li>
      <li>S/MIME and PGP based encryption and signatures</li>
      <li>Mailbox quotas</li>
      <li>Ability to forward multiple messages at once</li>
@@ -76,9 +76,9 @@
 
  <h3>Related Resources</h3>
  <p>
-  <?php echo $this->linkTo('Turba contact manager', array('controller' => 'app', 'action' => 'app', 'app' => 'turba'))?><br />
-  <?php echo $this->linkTo('Ingo filters manager', array('controller' => 'app', 'action' => 'app', 'app' => 'ingo'))?><br />
-  <?php echo $this->linkTo('Kronolith calendar module', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith'))?><br />
-  <?php echo $this->linkTo('Sork account management modules (Passwd, Vacation, Forwards)', array('controller' => 'app', 'action' => 'app', 'app' => 'sork'))?><br />
+  <a href="<?php echo $this->urlWriter->urlFor('app', ['app' => 'turba'])?>">Turba contact manager</a><br />
+  <a href="<?php echo $this->urlWriter->urlFor('app', ['app' => 'ingo'])?>">Ingo filters manager</a><br />
+  <a href="<?php echo $this->urlWriter->urlFor('app', ['app' => 'kronolith'])?>">Kronolith calendar module</a><br />
+  <a href="<?php echo $this->urlWriter->urlFor('app', ['app' => 'sork'])?>">Sork account management modules (Passwd, Vacation, Forwards)</a><br />
  </p>
 

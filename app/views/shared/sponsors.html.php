@@ -11,7 +11,7 @@
     </div>
   </form>
   <p class="wishlist">
-    <?php echo $this->linkTo('Buy a present for our developers', array('controller' => 'community', 'action' => 'team')); ?>
+    <a href="<?php echo $this->urlWriter->urlFor('team'); ?>">Buy a present for our developers</a>
   </p>
 
   <h2>Sponsors</h2>
@@ -20,7 +20,7 @@
     <li><a href="https://b1-systems.de/"><img src="<?php echo $GLOBALS['host_base'] ?>/images/b1systems.jpg" alt="B1 Systems"></a></li>
   </ul>
   <p class="thanks">
-    <?php echo $this->linkTo('"Thanks!" to all our other sponsors', array('controller' => 'home', 'action' => 'thanks')); ?>
+    <a href="<?php echo $this->urlWriter->urlFor('thanks'); ?>">"Thanks!" to all our other sponsors</a>
   </p>
 
   <h2>More</h2>
@@ -29,7 +29,7 @@
   <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
 
   <p>
-    <?php echo $this->linkTo('Logos', array('controller' => 'home', 'action' => 'logos'), array('class' => 'logos'));?>
+    <a href="<?php echo $this->urlWriter->urlFor('logos');?>" class="logos">Logos</a>
   </p>
 
   <h2>Shops</h2>

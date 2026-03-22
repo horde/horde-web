@@ -18,15 +18,15 @@
       <p>Happy Hunting</p>
 
       <ul>
-        <li><?php echo $this->linkTo('Community', array('controller' => 'community'))?>
+        <li><a href="<?php echo $this->urlWriter->urlFor('community')?>">Community</a>
         - Our community section. Here you will find information about the
         Horde Project and the people that make it what it is.</li>
 
-        <li><?php echo $this->linkTo('Development', array('controller' => 'development'))?>
+        <li><a href="<?php echo $this->urlWriter->urlFor('development')?>">Development</a>
         - Our development section. Here you will find information about coding
         with our libraries or accessing our source code.</li>
 
-        <li><?php echo $this->linkTo('Support', array('controller' => 'support'))?>
+        <li><a href="<?php echo $this->urlWriter->urlFor('support')?>">Support</a>
         - Here you will find various support options.</li>
       </ul>
 

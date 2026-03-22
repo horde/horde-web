@@ -22,7 +22,7 @@
          that volunteer their time and many years of experience to provide
          support.</p>
          <p>Please see our
-         <?php echo $this->linkTo('Community Support', array('controller' => 'community', 'action' => 'support'))?>
+         <a href="<?php echo $this->urlWriter->urlFor('community', ['action' => 'support'])?>">Community Support</a>
          page for more information.
 
          <h3>Professional Services</h3>
@@ -30,7 +30,7 @@
          are in need of support beyond the scope or ability of the community you
          may hire a Horde, LLC consultant to meet your needs.</p>
          <p>Please see our
-         <?php echo $this->linkTo('Professional Services', array('controller' => 'services'))?> page for more information.</p>
+         <a href="<?php echo $this->urlWriter->urlFor('services')?>">Professional Services</a> page for more information.</p>
 
         </div>
     </div>

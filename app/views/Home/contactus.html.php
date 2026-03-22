@@ -9,11 +9,9 @@
         </div>
 
         <h3>Email/IRC</h3>
-        <p> We have numerous <?php echo $this->linkTo('mailing lists',
-        array('controller' => 'home', 'action' => 'mail')) ?> to help answer
+        <p> We have numerous <a href="<?php echo $this->urlWriter->urlFor('mail')?>">mailing lists</a> to help answer
         your questions, and are also availble on the #horde channel on
-        freenode. See the <?php echo $this->linkTo('support',
-        array('controller' => 'support', 'action' => 'index')) ?> page for more
+        freenode. See the <a href="<?php echo $this->urlWriter->urlFor('support')?>">support</a> page for more
         details on IRC.</p>
 
         <h3>Security Concerns</h3>
@@ -27,8 +25,7 @@
         <p>If you are looking to contact us about possible consulting servcies
         or other custom work, you may contact us at
         <a href="mailto:info@horde.org">info@horde.org</a>. You can also view
-        our <?php echo $this->linkTo('Services', array('controller' =>
-        'services', 'action' => 'index')) ?> page for more information.</p>
+        our <a href="<?php echo $this->urlWriter->urlFor('services')?>">Services</a> page for more information.</p>
 
       </div>
     </div>
