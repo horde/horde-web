@@ -9,7 +9,7 @@
  * @license  http://opensource.org/licenses/bsd-license.php BSD
  * @author   Michael J Rubinsky <mrubinsk@horde.org>
  * @author   Gunnar Wrobel <wrobel@horde.org>
- * @author   Ralf Lang <lang@b1-systems.de>
+ * @author   Ralf Lang <ralf.lang@ralf-lang.de>
  */
 
 declare(strict_types=1);

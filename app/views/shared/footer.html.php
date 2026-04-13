@@ -22,7 +22,8 @@
         <li><a href="https://www.x.com/hordeproject" class="twitter">X</a></li>
         <li><a href="https://www.facebook.com/hordeproject" class="facebook">Facebook</a></li>
         <li><a href="https://github.com/horde" class="github">GitHub</a></li>
-        <li><a href="https://www.ohloh.net/p/horde" class="ohloh">Ohloh</a></li>
+        <li><a href="https://openhub.net/p/horde" class="ohloh">OpenHub</a></li>
+        <li><a rel="me" href="https://floss.social/@horde" class="mastodon">Mastodon</a></li>
       </ul>
     </div>
     <?php echo $this->render('contact'); ?>

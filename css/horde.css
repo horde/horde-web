@@ -502,6 +502,10 @@ div.footer .follow-us .ohloh {
     background: url(../images/ohloh.png) no-repeat;
     padding-left: 24px;
 }
+div.footer .follow-us .mastodon {
+    background: url(../images/mastodon.png) no-repeat;
+    padding-left: 24px;
+}
 div.footer .follow-us .newsletter {
     background: url(../images/newsletter.png) no-repeat;
     padding-left: 24px;
