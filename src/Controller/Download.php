@@ -33,6 +33,7 @@ class Download implements RequestHandlerInterface
     private ResponseFactoryInterface $responseFactory;
     private StreamFactoryInterface $streamFactory;
     private array $route;
+    private string $era = 'h6';
 
     public function __construct(
         Horde_Injector $injector,
@@ -50,7 +51,9 @@ class Download implements RequestHandlerInterface
         $action = $this->route['action'] ?? 'index';
 
         return match ($action) {
-            'app' => $this->appAction(),
+            'app' => $this->h6Action(),
+            'h5' => $this->h5Action(),
+            'h6' => $this->h6Action(),
             default => $this->notFoundAction(),
         };
     }
@@ -65,8 +68,9 @@ class Download implements RequestHandlerInterface
         return $this->injector->getInstance('HordeWeb_View');
     }
 
-    private function appAction(): ResponseInterface
+    private function h5Action(): ResponseInterface
     {
+        $this->era = 'h5';
         $app = $this->route['app'] ?? '';
         if (empty($app)) {
             exit;
@@ -151,7 +155,27 @@ class Download implements RequestHandlerInterface
         $view->devapp = $devapp;
         $view->app_info = $app_info;
 
-        return $this->renderTemplate($view, 'app', 'main');
+        return $this->renderTemplate($view, 'app_h5', 'main');
+    }
+
+    private function h6Action(): ResponseInterface
+    {
+        $this->era = 'h6';
+        $app = $this->route['app'] ?? '';
+        if (empty($app)) {
+            exit;
+        }
+
+        $view = $this->setupView();
+        $view->page_title = 'Downloads - The Horde Project';
+        $view->appname = $app;
+
+        $app_info = [];
+        $app_info['name'] = ucfirst($app);
+
+        $view->app_info = $app_info;
+
+        return $this->renderTemplate($view, 'app_h6', 'main');
     }
 
     private function notFoundAction(): ResponseInterface
@@ -170,9 +194,6 @@ class Download implements RequestHandlerInterface
         $pageOutput->addScriptFile(
             new \HordeWeb_Script_File('jquery-1.4.4.min.js')
         );
-        $pageOutput->addScriptFile(new \Horde_Script_File_External(
-            'https://apis.google.com/js/plusone.js'
-        ));
 
         // Add main CSS
         $css = new \Horde_Themes_Element(

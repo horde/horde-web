@@ -159,9 +159,6 @@ class Community implements RequestHandlerInterface
         $pageOutput->addScriptFile(
             new \HordeWeb_Script_File('jquery-1.4.4.min.js')
         );
-        $pageOutput->addScriptFile(new \Horde_Script_File_External(
-            'https://apis.google.com/js/plusone.js'
-        ));
 
         // Add main CSS
         $css = new \Horde_Themes_Element(
