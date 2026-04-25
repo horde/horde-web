@@ -57,18 +57,16 @@
 
         <p>The Horde applications are written in <a href="https://php.net/">PHP</a>,
         a scripting language explicitly designed to be embedded in web pages. PHP can
-        be embedded directly into the web server, with plugins for not just <a
-        href="https://apache.org/">Apache</a> but also <a
+        be embedded directly into the web server, with plugins for <a
+        href="https://apache.org/">Apache</a>, <a
         href="https://iis.net/">IIS</a>, <a
-        href="https://wwws.sun.com/software/products/web_srvr/home_web_srvr.html">Sun Web
-        Server</a>, and <a
         href="https://redmine.lighttpd.net/projects/show/lighttpd/">Lighttpd</a>
         etc.</p>
 
         <p>Horde modules should run on any platform that can run PHP
         (including as a cgi), assuming any required support modules
-        (IMAP, for instance) are present. The latest version of Horde, Horde 5
-        requires the use of PHP 5.3 or above.</p>
+        (IMAP, for instance) are present. The latest version of Horde, Horde 6
+        requires the use of PHP 8.1 or above.</p>
       </div>
     </div>
      <div class="rightcol" style="background: none;">

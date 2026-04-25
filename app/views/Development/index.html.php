@@ -30,9 +30,8 @@
         your needs. If you intend to contribute to the project, you should
         <?php echo $this->linkTo('clone our Git repository', array(
         'controller' => 'development', 'action' => 'git'))?>.</p>
-        <p>You may also browse our <a href="http://git.horde.org">Git</a> and
-        older <a href="http://cvs.horde.org">CVS</a> code trees directly
-        online.</p>
+        <p>You may also browse our <a href="http://git.horde.org">Git</a>
+        code tree directly online.</p>
 
         <h3>Versions</h3>
         <p>Being a mature project, there are quite a few older versions of our
