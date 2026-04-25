@@ -23,7 +23,10 @@
         "horde/argv": "^3",
         "horde/yaml": "^3",
         "horde/group": "^3",
-        "horde/phpconfigfile": "^1 || ^0"
+        "horde/phpconfigfile": "^1 || ^0",
+        "horde/feed": "^3",
+        "horde/log": "^3",
+        "psr/log": "^3"
     },
     "require-dev": {
         "horde/test": "^3",
