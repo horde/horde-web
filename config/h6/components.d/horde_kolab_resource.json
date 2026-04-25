@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Kolab_Resource",
+    "summary": "Kolab resource management library",
+    "description": "A library to allow booking of Kolab server resources.",
+    "version": "1.0.0alpha2",
+    "releaseDate": "2021-12-18 20:39:44 +0100",
+    "download": "https://packagist.org/packages/horde/kolab_resource",
+    "hasCi": false,
+    "hasDocuments": false
+}

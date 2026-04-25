@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Serialize",
+    "summary": "Data serialization library",
+    "description": "A library for encapsulating complex data into simple strings.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-03-27 22:49:01 +0100",
+    "download": "https://packagist.org/packages/horde/serialize",
+    "hasCi": false,
+    "hasDocuments": true
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Mail",
+    "summary": "Mail library",
+    "description": "A library that provides interfaces for sending e-mail messages and parsing e-mail addresses.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-24 23:00:06 +0200",
+    "download": "https://packagist.org/packages/horde/mail",
+    "hasCi": false,
+    "hasDocuments": true
+}

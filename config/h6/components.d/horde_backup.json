@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Backup",
+    "summary": "Backup and restore library",
+    "description": "A library that drives the backup and restore features of Horde applications.",
+    "version": "2.0.0-alpha4",
+    "releaseDate": "2025-06-05 14:36:16 +0200",
+    "download": "https://packagist.org/packages/horde/backup",
+    "hasCi": false,
+    "hasDocuments": false
+}

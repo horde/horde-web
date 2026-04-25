@@ -1,0 +1,10 @@
+{
+    "name": "Horde_JavascriptMinify_Jsmin",
+    "summary": "JavaScript minification library - JSMin driver",
+    "description": "The JSMin javascript minifier driver for use with the Horde_JavascriptMinify library.",
+    "version": "2.0.0alpha5",
+    "releaseDate": "2023-12-04 19:40:51 +0100",
+    "download": "https://packagist.org/packages/horde/javascriptminify_jsmin",
+    "hasCi": false,
+    "hasDocuments": false
+}

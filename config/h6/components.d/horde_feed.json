@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Feed",
+    "summary": "Feed client library",
+    "description": "A library for working with feed formats such as RSS and Atom.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-03-23 07:14:53 +0100",
+    "download": "https://packagist.org/packages/horde/feed",
+    "hasCi": false,
+    "hasDocuments": true
+}

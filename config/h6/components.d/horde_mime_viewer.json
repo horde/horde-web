@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Mime_Viewer",
+    "summary": "MIME viewer library",
+    "description": "A library that provides rendering drivers for MIME data.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-01 15:58:29 +0200",
+    "download": "https://packagist.org/packages/horde/mime_viewer",
+    "hasCi": false,
+    "hasDocuments": true
+}

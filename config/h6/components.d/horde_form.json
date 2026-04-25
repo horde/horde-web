@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Form",
+    "summary": "Form library",
+    "description": "A library that provides form rendering, validation, and other functionality.",
+    "version": "3.0.0-beta8",
+    "releaseDate": "2026-04-20 14:59:36 +0200",
+    "download": "https://packagist.org/packages/horde/form",
+    "hasCi": false,
+    "hasDocuments": true
+}

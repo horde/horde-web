@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Itip",
+    "summary": "iTip invitation response library",
+    "description": "A library to generate MIME encapsuled responses to iCalendar invitations.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-16 07:13:55 +0100",
+    "download": "https://packagist.org/packages/horde/itip",
+    "hasCi": false,
+    "hasDocuments": true
+}

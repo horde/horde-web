@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Pack",
+    "summary": "Data packing library",
+    "description": "A replacement library for serialize()/json_encode() that will automatically use the most efficient serialization available based on the input.",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-04-08 06:30:01 +0200",
+    "download": "https://packagist.org/packages/horde/pack",
+    "hasCi": false,
+    "hasDocuments": false
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Lens",
+    "summary": "Lens decorating iterator/flyweight library",
+    "description": "A library for wrapping iterators to avoid looping over them multiple times, using a single decorator object (the \"lens\") instead of creating one decorator for every element.",
+    "version": "1.0.0-beta1",
+    "releaseDate": "2026-03-27 18:11:46 +0100",
+    "download": "https://packagist.org/packages/horde/lens",
+    "hasCi": false,
+    "hasDocuments": false
+}

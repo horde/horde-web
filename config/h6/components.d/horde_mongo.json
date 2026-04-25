@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Mongo",
+    "summary": "MongoDB client library",
+    "description": "A library that wraps different MongoDB extensions to provide a consistent API.",
+    "version": "2.0.0alpha3",
+    "releaseDate": "2021-11-06 08:13:22 +0000",
+    "download": "https://packagist.org/packages/horde/mongo",
+    "hasCi": false,
+    "hasDocuments": false
+}

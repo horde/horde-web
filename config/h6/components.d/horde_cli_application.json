@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Cli_Application",
+    "summary": "Library for creating command line applications",
+    "description": "A library that builds a complete command line application.",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-03-15 16:42:50 +0100",
+    "download": "https://packagist.org/packages/horde/cli_application",
+    "hasCi": false,
+    "hasDocuments": false
+}

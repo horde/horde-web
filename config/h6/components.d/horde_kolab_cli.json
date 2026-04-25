@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Kolab_Cli",
+    "summary": "Kolab storage command line interface library",
+    "description": "A set of utilities to deal with the various aspects of a Kolab server as backend. The primary focus is dealing with the data stored in IMAP.",
+    "version": "1.0.0beta1",
+    "releaseDate": "2021-12-18 20:39:36 +0100",
+    "download": "https://packagist.org/packages/horde/kolab_cli",
+    "hasCi": false,
+    "hasDocuments": true
+}

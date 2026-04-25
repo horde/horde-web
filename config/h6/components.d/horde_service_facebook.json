@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Service_Facebook",
+    "summary": "Facebook client library",
+    "description": "A client library for the Facebook REST API.",
+    "version": "3.0.0alpha2",
+    "releaseDate": "2021-07-15 10:21:07 +0200",
+    "download": "https://packagist.org/packages/horde/service_facebook",
+    "hasCi": false,
+    "hasDocuments": true
+}

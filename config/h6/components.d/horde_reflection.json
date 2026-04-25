@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Reflection",
+    "summary": "Method reflection and documentation library",
+    "description": "The Reflection library provides methods for generationg code reflection and automatic documentation of methods.\nThe package has a driver based output generation and currently generates HTML and Text_Wiki output.",
+    "version": "1.0.0alpha2",
+    "releaseDate": "2021-07-15 10:14:32 +0200",
+    "download": "https://packagist.org/packages/horde/reflection",
+    "hasCi": false,
+    "hasDocuments": false
+}

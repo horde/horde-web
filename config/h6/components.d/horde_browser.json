@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Browser",
+    "summary": "Browser detection library",
+    "description": "A library for getting information about the current user's browser and its capabilities.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-04 10:38:14 +0200",
+    "download": "https://packagist.org/packages/horde/browser",
+    "hasCi": false,
+    "hasDocuments": true
+}

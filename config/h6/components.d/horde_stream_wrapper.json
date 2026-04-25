@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Stream_Wrapper",
+    "summary": "PHP stream wrappers library",
+    "description": "A library of stream wrappers.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-08 15:33:45 +0200",
+    "download": "https://packagist.org/packages/horde/stream_wrapper",
+    "hasCi": false,
+    "hasDocuments": true
+}

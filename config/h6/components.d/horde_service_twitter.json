@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Service_Twitter",
+    "summary": "Twitter client library",
+    "description": "A client library for the Twitter REST API.",
+    "version": "3.0.0alpha2",
+    "releaseDate": "2026-04-23 20:56:24 +0100",
+    "download": "https://packagist.org/packages/horde/service_twitter",
+    "hasCi": false,
+    "hasDocuments": false
+}

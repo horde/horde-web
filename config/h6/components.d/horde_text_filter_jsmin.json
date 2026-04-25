@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Text_Filter_Jsmin",
+    "summary": "Text filtering and conversion library - JSMin driver",
+    "description": "The JSMin javascript minifier driver for use with the Horde_Text_Filter library.",
+    "version": "2.0.0alpha4",
+    "releaseDate": "2023-12-22 12:59:33 +0100",
+    "download": "https://packagist.org/packages/horde/text_filter_jsmin",
+    "hasCi": false,
+    "hasDocuments": false
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_ActiveSync",
+    "summary": "ActiveSync server library",
+    "description": "A library for implementing an ActiveSync server.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-08 16:48:44 +0200",
+    "download": "https://packagist.org/packages/horde/activesync",
+    "hasCi": false,
+    "hasDocuments": true
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Dns",
+    "summary": "Horde Domain Name System library",
+    "description": "Libraries for configuring DNS servers",
+    "version": "1.0.0alpha1",
+    "releaseDate": "2025-03-05 11:08:59 +0100",
+    "download": "https://packagist.org/packages/horde/dns",
+    "hasCi": false,
+    "hasDocuments": false
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Notification",
+    "summary": "Notification library implementing subject-observer pattern",
+    "description": "A library implementing a subject-observer pattern for raising and showing messages of different types and to different listeners.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-08 05:34:37 +0200",
+    "download": "https://packagist.org/packages/horde/notification",
+    "hasCi": false,
+    "hasDocuments": true
+}

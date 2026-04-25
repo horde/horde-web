@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Rdo",
+    "summary": "ORM (object relational-mapping) library",
+    "description": "Rampage Data Objects. Lightweight ORM library.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-12 17:57:05 +0200",
+    "download": "https://packagist.org/packages/horde/rdo",
+    "hasCi": false,
+    "hasDocuments": true
+}

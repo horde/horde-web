@@ -1,0 +1,10 @@
+{
+    "name": "Horde_githubapiclient",
+    "summary": "Interact with the Github API from PHP code",
+    "description": "Github REST API Client.",
+    "version": "0.0.1-alpha5",
+    "releaseDate": "2026-04-23 19:20:57 +0100",
+    "download": "https://packagist.org/packages/horde/githubapiclient",
+    "hasCi": false,
+    "hasDocuments": false
+}

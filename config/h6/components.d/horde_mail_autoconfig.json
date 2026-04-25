@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Mail_Autoconfig",
+    "summary": "Mail server autoconfiguration library",
+    "description": "A library to automatically determine configuration options for various remote mail services (IMAP/POP3/SMTP).",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-04-17 06:12:26 +0200",
+    "download": "https://packagist.org/packages/horde/mail_autoconfig",
+    "hasCi": false,
+    "hasDocuments": false
+}

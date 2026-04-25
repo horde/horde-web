@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Exception",
+    "summary": "Exception handler library",
+    "description": "A library that provides the default exception handlers for the Horde Framework.",
+    "version": "3.0.0-beta6",
+    "releaseDate": "2026-04-20 09:00:32 +0200",
+    "download": "https://packagist.org/packages/horde/exception",
+    "hasCi": false,
+    "hasDocuments": true
+}

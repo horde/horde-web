@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Queue",
+    "summary": "Message and data queuing client library",
+    "description": "A queue library with various storage backends and runners.",
+    "version": "2.0.0alpha6",
+    "releaseDate": "2022-11-15 10:13:13 +0000",
+    "download": "https://packagist.org/packages/horde/queue",
+    "hasCi": false,
+    "hasDocuments": true
+}

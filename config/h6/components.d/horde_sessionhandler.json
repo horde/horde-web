@@ -1,0 +1,10 @@
+{
+    "name": "Horde_SessionHandler",
+    "summary": "Session handler library",
+    "description": "Horde_SessionHandler defines an API for implementing custom session handlers for PHP.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-15 14:10:27 +0200",
+    "download": "https://packagist.org/packages/horde/sessionhandler",
+    "hasCi": false,
+    "hasDocuments": true
+}

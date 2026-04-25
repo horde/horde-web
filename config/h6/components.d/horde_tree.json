@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Tree",
+    "summary": "Tree rendering library",
+    "description": "A library providing tree views of hierarchical information. It allows for expanding/collapsing of branches and maintains their state.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-07 17:47:29 +0200",
+    "download": "https://packagist.org/packages/horde/tree",
+    "hasCi": false,
+    "hasDocuments": true
+}

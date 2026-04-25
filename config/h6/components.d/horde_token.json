@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Token",
+    "summary": "Tokens library",
+    "description": "A library that provides a common abstracted interface into the various token generation mediums. It also includes all of the functions for retrieving, storing, and checking tokens.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-07 16:33:52 +0200",
+    "download": "https://packagist.org/packages/horde/token",
+    "hasCi": false,
+    "hasDocuments": true
+}

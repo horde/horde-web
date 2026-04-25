@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Compress",
+    "summary": "Compression library",
+    "description": "A library to wrap various compression techniques.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-15 16:45:06 +0100",
+    "download": "https://packagist.org/packages/horde/compress",
+    "hasCi": false,
+    "hasDocuments": true
+}

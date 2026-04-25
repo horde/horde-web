@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Icalendar",
+    "summary": "iCalendar and vCard library",
+    "description": "A library for dealing with iCalendar and vCard data.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-23 13:56:37 +0200",
+    "download": "https://packagist.org/packages/horde/icalendar",
+    "hasCi": false,
+    "hasDocuments": true
+}

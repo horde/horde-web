@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Jwt",
+    "summary": "Horde RFC 7519 JSON Web Token (JWT) Library",
+    "description": [],
+    "version": "1.0.0-beta2",
+    "releaseDate": "2026-04-18 18:54:13 +0200",
+    "download": "https://packagist.org/packages/horde/jwt",
+    "hasCi": false,
+    "hasDocuments": false
+}

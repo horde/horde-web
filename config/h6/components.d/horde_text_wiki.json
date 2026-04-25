@@ -1,0 +1,10 @@
+{
+    "name": "Horde_text_wiki",
+    "summary": "Horde.org PSR-4 successor to the 2010s fork of the original pear/text_wiki",
+    "description": "Parse structured wiki text and render into arbitrary formats such as XHTML, LaTeX, plain text, and Docbook. Supports multiple wiki markup formats including Mediawiki, Tiki, Creole, DokuWiki, BBCode, and Cowiki. Originally forked from PEAR Text_Wiki packages, now modernized for PHP 8+ with PSR-4 autoloading.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-24 18:45:27 +0200",
+    "download": "https://packagist.org/packages/horde/text_wiki",
+    "hasCi": false,
+    "hasDocuments": false
+}

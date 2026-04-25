@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Imap_Client",
+    "summary": "IMAP client library",
+    "description": "A library to access IMAP4rev1 (RFC 3501) mail servers. Also supports connections to POP3 (STD 53/RFC 1939).",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-24 17:38:39 +0200",
+    "download": "https://packagist.org/packages/horde/imap_client",
+    "hasCi": false,
+    "hasDocuments": true
+}

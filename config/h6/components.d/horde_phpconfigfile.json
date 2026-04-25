@@ -1,0 +1,10 @@
+{
+    "name": "Horde_phpconfigfile",
+    "summary": "Read and write config files as PHP Code",
+    "description": "PHP 8 style wrappers for reading and writing config files",
+    "version": "0.0.1-beta2",
+    "releaseDate": "2026-03-29 20:51:32 +0200",
+    "download": "https://packagist.org/packages/horde/phpconfigfile",
+    "hasCi": false,
+    "hasDocuments": false
+}

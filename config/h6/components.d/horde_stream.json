@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Stream",
+    "summary": "PHP streams library",
+    "description": "A library that provide an object-oriented interface to assist in creating and storing PHP stream resources, and to provide utility methods to access and manipulate the stream contents.",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-04-22 21:06:19 +0200",
+    "download": "https://packagist.org/packages/horde/stream",
+    "hasCi": false,
+    "hasDocuments": true
+}

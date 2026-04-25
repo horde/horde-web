@@ -1,0 +1,10 @@
+{
+    "name": "Horde_SpellChecker",
+    "summary": "Spellchecking library",
+    "description": "A library that provides an unified spellchecking API.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-17 14:00:51 +0200",
+    "download": "https://packagist.org/packages/horde/spellchecker",
+    "hasCi": false,
+    "hasDocuments": true
+}

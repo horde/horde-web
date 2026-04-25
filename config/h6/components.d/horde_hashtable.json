@@ -1,0 +1,10 @@
+{
+    "name": "Horde_HashTable",
+    "summary": "Hash table client library",
+    "description": "A library that provides access to various hash table implementations.",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-03-15 17:15:14 +0100",
+    "download": "https://packagist.org/packages/horde/hashtable",
+    "hasCi": false,
+    "hasDocuments": false
+}

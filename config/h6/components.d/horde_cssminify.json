@@ -1,0 +1,10 @@
+{
+    "name": "Horde_CssMinify",
+    "summary": "CSS minification library",
+    "description": "A library that wraps various CSS minification backends.",
+    "version": "2.0.0-beta6",
+    "releaseDate": "2026-03-31 09:13:49 +0200",
+    "download": "https://packagist.org/packages/horde/cssminify",
+    "hasCi": false,
+    "hasDocuments": false
+}

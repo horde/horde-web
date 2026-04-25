@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Text_Flowed",
+    "summary": "Flowed text library",
+    "description": "A library that provides common methods for manipulating text using the encoding described in RFC 3676 ('flowed' text).\n",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-28 13:29:02 +0100",
+    "download": "https://packagist.org/packages/horde/text_flowed",
+    "hasCi": false,
+    "hasDocuments": true
+}

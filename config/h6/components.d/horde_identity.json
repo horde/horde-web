@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Identity",
+    "summary": "Short headline for Identity",
+    "description": "Foundation classes and interfaces for treating identities as first class citizens at the centre of resource ownership, authentication and authorization. Identity has roots in the concept of paypal principals and in decoupling login users from persona. Identity is *not* the same as Horde_Prefs_Identity which is more like an email profile but takes over some of its concepts.",
+    "version": "1.0.0alpha1",
+    "releaseDate": "2026-04-20 12:10:45 +0200",
+    "download": "https://packagist.org/packages/horde/identity",
+    "hasCi": false,
+    "hasDocuments": false
+}

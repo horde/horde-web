@@ -34,6 +34,7 @@ class Library implements RequestHandlerInterface
     private ResponseFactoryInterface $responseFactory;
     private StreamFactoryInterface $streamFactory;
     private array $route;
+    private string $era = 'h6';
 
     public function __construct(
         Horde_Injector $injector,
@@ -51,7 +52,9 @@ class Library implements RequestHandlerInterface
         $action = $this->route['action'] ?? 'index';
 
         return match ($action) {
-            'index' => $this->indexAction(),
+            'index' => $this->h6Action(),
+            'h5' => $this->h5Action(),
+            'h6' => $this->h6Action(),
             'library' => $this->libraryAction(),
             'download' => $this->downloadAction(),
             'docs' => $this->docsAction(),
@@ -69,18 +72,31 @@ class Library implements RequestHandlerInterface
         return $this->injector->getInstance('HordeWeb_View');
     }
 
-    private function indexAction(): ResponseInterface
+    private function h5Action(): ResponseInterface
     {
+        $this->era = 'h5';
         $this->addSyntaxhighlighter();
         $view = $this->setupView();
-        $view->page_title = 'Horde PHP Libraries';
+        $view->page_title = 'Horde 5 PHP Libraries';
         $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         $view->libraryListController = array('controller' => 'library', 'action' => '');
-        return $this->renderTemplate($view, 'index', 'main');
+        return $this->renderTemplate($view, 'libraries_h5', 'main');
+    }
+
+    private function h6Action(): ResponseInterface
+    {
+        $this->era = 'h6';
+        $this->addSyntaxhighlighter();
+        $view = $this->setupView();
+        $view->page_title = 'Horde 6 PHP Libraries';
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
+        $view->libraryListController = array('controller' => 'library', 'action' => '');
+        return $this->renderTemplate($view, 'libraries_h6', 'main');
     }
 
     private function libraryAction(): ResponseInterface
     {
+        $this->detectEra();
         $view = $this->setupView();
 
         if (!$this->isKnownLibrary($view)) {
@@ -93,11 +109,12 @@ class Library implements RequestHandlerInterface
 
     private function downloadAction(): ResponseInterface
     {
+        $this->detectEra();
         $this->addSyntaxhighlighter();
         $view = $this->setupView();
 
         if ($this->isKnownLibrary($view)) {
-            $template = 'download';
+            $template = $this->era === 'h6' ? 'download_h6' : 'download';
             $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
         } else {
             $template = '404';
@@ -108,6 +125,7 @@ class Library implements RequestHandlerInterface
 
     private function docsAction(): ResponseInterface
     {
+        $this->detectEra();
         $view = $this->setupView();
 
         if ($this->isKnownLibrary($view)) {
@@ -130,13 +148,23 @@ class Library implements RequestHandlerInterface
         return $this->renderTemplate($view, '404', 'main', 404);
     }
 
+    private function detectEra(): void
+    {
+        $uri = $_SERVER['REQUEST_URI'] ?? '';
+        if (str_contains($uri, '/libraries/h5')) {
+            $this->era = 'h5';
+        } else {
+            $this->era = 'h6';
+        }
+    }
+
     private function isKnownLibrary(\Horde_View_Base $view): bool
     {
         if (!in_array($view->libraryName, $view->libraries)) {
             return false;
         }
         $view->page_title = $view->shortLibraryName . ' library - The Horde Project';
-        $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName);
+        $view->libraryDetails = HordeWeb_Utils::getLibraries()->fetchLibrary($view->libraryName, $this->era);
         return true;
     }
 
@@ -237,7 +265,8 @@ EOT;
         );
         $view->libraryName = $library;
         $view->shortLibraryName = str_replace('Horde_', '', $view->libraryName);
-        $view->libraries = HordeWeb_Utils::getLibraries()->listLibraries();
+        $view->libraries = HordeWeb_Utils::getLibraries()->listLibraries($this->era);
+        $view->era = $this->era;
 
         $view->host_base = $host_base;
 

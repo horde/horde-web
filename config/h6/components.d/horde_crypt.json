@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Crypt",
+    "summary": "Cryptography library",
+    "description": "A library that provides wrappers for various cryptographic systems.",
+    "version": "3.0.0-beta5",
+    "releaseDate": "2026-04-02 20:56:02 +0200",
+    "download": "https://packagist.org/packages/horde/crypt",
+    "hasCi": false,
+    "hasDocuments": true
+}

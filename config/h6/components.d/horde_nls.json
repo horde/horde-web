@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Nls",
+    "summary": "Native language support library",
+    "description": "A library for handling language data, timezones, and hostname->country lookups.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-02 21:17:21 +0200",
+    "download": "https://packagist.org/packages/horde/nls",
+    "hasCi": false,
+    "hasDocuments": true
+}

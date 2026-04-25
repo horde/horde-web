@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Date",
+    "summary": "Date library",
+    "description": "A library for creating and manipulating dates.",
+    "version": "3.0.0-beta8",
+    "releaseDate": "2026-04-18 21:44:13 +0100",
+    "download": "https://packagist.org/packages/horde/date",
+    "hasCi": false,
+    "hasDocuments": true
+}

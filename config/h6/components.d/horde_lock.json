@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Lock",
+    "summary": "Resource locking library",
+    "description": "A library that implements a resource locking system.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-07 22:55:17 +0200",
+    "download": "https://packagist.org/packages/horde/lock",
+    "hasCi": false,
+    "hasDocuments": true
+}

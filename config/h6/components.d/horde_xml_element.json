@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Xml_Element",
+    "summary": "XML element library",
+    "description": "A library that provides an element object that can be used to provide SimpleXML-like functionality over a DOM object. The main advantage over using SimpleXML is the ability to add multiple levels of new elements in a single call, without introducing \"ghost\" objects.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-09 19:12:34 +0200",
+    "download": "https://packagist.org/packages/horde/xml_element",
+    "hasCi": false,
+    "hasDocuments": true
+}

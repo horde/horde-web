@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Test",
+    "summary": "Unit testing library",
+    "description": "Horde-specific PHPUnit base classes.",
+    "version": "3.0.0-alpha8",
+    "releaseDate": "2026-03-07 22:58:25 +0100",
+    "download": "https://packagist.org/packages/horde/test",
+    "hasCi": false,
+    "hasDocuments": true
+}

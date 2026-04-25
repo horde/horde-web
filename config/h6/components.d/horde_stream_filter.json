@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Stream_Filter",
+    "summary": "PHP stream filters library",
+    "description": "A library of various stream filters.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-22 10:25:59 +0200",
+    "download": "https://packagist.org/packages/horde/stream_filter",
+    "hasCi": false,
+    "hasDocuments": true
+}

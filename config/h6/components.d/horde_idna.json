@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Idna",
+    "summary": "IDNA normalization library",
+    "description": "A library that wraps various backends providing IDNA (Internationalized Domain Names in Applications) support.",
+    "version": "2.0.0-beta2",
+    "releaseDate": "2026-04-19 17:19:33 +0200",
+    "download": "https://packagist.org/packages/horde/idna",
+    "hasCi": false,
+    "hasDocuments": false
+}

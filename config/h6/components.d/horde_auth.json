@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Auth",
+    "summary": "Authentication and user management library",
+    "description": "A library that provides a common interface into various authentication backends.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-13 12:06:44 +0200",
+    "download": "https://packagist.org/packages/horde/auth",
+    "hasCi": false,
+    "hasDocuments": true
+}

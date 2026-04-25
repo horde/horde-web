@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Autoloader",
+    "summary": "Autoloader library",
+    "description": "An autoload implementation and class loading manager for Horde.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-01 07:40:10 +0200",
+    "download": "https://packagist.org/packages/horde/autoloader",
+    "hasCi": false,
+    "hasDocuments": true
+}

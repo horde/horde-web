@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Timezone",
+    "summary": "Timezone library",
+    "description": "A library for parsing timezone databases and generating VTIMEZONE iCalendar components.",
+    "version": "2.0.0alpha5",
+    "releaseDate": "2022-11-05 11:05:43 +0100",
+    "download": "https://packagist.org/packages/horde/timezone",
+    "hasCi": false,
+    "hasDocuments": true
+}

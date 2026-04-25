@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Http_Server",
+    "summary": "HTTP Request Handling Library adhering to PSR-15 standard. This evolved out of horde/controller.",
+    "description": "A PSR-15 compatible Server/RequestHandler implementation with limited ties to the Horde Framework.",
+    "version": "1.0.0-beta2",
+    "releaseDate": "2026-04-14 20:48:15 +0200",
+    "download": "https://packagist.org/packages/horde/http_server",
+    "hasCi": false,
+    "hasDocuments": false
+}

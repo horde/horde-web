@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Pgp",
+    "summary": "PGP library",
+    "description": "A library for dealing with OpenPGP (RFC 4880) data.",
+    "version": "1.0.0alpha2",
+    "releaseDate": "2021-12-18 20:40:25 +0100",
+    "download": "https://packagist.org/packages/horde/pgp",
+    "hasCi": false,
+    "hasDocuments": false
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Kolab_Session",
+    "summary": "Kolab session management library",
+    "description": "A library to store Kolab specific user data in the session.",
+    "version": "2.0.4",
+    "releaseDate": "2021-12-18 20:39:47 +0100",
+    "download": "https://packagist.org/packages/horde/kolab_session",
+    "hasCi": false,
+    "hasDocuments": true
+}

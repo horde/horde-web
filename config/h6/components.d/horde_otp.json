@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Otp",
+    "summary": "Horde RFC 4226 HOTP and RFC 6238 TOTP Library",
+    "description": "Implements HMAC-Based One-Time Password (HOTP, RFC 4226) and Time-Based One-Time Password (TOTP, RFC 6238) algorithms as immutable value objects.",
+    "version": "1.0.0alpha1",
+    "releaseDate": "2026-04-23 20:56:35 +0200",
+    "download": "https://packagist.org/packages/horde/otp",
+    "hasCi": false,
+    "hasDocuments": false
+}

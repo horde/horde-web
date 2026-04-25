@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Text_Diff",
+    "summary": "Text diff generation and rendering library",
+    "description": "A library that provides a text-based diff engine and renderers for multiple diff output formats.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-06 22:10:22 +0200",
+    "download": "https://packagist.org/packages/horde/text_diff",
+    "hasCi": false,
+    "hasDocuments": true
+}
