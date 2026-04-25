@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Http",
+    "summary": "HTTP client library",
+    "description": "A library for making HTTP requests.",
+    "version": "3.0.0-beta5",
+    "releaseDate": "2026-04-13 11:00:04 +0200",
+    "download": "https://packagist.org/packages/horde/http",
+    "hasCi": false,
+    "hasDocuments": true
+}

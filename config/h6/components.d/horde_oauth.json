@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Oauth",
+    "summary": "OAuth 1.0a, OAuth 2.0 and OpenID Connect library",
+    "description": "A library that provides OAuth 1.0a consumer support, OAuth 2.0 authorization server and client, and OpenID Connect provider capabilities for the Horde framework.",
+    "version": "4.0.0-beta3",
+    "releaseDate": "2026-04-24 21:34:37 +0200",
+    "download": "https://packagist.org/packages/horde/oauth",
+    "hasCi": false,
+    "hasDocuments": true
+}

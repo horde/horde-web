@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Push",
+    "summary": "Social network services library",
+    "description": "A library allowing to push simple definitions of content elements to a number of social network services.",
+    "version": "1.0.0alpha2",
+    "releaseDate": "2026-04-01 12:30:38 +0200",
+    "download": "https://packagist.org/packages/horde/push",
+    "hasCi": false,
+    "hasDocuments": false
+}

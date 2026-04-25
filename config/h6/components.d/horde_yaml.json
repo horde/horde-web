@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Yaml",
+    "summary": "YAML parsing and writing library",
+    "description": "A library for parsing YAML files into PHP arrays, and dumping PHP arrays into YAML encoding.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-17 13:34:58 +0100",
+    "download": "https://packagist.org/packages/horde/yaml",
+    "hasCi": false,
+    "hasDocuments": true
+}

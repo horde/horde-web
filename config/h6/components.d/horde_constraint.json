@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Constraint",
+    "summary": "Modern constraint library with PHP 8.1+ type safety",
+    "description": "A library for building constraints that evaluate values to true or false. Provides dual-stack API: PSR-4 modern implementation with PHP 8.1+ types (AllOf, AnyOf, IsNull, IsEqual, etc.) and PSR-0 legacy compatibility. Useful for validation, filtering, and conditional logic.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-09 20:01:03 +0200",
+    "download": "https://packagist.org/packages/horde/constraint",
+    "hasCi": false,
+    "hasDocuments": true
+}

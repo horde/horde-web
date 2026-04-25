@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Template",
+    "summary": "Template library (deprecated)",
+    "description": "Horde Template system. Adapted from bTemplate, by Brian Lozier <brian@massassi.net>. Consider using horde/view instead.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-17 15:24:02 +0200",
+    "download": "https://packagist.org/packages/horde/template",
+    "hasCi": false,
+    "hasDocuments": true
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Kolab_Server",
+    "summary": "Kolab user database library",
+    "description": "A library to read and write entries in the Kolab user database stored in LDAP.",
+    "version": "2.0.6",
+    "releaseDate": "2021-12-18 20:39:46 +0100",
+    "download": "https://packagist.org/packages/horde/kolab_server",
+    "hasCi": false,
+    "hasDocuments": true
+}

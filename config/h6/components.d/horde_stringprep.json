@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Stringprep",
+    "summary": "Internationalized strings preparation library",
+    "description": "PHP implementation library of StringPrep and PRECIS Profiles\nRFC 3454 - Preparation of Internationalized Strings (\"stringprep\").\nRFC 7564 - PRECIS",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-04-12 22:43:35 +0200",
+    "download": "https://packagist.org/packages/horde/stringprep",
+    "hasCi": false,
+    "hasDocuments": false
+}

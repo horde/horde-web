@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Xml_Wbxml",
+    "summary": "WBXML library",
+    "description": "A library for encoding and decoding WBXML documents used in SyncML and other wireless applications. Encoding and decoding of WBXML (Wireless Binary XML) documents. WBXML is used in SyncML for transferring smaller amounts of data with wireless devices.",
+    "version": "3.0.0alpha4",
+    "releaseDate": "2023-12-22 13:20:32 +0100",
+    "download": "https://packagist.org/packages/horde/xml_wbxml",
+    "hasCi": false,
+    "hasDocuments": true
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Smtp",
+    "summary": "SMTP and LMTP client library",
+    "description": "A library for connecting to a SMTP (RFC 5321) server to send e-mail messages. Also supports LMTP.",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-04-19 17:20:27 +0200",
+    "download": "https://packagist.org/packages/horde/smtp",
+    "hasCi": false,
+    "hasDocuments": false
+}

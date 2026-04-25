@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Refactor",
+    "summary": "PHP code refactoring library",
+    "description": "An extendable library and command line tool to refactor files or complete directories.",
+    "version": "1.0.0alpha2",
+    "releaseDate": "2021-12-18 20:40:34 +0100",
+    "download": "https://packagist.org/packages/horde/refactor",
+    "hasCi": false,
+    "hasDocuments": false
+}

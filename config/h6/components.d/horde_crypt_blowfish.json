@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Crypt_Blowfish",
+    "summary": "Blowfish encryption library",
+    "description": "A library that provides blowfish encryption/decryption for PHP string data.",
+    "version": "2.0.0-beta2",
+    "releaseDate": "2026-04-10 20:38:43 +0200",
+    "download": "https://packagist.org/packages/horde/crypt_blowfish",
+    "hasCi": false,
+    "hasDocuments": true
+}

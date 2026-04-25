@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Argv",
+    "summary": "Command-line argument parsing library",
+    "description": "A library for parsing command line arguments with various actions, providing help, grouping options, and more.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-30 21:54:15 +0200",
+    "download": "https://packagist.org/packages/horde/argv",
+    "hasCi": false,
+    "hasDocuments": true
+}

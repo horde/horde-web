@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Scribe",
+    "summary": "Scribe client library",
+    "description": "Packaged version of the PHP Scribe client.",
+    "version": "3.0.0alpha3",
+    "releaseDate": "2021-11-22 20:07:41 +0000",
+    "download": "https://packagist.org/packages/horde/scribe",
+    "hasCi": false,
+    "hasDocuments": true
+}

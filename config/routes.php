@@ -169,13 +169,64 @@ $mapper->route($_root . '/apps/:app/:action')
     ->withSecondaryRoute($_root . '/apps/:app/screenshots_old')
     ->add();
 
-/* Libraries */
+/* Libraries - main index aliases to h6 */
 $mapper->route($_root . '/libraries')
     ->withName('libraries')
     ->withController(Library::class)
     ->withAction('index')
     ->add();
 
+/* Libraries - Horde 5 archive */
+$mapper->route($_root . '/libraries/h5')
+    ->withName('libraries_h5')
+    ->withController(Library::class)
+    ->withAction('h5')
+    ->add();
+
+$mapper->route($_root . '/libraries/h5/:library/docs/:file')
+    ->withName('library_h5_docs')
+    ->withController(Library::class)
+    ->withAction('docs')
+    ->add();
+
+$mapper->route($_root . '/libraries/h5/:library')
+    ->withName('library_h5')
+    ->withController(Library::class)
+    ->withAction('library')
+    ->add();
+
+$mapper->route($_root . '/libraries/h5/:library/:action')
+    ->withName('library_h5_action')
+    ->withController(Library::class)
+    ->defaults('action', 'library')
+    ->add();
+
+/* Libraries - Horde 6 */
+$mapper->route($_root . '/libraries/h6')
+    ->withName('libraries_h6')
+    ->withController(Library::class)
+    ->withAction('h6')
+    ->add();
+
+$mapper->route($_root . '/libraries/h6/:library/docs/:file')
+    ->withName('library_h6_docs')
+    ->withController(Library::class)
+    ->withAction('docs')
+    ->add();
+
+$mapper->route($_root . '/libraries/h6/:library')
+    ->withName('library_h6')
+    ->withController(Library::class)
+    ->withAction('library')
+    ->add();
+
+$mapper->route($_root . '/libraries/h6/:library/:action')
+    ->withName('library_h6_action')
+    ->withController(Library::class)
+    ->defaults('action', 'library')
+    ->add();
+
+/* Libraries - legacy routes (match after h5/h6) */
 $mapper->route($_root . '/libraries/:library/docs/:file')
     ->withName('library_docs')
     ->withController(Library::class)

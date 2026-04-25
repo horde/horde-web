@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Kolab_Config",
+    "summary": "Kolab server configuration library",
+    "description": "A library to read the various Kolab server configuration files. It should also support retrieving configuration parameters from LDAP but this is not yet implemented.",
+    "version": "1.0.0alpha1",
+    "releaseDate": "2021-12-18 20:39:38 +0100",
+    "download": "https://packagist.org/packages/horde/kolab_config",
+    "hasCi": false,
+    "hasDocuments": false
+}

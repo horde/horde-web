@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Text_Textile",
+    "summary": "Textile formatting library",
+    "description": "A Humane Web Text Generator.",
+    "version": "3.0.0alpha3",
+    "releaseDate": "2023-12-22 13:02:16 +0100",
+    "download": "https://packagist.org/packages/horde/text_textile",
+    "hasCi": false,
+    "hasDocuments": false
+}

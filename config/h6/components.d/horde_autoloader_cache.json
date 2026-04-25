@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Autoloader_Cache",
+    "summary": "Caching library for Horde_Autoloader",
+    "description": "An extension of the Horde autoloader that implements caching of class-file-maps. The caching method is determined automatically from the list of supported cache backends: APC, XCache, eAccelerator, local file system.\n",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-15 16:41:15 +0100",
+    "download": "https://packagist.org/packages/horde/autoloader_cache",
+    "hasCi": false,
+    "hasDocuments": true
+}

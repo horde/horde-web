@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Util",
+    "summary": "Utility library",
+    "description": "A library that provides functionality useful for all kind of applications.",
+    "version": "3.0.0-beta5",
+    "releaseDate": "2026-04-24 17:36:08 +0200",
+    "download": "https://packagist.org/packages/horde/util",
+    "hasCi": false,
+    "hasDocuments": true
+}

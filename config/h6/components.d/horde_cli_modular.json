@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Cli_Modular",
+    "summary": "Modular command line interface library",
+    "description": "A library to allow application modules to influence the overall command line interface.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-15 16:44:33 +0100",
+    "download": "https://packagist.org/packages/horde/cli_modular",
+    "hasCi": false,
+    "hasDocuments": true
+}

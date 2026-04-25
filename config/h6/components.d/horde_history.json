@@ -1,0 +1,10 @@
+{
+    "name": "Horde_History",
+    "summary": "History tracking library",
+    "description": "A library that provides a way to track changes on arbitrary pieces of data in Horde applications.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-05 07:51:32 +0200",
+    "download": "https://packagist.org/packages/horde/history",
+    "hasCi": false,
+    "hasDocuments": true
+}

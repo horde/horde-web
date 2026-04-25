@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Log",
+    "summary": "Logging library",
+    "description": "A logging library with configurable handlers, filters, and formatting.",
+    "version": "3.0.0-beta6",
+    "releaseDate": "2026-04-14 17:48:04 +0200",
+    "download": "https://packagist.org/packages/horde/log",
+    "hasCi": false,
+    "hasDocuments": true
+}

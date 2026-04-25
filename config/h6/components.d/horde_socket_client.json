@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Socket_Client",
+    "summary": "Network socket client library",
+    "description": "A library that provides an abstract PHP network socket client.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-15 16:18:09 +0200",
+    "download": "https://packagist.org/packages/horde/socket_client",
+    "hasCi": false,
+    "hasDocuments": false
+}

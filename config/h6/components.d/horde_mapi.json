@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Mapi",
+    "summary": "MAPI utility library",
+    "description": "A library that provides various utility classes for dealing with Microsoft MAPI structured data.",
+    "version": "2.0.0-alpha5",
+    "releaseDate": "2025-08-13 21:03:04 +0200",
+    "download": "https://packagist.org/packages/horde/mapi",
+    "hasCi": false,
+    "hasDocuments": false
+}

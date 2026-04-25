@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Release",
+    "summary": "Component release library",
+    "description": "Tools necessary to create the Horde distribution packages.",
+    "version": "4.0.0alpha5",
+    "releaseDate": "2022-11-15 10:26:41 +0000",
+    "download": "https://packagist.org/packages/horde/release",
+    "hasCi": false,
+    "hasDocuments": true
+}

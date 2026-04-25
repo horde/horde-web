@@ -1,0 +1,10 @@
+{
+    "name": "Horde_ManageSieve",
+    "summary": "ManageSieve client library",
+    "description": "A library that implements the ManageSieve protocol (RFC 5804).",
+    "version": "2.0.0-alpha8",
+    "releaseDate": "2026-04-14 19:48:49 +0200",
+    "download": "https://packagist.org/packages/horde/managesieve",
+    "hasCi": false,
+    "hasDocuments": false
+}

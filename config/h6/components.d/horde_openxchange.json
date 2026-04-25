@@ -1,0 +1,10 @@
+{
+    "name": "Horde_OpenXchange",
+    "summary": "Open-Xchange client library",
+    "description": "A library to interact with Open-Xchange servers.",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-04-22 12:48:37 +0200",
+    "download": "https://packagist.org/packages/horde/openxchange",
+    "hasCi": false,
+    "hasDocuments": false
+}

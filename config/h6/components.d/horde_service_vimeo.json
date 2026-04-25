@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Service_Vimeo",
+    "summary": "Vimeo client library",
+    "description": "A client library for the Vimeo API.",
+    "version": "1.0.0alpha2",
+    "releaseDate": "2021-07-15 10:22:38 +0200",
+    "download": "https://packagist.org/packages/horde/service_vimeo",
+    "hasCi": false,
+    "hasDocuments": false
+}

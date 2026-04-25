@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Kolab_Format",
+    "summary": "Kolab data format library",
+    "description": "A library that allows converting Kolab data objects from XML to data arrays.",
+    "version": "2.0.11",
+    "releaseDate": "2022-08-16 05:55:22 +0000",
+    "download": "https://packagist.org/packages/horde/kolab_format",
+    "hasCi": false,
+    "hasDocuments": true
+}

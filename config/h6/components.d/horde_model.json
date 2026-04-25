@@ -1,0 +1,10 @@
+{
+    "name": "Horde_model",
+    "summary": "Forms replacement incubator project",
+    "description": "An unfinished replacement for horde/forms from the H4 incubator CVS.",
+    "version": "1.0.0alpha1",
+    "releaseDate": "2025-05-18 20:37:37 +0200",
+    "download": "https://packagist.org/packages/horde/model",
+    "hasCi": false,
+    "hasDocuments": false
+}

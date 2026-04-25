@@ -1,0 +1,10 @@
+{
+    "name": "Horde_LoginTasks",
+    "summary": "Login tasks library",
+    "description": "A library for dealing with tasks run upon login to Horde applications.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-02 08:22:02 +0200",
+    "download": "https://packagist.org/packages/horde/logintasks",
+    "hasCi": false,
+    "hasDocuments": true
+}

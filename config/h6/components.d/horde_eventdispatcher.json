@@ -1,0 +1,10 @@
+{
+    "name": "Horde_EventDispatcher",
+    "summary": "A simple PSR-14 EventDispatcher / ListenerProvider system for Horde",
+    "description": "A Horde implementation of PSR-14",
+    "version": "1.0.0-beta3",
+    "releaseDate": "2026-04-12 18:05:36 +0200",
+    "download": "https://packagist.org/packages/horde/eventdispatcher",
+    "hasCi": false,
+    "hasDocuments": false
+}

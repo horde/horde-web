@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Kolab_Filter",
+    "summary": "Kolab server Postfix filters library",
+    "description": "The filters provided by this library implement the Kolab server resource management as well as some Kolab server sender policies.",
+    "version": "0.2.0",
+    "releaseDate": "2026-03-13 18:07:21 +0100",
+    "download": "https://packagist.org/packages/horde/kolab_filter",
+    "hasCi": false,
+    "hasDocuments": false
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Injector",
+    "summary": "Dependency injection container library",
+    "description": "A dependency injection container for Horde.",
+    "version": "3.0.0-beta4",
+    "releaseDate": "2026-04-17 06:05:09 +0200",
+    "download": "https://packagist.org/packages/horde/injector",
+    "hasCi": false,
+    "hasDocuments": true
+}

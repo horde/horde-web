@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Data",
+    "summary": "Data import and export library",
+    "description": "A data import and export library, with backends for: CSV, TSV, iCalendar, vCard, vNote, and vTodo\n",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-03-15 16:53:40 +0100",
+    "download": "https://packagist.org/packages/horde/data",
+    "hasCi": false,
+    "hasDocuments": true
+}

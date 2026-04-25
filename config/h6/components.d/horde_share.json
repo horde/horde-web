@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Share",
+    "summary": "Resource sharing library",
+    "description": "A library to access all shared resources a user owns or has access to.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-08 10:43:45 +0200",
+    "download": "https://packagist.org/packages/horde/share",
+    "hasCi": false,
+    "hasDocuments": true
+}

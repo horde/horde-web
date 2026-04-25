@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Support",
+    "summary": "Supporting library",
+    "description": "Support library not tied to Horde but used by it.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-06 20:37:00 +0200",
+    "download": "https://packagist.org/packages/horde/support",
+    "hasCi": false,
+    "hasDocuments": true
+}

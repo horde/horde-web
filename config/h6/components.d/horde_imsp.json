@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Imsp",
+    "summary": "IMSP client library",
+    "description": "A library to access IMSP servers for address books and options.",
+    "version": "2.0.11",
+    "releaseDate": "2025-06-05 14:44:33 +0200",
+    "download": "https://packagist.org/packages/horde/imsp",
+    "hasCi": false,
+    "hasDocuments": true
+}

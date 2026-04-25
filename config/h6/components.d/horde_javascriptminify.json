@@ -1,0 +1,10 @@
+{
+    "name": "Horde_JavascriptMinify",
+    "summary": "JavaScript minification library",
+    "description": "",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-04-07 21:24:15 +0200",
+    "download": "https://packagist.org/packages/horde/javascriptminify",
+    "hasCi": false,
+    "hasDocuments": false
+}

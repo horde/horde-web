@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Service_Weather",
+    "summary": "Weather service library",
+    "description": "A library that provide an abstraction to various online weather service providers. Includes drivers for WeatherUnderground and WorldWeatherOnline.",
+    "version": "3.0.0-alpha5",
+    "releaseDate": "2026-03-07 22:57:48 +0100",
+    "download": "https://packagist.org/packages/horde/service_weather",
+    "hasCi": false,
+    "hasDocuments": true
+}

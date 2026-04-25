@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Vcs",
+    "summary": "Version control client library",
+    "description": "A library that provides a generalized API to multiple version control systems.",
+    "version": "1.0.0-alpha5",
+    "releaseDate": "2026-03-07 23:00:39 +0100",
+    "download": "https://packagist.org/packages/horde/vcs",
+    "hasCi": false,
+    "hasDocuments": false
+}

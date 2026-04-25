@@ -1,0 +1,10 @@
+{
+    "name": "Horde_View",
+    "summary": "View pattern library",
+    "description": "A library that provides a simple View pattern implementation.",
+    "version": "3.0.0-alpha6",
+    "releaseDate": "2026-04-07 19:09:14 +0200",
+    "download": "https://packagist.org/packages/horde/view",
+    "hasCi": false,
+    "hasDocuments": true
+}

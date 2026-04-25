@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Compress_Fast",
+    "summary": "Fast compression library",
+    "description": "A libary that provides compression suitable for packing strings on-the-fly in PHP code (as opposed to more resource-intensive compression algorithms such as DEFLATE).",
+    "version": "2.0.0-beta1",
+    "releaseDate": "2026-03-15 16:46:58 +0100",
+    "download": "https://packagist.org/packages/horde/compress_fast",
+    "hasCi": false,
+    "hasDocuments": false
+}

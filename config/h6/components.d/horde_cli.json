@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Cli",
+    "summary": "Command line interface library",
+    "description": "A library for basic command-line functionality and checks.\n",
+    "version": "3.0.0-beta5",
+    "releaseDate": "2026-03-26 14:52:38 +0100",
+    "download": "https://packagist.org/packages/horde/cli",
+    "hasCi": false,
+    "hasDocuments": true
+}

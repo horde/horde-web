@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Ldap",
+    "summary": "LDAP client library",
+    "description": "A library for connecting to LDAP servers and working with directory objects.",
+    "version": "3.0.0-beta3",
+    "releaseDate": "2026-04-13 08:04:55 +0200",
+    "download": "https://packagist.org/packages/horde/ldap",
+    "hasCi": false,
+    "hasDocuments": true
+}

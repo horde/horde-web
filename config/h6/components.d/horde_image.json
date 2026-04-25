@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Image",
+    "summary": "Image library",
+    "description": "An image library, with backends for GD, GIF, PNG, SVG, SWF, ImageMagick's \"convert\" command line tool, imagick Extension.\n",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-03-28 17:23:51 +0100",
+    "download": "https://packagist.org/packages/horde/image",
+    "hasCi": false,
+    "hasDocuments": true
+}

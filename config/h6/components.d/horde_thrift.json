@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Thrift",
+    "summary": "Thrift client library",
+    "description": "Packaged version of the PHP Thrift client",
+    "version": "3.0.2",
+    "releaseDate": "2021-11-22 20:07:08 +0000",
+    "download": "https://packagist.org/packages/horde/thrift",
+    "hasCi": false,
+    "hasDocuments": true
+}

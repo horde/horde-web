@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Memcache",
+    "summary": "Memcache client library",
+    "description": "PSR-16 Simple Cache implementation for memcache with Horde-specific extensions. Supports large items (>1MB), multi-key retrieval, and both Memcache/Memcached PHP extensions.",
+    "version": "3.0.0-beta2",
+    "releaseDate": "2026-04-01 15:05:36 +0200",
+    "download": "https://packagist.org/packages/horde/memcache",
+    "hasCi": false,
+    "hasDocuments": true
+}

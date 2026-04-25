@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Dav",
+    "summary": "WebDAV, CalDAV, and CardDAV library",
+    "description": "A library that contains all Horde-specific wrapper classes for the Sabre DAV library.",
+    "version": "2.0.0-beta2",
+    "releaseDate": "2026-04-13 07:47:10 +0200",
+    "download": "https://packagist.org/packages/horde/dav",
+    "hasCi": false,
+    "hasDocuments": false
+}

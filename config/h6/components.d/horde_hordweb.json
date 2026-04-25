@@ -1,0 +1,10 @@
+{
+    "name": "Horde_hordweb",
+    "summary": "Horde.org Website",
+    "description": "A setup utility for manipulating horde application contents.",
+    "version": "1.0.0-alpha10",
+    "releaseDate": "2026-04-25 18:17:43 +0200",
+    "download": "https://packagist.org/packages/horde/hordweb",
+    "hasCi": false,
+    "hasDocuments": false
+}

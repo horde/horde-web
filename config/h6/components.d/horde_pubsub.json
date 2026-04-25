@@ -1,0 +1,10 @@
+{
+    "name": "Horde_PubSub",
+    "summary": "Publish/Subscribe library",
+    "description": "A Publish/Subscribe library that can act as an inter-app messaging hub.",
+    "version": "0.0.1-alpha2",
+    "releaseDate": "2025-06-05 07:49:40 +0200",
+    "download": "https://packagist.org/packages/horde/pubsub",
+    "hasCi": false,
+    "hasDocuments": false
+}

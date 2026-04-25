@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Spam",
+    "summary": "Spam reporting library",
+    "description": "An abstraction library for systems that allow the reporting of spam or innocent email messages. Supported systems include reporting via email redirection and digest reports, and through an executable.",
+    "version": "1.0.0alpha4",
+    "releaseDate": "2023-12-22 12:48:32 +0100",
+    "download": "https://packagist.org/packages/horde/spam",
+    "hasCi": false,
+    "hasDocuments": false
+}

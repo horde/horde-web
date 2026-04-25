@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Rampage",
+    "summary": "Rampage application server library",
+    "description": "Modern PHP application framework for Horde.",
+    "version": "1.0.0-alpha3",
+    "releaseDate": "2026-03-15 15:00:02 +0100",
+    "download": "https://packagist.org/packages/horde/rampage",
+    "hasCi": false,
+    "hasDocuments": false
+}

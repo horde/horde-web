@@ -1,0 +1,10 @@
+{
+    "name": "Horde_Controller",
+    "summary": "Controller library",
+    "description": "The controller part of an MVC system for Horde.",
+    "version": "3.0.0-beta1",
+    "releaseDate": "2026-04-13 07:15:27 +0200",
+    "download": "https://packagist.org/packages/horde/controller",
+    "hasCi": false,
+    "hasDocuments": true
+}

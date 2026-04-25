@@ -1,0 +1,10 @@
+{
+    "name": "Horde_composer",
+    "summary": "Handle composer.json files and composer directory structures without composer dependency",
+    "description": "Handle composer.json files and composer directory structures without composer dependency",
+    "version": "1.0.0-beta1",
+    "releaseDate": "2026-03-30 15:58:32 +0200",
+    "download": "https://packagist.org/packages/horde/composer",
+    "hasCi": false,
+    "hasDocuments": false
+}
