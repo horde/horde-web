@@ -52,8 +52,10 @@ class App implements RequestHandlerInterface
         $action = $this->route['action'] ?? 'index';
 
         return match ($action) {
-            'index' => $this->indexAction(),
-            'app' => ($this->route['app'] ?? '') == 'h3' ? $this->indexAction() : $this->appAction(),
+            'index' => $this->h6Action(),
+            'h5' => $this->h5Action(),
+            'h6' => $this->h6Action(),
+            'app' => ($this->route['app'] ?? '') == 'h3' ? $this->h3Action() : $this->appAction(),
             'authors' => $this->authorsAction(),
             'docs' => $this->docsAction(),
             'screenshots' => $this->screenshotsAction('screenshots'),
@@ -73,19 +75,37 @@ class App implements RequestHandlerInterface
         return $this->injector->getInstance('HordeWeb_View');
     }
 
-    private function indexAction(): ResponseInterface
+    private function h3Action(): ResponseInterface
     {
         $view = $this->setupView();
-        $app = $this->route['app'] ?? '';
-        $view->page_title = ($app == 'h3' ?
-            'Horde 3' : 'Horde') . ' Applications - The Horde Project';
-        $view->stable = $app == 'h3' ?
-             HordeWeb_Utils::getH3Apps() : HordeWeb_Utils::getH4Apps();
+        $view->page_title = 'Horde 3 Applications - The Horde Project';
+        $view->stable = HordeWeb_Utils::getH3Apps();
         $view->appListController = array('controller' => 'app', 'action' => 'app');
         $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
 
-        $template = $app == 'h3' ? 'horde3' : 'index';
-        return $this->renderTemplate($view, $template, 'main');
+        return $this->renderTemplate($view, 'horde3', 'main');
+    }
+
+    private function h5Action(): ResponseInterface
+    {
+        $view = $this->setupView();
+        $view->page_title = 'Horde 5 Applications - The Horde Project';
+        $view->stable = HordeWeb_Utils::getH4Apps();
+        $view->appListController = array('controller' => 'app', 'action' => 'app');
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
+
+        return $this->renderTemplate($view, 'horde5', 'main');
+    }
+
+    private function h6Action(): ResponseInterface
+    {
+        $view = $this->setupView();
+        $view->page_title = 'Horde 6 Applications - The Horde Project';
+        $view->stable = HordeWeb_Utils::getH4Apps();
+        $view->appListController = array('controller' => 'app', 'action' => 'app');
+        $view->breadcrumb = HordeWeb_Utils::breadcrumbs($this);
+
+        return $this->renderTemplate($view, 'horde6', 'main');
     }
 
     private function appAction(): ResponseInterface
