@@ -3,6 +3,7 @@
 <head>
 <title><?php echo $this->page_title?></title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="groupware,webmail,web,application,framework,php,consulting,support,development,library">
 <link rel="SHORTCUT ICON" type="image/x-icon" href="<?php echo $GLOBALS['host_base'] ?>/images/favicon.ico">
 <link href="https://plus.google.com/105569801098474752113" rel="publisher">
