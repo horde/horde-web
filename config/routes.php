@@ -259,7 +259,21 @@ $mapper->route($_root . '/services')
     ->withAction('index')
     ->add();
 
-/* Downloads */
+/* Downloads - Horde 5 archive */
+$mapper->route($_root . '/download/h5/:app')
+    ->withName('download_h5')
+    ->withController(Download::class)
+    ->withAction('h5')
+    ->add();
+
+/* Downloads - Horde 6 */
+$mapper->route($_root . '/download/h6/:app')
+    ->withName('download_h6')
+    ->withController(Download::class)
+    ->withAction('h6')
+    ->add();
+
+/* Downloads - legacy route aliases to H6 */
 $mapper->route($_root . '/download/:app')
     ->withName('download')
     ->withController(Download::class)
