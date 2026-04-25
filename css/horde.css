@@ -830,3 +830,91 @@ h3 img.download {
   position: relative;
   word-wrap: break-word;
 }
+
+/* Wide screen layout for 1850px+ viewports */
+@media (min-width: 1850px) {
+    body div.area {
+        width: 1300px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    div.inside {
+        width: 1300px;
+    }
+
+    div.top ul {
+        width: 600px;
+    }
+
+    div.podest {
+        background-size: 1300px 38px;
+    }
+
+    div.sliderview {
+        width: 1300px;
+    }
+
+    div.mainareasplit {
+        width: 880px;
+    }
+
+    div.rightcol {
+        width: 330px;
+    }
+
+    body div.main {
+        padding: 25px 30px;
+    }
+
+    body ul.teasers {
+        padding: 25px 30px;
+    }
+
+    div.teaser {
+        width: 380px;
+    }
+
+    div.news div.feedbox {
+        width: 580px;
+    }
+
+    div.footer .section {
+        width: 1260px;
+    }
+
+    div.footer .add-nav {
+        width: 160px;
+        margin-right: 50px;
+    }
+
+    div.footer .follow-us {
+        width: 140px;
+        margin-right: 50px;
+    }
+
+    div.footer .contact-info {
+        width: 260px;
+    }
+
+    div.footer .contact-info dl {
+        width: 260px;
+    }
+
+    .testimonials {
+        width: 330px;
+    }
+
+    div.sliderview p {
+        width: 650px;
+    }
+
+    div.mainareasplit h2, div.mainarea h2 {
+        width: 100%;
+    }
+
+    body div.content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
