@@ -87,13 +87,68 @@ $mapper->route($_root . '/support')
     ->withAction('index')
     ->add();
 
-/* Apps */
+/* Apps - main index aliases to h6 */
 $mapper->route($_root . '/apps')
     ->withName('apps')
     ->withController(App::class)
     ->withAction('index')
     ->add();
 
+/* Apps - Horde 5 archive */
+$mapper->route($_root . '/apps/h5')
+    ->withName('apps_h5')
+    ->withController(App::class)
+    ->withAction('h5')
+    ->add();
+
+$mapper->route($_root . '/apps/h5/:app/docs/:file')
+    ->withName('app_h5_docs')
+    ->withController(App::class)
+    ->withAction('docs')
+    ->add();
+
+$mapper->route($_root . '/apps/h5/:app')
+    ->withName('app_h5')
+    ->withController(App::class)
+    ->withAction('app')
+    ->add();
+
+$mapper->route($_root . '/apps/h5/:app/:action')
+    ->withName('app_h5_action')
+    ->withController(App::class)
+    ->defaults('action', 'app')
+    ->withSecondaryRoute($_root . '/apps/h5/:app/screenshots')
+    ->withSecondaryRoute($_root . '/apps/h5/:app/screenshots_old')
+    ->add();
+
+/* Apps - Horde 6 */
+$mapper->route($_root . '/apps/h6')
+    ->withName('apps_h6')
+    ->withController(App::class)
+    ->withAction('h6')
+    ->add();
+
+$mapper->route($_root . '/apps/h6/:app/docs/:file')
+    ->withName('app_h6_docs')
+    ->withController(App::class)
+    ->withAction('docs')
+    ->add();
+
+$mapper->route($_root . '/apps/h6/:app')
+    ->withName('app_h6')
+    ->withController(App::class)
+    ->withAction('app')
+    ->add();
+
+$mapper->route($_root . '/apps/h6/:app/:action')
+    ->withName('app_h6_action')
+    ->withController(App::class)
+    ->defaults('action', 'app')
+    ->withSecondaryRoute($_root . '/apps/h6/:app/screenshots')
+    ->withSecondaryRoute($_root . '/apps/h6/:app/screenshots_old')
+    ->add();
+
+/* Apps - individual app routes (legacy, matches after h5/h6) */
 $mapper->route($_root . '/apps/:app/docs/:file')
     ->withName('app_docs')
     ->withController(App::class)
