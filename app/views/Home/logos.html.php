@@ -21,6 +21,30 @@
 
         <br />
 
+        <h3>Horde gearwheel:</h3>
+        <p><?php echo HordeWeb_Utils::logoImg('horde-gearwheel-400-400.png') ?><br />
+        (<a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-gearwheel.svg">SVG</a>,
+         <a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-gearwheel-400-400.png">PNG 400&times;400</a>,
+         <a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-gearwheel-1000-1000.png">PNG 1000&times;1000</a>,
+         <a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-gearwheel-2048-2048.png">PNG 2048&times;2048</a>)</p>
+
+        <br />
+
+        <h3>Standard Horde logo (high-resolution PNG):</h3>
+        <p><?php echo HordeWeb_Utils::logoImg('horde-color-1416-500.png') ?><br />
+        (<a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-color-1416-500.png">PNG 1416&times;500</a>)</p>
+
+        <br />
+
+        <h3>Horde 6.0 badge:</h3>
+        <p><?php echo HordeWeb_Utils::logoImg('horde-badge-6.0.svg') ?><br />
+        (<a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-badge-6.0.svg">SVG</a>,
+         <a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-badge-6.0-400-75.png">PNG 400&times;75</a>,
+         <a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-badge-6.0-1000-188.png">PNG 1000&times;188</a>,
+         <a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-badge-6.0-2048-384.png">PNG 2048&times;384</a>)</p>
+
+        <br />
+
         <h3>Powered By logos:</h3>
         <table border="0">
         <tr>
