@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+#
+# Render a Horde version badge from images/logos/horde-badge.svg.tmpl.
+#
+# Stamps the placeholder __VERSION__ with the supplied version string, writes
+# the resulting SVG, and rasterizes the standard PNG sizes (400x75, 1000x188,
+# 2048x384). Output filenames use the version (dots preserved), e.g. for 6.0:
+#
+#   horde-badge-6.0.svg
+#   horde-badge-6.0-400-75.png
+#   horde-badge-6.0-1000-188.png
+#   horde-badge-6.0-2048-384.png
+#
+# Requirements: ImageMagick `convert` with librsvg2 backend.
+#
+# Usage:
+#   bin/hordeweb-render-badge <version>
+#   bin/hordeweb-render-badge 6.0
+#   bin/hordeweb-render-badge 6.1.2
+#
+# Copyright 2026 Horde LLC (http://www.horde.org)
+# License: BSD (http://opensource.org/licenses/bsd-license.php)
+
+set -euo pipefail
+
+if [[ $# -ne 1 ]]; then
+    echo "usage: $(basename "$0") <version>" >&2
+    exit 64
+fi
+
+version="$1"
+
+# Resolve the image directory relative to this script — works regardless of cwd.
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+logos_dir="${script_dir}/../images/logos"
+template="${logos_dir}/horde-badge.svg.tmpl"
+
+if [[ ! -f "$template" ]]; then
+    echo "error: template not found at ${template}" >&2
+    exit 66
+fi
+
+if ! command -v convert >/dev/null 2>&1; then
+    echo "error: ImageMagick 'convert' is not on PATH" >&2
+    exit 69
+fi
+
+svg_out="${logos_dir}/horde-badge-${version}.svg"
+
+# Stamp the version. sed is portable enough; we only substitute the literal token.
+sed "s/__VERSION__/${version}/g" "$template" > "$svg_out"
+echo "wrote ${svg_out}"
+
+# Rasterize at the standard sizes. Density picks a render resolution that lets
+# librsvg paint cleanly before -resize forces the exact pixel dimensions.
+for spec in 400x75 1000x188 2048x384; do
+    w="${spec%x*}"
+    h="${spec#*x}"
+    out="${logos_dir}/horde-badge-${version}-${w}-${h}.png"
+    density=$((w * 5))
+    convert -background none -density "$density" "$svg_out" -resize "${w}x${h}!" "$out"
+    echo "wrote ${out}"
+done
