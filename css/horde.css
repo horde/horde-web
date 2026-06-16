@@ -781,6 +781,21 @@ div.mail {
     padding-left:15px;
 }
 
+/* Logos page: shrink large preview images so they fit the column while the
+   underlying anchor links to the original full-resolution asset. */
+img.logo-preview-shrink {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.logo-fullsize-hint {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
 h3 img.download {
     margin-left: 5px;
 }

@@ -31,7 +31,8 @@
         <br />
 
         <h3>Standard Horde logo (high-resolution PNG):</h3>
-        <p><?php echo HordeWeb_Utils::logoImg('horde-color-1416-500.png') ?><br />
+        <p><a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-color-1416-500.png" title="Open full-resolution image"><img class="logo-preview-shrink" src="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-color-1416-500.png" alt="horde-color-1416-500.png" /></a>
+        <span class="logo-fullsize-hint">click image for full size</span>
         (<a href="<?php echo $GLOBALS['host_base'] ?>/images/logos/horde-color-1416-500.png">PNG 1416&times;500</a>)</p>
 
         <br />
