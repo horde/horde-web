@@ -8,7 +8,7 @@
  */
 class HordeWeb_Factory_View extends Horde_Core_Factory_Injector
 {
-    public function create(Horde_Injector $injector)
+    public function create(\Horde\Injector\Injector $injector)
     {
         // Set up a view with the shared template path.
         // Individual controlles will set the specific path for their view.
