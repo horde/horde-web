@@ -21,7 +21,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
-use Horde_Injector;
+use Horde\Injector\Injector;
 use Horde\Routes\Utils;
 use HordeWeb_Utils;
 
@@ -30,14 +30,14 @@ use HordeWeb_Utils;
  */
 class Library implements RequestHandlerInterface
 {
-    private Horde_Injector $injector;
+    private Injector $injector;
     private ResponseFactoryInterface $responseFactory;
     private StreamFactoryInterface $streamFactory;
     private array $route;
     private string $era = 'h6';
 
     public function __construct(
-        Horde_Injector $injector,
+        Injector $injector,
         ResponseFactoryInterface $responseFactory,
         StreamFactoryInterface $streamFactory
     ) {
