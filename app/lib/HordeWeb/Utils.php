@@ -332,11 +332,17 @@ class HordeWeb_Utils
     }
 
     /**
-     * @TODO: Remove core - configure via config values from config/
+     * Return the site-configured PSR-16 cache backend.
+     *
+     * Resolved via {@see \Horde\Core\Factory\SimpleCacheFactory} — the
+     * concrete storage (HashTable/Redis on production, whatever the
+     * site configured) is opaque to callers. Keys must be self-namespaced
+     * by the caller because the injected cache is a *site-shared*
+     * keyspace with no per-app prefix applied.
      */
-    static public function getCache()
+    static public function getCache(): \Psr\SimpleCache\CacheInterface
     {
-        return $GLOBALS['injector']->getInstance('Horde_Cache');
+        return $GLOBALS['injector']->getInstance(\Psr\SimpleCache\CacheInterface::class);
     }
 
     /**

@@ -21,8 +21,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Log\LoggerInterface;
-use Horde_Injector;
-use Horde_Cache;
+use Horde\Injector\Injector;
 use Horde_Feed;
 use Horde_Http_Client;
 use HordeWeb_Utils;
@@ -33,6 +32,7 @@ use Horde\Routes\Utils;
 use Horde\Log\Logger;
 use Horde\Log\Handler\Syslog as SyslogHandler;
 use Horde\Log\LogLevels;
+use Psr\SimpleCache\CacheInterface;
 use Throwable;
 
 /**
@@ -43,13 +43,37 @@ use Throwable;
  */
 class Home implements RequestHandlerInterface
 {
-    private Horde_Injector $injector;
+    /**
+     * Feed cache keys. Namespaced with 'hordeweb.' because the injected
+     * PSR-16 cache is a *site-shared* keyspace (Redis on typical Horde
+     * installs); the app has to prefix its own keys. The 'v2' suffix
+     * lets us invalidate wholesale when the on-wire serialized layout
+     * of Horde_Feed_* changes.
+     *
+     * The cron script bin/hordeweb-fetch-feed writes to the same keys
+     * at the same TTL; the diagnostics controller reads them.
+     */
+    private const CACHE_KEY_PLANET    = 'hordeweb.feed.planet.v2';
+    private const CACHE_KEY_HORDEFEED = 'hordeweb.feed.horde.v2';
+
+    /** TTL (seconds) for a successfully fetched feed. */
+    private const SUCCESS_TTL = 600;
+
+    /**
+     * TTL (seconds) for the negative-result sentinel keyed at
+     * '<feedKey>.failed'. Short enough that a temporarily-broken remote
+     * comes back quickly once it recovers; long enough that a persistent
+     * outage doesn't retry-storm on every request.
+     */
+    private const NEGATIVE_TTL = 60;
+
+    private Injector $injector;
     private ResponseFactoryInterface $responseFactory;
     private StreamFactoryInterface $streamFactory;
     private LoggerInterface $logger;
 
     public function __construct(
-        Horde_Injector $injector,
+        Injector $injector,
         ResponseFactoryInterface $responseFactory,
         StreamFactoryInterface $streamFactory
     ) {
@@ -118,74 +142,93 @@ class Home implements RequestHandlerInterface
             array($GLOBALS['fs_base'] . '/app/views/Home')
         );
 
-        $cache = $this->injector->getInstance(Horde_Cache::class);
+        $cache = $this->injector->getInstance(CacheInterface::class);
 
-        // Cache version to invalidate old serialized data
-        $cacheVersion = 'v2';
-
-        // Create HTTP client with custom timeout
+        // Create HTTP client with custom timeout. Used for the fallback
+        // fetch when the cache is cold; the cron-run bin/hordeweb-fetch-feed
+        // is meant to keep it warm.
         $feedTimeout = $GLOBALS['feed_timeout'] ?? 5;
         $httpClient = new Horde_Http_Client(['request.timeout' => $feedTimeout]);
 
-        // Get the planet feed
-        $planetKey = 'planet_' . $cacheVersion;
-        $view->planet = null;
-        if ($planet = $cache->get($planetKey, 600)) {
-            $unserialized = @unserialize($planet);
-            // Validate it's a traversable feed object
-            if ($unserialized && is_iterable($unserialized)) {
-                $view->planet = $unserialized;
-            }
-        }
+        // Planet Horde: the "Ralf writes about Horde" tag feed.
+        $view->planet = $this->_loadFeed(
+            $cache,
+            self::CACHE_KEY_PLANET,
+            $GLOBALS['planet_feed_url'] ?? 'https://www.ralf-lang.de/tag/horde/feed/',
+            $httpClient,
+            'planet',
+        );
 
-        if ($view->planet === null) {
-            try {
-                // Use config variable with fallback to default
-                $planetFeedUrl = $GLOBALS['planet_feed_url'] ?? 'https://www.ralf-lang.de/tag/horde/feed/';
-                // Suppress deprecation warnings from Horde_Xml_Element
-                $view->planet = @Horde_Feed::readUri($planetFeedUrl, $httpClient);
-            } catch (Throwable $e) {
-                $this->logger->error(
-                    'Home controller: Failed to fetch Planet Horde feed: {exception}: {message}',
-                    [
-                        'exception' => get_class($e),
-                        'message' => $e->getMessage(),
-                    ]
-                );
-                $view->planet = null;
-            }
-            $cache->set($planetKey, serialize($view->planet));
-        }
-
-        // Get the complete Horde feed (no tags)
-        $hordefeedKey = 'hordefeed_' . $cacheVersion;
-        $view->hordefeed = null;
-        if ($hordefeed = $cache->get($hordefeedKey, 600)) {
-            $unserialized = @unserialize($hordefeed);
-            // Validate it's a traversable feed object
-            if ($unserialized && is_iterable($unserialized)) {
-                $view->hordefeed = $unserialized;
-            }
-        }
-
-        if ($view->hordefeed === null) {
-            try {
-                // Suppress deprecation warnings from Horde_Xml_Element
-                $view->hordefeed = @Horde_Feed::readUri($GLOBALS['feed_url'], $httpClient);
-            } catch (Throwable $e) {
-                $this->logger->error(
-                    'Home controller: Failed to fetch Horde news feed: {exception}: {message}',
-                    [
-                        'exception' => get_class($e),
-                        'message' => $e->getMessage(),
-                    ]
-                );
-                $view->hordefeed = null;
-            }
-            $cache->set($hordefeedKey, serialize($view->hordefeed));
-        }
+        // The main horde.org news feed (no tag filter).
+        $view->hordefeed = $this->_loadFeed(
+            $cache,
+            self::CACHE_KEY_HORDEFEED,
+            $GLOBALS['feed_url'],
+            $httpClient,
+            'horde news',
+        );
 
         return $this->renderTemplate($view, 'index', 'home');
+    }
+
+    /**
+     * Read one feed from the PSR-16 cache, falling back to a synchronous
+     * HTTP fetch on cold cache.
+     *
+     * Two behaviours worth calling out:
+     *  - **Negative-result guarding.** When {@see Horde_Feed::readUri()}
+     *    throws we stamp a short-lived sentinel under a paired '.failed'
+     *    key. While that sentinel is present we skip the fetch entirely
+     *    and return null — so a broken remote feed costs one 5 s timeout
+     *    per {@see self::NEGATIVE_TTL} window instead of one per request.
+     *  - **Successful hits carry a full TTL.** {@see self::SUCCESS_TTL}
+     *    (10 minutes) at PSR-16 set() time; the cron script
+     *    (bin/hordeweb-fetch-feed) writes to the same key at the same
+     *    TTL so cron-warmed entries are indistinguishable from
+     *    request-warmed ones.
+     */
+    private function _loadFeed(
+        CacheInterface $cache,
+        string $key,
+        string $url,
+        Horde_Http_Client $httpClient,
+        string $label,
+    ) {
+        $cached = $cache->get($key);
+        if ($cached !== null) {
+            $unserialized = @unserialize($cached);
+            if ($unserialized && is_iterable($unserialized)) {
+                return $unserialized;
+            }
+        }
+
+        // Recent failure: don't retry-storm the broken endpoint.
+        if ($cache->get($key . '.failed') !== null) {
+            return null;
+        }
+
+        try {
+            // Suppress deprecation warnings from Horde_Xml_Element
+            $feed = @Horde_Feed::readUri($url, $httpClient);
+        } catch (Throwable $e) {
+            $this->logger->error(
+                'Home controller: Failed to fetch ' . $label . ' feed: {exception}: {message}',
+                [
+                    'exception' => get_class($e),
+                    'message' => $e->getMessage(),
+                ]
+            );
+            $cache->set($key . '.failed', 1, self::NEGATIVE_TTL);
+            return null;
+        }
+
+        if ($feed === null || $feed === false) {
+            $cache->set($key . '.failed', 1, self::NEGATIVE_TTL);
+            return null;
+        }
+
+        $cache->set($key, serialize($feed), self::SUCCESS_TTL);
+        return $feed;
     }
 
     /**

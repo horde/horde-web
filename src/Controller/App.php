@@ -20,24 +20,45 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
-use Horde_Injector;
+use Horde\Injector\Injector;
 use Horde_Feed;
+use Horde_Http_Client;
 use Horde_Service_Gravatar;
 use Horde\Routes\Utils;
 use HordeWeb_Utils;
+use Psr\SimpleCache\CacheInterface;
+use Throwable;
 
 /**
  * App controller - PSR-15 RequestHandler
  */
 class App implements RequestHandlerInterface
 {
-    private Horde_Injector $injector;
+    /**
+     * Per-app news-feed cache key prefix. See {@see Home} for the
+     * rationale on the 'hordeweb.' / '.v2' namespace choice — this
+     * class shares the same keyspace so cron warmup and diagnostics
+     * see a single, coherent picture.
+     */
+    private const CACHE_KEY_APP_FEED_PREFIX = 'hordeweb.feed.app.';
+    private const CACHE_KEY_APP_FEED_SUFFIX = '.v2';
+
+    /** TTL (seconds) for a successfully fetched per-app feed. */
+    private const SUCCESS_TTL = 600;
+
+    /**
+     * TTL (seconds) for the negative-result sentinel. See
+     * {@see Home::NEGATIVE_TTL}.
+     */
+    private const NEGATIVE_TTL = 60;
+
+    private Injector $injector;
     private ResponseFactoryInterface $responseFactory;
     private StreamFactoryInterface $streamFactory;
     private array $route;
 
     public function __construct(
-        Horde_Injector $injector,
+        Injector $injector,
         ResponseFactoryInterface $responseFactory,
         StreamFactoryInterface $streamFactory
     ) {
@@ -120,27 +141,49 @@ class App implements RequestHandlerInterface
             return $this->notFoundAction();
         }
 
-        // Build the bug/news widget
+        // Build the bug/news widget. Per-app tagged view of the same
+        // horde-wide feed the Home controller shows.
         $cache = HordeWeb_Utils::getCache();
+        $feedTimeout = $GLOBALS['feed_timeout'] ?? 5;
+        $httpClient = new Horde_Http_Client(['request.timeout' => $feedTimeout]);
         $slugs = array($app);
         $view->latestNews = array();
         foreach ($slugs as $slug) {
-            $base_feed_url = \Horde::url($GLOBALS['feed_url'])->add('tag_id', $slug)->setRaw(true);
-            if ($latestnews = $cache->get('hordefeed' . $slug, 600)) {
-                $view->latestNews = unserialize($latestnews);
-            } else {
-                try {
-                    $i = 1;
-                    foreach (Horde_Feed::readUri($base_feed_url) as $entry) {
-                        $view->latestNews[] = $entry;
-                        if (++$i > 5) {
-                            break;
-                        }
-                    }
-                } catch (\Exception $e) {
+            $key = self::CACHE_KEY_APP_FEED_PREFIX . $slug . self::CACHE_KEY_APP_FEED_SUFFIX;
+
+            $cached = $cache->get($key);
+            if ($cached !== null) {
+                $unserialized = @unserialize($cached);
+                if (is_array($unserialized)) {
+                    $view->latestNews = $unserialized;
+                    continue;
                 }
-                $cache->set('hordefeed' . $slug, serialize($view->latestNews));
             }
+
+            // Recent failure: don't retry-storm.
+            if ($cache->get($key . '.failed') !== null) {
+                continue;
+            }
+
+            $base_feed_url = \Horde::url($GLOBALS['feed_url'])->add('tag_id', $slug)->setRaw(true);
+            $items = array();
+            try {
+                $i = 1;
+                foreach (Horde_Feed::readUri($base_feed_url, $httpClient) as $entry) {
+                    $items[] = $entry;
+                    if (++$i > 5) {
+                        break;
+                    }
+                }
+            } catch (Throwable $e) {
+                // Stamp negative sentinel; leave any previously-cached
+                // good copy intact (we only get here on a *fresh* miss).
+                $cache->set($key . '.failed', 1, self::NEGATIVE_TTL);
+                continue;
+            }
+
+            $view->latestNews = $items;
+            $cache->set($key, serialize($items), self::SUCCESS_TTL);
         }
 
         return $this->renderTemplate($view, 'app', 'main');
