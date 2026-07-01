@@ -14,11 +14,30 @@
  * @license  http://www.fsf.org/copyleft/lgpl.html LGPL
  * @link     http://www.horde.org
  */
+
+use Psr\SimpleCache\CacheInterface;
+
 class HordeWeb_Utils_Libraries
 {
-    private Horde_Cache $_cache;
+    /**
+     * TTL (seconds) for the two library-metadata cache entries.
+     * The corpus is a directory of static JSON files — rebuild is cheap
+     * — but the cached form pre-flattens/sort/filters the entire set,
+     * so paying for it once per day per era is worth it.
+     */
+    private const CACHE_TTL = 86400;
 
-    public function __construct(Horde_Cache $cache)
+    /**
+     * Namespace for this class's cache keys. Prefixed with 'hordeweb.'
+     * because the injected PSR-16 backend is a *site-shared* keyspace
+     * (Redis on typical Horde installs); the app has to prefix its own
+     * keys.
+     */
+    private const CACHE_NS = 'hordeweb.libraries.';
+
+    private CacheInterface $_cache;
+
+    public function __construct(CacheInterface $cache)
     {
         $this->_cache = $cache;
     }
@@ -31,9 +50,13 @@ class HordeWeb_Utils_Libraries
      */
     public function listLibraries(string $era = 'h6'): array
     {
-        $cacheKey = __CLASS__ . '::list::' . $era;
-        if ($list = $this->_cache->get($cacheKey, 86400)) {
-            return unserialize($list);
+        $cacheKey = self::CACHE_NS . 'list.' . $era;
+        $cached = $this->_cache->get($cacheKey);
+        if ($cached !== null) {
+            $unserialized = @unserialize($cached);
+            if (is_array($unserialized)) {
+                return $unserialized;
+            }
         }
         $components = $this->_getComponents($era);
         $list = array();
@@ -42,7 +65,7 @@ class HordeWeb_Utils_Libraries
         }
         $list = array_filter($list, array($this, '_hideApplications'));
         sort($list);
-        $this->_cache->set($cacheKey, serialize($list));
+        $this->_cache->set($cacheKey, serialize($list), self::CACHE_TTL);
         return $list;
     }
 
@@ -59,9 +82,13 @@ class HordeWeb_Utils_Libraries
      */
     public function listDescriptions(string $era = 'h6'): array
     {
-        $cacheKey = __CLASS__ . '::descriptions::' . $era;
-        if ($descriptions = $this->_cache->get($cacheKey, 86400)) {
-            return unserialize($descriptions);
+        $cacheKey = self::CACHE_NS . 'descriptions.' . $era;
+        $cached = $this->_cache->get($cacheKey);
+        if ($cached !== null) {
+            $unserialized = @unserialize($cached);
+            if (is_array($unserialized)) {
+                return $unserialized;
+            }
         }
         $components = $this->_getComponents($era);
         $descriptions = array();
@@ -69,7 +96,7 @@ class HordeWeb_Utils_Libraries
             $descriptions[$component->name] = $component->description;
         }
         ksort($descriptions);
-        $this->_cache->set($cacheKey, serialize($descriptions));
+        $this->_cache->set($cacheKey, serialize($descriptions), self::CACHE_TTL);
         return $descriptions;
     }
 
