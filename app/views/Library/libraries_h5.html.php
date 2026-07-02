@@ -22,7 +22,7 @@
             <a href="<?php echo
             $this->urlWriter->urlFor(array('controller' => 'app', 'app' =>
             'imp')) ?>">Imp</a> and for all released modules on our
-            <a href="http://pear.horde.org/">PEAR server</a>. This allows
+            <a href="https://pear.horde.org/">PEAR server</a>. This allows
             you to embed functionality based on such libraries seamlessly
             into your own PHP application context.</p>
 
@@ -34,7 +34,7 @@
           </div>
 
           <h3>Obtaining Libraries</h3>
-          <p>You can download the libraries from our <a href="http://pear.horde.org/">
+          <p>You can download the libraries from our <a href="https://pear.horde.org/">
           PEAR server</a> directly but the default way of install the Horde
           PHP libraries is the installation on the command line via PEAR.<p>
 

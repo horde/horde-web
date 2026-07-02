@@ -22,7 +22,7 @@
 
         <h3>FAQ</h3>
         <p>As a starting point, please read
-        the <a href="http://wiki.horde.org/FAQ">Horde FAQ</a>. It is constantly
+        the <a href="https://wiki.horde.org/FAQ">Horde FAQ</a>. It is constantly
         updated from all the other sources with the most frequently asked
         questions and the responses.</p>
 
@@ -33,7 +33,7 @@
 
         <p>There is a <tt>#horde</tt> channel on <tt>irc.freenode.net</tt>
         (<i>see</i> <a href="https://freenode.net/">
-        http://www.freenode.net/</a>), for discussion of Horde applications,
+        https://www.freenode.net/</a>), for discussion of Horde applications,
         the Horde Framework, random development questions, and anything else
         that seems relevant. Come join us!</p>
 
@@ -58,7 +58,7 @@
         <h3>Bugs and Feature Requests</h3>
 
         <p>If you have a bug or a new feature request, please visit
-        the <a href="http://bugs.horde.org/">Horde Bug Tracker</a>. Search
+        the <a href="https://bugs.horde.org/">Horde Bug Tracker</a>. Search
         first to see if anyone has already filed a similar bug, if not open a
         new bug yourself.  Remember to use clear language, to be specific and
         verbose in your description.  Please
@@ -70,7 +70,7 @@
         always welcome.<br /> Strong language complaints and moaning on mailing
         lists, home pages, news groups, and other places are not
         constructive. The first and only place to file a complaint or feature
-        request is in the <a href="http://bugs.horde.org/">Horde Bug
+        request is in the <a href="https://bugs.horde.org/">Horde Bug
         Tracker</a>. Do it anywhere else and it will not reach the precious few
         who are willing to do anything about it!</p></div>
 
@@ -78,7 +78,7 @@
 
         <p>If you wish to report <b>security problems</b> please see the
         procedures
-        at <a href="http://wiki.horde.org/SecurityManagement">http://wiki.horde.org/SecurityManagement</a>.</p>
+        at <a href="https://wiki.horde.org/SecurityManagement">https://wiki.horde.org/SecurityManagement</a>.</p>
       </div>
     </div>
     <div class="rightcol" style="background: none;">

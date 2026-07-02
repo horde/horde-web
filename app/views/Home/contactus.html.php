@@ -18,7 +18,7 @@
         <p>If you wish to contact us regarding a
         potential <strong>security</strong> concern. Please see our security
         reporting procedures at
-        <a href="http://wiki.horde.org/SecurityManagement">http://wiki.horde.org/SecurityManagement</a>
+        <a href="https://wiki.horde.org/SecurityManagement">https://wiki.horde.org/SecurityManagement</a>
         </p>
 
         <h3>Consulting Services</h3>

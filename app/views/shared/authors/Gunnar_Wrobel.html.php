@@ -6,6 +6,6 @@
       <li><a href="https://ohloh.net/p/kolab/contributors/">Primary developer</a> of the <a href="https://kolab.org/">the Kolab groupware server</a>.</li>
       <li>Currently freelancing and consulting for PHP and <a href="https://kolab.org/">the Kolab groupware server</a>.</li>
       <li>Joined the Horde crew in 2007.</li>
-      <li>Website: <a href="https://gunnarwrobel.de/">http://gunnarwrobel.de</a></li>
+      <li>Website: <a href="https://gunnarwrobel.de/">https://gunnarwrobel.de</a></li>
   </ul>
 </div>

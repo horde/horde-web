@@ -23,7 +23,7 @@
         </p>
         <br/>
         <p style="text-align:center">
-          <a style="margin:20px;text-decoration:none" href="http://psw.net/" target="_blank">
+          <a style="margin:20px;text-decoration:none" href="https://psw.net/" target="_blank">
             <img src="<?php echo $GLOBALS['host_base'] ?>/images/sponsors/psw.gif" height="40" alt="PSW GROUP" />
           </a>
           <a style="margin:20px;text-decoration:none" href="https://www.topratedbingosites.co.uk/" target="_blank">

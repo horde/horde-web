@@ -6,7 +6,7 @@
       <div class="section">
         <div class="sectionintro">
           <p>The following modules are in
-          the <a href="http://cvs.horde.org/">Horde CVS Repository</a>, with
+          the <a href="https://cvs.horde.org/">Horde CVS Repository</a>, with
           the listed production level code tags available. If no tags are
           listed, then there has not yet been a stable release of that
           module.</p>

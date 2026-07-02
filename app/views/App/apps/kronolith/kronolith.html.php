@@ -12,7 +12,7 @@ information, and managing multiple users through Horde Authentication. The
 calendar API that Kronolith uses is abstracted such that it could work with any
 backend, but right now we provide SQL (abstracted to support several databases,
 including MySQL, PostgreSQL, and SQLite),
-and <a href="http://www.kolab.org/">Kolab</a> backend libraries.</p>
+and <a href="https://www.kolab.org/">Kolab</a> backend libraries.</p>
 
 <p>If you are interested in helping develop Kronolith, or just want to ask
 questions and keep an eye on its progress, be sure to join our <?php echo

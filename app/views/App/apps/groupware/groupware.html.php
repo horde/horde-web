@@ -67,9 +67,9 @@
  <li>Platform independant, works on any web server with PHP support,
  i.e. Linux, Windows, Solaris, Mac OS X Server</li>
  <li>Abstract database support, e.g. for <a
- href="http://www.mysql.com">MySQL</a>, <a
- href="http://www.postgresql.org">PostgreSQL</a>, <a
- href="http://www.sqlite.org/">SQLite</a></li>
+ href="https://www.mysql.com">MySQL</a>, <a
+ href="https://www.postgresql.org">PostgreSQL</a>, <a
+ href="https://www.sqlite.org/">SQLite</a></li>
 </ul>
 
 <p>Calendar:</p>
@@ -93,9 +93,9 @@
  <li>Free/busy information exchange with other calendar applications</li>
  <li>Subscription of remote calendars</li>
  <li>Integration into external clients like <a
- href="http://www.apple.com/osx/apps/#calendar">Apple Calendar</a>, <a
- href="http://www.mozilla.org/projects/calendar/">Mozilla Lightning/Sunbird</a>, <a
- href="http://office.microsoft.com/outlook/">Microsoft Outlook</a></li>
+ href="https://www.apple.com/osx/apps/#calendar">Apple Calendar</a>, <a
+ href="https://www.mozilla.org/projects/calendar/">Mozilla Lightning/Sunbird</a>, <a
+ href="https://office.microsoft.com/outlook/">Microsoft Outlook</a></li>
  <li>CalDAV, iCalendar and iTip support</li>
 </ul>
 
@@ -122,9 +122,9 @@
  <li>Searchable descriptions</li>
  <li>Email notification about changed tasks</li>
  <li>Integration into external clients like <a
- href="http://www.apple.com/macosx/features/ical/">Apple iCal</a>, <a
- href="http://www.mozilla.org/projects/calendar/">Mozilla Sunbird</a>, <a
- href="http://office.microsoft.com/outlook/">Microsoft Outlook</a></li>
+ href="https://www.apple.com/macosx/features/ical/">Apple iCal</a>, <a
+ href="https://www.mozilla.org/projects/calendar/">Mozilla Sunbird</a>, <a
+ href="https://office.microsoft.com/outlook/">Microsoft Outlook</a></li>
  <li>CalDAV and vTodo support</li>
 </ul>
 

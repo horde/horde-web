@@ -34,7 +34,7 @@
 
           <h3>Obtaining Old Versions</h3>
 
-          <p>Old versions can be obtained from our <a href="http://pear.horde.org">PEAR server</a>.</p>
+          <p>Old versions can be obtained from our <a href="https://pear.horde.org">PEAR server</a>.</p>
       </div>
     </div>
     <div class="rightcol" style="background: none;">

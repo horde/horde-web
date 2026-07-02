@@ -9,7 +9,7 @@
         <p class="sectionintro">These translations are currently available for
         at least some applications. You can find complete statistics about the
         state of the different
-        translations <a href="http://dev.horde.org/i18n/">here</a>.
+        translations <a href="https://dev.horde.org/i18n/">here</a>.
         </p>
 
         <ul>

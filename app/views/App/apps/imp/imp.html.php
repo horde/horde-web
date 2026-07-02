@@ -18,19 +18,16 @@
 
 <p>
  IMP is the Internet Messaging Program. It is written in <a
- href="http://www.php.net/">PHP</a> and provides webmail access to IMAP
+ href="https://www.php.net/">PHP</a> and provides webmail access to IMAP
  and POP3 accounts. It uses the best-of-class
- <a href="http://dev.horde.org/imap_client/">Horde/Imap_Client</a> library to
+ <a href="https://dev.horde.org/imap_client/">Horde/Imap_Client</a> library to
  provide fast, robust connections to the remote IMAP/POP3 server. IMP provides
  multiple view types to support all possible browsers (desktop vs. mobile vs.
  tablet vs. text only).
 </p>
 
 <p>
- IMP passes both the
- <a href="ftp://ftp.cac.washington.edu/imap/mime-examples/">MIME Torture
- Test</a> and the newer
- <a href="http://www.email-standards.org/acid-test/">E-Mail Acid Test</a>,
+ IMP passes both the MIME Torture Test and the newer E-Mail Acid Test,
  ensuring that messages are displayed as intended by the original sender.
 </p>
 

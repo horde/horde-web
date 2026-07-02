@@ -212,7 +212,7 @@
         <p>In March, 1999, <a
         href="<?php echo $this->urlWriter->urlFor('team', array('anchor' => 'chuck')) ?>">
         Chuck</a> gave a talk about IMP at the <a
-        href="http://www.nercomp.org/">Nercomp</a> yearly conference. Here are
+        href="https://www.nercomp.org/">Nercomp</a> yearly conference. Here are
         <a href="<?php echo $GLOBALS['host_base'] ?>/papers/nercomp1999-imp/">the slides from that talk</a>.</p>
       </div>
     </div>

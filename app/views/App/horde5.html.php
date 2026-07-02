@@ -14,7 +14,7 @@
 
             <p>We also have an extensive list of projects that are currently
             either planned or underway in our
-            wiki: <a href="http://wiki.horde.org/Projects">http://wiki.horde.org/Projects</a>. These
+            wiki: <a href="https://wiki.horde.org/Projects">https://wiki.horde.org/Projects</a>. These
             projects are very open to new ideas, new blood, and anyone is
             welcome to add to the list, provided they have at least some code
             or the beginnings of a specification.</p>
@@ -44,7 +44,7 @@
           $this->urlWriter->urlFor(array('controller' => 'app', 'app' =>
           'horde', 'action' => 'docs', 'file' => 'INSTALL'))
           ?>">documentation</a>.  You may also download the PEAR tarball from
-          our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
+          our <a href="https://pear.horde.org/">PEAR server</a> directly.</p>
 
           <h2><span>&nbsp;</span>Horde Application Framework</h2>
           <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app'
@@ -172,7 +172,7 @@
           <p>The <b>W</b>eb <b>H</b>orde <b>U</b>ser <b>P</b>roblem
           <b>S</b>olver, besides being a contrived acronym, is a ticket-tracking
           system integrated with the rest of Horde. It
-          runs <a href="http://bugs.horde.org/">http://bugs.horde.org/</a>.</p>
+          runs <a href="https://bugs.horde.org/">https://bugs.horde.org/</a>.</p>
 
           <h2><span>&nbsp;</span>Horde Business Tools</h2>
 
@@ -206,7 +206,7 @@
           HordeWeb_Utils::downloadIcon($this, 'wicked') ?></h3>
           <p>Wicked is a Wiki for the Horde framework supporting several wiki
           markup dialects. Wicked is also powering the
-          official <a href="http://wiki.horde.org">Horde Wiki</a>.</p>
+          official <a href="https://wiki.horde.org">Horde Wiki</a>.</p>
         </div>
     </div>
     <div class="rightcol" style="background: none;">

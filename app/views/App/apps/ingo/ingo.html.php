@@ -1,8 +1,8 @@
 <p>Ingo, the &quot;Email Filter Rules Manager&quot;, started as a frontend for
-the <a href="http://tools.ietf.org/html/rfc5228">Sieve filter language</a>, and
+the <a href="https://tools.ietf.org/html/rfc5228">Sieve filter language</a>, and
 is now a generic and complete filter rule frontend that currently is able to
 create
-Sieve, <a href="http://www.procmail.org/">procmail</a>, <a href="http://www.courier-mta.org/maildrop/">maildrop</a>,
+Sieve, <a href="https://www.procmail.org/">procmail</a>, <a href="https://www.courier-mta.org/maildrop/">maildrop</a>,
 and IMAP filter rules. The IMAP filter driver translates the filter rules on
 demand to IMAP commands.</p>
 

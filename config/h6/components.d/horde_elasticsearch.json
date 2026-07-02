@@ -1,7 +1,7 @@
 {
     "name": "Horde_ElasticSearch",
     "summary": "ElasticSearch client library",
-    "description": "A lightweight library for ElasticSearch (http://www.elasticsearch.org/).",
+    "description": "A lightweight library for ElasticSearch (https://www.elasticsearch.org/).",
     "version": "2.0.0-beta1",
     "releaseDate": "2026-03-15 16:59:27 +0100",
     "download": "https://packagist.org/packages/horde/elasticsearch",

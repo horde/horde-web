@@ -16,7 +16,7 @@
             $this->urlWriter->urlFor('app', array('app' => $this->appname,
             'action' => 'docs')) ?>/INSTALL">documentation</a>.  You may
             also download the PEAR tarball from
-            our <a href="http://pear.horde.org/">PEAR server</a> directly.</p>
+            our <a href="https://pear.horde.org/">PEAR server</a> directly.</p>
             <?php else: ?>
             <p>No stable Horde release at this time.</p>
             <?php endif;?>

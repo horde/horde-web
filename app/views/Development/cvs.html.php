@@ -17,7 +17,7 @@
           should be installed with most modern Linux distributions, easily
           available on *BSD systems, and there are clients for Win32, MacOS, and
           GUI clients for the Unices. A number of them are available at <a
-          href="https://nongnu.org/cvs/">http://www.nongnu.org/cvs/</a>.</p>
+          href="https://nongnu.org/cvs/">https://www.nongnu.org/cvs/</a>.</p>
 
           <p>These command lines should be the bare-bones needed to get you
           started with Horde and CVS; this is not a CVS tutorial, however. The

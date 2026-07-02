@@ -25,7 +25,7 @@
 
             <p>Old versions can be obtained from
             <a href="https://packagist.org/packages/horde/">Packagist</a>
-            or our legacy <a href="http://pear.horde.org">PEAR server</a>.
+            or our legacy <a href="https://pear.horde.org">PEAR server</a>.
             See also the <a href="<?php echo $this->urlWriter->urlFor('download_h5', array('app' => $this->appname)) ?>">Horde 5
             download page</a> for PEAR-based installation.</p>
 

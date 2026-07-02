@@ -26,7 +26,7 @@ at least some of the following changes:
   <tr><td>Task list background color in basic view</td><td class="done">Done</td></tr>
   <tr><td>Track actual time spent</td><td class="done">Done</td></tr>
   <tr><td>Import and export of alarms and recurrence rules to/from iCalendar</td><td class="done">Done</td></tr>
-  <tr><td><a href="http://bugs.horde.org/ticket/1922">Monthly recurrence on last weekday</a></td><td class="done">Done</td></tr>
+  <tr><td><a href="https://bugs.horde.org/ticket/1922">Monthly recurrence on last weekday</a></td><td class="done">Done</td></tr>
   <tr><td>Merge into <?php echo $this->linkTo('Kronolith', array('controller' => 'app', 'action' => 'app', 'app' => 'kronolith')) ?></td><td class="planned">Planned</td></tr>
   <tr><td>Task dependencies</td><td class="planned">Planned</td></tr>
   <tr><td>WebDAV/CalDAV client capabilities</td><td class="planned">Planned</td></tr>

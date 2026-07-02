@@ -19,12 +19,12 @@
 
         <h3>Wiki</h3>
 
-        <p>The <a href="http://wiki.horde.org/">Horde Wiki</a> is a good place
+        <p>The <a href="https://wiki.horde.org/">Horde Wiki</a> is a good place
         to visit for both developer and user generated documentation.</p>
 
         <h3>FAQ</h3>
 
-        <p>The <a href="http://wiki.horde.org/FAQ">Horde FAQ</a> is part of the
+        <p>The <a href="https://wiki.horde.org/FAQ">Horde FAQ</a> is part of the
         Horde Wiki and provides answers to some Frequently Asked Questions.</p>
 
         <h3>Library</h3>
@@ -36,7 +36,7 @@
 
         <h3>API References</h3>
 
-        <p>Horde's <a href="http://dev.horde.org/">API Reference</a> is
+        <p>Horde's <a href="https://dev.horde.org/">API Reference</a> is
         automatically generated documentation on the Horde codebase.  This site
         also contains various other links of interest to those who wish to
         develop applications with Horde.</p>

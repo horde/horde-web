@@ -10,7 +10,7 @@
     <li>Studied Computer Science and Educational Science
       at <a href="https://uni-bielefeld.de/">University of Bielefeld</a>,
       Germany.</li>
-    <li>Website: <a href="https://janschneider.de/">http://janschneider.de</a></li>
+    <li>Website: <a href="https://janschneider.de/">janschneider.de</a></li>
     <li><strong>Amazon wishlist: <a href="https://www.amazon.de/registry/wishlist/3DQXLRXA5BENK">amazon.de</a>.</strong></li>
  </ul>
 </div>

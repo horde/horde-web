@@ -25,7 +25,7 @@
 
   <h2>More</h2>
   <iframe src="//www.facebook.com/plugins/like.php?app_id=132513070157462&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHorde-LLC%2F192707224109487&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;"></iframe>
-  <a href="http://twitter.com/hordeproject" class="twitter-follow-button" data-show-count="false">Follow @hordeproject</a>
+  <a href="https://twitter.com/hordeproject" class="twitter-follow-button" data-show-count="false">Follow @hordeproject</a>
   <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
 
   <p>
@@ -46,7 +46,7 @@
 
   <h2>Status</h2>
   <div class="status">
-    <a href="http://status.horde.org">
+    <a href="https://status.horde.org">
       <span id="status-check">Checking...</span>
       <span id="status-up" style="display:none"><img src="<?php echo $GLOBALS['host_base'] ?>/images/up.png"> All Systems Up</span>
       <span id="status-down" style="display:none"><img src="<?php echo $GLOBALS['host_base'] ?>/images/down.png"> <span id="status-name"></span> is down</span>

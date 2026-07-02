@@ -22,7 +22,7 @@
               </li>
 
               <li><strong>Find a bug to solve or a feature to implement.
-                  </strong><br />Check the <a href="http://bugs.horde.org/">
+                  </strong><br />Check the <a href="https://bugs.horde.org/">
                   Horde Ticket Tracker</a> for any outstanding bugs or track
                   down your own. It can be even missing documentation or
                   translations.<br />
@@ -40,7 +40,7 @@
               </li>
 
               <li><strong>Attach your patch to a new enhancement request in the <a
-                  href="http://bugs.horde.org/">Horde Ticket Tracker</a>.
+                  href="https://bugs.horde.org/">Horde Ticket Tracker</a>.
                   </strong><br /> Be prepared to be met with a critical analysis
                   of your patch. In case your patch is refused, ask why and
                   either correct your patch or constructively argue your point.
@@ -48,7 +48,7 @@
                   after a week. We make every effort to respond to all tickets,
                   but please be patient. If your patch does not cleanly fit into
                   Horde's main codebase, you may be asked to document it and
-                  upload it to a new <a href="http://wiki.horde.org/">Wiki page
+                  upload it to a new <a href="https://wiki.horde.org/">Wiki page
                   </a>.  That way it will be available in a central place to
                   others with the same need.</li>
             </ol>
@@ -64,9 +64,9 @@
               <li>Work within the framework, that is use the available classes
                   and mechanisms (eg: preferences, permissions, forms, etc).</li>
               <li>Monitor the <a
-                  href="http://lists.horde.org/mailman/listinfo/dev">development
+                  href="https://lists.horde.org/mailman/listinfo/dev">development
                   </a> and
-                  <a href="http://lists.horde.org/mailman/listinfo/commits">
+                  <a href="https://lists.horde.org/mailman/listinfo/commits">
                   commits</a> mailing lists and those of the applications you
                   work on.</li>
             </ul>

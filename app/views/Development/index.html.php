@@ -30,7 +30,7 @@
         your needs. If you intend to contribute to the project, you should
         <?php echo $this->linkTo('clone our Git repository', array(
         'controller' => 'development', 'action' => 'git'))?>.</p>
-        <p>You may also browse our <a href="http://git.horde.org">Git</a>
+        <p>You may also browse our <a href="https://git.horde.org">Git</a>
         code tree directly online.</p>
 
         <h3>Versions</h3>

@@ -56,4 +56,4 @@ methods that make it extremely easy to embed gallery views on your own website.
 
 <p>If you are interested in helping develop Ansel, or just want to ask questions
 and keep an eye on its progress, be sure to join our
-<a href="http://www.horde.org/mail">mailing list!</a></p>
+<a href="https://www.horde.org/mail">mailing list!</a></p>

@@ -7,13 +7,13 @@
         <!-- SiteSearch Google -->
         <table align="right" cellspacing="0" cellpadding="0" style="margin-left:10px"><tr><td>
           <div class="note">
-            <form method="get" action="http://www.google.com/search">
+            <form method="get" action="https://www.google.com/search">
              <input type="hidden" name="ie" value="UTF-8" />
              <input type="hidden" name="oe" value="UTF-8" />
-             <input type="hidden" name="sitesearch" value="http://lists.horde.org" />
-             <input type="hidden" name="domains" value="http://lists.horde.org" />
+             <input type="hidden" name="sitesearch" value="https://lists.horde.org" />
+             <input type="hidden" name="domains" value="https://lists.horde.org" />
              <p>Search all mailing lists:<br />
-             <a href="http://www.google.com/"><img src="//www.google.com/logos/Logo_25wht.gif" align="middle" alt="Google" /></a>
+             <a href="https://www.google.com/"><img src="//www.google.com/logos/Logo_25wht.gif" align="middle" alt="Google" /></a>
              <input type="text" name="q" size="20" maxlength="255" value="" />
              <input type="submit" name="btnG" value="Search" />
              </p>
@@ -25,7 +25,7 @@
 <p>These are the current Horde-related mailing lists. <b>You must be
 subscribed to post to any of them.</b> To subscribe either send an empty email
 to <i>listname</i>-subscribe@lists.horde.org (substituting the name of the
-list for "<i>listname</i>"), or use the <a href="http://lists.horde.org/">web
+list for "<i>listname</i>"), or use the <a href="https://lists.horde.org/">web
 interface</a> where you can fully manage your list subscriptions.</p>
 
 <p>All of the Horde mailing lists are run using <a
@@ -36,9 +36,9 @@ for some further information.</p>
  <h2><span>&nbsp;</span>Before posting a question, consider the following points:</h2>
  <p>
  <ul>
-  <li><a href="http://wiki.horde.org/FAQ"><strong>Read the FAQ</a>
+  <li><a href="https://wiki.horde.org/FAQ"><strong>Read the FAQ</a>
    first!</strong></li>
-  <li>Take a look at the <a href="http://bugs.horde.org/">bugs database</a>,
+  <li>Take a look at the <a href="https://bugs.horde.org/">bugs database</a>,
    too.</li>
   <li><a href="https://catb.org/~esr/faqs/smart-questions.html">How To Ask
    Questions The Smart Way</a> and <a
@@ -74,7 +74,7 @@ for some further information.</p>
   <?php foreach ($group_lists as $list => $list_val): ?>
   <tr valign="top">
     <td>
-      <a href="http://lists.horde.org/mailman/listinfo/<?php echo $list ?>"><?php echo $list ?>@lists.horde.org</a>
+      <a href="https://lists.horde.org/mailman/listinfo/<?php echo $list ?>"><?php echo $list ?>@lists.horde.org</a>
     </td><td align="center">
       <?php echo $list_val['traffic'] ?>
     </td><td>
@@ -94,7 +94,7 @@ for some further information.</p>
 </div>
 <?php endforeach; ?>
 
-<a style="display:none" href="http://lists.horde.org/archives/">http://lists.horde.org/archives/</a>
+<a style="display:none" href="https://lists.horde.org/archives/">https://lists.horde.org/archives/</a>
 
 
 

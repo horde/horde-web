@@ -31,7 +31,7 @@
 
           <p>Old versions can be obtained from
           <a href="<?php echo $this->libraryDetails->download ?>">Packagist</a>
-          or our legacy <a href="http://pear.horde.org">PEAR server</a>.</p>
+          or our legacy <a href="https://pear.horde.org">PEAR server</a>.</p>
       </div>
     </div>
     <div class="rightcol" style="background: none;">

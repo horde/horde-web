@@ -16,7 +16,7 @@
 
             <p>We also have an extensive list of projects that are currently either planned
             or underway in our wiki: <a
-            href="http://wiki.horde.org/Projects">http://wiki.horde.org/Projects</a>. These
+            href="https://wiki.horde.org/Projects">https://wiki.horde.org/Projects</a>. These
             projects are very open to new ideas, new blood, and anyone is welcome to add to
             the list, provided they have at least some code or the beginnings of a
             specification</p>
@@ -135,14 +135,14 @@
             <p>Chora is the Horde repository viewer, and it provides an advanced web-based
             view of any CVS, RCS, or Subversion repository. It includes annotation
             support, visual branch viewing capability, and human-readable diffs. It powers
-            <a href="http://cvs.horde.org/">http://cvs.horde.org/</a> and hundreds of
+            <a href="https://cvs.horde.org/">https://cvs.horde.org/</a> and hundreds of
             other web cvs interface sites.</p>
 
             <h3><a href="<?php echo $this->urlWriter->urlFor('app', array('app' => 'whups')) ?>">Whups</a></h3>
             <p>The <b>W</b>eb <b>H</b>orde <b>U</b>ser <b>P</b>roblem
             <b>S</b>olver, besides being a contrived acronym, is a ticket-tracking
             system integrated with the rest of Horde. It
-            runs <a href="http://bugs.horde.org/">http://bugs.horde.org/</a>.</p>
+            runs <a href="https://bugs.horde.org/">https://bugs.horde.org/</a>.</p>
 
             <h2><span>&nbsp;</span>Horde Business Tools</h2>
 

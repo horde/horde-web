@@ -1,7 +1,7 @@
 {
     "name": "Horde_Routes",
     "summary": "URL routing/mapping library",
-    "description": "A library for mapping URLs into the controllers and actions of an MVC system. It is a port of a Python library, Routes, by Ben Bangert (http://routes.groovie.org).",
+    "description": "A library for mapping URLs into the controllers and actions of an MVC system. It is a port of a Python library, Routes, by Ben Bangert (https://routes.readthedocs.io/).",
     "version": "3.0.0-beta2",
     "releaseDate": "2026-04-13 12:21:50 +0200",
     "download": "https://packagist.org/packages/horde/routes",

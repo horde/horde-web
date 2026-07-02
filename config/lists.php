@@ -86,7 +86,7 @@ $lists = array(
                             'gmane'   => 'sync',
                             'traffic' => 'low'),
         'bugs'     => array('desc'    => 'An archive of all submissions/changes
-                                          to the bug database (<a href="http://bugs.horde.org">http://bugs.horde.org</a>).
+                                          to the bug database (<a href="https://bugs.horde.org">https://bugs.horde.org</a>).
                                           This is <b>NOT</b> a discussion list;
                                           the purpose of it is to serve as an
                                           archive.',

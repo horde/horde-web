@@ -33,7 +33,7 @@
         <p>Currently Horde Project boasts many enterprise-ready
         <a href="<?php echo $this->urlWriter->urlFor('apps') ?>">applications</a>,
         that are deployed in countless demanding
-        <a href="http://wiki.horde.org/display.php?page=Deployments">
+        <a href="https://wiki.horde.org/display.php?page=Deployments">
         environments</a>, and numerous exciting applications still in
         development.</p>
 

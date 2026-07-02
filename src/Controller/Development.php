@@ -79,7 +79,7 @@ class Development implements RequestHandlerInterface
     {
         $stable = HordeWeb_Utils::getStableApps($module);
         $dev = HordeWeb_Utils::getDevApps($module);
-        return '<td><a href="http://git.horde.org/horde-git/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
+        return '<td><a href="https://git.horde.org/horde-git/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
             . '</td><td>' . ($stable ? htmlspecialchars($stable['version']) : ($dev ? htmlspecialchars($dev['version']) : '&nbsp;'))
             . '</td>';
     }
@@ -91,7 +91,7 @@ class Development implements RequestHandlerInterface
     {
         $stable = HordeWeb_Utils::getH3Apps($module);
         $dev = HordeWeb_Utils::getDevApps($module);
-        return '<td style="white-space: nowrap"><a href="http://git.horde.org/horde/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
+        return '<td style="white-space: nowrap"><a href="https://git.horde.org/horde/-/browse/' . htmlspecialchars($module) . '/">' . htmlspecialchars($module) . '</a>'
             . '</td><td>' . ($stable ? htmlspecialchars($stable['version']) : ($dev && substr($dev['version'], 0, 2) == 'H3' ? htmlspecialchars($dev['version']) : '&nbsp;'))
             . '</td>';
     }

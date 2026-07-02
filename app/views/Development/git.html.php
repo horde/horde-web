@@ -21,7 +21,7 @@
 
           <p>You will need a Git client, if you don't already have one.
           Information on Git can be found
-          at <a href="https://git-scm.com/">http://git-scm.com/</a>.</p>
+          at <a href="https://git-scm.com/">https://git-scm.com/</a>.</p>
 
           <p>These command lines should be the bare-bones needed to get you
           started with Horde and Git; this is not a Git tutorial, however. The
@@ -145,7 +145,7 @@
         <p>For more information on rebasing, and the commands needed if
         conflicts are detected during the rebase/merge, see:
         <a href="https://kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase">http://www.kernel.org/pub/software/scm/git/docs/user-manual.html#using-git-rebase</a>
-        and <a href="https://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">http://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
+        and <a href="https://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/">https://jbowes.dangerouslyinc.com/2007/01/26/git-rebase-keeping-your-branches-current/</a>.</p>
 
         <h3 id="createcommit">Creating commits</h3>
 

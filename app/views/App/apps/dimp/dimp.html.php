@@ -8,5 +8,5 @@ fully incorporated into IMP. All support and development questions are
 handled through the IMP project.</p>
 
 <p class="hint">DIMP's development is generously sponsored
-by <a href="http://oss.sapo.pt/">Portugal Telecom's SAPO
+by <a href="https://github.com/sapo">Portugal Telecom's SAPO
 division</a>.</p>

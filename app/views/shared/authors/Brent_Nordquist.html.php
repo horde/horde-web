@@ -8,7 +8,7 @@
     working on Ingo and Orator,
     and other miscellaneous stuff.</li>
 <li>Come join us on OPN #horde</li>
-<li><a href="http://tinyurl.com/7sti">* Fast pipe * Always on * Get out of the way</a> - Tim Bray</li>
+<li><a href="https://tinyurl.com/7sti">* Fast pipe * Always on * Get out of the way</a> - Tim Bray</li>
 <li><a href="https://nordist.net/contact.html">Contact information</a>.</li>
 </ul>
 </div>

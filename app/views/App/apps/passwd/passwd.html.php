@@ -15,5 +15,5 @@ $this->linkTo('Vacation', array('controller' => 'app', 'action' => 'app', 'app'
 
 <p>Collectively these modules now comprise what is known as <em>Sork</em>.
 There is a mailing list available for these modules.  See <a
-href="http://lists.horde.org/mailman/listinfo/sork/">http://lists.horde.org/mailman/listinfo/sork/</a>
+href="https://lists.horde.org/mailman/listinfo/sork/">https://lists.horde.org/mailman/listinfo/sork/</a>
 for information or to subscribe.</p>

@@ -22,7 +22,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
-  <tr><td><a href="http://bugs.horde.org/ticket/13693">Searching for tags</a></td><td class="done">Done</td></tr>
+  <tr><td><a href="https://bugs.horde.org/ticket/13693">Searching for tags</a></td><td class="done">Done</td></tr>
   <tr><td>Optional special characters in the alpha pager</td><td class="done">Done</td></tr>
 </table>
 

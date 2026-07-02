@@ -158,7 +158,7 @@ class HordeWeb_Utils
             if ($controller) {
                 return $controller->getView()->urlWriter->urlFor('app', array('app' => $key, 'action' => 'docs')) . '/INSTALL';
             } else {
-                return 'http://pear.horde.org/';
+                return 'https://pear.horde.org/';
             }
         }
         $dir = isset($elt['dir']) ? $elt['dir'] : $key;

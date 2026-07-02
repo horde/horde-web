@@ -10,7 +10,7 @@
         <li><a href="<?php echo $this->urlWriter->urlFor('apps')?>" title="Applications">Applications</a></li>
         <li><a href="https://wiki.horde.org" title="Wiki">Wiki</a></li>
         <!-- demo.horde.org is currently not available -->
-        <!-- <li><a href="http://demo.horde.org" title="Demo">Demo</a></li> -->
+        <!-- <li><a href="https://demo.horde.org" title="Demo">Demo</a></li> -->
         <li><a href="<?php echo $this->urlWriter->urlFor('support')?>" title="Support">Support</a></li>
         <li><a href="https://status.horde.org" title="System Status">Status</a></li>
         <li><a href="<?php echo $this->urlWriter->urlFor('contact')?>" title="Contact Us">Contact Us</a></li>

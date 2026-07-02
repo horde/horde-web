@@ -22,8 +22,8 @@ Core Team</a>.</p>
 
 <p>As of Horde 4.0, The Horde Framework libraries and all applications,
 including the base Horde application (which provides core functionality), are
-installable via <a href="http://pear.horde.org">PEAR</a>.  See
-the <a href="http://pear.horde.org">PEAR</a> server page, or the Horde
+installable via <a href="https://pear.horde.org">PEAR</a>.  See
+the <a href="https://pear.horde.org">PEAR</a> server page, or the Horde
 application <a href="<?php echo $this->urlWriter->urlFor(array('controller' =>
 'app', 'app' => 'horde', 'action' => 'docs', 'f' => 'INSTALL.html')) ?>">
 INSTALL</a> file for more information.</p>

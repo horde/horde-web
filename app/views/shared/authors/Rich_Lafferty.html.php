@@ -6,8 +6,8 @@
         <a href="https://e-smith.org/">Network Server Solutions Group</a>
         (formerly e-smith, Inc.), in Ottawa, Canada</li>
     <li>Graduate of <a href="https://mcgill.ca/">McGill University</a>, Montr&eacute;al, in Sociology</li>
-    <li>Horde <a href="http://wiki.horde.org/FAQ">FAQ</a> maintainer</li>
-    <li>Personal page: <a href="https://lafferty.ca/">http://www.lafferty.ca/</a></li>
+    <li>Horde <a href="https://wiki.horde.org/FAQ">FAQ</a> maintainer</li>
+    <li>Personal page: <a href="https://lafferty.ca/">https://www.lafferty.ca/</a></li>
     <li><i>Rumors of my disappearance are greatly exaggerated.</i></li>
   </ul>
 </div>

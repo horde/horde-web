@@ -28,13 +28,13 @@ at least some of the following changes:
  <tr><td>Progress bar when uploading attachments</td><td class="done">Done</td></tr>
  <tr><td>Improved support for e-mail groups and the address book</td><td class="done">Done</td></tr>
  <tr><td>Link to sent message replies</td><td class="done">Done</td></tr>
- <tr><td><a href="http://bugs.horde.org/ticket/13168">Optionally store remote account passwords</a></td><td class="done">Done</td></tr>
+ <tr><td><a href="https://bugs.horde.org/ticket/13168">Optionally store remote account passwords</a></td><td class="done">Done</td></tr>
  <tr><td>Lazy loading of images in HTML messages</td><td class="done">Done</td></tr>
  <tr><td>Improved support for vTodo iTip handling</td><td class="done">Done</td></tr>
  <tr><td>Improved display of ZIP/TGZ attachments</td><td class="done">Done</td></tr>
- <tr><td><a href="http://bugs.horde.org/ticket/12721">Uniquely identifiable sent-mail mailboxes in folder tree</a></td><td class="done">Done</td></tr>
+ <tr><td><a href="https://bugs.horde.org/ticket/12721">Uniquely identifiable sent-mail mailboxes in folder tree</a></td><td class="done">Done</td></tr>
  <tr><td>Option to more accurately determine attachments in message list</td><td class="done">Done</td></tr>
- <tr><td><a href="http://bugs.horde.org/ticket/13155">Purge Deleted button in smartphone view</a></td><td class="done">Done</td></tr>
+ <tr><td><a href="https://bugs.horde.org/ticket/13155">Purge Deleted button in smartphone view</a></td><td class="done">Done</td></tr>
 </table>
 
 <div class="dimmed">
@@ -49,7 +49,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
  <tr><th>Feature</th><th>Status</th>
- <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="done">Done</td></tr>
+ <tr><td><a href="https://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="done">Done</td></tr>
  <tr><td>Signature display and editing in compose window</td><td class="done">Done</td></tr>
 </table>
 
@@ -61,7 +61,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
  <tr><th>Feature</th><th>Status</th>
- <tr><td><a href="http://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="cancelled">Postponed</td></tr>
+ <tr><td><a href="https://bugs.horde.org/ticket/8077">Allow direct access to remote accounts</a></td><td class="cancelled">Postponed</td></tr>
 </table>
 
 <h3>IMP 6.0</h3>
@@ -87,21 +87,22 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th>
-  <tr><td><a href="http://bugs.horde.org/ticket/8659">Saved Filters/Complex Search Elements</a></td><td class="done">Done</td>
-  <tr><td><a href="http://bugs.horde.org/ticket/1406">HTML Signatures</a></td><td class="done">Done</td>
+  <tr><td><a href="https://bugs.horde.org/ticket/8659">Saved Filters/Complex Search Elements</a></td><td class="done">Done</td>
+  <tr><td><a href="https://bugs.horde.org/ticket/1406">HTML Signatures</a></td><td class="done">Done</td>
   <tr><td>Provide vertical 3-pane view option in DIMP</td><td class="done">Done</td>
-  <tr><td><a href="http://bugs.horde.org/ticket/6875">Improved search user interface</a></td><td class="done">Done</td>
-  <tr><td><a href="http://bugs.horde.org/ticket/8592">Improved inline display of HTML message parts</a><br />
-  [IMP now passes the <a href="http://www.email-standards.org/acid/">Email
-  Standards Project Acid Test</a>]</td><td class="done">Done</td>
+  <tr><td><a href="https://bugs.horde.org/ticket/6875">Improved search user interface</a></td><td class="done">Done</td>
+  <tr><td><a href="https://bugs.horde.org/ticket/8592">Improved inline display of HTML message parts</a><br />
+  [IMP now passes the Email Standards Project Acid Test &mdash; see
+  <a href="https://www.caniemail.com/">Can I Email</a> for current
+  HTML email support]</td><td class="done">Done</td>
   <tr><td>Login code moved to Horde</td><td class="done">Done</td>
-  <tr><td><a href="http://bugs.horde.org/ticket/3359">Use PHP temporary streams to process message data</a></td><td class="done">Done</td>
-  <tr><td><a href="http://bugs.horde.org/ticket/937">Configurable custom flagging/labels</a></td><td class="done">Done</td>
+  <tr><td><a href="https://bugs.horde.org/ticket/3359">Use PHP temporary streams to process message data</a></td><td class="done">Done</td>
+  <tr><td><a href="https://bugs.horde.org/ticket/937">Configurable custom flagging/labels</a></td><td class="done">Done</td>
   <tr><td>Native PHP 5 code</td><td class="done">Done</td>
-  <tr><td><a href="http://wiki.horde.org/Project/HordeMime">MIME code refactoring</a></td><td class="done">Done</td>
-  <tr><td><a href="http://wiki.horde.org/Project/HordeImapLib">New native PHP IMAP library</a></td><td class="done">Done</td>
+  <tr><td><a href="https://wiki.horde.org/Project/HordeMime">MIME code refactoring</a></td><td class="done">Done</td>
+  <tr><td><a href="https://wiki.horde.org/Project/HordeImapLib">New native PHP IMAP library</a></td><td class="done">Done</td>
   <tr><td>Full support for advanced IMAP caching extensions<br />
-  [CONDSTORE (<a href="http://www.isi.edu/in-notes/rfc4551.txt">RFC 4551</a>) and QRESYNC (<a href="http://www.isi.edu/in-notes/rfc5162.txt">RFC 5162</a>)]</td><td class="done">Done</td>
+  [CONDSTORE (<a href="https://www.isi.edu/in-notes/rfc4551.txt">RFC 4551</a>) and QRESYNC (<a href="https://www.isi.edu/in-notes/rfc5162.txt">RFC 5162</a>)]</td><td class="done">Done</td>
   <tr><td>Move alternative display frontends (DIMP, MIMP) into IMP</td><td class="done">Done</td>
 </table>
 
