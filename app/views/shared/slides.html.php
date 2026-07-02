@@ -1,13 +1,14 @@
             <div class="slider" id="slides">
                 <div class="slides_container">
                     <div class="slide-horde4 sliderview">
-                        <h2>Horde 6 Beta</h2>
+                        <h2>Horde 6 is out!</h2>
                         <p>
-                            After a long hiatus, the Horde Project is
-                            pleased to announce the first beta release of Horde
+                            After a long development time, the Horde Project is
+                            pleased to announce the first stable release of Horde
                             Groupware 6. This release is a major step forward
                             for Horde, supporting the latest PHP releases,
-                            improved CalDAV and CardDAV support, and adopting many of the <a href="https://www.php-fig.org/">PHP-FIG</a> standards.
+                            improved CalDAV and CardDAV support and adopting many of the <a href="https://www.php-fig.org/">PHP-FIG</a> standards.
+                            Now supports Exchange ActiveSync (EAS) up to 16.1.
                         </p>
                     </div>
 
