@@ -12,22 +12,47 @@ at least some of the following changes:
   <li>New preferences or configuration options.</li>
 </ul>
 
-<h3>Horde 6.0</h3>
+<h3>Horde 6.1</h3>
 
-<p><b>Status:</b> In Development</p>
+<p><b>Status:</b> In development</p>
 
-<p><b>Planned release timeframe:</b> None</p>
+<p><b>Planned release timeframe:</b> Open</p>
 
 <p><b>Features currently planned for the next release:</b></p>
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>Per-user backup and restore</td><td class="progress">In Progress</td></tr>
-  <tr><td>Extended administration pages</td><td class="done">Done</td></tr>
-  <tr><td>Portal weather map</td><td class="done">Done</td></tr>
-  <tr><td>Administrator check for updates</td><td class="done">Done</td></tr>
-  <tr><td>Caching for group system</td><td class="done">Done</td></tr>
+  <tr><td>Improved administration and portal pages</td><td class="progress">In Progress</td></tr>
+  <tr><td>ActiveSync operations dashboard for administrators</td><td class="planned">Planned</td></tr>
+  <tr><td>Broader web-based configuration coverage</td><td class="planned">Planned</td></tr>
+  <tr><td>Unified synchronization foundation for contacts and calendars across ActiveSync, CardDAV/CalDAV, and JMAP</td><td class="planned">Planned</td></tr>
+  <tr><td>Initial JMAP support (technology preview quality)</td><td class="planned">Planned</td></tr>
+  <tr><td>Additional Horde applications on the Horde 6 platform</td><td class="progress">In Progress</td></tr>
 </table>
+
+<h3>Horde 6.0</h3>
+
+<p><b>Status:</b> Released</p>
+
+<p><b>Release timeframe:</b> 2026</p>
+
+<p><b>Major changes in this release:</b></p>
+
+<table cellspacing="0" class="roadmap">
+  <tr><th>Feature</th><th>Status</th></tr>
+  <tr><td>Composer-based installation and upgrades (replacing PEAR)</td><td class="done">Done</td></tr>
+  <tr><td>Support for current PHP releases (8.2 and above)</td><td class="done">Done</td></tr>
+  <tr><td>Extended administration pages</td><td class="done">Done</td></tr>
+  <tr><td>Administrator check for updates</td><td class="done">Done</td></tr>
+  <tr><td>Improved caching for large group deployments</td><td class="done">Done</td></tr>
+  <tr><td>Portal weather map block</td><td class="done">Done</td></tr>
+  <tr><td>Configurable DAV username mapping for external integrations</td><td class="done">Done</td></tr>
+  <tr><td>Per-user backup and restore</td><td class="cancelled">Postponed</td></tr>
+</table>
+
+<p>See the <a href="<?php echo $this->urlWriter->urlFor('app_action', ['app' => 'horde', 'action' => 'docs', 'file' => 'UPGRADING']) ?>">UPGRADING</a>
+documentation for migration notes from Horde 5.</p>
 
 <div class="dimmed">
 
@@ -54,7 +79,7 @@ at least some of the following changes:
 
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
-  <tr><td>ActiveSync support for EAS 14.0 and 14.1 (Outlook sync, notes sync, GAL photos)</a></td><td class="done">Done</td></tr>
+  <tr><td>ActiveSync support for EAS 14.0 and 14.1 (Outlook sync, notes sync, GAL photos)</td><td class="done">Done</td></tr>
 </table>
 
 <h3>Horde 5.0</h3>
@@ -68,7 +93,7 @@ at least some of the following changes:
 <table cellspacing="0" class="roadmap">
   <tr><th>Feature</th><th>Status</th></tr>
   <tr><td>New user interface design</td><td class="done">Done</td></tr>
-  <tr><td>ActiveSync e-mail synchronization</a></td><td class="done">Done</td></tr>
+  <tr><td>ActiveSync e-mail synchronization</td><td class="done">Done</td></tr>
 </table>
 
 <h3>Horde 4.0</h3>
