@@ -35,7 +35,7 @@ at least some of the following changes:
 
 <p><b>Status:</b> Released</p>
 
-<p><b>Release timeframe:</b> 2026</p>
+<p><b>Release timeframe:</b> 30th June 2026</p>
 
 <p><b>Major changes in this release:</b></p>
 
@@ -44,6 +44,8 @@ at least some of the following changes:
   <tr><td>Composer-based installation and upgrades (replacing PEAR)</td><td class="done">Done</td></tr>
   <tr><td>Support for current PHP releases (8.2 and above)</td><td class="done">Done</td></tr>
   <tr><td>Extended administration pages</td><td class="done">Done</td></tr>
+  <tr><td>ActiveSync Protocol 16.0 completed</td><td class="done">Done</td></tr>
+  <tr><td>ActiveSync Protocol 16.1 completed</td><td class="done">Done</td></tr>
   <tr><td>Administrator check for updates</td><td class="done">Done</td></tr>
   <tr><td>Improved caching for large group deployments</td><td class="done">Done</td></tr>
   <tr><td>Portal weather map block</td><td class="done">Done</td></tr>
