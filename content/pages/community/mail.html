@@ -1,0 +1,62 @@
+<!--
+  Harvested from app/views/Community/mail.html.php (2026-09-10). Chrome
+  (communitynav, sponsors sidebar) removed. Google sitesearch box kept
+  as-is (static form, no server-side logic). The per-group mailing-list
+  table ($this->lists loop) is data-driven (list name/traffic/archive
+  links come from controller data, not static markup) and is replaced
+  with a widget placeholder.
+-->
+<h2><span>&nbsp;</span>Mailing Lists</h2>
+<div class="section">
+  <table align="right" cellspacing="0" cellpadding="0" style="margin-left:10px"><tr><td>
+    <div class="note">
+      <form method="get" action="https://www.google.com/search">
+       <input type="hidden" name="ie" value="UTF-8" />
+       <input type="hidden" name="oe" value="UTF-8" />
+       <input type="hidden" name="sitesearch" value="https://lists.horde.org" />
+       <input type="hidden" name="domains" value="https://lists.horde.org" />
+       <p>Search all mailing lists:<br />
+       <a href="https://www.google.com/"><img src="//www.google.com/logos/Logo_25wht.gif" align="middle" alt="Google" /></a>
+       <input type="text" name="q" size="20" maxlength="255" value="" />
+       <input type="submit" name="btnG" value="Search" />
+       </p>
+      </form>
+    </div>
+  </td></tr></table>
+
+  <p>These are the current Horde-related mailing lists. <b>You must be
+  subscribed to post to any of them.</b> To subscribe either send an empty email
+  to <i>listname</i>-subscribe@lists.horde.org (substituting the name of the
+  list for "<i>listname</i>"), or use the <a href="https://lists.horde.org/">web
+  interface</a> where you can fully manage your list subscriptions.</p>
+
+  <p>All of the Horde mailing lists are run using <a
+  href="https://list.org/">Mailman</a>. You can also view the <a
+  href="https://list.org/mailman-member/">Mailman Members' Documentation</a>
+  for some further information.</p>
+
+  <h2><span>&nbsp;</span>Before posting a question, consider the following points:</h2>
+  <p>
+  <ul>
+   <li><a href="https://wiki.horde.org/FAQ"><strong>Read the FAQ</a>
+    first!</strong></li>
+   <li>Take a look at the <a href="https://bugs.horde.org/">bugs database</a>,
+    too.</li>
+   <li><a href="https://catb.org/~esr/faqs/smart-questions.html">How To Ask
+    Questions The Smart Way</a> and <a
+    href="https://asktog.com/columns/047HowToWriteAReport.html">How To
+    Deliver A Report Without Getting Lynched</a> are good reads.</li>
+   <li>Try searching the archives for any similar topics.</li>
+   <li>Help people help you - if you've searched the archives or read the FAQ
+    or tried other solutions, say what you did that didn't work.</li>
+   <li><strong>Always</strong> say what versions of Horde, any applications,
+    Apache, PHP, etc. you're using.</li>
+   <li><strong>Do</strong> include the entire error message, and if you're not
+    getting an error message, look really hard for one before posting
+    without.</li>
+   <li>Don't paste a whole test.php or phpinfo() unless asked; it's usually
+    just noise.</li>
+  </ul></p>
+
+  <!-- WIDGET: mailing-lists-table -->
+</div>
