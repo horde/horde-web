@@ -1,61 +1,156 @@
 <!--
-  Harvested from app/views/Home/index.html.php (2026-09-10).
-  Chrome (slides, sponsors) and dynamic feed loops removed — those are
-  layout/widget concerns for the generator, not page content.
-  Placeholders below mark where generator-injected widgets go.
+  Redesigned 2026-09-10, replacing the 2012-era harvested teaser-list
+  homepage. Structural chrome (header/nav, footer) now lives in the
+  shared topbar.html/footer.html fragments, not duplicated per page.
+  WIDGET comments mark generator-injected, build-time-rendered content -
+  the generator replaces each block with real data at build time (no
+  client-side fetch), matching the pattern already used by
+  dev.horde.org's activity grid.
 -->
-<ul class="teasers">
-  <li>
-    <div class="teaser">
-      <div class="img">
-        <a href="/community"><img src="images/teaser_community.jpg" alt="Community" /></a>
-      </div>
-      <div class="text">
-        <h2><a href="/community">Community</a></h2>
-        <p>Wondering <strong>what Horde is</strong>? Curious how
-        to use one of Horde's many more advanced features?  Learn
-        more about Horde and its <strong>powerful
-        applications</strong> with Frequently Asked Questions,
-        Screenshots and more.
-        </p>
-      </div>
+<section class="hero">
+  <div class="container">
+    <h1>Groupware that runs anywhere, built on tools you can trust.</h1>
+    <p class="lede">
+      Horde is a free, open source webmail, calendar, contacts, and
+      task suite. It's also the PHP library ecosystem underneath it,
+      ready for you to build on. No vendor, no lock-in, just a project
+      maintained by its community.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/quickstart">Deploy Horde</a>
+      <a class="btn btn-secondary" href="/apps">Try the Demo</a>
+      <a class="btn btn-secondary" href="https://dev.horde.org/contribute.html">Contribute</a>
     </div>
-  </li>
-  <li class="middle">
-    <div class="teaser">
-      <div class="img">
-        <a href="/development"><img src="images/teaser_development.jpg" alt="Development" /></a>
-      </div>
-      <div class="text">
-        <h2><a href="/development">Development</a></h2>
-        <p>As the most flexible groupware platform in the world,
-        Horde makes an ideal place to create your
-        own <strong>custom applications</strong>. Learn more
-        about our feature-rich collection of
-        web <strong>development libraries</strong> and how to get
-        started.
-        </p>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="teaser">
-      <div class="img">
-        <a href="/services"><img src="images/teaser_services.jpg" alt="Services" /></a>
-      </div>
-      <div class="text">
-        <h2><a href="/services">Services</a></h2>
-        <p>More than just software: Our team of trusted
-        <strong>professionals helps</strong> you
-        build <strong>large installations</strong> or custom
-        applications. Learn how our experience and technology
-        delivers the most flexible platform to realize your grand
-        ideas.
-        </p>
-      </div>
-    </div>
-  </li>
-</ul>
+  </div>
+</section>
 
-<!-- WIDGET: latest-news-feed (see IA §7 — currently broken upstream feed) -->
-<!-- WIDGET: planet-horde-feed -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Why Horde</h2>
+      <p>A groupware platform designed to be run by its users, not rented from a vendor.</p>
+    </div>
+
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="icon">📬</div>
+        <h3>Full Groupware Suite</h3>
+        <p>Webmail, calendar, contacts, tasks, notes, time tracking,
+        and more - mature applications used by organizations for
+        over two decades.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">📱</div>
+        <h3>Horde Everywhere</h3>
+        <p>Responsive web UI, CalDAV/CardDAV/ActiveSync sync - access
+        your data from desktop, mobile, or any standards-compliant client.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">🧩</div>
+        <h3>Open Source, Standards-Based</h3>
+        <p>LGPL/GPL licensed, built on open protocols. Inspect it,
+        extend it, self-host it - nothing is hidden behind a paywall.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">🛠️</div>
+        <h3>A Library Ecosystem</h3>
+        <p>Horde's applications are built from independent PHP
+        libraries you can reuse directly in your own projects -
+        see what's under active development on <a href="https://dev.horde.org/">dev.horde.org</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>The Project, Live</h2>
+      <p>Horde development happens in the open. Here's what's
+      actually shipping right now.</p>
+    </div>
+
+    <!--
+      WIDGET: live-project-pulse (Phase 6 - build-time embed).
+      The generator fills this in from dev.horde.org's own merged
+      component-facts + activity feed (Phase 2 unified facts), on the
+      same regeneration cadence as dev.horde.org itself. No
+      client-side fetch, no separate live backend call. Expected
+      fields: component count, releases/commits/PRs over a rolling
+      window, and a link back to dev.horde.org.
+    -->
+    <div class="pulse" data-widget="live-project-pulse">
+      <div class="pulse-item">
+        <span class="num">{components_tracked}</span>
+        <span class="label">Components tracked</span>
+      </div>
+      <div class="pulse-item">
+        <span class="num">{releases_90d}</span>
+        <span class="label">Releases (last 90 days)</span>
+      </div>
+      <div class="pulse-item">
+        <span class="num">{commits_30d}</span>
+        <span class="label">Commits (last 30 days)</span>
+      </div>
+      <div class="pulse-item">
+        <span class="num">{open_prs}</span>
+        <span class="label">Open pull requests</span>
+      </div>
+      <div class="pulse-footer">
+        <span>Generated with the site - not a live dashboard.</span>
+        <a href="https://dev.horde.org/">See full activity on dev.horde.org →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>From the Blog</h2>
+      <p>News, release announcements, and notes from the Horde community.</p>
+    </div>
+
+    <!--
+      WIDGET: blog-roll (Phase 6 - build-time embed, rendered by
+      Horde\Components\Website\BlogFeedFetcher + BlogRollRenderer).
+      Merges two RSS sources at build time: the official Horde News
+      channel (dev.horde.org Jonah) and community blog posts tagged
+      for Horde. Each card shows a source label since the two feeds
+      have different authority/voice (official vs. community).
+    -->
+    <div class="blog-grid" data-widget="blog-roll" data-count="3">
+      <article class="blog-card">
+        <span class="blog-date">{post.date}</span>
+        <h3><a href="{post.url}">{post.title}</a></h3>
+        <p>{post.excerpt}</p>
+        <span class="blog-source">{post.source}</span>
+      </article>
+    </div>
+    <div class="blog-footer">
+      <a href="/community#blog">More posts →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Get Started</h2>
+    </div>
+    <div class="cta-grid">
+      <a class="cta-card demo" href="/apps">
+        <h3>Try the Demo →</h3>
+        <p>See Horde's applications in action before you install anything.</p>
+      </a>
+      <a class="cta-card support" href="/support">
+        <h3>Get Support →</h3>
+        <p>Community mailing lists, or professional support from long-time sponsor B1 Systems.</p>
+      </a>
+      <a class="cta-card contribute" href="https://dev.horde.org/contribute.html">
+        <h3>Contribute →</h3>
+        <p>Set up a dev environment, browse open issues, and send a pull request.</p>
+      </a>
+    </div>
+  </div>
+</section>

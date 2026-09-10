@@ -1,38 +1,50 @@
 <!--
-  Harvested from app/views/Support/index.html.php (2026-09-10).
-  Chrome (sponsors sidebar) removed. $this->breadcrumb echo replaced with
-  the literal "Support" title it renders in practice.
-  NOTE: "Professional Services" framing references Horde, LLC (defunct).
-  See IA §10 for corrected narrative. Not yet rewritten here.
+  Rewritten 2026-09-10 per IA §10.1: replaces the "Professional
+  Services" framing (which implied an official Horde LLC support tier;
+  Horde LLC is defunct) with two real, current categories - Community
+  channels and Paid engagement (naming B1 Systems, and explicitly not
+  gatekeeping other consultancies). Previously harvested from
+  app/views/Support/index.html.php.
 -->
 <h2><span>&nbsp;</span>Support</h2>
 <div class="section">
   <div class="sectionintro">
-    <p>The Horde Project provides two levels of support for our software
-    - community based support and paid, professional support.</p>
+    <p>The Horde Project offers two kinds of support: free community
+    channels, and paid engagement with a third party for guaranteed
+    response times or custom work.</p>
     <p>Note that we can only address problems related to the Horde
     software itself. If you are having problems with any service
     <em>using</em> Horde software, for example your email account, please
     contact your <b>service provider</b> directly.</p>
   </div>
-  <h2><span>&nbsp;</span>Support Options</h2>
-  <p>For information on the various support channels, please use the
-  links below.</p>
 
-  <h3>Community</h3>
-  <p>Just like the development of the Horde Project is a community and
-  volunteer effort, so is the support. Horde has a very robust and
-  friendly community comprised of developers, administrators and users
-  that volunteer their time and many years of experience to provide
-  support.</p>
-  <p>Please see our
-  <a href="/community/support">Community Support</a>
-  page for more information.</p>
+  <h2><span>&nbsp;</span>Community Channels (free)</h2>
+  <p>Horde is developed and supported by a community of volunteers.
+  There's no guaranteed response time, but these are the right places to
+  ask, report, or propose anything:</p>
+  <ul>
+    <li><a href="https://github.com/horde">GitHub Issues and Pull
+    Requests</a> - code-level bugs, feature proposals, and patches,
+    per-repository under <a href="https://github.com/horde">github.com/horde</a>.</li>
+    <li><a href="https://bugs.horde.org/">bugs.horde.org</a> - the
+    project's own long-running bug tracker.</li>
+    <li><a href="https://lists.horde.org">lists.horde.org</a> mailing
+    lists - developer discussion, feature requests, and user-to-user
+    support.</li>
+  </ul>
+  <p>See <a href="/community/support">Community Support</a> for more detail
+  on how to get the most out of these channels.</p>
 
-  <h3>Professional Services</h3>
-  <p>Horde, LLC provides professional support for Horde software. If you
-  are in need of support beyond the scope or ability of the community you
-  may hire a Horde, LLC consultant to meet your needs.</p>
-  <p>Please see our
-  <a href="/services">Professional Services</a> page for more information.</p>
+  <h2><span>&nbsp;</span>Paid Engagement</h2>
+  <p>If you need guaranteed response times, custom feature development, or
+  help operating a large corporate Horde deployment,
+  <strong><a href="https://www.b1-systems.de/" target="_blank">B1
+  Systems</a></strong> is a long-time Horde sponsor and the established
+  point of contact for this kind of work.</p>
+  <p>Horde does not gatekeep who may offer paid Horde services - any
+  company or individual is free to build a consulting, hosting, or
+  integration business around Horde (see
+  <a href="/services">Commercial Use &amp; Support</a> for details on the
+  licensing obligations this implies). B1 Systems is simply the
+  longest-established option, not the only one.</p>
 </div>

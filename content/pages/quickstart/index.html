@@ -1,0 +1,104 @@
+<!--
+  New content authored 2026-09-10, closing the IA §11 gap ("I'm a
+  sysadmin - how do I stand up a working Horde deployment from zero?" -
+  historically wiki-only, absent from www.horde.org). This is the
+  admin/adoption-facing counterpart to dev.horde.org's /contribute
+  "Quickstart: Local Development Environment" section, which is for
+  contributors working from a git checkout instead.
+
+  Deployment commands below (composer create-project horde/bundle, ...)
+  match the exact workflow already documented by horde-components'
+  own `status` command help text (src/Module/Status.php) and `install`
+  module - kept consistent rather than inventing a separate procedure.
+-->
+<h1>Quickstart: Deploy Horde</h1>
+
+<div class="section">
+  <p class="sectionintro">This page gets you a working Horde Groupware
+  instance running, from nothing, in a handful of steps. It's aimed at
+  administrators evaluating or standing up Horde for real use. If you
+  want to hack on Horde's own code instead, see
+  <a href="https://dev.horde.org/contribute.html">dev.horde.org's
+  contributor quickstart</a>, which uses a git checkout rather than a
+  release package.</p>
+</div>
+
+<h2>1. Prerequisites</h2>
+<div class="section">
+  <ul>
+    <li><strong>PHP 8.1 or newer</strong> (check the specific apps you
+    plan to run for any higher per-app minimum) with the extensions
+    typical Horde apps need: <code>pdo</code> plus a database driver
+    (<code>pdo_mysql</code>/<code>pdo_pgsql</code>/<code>pdo_sqlite</code>),
+    <code>mbstring</code>, <code>intl</code>, <code>gd</code> or
+    <code>imagick</code>, and <code>imap</code> if you're running IMP.</li>
+    <li><a href="https://getcomposer.org/">Composer</a>, to fetch Horde
+    and its dependencies as released packages (no git checkout
+    needed).</li>
+    <li>A database server - MySQL/MariaDB, PostgreSQL, or SQLite for
+    small/evaluation setups.</li>
+    <li>A web server (Apache or nginx) with PHP-FPM, or PHP's built-in
+    server for a quick local evaluation.</li>
+    <li>If you plan to run IMP (webmail): an existing IMAP/POP3 mail
+    server to connect to - Horde does not provide one itself.</li>
+  </ul>
+</div>
+
+<h2>2. Get Horde</h2>
+<div class="section">
+  <p>Use Composer to create a new installation from the released
+  <code>horde/bundle</code> package (the standard "Horde Groupware" app
+  set - see <a href="/apps">Applications</a> for what's included):</p>
+  <pre><code>composer create-project horde/bundle /srv/www/horde-dev</code></pre>
+  <p>This fetches tagged releases of Horde and its component libraries
+  from Packagist - not a development/git checkout - so it's the right
+  starting point for a real deployment.</p>
+  <p>Only want specific apps rather than the full groupware bundle? You
+  can <code>composer require</code> individual app packages (e.g.
+  <code>horde/imp</code>, <code>horde/kronolith</code>) into an existing
+  Horde base install instead of the full bundle.</p>
+</div>
+
+<h2>3. Configure</h2>
+<div class="section">
+  <p>Point your web server's document root at the installation
+  directory's <code>web/</code> (or equivalent) subdirectory, then visit
+  the installation in a browser. Horde's setup/test screens will check
+  your PHP configuration and let you write out the initial
+  <code>conf.php</code> configuration files (database connection,
+  session handling, mail transport, and so on) for the base
+  <code>horde</code> app and each installed application.</p>
+  <p>At minimum you will configure:</p>
+  <ul>
+    <li>The SQL backend (host, database name, credentials) Horde itself
+    and most apps use for shared state (preferences, permissions,
+    shares).</li>
+    <li>Per-app backends where relevant - e.g. IMP needs your IMAP/SMTP
+    server details, Turba/Kronolith can use the shared SQL backend or an
+    external LDAP/CalDAV source.</li>
+  </ul>
+</div>
+
+<h2>4. First login</h2>
+<div class="section">
+  <p>Once configuration is complete, log in with the authentication
+  backend you configured (SQL user table, IMAP, LDAP, etc., depending on
+  your setup) and confirm the apps you installed load correctly from the
+  Horde portal.</p>
+</div>
+
+<h2>Troubleshooting &amp; next steps</h2>
+<div class="section">
+  <ul>
+    <li>Stuck on a specific app's configuration? Check that app's page
+    under <a href="/apps">Applications</a> for links to its own
+    documentation and FAQ.</li>
+    <li>Need help beyond what's here? See
+    <a href="/support">Support</a> for community channels and paid
+    engagement options.</li>
+    <li>Want to modify Horde's own code rather than just deploy it? See
+    <a href="https://dev.horde.org/contribute.html">dev.horde.org's
+    contributor quickstart</a> instead - it uses a git checkout and the
+    <code>horde-components</code> tool rather than a release package.</li>
+  </ul>
+</div>

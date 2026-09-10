@@ -1,0 +1,25 @@
+<!--
+  Per-app "Can I do X?" FAQ cookbook section (IA §11), authored
+  2026-09-10. New content, not harvested.
+-->
+<div class="app-faq">
+
+  <h3>Can Ingo filter mail server-side (Sieve), not just when I'm logged in?</h3>
+  <p>Yes - Ingo's primary purpose is generating and uploading Sieve
+  filter scripts to a compatible IMAP/mail server (via ManageSieve), so
+  rules apply to incoming mail continuously, independent of whether you
+  are logged into the webmail UI.</p>
+
+  <h3>Can Ingo do vacation/out-of-office auto-replies?</h3>
+  <p>Yes - vacation responses (with a date range and custom message) are
+  one of Ingo's built-in filter rule types, also implemented as a Sieve
+  rule so it works while you are away, not just when logged in.</p>
+
+  <h3>Can I write my own Sieve rules by hand instead of using the rule builder?</h3>
+  <p>Ingo's UI generates Sieve for you, but since the underlying artifact
+  is standard Sieve, advanced users/admins can review or hand-edit
+  generated scripts at the server level where their setup allows it -
+  this depends on your mail server's ManageSieve configuration, not Ingo
+  itself restricting you.</p>
+
+</div>

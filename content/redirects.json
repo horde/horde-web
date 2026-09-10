@@ -1,0 +1,57 @@
+[
+    {
+        "from": "/libraries",
+        "to": "https://dev.horde.org/#componentDirectory",
+        "reason": "The library/component directory has moved to dev.horde.org."
+    },
+    {
+        "from": "/development/git",
+        "to": "https://dev.horde.org/",
+        "reason": "Source-code/checkout instructions have moved to dev.horde.org."
+    },
+    {
+        "from": "/development/documentation",
+        "to": "https://dev.horde.org/resources.html",
+        "reason": "Developer documentation has moved to dev.horde.org's Resources section."
+    },
+    {
+        "from": "/community/documentation",
+        "to": "https://dev.horde.org/resources.html",
+        "reason": "This was a duplicate route for the same content as /development/documentation, which has moved to dev.horde.org's Resources section."
+    },
+    {
+        "from": "/licenses/gpl",
+        "to": "/development/licenses/gpl",
+        "reason": "Consolidated under /development/licenses."
+    },
+    {
+        "from": "/licenses/lgpl",
+        "to": "/development/licenses/lgpl",
+        "reason": "Consolidated under /development/licenses."
+    },
+    {
+        "from": "/licenses/lgpl21",
+        "to": "/development/licenses/lgpl21",
+        "reason": "Consolidated under /development/licenses."
+    },
+    {
+        "from": "/licenses/bsd",
+        "to": "/development/licenses/bsd",
+        "reason": "Consolidated under /development/licenses."
+    },
+    {
+        "from": "/licenses/apache",
+        "to": "/development/licenses/apache",
+        "reason": "Consolidated under /development/licenses."
+    },
+    {
+        "from": "/shop/eu",
+        "to": "/",
+        "reason": "The Horde online store is retired; there is no current replacement. Horde is not a commercial 'open core' product - see /services for support/consulting options."
+    },
+    {
+        "from": "/shop/us",
+        "to": "/",
+        "reason": "The Horde online store is retired; there is no current replacement. Horde is not a commercial 'open core' product - see /services for support/consulting options."
+    }
+]

@@ -1,0 +1,44 @@
+<!--
+  Shared site header/nav, authored 2026-09-10 (replaces the fragmented
+  legacy per-controller nav partials: appnav.html.php, communitynav.html.php,
+  developmentnav.html.php, libnav.html.php, servicesnav.html.php).
+  Single unified nav per IA §6.2. "Services" is intentionally not a top-level
+  nav item - reachable from /support and the footer instead, to keep the
+  primary nav short (5 items).
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true"></span>
+      Horde
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/apps">Apps</a></li>
+        <li><a href="/community">Community</a></li>
+        <li><a href="/support">Support</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a class="develop-link" href="https://dev.horde.org/">Develop</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <details class="nav-toggle">
+        <summary aria-label="Open menu">☰ Menu</summary>
+        <nav class="mobile-menu" aria-label="Primary (mobile)">
+          <ul>
+            <li><a href="/apps">Apps</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="https://dev.horde.org/">Develop ↗</a></li>
+          </ul>
+        </nav>
+      </details>
+      <a class="btn btn-primary" href="/apps">Try the Demo</a>
+    </div>
+  </div>
+</header>

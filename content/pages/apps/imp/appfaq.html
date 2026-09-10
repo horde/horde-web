@@ -1,0 +1,31 @@
+<!--
+  Per-app "Can I do X?" FAQ cookbook section (IA §11), authored
+  2026-09-10. New content, not harvested. Answers are deliberately
+  conservative about exact setup steps (which vary by Horde version and
+  backend) and point to the component's own documentation/.horde.yml
+  metadata rather than asserting specific config file syntax here.
+-->
+<div class="app-faq">
+
+  <h3>Does IMP support OAuth2 login to my mail server (Gmail, Office 365, etc.)?</h3>
+  <p>Yes. IMP's IMAP/SMTP connections go through the
+  <a href="https://dev.horde.org/imap_client/">Horde_Imap_Client</a>
+  library, which supports XOAUTH2/OAuthBearer authentication in addition
+  to plain password auth. You configure an OAuth application/client with
+  your provider and point IMP's backend configuration at it; exact steps
+  depend on your Horde version and mail provider. See the
+  <a href="https://github.com/horde/imp">IMP repository</a> and
+  <a href="https://github.com/horde/imap_client">Imap_Client
+  repository</a> for current configuration examples.</p>
+
+  <h3>Can I run IMP against a non-IMAP backend, or read-only/archived mail?</h3>
+  <p>IMP is IMAP/POP3-native. For anything else (e.g. Maildir without an
+  IMAP server in front of it), you need an IMAP server layer - IMP itself
+  does not speak Maildir/mbox directly.</p>
+
+  <h3>Does IMP support multiple identities and per-identity signatures?</h3>
+  <p>Yes - multiple identities (with independent From addresses, reply-to,
+  and HTML/plain-text signatures) are a core IMP feature, configurable per
+  user in preferences.</p>
+
+</div>

@@ -1,0 +1,87 @@
+<!--
+  Shared site footer, authored 2026-09-10. Replaces the legacy
+  sponsors.html.php / footer.html.php partials. The Sponsor block is a
+  generator-rendered widget (see WIDGET comment below), not static markup -
+  do not hardcode a single sponsor name/logo/link here.
+-->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="/quickstart">Quickstart</a></li>
+          <li><a href="/community">About &amp; Community</a></li>
+          <li><a href="/community#license">License</a></li>
+          <li><a href="/community#team">Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <ul>
+          <li><a href="https://lists.horde.org/">Mailing Lists</a></li>
+          <li><a href="https://wiki.horde.org/">Wiki</a></li>
+          <li><a href="https://bugs.horde.org/">Bug Tracker</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Develop</h4>
+        <ul>
+          <li><a href="https://dev.horde.org/">dev.horde.org</a></li>
+          <li><a href="https://dev.horde.org/contribute.html">Contribute</a></li>
+          <li><a href="https://github.com/horde">GitHub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Help</h4>
+        <ul>
+          <li><a href="/support">Support</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="social-row">
+          <a href="https://mastodon.social/@horde" aria-label="Horde on Mastodon" title="Mastodon">🐘</a>
+          <a href="https://twitter.com/hordeproject" aria-label="Horde on X (Twitter)" title="X (Twitter)">𝕏</a>
+          <a href="https://www.facebook.com/pages/Horde-LLC/192707224109487" aria-label="Horde on Facebook" title="Facebook">📘</a>
+        </div>
+      </div>
+      <div>
+        <h4>Sponsor</h4>
+        <!--
+          WIDGET: sponsor-slot (build-time rotated). The generator picks
+          one entry from content/sponsors.json per regeneration (see
+          Website\SponsorRoster/SponsorCardRenderer) and replaces the
+          inner content of this data-widget div with the rendered
+          sponsor-card markup. The markup below is the fallback shown if
+          sponsors.json is missing/empty.
+        -->
+        <div data-widget="sponsor-slot">
+          <div class="sponsor-card">
+            <div class="sponsor-logo">Sponsor logo</div>
+            <a class="sponsor-link" href="https://www.b1-systems.de/">B1 Systems GmbH</a>
+            <p>Enterprise Horde hosting, support, and feature development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <span>
+        Horde is an independent, community-maintained free/open source
+        project (not backed by a vendor selling a paid "enterprise"
+        tier). Long-time sponsor
+        <a href="/services">B1 Systems</a> offers commercial support
+        and feature development for organizations that need it.
+      </span>
+      <a
+        href="https://status.horde.org"
+        id="horde-status-widget"
+        class="status-badge status-checking"
+      >Checking status&hellip;</a>
+      <span>© Horde Project</span>
+    </div>
+  </div>
+</footer>
