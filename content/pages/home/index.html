@@ -1,12 +1,3 @@
-<!--
-  Redesigned 2026-09-10, replacing the 2012-era harvested teaser-list
-  homepage. Structural chrome (header/nav, footer) now lives in the
-  shared topbar.html/footer.html fragments, not duplicated per page.
-  WIDGET comments mark generator-injected, build-time-rendered content -
-  the generator replaces each block with real data at build time (no
-  client-side fetch), matching the pattern already used by
-  dev.horde.org's activity grid.
--->
 <section class="hero">
   <div class="container">
     <h1>Groupware that runs anywhere, built on tools you can trust.</h1>
@@ -18,7 +9,7 @@
     </p>
     <div class="actions">
       <a class="btn btn-primary" href="/quickstart">Deploy Horde</a>
-      <a class="btn btn-secondary" href="/apps">Try the Demo</a>
+      <!-- <a class="btn btn-secondary" href="/apps">Try the Demo</a> --> 
       <a class="btn btn-secondary" href="https://dev.horde.org/contribute.html">Contribute</a>
     </div>
   </div>
@@ -70,15 +61,6 @@
       actually shipping right now.</p>
     </div>
 
-    <!--
-      WIDGET: live-project-pulse (Phase 6 - build-time embed).
-      The generator fills this in from dev.horde.org's own merged
-      component-facts + activity feed (Phase 2 unified facts), on the
-      same regeneration cadence as dev.horde.org itself. No
-      client-side fetch, no separate live backend call. Expected
-      fields: component count, releases/commits/PRs over a rolling
-      window, and a link back to dev.horde.org.
-    -->
     <div class="pulse" data-widget="live-project-pulse">
       <div class="pulse-item">
         <span class="num">{components_tracked}</span>
@@ -97,7 +79,7 @@
         <span class="label">Open pull requests</span>
       </div>
       <div class="pulse-footer">
-        <span>Generated with the site - not a live dashboard.</span>
+        <span>Activity data generated periodically.</span>
         <a href="https://dev.horde.org/">See full activity on dev.horde.org →</a>
       </div>
     </div>
@@ -112,9 +94,9 @@
     </div>
 
     <!--
-      WIDGET: blog-roll (Phase 6 - build-time embed, rendered by
+      WIDGET: blog-roll rendered by
       Horde\Components\Website\BlogFeedFetcher + BlogRollRenderer).
-      Merges two RSS sources at build time: the official Horde News
+      The official Horde News
       channel (dev.horde.org Jonah) and community blog posts tagged
       for Horde. Each card shows a source label since the two feeds
       have different authority/voice (official vs. community).
