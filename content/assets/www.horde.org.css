@@ -364,6 +364,14 @@ a:hover { color: var(--color-primary-dark); }
   color: var(--color-text-muted);
   text-align: center;
 }
+/* Real logo image (as opposed to the text-placeholder div rendered
+   when a sponsor has no logo configured): contain-fit, no dashed
+   placeholder border. */
+img.sponsor-logo {
+  object-fit: contain;
+  border-style: solid;
+  padding: 0.25rem;
+}
 .sponsor-card p { margin: 0; font-size: 0.85rem; }
 .sponsor-card .sponsor-link { font-weight: 600; }
 
