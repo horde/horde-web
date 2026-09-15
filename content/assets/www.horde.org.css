@@ -264,6 +264,50 @@ a:hover { color: var(--color-primary-dark); }
 .value-card h3 { margin: 0 0 0.4rem; font-size: 1.1rem; }
 .value-card p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
 
+/* ---------- Team page ---------- */
+
+.team-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.team-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-2);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+}
+
+.team-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+}
+/* Legacy in-page anchors (#jan, #mrubinsk, ...) are carried on the
+   heading as bare <a name="..."> targets; keep them looking like the
+   heading text, not a link. */
+.team-card h3 a { color: inherit; text-decoration: none; }
+
+.team-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+.team-card ul li { margin-bottom: 0.35rem; }
+.team-card ul li:last-child { margin-bottom: 0; }
+.team-card a { color: var(--color-primary); }
+
 /* ---------- Pulse widget ---------- */
 
 .pulse {
